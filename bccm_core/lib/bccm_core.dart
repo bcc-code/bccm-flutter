@@ -33,3 +33,4 @@ export 'src/utils/device_info.dart';
 export 'src/utils/inherited_data.dart';
 export 'src/utils/router_utils.dart';
 export 'src/utils/languages.dart';
+export 'src/utils/debouncer.dart';
