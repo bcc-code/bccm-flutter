@@ -8,9 +8,11 @@ environment:
   flutter: ">=1.17.0"
 
 dependencies:
+  app_links: ^3.5.0
   auth0_flutter_web: ^0.0.1-alpha.6
   auto_route: ^7.8.4
   clock: ^1.1.1
+  connectivity_plus: ^5.0.2
   device_info_plus: ^9.1.1
   firebase_core: ^2.24.2
   firebase_crashlytics: ^3.4.8
@@ -32,10 +34,13 @@ dependencies:
   package_info_plus: ^5.0.1
   responsive_framework: ^1.1.1
   riverpod: ^2.4.9
-  rudder_sdk_flutter: ^2.7.0
+  riverpod_annotation: ^2.3.3
+  rudder_sdk_flutter: ^2.5.0
+  rudder_sdk_flutter_platform_interface: ^2.7.0
   shared_preferences: ^2.2.2
   synchronized: ^3.1.0+1
   universal_io: ^2.2.2
+  unleash_proxy_client_flutter: ^1.4.0
   url_launcher: ^6.2.2
   vibration: ^1.8.4
 

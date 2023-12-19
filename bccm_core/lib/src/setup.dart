@@ -1,12 +1,12 @@
 import 'package:bccm_core/src/features/globals/globals.dart';
-import 'package:bccm_core/src/features/providers/package_info.dart';
+import 'package:bccm_core/src/features/providers/package_info_provider.dart';
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:universal_io/io.dart';
 
-import 'features/providers/shared_preferences.dart';
+import 'features/providers/shared_preferences_provider.dart';
 
 class BccmCore {
   BccmCore._internal();
@@ -20,19 +20,50 @@ class BccmCore {
   /// ```
   /// void main() async {
   ///   WidgetsFlutterBinding.ensureInitialized();
-  ///   final coreOverrides = await BccmCore().setup();
-  ///   runApp(ProviderScope(overrides: coreOverrides, child: MyApp()));
+  ///   await BccmCore().setup();
   /// }
   /// ```
-  Future<List<Override>> setup() async {
+
+  Future<void> setup() async {
     if (Platform.isAndroid) {
       final androidDeviceInfo = await DeviceInfoPlugin().androidInfo;
       setIsAndroidTv(androidDeviceInfo.systemFeatures.contains('android.software.leanback'));
     }
-    return _setupOverrides();
   }
 
-  Future<List<Override>> _setupOverrides() async {
+  /// This sets up some core features but is also a helper to provide the overrides needed.
+  /// Otherwise we would have to manually remember to override each provider in main.dart.
+  ///
+  /// Example:
+  /// ```
+  /// void main() async {
+  /// final coreOverrides = await BccmCore().setupRiverpod();
+  /// runApp(ProviderScope(overrides: coreOverrides, child: MyApp()));
+  /// }
+  /// ```
+  Future<List<Override>> setupCoreOverrides({
+    required Override analyticsMetaEnricherProviderOverride,
+    required Override? specialRoutesHandlerProviderOverride,
+    required Override rootRouterProviderOverride,
+    required Override? commonSettingsProviderOverride,
+    required Override? bccmGraphQLProviderOverride,
+    required Override? authStateProviderOverride,
+    required Override? analyticsProviderOverride,
+    required Override? featureFlagVariantListProviderOverride,
+  }) async {
+    return [
+      ...await _setupCoreProviders(),
+      analyticsMetaEnricherProviderOverride,
+      rootRouterProviderOverride,
+      commonSettingsProviderOverride,
+      bccmGraphQLProviderOverride,
+      authStateProviderOverride,
+      analyticsProviderOverride,
+      featureFlagVariantListProviderOverride,
+    ].where((element) => element != null).cast<Override>().toList();
+  }
+
+  Future<List<Override>> _setupCoreProviders() async {
     final sharedPrefs = await SharedPreferences.getInstance();
     final packageInfo = await PackageInfo.fromPlatform();
     return [

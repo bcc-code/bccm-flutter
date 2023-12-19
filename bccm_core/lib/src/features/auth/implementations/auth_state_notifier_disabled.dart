@@ -33,6 +33,6 @@ class AuthStateNotifierDisabled extends StateNotifier<AuthState> implements Auth
 
   @override
   Future<void> loginViaDeviceCode(DeviceTokenRequestResponse deviceToken) {
-    throw UnimplementedError();
+    return Future.value();
   }
 }

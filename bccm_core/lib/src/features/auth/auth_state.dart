@@ -1,8 +1,6 @@
+import 'package:bccm_core/bccm_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
-import '../../models/auth_state.dart';
-import 'auth0_api.dart';
 import 'auth_state_notifier_stub.dart'
     if (dart.library.io) './implementations/auth_state_notifier_mobile.dart'
     if (dart.library.html) './implementations/auth_state_notifier_web.dart';
@@ -34,3 +32,8 @@ abstract class AuthStateNotifier implements StateNotifier<AuthState> {
   Future<void> loginViaDeviceCode(DeviceTokenRequestResponse deviceToken);
   factory AuthStateNotifier(AuthConfig config) => getPlatformSpecificAuthStateNotifier(config);
 }
+
+final authStateProvider = StateNotifierProvider<AuthStateNotifier, AuthState>((ref) {
+  debugPrint('WARNING: authStateProvider was not overridden.');
+  return AuthStateNotifierDisabled();
+});

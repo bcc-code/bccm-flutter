@@ -50,3 +50,28 @@ export 'package:bccm_core/src/features/graphql/schema/shows.graphql.dart';
 export 'package:bccm_core/src/features/graphql/schema/studies.graphql.dart';
 export 'package:bccm_core/src/features/graphql/schema/surveys.graphql.dart';
 export 'package:bccm_core/src/features/graphql/schema/users.graphql.dart';
+export 'package:bccm_core/src/features/graphql/client.dart';
+
+export 'package:bccm_core/src/features/prompts/prompts.dart';
+export 'package:bccm_core/src/features/app_config/app_config.dart';
+export 'package:bccm_core/src/features/notifications/notification_service.dart';
+export 'package:bccm_core/src/features/feature_flags/unleash.dart';
+export 'package:bccm_core/src/features/feature_flags/feature_flags.dart';
+export 'package:bccm_core/src/features/analytics/analytics.dart';
+export 'package:bccm_core/src/features/analytics/analytics_observer.dart';
+
+export 'package:bccm_core/src/models/analytics/achievement_clicked.dart';
+export 'package:bccm_core/src/models/analytics/achievement_shared.dart';
+export 'package:bccm_core/src/models/analytics/audio_only_clicked.dart';
+export 'package:bccm_core/src/models/analytics/calendar_day_clicked.dart';
+export 'package:bccm_core/src/models/analytics/chapter_clicked.dart';
+export 'package:bccm_core/src/models/analytics/content_shared.dart';
+export 'package:bccm_core/src/models/analytics/deep_link_opened.dart';
+export 'package:bccm_core/src/models/analytics/downloads.dart';
+export 'package:bccm_core/src/models/analytics/game_closed.dart';
+export 'package:bccm_core/src/models/analytics/language_changed.dart';
+export 'package:bccm_core/src/models/analytics/misc.dart';
+export 'package:bccm_core/src/models/analytics/search_performed.dart';
+export 'package:bccm_core/src/models/analytics/search_result_clicked.dart';
+export 'package:bccm_core/src/models/analytics/sections.dart';
+export 'package:bccm_core/src/models/analytics/shorts.dart';

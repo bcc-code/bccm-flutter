@@ -1,3 +1,4 @@
+import 'package:bccm_core/src/utils/event_bus.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
 
@@ -13,3 +14,4 @@ final isAndroidTvProvider = Provider<bool>((ref) {
 });
 
 final GlobalKey<NavigatorState> globalNavigatorKey = GlobalKey<NavigatorState>();
+final globalEventBus = EventBus();
