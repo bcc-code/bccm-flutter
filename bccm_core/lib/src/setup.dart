@@ -50,6 +50,9 @@ class BccmCore {
     required Override? authStateProviderOverride,
     required Override? analyticsProviderOverride,
     required Override? featureFlagVariantListProviderOverride,
+    required Override? rawUnleashProviderOverride,
+    required Override? unleashContextProviderOverride,
+    required Override? notificationServiceProviderOverride,
   }) async {
     return [
       ...await _setupCoreProviders(),
@@ -60,6 +63,9 @@ class BccmCore {
       authStateProviderOverride,
       analyticsProviderOverride,
       featureFlagVariantListProviderOverride,
+      rawUnleashProviderOverride,
+      unleashContextProviderOverride,
+      notificationServiceProviderOverride,
     ].where((element) => element != null).cast<Override>().toList();
   }
 

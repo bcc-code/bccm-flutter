@@ -8,6 +8,7 @@ abstract class CommonSettings {
   List<String> get audioLanguages;
   List<String> get subtitleLanguages;
   int? get sessionId;
+  bool? get isBetaTester;
 }
 
 final commonSettingsProvider = Provider<CommonSettings>((ref) {
