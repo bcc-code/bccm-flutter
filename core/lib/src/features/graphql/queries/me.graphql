@@ -1,0 +1,23 @@
+query me {
+  me {
+    id
+    analytics {
+      anonymousId
+    }
+    roles
+    email
+    emailVerified
+    completedRegistration
+  }
+}
+
+mutation sendVerificationEmail {
+  sendVerificationEmail
+}
+
+mutation updateUserMetadata(
+  $nameData: NameOptions!
+  $birthData: BirthOptions!
+) {
+  updateUserMetadata(nameData: $nameData, birthData: $birthData)
+}

@@ -1,0 +1,14 @@
+query Application {
+  application {
+    clientVersion
+    page {
+      code
+    }
+    searchPage {
+      code
+    }
+    gamesPage {
+      code
+    }
+  }
+}
