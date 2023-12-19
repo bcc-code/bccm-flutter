@@ -4,8 +4,6 @@ import 'package:bccm_core/bccm_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
-import 'package:bccm_core/src/models/events/app_ready.dart';
 import 'package:bccm_core/design_system.dart';
 
 /// Each app should override this provider with e.g. [FcmNotificationService].
@@ -43,6 +41,7 @@ class FcmNotificationService implements NotificationService {
     _appReadySubscription = globalEventBus.on<AppReadyEvent>().listen(_onAppReady);
   }
 
+  @override
   void dispose() {
     _appReadySubscription.cancel();
     _onMessageSubscription?.cancel();
@@ -60,7 +59,7 @@ class FcmNotificationService implements NotificationService {
   @override
   Future<void> requestPermissionAndSetup() async {
     var result = await FirebaseMessaging.instance.requestPermission();
-    print('NotificationStatus: ${result.authorizationStatus}');
+    debugPrint('NotificationStatus: ${result.authorizationStatus}');
     FirebaseMessaging.instance.setForegroundNotificationPresentationOptions(alert: false, badge: false, sound: true);
 
     final token = await FirebaseMessaging.instance.getToken();
@@ -75,7 +74,7 @@ class FcmNotificationService implements NotificationService {
   void _setupTokenListeners() {
     _tokenSubscription ??= FirebaseMessaging.instance.onTokenRefresh.listen(_onTokenChanged)
       ..onError((err) {
-        print('error onTokenRefresh');
+        debugPrint('error onTokenRefresh');
       });
   }
 
