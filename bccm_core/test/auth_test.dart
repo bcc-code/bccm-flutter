@@ -19,14 +19,14 @@ import 'package:mockito/annotations.dart';
 
 import 'package:mockito/mockito.dart';
 
-import '../../test/utils/tokens.dart';
+import 'utils/tokens.dart';
 @GenerateNiceMocks([
   MockSpec<FlutterAppAuth>(),
   MockSpec<FlutterSecureStorage>(),
   MockSpec<Auth0Api>(),
 ])
 import 'auth_test.mocks.dart';
-import '../../test/utils/basic_init.dart';
+import 'utils/basic_init.dart';
 
 class MockTokenRequest extends Mock implements TokenRequest {}
 
