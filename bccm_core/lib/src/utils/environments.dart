@@ -9,5 +9,4 @@ class EnvironmentOverride {
   static const dev = 'dev';
   static const sta = 'sta';
   static const prod = 'prod';
-  static const none = 'none';
 }
