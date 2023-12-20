@@ -87,8 +87,13 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
     DateTime? expiry;
     try {
       expiry = _getAccessTokenExpiry(accessToken);
-    } catch (e, s) {
-      FirebaseCrashlytics.instance.recordError(e, s);
+    } catch (e, st) {
+      FlutterError.reportError(FlutterErrorDetails(
+        exception: e,
+        stack: st,
+        library: 'bccm_core',
+        context: ErrorDescription('during login'),
+      ));
       logout();
       return false;
     }
@@ -144,7 +149,12 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
       );
       await _setStateBasedOnResponse(result!);
     } catch (e, s) {
-      FirebaseCrashlytics.instance.recordError(e, StackTrace.current);
+      FlutterError.reportError(FlutterErrorDetails(
+        exception: e,
+        stack: StackTrace.current,
+        library: 'bccm_core',
+        context: ErrorDescription('during login'),
+      ));
       debugPrint('error on Refresh Token: $e - stack: $s');
       // logOut() possibly
       return false;
@@ -228,7 +238,12 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
     } catch (e, st) {
       logout(manual: false);
       debugPrint(e.toString());
-      FirebaseCrashlytics.instance.recordError(e, st);
+      FlutterError.reportError(FlutterErrorDetails(
+        exception: e,
+        stack: st,
+        library: 'bccm_core',
+        context: ErrorDescription('during login'),
+      ));
       return false;
     }
     return true;
@@ -248,7 +263,12 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
       ]);
     }
     if (isLogin && refreshToken == null) {
-      FirebaseCrashlytics.instance.recordError(Exception('Refresh token missing on login'), StackTrace.current);
+      FlutterError.reportError(FlutterErrorDetails(
+        exception: Exception('Refresh token missing on login'),
+        stack: StackTrace.current,
+        library: 'bccm_core',
+        context: ErrorDescription('during login'),
+      ));
     }
 
     await Future.wait([

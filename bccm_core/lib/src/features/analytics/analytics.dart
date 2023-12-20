@@ -142,12 +142,22 @@ class RudderAnalytics extends Analytics {
   }) {
     var sectionAnalytics = sectionAnalyticsOverride ?? InheritedData.read<SectionAnalytics>(context);
     if (sectionAnalytics == null) {
-      FirebaseCrashlytics.instance.recordError(Exception('Missing SectionAnalytics.'), StackTrace.current);
+      FlutterError.reportError(FlutterErrorDetails(
+        exception: Exception('Missing SectionAnalytics.'),
+        stack: StackTrace.current,
+        library: 'bccm_core',
+        context: ErrorDescription('analytics'),
+      ));
       return;
     }
     var sectionItemAnalytics = itemAnalyticsOverride ?? InheritedData.read<SectionItemAnalytics>(context);
     if (sectionItemAnalytics == null) {
-      FirebaseCrashlytics.instance.recordError(Exception('Missing sectionItemAnalytics.'), StackTrace.current);
+      FlutterError.reportError(FlutterErrorDetails(
+        exception: Exception('Missing sectionItemAnalytics.'),
+        stack: StackTrace.current,
+        library: 'bccm_core',
+        context: ErrorDescription('analytics'),
+      ));
       return;
     }
     var event = SectionClickedEvent(
@@ -168,7 +178,12 @@ class RudderAnalytics extends Analytics {
   void myListTabEntryClicked(BuildContext context) {
     var sectionItemAnalytics = InheritedData.read<SectionItemAnalytics>(context);
     if (sectionItemAnalytics == null) {
-      FirebaseCrashlytics.instance.recordError(Exception('Missing sectionItemAnalytics.'), StackTrace.current);
+      FlutterError.reportError(FlutterErrorDetails(
+        exception: Exception('Missing sectionItemAnalytics.'),
+        stack: StackTrace.current,
+        library: 'bccm_core',
+        context: ErrorDescription('analytics'),
+      ));
       return;
     }
 
@@ -199,12 +214,22 @@ class RudderAnalytics extends Analytics {
   }) {
     final searchAnalytics = searchAnalyticsOverride ?? InheritedData.read<SearchAnalytics>(context);
     if (searchAnalytics == null) {
-      FirebaseCrashlytics.instance.recordError(Exception('Missing SearchAnalytics.'), StackTrace.current);
+      FlutterError.reportError(FlutterErrorDetails(
+        exception: Exception('Missing SearchAnalytics.'),
+        stack: StackTrace.current,
+        library: 'bccm_core',
+        context: ErrorDescription('analytics'),
+      ));
       return;
     }
     final searchItemAnalytics = itemAnalyticsOverride ?? InheritedData.read<SearchItemAnalytics>(context);
     if (searchItemAnalytics == null) {
-      FirebaseCrashlytics.instance.recordError(Exception('Missing SearchItemAnalytics.'), StackTrace.current);
+      FlutterError.reportError(FlutterErrorDetails(
+        exception: Exception('Missing SearchItemAnalytics.'),
+        stack: StackTrace.current,
+        library: 'bccm_core',
+        context: ErrorDescription('analytics'),
+      ));
       return;
     }
 
