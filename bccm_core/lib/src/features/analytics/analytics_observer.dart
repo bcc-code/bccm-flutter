@@ -25,6 +25,7 @@ abstract class AnalyticsMetaEnricher {
 
 const String kRouteMetaNavTab = 'nav_tab_route';
 const String kRouteMetaAnalyticsName = 'analytics_name';
+const String kRouteMetaSettingsName = 'settings_name';
 
 class AnalyticsNavigatorObserver extends NavigatorObserver {
   bool _routeFilter(Route<dynamic> route) {
