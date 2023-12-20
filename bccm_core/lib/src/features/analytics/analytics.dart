@@ -73,6 +73,8 @@ class Analytics {
   void interaction(InteractionEvent event) {}
   @mustBeOverridden
   void guideShown(GuideShownEvent event) {}
+  @mustBeOverridden
+  void reset() {}
 }
 
 class RudderAnalytics extends Analytics {
@@ -318,6 +320,11 @@ class RudderAnalytics extends Analytics {
   @override
   void guideShown(GuideShownEvent event) {
     RudderController.instance.track('guide_shown', properties: getCommonData().putValue(map: event.toJson()));
+  }
+
+  @override
+  void reset() {
+    RudderController.instance.reset();
   }
 }
 

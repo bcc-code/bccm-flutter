@@ -15,6 +15,7 @@ final notificationServiceProvider = Provider<NotificationService>((ref) {
 abstract class NotificationService {
   Future<void> requestPermissionAndSetup();
   void dispose();
+  void reset();
 }
 
 class DisabledNotificationService implements NotificationService {
@@ -25,6 +26,8 @@ class DisabledNotificationService implements NotificationService {
 
   @override
   void dispose() {}
+  @override
+  void reset() {}
 }
 
 class FcmNotificationService implements NotificationService {
@@ -53,6 +56,12 @@ class FcmNotificationService implements NotificationService {
     fcmToken = token;
     debugPrint('FCM token changed: $token');
     onTokenChanged(token);
+  }
+
+  @override
+  void reset() {
+    fcmToken = null;
+    FirebaseMessaging.instance.deleteToken();
   }
 
   /// Request permission and get token to start receiving push notifications
