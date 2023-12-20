@@ -4,17 +4,15 @@ import '../../utils/primitive_extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_framework/responsive_breakpoints.dart';
 
-import 'app_theme.dart';
-
 /// Looks complicated, but its just to get a DesignSystemData instance based on where we are in the widget tree.
 /// See https://api.flutter.dev/flutter/widgets/InheritedWidget-class.html
 class DesignSystem extends InheritedWidget {
   final DesignSystemData designSystem;
   DesignSystem({
     super.key,
-    required Widget Function(BuildContext) child,
+    required Widget Function(BuildContext) builder,
     required this.designSystem,
-  }) : super(child: Builder(builder: child));
+  }) : super(child: Builder(builder: builder));
   @override
   bool updateShouldNotify(DesignSystem oldWidget) => designSystem != oldWidget.designSystem;
 
@@ -27,14 +25,12 @@ class DesignSystem extends InheritedWidget {
 }
 
 class DesignSystemData {
-  final AppThemeData appThemeData;
   final ThemeData materialThemeData;
   final DesignSystemColors colors;
   final DesignSystemTextStyles textStyles;
   final DesignSystemButtons buttons;
   final DesignSystemInputDecorations inputDecorations;
   const DesignSystemData({
-    required this.appThemeData,
     required this.materialThemeData,
     required this.colors,
     required this.textStyles,
