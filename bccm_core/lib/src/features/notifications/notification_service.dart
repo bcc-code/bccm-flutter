@@ -15,7 +15,7 @@ final notificationServiceProvider = Provider<NotificationService>((ref) {
 abstract class NotificationService {
   Future<void> requestPermissionAndSetup();
   void dispose();
-  void reset();
+  void deleteToken();
 }
 
 class DisabledNotificationService implements NotificationService {
@@ -27,7 +27,7 @@ class DisabledNotificationService implements NotificationService {
   @override
   void dispose() {}
   @override
-  void reset() {}
+  void deleteToken() {}
 }
 
 class FcmNotificationService implements NotificationService {
@@ -59,7 +59,7 @@ class FcmNotificationService implements NotificationService {
   }
 
   @override
-  void reset() {
+  void deleteToken() {
     fcmToken = null;
     FirebaseMessaging.instance.deleteToken();
   }
