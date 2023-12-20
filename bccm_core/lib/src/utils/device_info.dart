@@ -83,13 +83,13 @@ class ContactDeviceInfo {
 
   Map<String, String> toMap() {
     return {
-      'Device': device ?? '',
-      'EnvOverride': envOverride ?? '',
-      'Manufacturer': manufacturer ?? '',
-      'OS': os ?? '',
-      'Screen Size': screenSize,
-      'App Version': appVer,
-      'User ID': userId ?? '',
+      'App version': appVer,
+      'Screen size': screenSize,
+      if (device != null) 'Device': device!,
+      if (envOverride != null) 'Environment': envOverride!,
+      if (manufacturer != null) 'Manufacturer': manufacturer!,
+      if (os != null) 'OS': os!,
+      if (userId != null) 'User ID': userId!,
     };
   }
 }
