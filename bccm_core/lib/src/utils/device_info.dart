@@ -81,15 +81,15 @@ class ContactDeviceInfo {
     required this.userId,
   });
 
-  Map<String, String> toMap() {
+  Map<String, String?> toMap() {
     return {
       'App version': appVer,
       'Screen size': screenSize,
-      if (device != null) 'Device': device!,
-      if (envOverride != null) 'Environment': envOverride!,
-      if (manufacturer != null) 'Manufacturer': manufacturer!,
-      if (os != null) 'OS': os!,
-      if (userId != null) 'User ID': userId!,
+      'Device': device,
+      'Environment': envOverride,
+      'Manufacturer': manufacturer,
+      'OS': os,
+      'User ID': userId,
     };
   }
 }
