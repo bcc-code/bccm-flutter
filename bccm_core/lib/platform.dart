@@ -23,6 +23,7 @@ export 'package:bccm_core/src/features/graphql/queries/sections.graphql.dart';
 export 'package:bccm_core/src/features/graphql/queries/send_support_email.graphql.dart';
 export 'package:bccm_core/src/features/graphql/queries/shorts.graphql.dart';
 export 'package:bccm_core/src/features/graphql/queries/studies.graphql.dart';
+export 'package:bccm_core/src/features/graphql/queries/live/events.graphql.dart';
 
 export 'package:bccm_core/src/features/graphql/schema/achievements.graphql.dart';
 export 'package:bccm_core/src/features/graphql/schema/analytics.graphql.dart';
