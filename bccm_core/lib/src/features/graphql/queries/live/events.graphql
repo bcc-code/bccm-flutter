@@ -1,6 +1,9 @@
-query event($id: ID!) {
+query GetEvent($id: ID!) {
   event(id: $id) {
+    id
     title
+    start
+    end
     entries {
       __typename
       id
@@ -13,6 +16,17 @@ query event($id: ID!) {
           id
         }
       }
+    }
+  }
+}
+
+query ListEvents {
+  calendar {
+    events {
+      id
+      title
+      start
+      end
     }
   }
 }
