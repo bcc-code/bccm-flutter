@@ -242,7 +242,7 @@ class _$SectionClickedEventImpl implements _SectionClickedEvent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SectionClickedEventImpl &&
@@ -482,7 +482,7 @@ class _$SectionAnalyticsImpl implements _SectionAnalytics {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SectionAnalyticsImpl &&
@@ -664,7 +664,7 @@ class _$SectionItemAnalyticsImpl implements _SectionItemAnalytics {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SectionItemAnalyticsImpl &&

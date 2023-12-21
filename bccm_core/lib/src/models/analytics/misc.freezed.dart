@@ -194,7 +194,7 @@ class _$InteractionEventImpl implements _InteractionEvent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$InteractionEventImpl &&
@@ -379,7 +379,7 @@ class _$GuideShownEventImpl implements _GuideShownEvent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GuideShownEventImpl &&

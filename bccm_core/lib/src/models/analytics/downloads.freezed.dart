@@ -167,7 +167,7 @@ class _$VideoDownloadStartedEventImpl implements _VideoDownloadStartedEvent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$VideoDownloadStartedEventImpl &&
@@ -340,7 +340,7 @@ class _$VideoDownloadRemovedEventImpl implements _VideoDownloadRemovedEvent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$VideoDownloadRemovedEventImpl &&
@@ -503,7 +503,7 @@ class _$VideoDownloadPlayedEventImpl implements _VideoDownloadPlayedEvent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$VideoDownloadPlayedEventImpl &&

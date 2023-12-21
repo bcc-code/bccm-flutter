@@ -145,7 +145,7 @@ class _$CalendarDayClickedEventImpl implements _CalendarDayClickedEvent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CalendarDayClickedEventImpl &&

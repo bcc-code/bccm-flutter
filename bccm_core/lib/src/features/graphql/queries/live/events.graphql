@@ -1,0 +1,18 @@
+query event($id: ID!) {
+  event(id: $id) {
+    title
+    entries {
+      __typename
+      id
+      title
+      description
+      start
+      end
+      ... on EpisodeCalendarEntry {
+        episode {
+          id
+        }
+      }
+    }
+  }
+}

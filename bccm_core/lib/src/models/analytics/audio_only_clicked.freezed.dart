@@ -115,7 +115,7 @@ class _$AudioOnlyClickedEventImpl implements _AudioOnlyClickedEvent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AudioOnlyClickedEventImpl &&

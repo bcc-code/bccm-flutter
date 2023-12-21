@@ -194,7 +194,7 @@ class _$ShortStartedEventImpl implements _ShortStartedEvent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ShortStartedEventImpl &&
@@ -424,7 +424,7 @@ class _$ShortStoppedEventImpl implements _ShortStoppedEvent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ShortStoppedEventImpl &&
