@@ -1,0 +1,7 @@
+query GetCalendarDay($date: Date!) {
+  calendar {
+    day(day: $date) {
+      ...CalendarDay
+    }
+  }
+}
