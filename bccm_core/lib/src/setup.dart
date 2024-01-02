@@ -57,6 +57,7 @@ class BccmCore {
     return [
       ...await _setupCoreProviders(),
       analyticsMetaEnricherProviderOverride,
+      specialRoutesHandlerProviderOverride,
       rootRouterProviderOverride,
       commonSettingsProviderOverride,
       bccmGraphQLProviderOverride,
