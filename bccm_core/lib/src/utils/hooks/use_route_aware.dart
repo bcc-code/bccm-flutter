@@ -51,7 +51,7 @@ bool isRouteInCurrentTab(
   TabsRouter tabsRouter,
   RouteData route,
 ) {
-  return [tabsRouter.current.route, ...?tabsRouter.current.route.children].contains(route.route);
+  return [tabsRouter.current.route, tabsRouter.topMatch, ...?tabsRouter.current.route.children].contains(route.route);
 }
 
 bool Function() useIsTabActive({
