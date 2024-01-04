@@ -5,17 +5,7 @@ query GetEvent($id: ID!) {
     start
     end
     entries {
-      __typename
-      id
-      title
-      description
-      start
-      end
-      ... on EpisodeCalendarEntry {
-        episode {
-          id
-        }
-      }
+      ...CalendarEntry
     }
   }
 }
