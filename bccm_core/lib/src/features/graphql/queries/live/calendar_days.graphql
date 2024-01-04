@@ -5,3 +5,39 @@ query GetCalendarDay($date: Date!) {
     }
   }
 }
+
+fragment CalendarEntry on CalendarEntry {
+  id
+  title
+  description
+  start
+  end
+  __typename
+  ... on EpisodeCalendarEntry {
+    episode {
+      id
+      publishDate
+      image(style: default)
+      locked
+      __typename
+    }
+    id
+  }
+  ... on SimpleCalendarEntry {
+    id
+    __typename
+  }
+}
+
+fragment CalendarDay on CalendarDay {
+  events {
+    id
+    title
+    start
+    end
+    image
+  }
+  entries {
+    ...CalendarEntry
+  }
+}
