@@ -71,6 +71,7 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
       await _refresh();
     }
     if (state.expiresAt!.difference(clock.now()) < kMinimumCredentialsTTL) {
+      logout();
       throw Exception('Auth state is still expired after attempting to renew.');
     }
     return state;

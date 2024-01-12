@@ -11,6 +11,10 @@ final deepLinkServiceProvider = Provider<DeepLinkService>((ref) {
   return DeepLinkService(ref: ref);
 });
 
+/// Service that listens to deep links and navigates to the correct screen
+///
+/// Note on android: Deep links will not work on debug builds, as the debug
+/// signtature is not verified via https://app.bcc.media/.well-known/assetlinks.json.
 class DeepLinkService {
   Ref ref;
   DeepLinkService({required this.ref}) {
