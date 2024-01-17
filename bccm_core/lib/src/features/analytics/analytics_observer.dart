@@ -23,6 +23,7 @@ abstract class AnalyticsMetaEnricher {
   Map<String, dynamic>? getExtraPropertiesForRoute(Route<dynamic> route);
 }
 
+const String kRouteMetaIgnoreAnalytics = 'ignore_analytics';
 const String kRouteMetaNavTab = 'nav_tab_route';
 const String kRouteMetaAnalyticsName = 'analytics_name';
 const String kRouteMetaSettingsName = 'settings_name';
@@ -32,6 +33,9 @@ class AnalyticsNavigatorObserver extends NavigatorObserver {
     final routeData = route.settings.asOrNull<AutoRoutePage>()?.routeData;
     if (routeData == null) return true;
     if (routeData.meta[kRouteMetaNavTab] != null && routeData.meta[kRouteMetaNavTab]) {
+      return false;
+    }
+    if (routeData.meta[kRouteMetaIgnoreAnalytics] != null && routeData.meta[kRouteMetaIgnoreAnalytics]) {
       return false;
     }
     return true;
