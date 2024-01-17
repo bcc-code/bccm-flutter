@@ -7,3 +7,7 @@ class SecureStorageKeys {
   static const idToken = 'id_token';
   static const accessToken = 'access_token';
 }
+
+const kBccmIosId = '913268220';
+const kBccmPackageName = 'tv.brunstad.app';
+const kLivePackageName = 'connect.bcc.live';

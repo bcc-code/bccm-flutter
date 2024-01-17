@@ -34,3 +34,4 @@ export 'src/utils/inherited_data.dart';
 export 'src/utils/router_utils.dart';
 export 'src/utils/languages.dart';
 export 'src/utils/debouncer.dart';
+export 'src/utils/open_app.dart';
