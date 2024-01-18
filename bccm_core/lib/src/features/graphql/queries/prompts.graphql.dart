@@ -8,6 +8,7 @@ class Fragment$Prompt {
   Fragment$Prompt({
     required this.id,
     required this.title,
+    this.secondaryTitle,
     required this.from,
     required this.to,
     required this.$__typename,
@@ -21,12 +22,14 @@ class Fragment$Prompt {
       default:
         final l$id = json['id'];
         final l$title = json['title'];
+        final l$secondaryTitle = json['secondaryTitle'];
         final l$from = json['from'];
         final l$to = json['to'];
         final l$$__typename = json['__typename'];
         return Fragment$Prompt(
           id: (l$id as String),
           title: (l$title as String),
+          secondaryTitle: (l$secondaryTitle as String?),
           from: (l$from as String),
           to: (l$to as String),
           $__typename: (l$$__typename as String),
@@ -37,6 +40,8 @@ class Fragment$Prompt {
   final String id;
 
   final String title;
+
+  final String? secondaryTitle;
 
   final String from;
 
@@ -50,6 +55,8 @@ class Fragment$Prompt {
     _resultData['id'] = l$id;
     final l$title = title;
     _resultData['title'] = l$title;
+    final l$secondaryTitle = secondaryTitle;
+    _resultData['secondaryTitle'] = l$secondaryTitle;
     final l$from = from;
     _resultData['from'] = l$from;
     final l$to = to;
@@ -63,12 +70,14 @@ class Fragment$Prompt {
   int get hashCode {
     final l$id = id;
     final l$title = title;
+    final l$secondaryTitle = secondaryTitle;
     final l$from = from;
     final l$to = to;
     final l$$__typename = $__typename;
     return Object.hashAll([
       l$id,
       l$title,
+      l$secondaryTitle,
       l$from,
       l$to,
       l$$__typename,
@@ -91,6 +100,11 @@ class Fragment$Prompt {
     final l$title = title;
     final lOther$title = other.title;
     if (l$title != lOther$title) {
+      return false;
+    }
+    final l$secondaryTitle = secondaryTitle;
+    final lOther$secondaryTitle = other.secondaryTitle;
+    if (l$secondaryTitle != lOther$secondaryTitle) {
       return false;
     }
     final l$from = from;
@@ -161,6 +175,7 @@ abstract class CopyWith$Fragment$Prompt<TRes> {
   TRes call({
     String? id,
     String? title,
+    String? secondaryTitle,
     String? from,
     String? to,
     String? $__typename,
@@ -183,6 +198,7 @@ class _CopyWithImpl$Fragment$Prompt<TRes>
   TRes call({
     Object? id = _undefined,
     Object? title = _undefined,
+    Object? secondaryTitle = _undefined,
     Object? from = _undefined,
     Object? to = _undefined,
     Object? $__typename = _undefined,
@@ -192,6 +208,9 @@ class _CopyWithImpl$Fragment$Prompt<TRes>
         title: title == _undefined || title == null
             ? _instance.title
             : (title as String),
+        secondaryTitle: secondaryTitle == _undefined
+            ? _instance.secondaryTitle
+            : (secondaryTitle as String?),
         from: from == _undefined || from == null
             ? _instance.from
             : (from as String),
@@ -211,6 +230,7 @@ class _CopyWithStubImpl$Fragment$Prompt<TRes>
   call({
     String? id,
     String? title,
+    String? secondaryTitle,
     String? from,
     String? to,
     String? $__typename,
@@ -236,6 +256,13 @@ const fragmentDefinitionPrompt = FragmentDefinitionNode(
     ),
     FieldNode(
       name: NameNode(value: 'title'),
+      alias: null,
+      arguments: [],
+      directives: [],
+      selectionSet: null,
+    ),
+    FieldNode(
+      name: NameNode(value: 'secondaryTitle'),
       alias: null,
       arguments: [],
       directives: [],
@@ -347,6 +374,7 @@ class Fragment$Prompt$$SurveyPrompt implements Fragment$Prompt {
     this.$__typename = 'SurveyPrompt',
     required this.id,
     required this.title,
+    this.secondaryTitle,
     required this.from,
     required this.to,
   });
@@ -356,6 +384,7 @@ class Fragment$Prompt$$SurveyPrompt implements Fragment$Prompt {
     final l$$__typename = json['__typename'];
     final l$id = json['id'];
     final l$title = json['title'];
+    final l$secondaryTitle = json['secondaryTitle'];
     final l$from = json['from'];
     final l$to = json['to'];
     return Fragment$Prompt$$SurveyPrompt(
@@ -363,6 +392,7 @@ class Fragment$Prompt$$SurveyPrompt implements Fragment$Prompt {
       $__typename: (l$$__typename as String),
       id: (l$id as String),
       title: (l$title as String),
+      secondaryTitle: (l$secondaryTitle as String?),
       from: (l$from as String),
       to: (l$to as String),
     );
@@ -375,6 +405,8 @@ class Fragment$Prompt$$SurveyPrompt implements Fragment$Prompt {
   final String id;
 
   final String title;
+
+  final String? secondaryTitle;
 
   final String from;
 
@@ -390,6 +422,8 @@ class Fragment$Prompt$$SurveyPrompt implements Fragment$Prompt {
     _resultData['id'] = l$id;
     final l$title = title;
     _resultData['title'] = l$title;
+    final l$secondaryTitle = secondaryTitle;
+    _resultData['secondaryTitle'] = l$secondaryTitle;
     final l$from = from;
     _resultData['from'] = l$from;
     final l$to = to;
@@ -403,6 +437,7 @@ class Fragment$Prompt$$SurveyPrompt implements Fragment$Prompt {
     final l$$__typename = $__typename;
     final l$id = id;
     final l$title = title;
+    final l$secondaryTitle = secondaryTitle;
     final l$from = from;
     final l$to = to;
     return Object.hashAll([
@@ -410,6 +445,7 @@ class Fragment$Prompt$$SurveyPrompt implements Fragment$Prompt {
       l$$__typename,
       l$id,
       l$title,
+      l$secondaryTitle,
       l$from,
       l$to,
     ]);
@@ -442,6 +478,11 @@ class Fragment$Prompt$$SurveyPrompt implements Fragment$Prompt {
     final l$title = title;
     final lOther$title = other.title;
     if (l$title != lOther$title) {
+      return false;
+    }
+    final l$secondaryTitle = secondaryTitle;
+    final lOther$secondaryTitle = other.secondaryTitle;
+    if (l$secondaryTitle != lOther$secondaryTitle) {
       return false;
     }
     final l$from = from;
@@ -481,6 +522,7 @@ abstract class CopyWith$Fragment$Prompt$$SurveyPrompt<TRes> {
     String? $__typename,
     String? id,
     String? title,
+    String? secondaryTitle,
     String? from,
     String? to,
   });
@@ -505,6 +547,7 @@ class _CopyWithImpl$Fragment$Prompt$$SurveyPrompt<TRes>
     Object? $__typename = _undefined,
     Object? id = _undefined,
     Object? title = _undefined,
+    Object? secondaryTitle = _undefined,
     Object? from = _undefined,
     Object? to = _undefined,
   }) =>
@@ -519,6 +562,9 @@ class _CopyWithImpl$Fragment$Prompt$$SurveyPrompt<TRes>
         title: title == _undefined || title == null
             ? _instance.title
             : (title as String),
+        secondaryTitle: secondaryTitle == _undefined
+            ? _instance.secondaryTitle
+            : (secondaryTitle as String?),
         from: from == _undefined || from == null
             ? _instance.from
             : (from as String),
@@ -542,6 +588,7 @@ class _CopyWithStubImpl$Fragment$Prompt$$SurveyPrompt<TRes>
     String? $__typename,
     String? id,
     String? title,
+    String? secondaryTitle,
     String? from,
     String? to,
   }) =>

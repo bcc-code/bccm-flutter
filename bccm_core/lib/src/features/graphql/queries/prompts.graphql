@@ -1,19 +1,20 @@
 query getPrompts {
-    prompts {
-        ...Prompt
-    }
+  prompts {
+    ...Prompt
+  }
 }
 
 fragment Prompt on Prompt {
-    id
-    title
-    from
-    to
-    ... on SurveyPrompt {
-        survey {
-            ...Survey
-        }
+  id
+  title
+  secondaryTitle
+  from
+  to
+  ... on SurveyPrompt {
+    survey {
+      ...Survey
     }
+  }
 }
 
 fragment Survey on Survey {
