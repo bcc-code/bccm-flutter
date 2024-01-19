@@ -41,7 +41,7 @@ class AnalyticsNavigatorObserver extends NavigatorObserver {
     return true;
   }
 
-  void _sendScreenView(Route<dynamic> route) {
+  void _sendScreenView(Route<dynamic> route, {bool isPop = false}) {
     final context = navigator?.context;
     if (context == null) {
       return;
@@ -49,6 +49,7 @@ class AnalyticsNavigatorObserver extends NavigatorObserver {
     final ref = ProviderScope.containerOf(context, listen: false);
 
     Map<String, dynamic> extraProperties = {
+      'pop': isPop,
       ...?ref.read(analyticsMetaEnricherProvider).getExtraPropertiesForRoute(route),
     };
 
@@ -85,7 +86,7 @@ class AnalyticsNavigatorObserver extends NavigatorObserver {
     debugPrint('didPop ${route.settings.name}');
     super.didPop(route, previousRoute);
     if (previousRoute != null && _routeFilter(previousRoute) && _routeFilter(route)) {
-      _sendScreenView(previousRoute);
+      _sendScreenView(previousRoute, isPop: true);
     }
   }
 }

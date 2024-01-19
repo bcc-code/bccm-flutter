@@ -1,7 +1,5 @@
 import 'package:bccm_core/bccm_core.dart';
 import 'package:bccm_core/platform.dart';
-import 'package:bccm_core/src/features/feature_flags/feature_flags.dart';
-import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
