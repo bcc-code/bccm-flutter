@@ -3,6 +3,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:bccm_core/bccm_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:bccm_core/design_system.dart';
 
@@ -75,7 +76,8 @@ class FcmNotificationService implements NotificationService {
   Future<void> requestPermissionAndSetup() async {
     var result = await FirebaseMessaging.instance.requestPermission();
     debugPrint('NotificationStatus: ${result.authorizationStatus}');
-    FirebaseMessaging.instance.setForegroundNotificationPresentationOptions(alert: false, badge: false, sound: true);
+    FirebaseMessaging.instance.setForegroundNotificationPresentationOptions(alert: true, badge: false, sound: false);
+    _setupAndroidChannels();
 
     final token = await FirebaseMessaging.instance.getToken();
     if (token != null) {
@@ -84,6 +86,19 @@ class FcmNotificationService implements NotificationService {
       debugPrint('FirebaseMessaging.instance.getToken() returned null');
     }
     _setupTokenListeners();
+  }
+
+  /// Setup notification channels for Android
+  void _setupAndroidChannels() {
+    /// This is to enable foreground notifications. Can be set as default through AndroidManifest.xml
+    const AndroidNotificationChannel channel = AndroidNotificationChannel(
+      'high_importance_channel',
+      'High Importance Notifications',
+      importance: Importance.max,
+    );
+    FlutterLocalNotificationsPlugin()
+        .resolvePlatformSpecificImplementation<AndroidFlutterLocalNotificationsPlugin>()
+        ?.createNotificationChannel(channel);
   }
 
   void _setupTokenListeners() {
