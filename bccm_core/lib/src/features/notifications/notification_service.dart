@@ -37,9 +37,15 @@ class FcmNotificationService implements NotificationService {
   StreamSubscription<RemoteMessage>? _onMessageOpenedApp;
   StreamSubscription<String>? _tokenSubscription;
   void Function(String token) onTokenChanged;
+  final void Function(RemoteMessage message)? onAppOpenWhenNotificationReceived;
+  final void Function(RemoteMessage message)? onShowInAppRequested;
+  final void Function(RemoteMessage message)? onCacheClearRequested;
 
   FcmNotificationService({
     required this.onTokenChanged,
+    required this.onAppOpenWhenNotificationReceived,
+    required this.onShowInAppRequested,
+    required this.onCacheClearRequested,
   }) {
     _appReadySubscription = globalEventBus.on<AppReadyEvent>().listen(_onAppReady);
   }
@@ -115,25 +121,22 @@ class FcmNotificationService implements NotificationService {
       return;
     }
     final notification = message.notification;
-    if (!openedFromBackground && notification != null && message.data['show_in_app'] == true) {
-      showDialog(
-          context: context!,
-          builder: (context) {
-            return SimpleDialog(
-                title: Text(
-              notification.title ?? '',
-              style: DesignSystem.of(context).textStyles.title3,
-            ));
-          });
-    } else if (openedFromBackground && message.data['action'] == 'deep_link') {
+    if (!openedFromBackground && notification != null) {
+      onAppOpenWhenNotificationReceived?.call(message);
+    }
+    if (openedFromBackground && notification != null && message.data['show_in_app'] == true) {
+      onShowInAppRequested?.call(message);
+    }
+    if (openedFromBackground && message.data['action'] == 'deep_link') {
       if (message.data['deep_link'] is String) {
         String path = message.data['deep_link'];
         debugPrint('navigating to deep_link from notification: $path');
         debugPrint('router in notification handler: ${context!.router.currentPath} ${context.router.currentSegments}');
         context.router.navigateNamedFromRoot(path);
       }
-    } else if (message.data['action'] == 'clear_cache') {
-      // TODO: implement cache clearing
+    }
+    if (message.data['action'] == 'clear_cache') {
+      onCacheClearRequested?.call(message);
     }
   }
 }
