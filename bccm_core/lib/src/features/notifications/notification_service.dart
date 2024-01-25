@@ -34,7 +34,7 @@ class DisabledNotificationService implements NotificationService {
 }
 
 class FcmNotificationService implements NotificationService {
-  final LocalNotificationService localNotificationsService;
+  final LocalNotificationService localNotificationService;
   String? fcmToken;
   late StreamSubscription<AppReadyEvent> _appReadySubscription;
   StreamSubscription<RemoteMessage>? _onMessageSubscription;
@@ -46,7 +46,7 @@ class FcmNotificationService implements NotificationService {
   final void Function(RemoteMessage? message)? onCacheClearRequested;
 
   FcmNotificationService({
-    required this.localNotificationsService,
+    required this.localNotificationService,
     required this.onTokenChanged,
     required this.onAppOpenWhenNotificationReceived,
     required this.onShowInAppRequested,
@@ -64,7 +64,7 @@ class FcmNotificationService implements NotificationService {
   }
 
   void _setupLocalNotifications() {
-    localNotificationsService.stream.listen(_onLocalNotificationOpened);
+    localNotificationService.stream.listen(_onLocalNotificationOpened);
   }
 
   void _onLocalNotificationOpened(NotificationResponse response) {
