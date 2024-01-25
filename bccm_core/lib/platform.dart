@@ -57,6 +57,7 @@ export 'package:bccm_core/src/features/graphql/client.dart';
 export 'package:bccm_core/src/features/prompts/prompts.dart';
 export 'package:bccm_core/src/features/app_config/app_config.dart';
 export 'package:bccm_core/src/features/notifications/notification_service.dart';
+export 'package:bccm_core/src/features/notifications/local_notifications.dart';
 export 'package:bccm_core/src/features/feature_flags/unleash.dart';
 export 'package:bccm_core/src/features/feature_flags/feature_flags.dart';
 export 'package:bccm_core/src/features/analytics/analytics.dart';
