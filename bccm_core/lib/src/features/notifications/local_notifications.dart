@@ -8,6 +8,7 @@ final localNotificationServiceProvider = Provider<LocalNotificationService>((ref
       FlutterLocalNotificationsPlugin(),
       const InitializationSettings(
         android: AndroidInitializationSettings('@mipmap/ic_launcher'),
+        iOS: DarwinInitializationSettings(),
       ))
     ..initialize();
 });
