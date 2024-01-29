@@ -33,8 +33,8 @@ Future<bool> openAppOrStore({
   bool success = false;
   final scheme = Platform.isAndroid ? androidScheme : iosScheme;
   try {
-    path ??= '';
-    final url = '$scheme:///$path';
+    path ??= '/';
+    final url = '$scheme://$path';
     success = await launchUrlString(url, mode: LaunchMode.externalApplication);
   } catch (e) {
     debugPrint(e.toString());
@@ -49,7 +49,8 @@ Future<bool> openAppOrStore({
   return success;
 }
 
-Future<bool> openStore({required String androidPackageName, required String iosStoreId}) async {
+Future<bool> openStore(
+    {required String androidPackageName, required String iosStoreId}) async {
   if (Platform.isAndroid) {
     return openPlayStore(androidPackageName);
   } else if (Platform.isIOS) {
@@ -61,13 +62,17 @@ Future<bool> openStore({required String androidPackageName, required String iosS
 Future<bool> openPlayStore(String packageName) async {
   bool success = false;
   try {
-    success = await launchUrlString("market://details?id=$packageName", mode: LaunchMode.externalApplication);
+    success = await launchUrlString("market://details?id=$packageName",
+        mode: LaunchMode.externalApplication);
   } catch (e) {
-    success = await launchUrlString("https://play.google.com/store/apps/details?id=$packageName", mode: LaunchMode.externalApplication);
+    success = await launchUrlString(
+        "https://play.google.com/store/apps/details?id=$packageName",
+        mode: LaunchMode.externalApplication);
   }
   return success;
 }
 
 Future<bool> openAppStore(String id) async {
-  return await launchUrlString("https://itunes.apple.com/app/id$id", mode: LaunchMode.externalApplication);
+  return await launchUrlString("https://itunes.apple.com/app/id$id",
+      mode: LaunchMode.externalApplication);
 }
