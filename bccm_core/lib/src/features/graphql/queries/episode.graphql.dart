@@ -3209,6 +3209,7 @@ class Fragment$BasicStream {
     required this.id,
     required this.url,
     required this.type,
+    this.videoLanguage,
     required this.audioLanguages,
     required this.subtitleLanguages,
     required this.downloadable,
@@ -3219,6 +3220,7 @@ class Fragment$BasicStream {
     final l$id = json['id'];
     final l$url = json['url'];
     final l$type = json['type'];
+    final l$videoLanguage = json['videoLanguage'];
     final l$audioLanguages = json['audioLanguages'];
     final l$subtitleLanguages = json['subtitleLanguages'];
     final l$downloadable = json['downloadable'];
@@ -3227,6 +3229,7 @@ class Fragment$BasicStream {
       id: (l$id as String),
       url: (l$url as String),
       type: fromJson$Enum$StreamType((l$type as String)),
+      videoLanguage: (l$videoLanguage as String?),
       audioLanguages: (l$audioLanguages as List<dynamic>)
           .map((e) => (e as String))
           .toList(),
@@ -3244,6 +3247,8 @@ class Fragment$BasicStream {
 
   final Enum$StreamType type;
 
+  final String? videoLanguage;
+
   final List<String> audioLanguages;
 
   final List<String> subtitleLanguages;
@@ -3260,6 +3265,8 @@ class Fragment$BasicStream {
     _resultData['url'] = l$url;
     final l$type = type;
     _resultData['type'] = toJson$Enum$StreamType(l$type);
+    final l$videoLanguage = videoLanguage;
+    _resultData['videoLanguage'] = l$videoLanguage;
     final l$audioLanguages = audioLanguages;
     _resultData['audioLanguages'] = l$audioLanguages.map((e) => e).toList();
     final l$subtitleLanguages = subtitleLanguages;
@@ -3277,6 +3284,7 @@ class Fragment$BasicStream {
     final l$id = id;
     final l$url = url;
     final l$type = type;
+    final l$videoLanguage = videoLanguage;
     final l$audioLanguages = audioLanguages;
     final l$subtitleLanguages = subtitleLanguages;
     final l$downloadable = downloadable;
@@ -3285,6 +3293,7 @@ class Fragment$BasicStream {
       l$id,
       l$url,
       l$type,
+      l$videoLanguage,
       Object.hashAll(l$audioLanguages.map((v) => v)),
       Object.hashAll(l$subtitleLanguages.map((v) => v)),
       l$downloadable,
@@ -3313,6 +3322,11 @@ class Fragment$BasicStream {
     final l$type = type;
     final lOther$type = other.type;
     if (l$type != lOther$type) {
+      return false;
+    }
+    final l$videoLanguage = videoLanguage;
+    final lOther$videoLanguage = other.videoLanguage;
+    if (l$videoLanguage != lOther$videoLanguage) {
       return false;
     }
     final l$audioLanguages = audioLanguages;
@@ -3374,6 +3388,7 @@ abstract class CopyWith$Fragment$BasicStream<TRes> {
     String? id,
     String? url,
     Enum$StreamType? type,
+    String? videoLanguage,
     List<String>? audioLanguages,
     List<String>? subtitleLanguages,
     bool? downloadable,
@@ -3398,6 +3413,7 @@ class _CopyWithImpl$Fragment$BasicStream<TRes>
     Object? id = _undefined,
     Object? url = _undefined,
     Object? type = _undefined,
+    Object? videoLanguage = _undefined,
     Object? audioLanguages = _undefined,
     Object? subtitleLanguages = _undefined,
     Object? downloadable = _undefined,
@@ -3409,6 +3425,9 @@ class _CopyWithImpl$Fragment$BasicStream<TRes>
         type: type == _undefined || type == null
             ? _instance.type
             : (type as Enum$StreamType),
+        videoLanguage: videoLanguage == _undefined
+            ? _instance.videoLanguage
+            : (videoLanguage as String?),
         audioLanguages: audioLanguages == _undefined || audioLanguages == null
             ? _instance.audioLanguages
             : (audioLanguages as List<String>),
@@ -3435,6 +3454,7 @@ class _CopyWithStubImpl$Fragment$BasicStream<TRes>
     String? id,
     String? url,
     Enum$StreamType? type,
+    String? videoLanguage,
     List<String>? audioLanguages,
     List<String>? subtitleLanguages,
     bool? downloadable,
@@ -3468,6 +3488,13 @@ const fragmentDefinitionBasicStream = FragmentDefinitionNode(
     ),
     FieldNode(
       name: NameNode(value: 'type'),
+      alias: null,
+      arguments: [],
+      directives: [],
+      selectionSet: null,
+    ),
+    FieldNode(
+      name: NameNode(value: 'videoLanguage'),
       alias: null,
       arguments: [],
       directives: [],

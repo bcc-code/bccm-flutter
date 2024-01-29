@@ -91,6 +91,7 @@ fragment BasicStream on Stream {
   id
   url
   type
+  videoLanguage
   audioLanguages
   subtitleLanguages
   downloadable
