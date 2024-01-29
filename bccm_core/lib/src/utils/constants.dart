@@ -9,7 +9,7 @@ class SecureStorageKeys {
 }
 
 const kBccmIosId = '913268220';
-const kBccmPackageName = 'tv.brunstad.app';
+const kBccmScheme = 'tv.brunstad.app.main';
 
 const kLiveIosId = '6476551025';
-const kLivePackageName = 'connect.bcc.live';
+const kLiveScheme = 'connect.bcc.live.main';
