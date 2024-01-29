@@ -286,6 +286,7 @@ class RudderAnalytics extends Analytics {
     if (profile.gender != null) {
       traits.putGender(profile.gender!);
     }
+    traits.put('tv', ref.read(isAndroidTvProvider));
 
     RudderController.instance.identify(analyticsId, traits: traits);
   }

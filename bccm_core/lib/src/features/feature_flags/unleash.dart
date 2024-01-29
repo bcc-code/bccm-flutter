@@ -1,3 +1,4 @@
+import 'package:bccm_core/bccm_core.dart';
 import 'package:bccm_core/platform.dart';
 import 'package:flutter/foundation.dart';
 import 'package:riverpod/riverpod.dart';
@@ -19,16 +20,19 @@ UnleashContext getStandardUnleashContext({
   String? gender,
   String? birthDate,
   bool? isBetaTester,
+  bool? androidTv,
 }) {
   final birthDateTime = birthDate == null ? null : DateTime.parse(birthDate);
   final age = birthDateTime == null ? null : getAgeFromBirthDate(birthDateTime);
   final ageGroup = age == null ? null : getAgeGroup(age);
+  androidTv ??= isAndroidTv;
   return UnleashContext(userId: userId, properties: {
     if (ageGroup != null) 'ageGroupStart': ageGroup.start.toString(),
     if (ageGroup != null) 'ageGroup': ageGroup.name,
     if (gender != null) 'gender': gender,
     if (gender != null) 'gender': gender,
     if (isBetaTester != null) 'isBetaTester': isBetaTester.toString(),
+    'isAndroidTv': isAndroidTv.toString(),
   });
 }
 
