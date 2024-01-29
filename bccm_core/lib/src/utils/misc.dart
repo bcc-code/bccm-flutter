@@ -55,3 +55,12 @@ Rect iPadSharePositionOrigin(BuildContext context) {
   final Size size = MediaQuery.of(context).size;
   return Rect.fromLTWH(0, 0, size.width, size.height / 2);
 }
+
+extension NullableContinuation<T> on T? {
+  R? let<R>(R Function(T) f) {
+    if (this != null) {
+      return f(this as T);
+    }
+    return null;
+  }
+}

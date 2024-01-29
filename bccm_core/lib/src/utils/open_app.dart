@@ -1,11 +1,40 @@
+import 'package:bccm_core/bccm_core.dart';
 import 'package:flutter/material.dart';
 import 'package:universal_io/io.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
-Future<bool> openAppOrStore({required String packageName, required String iosStoreId, String? url}) async {
+Future<bool> openBccmOrStore({String? path}) async {
+  return await openAppOrStore(
+    androidScheme: kBccmAndroidScheme,
+    androidPackageName: kBccmPackageName,
+    iosScheme: kBccmPackageName,
+    iosStoreId: kBccmIosId,
+    path: path,
+  );
+}
+
+Future<bool> openLiveOrStore({String? path}) async {
+  return await openAppOrStore(
+    androidScheme: kLiveAndroidScheme,
+    androidPackageName: kLivePackageName,
+    iosScheme: kLivePackageName,
+    iosStoreId: kLiveIosId,
+    path: path,
+  );
+}
+
+Future<bool> openAppOrStore({
+  required String androidScheme,
+  required String androidPackageName,
+  required String iosScheme,
+  required String iosStoreId,
+  String? path,
+}) async {
   bool success = false;
+  final scheme = Platform.isAndroid ? androidScheme : iosScheme;
   try {
-    url ??= '$packageName:///';
+    path ??= '';
+    final url = '$scheme:///$path';
     success = await launchUrlString(url, mode: LaunchMode.externalApplication);
   } catch (e) {
     debugPrint(e.toString());
@@ -13,16 +42,16 @@ Future<bool> openAppOrStore({required String packageName, required String iosSto
   }
   if (!success) {
     return await openStore(
-      packageName: packageName,
+      androidPackageName: androidPackageName,
       iosStoreId: iosStoreId,
     );
   }
   return success;
 }
 
-Future<bool> openStore({required String packageName, required String iosStoreId}) async {
+Future<bool> openStore({required String androidPackageName, required String iosStoreId}) async {
   if (Platform.isAndroid) {
-    return openPlayStore(packageName);
+    return openPlayStore(androidPackageName);
   } else if (Platform.isIOS) {
     return openAppStore(iosStoreId);
   }
