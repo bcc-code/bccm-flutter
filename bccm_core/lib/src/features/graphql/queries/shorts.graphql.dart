@@ -5830,3 +5830,607 @@ class Mutation$setShortProgress$Widget
           ),
         );
 }
+
+class Variables$Query$getShortStreams {
+  factory Variables$Query$getShortStreams({required String id}) =>
+      Variables$Query$getShortStreams._({
+        r'id': id,
+      });
+
+  Variables$Query$getShortStreams._(this._$data);
+
+  factory Variables$Query$getShortStreams.fromJson(Map<String, dynamic> data) {
+    final result$data = <String, dynamic>{};
+    final l$id = data['id'];
+    result$data['id'] = (l$id as String);
+    return Variables$Query$getShortStreams._(result$data);
+  }
+
+  Map<String, dynamic> _$data;
+
+  String get id => (_$data['id'] as String);
+
+  Map<String, dynamic> toJson() {
+    final result$data = <String, dynamic>{};
+    final l$id = id;
+    result$data['id'] = l$id;
+    return result$data;
+  }
+
+  CopyWith$Variables$Query$getShortStreams<Variables$Query$getShortStreams>
+      get copyWith => CopyWith$Variables$Query$getShortStreams(
+            this,
+            (i) => i,
+          );
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Variables$Query$getShortStreams) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$id = id;
+    final lOther$id = other.id;
+    if (l$id != lOther$id) {
+      return false;
+    }
+    return true;
+  }
+
+  @override
+  int get hashCode {
+    final l$id = id;
+    return Object.hashAll([l$id]);
+  }
+}
+
+abstract class CopyWith$Variables$Query$getShortStreams<TRes> {
+  factory CopyWith$Variables$Query$getShortStreams(
+    Variables$Query$getShortStreams instance,
+    TRes Function(Variables$Query$getShortStreams) then,
+  ) = _CopyWithImpl$Variables$Query$getShortStreams;
+
+  factory CopyWith$Variables$Query$getShortStreams.stub(TRes res) =
+      _CopyWithStubImpl$Variables$Query$getShortStreams;
+
+  TRes call({String? id});
+}
+
+class _CopyWithImpl$Variables$Query$getShortStreams<TRes>
+    implements CopyWith$Variables$Query$getShortStreams<TRes> {
+  _CopyWithImpl$Variables$Query$getShortStreams(
+    this._instance,
+    this._then,
+  );
+
+  final Variables$Query$getShortStreams _instance;
+
+  final TRes Function(Variables$Query$getShortStreams) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({Object? id = _undefined}) =>
+      _then(Variables$Query$getShortStreams._({
+        ..._instance._$data,
+        if (id != _undefined && id != null) 'id': (id as String),
+      }));
+}
+
+class _CopyWithStubImpl$Variables$Query$getShortStreams<TRes>
+    implements CopyWith$Variables$Query$getShortStreams<TRes> {
+  _CopyWithStubImpl$Variables$Query$getShortStreams(this._res);
+
+  TRes _res;
+
+  call({String? id}) => _res;
+}
+
+class Query$getShortStreams {
+  Query$getShortStreams({
+    required this.short,
+    this.$__typename = 'QueryRoot',
+  });
+
+  factory Query$getShortStreams.fromJson(Map<String, dynamic> json) {
+    final l$short = json['short'];
+    final l$$__typename = json['__typename'];
+    return Query$getShortStreams(
+      short: Query$getShortStreams$short.fromJson(
+          (l$short as Map<String, dynamic>)),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final Query$getShortStreams$short short;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$short = short;
+    _resultData['short'] = l$short.toJson();
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$short = short;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$short,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Query$getShortStreams) || runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$short = short;
+    final lOther$short = other.short;
+    if (l$short != lOther$short) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$getShortStreams on Query$getShortStreams {
+  CopyWith$Query$getShortStreams<Query$getShortStreams> get copyWith =>
+      CopyWith$Query$getShortStreams(
+        this,
+        (i) => i,
+      );
+}
+
+abstract class CopyWith$Query$getShortStreams<TRes> {
+  factory CopyWith$Query$getShortStreams(
+    Query$getShortStreams instance,
+    TRes Function(Query$getShortStreams) then,
+  ) = _CopyWithImpl$Query$getShortStreams;
+
+  factory CopyWith$Query$getShortStreams.stub(TRes res) =
+      _CopyWithStubImpl$Query$getShortStreams;
+
+  TRes call({
+    Query$getShortStreams$short? short,
+    String? $__typename,
+  });
+  CopyWith$Query$getShortStreams$short<TRes> get short;
+}
+
+class _CopyWithImpl$Query$getShortStreams<TRes>
+    implements CopyWith$Query$getShortStreams<TRes> {
+  _CopyWithImpl$Query$getShortStreams(
+    this._instance,
+    this._then,
+  );
+
+  final Query$getShortStreams _instance;
+
+  final TRes Function(Query$getShortStreams) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? short = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Query$getShortStreams(
+        short: short == _undefined || short == null
+            ? _instance.short
+            : (short as Query$getShortStreams$short),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+
+  CopyWith$Query$getShortStreams$short<TRes> get short {
+    final local$short = _instance.short;
+    return CopyWith$Query$getShortStreams$short(
+        local$short, (e) => call(short: e));
+  }
+}
+
+class _CopyWithStubImpl$Query$getShortStreams<TRes>
+    implements CopyWith$Query$getShortStreams<TRes> {
+  _CopyWithStubImpl$Query$getShortStreams(this._res);
+
+  TRes _res;
+
+  call({
+    Query$getShortStreams$short? short,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Query$getShortStreams$short<TRes> get short =>
+      CopyWith$Query$getShortStreams$short.stub(_res);
+}
+
+const documentNodeQuerygetShortStreams = DocumentNode(definitions: [
+  OperationDefinitionNode(
+    type: OperationType.query,
+    name: NameNode(value: 'getShortStreams'),
+    variableDefinitions: [
+      VariableDefinitionNode(
+        variable: VariableNode(name: NameNode(value: 'id')),
+        type: NamedTypeNode(
+          name: NameNode(value: 'UUID'),
+          isNonNull: true,
+        ),
+        defaultValue: DefaultValueNode(value: null),
+        directives: [],
+      )
+    ],
+    directives: [],
+    selectionSet: SelectionSetNode(selections: [
+      FieldNode(
+        name: NameNode(value: 'short'),
+        alias: null,
+        arguments: [
+          ArgumentNode(
+            name: NameNode(value: 'id'),
+            value: VariableNode(name: NameNode(value: 'id')),
+          )
+        ],
+        directives: [],
+        selectionSet: SelectionSetNode(selections: [
+          FieldNode(
+            name: NameNode(value: 'streams'),
+            alias: null,
+            arguments: [],
+            directives: [],
+            selectionSet: SelectionSetNode(selections: [
+              FragmentSpreadNode(
+                name: NameNode(value: 'BasicStream'),
+                directives: [],
+              ),
+              FieldNode(
+                name: NameNode(value: '__typename'),
+                alias: null,
+                arguments: [],
+                directives: [],
+                selectionSet: null,
+              ),
+            ]),
+          ),
+          FieldNode(
+            name: NameNode(value: '__typename'),
+            alias: null,
+            arguments: [],
+            directives: [],
+            selectionSet: null,
+          ),
+        ]),
+      ),
+      FieldNode(
+        name: NameNode(value: '__typename'),
+        alias: null,
+        arguments: [],
+        directives: [],
+        selectionSet: null,
+      ),
+    ]),
+  ),
+  fragmentDefinitionBasicStream,
+]);
+Query$getShortStreams _parserFn$Query$getShortStreams(
+        Map<String, dynamic> data) =>
+    Query$getShortStreams.fromJson(data);
+typedef OnQueryComplete$Query$getShortStreams = FutureOr<void> Function(
+  Map<String, dynamic>?,
+  Query$getShortStreams?,
+);
+
+class Options$Query$getShortStreams
+    extends graphql.QueryOptions<Query$getShortStreams> {
+  Options$Query$getShortStreams({
+    String? operationName,
+    required Variables$Query$getShortStreams variables,
+    graphql.FetchPolicy? fetchPolicy,
+    graphql.ErrorPolicy? errorPolicy,
+    graphql.CacheRereadPolicy? cacheRereadPolicy,
+    Object? optimisticResult,
+    Query$getShortStreams? typedOptimisticResult,
+    Duration? pollInterval,
+    graphql.Context? context,
+    OnQueryComplete$Query$getShortStreams? onComplete,
+    graphql.OnQueryError? onError,
+  })  : onCompleteWithParsed = onComplete,
+        super(
+          variables: variables.toJson(),
+          operationName: operationName,
+          fetchPolicy: fetchPolicy,
+          errorPolicy: errorPolicy,
+          cacheRereadPolicy: cacheRereadPolicy,
+          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+          pollInterval: pollInterval,
+          context: context,
+          onComplete: onComplete == null
+              ? null
+              : (data) => onComplete(
+                    data,
+                    data == null ? null : _parserFn$Query$getShortStreams(data),
+                  ),
+          onError: onError,
+          document: documentNodeQuerygetShortStreams,
+          parserFn: _parserFn$Query$getShortStreams,
+        );
+
+  final OnQueryComplete$Query$getShortStreams? onCompleteWithParsed;
+
+  @override
+  List<Object?> get properties => [
+        ...super.onComplete == null
+            ? super.properties
+            : super.properties.where((property) => property != onComplete),
+        onCompleteWithParsed,
+      ];
+}
+
+class WatchOptions$Query$getShortStreams
+    extends graphql.WatchQueryOptions<Query$getShortStreams> {
+  WatchOptions$Query$getShortStreams({
+    String? operationName,
+    required Variables$Query$getShortStreams variables,
+    graphql.FetchPolicy? fetchPolicy,
+    graphql.ErrorPolicy? errorPolicy,
+    graphql.CacheRereadPolicy? cacheRereadPolicy,
+    Object? optimisticResult,
+    Query$getShortStreams? typedOptimisticResult,
+    graphql.Context? context,
+    Duration? pollInterval,
+    bool? eagerlyFetchResults,
+    bool carryForwardDataOnException = true,
+    bool fetchResults = false,
+  }) : super(
+          variables: variables.toJson(),
+          operationName: operationName,
+          fetchPolicy: fetchPolicy,
+          errorPolicy: errorPolicy,
+          cacheRereadPolicy: cacheRereadPolicy,
+          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+          context: context,
+          document: documentNodeQuerygetShortStreams,
+          pollInterval: pollInterval,
+          eagerlyFetchResults: eagerlyFetchResults,
+          carryForwardDataOnException: carryForwardDataOnException,
+          fetchResults: fetchResults,
+          parserFn: _parserFn$Query$getShortStreams,
+        );
+}
+
+class FetchMoreOptions$Query$getShortStreams extends graphql.FetchMoreOptions {
+  FetchMoreOptions$Query$getShortStreams({
+    required graphql.UpdateQuery updateQuery,
+    required Variables$Query$getShortStreams variables,
+  }) : super(
+          updateQuery: updateQuery,
+          variables: variables.toJson(),
+          document: documentNodeQuerygetShortStreams,
+        );
+}
+
+extension ClientExtension$Query$getShortStreams on graphql.GraphQLClient {
+  Future<graphql.QueryResult<Query$getShortStreams>> query$getShortStreams(
+          Options$Query$getShortStreams options) async =>
+      await this.query(options);
+  graphql.ObservableQuery<Query$getShortStreams> watchQuery$getShortStreams(
+          WatchOptions$Query$getShortStreams options) =>
+      this.watchQuery(options);
+  void writeQuery$getShortStreams({
+    required Query$getShortStreams data,
+    required Variables$Query$getShortStreams variables,
+    bool broadcast = true,
+  }) =>
+      this.writeQuery(
+        graphql.Request(
+          operation:
+              graphql.Operation(document: documentNodeQuerygetShortStreams),
+          variables: variables.toJson(),
+        ),
+        data: data.toJson(),
+        broadcast: broadcast,
+      );
+  Query$getShortStreams? readQuery$getShortStreams({
+    required Variables$Query$getShortStreams variables,
+    bool optimistic = true,
+  }) {
+    final result = this.readQuery(
+      graphql.Request(
+        operation:
+            graphql.Operation(document: documentNodeQuerygetShortStreams),
+        variables: variables.toJson(),
+      ),
+      optimistic: optimistic,
+    );
+    return result == null ? null : Query$getShortStreams.fromJson(result);
+  }
+}
+
+graphql_flutter.QueryHookResult<Query$getShortStreams> useQuery$getShortStreams(
+        Options$Query$getShortStreams options) =>
+    graphql_flutter.useQuery(options);
+graphql.ObservableQuery<Query$getShortStreams> useWatchQuery$getShortStreams(
+        WatchOptions$Query$getShortStreams options) =>
+    graphql_flutter.useWatchQuery(options);
+
+class Query$getShortStreams$Widget
+    extends graphql_flutter.Query<Query$getShortStreams> {
+  Query$getShortStreams$Widget({
+    widgets.Key? key,
+    required Options$Query$getShortStreams options,
+    required graphql_flutter.QueryBuilder<Query$getShortStreams> builder,
+  }) : super(
+          key: key,
+          options: options,
+          builder: builder,
+        );
+}
+
+class Query$getShortStreams$short {
+  Query$getShortStreams$short({
+    required this.streams,
+    this.$__typename = 'Short',
+  });
+
+  factory Query$getShortStreams$short.fromJson(Map<String, dynamic> json) {
+    final l$streams = json['streams'];
+    final l$$__typename = json['__typename'];
+    return Query$getShortStreams$short(
+      streams: (l$streams as List<dynamic>)
+          .map(
+              (e) => Fragment$BasicStream.fromJson((e as Map<String, dynamic>)))
+          .toList(),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final List<Fragment$BasicStream> streams;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$streams = streams;
+    _resultData['streams'] = l$streams.map((e) => e.toJson()).toList();
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$streams = streams;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      Object.hashAll(l$streams.map((v) => v)),
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Query$getShortStreams$short) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$streams = streams;
+    final lOther$streams = other.streams;
+    if (l$streams.length != lOther$streams.length) {
+      return false;
+    }
+    for (int i = 0; i < l$streams.length; i++) {
+      final l$streams$entry = l$streams[i];
+      final lOther$streams$entry = lOther$streams[i];
+      if (l$streams$entry != lOther$streams$entry) {
+        return false;
+      }
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$getShortStreams$short
+    on Query$getShortStreams$short {
+  CopyWith$Query$getShortStreams$short<Query$getShortStreams$short>
+      get copyWith => CopyWith$Query$getShortStreams$short(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$getShortStreams$short<TRes> {
+  factory CopyWith$Query$getShortStreams$short(
+    Query$getShortStreams$short instance,
+    TRes Function(Query$getShortStreams$short) then,
+  ) = _CopyWithImpl$Query$getShortStreams$short;
+
+  factory CopyWith$Query$getShortStreams$short.stub(TRes res) =
+      _CopyWithStubImpl$Query$getShortStreams$short;
+
+  TRes call({
+    List<Fragment$BasicStream>? streams,
+    String? $__typename,
+  });
+  TRes streams(
+      Iterable<Fragment$BasicStream> Function(
+              Iterable<CopyWith$Fragment$BasicStream<Fragment$BasicStream>>)
+          _fn);
+}
+
+class _CopyWithImpl$Query$getShortStreams$short<TRes>
+    implements CopyWith$Query$getShortStreams$short<TRes> {
+  _CopyWithImpl$Query$getShortStreams$short(
+    this._instance,
+    this._then,
+  );
+
+  final Query$getShortStreams$short _instance;
+
+  final TRes Function(Query$getShortStreams$short) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? streams = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Query$getShortStreams$short(
+        streams: streams == _undefined || streams == null
+            ? _instance.streams
+            : (streams as List<Fragment$BasicStream>),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+
+  TRes streams(
+          Iterable<Fragment$BasicStream> Function(
+                  Iterable<CopyWith$Fragment$BasicStream<Fragment$BasicStream>>)
+              _fn) =>
+      call(
+          streams:
+              _fn(_instance.streams.map((e) => CopyWith$Fragment$BasicStream(
+                    e,
+                    (i) => i,
+                  ))).toList());
+}
+
+class _CopyWithStubImpl$Query$getShortStreams$short<TRes>
+    implements CopyWith$Query$getShortStreams$short<TRes> {
+  _CopyWithStubImpl$Query$getShortStreams$short(this._res);
+
+  TRes _res;
+
+  call({
+    List<Fragment$BasicStream>? streams,
+    String? $__typename,
+  }) =>
+      _res;
+
+  streams(_fn) => _res;
+}

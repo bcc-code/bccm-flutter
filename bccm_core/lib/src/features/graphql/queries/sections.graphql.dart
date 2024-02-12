@@ -2129,6 +2129,10 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item
         return Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$StudyTopic
             .fromJson(json);
 
+      case "Short":
+        return Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Short
+            .fromJson(json);
+
       default:
         final l$$__typename = json['__typename'];
         return Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item(
@@ -2204,6 +2208,9 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$PosterSec
     required _T Function(
             Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$StudyTopic)
         studyTopic,
+    required _T Function(
+            Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Short)
+        short,
     required _T Function() orElse,
   }) {
     switch ($__typename) {
@@ -2239,6 +2246,10 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$PosterSec
         return studyTopic(this
             as Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$StudyTopic);
 
+      case "Short":
+        return short(this
+            as Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Short);
+
       default:
         return orElse();
     }
@@ -2269,6 +2280,9 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$PosterSec
     _T Function(
             Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$StudyTopic)?
         studyTopic,
+    _T Function(
+            Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Short)?
+        short,
     required _T Function() orElse,
   }) {
     switch ($__typename) {
@@ -2332,6 +2346,14 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$PosterSec
         if (studyTopic != null) {
           return studyTopic(this
               as Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$StudyTopic);
+        } else {
+          return orElse();
+        }
+
+      case "Short":
+        if (short != null) {
+          return short(this
+              as Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Short);
         } else {
           return orElse();
         }
@@ -4317,6 +4339,122 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$PosterSectio
         CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$StudyTopic<
             TRes> {
   _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$StudyTopic(
+      this._res);
+
+  TRes _res;
+
+  call({String? $__typename}) => _res;
+}
+
+class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Short
+    implements
+        Fragment$Section$$PosterSection$items$items$item$$Short,
+        Fragment$ItemSectionItem$item$$Short,
+        Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item {
+  Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Short(
+      {this.$__typename = 'Short'});
+
+  factory Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Short.fromJson(
+      Map<String, dynamic> json) {
+    final l$$__typename = json['__typename'];
+    return Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Short(
+        $__typename: (l$$__typename as String));
+  }
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$$__typename = $__typename;
+    return Object.hashAll([l$$__typename]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Short) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Short
+    on Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Short {
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Short<
+          Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Short>
+      get copyWith =>
+          CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Short(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Short<
+    TRes> {
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Short(
+    Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Short
+        instance,
+    TRes Function(
+            Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Short)
+        then,
+  ) = _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Short;
+
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Short.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Short;
+
+  TRes call({String? $__typename});
+}
+
+class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Short<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Short<
+            TRes> {
+  _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Short(
+    this._instance,
+    this._then,
+  );
+
+  final Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Short
+      _instance;
+
+  final TRes Function(
+          Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Short)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({Object? $__typename = _undefined}) => _then(
+      Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Short(
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String)));
+}
+
+class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Short<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Short<
+            TRes> {
+  _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Short(
       this._res);
 
   TRes _res;
@@ -6733,6 +6871,10 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$it
         return Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$StudyTopic
             .fromJson(json);
 
+      case "Short":
+        return Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Short
+            .fromJson(json);
+
       default:
         final l$$__typename = json['__typename'];
         return Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item(
@@ -6808,6 +6950,9 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$FeaturedS
     required _T Function(
             Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$StudyTopic)
         studyTopic,
+    required _T Function(
+            Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Short)
+        short,
     required _T Function() orElse,
   }) {
     switch ($__typename) {
@@ -6843,6 +6988,10 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$FeaturedS
         return studyTopic(this
             as Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$StudyTopic);
 
+      case "Short":
+        return short(this
+            as Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Short);
+
       default:
         return orElse();
     }
@@ -6873,6 +7022,9 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$FeaturedS
     _T Function(
             Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$StudyTopic)?
         studyTopic,
+    _T Function(
+            Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Short)?
+        short,
     required _T Function() orElse,
   }) {
     switch ($__typename) {
@@ -6936,6 +7088,14 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$FeaturedS
         if (studyTopic != null) {
           return studyTopic(this
               as Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$StudyTopic);
+        } else {
+          return orElse();
+        }
+
+      case "Short":
+        if (short != null) {
+          return short(this
+              as Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Short);
         } else {
           return orElse();
         }
@@ -8788,6 +8948,122 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$FeaturedSect
   call({String? $__typename}) => _res;
 }
 
+class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Short
+    implements
+        Fragment$Section$$FeaturedSection$items$items$item$$Short,
+        Fragment$ItemSectionItem$item$$Short,
+        Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item {
+  Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Short(
+      {this.$__typename = 'Short'});
+
+  factory Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Short.fromJson(
+      Map<String, dynamic> json) {
+    final l$$__typename = json['__typename'];
+    return Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Short(
+        $__typename: (l$$__typename as String));
+  }
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$$__typename = $__typename;
+    return Object.hashAll([l$$__typename]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Short) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Short
+    on Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Short {
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Short<
+          Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Short>
+      get copyWith =>
+          CopyWith$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Short(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Short<
+    TRes> {
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Short(
+    Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Short
+        instance,
+    TRes Function(
+            Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Short)
+        then,
+  ) = _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Short;
+
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Short.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Short;
+
+  TRes call({String? $__typename});
+}
+
+class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Short<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Short<
+            TRes> {
+  _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Short(
+    this._instance,
+    this._then,
+  );
+
+  final Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Short
+      _instance;
+
+  final TRes Function(
+          Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Short)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({Object? $__typename = _undefined}) => _then(
+      Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Short(
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String)));
+}
+
+class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Short<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Short<
+            TRes> {
+  _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Short(
+      this._res);
+
+  TRes _res;
+
+  call({String? $__typename}) => _res;
+}
+
 class Query$FetchMoreItemsForItemSection$section$$DefaultSection
     implements
         Fragment$Section$$DefaultSection,
@@ -9809,6 +10085,10 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$ite
         return Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$StudyTopic
             .fromJson(json);
 
+      case "Short":
+        return Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Short
+            .fromJson(json);
+
       default:
         final l$$__typename = json['__typename'];
         return Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item(
@@ -9884,6 +10164,9 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$DefaultSe
     required _T Function(
             Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$StudyTopic)
         studyTopic,
+    required _T Function(
+            Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Short)
+        short,
     required _T Function() orElse,
   }) {
     switch ($__typename) {
@@ -9919,6 +10202,10 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$DefaultSe
         return studyTopic(this
             as Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$StudyTopic);
 
+      case "Short":
+        return short(this
+            as Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Short);
+
       default:
         return orElse();
     }
@@ -9949,6 +10236,9 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$DefaultSe
     _T Function(
             Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$StudyTopic)?
         studyTopic,
+    _T Function(
+            Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Short)?
+        short,
     required _T Function() orElse,
   }) {
     switch ($__typename) {
@@ -10012,6 +10302,14 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$DefaultSe
         if (studyTopic != null) {
           return studyTopic(this
               as Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$StudyTopic);
+        } else {
+          return orElse();
+        }
+
+      case "Short":
+        if (short != null) {
+          return short(this
+              as Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Short);
         } else {
           return orElse();
         }
@@ -11884,6 +12182,122 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$DefaultSecti
   call({String? $__typename}) => _res;
 }
 
+class Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Short
+    implements
+        Fragment$Section$$DefaultSection$items$items$item$$Short,
+        Fragment$ItemSectionItem$item$$Short,
+        Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item {
+  Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Short(
+      {this.$__typename = 'Short'});
+
+  factory Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Short.fromJson(
+      Map<String, dynamic> json) {
+    final l$$__typename = json['__typename'];
+    return Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Short(
+        $__typename: (l$$__typename as String));
+  }
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$$__typename = $__typename;
+    return Object.hashAll([l$$__typename]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Short) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Short
+    on Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Short {
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Short<
+          Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Short>
+      get copyWith =>
+          CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Short(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Short<
+    TRes> {
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Short(
+    Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Short
+        instance,
+    TRes Function(
+            Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Short)
+        then,
+  ) = _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Short;
+
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Short.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Short;
+
+  TRes call({String? $__typename});
+}
+
+class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Short<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Short<
+            TRes> {
+  _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Short(
+    this._instance,
+    this._then,
+  );
+
+  final Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Short
+      _instance;
+
+  final TRes Function(
+          Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Short)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({Object? $__typename = _undefined}) => _then(
+      Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Short(
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String)));
+}
+
+class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Short<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Short<
+            TRes> {
+  _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Short(
+      this._res);
+
+  TRes _res;
+
+  call({String? $__typename}) => _res;
+}
+
 class Query$FetchMoreItemsForItemSection$section$$CardSection
     implements
         Fragment$Section$$CardSection,
@@ -12913,6 +13327,10 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item
         return Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$StudyTopic
             .fromJson(json);
 
+      case "Short":
+        return Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Short
+            .fromJson(json);
+
       default:
         final l$$__typename = json['__typename'];
         return Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item(
@@ -12988,6 +13406,9 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$CardSecti
     required _T Function(
             Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$StudyTopic)
         studyTopic,
+    required _T Function(
+            Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Short)
+        short,
     required _T Function() orElse,
   }) {
     switch ($__typename) {
@@ -13023,6 +13444,10 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$CardSecti
         return studyTopic(this
             as Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$StudyTopic);
 
+      case "Short":
+        return short(this
+            as Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Short);
+
       default:
         return orElse();
     }
@@ -13053,6 +13478,9 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$CardSecti
     _T Function(
             Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$StudyTopic)?
         studyTopic,
+    _T Function(
+            Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Short)?
+        short,
     required _T Function() orElse,
   }) {
     switch ($__typename) {
@@ -13116,6 +13544,14 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$CardSecti
         if (studyTopic != null) {
           return studyTopic(this
               as Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$StudyTopic);
+        } else {
+          return orElse();
+        }
+
+      case "Short":
+        if (short != null) {
+          return short(this
+              as Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Short);
         } else {
           return orElse();
         }
@@ -15138,6 +15574,122 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$CardSection$
               .stub(_res);
 }
 
+class Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Short
+    implements
+        Fragment$Section$$CardSection$items$items$item$$Short,
+        Fragment$ItemSectionItem$item$$Short,
+        Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item {
+  Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Short(
+      {this.$__typename = 'Short'});
+
+  factory Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Short.fromJson(
+      Map<String, dynamic> json) {
+    final l$$__typename = json['__typename'];
+    return Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Short(
+        $__typename: (l$$__typename as String));
+  }
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$$__typename = $__typename;
+    return Object.hashAll([l$$__typename]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Short) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Short
+    on Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Short {
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Short<
+          Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Short>
+      get copyWith =>
+          CopyWith$Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Short(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Short<
+    TRes> {
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Short(
+    Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Short
+        instance,
+    TRes Function(
+            Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Short)
+        then,
+  ) = _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Short;
+
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Short.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Short;
+
+  TRes call({String? $__typename});
+}
+
+class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Short<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Short<
+            TRes> {
+  _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Short(
+    this._instance,
+    this._then,
+  );
+
+  final Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Short
+      _instance;
+
+  final TRes Function(
+          Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Short)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({Object? $__typename = _undefined}) => _then(
+      Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Short(
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String)));
+}
+
+class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Short<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Short<
+            TRes> {
+  _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Short(
+      this._res);
+
+  TRes _res;
+
+  call({String? $__typename}) => _res;
+}
+
 class Query$FetchMoreItemsForItemSection$section$$ListSection
     implements
         Fragment$Section$$ListSection,
@@ -16127,6 +16679,10 @@ class Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item
         return Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$StudyTopic
             .fromJson(json);
 
+      case "Short":
+        return Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Short
+            .fromJson(json);
+
       default:
         final l$$__typename = json['__typename'];
         return Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item(
@@ -16202,6 +16758,9 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$ListSecti
     required _T Function(
             Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$StudyTopic)
         studyTopic,
+    required _T Function(
+            Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Short)
+        short,
     required _T Function() orElse,
   }) {
     switch ($__typename) {
@@ -16237,6 +16796,10 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$ListSecti
         return studyTopic(this
             as Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$StudyTopic);
 
+      case "Short":
+        return short(this
+            as Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Short);
+
       default:
         return orElse();
     }
@@ -16267,6 +16830,9 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$ListSecti
     _T Function(
             Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$StudyTopic)?
         studyTopic,
+    _T Function(
+            Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Short)?
+        short,
     required _T Function() orElse,
   }) {
     switch ($__typename) {
@@ -16330,6 +16896,14 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$ListSecti
         if (studyTopic != null) {
           return studyTopic(this
               as Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$StudyTopic);
+        } else {
+          return orElse();
+        }
+
+      case "Short":
+        if (short != null) {
+          return short(this
+              as Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Short);
         } else {
           return orElse();
         }
@@ -18240,6 +18814,122 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$ListSection$
   call({String? $__typename}) => _res;
 }
 
+class Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Short
+    implements
+        Fragment$Section$$ListSection$items$items$item$$Short,
+        Fragment$ItemSectionItem$item$$Short,
+        Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item {
+  Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Short(
+      {this.$__typename = 'Short'});
+
+  factory Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Short.fromJson(
+      Map<String, dynamic> json) {
+    final l$$__typename = json['__typename'];
+    return Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Short(
+        $__typename: (l$$__typename as String));
+  }
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$$__typename = $__typename;
+    return Object.hashAll([l$$__typename]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Short) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Short
+    on Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Short {
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Short<
+          Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Short>
+      get copyWith =>
+          CopyWith$Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Short(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Short<
+    TRes> {
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Short(
+    Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Short
+        instance,
+    TRes Function(
+            Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Short)
+        then,
+  ) = _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Short;
+
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Short.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Short;
+
+  TRes call({String? $__typename});
+}
+
+class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Short<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Short<
+            TRes> {
+  _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Short(
+    this._instance,
+    this._then,
+  );
+
+  final Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Short
+      _instance;
+
+  final TRes Function(
+          Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Short)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({Object? $__typename = _undefined}) => _then(
+      Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Short(
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String)));
+}
+
+class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Short<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Short<
+            TRes> {
+  _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Short(
+      this._res);
+
+  TRes _res;
+
+  call({String? $__typename}) => _res;
+}
+
 class Query$FetchMoreItemsForItemSection$section$$CardListSection
     implements
         Fragment$Section$$CardListSection,
@@ -20001,6 +20691,10 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items
         return Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$StudyTopic
             .fromJson(json);
 
+      case "Short":
+        return Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Short
+            .fromJson(json);
+
       default:
         final l$$__typename = json['__typename'];
         return Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item(
@@ -20076,6 +20770,9 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$DefaultGr
     required _T Function(
             Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$StudyTopic)
         studyTopic,
+    required _T Function(
+            Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Short)
+        short,
     required _T Function() orElse,
   }) {
     switch ($__typename) {
@@ -20111,6 +20808,10 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$DefaultGr
         return studyTopic(this
             as Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$StudyTopic);
 
+      case "Short":
+        return short(this
+            as Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Short);
+
       default:
         return orElse();
     }
@@ -20141,6 +20842,9 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$DefaultGr
     _T Function(
             Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$StudyTopic)?
         studyTopic,
+    _T Function(
+            Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Short)?
+        short,
     required _T Function() orElse,
   }) {
     switch ($__typename) {
@@ -20204,6 +20908,14 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$DefaultGr
         if (studyTopic != null) {
           return studyTopic(this
               as Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$StudyTopic);
+        } else {
+          return orElse();
+        }
+
+      case "Short":
+        if (short != null) {
+          return short(this
+              as Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Short);
         } else {
           return orElse();
         }
@@ -22105,6 +22817,123 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$DefaultGridS
   call({String? $__typename}) => _res;
 }
 
+class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Short
+    implements
+        Fragment$Section$$DefaultGridSection$items$items$item$$Short,
+        Fragment$ItemSectionItem$item$$Short,
+        Fragment$GridSectionItem$item$$Short,
+        Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item {
+  Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Short(
+      {this.$__typename = 'Short'});
+
+  factory Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Short.fromJson(
+      Map<String, dynamic> json) {
+    final l$$__typename = json['__typename'];
+    return Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Short(
+        $__typename: (l$$__typename as String));
+  }
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$$__typename = $__typename;
+    return Object.hashAll([l$$__typename]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Short) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Short
+    on Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Short {
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Short<
+          Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Short>
+      get copyWith =>
+          CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Short(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Short<
+    TRes> {
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Short(
+    Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Short
+        instance,
+    TRes Function(
+            Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Short)
+        then,
+  ) = _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Short;
+
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Short.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Short;
+
+  TRes call({String? $__typename});
+}
+
+class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Short<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Short<
+            TRes> {
+  _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Short(
+    this._instance,
+    this._then,
+  );
+
+  final Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Short
+      _instance;
+
+  final TRes Function(
+          Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Short)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({Object? $__typename = _undefined}) => _then(
+      Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Short(
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String)));
+}
+
+class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Short<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Short<
+            TRes> {
+  _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Short(
+      this._res);
+
+  TRes _res;
+
+  call({String? $__typename}) => _res;
+}
+
 class Query$FetchMoreItemsForItemSection$section$$PosterGridSection
     implements
         Fragment$Section$$PosterGridSection,
@@ -23134,6 +23963,10 @@ class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$
         return Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$StudyTopic
             .fromJson(json);
 
+      case "Short":
+        return Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Short
+            .fromJson(json);
+
       default:
         final l$$__typename = json['__typename'];
         return Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item(
@@ -23209,6 +24042,9 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$PosterGri
     required _T Function(
             Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$StudyTopic)
         studyTopic,
+    required _T Function(
+            Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Short)
+        short,
     required _T Function() orElse,
   }) {
     switch ($__typename) {
@@ -23244,6 +24080,10 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$PosterGri
         return studyTopic(this
             as Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$StudyTopic);
 
+      case "Short":
+        return short(this
+            as Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Short);
+
       default:
         return orElse();
     }
@@ -23274,6 +24114,9 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$PosterGri
     _T Function(
             Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$StudyTopic)?
         studyTopic,
+    _T Function(
+            Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Short)?
+        short,
     required _T Function() orElse,
   }) {
     switch ($__typename) {
@@ -23337,6 +24180,14 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$PosterGri
         if (studyTopic != null) {
           return studyTopic(this
               as Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$StudyTopic);
+        } else {
+          return orElse();
+        }
+
+      case "Short":
+        if (short != null) {
+          return short(this
+              as Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Short);
         } else {
           return orElse();
         }
@@ -25238,6 +26089,123 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$PosterGridSe
   call({String? $__typename}) => _res;
 }
 
+class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Short
+    implements
+        Fragment$Section$$PosterGridSection$items$items$item$$Short,
+        Fragment$ItemSectionItem$item$$Short,
+        Fragment$GridSectionItem$item$$Short,
+        Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item {
+  Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Short(
+      {this.$__typename = 'Short'});
+
+  factory Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Short.fromJson(
+      Map<String, dynamic> json) {
+    final l$$__typename = json['__typename'];
+    return Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Short(
+        $__typename: (l$$__typename as String));
+  }
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$$__typename = $__typename;
+    return Object.hashAll([l$$__typename]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Short) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Short
+    on Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Short {
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Short<
+          Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Short>
+      get copyWith =>
+          CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Short(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Short<
+    TRes> {
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Short(
+    Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Short
+        instance,
+    TRes Function(
+            Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Short)
+        then,
+  ) = _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Short;
+
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Short.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Short;
+
+  TRes call({String? $__typename});
+}
+
+class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Short<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Short<
+            TRes> {
+  _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Short(
+    this._instance,
+    this._then,
+  );
+
+  final Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Short
+      _instance;
+
+  final TRes Function(
+          Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Short)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({Object? $__typename = _undefined}) => _then(
+      Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Short(
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String)));
+}
+
+class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Short<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Short<
+            TRes> {
+  _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Short(
+      this._res);
+
+  TRes _res;
+
+  call({String? $__typename}) => _res;
+}
+
 class Query$FetchMoreItemsForItemSection$section$$IconGridSection
     implements
         Fragment$Section$$IconGridSection,
@@ -26264,6 +27232,10 @@ class Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$it
         return Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$StudyTopic
             .fromJson(json);
 
+      case "Short":
+        return Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Short
+            .fromJson(json);
+
       default:
         final l$$__typename = json['__typename'];
         return Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item(
@@ -26339,6 +27311,9 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$IconGridS
     required _T Function(
             Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$StudyTopic)
         studyTopic,
+    required _T Function(
+            Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Short)
+        short,
     required _T Function() orElse,
   }) {
     switch ($__typename) {
@@ -26374,6 +27349,10 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$IconGridS
         return studyTopic(this
             as Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$StudyTopic);
 
+      case "Short":
+        return short(this
+            as Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Short);
+
       default:
         return orElse();
     }
@@ -26404,6 +27383,9 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$IconGridS
     _T Function(
             Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$StudyTopic)?
         studyTopic,
+    _T Function(
+            Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Short)?
+        short,
     required _T Function() orElse,
   }) {
     switch ($__typename) {
@@ -26467,6 +27449,14 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$IconGridS
         if (studyTopic != null) {
           return studyTopic(this
               as Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$StudyTopic);
+        } else {
+          return orElse();
+        }
+
+      case "Short":
+        if (short != null) {
+          return short(this
+              as Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Short);
         } else {
           return orElse();
         }
@@ -28361,6 +29351,123 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$IconGridSect
         CopyWith$Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$StudyTopic<
             TRes> {
   _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$StudyTopic(
+      this._res);
+
+  TRes _res;
+
+  call({String? $__typename}) => _res;
+}
+
+class Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Short
+    implements
+        Fragment$Section$$IconGridSection$items$items$item$$Short,
+        Fragment$ItemSectionItem$item$$Short,
+        Fragment$GridSectionItem$item$$Short,
+        Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item {
+  Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Short(
+      {this.$__typename = 'Short'});
+
+  factory Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Short.fromJson(
+      Map<String, dynamic> json) {
+    final l$$__typename = json['__typename'];
+    return Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Short(
+        $__typename: (l$$__typename as String));
+  }
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$$__typename = $__typename;
+    return Object.hashAll([l$$__typename]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Short) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Short
+    on Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Short {
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Short<
+          Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Short>
+      get copyWith =>
+          CopyWith$Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Short(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Short<
+    TRes> {
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Short(
+    Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Short
+        instance,
+    TRes Function(
+            Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Short)
+        then,
+  ) = _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Short;
+
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Short.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Short;
+
+  TRes call({String? $__typename});
+}
+
+class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Short<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Short<
+            TRes> {
+  _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Short(
+    this._instance,
+    this._then,
+  );
+
+  final Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Short
+      _instance;
+
+  final TRes Function(
+          Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Short)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({Object? $__typename = _undefined}) => _then(
+      Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Short(
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String)));
+}
+
+class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Short<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Short<
+            TRes> {
+  _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Short(
       this._res);
 
   TRes _res;
@@ -33297,6 +34404,10 @@ class Query$GetSection$section$$PosterSection$items$items$item
         return Query$GetSection$section$$PosterSection$items$items$item$$StudyTopic
             .fromJson(json);
 
+      case "Short":
+        return Query$GetSection$section$$PosterSection$items$items$item$$Short
+            .fromJson(json);
+
       default:
         final l$$__typename = json['__typename'];
         return Query$GetSection$section$$PosterSection$items$items$item(
@@ -33371,6 +34482,9 @@ extension UtilityExtension$Query$GetSection$section$$PosterSection$items$items$i
     required _T Function(
             Query$GetSection$section$$PosterSection$items$items$item$$StudyTopic)
         studyTopic,
+    required _T Function(
+            Query$GetSection$section$$PosterSection$items$items$item$$Short)
+        short,
     required _T Function() orElse,
   }) {
     switch ($__typename) {
@@ -33406,6 +34520,10 @@ extension UtilityExtension$Query$GetSection$section$$PosterSection$items$items$i
         return studyTopic(this
             as Query$GetSection$section$$PosterSection$items$items$item$$StudyTopic);
 
+      case "Short":
+        return short(this
+            as Query$GetSection$section$$PosterSection$items$items$item$$Short);
+
       default:
         return orElse();
     }
@@ -33432,6 +34550,9 @@ extension UtilityExtension$Query$GetSection$section$$PosterSection$items$items$i
     _T Function(
             Query$GetSection$section$$PosterSection$items$items$item$$StudyTopic)?
         studyTopic,
+    _T Function(
+            Query$GetSection$section$$PosterSection$items$items$item$$Short)?
+        short,
     required _T Function() orElse,
   }) {
     switch ($__typename) {
@@ -33495,6 +34616,14 @@ extension UtilityExtension$Query$GetSection$section$$PosterSection$items$items$i
         if (studyTopic != null) {
           return studyTopic(this
               as Query$GetSection$section$$PosterSection$items$items$item$$StudyTopic);
+        } else {
+          return orElse();
+        }
+
+      case "Short":
+        if (short != null) {
+          return short(this
+              as Query$GetSection$section$$PosterSection$items$items$item$$Short);
         } else {
           return orElse();
         }
@@ -35456,6 +36585,120 @@ class _CopyWithStubImpl$Query$GetSection$section$$PosterSection$items$items$item
         CopyWith$Query$GetSection$section$$PosterSection$items$items$item$$StudyTopic<
             TRes> {
   _CopyWithStubImpl$Query$GetSection$section$$PosterSection$items$items$item$$StudyTopic(
+      this._res);
+
+  TRes _res;
+
+  call({String? $__typename}) => _res;
+}
+
+class Query$GetSection$section$$PosterSection$items$items$item$$Short
+    implements
+        Fragment$Section$$PosterSection$items$items$item$$Short,
+        Fragment$ItemSectionItem$item$$Short,
+        Query$GetSection$section$$PosterSection$items$items$item {
+  Query$GetSection$section$$PosterSection$items$items$item$$Short(
+      {this.$__typename = 'Short'});
+
+  factory Query$GetSection$section$$PosterSection$items$items$item$$Short.fromJson(
+      Map<String, dynamic> json) {
+    final l$$__typename = json['__typename'];
+    return Query$GetSection$section$$PosterSection$items$items$item$$Short(
+        $__typename: (l$$__typename as String));
+  }
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$$__typename = $__typename;
+    return Object.hashAll([l$$__typename]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Query$GetSection$section$$PosterSection$items$items$item$$Short) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$GetSection$section$$PosterSection$items$items$item$$Short
+    on Query$GetSection$section$$PosterSection$items$items$item$$Short {
+  CopyWith$Query$GetSection$section$$PosterSection$items$items$item$$Short<
+          Query$GetSection$section$$PosterSection$items$items$item$$Short>
+      get copyWith =>
+          CopyWith$Query$GetSection$section$$PosterSection$items$items$item$$Short(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$GetSection$section$$PosterSection$items$items$item$$Short<
+    TRes> {
+  factory CopyWith$Query$GetSection$section$$PosterSection$items$items$item$$Short(
+    Query$GetSection$section$$PosterSection$items$items$item$$Short instance,
+    TRes Function(
+            Query$GetSection$section$$PosterSection$items$items$item$$Short)
+        then,
+  ) = _CopyWithImpl$Query$GetSection$section$$PosterSection$items$items$item$$Short;
+
+  factory CopyWith$Query$GetSection$section$$PosterSection$items$items$item$$Short.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$GetSection$section$$PosterSection$items$items$item$$Short;
+
+  TRes call({String? $__typename});
+}
+
+class _CopyWithImpl$Query$GetSection$section$$PosterSection$items$items$item$$Short<
+        TRes>
+    implements
+        CopyWith$Query$GetSection$section$$PosterSection$items$items$item$$Short<
+            TRes> {
+  _CopyWithImpl$Query$GetSection$section$$PosterSection$items$items$item$$Short(
+    this._instance,
+    this._then,
+  );
+
+  final Query$GetSection$section$$PosterSection$items$items$item$$Short
+      _instance;
+
+  final TRes Function(
+      Query$GetSection$section$$PosterSection$items$items$item$$Short) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({Object? $__typename = _undefined}) =>
+      _then(Query$GetSection$section$$PosterSection$items$items$item$$Short(
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String)));
+}
+
+class _CopyWithStubImpl$Query$GetSection$section$$PosterSection$items$items$item$$Short<
+        TRes>
+    implements
+        CopyWith$Query$GetSection$section$$PosterSection$items$items$item$$Short<
+            TRes> {
+  _CopyWithStubImpl$Query$GetSection$section$$PosterSection$items$items$item$$Short(
       this._res);
 
   TRes _res;
@@ -37803,6 +39046,10 @@ class Query$GetSection$section$$FeaturedSection$items$items$item
         return Query$GetSection$section$$FeaturedSection$items$items$item$$StudyTopic
             .fromJson(json);
 
+      case "Short":
+        return Query$GetSection$section$$FeaturedSection$items$items$item$$Short
+            .fromJson(json);
+
       default:
         final l$$__typename = json['__typename'];
         return Query$GetSection$section$$FeaturedSection$items$items$item(
@@ -37878,6 +39125,9 @@ extension UtilityExtension$Query$GetSection$section$$FeaturedSection$items$items
     required _T Function(
             Query$GetSection$section$$FeaturedSection$items$items$item$$StudyTopic)
         studyTopic,
+    required _T Function(
+            Query$GetSection$section$$FeaturedSection$items$items$item$$Short)
+        short,
     required _T Function() orElse,
   }) {
     switch ($__typename) {
@@ -37913,6 +39163,10 @@ extension UtilityExtension$Query$GetSection$section$$FeaturedSection$items$items
         return studyTopic(this
             as Query$GetSection$section$$FeaturedSection$items$items$item$$StudyTopic);
 
+      case "Short":
+        return short(this
+            as Query$GetSection$section$$FeaturedSection$items$items$item$$Short);
+
       default:
         return orElse();
     }
@@ -37943,6 +39197,9 @@ extension UtilityExtension$Query$GetSection$section$$FeaturedSection$items$items
     _T Function(
             Query$GetSection$section$$FeaturedSection$items$items$item$$StudyTopic)?
         studyTopic,
+    _T Function(
+            Query$GetSection$section$$FeaturedSection$items$items$item$$Short)?
+        short,
     required _T Function() orElse,
   }) {
     switch ($__typename) {
@@ -38006,6 +39263,14 @@ extension UtilityExtension$Query$GetSection$section$$FeaturedSection$items$items
         if (studyTopic != null) {
           return studyTopic(this
               as Query$GetSection$section$$FeaturedSection$items$items$item$$StudyTopic);
+        } else {
+          return orElse();
+        }
+
+      case "Short":
+        if (short != null) {
+          return short(this
+              as Query$GetSection$section$$FeaturedSection$items$items$item$$Short);
         } else {
           return orElse();
         }
@@ -39839,6 +41104,120 @@ class _CopyWithStubImpl$Query$GetSection$section$$FeaturedSection$items$items$it
   call({String? $__typename}) => _res;
 }
 
+class Query$GetSection$section$$FeaturedSection$items$items$item$$Short
+    implements
+        Fragment$Section$$FeaturedSection$items$items$item$$Short,
+        Fragment$ItemSectionItem$item$$Short,
+        Query$GetSection$section$$FeaturedSection$items$items$item {
+  Query$GetSection$section$$FeaturedSection$items$items$item$$Short(
+      {this.$__typename = 'Short'});
+
+  factory Query$GetSection$section$$FeaturedSection$items$items$item$$Short.fromJson(
+      Map<String, dynamic> json) {
+    final l$$__typename = json['__typename'];
+    return Query$GetSection$section$$FeaturedSection$items$items$item$$Short(
+        $__typename: (l$$__typename as String));
+  }
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$$__typename = $__typename;
+    return Object.hashAll([l$$__typename]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Query$GetSection$section$$FeaturedSection$items$items$item$$Short) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$GetSection$section$$FeaturedSection$items$items$item$$Short
+    on Query$GetSection$section$$FeaturedSection$items$items$item$$Short {
+  CopyWith$Query$GetSection$section$$FeaturedSection$items$items$item$$Short<
+          Query$GetSection$section$$FeaturedSection$items$items$item$$Short>
+      get copyWith =>
+          CopyWith$Query$GetSection$section$$FeaturedSection$items$items$item$$Short(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$GetSection$section$$FeaturedSection$items$items$item$$Short<
+    TRes> {
+  factory CopyWith$Query$GetSection$section$$FeaturedSection$items$items$item$$Short(
+    Query$GetSection$section$$FeaturedSection$items$items$item$$Short instance,
+    TRes Function(
+            Query$GetSection$section$$FeaturedSection$items$items$item$$Short)
+        then,
+  ) = _CopyWithImpl$Query$GetSection$section$$FeaturedSection$items$items$item$$Short;
+
+  factory CopyWith$Query$GetSection$section$$FeaturedSection$items$items$item$$Short.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$GetSection$section$$FeaturedSection$items$items$item$$Short;
+
+  TRes call({String? $__typename});
+}
+
+class _CopyWithImpl$Query$GetSection$section$$FeaturedSection$items$items$item$$Short<
+        TRes>
+    implements
+        CopyWith$Query$GetSection$section$$FeaturedSection$items$items$item$$Short<
+            TRes> {
+  _CopyWithImpl$Query$GetSection$section$$FeaturedSection$items$items$item$$Short(
+    this._instance,
+    this._then,
+  );
+
+  final Query$GetSection$section$$FeaturedSection$items$items$item$$Short
+      _instance;
+
+  final TRes Function(
+      Query$GetSection$section$$FeaturedSection$items$items$item$$Short) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({Object? $__typename = _undefined}) =>
+      _then(Query$GetSection$section$$FeaturedSection$items$items$item$$Short(
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String)));
+}
+
+class _CopyWithStubImpl$Query$GetSection$section$$FeaturedSection$items$items$item$$Short<
+        TRes>
+    implements
+        CopyWith$Query$GetSection$section$$FeaturedSection$items$items$item$$Short<
+            TRes> {
+  _CopyWithStubImpl$Query$GetSection$section$$FeaturedSection$items$items$item$$Short(
+      this._res);
+
+  TRes _res;
+
+  call({String? $__typename}) => _res;
+}
+
 class Query$GetSection$section$$DefaultSection
     implements
         Fragment$Section$$DefaultSection,
@@ -40790,6 +42169,10 @@ class Query$GetSection$section$$DefaultSection$items$items$item
         return Query$GetSection$section$$DefaultSection$items$items$item$$StudyTopic
             .fromJson(json);
 
+      case "Short":
+        return Query$GetSection$section$$DefaultSection$items$items$item$$Short
+            .fromJson(json);
+
       default:
         final l$$__typename = json['__typename'];
         return Query$GetSection$section$$DefaultSection$items$items$item(
@@ -40864,6 +42247,9 @@ extension UtilityExtension$Query$GetSection$section$$DefaultSection$items$items$
     required _T Function(
             Query$GetSection$section$$DefaultSection$items$items$item$$StudyTopic)
         studyTopic,
+    required _T Function(
+            Query$GetSection$section$$DefaultSection$items$items$item$$Short)
+        short,
     required _T Function() orElse,
   }) {
     switch ($__typename) {
@@ -40899,6 +42285,10 @@ extension UtilityExtension$Query$GetSection$section$$DefaultSection$items$items$
         return studyTopic(this
             as Query$GetSection$section$$DefaultSection$items$items$item$$StudyTopic);
 
+      case "Short":
+        return short(this
+            as Query$GetSection$section$$DefaultSection$items$items$item$$Short);
+
       default:
         return orElse();
     }
@@ -40929,6 +42319,9 @@ extension UtilityExtension$Query$GetSection$section$$DefaultSection$items$items$
     _T Function(
             Query$GetSection$section$$DefaultSection$items$items$item$$StudyTopic)?
         studyTopic,
+    _T Function(
+            Query$GetSection$section$$DefaultSection$items$items$item$$Short)?
+        short,
     required _T Function() orElse,
   }) {
     switch ($__typename) {
@@ -40992,6 +42385,14 @@ extension UtilityExtension$Query$GetSection$section$$DefaultSection$items$items$
         if (studyTopic != null) {
           return studyTopic(this
               as Query$GetSection$section$$DefaultSection$items$items$item$$StudyTopic);
+        } else {
+          return orElse();
+        }
+
+      case "Short":
+        if (short != null) {
+          return short(this
+              as Query$GetSection$section$$DefaultSection$items$items$item$$Short);
         } else {
           return orElse();
         }
@@ -42842,6 +44243,120 @@ class _CopyWithStubImpl$Query$GetSection$section$$DefaultSection$items$items$ite
   call({String? $__typename}) => _res;
 }
 
+class Query$GetSection$section$$DefaultSection$items$items$item$$Short
+    implements
+        Fragment$Section$$DefaultSection$items$items$item$$Short,
+        Fragment$ItemSectionItem$item$$Short,
+        Query$GetSection$section$$DefaultSection$items$items$item {
+  Query$GetSection$section$$DefaultSection$items$items$item$$Short(
+      {this.$__typename = 'Short'});
+
+  factory Query$GetSection$section$$DefaultSection$items$items$item$$Short.fromJson(
+      Map<String, dynamic> json) {
+    final l$$__typename = json['__typename'];
+    return Query$GetSection$section$$DefaultSection$items$items$item$$Short(
+        $__typename: (l$$__typename as String));
+  }
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$$__typename = $__typename;
+    return Object.hashAll([l$$__typename]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Query$GetSection$section$$DefaultSection$items$items$item$$Short) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$GetSection$section$$DefaultSection$items$items$item$$Short
+    on Query$GetSection$section$$DefaultSection$items$items$item$$Short {
+  CopyWith$Query$GetSection$section$$DefaultSection$items$items$item$$Short<
+          Query$GetSection$section$$DefaultSection$items$items$item$$Short>
+      get copyWith =>
+          CopyWith$Query$GetSection$section$$DefaultSection$items$items$item$$Short(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$GetSection$section$$DefaultSection$items$items$item$$Short<
+    TRes> {
+  factory CopyWith$Query$GetSection$section$$DefaultSection$items$items$item$$Short(
+    Query$GetSection$section$$DefaultSection$items$items$item$$Short instance,
+    TRes Function(
+            Query$GetSection$section$$DefaultSection$items$items$item$$Short)
+        then,
+  ) = _CopyWithImpl$Query$GetSection$section$$DefaultSection$items$items$item$$Short;
+
+  factory CopyWith$Query$GetSection$section$$DefaultSection$items$items$item$$Short.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$GetSection$section$$DefaultSection$items$items$item$$Short;
+
+  TRes call({String? $__typename});
+}
+
+class _CopyWithImpl$Query$GetSection$section$$DefaultSection$items$items$item$$Short<
+        TRes>
+    implements
+        CopyWith$Query$GetSection$section$$DefaultSection$items$items$item$$Short<
+            TRes> {
+  _CopyWithImpl$Query$GetSection$section$$DefaultSection$items$items$item$$Short(
+    this._instance,
+    this._then,
+  );
+
+  final Query$GetSection$section$$DefaultSection$items$items$item$$Short
+      _instance;
+
+  final TRes Function(
+      Query$GetSection$section$$DefaultSection$items$items$item$$Short) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({Object? $__typename = _undefined}) =>
+      _then(Query$GetSection$section$$DefaultSection$items$items$item$$Short(
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String)));
+}
+
+class _CopyWithStubImpl$Query$GetSection$section$$DefaultSection$items$items$item$$Short<
+        TRes>
+    implements
+        CopyWith$Query$GetSection$section$$DefaultSection$items$items$item$$Short<
+            TRes> {
+  _CopyWithStubImpl$Query$GetSection$section$$DefaultSection$items$items$item$$Short(
+      this._res);
+
+  TRes _res;
+
+  call({String? $__typename}) => _res;
+}
+
 class Query$GetSection$section$$CardSection
     implements
         Fragment$Section$$CardSection,
@@ -43802,6 +45317,10 @@ class Query$GetSection$section$$CardSection$items$items$item
         return Query$GetSection$section$$CardSection$items$items$item$$StudyTopic
             .fromJson(json);
 
+      case "Short":
+        return Query$GetSection$section$$CardSection$items$items$item$$Short
+            .fromJson(json);
+
       default:
         final l$$__typename = json['__typename'];
         return Query$GetSection$section$$CardSection$items$items$item(
@@ -43876,6 +45395,9 @@ extension UtilityExtension$Query$GetSection$section$$CardSection$items$items$ite
     required _T Function(
             Query$GetSection$section$$CardSection$items$items$item$$StudyTopic)
         studyTopic,
+    required _T Function(
+            Query$GetSection$section$$CardSection$items$items$item$$Short)
+        short,
     required _T Function() orElse,
   }) {
     switch ($__typename) {
@@ -43911,6 +45433,10 @@ extension UtilityExtension$Query$GetSection$section$$CardSection$items$items$ite
         return studyTopic(this
             as Query$GetSection$section$$CardSection$items$items$item$$StudyTopic);
 
+      case "Short":
+        return short(this
+            as Query$GetSection$section$$CardSection$items$items$item$$Short);
+
       default:
         return orElse();
     }
@@ -43936,6 +45462,8 @@ extension UtilityExtension$Query$GetSection$section$$CardSection$items$items$ite
     _T Function(
             Query$GetSection$section$$CardSection$items$items$item$$StudyTopic)?
         studyTopic,
+    _T Function(Query$GetSection$section$$CardSection$items$items$item$$Short)?
+        short,
     required _T Function() orElse,
   }) {
     switch ($__typename) {
@@ -43999,6 +45527,14 @@ extension UtilityExtension$Query$GetSection$section$$CardSection$items$items$ite
         if (studyTopic != null) {
           return studyTopic(this
               as Query$GetSection$section$$CardSection$items$items$item$$StudyTopic);
+        } else {
+          return orElse();
+        }
+
+      case "Short":
+        if (short != null) {
+          return short(this
+              as Query$GetSection$section$$CardSection$items$items$item$$Short);
         } else {
           return orElse();
         }
@@ -45982,6 +47518,118 @@ class _CopyWithStubImpl$Query$GetSection$section$$CardSection$items$items$item$$
               .stub(_res);
 }
 
+class Query$GetSection$section$$CardSection$items$items$item$$Short
+    implements
+        Fragment$Section$$CardSection$items$items$item$$Short,
+        Fragment$ItemSectionItem$item$$Short,
+        Query$GetSection$section$$CardSection$items$items$item {
+  Query$GetSection$section$$CardSection$items$items$item$$Short(
+      {this.$__typename = 'Short'});
+
+  factory Query$GetSection$section$$CardSection$items$items$item$$Short.fromJson(
+      Map<String, dynamic> json) {
+    final l$$__typename = json['__typename'];
+    return Query$GetSection$section$$CardSection$items$items$item$$Short(
+        $__typename: (l$$__typename as String));
+  }
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$$__typename = $__typename;
+    return Object.hashAll([l$$__typename]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Query$GetSection$section$$CardSection$items$items$item$$Short) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$GetSection$section$$CardSection$items$items$item$$Short
+    on Query$GetSection$section$$CardSection$items$items$item$$Short {
+  CopyWith$Query$GetSection$section$$CardSection$items$items$item$$Short<
+          Query$GetSection$section$$CardSection$items$items$item$$Short>
+      get copyWith =>
+          CopyWith$Query$GetSection$section$$CardSection$items$items$item$$Short(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$GetSection$section$$CardSection$items$items$item$$Short<
+    TRes> {
+  factory CopyWith$Query$GetSection$section$$CardSection$items$items$item$$Short(
+    Query$GetSection$section$$CardSection$items$items$item$$Short instance,
+    TRes Function(Query$GetSection$section$$CardSection$items$items$item$$Short)
+        then,
+  ) = _CopyWithImpl$Query$GetSection$section$$CardSection$items$items$item$$Short;
+
+  factory CopyWith$Query$GetSection$section$$CardSection$items$items$item$$Short.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$GetSection$section$$CardSection$items$items$item$$Short;
+
+  TRes call({String? $__typename});
+}
+
+class _CopyWithImpl$Query$GetSection$section$$CardSection$items$items$item$$Short<
+        TRes>
+    implements
+        CopyWith$Query$GetSection$section$$CardSection$items$items$item$$Short<
+            TRes> {
+  _CopyWithImpl$Query$GetSection$section$$CardSection$items$items$item$$Short(
+    this._instance,
+    this._then,
+  );
+
+  final Query$GetSection$section$$CardSection$items$items$item$$Short _instance;
+
+  final TRes Function(
+      Query$GetSection$section$$CardSection$items$items$item$$Short) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({Object? $__typename = _undefined}) =>
+      _then(Query$GetSection$section$$CardSection$items$items$item$$Short(
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String)));
+}
+
+class _CopyWithStubImpl$Query$GetSection$section$$CardSection$items$items$item$$Short<
+        TRes>
+    implements
+        CopyWith$Query$GetSection$section$$CardSection$items$items$item$$Short<
+            TRes> {
+  _CopyWithStubImpl$Query$GetSection$section$$CardSection$items$items$item$$Short(
+      this._res);
+
+  TRes _res;
+
+  call({String? $__typename}) => _res;
+}
+
 class Query$GetSection$section$$ListSection
     implements
         Fragment$Section$$ListSection,
@@ -46902,6 +48550,10 @@ class Query$GetSection$section$$ListSection$items$items$item
         return Query$GetSection$section$$ListSection$items$items$item$$StudyTopic
             .fromJson(json);
 
+      case "Short":
+        return Query$GetSection$section$$ListSection$items$items$item$$Short
+            .fromJson(json);
+
       default:
         final l$$__typename = json['__typename'];
         return Query$GetSection$section$$ListSection$items$items$item(
@@ -46976,6 +48628,9 @@ extension UtilityExtension$Query$GetSection$section$$ListSection$items$items$ite
     required _T Function(
             Query$GetSection$section$$ListSection$items$items$item$$StudyTopic)
         studyTopic,
+    required _T Function(
+            Query$GetSection$section$$ListSection$items$items$item$$Short)
+        short,
     required _T Function() orElse,
   }) {
     switch ($__typename) {
@@ -47011,6 +48666,10 @@ extension UtilityExtension$Query$GetSection$section$$ListSection$items$items$ite
         return studyTopic(this
             as Query$GetSection$section$$ListSection$items$items$item$$StudyTopic);
 
+      case "Short":
+        return short(this
+            as Query$GetSection$section$$ListSection$items$items$item$$Short);
+
       default:
         return orElse();
     }
@@ -47036,6 +48695,8 @@ extension UtilityExtension$Query$GetSection$section$$ListSection$items$items$ite
     _T Function(
             Query$GetSection$section$$ListSection$items$items$item$$StudyTopic)?
         studyTopic,
+    _T Function(Query$GetSection$section$$ListSection$items$items$item$$Short)?
+        short,
     required _T Function() orElse,
   }) {
     switch ($__typename) {
@@ -47099,6 +48760,14 @@ extension UtilityExtension$Query$GetSection$section$$ListSection$items$items$ite
         if (studyTopic != null) {
           return studyTopic(this
               as Query$GetSection$section$$ListSection$items$items$item$$StudyTopic);
+        } else {
+          return orElse();
+        }
+
+      case "Short":
+        if (short != null) {
+          return short(this
+              as Query$GetSection$section$$ListSection$items$items$item$$Short);
         } else {
           return orElse();
         }
@@ -48971,6 +50640,118 @@ class _CopyWithStubImpl$Query$GetSection$section$$ListSection$items$items$item$$
   call({String? $__typename}) => _res;
 }
 
+class Query$GetSection$section$$ListSection$items$items$item$$Short
+    implements
+        Fragment$Section$$ListSection$items$items$item$$Short,
+        Fragment$ItemSectionItem$item$$Short,
+        Query$GetSection$section$$ListSection$items$items$item {
+  Query$GetSection$section$$ListSection$items$items$item$$Short(
+      {this.$__typename = 'Short'});
+
+  factory Query$GetSection$section$$ListSection$items$items$item$$Short.fromJson(
+      Map<String, dynamic> json) {
+    final l$$__typename = json['__typename'];
+    return Query$GetSection$section$$ListSection$items$items$item$$Short(
+        $__typename: (l$$__typename as String));
+  }
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$$__typename = $__typename;
+    return Object.hashAll([l$$__typename]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Query$GetSection$section$$ListSection$items$items$item$$Short) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$GetSection$section$$ListSection$items$items$item$$Short
+    on Query$GetSection$section$$ListSection$items$items$item$$Short {
+  CopyWith$Query$GetSection$section$$ListSection$items$items$item$$Short<
+          Query$GetSection$section$$ListSection$items$items$item$$Short>
+      get copyWith =>
+          CopyWith$Query$GetSection$section$$ListSection$items$items$item$$Short(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$GetSection$section$$ListSection$items$items$item$$Short<
+    TRes> {
+  factory CopyWith$Query$GetSection$section$$ListSection$items$items$item$$Short(
+    Query$GetSection$section$$ListSection$items$items$item$$Short instance,
+    TRes Function(Query$GetSection$section$$ListSection$items$items$item$$Short)
+        then,
+  ) = _CopyWithImpl$Query$GetSection$section$$ListSection$items$items$item$$Short;
+
+  factory CopyWith$Query$GetSection$section$$ListSection$items$items$item$$Short.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$GetSection$section$$ListSection$items$items$item$$Short;
+
+  TRes call({String? $__typename});
+}
+
+class _CopyWithImpl$Query$GetSection$section$$ListSection$items$items$item$$Short<
+        TRes>
+    implements
+        CopyWith$Query$GetSection$section$$ListSection$items$items$item$$Short<
+            TRes> {
+  _CopyWithImpl$Query$GetSection$section$$ListSection$items$items$item$$Short(
+    this._instance,
+    this._then,
+  );
+
+  final Query$GetSection$section$$ListSection$items$items$item$$Short _instance;
+
+  final TRes Function(
+      Query$GetSection$section$$ListSection$items$items$item$$Short) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({Object? $__typename = _undefined}) =>
+      _then(Query$GetSection$section$$ListSection$items$items$item$$Short(
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String)));
+}
+
+class _CopyWithStubImpl$Query$GetSection$section$$ListSection$items$items$item$$Short<
+        TRes>
+    implements
+        CopyWith$Query$GetSection$section$$ListSection$items$items$item$$Short<
+            TRes> {
+  _CopyWithStubImpl$Query$GetSection$section$$ListSection$items$items$item$$Short(
+      this._res);
+
+  TRes _res;
+
+  call({String? $__typename}) => _res;
+}
+
 class Query$GetSection$section$$CardListSection
     implements
         Fragment$Section$$CardListSection,
@@ -50618,6 +52399,10 @@ class Query$GetSection$section$$DefaultGridSection$items$items$item
         return Query$GetSection$section$$DefaultGridSection$items$items$item$$StudyTopic
             .fromJson(json);
 
+      case "Short":
+        return Query$GetSection$section$$DefaultGridSection$items$items$item$$Short
+            .fromJson(json);
+
       default:
         final l$$__typename = json['__typename'];
         return Query$GetSection$section$$DefaultGridSection$items$items$item(
@@ -50693,6 +52478,9 @@ extension UtilityExtension$Query$GetSection$section$$DefaultGridSection$items$it
     required _T Function(
             Query$GetSection$section$$DefaultGridSection$items$items$item$$StudyTopic)
         studyTopic,
+    required _T Function(
+            Query$GetSection$section$$DefaultGridSection$items$items$item$$Short)
+        short,
     required _T Function() orElse,
   }) {
     switch ($__typename) {
@@ -50728,6 +52516,10 @@ extension UtilityExtension$Query$GetSection$section$$DefaultGridSection$items$it
         return studyTopic(this
             as Query$GetSection$section$$DefaultGridSection$items$items$item$$StudyTopic);
 
+      case "Short":
+        return short(this
+            as Query$GetSection$section$$DefaultGridSection$items$items$item$$Short);
+
       default:
         return orElse();
     }
@@ -50758,6 +52550,9 @@ extension UtilityExtension$Query$GetSection$section$$DefaultGridSection$items$it
     _T Function(
             Query$GetSection$section$$DefaultGridSection$items$items$item$$StudyTopic)?
         studyTopic,
+    _T Function(
+            Query$GetSection$section$$DefaultGridSection$items$items$item$$Short)?
+        short,
     required _T Function() orElse,
   }) {
     switch ($__typename) {
@@ -50821,6 +52616,14 @@ extension UtilityExtension$Query$GetSection$section$$DefaultGridSection$items$it
         if (studyTopic != null) {
           return studyTopic(this
               as Query$GetSection$section$$DefaultGridSection$items$items$item$$StudyTopic);
+        } else {
+          return orElse();
+        }
+
+      case "Short":
+        if (short != null) {
+          return short(this
+              as Query$GetSection$section$$DefaultGridSection$items$items$item$$Short);
         } else {
           return orElse();
         }
@@ -52714,6 +54517,123 @@ class _CopyWithStubImpl$Query$GetSection$section$$DefaultGridSection$items$items
   call({String? $__typename}) => _res;
 }
 
+class Query$GetSection$section$$DefaultGridSection$items$items$item$$Short
+    implements
+        Fragment$Section$$DefaultGridSection$items$items$item$$Short,
+        Fragment$ItemSectionItem$item$$Short,
+        Fragment$GridSectionItem$item$$Short,
+        Query$GetSection$section$$DefaultGridSection$items$items$item {
+  Query$GetSection$section$$DefaultGridSection$items$items$item$$Short(
+      {this.$__typename = 'Short'});
+
+  factory Query$GetSection$section$$DefaultGridSection$items$items$item$$Short.fromJson(
+      Map<String, dynamic> json) {
+    final l$$__typename = json['__typename'];
+    return Query$GetSection$section$$DefaultGridSection$items$items$item$$Short(
+        $__typename: (l$$__typename as String));
+  }
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$$__typename = $__typename;
+    return Object.hashAll([l$$__typename]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Query$GetSection$section$$DefaultGridSection$items$items$item$$Short) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$GetSection$section$$DefaultGridSection$items$items$item$$Short
+    on Query$GetSection$section$$DefaultGridSection$items$items$item$$Short {
+  CopyWith$Query$GetSection$section$$DefaultGridSection$items$items$item$$Short<
+          Query$GetSection$section$$DefaultGridSection$items$items$item$$Short>
+      get copyWith =>
+          CopyWith$Query$GetSection$section$$DefaultGridSection$items$items$item$$Short(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$GetSection$section$$DefaultGridSection$items$items$item$$Short<
+    TRes> {
+  factory CopyWith$Query$GetSection$section$$DefaultGridSection$items$items$item$$Short(
+    Query$GetSection$section$$DefaultGridSection$items$items$item$$Short
+        instance,
+    TRes Function(
+            Query$GetSection$section$$DefaultGridSection$items$items$item$$Short)
+        then,
+  ) = _CopyWithImpl$Query$GetSection$section$$DefaultGridSection$items$items$item$$Short;
+
+  factory CopyWith$Query$GetSection$section$$DefaultGridSection$items$items$item$$Short.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$GetSection$section$$DefaultGridSection$items$items$item$$Short;
+
+  TRes call({String? $__typename});
+}
+
+class _CopyWithImpl$Query$GetSection$section$$DefaultGridSection$items$items$item$$Short<
+        TRes>
+    implements
+        CopyWith$Query$GetSection$section$$DefaultGridSection$items$items$item$$Short<
+            TRes> {
+  _CopyWithImpl$Query$GetSection$section$$DefaultGridSection$items$items$item$$Short(
+    this._instance,
+    this._then,
+  );
+
+  final Query$GetSection$section$$DefaultGridSection$items$items$item$$Short
+      _instance;
+
+  final TRes Function(
+          Query$GetSection$section$$DefaultGridSection$items$items$item$$Short)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({Object? $__typename = _undefined}) => _then(
+      Query$GetSection$section$$DefaultGridSection$items$items$item$$Short(
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String)));
+}
+
+class _CopyWithStubImpl$Query$GetSection$section$$DefaultGridSection$items$items$item$$Short<
+        TRes>
+    implements
+        CopyWith$Query$GetSection$section$$DefaultGridSection$items$items$item$$Short<
+            TRes> {
+  _CopyWithStubImpl$Query$GetSection$section$$DefaultGridSection$items$items$item$$Short(
+      this._res);
+
+  TRes _res;
+
+  call({String? $__typename}) => _res;
+}
+
 class Query$GetSection$section$$PosterGridSection
     implements
         Fragment$Section$$PosterGridSection,
@@ -53681,6 +55601,10 @@ class Query$GetSection$section$$PosterGridSection$items$items$item
         return Query$GetSection$section$$PosterGridSection$items$items$item$$StudyTopic
             .fromJson(json);
 
+      case "Short":
+        return Query$GetSection$section$$PosterGridSection$items$items$item$$Short
+            .fromJson(json);
+
       default:
         final l$$__typename = json['__typename'];
         return Query$GetSection$section$$PosterGridSection$items$items$item(
@@ -53756,6 +55680,9 @@ extension UtilityExtension$Query$GetSection$section$$PosterGridSection$items$ite
     required _T Function(
             Query$GetSection$section$$PosterGridSection$items$items$item$$StudyTopic)
         studyTopic,
+    required _T Function(
+            Query$GetSection$section$$PosterGridSection$items$items$item$$Short)
+        short,
     required _T Function() orElse,
   }) {
     switch ($__typename) {
@@ -53791,6 +55718,10 @@ extension UtilityExtension$Query$GetSection$section$$PosterGridSection$items$ite
         return studyTopic(this
             as Query$GetSection$section$$PosterGridSection$items$items$item$$StudyTopic);
 
+      case "Short":
+        return short(this
+            as Query$GetSection$section$$PosterGridSection$items$items$item$$Short);
+
       default:
         return orElse();
     }
@@ -53821,6 +55752,9 @@ extension UtilityExtension$Query$GetSection$section$$PosterGridSection$items$ite
     _T Function(
             Query$GetSection$section$$PosterGridSection$items$items$item$$StudyTopic)?
         studyTopic,
+    _T Function(
+            Query$GetSection$section$$PosterGridSection$items$items$item$$Short)?
+        short,
     required _T Function() orElse,
   }) {
     switch ($__typename) {
@@ -53884,6 +55818,14 @@ extension UtilityExtension$Query$GetSection$section$$PosterGridSection$items$ite
         if (studyTopic != null) {
           return studyTopic(this
               as Query$GetSection$section$$PosterGridSection$items$items$item$$StudyTopic);
+        } else {
+          return orElse();
+        }
+
+      case "Short":
+        if (short != null) {
+          return short(this
+              as Query$GetSection$section$$PosterGridSection$items$items$item$$Short);
         } else {
           return orElse();
         }
@@ -55769,6 +57711,123 @@ class _CopyWithStubImpl$Query$GetSection$section$$PosterGridSection$items$items$
   call({String? $__typename}) => _res;
 }
 
+class Query$GetSection$section$$PosterGridSection$items$items$item$$Short
+    implements
+        Fragment$Section$$PosterGridSection$items$items$item$$Short,
+        Fragment$ItemSectionItem$item$$Short,
+        Fragment$GridSectionItem$item$$Short,
+        Query$GetSection$section$$PosterGridSection$items$items$item {
+  Query$GetSection$section$$PosterGridSection$items$items$item$$Short(
+      {this.$__typename = 'Short'});
+
+  factory Query$GetSection$section$$PosterGridSection$items$items$item$$Short.fromJson(
+      Map<String, dynamic> json) {
+    final l$$__typename = json['__typename'];
+    return Query$GetSection$section$$PosterGridSection$items$items$item$$Short(
+        $__typename: (l$$__typename as String));
+  }
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$$__typename = $__typename;
+    return Object.hashAll([l$$__typename]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Query$GetSection$section$$PosterGridSection$items$items$item$$Short) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$GetSection$section$$PosterGridSection$items$items$item$$Short
+    on Query$GetSection$section$$PosterGridSection$items$items$item$$Short {
+  CopyWith$Query$GetSection$section$$PosterGridSection$items$items$item$$Short<
+          Query$GetSection$section$$PosterGridSection$items$items$item$$Short>
+      get copyWith =>
+          CopyWith$Query$GetSection$section$$PosterGridSection$items$items$item$$Short(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$GetSection$section$$PosterGridSection$items$items$item$$Short<
+    TRes> {
+  factory CopyWith$Query$GetSection$section$$PosterGridSection$items$items$item$$Short(
+    Query$GetSection$section$$PosterGridSection$items$items$item$$Short
+        instance,
+    TRes Function(
+            Query$GetSection$section$$PosterGridSection$items$items$item$$Short)
+        then,
+  ) = _CopyWithImpl$Query$GetSection$section$$PosterGridSection$items$items$item$$Short;
+
+  factory CopyWith$Query$GetSection$section$$PosterGridSection$items$items$item$$Short.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$GetSection$section$$PosterGridSection$items$items$item$$Short;
+
+  TRes call({String? $__typename});
+}
+
+class _CopyWithImpl$Query$GetSection$section$$PosterGridSection$items$items$item$$Short<
+        TRes>
+    implements
+        CopyWith$Query$GetSection$section$$PosterGridSection$items$items$item$$Short<
+            TRes> {
+  _CopyWithImpl$Query$GetSection$section$$PosterGridSection$items$items$item$$Short(
+    this._instance,
+    this._then,
+  );
+
+  final Query$GetSection$section$$PosterGridSection$items$items$item$$Short
+      _instance;
+
+  final TRes Function(
+          Query$GetSection$section$$PosterGridSection$items$items$item$$Short)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({Object? $__typename = _undefined}) =>
+      _then(Query$GetSection$section$$PosterGridSection$items$items$item$$Short(
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String)));
+}
+
+class _CopyWithStubImpl$Query$GetSection$section$$PosterGridSection$items$items$item$$Short<
+        TRes>
+    implements
+        CopyWith$Query$GetSection$section$$PosterGridSection$items$items$item$$Short<
+            TRes> {
+  _CopyWithStubImpl$Query$GetSection$section$$PosterGridSection$items$items$item$$Short(
+      this._res);
+
+  TRes _res;
+
+  call({String? $__typename}) => _res;
+}
+
 class Query$GetSection$section$$IconGridSection
     implements
         Fragment$Section$$IconGridSection,
@@ -56726,6 +58785,10 @@ class Query$GetSection$section$$IconGridSection$items$items$item
         return Query$GetSection$section$$IconGridSection$items$items$item$$StudyTopic
             .fromJson(json);
 
+      case "Short":
+        return Query$GetSection$section$$IconGridSection$items$items$item$$Short
+            .fromJson(json);
+
       default:
         final l$$__typename = json['__typename'];
         return Query$GetSection$section$$IconGridSection$items$items$item(
@@ -56801,6 +58864,9 @@ extension UtilityExtension$Query$GetSection$section$$IconGridSection$items$items
     required _T Function(
             Query$GetSection$section$$IconGridSection$items$items$item$$StudyTopic)
         studyTopic,
+    required _T Function(
+            Query$GetSection$section$$IconGridSection$items$items$item$$Short)
+        short,
     required _T Function() orElse,
   }) {
     switch ($__typename) {
@@ -56836,6 +58902,10 @@ extension UtilityExtension$Query$GetSection$section$$IconGridSection$items$items
         return studyTopic(this
             as Query$GetSection$section$$IconGridSection$items$items$item$$StudyTopic);
 
+      case "Short":
+        return short(this
+            as Query$GetSection$section$$IconGridSection$items$items$item$$Short);
+
       default:
         return orElse();
     }
@@ -56866,6 +58936,9 @@ extension UtilityExtension$Query$GetSection$section$$IconGridSection$items$items
     _T Function(
             Query$GetSection$section$$IconGridSection$items$items$item$$StudyTopic)?
         studyTopic,
+    _T Function(
+            Query$GetSection$section$$IconGridSection$items$items$item$$Short)?
+        short,
     required _T Function() orElse,
   }) {
     switch ($__typename) {
@@ -56929,6 +59002,14 @@ extension UtilityExtension$Query$GetSection$section$$IconGridSection$items$items
         if (studyTopic != null) {
           return studyTopic(this
               as Query$GetSection$section$$IconGridSection$items$items$item$$StudyTopic);
+        } else {
+          return orElse();
+        }
+
+      case "Short":
+        if (short != null) {
+          return short(this
+              as Query$GetSection$section$$IconGridSection$items$items$item$$Short);
         } else {
           return orElse();
         }
@@ -58804,6 +60885,121 @@ class _CopyWithStubImpl$Query$GetSection$section$$IconGridSection$items$items$it
         CopyWith$Query$GetSection$section$$IconGridSection$items$items$item$$StudyTopic<
             TRes> {
   _CopyWithStubImpl$Query$GetSection$section$$IconGridSection$items$items$item$$StudyTopic(
+      this._res);
+
+  TRes _res;
+
+  call({String? $__typename}) => _res;
+}
+
+class Query$GetSection$section$$IconGridSection$items$items$item$$Short
+    implements
+        Fragment$Section$$IconGridSection$items$items$item$$Short,
+        Fragment$ItemSectionItem$item$$Short,
+        Fragment$GridSectionItem$item$$Short,
+        Query$GetSection$section$$IconGridSection$items$items$item {
+  Query$GetSection$section$$IconGridSection$items$items$item$$Short(
+      {this.$__typename = 'Short'});
+
+  factory Query$GetSection$section$$IconGridSection$items$items$item$$Short.fromJson(
+      Map<String, dynamic> json) {
+    final l$$__typename = json['__typename'];
+    return Query$GetSection$section$$IconGridSection$items$items$item$$Short(
+        $__typename: (l$$__typename as String));
+  }
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$$__typename = $__typename;
+    return Object.hashAll([l$$__typename]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Query$GetSection$section$$IconGridSection$items$items$item$$Short) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$GetSection$section$$IconGridSection$items$items$item$$Short
+    on Query$GetSection$section$$IconGridSection$items$items$item$$Short {
+  CopyWith$Query$GetSection$section$$IconGridSection$items$items$item$$Short<
+          Query$GetSection$section$$IconGridSection$items$items$item$$Short>
+      get copyWith =>
+          CopyWith$Query$GetSection$section$$IconGridSection$items$items$item$$Short(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$GetSection$section$$IconGridSection$items$items$item$$Short<
+    TRes> {
+  factory CopyWith$Query$GetSection$section$$IconGridSection$items$items$item$$Short(
+    Query$GetSection$section$$IconGridSection$items$items$item$$Short instance,
+    TRes Function(
+            Query$GetSection$section$$IconGridSection$items$items$item$$Short)
+        then,
+  ) = _CopyWithImpl$Query$GetSection$section$$IconGridSection$items$items$item$$Short;
+
+  factory CopyWith$Query$GetSection$section$$IconGridSection$items$items$item$$Short.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$GetSection$section$$IconGridSection$items$items$item$$Short;
+
+  TRes call({String? $__typename});
+}
+
+class _CopyWithImpl$Query$GetSection$section$$IconGridSection$items$items$item$$Short<
+        TRes>
+    implements
+        CopyWith$Query$GetSection$section$$IconGridSection$items$items$item$$Short<
+            TRes> {
+  _CopyWithImpl$Query$GetSection$section$$IconGridSection$items$items$item$$Short(
+    this._instance,
+    this._then,
+  );
+
+  final Query$GetSection$section$$IconGridSection$items$items$item$$Short
+      _instance;
+
+  final TRes Function(
+      Query$GetSection$section$$IconGridSection$items$items$item$$Short) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({Object? $__typename = _undefined}) =>
+      _then(Query$GetSection$section$$IconGridSection$items$items$item$$Short(
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String)));
+}
+
+class _CopyWithStubImpl$Query$GetSection$section$$IconGridSection$items$items$item$$Short<
+        TRes>
+    implements
+        CopyWith$Query$GetSection$section$$IconGridSection$items$items$item$$Short<
+            TRes> {
+  _CopyWithStubImpl$Query$GetSection$section$$IconGridSection$items$items$item$$Short(
       this._res);
 
   TRes _res;

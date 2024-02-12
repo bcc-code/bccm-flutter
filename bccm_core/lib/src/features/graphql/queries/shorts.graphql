@@ -77,3 +77,11 @@ mutation setShortProgress($id: UUID!, $progress: Float!) {
     ...Short
   }
 }
+
+query getShortStreams($id: UUID!) {
+  short(id: $id) {
+    streams {
+      ...BasicStream
+    }
+  }
+}

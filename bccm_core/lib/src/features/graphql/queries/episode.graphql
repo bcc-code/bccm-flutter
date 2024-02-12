@@ -90,6 +90,7 @@ fragment EpisodeContext on EpisodeContextUnion {
 fragment BasicStream on Stream {
   id
   url
+  expiresAt
   type
   videoLanguage
   audioLanguages

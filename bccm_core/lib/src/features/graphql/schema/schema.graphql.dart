@@ -629,6 +629,7 @@ const possibleTypesMap = <String, Set<String>>{
     'StudyTopic',
     'Game',
     'Playlist',
+    'Short',
   },
   'CollectionItem': {
     'Playlist',

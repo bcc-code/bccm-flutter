@@ -1905,6 +1905,10 @@ class Query$KidsPage$page$sections$items$$CardSection$items$items$item {
         return Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Playlist
             .fromJson(json);
 
+      case "Short":
+        return Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Short
+            .fromJson(json);
+
       default:
         final l$$__typename = json['__typename'];
         return Query$KidsPage$page$sections$items$$CardSection$items$items$item(
@@ -1980,6 +1984,9 @@ extension UtilityExtension$Query$KidsPage$page$sections$items$$CardSection$items
     required _T Function(
             Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Playlist)
         playlist,
+    required _T Function(
+            Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Short)
+        short,
     required _T Function() orElse,
   }) {
     switch ($__typename) {
@@ -2015,6 +2022,10 @@ extension UtilityExtension$Query$KidsPage$page$sections$items$$CardSection$items
         return playlist(this
             as Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Playlist);
 
+      case "Short":
+        return short(this
+            as Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Short);
+
       default:
         return orElse();
     }
@@ -2045,6 +2056,9 @@ extension UtilityExtension$Query$KidsPage$page$sections$items$$CardSection$items
     _T Function(
             Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Playlist)?
         playlist,
+    _T Function(
+            Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Short)?
+        short,
     required _T Function() orElse,
   }) {
     switch ($__typename) {
@@ -2108,6 +2122,14 @@ extension UtilityExtension$Query$KidsPage$page$sections$items$$CardSection$items
         if (playlist != null) {
           return playlist(this
               as Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Playlist);
+        } else {
+          return orElse();
+        }
+
+      case "Short":
+        if (short != null) {
+          return short(this
+              as Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Short);
         } else {
           return orElse();
         }
@@ -3110,6 +3132,120 @@ class _CopyWithStubImpl$Query$KidsPage$page$sections$items$$CardSection$items$it
         CopyWith$Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Playlist<
             TRes> {
   _CopyWithStubImpl$Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Playlist(
+      this._res);
+
+  TRes _res;
+
+  call({String? $__typename}) => _res;
+}
+
+class Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Short
+    implements
+        Query$KidsPage$page$sections$items$$CardSection$items$items$item {
+  Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Short(
+      {this.$__typename = 'Short'});
+
+  factory Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Short.fromJson(
+      Map<String, dynamic> json) {
+    final l$$__typename = json['__typename'];
+    return Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Short(
+        $__typename: (l$$__typename as String));
+  }
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$$__typename = $__typename;
+    return Object.hashAll([l$$__typename]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Short) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Short
+    on Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Short {
+  CopyWith$Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Short<
+          Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Short>
+      get copyWith =>
+          CopyWith$Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Short(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Short<
+    TRes> {
+  factory CopyWith$Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Short(
+    Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Short
+        instance,
+    TRes Function(
+            Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Short)
+        then,
+  ) = _CopyWithImpl$Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Short;
+
+  factory CopyWith$Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Short.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Short;
+
+  TRes call({String? $__typename});
+}
+
+class _CopyWithImpl$Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Short<
+        TRes>
+    implements
+        CopyWith$Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Short<
+            TRes> {
+  _CopyWithImpl$Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Short(
+    this._instance,
+    this._then,
+  );
+
+  final Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Short
+      _instance;
+
+  final TRes Function(
+          Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Short)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({Object? $__typename = _undefined}) => _then(
+      Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Short(
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String)));
+}
+
+class _CopyWithStubImpl$Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Short<
+        TRes>
+    implements
+        CopyWith$Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Short<
+            TRes> {
+  _CopyWithStubImpl$Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Short(
       this._res);
 
   TRes _res;
