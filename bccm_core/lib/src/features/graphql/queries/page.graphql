@@ -36,6 +36,9 @@ fragment ItemSectionItem on SectionItem {
     ... on Page {
       code
     }
+    ... on Short {
+      id
+    }
     ... on Episode {
       id
       duration
@@ -112,13 +115,13 @@ fragment Section on Section {
             }
             ... on Show {
               seasons(first: 1, dir: "desc") {
-                  items {
-                      episodes(first: 1, dir: "desc") {
-                          items {
-                              publishDate
-                          }
-                      }
+                items {
+                  episodes(first: 1, dir: "desc") {
+                    items {
+                      publishDate
+                    }
                   }
+                }
               }
             }
             __typename
