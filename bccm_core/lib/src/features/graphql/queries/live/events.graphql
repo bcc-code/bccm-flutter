@@ -1,25 +1,23 @@
 query GetEvent($id: ID!) {
   event(id: $id) {
-    id
-    title
-    start
-    end
-    entries {
-      ...CalendarEntry
-    }
+    ...CalendarEventWithEntries
+  }
+}
+
+fragment CalendarEventWithEntries on Event {
+  id
+  title
+  start
+  end
+  entries {
+    ...CalendarEntry
   }
 }
 
 query ListEvents {
   calendar {
     events {
-      id
-      title
-      start
-      end
-      entries {
-        ...CalendarEntry
-      }
+      ...CalendarEventWithEntries
     }
   }
 }
