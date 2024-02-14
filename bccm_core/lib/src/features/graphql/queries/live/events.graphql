@@ -17,6 +17,9 @@ query ListEvents {
       title
       start
       end
+      entries {
+        ...CalendarEntry
+      }
     }
   }
 }

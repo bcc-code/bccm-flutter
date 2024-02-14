@@ -894,6 +894,25 @@ const documentNodeQueryListEvents = DocumentNode(definitions: [
                 selectionSet: null,
               ),
               FieldNode(
+                name: NameNode(value: 'entries'),
+                alias: null,
+                arguments: [],
+                directives: [],
+                selectionSet: SelectionSetNode(selections: [
+                  FragmentSpreadNode(
+                    name: NameNode(value: 'CalendarEntry'),
+                    directives: [],
+                  ),
+                  FieldNode(
+                    name: NameNode(value: '__typename'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null,
+                  ),
+                ]),
+              ),
+              FieldNode(
                 name: NameNode(value: '__typename'),
                 alias: null,
                 arguments: [],
@@ -920,6 +939,7 @@ const documentNodeQueryListEvents = DocumentNode(definitions: [
       ),
     ]),
   ),
+  fragmentDefinitionCalendarEntry,
 ]);
 Query$ListEvents _parserFn$Query$ListEvents(Map<String, dynamic> data) =>
     Query$ListEvents.fromJson(data);
@@ -1218,6 +1238,7 @@ class Query$ListEvents$calendar$events {
     required this.title,
     required this.start,
     required this.end,
+    required this.entries,
     this.$__typename = 'Event',
   });
 
@@ -1226,12 +1247,17 @@ class Query$ListEvents$calendar$events {
     final l$title = json['title'];
     final l$start = json['start'];
     final l$end = json['end'];
+    final l$entries = json['entries'];
     final l$$__typename = json['__typename'];
     return Query$ListEvents$calendar$events(
       id: (l$id as String),
       title: (l$title as String),
       start: (l$start as String),
       end: (l$end as String),
+      entries: (l$entries as List<dynamic>)
+          .map((e) =>
+              Fragment$CalendarEntry.fromJson((e as Map<String, dynamic>)))
+          .toList(),
       $__typename: (l$$__typename as String),
     );
   }
@@ -1243,6 +1269,8 @@ class Query$ListEvents$calendar$events {
   final String start;
 
   final String end;
+
+  final List<Fragment$CalendarEntry> entries;
 
   final String $__typename;
 
@@ -1256,6 +1284,8 @@ class Query$ListEvents$calendar$events {
     _resultData['start'] = l$start;
     final l$end = end;
     _resultData['end'] = l$end;
+    final l$entries = entries;
+    _resultData['entries'] = l$entries.map((e) => e.toJson()).toList();
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
     return _resultData;
@@ -1267,12 +1297,14 @@ class Query$ListEvents$calendar$events {
     final l$title = title;
     final l$start = start;
     final l$end = end;
+    final l$entries = entries;
     final l$$__typename = $__typename;
     return Object.hashAll([
       l$id,
       l$title,
       l$start,
       l$end,
+      Object.hashAll(l$entries.map((v) => v)),
       l$$__typename,
     ]);
   }
@@ -1306,6 +1338,18 @@ class Query$ListEvents$calendar$events {
     if (l$end != lOther$end) {
       return false;
     }
+    final l$entries = entries;
+    final lOther$entries = other.entries;
+    if (l$entries.length != lOther$entries.length) {
+      return false;
+    }
+    for (int i = 0; i < l$entries.length; i++) {
+      final l$entries$entry = l$entries[i];
+      final lOther$entries$entry = lOther$entries[i];
+      if (l$entries$entry != lOther$entries$entry) {
+        return false;
+      }
+    }
     final l$$__typename = $__typename;
     final lOther$$__typename = other.$__typename;
     if (l$$__typename != lOther$$__typename) {
@@ -1338,8 +1382,13 @@ abstract class CopyWith$Query$ListEvents$calendar$events<TRes> {
     String? title,
     String? start,
     String? end,
+    List<Fragment$CalendarEntry>? entries,
     String? $__typename,
   });
+  TRes entries(
+      Iterable<Fragment$CalendarEntry> Function(
+              Iterable<CopyWith$Fragment$CalendarEntry<Fragment$CalendarEntry>>)
+          _fn);
 }
 
 class _CopyWithImpl$Query$ListEvents$calendar$events<TRes>
@@ -1360,6 +1409,7 @@ class _CopyWithImpl$Query$ListEvents$calendar$events<TRes>
     Object? title = _undefined,
     Object? start = _undefined,
     Object? end = _undefined,
+    Object? entries = _undefined,
     Object? $__typename = _undefined,
   }) =>
       _then(Query$ListEvents$calendar$events(
@@ -1371,10 +1421,25 @@ class _CopyWithImpl$Query$ListEvents$calendar$events<TRes>
             ? _instance.start
             : (start as String),
         end: end == _undefined || end == null ? _instance.end : (end as String),
+        entries: entries == _undefined || entries == null
+            ? _instance.entries
+            : (entries as List<Fragment$CalendarEntry>),
         $__typename: $__typename == _undefined || $__typename == null
             ? _instance.$__typename
             : ($__typename as String),
       ));
+
+  TRes entries(
+          Iterable<Fragment$CalendarEntry> Function(
+                  Iterable<
+                      CopyWith$Fragment$CalendarEntry<Fragment$CalendarEntry>>)
+              _fn) =>
+      call(
+          entries:
+              _fn(_instance.entries.map((e) => CopyWith$Fragment$CalendarEntry(
+                    e,
+                    (i) => i,
+                  ))).toList());
 }
 
 class _CopyWithStubImpl$Query$ListEvents$calendar$events<TRes>
@@ -1388,7 +1453,10 @@ class _CopyWithStubImpl$Query$ListEvents$calendar$events<TRes>
     String? title,
     String? start,
     String? end,
+    List<Fragment$CalendarEntry>? entries,
     String? $__typename,
   }) =>
       _res;
+
+  entries(_fn) => _res;
 }
