@@ -157,6 +157,9 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
         context: ErrorDescription('during login'),
       ));
       debugPrint('error on Refresh Token: $e - stack: $s');
+      if (kDebugMode) {
+        print('bccm: auth refresh token: $refreshToken');
+      }
       // logOut() possibly
       return false;
     }
