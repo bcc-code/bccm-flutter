@@ -271,6 +271,13 @@ const documentNodeQueryGetRedirectUrl = DocumentNode(definitions: [
             selectionSet: null,
           ),
           FieldNode(
+            name: NameNode(value: 'requiresAuthentication'),
+            alias: null,
+            arguments: [],
+            directives: [],
+            selectionSet: null,
+          ),
+          FieldNode(
             name: NameNode(value: '__typename'),
             alias: null,
             arguments: [],
@@ -445,19 +452,24 @@ class Query$GetRedirectUrl$Widget
 class Query$GetRedirectUrl$redirect {
   Query$GetRedirectUrl$redirect({
     required this.url,
+    required this.requiresAuthentication,
     this.$__typename = 'RedirectLink',
   });
 
   factory Query$GetRedirectUrl$redirect.fromJson(Map<String, dynamic> json) {
     final l$url = json['url'];
+    final l$requiresAuthentication = json['requiresAuthentication'];
     final l$$__typename = json['__typename'];
     return Query$GetRedirectUrl$redirect(
       url: (l$url as String),
+      requiresAuthentication: (l$requiresAuthentication as bool),
       $__typename: (l$$__typename as String),
     );
   }
 
   final String url;
+
+  final bool requiresAuthentication;
 
   final String $__typename;
 
@@ -465,6 +477,8 @@ class Query$GetRedirectUrl$redirect {
     final _resultData = <String, dynamic>{};
     final l$url = url;
     _resultData['url'] = l$url;
+    final l$requiresAuthentication = requiresAuthentication;
+    _resultData['requiresAuthentication'] = l$requiresAuthentication;
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
     return _resultData;
@@ -473,9 +487,11 @@ class Query$GetRedirectUrl$redirect {
   @override
   int get hashCode {
     final l$url = url;
+    final l$requiresAuthentication = requiresAuthentication;
     final l$$__typename = $__typename;
     return Object.hashAll([
       l$url,
+      l$requiresAuthentication,
       l$$__typename,
     ]);
   }
@@ -492,6 +508,11 @@ class Query$GetRedirectUrl$redirect {
     final l$url = url;
     final lOther$url = other.url;
     if (l$url != lOther$url) {
+      return false;
+    }
+    final l$requiresAuthentication = requiresAuthentication;
+    final lOther$requiresAuthentication = other.requiresAuthentication;
+    if (l$requiresAuthentication != lOther$requiresAuthentication) {
       return false;
     }
     final l$$__typename = $__typename;
@@ -523,6 +544,7 @@ abstract class CopyWith$Query$GetRedirectUrl$redirect<TRes> {
 
   TRes call({
     String? url,
+    bool? requiresAuthentication,
     String? $__typename,
   });
 }
@@ -542,10 +564,15 @@ class _CopyWithImpl$Query$GetRedirectUrl$redirect<TRes>
 
   TRes call({
     Object? url = _undefined,
+    Object? requiresAuthentication = _undefined,
     Object? $__typename = _undefined,
   }) =>
       _then(Query$GetRedirectUrl$redirect(
         url: url == _undefined || url == null ? _instance.url : (url as String),
+        requiresAuthentication: requiresAuthentication == _undefined ||
+                requiresAuthentication == null
+            ? _instance.requiresAuthentication
+            : (requiresAuthentication as bool),
         $__typename: $__typename == _undefined || $__typename == null
             ? _instance.$__typename
             : ($__typename as String),
@@ -560,6 +587,7 @@ class _CopyWithStubImpl$Query$GetRedirectUrl$redirect<TRes>
 
   call({
     String? url,
+    bool? requiresAuthentication,
     String? $__typename,
   }) =>
       _res;

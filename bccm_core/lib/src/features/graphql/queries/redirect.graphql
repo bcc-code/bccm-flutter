@@ -1,5 +1,6 @@
 query GetRedirectUrl($id: String!) {
   redirect(id: $id) {
     url
+    requiresAuthentication
   }
 }
