@@ -25,6 +25,10 @@ final appConfigFutureProvider = StateProvider<Future<Query$Application>>((ref) a
   return result.parsedData!;
 });
 
+final appConfigProvider = FutureProvider<Query$Application>((ref) async {
+  return ref.watch(appConfigFutureProvider);
+});
+
 final applicationUpdatesProvider = StreamProvider.family<DocumentSnapshot, String>((ref, String appCode) {
   return FirebaseFirestore.instance.collection('updates:applications').doc(appCode).snapshots();
 });
