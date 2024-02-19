@@ -66,6 +66,7 @@ input EpisodeContext {
 
 type RedirectLink {
     url: String!
+    requiresAuthentication: Boolean!
 }
 
 type RedirectParam {
@@ -74,7 +75,7 @@ type RedirectParam {
 }
 
 type QueryRoot{
-    application: Application!
+    application(timestamp: String): Application!
     languages: [Language!]!
 
     export(

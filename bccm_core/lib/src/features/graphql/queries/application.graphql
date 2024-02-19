@@ -1,5 +1,6 @@
 query Application {
   application {
+    code
     clientVersion
     page {
       code
@@ -10,5 +11,6 @@ query Application {
     gamesPage {
       code
     }
+    livestreamEnabled
   }
 }

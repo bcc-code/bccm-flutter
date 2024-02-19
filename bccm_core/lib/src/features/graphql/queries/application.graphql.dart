@@ -152,6 +152,13 @@ const documentNodeQueryApplication = DocumentNode(definitions: [
         directives: [],
         selectionSet: SelectionSetNode(selections: [
           FieldNode(
+            name: NameNode(value: 'code'),
+            alias: null,
+            arguments: [],
+            directives: [],
+            selectionSet: null,
+          ),
+          FieldNode(
             name: NameNode(value: 'clientVersion'),
             alias: null,
             arguments: [],
@@ -223,6 +230,13 @@ const documentNodeQueryApplication = DocumentNode(definitions: [
                 selectionSet: null,
               ),
             ]),
+          ),
+          FieldNode(
+            name: NameNode(value: 'livestreamEnabled'),
+            alias: null,
+            arguments: [],
+            directives: [],
+            selectionSet: null,
           ),
           FieldNode(
             name: NameNode(value: '__typename'),
@@ -382,20 +396,25 @@ class Query$Application$Widget
 
 class Query$Application$application {
   Query$Application$application({
+    required this.code,
     required this.clientVersion,
     this.page,
     this.searchPage,
     this.gamesPage,
+    required this.livestreamEnabled,
     this.$__typename = 'Application',
   });
 
   factory Query$Application$application.fromJson(Map<String, dynamic> json) {
+    final l$code = json['code'];
     final l$clientVersion = json['clientVersion'];
     final l$page = json['page'];
     final l$searchPage = json['searchPage'];
     final l$gamesPage = json['gamesPage'];
+    final l$livestreamEnabled = json['livestreamEnabled'];
     final l$$__typename = json['__typename'];
     return Query$Application$application(
+      code: (l$code as String),
       clientVersion: (l$clientVersion as String),
       page: l$page == null
           ? null
@@ -409,9 +428,12 @@ class Query$Application$application {
           ? null
           : Query$Application$application$gamesPage.fromJson(
               (l$gamesPage as Map<String, dynamic>)),
+      livestreamEnabled: (l$livestreamEnabled as bool),
       $__typename: (l$$__typename as String),
     );
   }
+
+  final String code;
 
   final String clientVersion;
 
@@ -421,10 +443,14 @@ class Query$Application$application {
 
   final Query$Application$application$gamesPage? gamesPage;
 
+  final bool livestreamEnabled;
+
   final String $__typename;
 
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
+    final l$code = code;
+    _resultData['code'] = l$code;
     final l$clientVersion = clientVersion;
     _resultData['clientVersion'] = l$clientVersion;
     final l$page = page;
@@ -433,6 +459,8 @@ class Query$Application$application {
     _resultData['searchPage'] = l$searchPage?.toJson();
     final l$gamesPage = gamesPage;
     _resultData['gamesPage'] = l$gamesPage?.toJson();
+    final l$livestreamEnabled = livestreamEnabled;
+    _resultData['livestreamEnabled'] = l$livestreamEnabled;
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
     return _resultData;
@@ -440,16 +468,20 @@ class Query$Application$application {
 
   @override
   int get hashCode {
+    final l$code = code;
     final l$clientVersion = clientVersion;
     final l$page = page;
     final l$searchPage = searchPage;
     final l$gamesPage = gamesPage;
+    final l$livestreamEnabled = livestreamEnabled;
     final l$$__typename = $__typename;
     return Object.hashAll([
+      l$code,
       l$clientVersion,
       l$page,
       l$searchPage,
       l$gamesPage,
+      l$livestreamEnabled,
       l$$__typename,
     ]);
   }
@@ -461,6 +493,11 @@ class Query$Application$application {
     }
     if (!(other is Query$Application$application) ||
         runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$code = code;
+    final lOther$code = other.code;
+    if (l$code != lOther$code) {
       return false;
     }
     final l$clientVersion = clientVersion;
@@ -481,6 +518,11 @@ class Query$Application$application {
     final l$gamesPage = gamesPage;
     final lOther$gamesPage = other.gamesPage;
     if (l$gamesPage != lOther$gamesPage) {
+      return false;
+    }
+    final l$livestreamEnabled = livestreamEnabled;
+    final lOther$livestreamEnabled = other.livestreamEnabled;
+    if (l$livestreamEnabled != lOther$livestreamEnabled) {
       return false;
     }
     final l$$__typename = $__typename;
@@ -511,10 +553,12 @@ abstract class CopyWith$Query$Application$application<TRes> {
       _CopyWithStubImpl$Query$Application$application;
 
   TRes call({
+    String? code,
     String? clientVersion,
     Query$Application$application$page? page,
     Query$Application$application$searchPage? searchPage,
     Query$Application$application$gamesPage? gamesPage,
+    bool? livestreamEnabled,
     String? $__typename,
   });
   CopyWith$Query$Application$application$page<TRes> get page;
@@ -536,13 +580,18 @@ class _CopyWithImpl$Query$Application$application<TRes>
   static const _undefined = <dynamic, dynamic>{};
 
   TRes call({
+    Object? code = _undefined,
     Object? clientVersion = _undefined,
     Object? page = _undefined,
     Object? searchPage = _undefined,
     Object? gamesPage = _undefined,
+    Object? livestreamEnabled = _undefined,
     Object? $__typename = _undefined,
   }) =>
       _then(Query$Application$application(
+        code: code == _undefined || code == null
+            ? _instance.code
+            : (code as String),
         clientVersion: clientVersion == _undefined || clientVersion == null
             ? _instance.clientVersion
             : (clientVersion as String),
@@ -555,6 +604,10 @@ class _CopyWithImpl$Query$Application$application<TRes>
         gamesPage: gamesPage == _undefined
             ? _instance.gamesPage
             : (gamesPage as Query$Application$application$gamesPage?),
+        livestreamEnabled:
+            livestreamEnabled == _undefined || livestreamEnabled == null
+                ? _instance.livestreamEnabled
+                : (livestreamEnabled as bool),
         $__typename: $__typename == _undefined || $__typename == null
             ? _instance.$__typename
             : ($__typename as String),
@@ -594,10 +647,12 @@ class _CopyWithStubImpl$Query$Application$application<TRes>
   TRes _res;
 
   call({
+    String? code,
     String? clientVersion,
     Query$Application$application$page? page,
     Query$Application$application$searchPage? searchPage,
     Query$Application$application$gamesPage? gamesPage,
+    bool? livestreamEnabled,
     String? $__typename,
   }) =>
       _res;
