@@ -4,6 +4,112 @@ import 'package:gql/ast.dart';
 import 'package:graphql/client.dart' as graphql;
 import 'package:graphql_flutter/graphql_flutter.dart' as graphql_flutter;
 
+class Variables$Query$Application {
+  factory Variables$Query$Application({String? timestamp}) =>
+      Variables$Query$Application._({
+        if (timestamp != null) r'timestamp': timestamp,
+      });
+
+  Variables$Query$Application._(this._$data);
+
+  factory Variables$Query$Application.fromJson(Map<String, dynamic> data) {
+    final result$data = <String, dynamic>{};
+    if (data.containsKey('timestamp')) {
+      final l$timestamp = data['timestamp'];
+      result$data['timestamp'] = (l$timestamp as String?);
+    }
+    return Variables$Query$Application._(result$data);
+  }
+
+  Map<String, dynamic> _$data;
+
+  String? get timestamp => (_$data['timestamp'] as String?);
+
+  Map<String, dynamic> toJson() {
+    final result$data = <String, dynamic>{};
+    if (_$data.containsKey('timestamp')) {
+      final l$timestamp = timestamp;
+      result$data['timestamp'] = l$timestamp;
+    }
+    return result$data;
+  }
+
+  CopyWith$Variables$Query$Application<Variables$Query$Application>
+      get copyWith => CopyWith$Variables$Query$Application(
+            this,
+            (i) => i,
+          );
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Variables$Query$Application) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$timestamp = timestamp;
+    final lOther$timestamp = other.timestamp;
+    if (_$data.containsKey('timestamp') !=
+        other._$data.containsKey('timestamp')) {
+      return false;
+    }
+    if (l$timestamp != lOther$timestamp) {
+      return false;
+    }
+    return true;
+  }
+
+  @override
+  int get hashCode {
+    final l$timestamp = timestamp;
+    return Object.hashAll(
+        [_$data.containsKey('timestamp') ? l$timestamp : const {}]);
+  }
+}
+
+abstract class CopyWith$Variables$Query$Application<TRes> {
+  factory CopyWith$Variables$Query$Application(
+    Variables$Query$Application instance,
+    TRes Function(Variables$Query$Application) then,
+  ) = _CopyWithImpl$Variables$Query$Application;
+
+  factory CopyWith$Variables$Query$Application.stub(TRes res) =
+      _CopyWithStubImpl$Variables$Query$Application;
+
+  TRes call({String? timestamp});
+}
+
+class _CopyWithImpl$Variables$Query$Application<TRes>
+    implements CopyWith$Variables$Query$Application<TRes> {
+  _CopyWithImpl$Variables$Query$Application(
+    this._instance,
+    this._then,
+  );
+
+  final Variables$Query$Application _instance;
+
+  final TRes Function(Variables$Query$Application) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({Object? timestamp = _undefined}) =>
+      _then(Variables$Query$Application._({
+        ..._instance._$data,
+        if (timestamp != _undefined) 'timestamp': (timestamp as String?),
+      }));
+}
+
+class _CopyWithStubImpl$Variables$Query$Application<TRes>
+    implements CopyWith$Variables$Query$Application<TRes> {
+  _CopyWithStubImpl$Variables$Query$Application(this._res);
+
+  TRes _res;
+
+  call({String? timestamp}) => _res;
+}
+
 class Query$Application {
   Query$Application({
     required this.application,
@@ -142,13 +248,28 @@ const documentNodeQueryApplication = DocumentNode(definitions: [
   OperationDefinitionNode(
     type: OperationType.query,
     name: NameNode(value: 'Application'),
-    variableDefinitions: [],
+    variableDefinitions: [
+      VariableDefinitionNode(
+        variable: VariableNode(name: NameNode(value: 'timestamp')),
+        type: NamedTypeNode(
+          name: NameNode(value: 'String'),
+          isNonNull: false,
+        ),
+        defaultValue: DefaultValueNode(value: null),
+        directives: [],
+      )
+    ],
     directives: [],
     selectionSet: SelectionSetNode(selections: [
       FieldNode(
         name: NameNode(value: 'application'),
         alias: null,
-        arguments: [],
+        arguments: [
+          ArgumentNode(
+            name: NameNode(value: 'timestamp'),
+            value: VariableNode(name: NameNode(value: 'timestamp')),
+          )
+        ],
         directives: [],
         selectionSet: SelectionSetNode(selections: [
           FieldNode(
@@ -268,6 +389,7 @@ class Options$Query$Application
     extends graphql.QueryOptions<Query$Application> {
   Options$Query$Application({
     String? operationName,
+    Variables$Query$Application? variables,
     graphql.FetchPolicy? fetchPolicy,
     graphql.ErrorPolicy? errorPolicy,
     graphql.CacheRereadPolicy? cacheRereadPolicy,
@@ -279,6 +401,7 @@ class Options$Query$Application
     graphql.OnQueryError? onError,
   })  : onCompleteWithParsed = onComplete,
         super(
+          variables: variables?.toJson() ?? {},
           operationName: operationName,
           fetchPolicy: fetchPolicy,
           errorPolicy: errorPolicy,
@@ -312,6 +435,7 @@ class WatchOptions$Query$Application
     extends graphql.WatchQueryOptions<Query$Application> {
   WatchOptions$Query$Application({
     String? operationName,
+    Variables$Query$Application? variables,
     graphql.FetchPolicy? fetchPolicy,
     graphql.ErrorPolicy? errorPolicy,
     graphql.CacheRereadPolicy? cacheRereadPolicy,
@@ -323,6 +447,7 @@ class WatchOptions$Query$Application
     bool carryForwardDataOnException = true,
     bool fetchResults = false,
   }) : super(
+          variables: variables?.toJson() ?? {},
           operationName: operationName,
           fetchPolicy: fetchPolicy,
           errorPolicy: errorPolicy,
@@ -339,9 +464,12 @@ class WatchOptions$Query$Application
 }
 
 class FetchMoreOptions$Query$Application extends graphql.FetchMoreOptions {
-  FetchMoreOptions$Query$Application({required graphql.UpdateQuery updateQuery})
-      : super(
+  FetchMoreOptions$Query$Application({
+    required graphql.UpdateQuery updateQuery,
+    Variables$Query$Application? variables,
+  }) : super(
           updateQuery: updateQuery,
+          variables: variables?.toJson() ?? {},
           document: documentNodeQueryApplication,
         );
 }
@@ -355,19 +483,26 @@ extension ClientExtension$Query$Application on graphql.GraphQLClient {
       this.watchQuery(options ?? WatchOptions$Query$Application());
   void writeQuery$Application({
     required Query$Application data,
+    Variables$Query$Application? variables,
     bool broadcast = true,
   }) =>
       this.writeQuery(
         graphql.Request(
-            operation:
-                graphql.Operation(document: documentNodeQueryApplication)),
+          operation: graphql.Operation(document: documentNodeQueryApplication),
+          variables: variables?.toJson() ?? const {},
+        ),
         data: data.toJson(),
         broadcast: broadcast,
       );
-  Query$Application? readQuery$Application({bool optimistic = true}) {
+  Query$Application? readQuery$Application({
+    Variables$Query$Application? variables,
+    bool optimistic = true,
+  }) {
     final result = this.readQuery(
       graphql.Request(
-          operation: graphql.Operation(document: documentNodeQueryApplication)),
+        operation: graphql.Operation(document: documentNodeQueryApplication),
+        variables: variables?.toJson() ?? const {},
+      ),
       optimistic: optimistic,
     );
     return result == null ? null : Query$Application.fromJson(result);

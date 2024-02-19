@@ -1,5 +1,5 @@
-query Application {
-  application {
+query Application($timestamp: String) {
+  application(timestamp: $timestamp) {
     code
     clientVersion
     page {
