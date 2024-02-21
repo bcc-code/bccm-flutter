@@ -20,13 +20,10 @@ InteractionEvent _$InteractionEventFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$InteractionEvent {
-  String? get interaction =>
-      throw _privateConstructorUsedError; // 'play', 'pause', 'share', 'like', 'mute'
-  String? get pageCode => throw _privateConstructorUsedError; // 'shorts'
-  String? get contextElementType =>
-      throw _privateConstructorUsedError; // 'shorts'
-  String? get contextElementId =>
-      throw _privateConstructorUsedError; // e.g. uuid of the short
+  String? get interaction => throw _privateConstructorUsedError;
+  String? get pageCode => throw _privateConstructorUsedError;
+  String? get contextElementType => throw _privateConstructorUsedError;
+  String? get contextElementId => throw _privateConstructorUsedError;
   Map<String, dynamic>? get meta => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -167,18 +164,13 @@ class _$InteractionEventImpl implements _InteractionEvent {
 
   @override
   final String? interaction;
-// 'play', 'pause', 'share', 'like', 'mute'
   @override
   final String? pageCode;
-// 'shorts'
   @override
   final String? contextElementType;
-// 'shorts'
   @override
   final String? contextElementId;
-// e.g. uuid of the short
   final Map<String, dynamic>? _meta;
-// e.g. uuid of the short
   @override
   Map<String, dynamic>? get meta {
     final value = _meta;
@@ -247,13 +239,13 @@ abstract class _InteractionEvent implements InteractionEvent {
 
   @override
   String? get interaction;
-  @override // 'play', 'pause', 'share', 'like', 'mute'
+  @override
   String? get pageCode;
-  @override // 'shorts'
+  @override
   String? get contextElementType;
-  @override // 'shorts'
+  @override
   String? get contextElementId;
-  @override // e.g. uuid of the short
+  @override
   Map<String, dynamic>? get meta;
   @override
   @JsonKey(ignore: true)

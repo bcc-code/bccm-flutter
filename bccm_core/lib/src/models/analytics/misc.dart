@@ -6,10 +6,10 @@ part 'misc.g.dart';
 @freezed
 class InteractionEvent with _$InteractionEvent {
   const factory InteractionEvent({
-    String? interaction, // 'play', 'pause', 'share', 'like', 'mute'
-    String? pageCode, // 'shorts'
-    String? contextElementType, // 'shorts'
-    String? contextElementId, // e.g. uuid of the short
+    String? interaction,
+    String? pageCode,
+    String? contextElementType,
+    String? contextElementId,
     Map<String, dynamic>? meta,
   }) = _InteractionEvent;
 
