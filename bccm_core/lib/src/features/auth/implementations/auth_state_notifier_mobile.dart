@@ -144,7 +144,7 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
             '${info.packageName}://login-callback',
             issuer: 'https://${config.auth0Domain}',
             refreshToken: refreshToken,
-            additionalParameters: {'audience': config.auth0Audience},
+            additionalParameters: {'audience': config.auth0Audience, 'custom_scope': config.scopes.join(' ')},
           ),
         ),
       );
