@@ -2,7 +2,7 @@ library bccm_core;
 
 import '../../utils/primitive_extensions.dart';
 import 'package:flutter/material.dart';
-import 'package:responsive_framework/responsive_breakpoints.dart';
+import 'package:responsive_framework/responsive_framework.dart';
 
 /// Looks complicated, but its just to get a DesignSystemData instance based on where we are in the widget tree.
 /// See https://api.flutter.dev/flutter/widgets/InheritedWidget-class.html
