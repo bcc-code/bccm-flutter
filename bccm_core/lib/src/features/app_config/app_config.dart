@@ -15,7 +15,7 @@ bool isOldAppVersion(BuildContext context, Query$Application appConfig) {
 RealtimeUpdate? lastUpdate;
 final appConfigFutureProvider = StateProvider<Future<Query$Application>>((ref) async {
   final result = await ref
-      .read(bccmGraphQLProvider)
+      .watch(bccmGraphQLProvider)
       .query$Application(Options$Query$Application(variables: Variables$Query$Application(timestamp: lastUpdate?.updatedAt)));
   if (result.exception != null) {
     throw result.exception!;
