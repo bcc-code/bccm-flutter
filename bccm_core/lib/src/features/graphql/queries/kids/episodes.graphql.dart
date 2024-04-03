@@ -694,7 +694,9 @@ class _CopyWithStubImpl$Query$KidsGetNextEpisodes$episode<TRes>
 }
 
 class Query$KidsGetNextEpisodes$episode$next
-    implements Fragment$KidsEpisodeThumbnail, Fragment$PlayableMediaItem {
+    implements
+        Fragment$KidsEpisodeThumbnail,
+        Fragment$PlayableMediaItem$$Episode {
   Query$KidsGetNextEpisodes$episode$next({
     required this.id,
     required this.title,
@@ -1037,7 +1039,7 @@ class _CopyWithStubImpl$Query$KidsGetNextEpisodes$episode$next<TRes>
 }
 
 class Query$KidsGetNextEpisodes$episode$next$context
-    implements Fragment$PlayableMediaItem$context {
+    implements Fragment$PlayableMediaItem$$Episode$context {
   Query$KidsGetNextEpisodes$episode$next$context({required this.$__typename});
 
   factory Query$KidsGetNextEpisodes$episode$next$context.fromJson(
@@ -1195,7 +1197,7 @@ class _CopyWithStubImpl$Query$KidsGetNextEpisodes$episode$next$context<TRes>
 
 class Query$KidsGetNextEpisodes$episode$next$context$$ContextCollection
     implements
-        Fragment$PlayableMediaItem$context$$ContextCollection,
+        Fragment$PlayableMediaItem$$Episode$context$$ContextCollection,
         Query$KidsGetNextEpisodes$episode$next$context {
   Query$KidsGetNextEpisodes$episode$next$context$$ContextCollection({
     required this.id,
@@ -1338,7 +1340,7 @@ class _CopyWithStubImpl$Query$KidsGetNextEpisodes$episode$next$context$$ContextC
 
 class Query$KidsGetNextEpisodes$episode$next$context$$Season
     implements
-        Fragment$PlayableMediaItem$context$$Season,
+        Fragment$PlayableMediaItem$$Episode$context$$Season,
         Query$KidsGetNextEpisodes$episode$next$context {
   Query$KidsGetNextEpisodes$episode$next$context$$Season(
       {this.$__typename = 'Season'});
@@ -1443,7 +1445,7 @@ class _CopyWithStubImpl$Query$KidsGetNextEpisodes$episode$next$context$$Season<
 }
 
 class Query$KidsGetNextEpisodes$episode$next$season
-    implements Fragment$PlayableMediaItem$season {
+    implements Fragment$PlayableMediaItem$$Episode$season {
   Query$KidsGetNextEpisodes$episode$next$season({
     required this.id,
     required this.title,
@@ -1621,7 +1623,7 @@ class _CopyWithStubImpl$Query$KidsGetNextEpisodes$episode$next$season<TRes>
 }
 
 class Query$KidsGetNextEpisodes$episode$next$season$show
-    implements Fragment$PlayableMediaItem$season$show {
+    implements Fragment$PlayableMediaItem$$Episode$season$show {
   Query$KidsGetNextEpisodes$episode$next$season$show({
     required this.id,
     required this.title,
@@ -3635,7 +3637,8 @@ class Query$KidsFetchEpisode$Widget
         );
 }
 
-class Query$KidsFetchEpisode$episode implements Fragment$PlayableMediaItem {
+class Query$KidsFetchEpisode$episode
+    implements Fragment$PlayableMediaItem$$Episode {
   Query$KidsFetchEpisode$episode({
     required this.id,
     required this.streams,
@@ -4045,7 +4048,9 @@ class _CopyWithStubImpl$Query$KidsFetchEpisode$episode<TRes>
 }
 
 class Query$KidsFetchEpisode$episode$context
-    implements Fragment$PlayableMediaItem$context, Fragment$EpisodeContext {
+    implements
+        Fragment$PlayableMediaItem$$Episode$context,
+        Fragment$EpisodeContext {
   Query$KidsFetchEpisode$episode$context({required this.$__typename});
 
   factory Query$KidsFetchEpisode$episode$context.fromJson(
@@ -4197,7 +4202,7 @@ class _CopyWithStubImpl$Query$KidsFetchEpisode$episode$context<TRes>
 
 class Query$KidsFetchEpisode$episode$context$$ContextCollection
     implements
-        Fragment$PlayableMediaItem$context$$ContextCollection,
+        Fragment$PlayableMediaItem$$Episode$context$$ContextCollection,
         Fragment$EpisodeContext$$ContextCollection,
         Query$KidsFetchEpisode$episode$context {
   Query$KidsFetchEpisode$episode$context$$ContextCollection({
@@ -4379,7 +4384,7 @@ class _CopyWithStubImpl$Query$KidsFetchEpisode$episode$context$$ContextCollectio
 
 class Query$KidsFetchEpisode$episode$context$$Season
     implements
-        Fragment$PlayableMediaItem$context$$Season,
+        Fragment$PlayableMediaItem$$Episode$context$$Season,
         Fragment$EpisodeContext$$Season,
         Query$KidsFetchEpisode$episode$context {
   Query$KidsFetchEpisode$episode$context$$Season({
@@ -4618,7 +4623,7 @@ class _CopyWithStubImpl$Query$KidsFetchEpisode$episode$context$$Season<TRes>
 }
 
 class Query$KidsFetchEpisode$episode$season
-    implements Fragment$PlayableMediaItem$season {
+    implements Fragment$PlayableMediaItem$$Episode$season {
   Query$KidsFetchEpisode$episode$season({
     required this.id,
     required this.title,
@@ -4795,7 +4800,7 @@ class _CopyWithStubImpl$Query$KidsFetchEpisode$episode$season<TRes>
 }
 
 class Query$KidsFetchEpisode$episode$season$show
-    implements Fragment$PlayableMediaItem$season$show {
+    implements Fragment$PlayableMediaItem$$Episode$season$show {
   Query$KidsFetchEpisode$episode$season$show({
     required this.id,
     required this.title,

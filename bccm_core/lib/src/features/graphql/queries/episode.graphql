@@ -125,7 +125,7 @@ query EpisodeDetails($id: ID!) {
   }
 }
 
-fragment PlayableMediaItem on Episode {
+fragment PlayableMediaItem on MediaItem {
   id
   streams {
     ...BasicStream
