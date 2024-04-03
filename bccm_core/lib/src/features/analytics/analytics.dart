@@ -276,12 +276,10 @@ class RudderAnalytics extends Analytics {
   void identify(Auth0IdToken profile, String analyticsId) {
     final traits = RudderTraits();
 
-    final ageGroup = getAgeGroupFromUser(profile);
-    if (ageGroup != null) {
-      traits.put('ageGroup', ageGroup.name);
-    }
+    traits.put('ageGroup', getAgeGroupFromUser(profile).name);
     traits.put('country', profile.countryIso2Code);
     traits.put('churchId', profile.churchId.toString());
+
     if (profile.gender != null) {
       traits.putGender(profile.gender!);
     }
