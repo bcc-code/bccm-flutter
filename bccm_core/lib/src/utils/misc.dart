@@ -57,7 +57,7 @@ Rect iPadSharePositionOrigin(BuildContext context) {
 }
 
 extension NullableContinuation<T> on T? {
-  R? let<R>(R Function(T) f) {
+  R? let<R>(R Function(T it) f) {
     if (this != null) {
       return f(this as T);
     }
