@@ -276,10 +276,9 @@ class RudderAnalytics extends Analytics {
   void identify(Auth0IdToken profile, String analyticsId) {
     final traits = RudderTraits();
 
-    final birthDateTime = profile.birthdate == null ? null : DateTime.tryParse(profile.birthdate!);
-    if (birthDateTime != null) {
-      final age = getAgeFromBirthDate(birthDateTime);
-      traits.put('ageGroup', getAgeGroup(age).name);
+    final ageGroup = getAgeGroupFromUser(profile);
+    if (ageGroup != null) {
+      traits.put('ageGroup', ageGroup.name);
     }
     traits.put('country', profile.countryIso2Code);
     traits.put('churchId', profile.churchId.toString());
@@ -359,7 +358,7 @@ int getAgeFromBirthDate(DateTime birthdate) {
 
 ({int start, String name}) getAgeGroup(int? age) {
   if (age == null) {
-    return (start: 0, name: 'UNKNOWN');
+    return (start: 999, name: 'UNKNOWN');
   }
   if (age >= 65) {
     return (start: 65, name: '65+');
@@ -378,4 +377,13 @@ int getAgeFromBirthDate(DateTime birthdate) {
   } else {
     return (start: 0, name: '< 10');
   }
+}
+
+({int start, String name}) getAgeGroupFromUser(Auth0IdToken user) {
+  final birthDateTime = user.birthdate?.let((b) => DateTime.tryParse(b));
+  if (birthDateTime != null) {
+    final age = getAgeFromBirthDate(birthDateTime);
+    return getAgeGroup(age);
+  }
+  return getAgeGroup(null);
 }
