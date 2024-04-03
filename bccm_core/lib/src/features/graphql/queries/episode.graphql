@@ -131,6 +131,7 @@ fragment PlayableMediaItem on Episode {
     ...BasicStream
   }
   title
+  originalTitle
   image
   ... on Episode {
     cursor
