@@ -343,3 +343,23 @@ class _CopyWithStubImpl$Input$EmailOptions<TRes>
   }) =>
       _res;
 }
+
+enum Enum$SubscriptionTopic { comics, $unknown }
+
+String toJson$Enum$SubscriptionTopic(Enum$SubscriptionTopic e) {
+  switch (e) {
+    case Enum$SubscriptionTopic.comics:
+      return r'comics';
+    case Enum$SubscriptionTopic.$unknown:
+      return r'$unknown';
+  }
+}
+
+Enum$SubscriptionTopic fromJson$Enum$SubscriptionTopic(String value) {
+  switch (value) {
+    case r'comics':
+      return Enum$SubscriptionTopic.comics;
+    default:
+      return Enum$SubscriptionTopic.$unknown;
+  }
+}

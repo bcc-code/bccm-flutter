@@ -4293,6 +4293,7 @@ class Fragment$PlayableMediaItem {
     required this.id,
     required this.streams,
     required this.title,
+    required this.originalTitle,
     this.image,
     required this.cursor,
     this.context,
@@ -4305,6 +4306,7 @@ class Fragment$PlayableMediaItem {
     final l$id = json['id'];
     final l$streams = json['streams'];
     final l$title = json['title'];
+    final l$originalTitle = json['originalTitle'];
     final l$image = json['image'];
     final l$cursor = json['cursor'];
     final l$context = json['context'];
@@ -4318,6 +4320,7 @@ class Fragment$PlayableMediaItem {
               (e) => Fragment$BasicStream.fromJson((e as Map<String, dynamic>)))
           .toList(),
       title: (l$title as String),
+      originalTitle: (l$originalTitle as String),
       image: (l$image as String?),
       cursor: (l$cursor as String),
       context: l$context == null
@@ -4339,6 +4342,8 @@ class Fragment$PlayableMediaItem {
 
   final String title;
 
+  final String originalTitle;
+
   final String? image;
 
   final String cursor;
@@ -4359,6 +4364,8 @@ class Fragment$PlayableMediaItem {
     _resultData['streams'] = l$streams.map((e) => e.toJson()).toList();
     final l$title = title;
     _resultData['title'] = l$title;
+    final l$originalTitle = originalTitle;
+    _resultData['originalTitle'] = l$originalTitle;
     final l$image = image;
     _resultData['image'] = l$image;
     final l$cursor = cursor;
@@ -4379,6 +4386,7 @@ class Fragment$PlayableMediaItem {
     final l$id = id;
     final l$streams = streams;
     final l$title = title;
+    final l$originalTitle = originalTitle;
     final l$image = image;
     final l$cursor = cursor;
     final l$context = context;
@@ -4389,6 +4397,7 @@ class Fragment$PlayableMediaItem {
       l$id,
       Object.hashAll(l$streams.map((v) => v)),
       l$title,
+      l$originalTitle,
       l$image,
       l$cursor,
       l$context,
@@ -4427,6 +4436,11 @@ class Fragment$PlayableMediaItem {
     final l$title = title;
     final lOther$title = other.title;
     if (l$title != lOther$title) {
+      return false;
+    }
+    final l$originalTitle = originalTitle;
+    final lOther$originalTitle = other.originalTitle;
+    if (l$originalTitle != lOther$originalTitle) {
       return false;
     }
     final l$image = image;
@@ -4485,6 +4499,7 @@ abstract class CopyWith$Fragment$PlayableMediaItem<TRes> {
     String? id,
     List<Fragment$BasicStream>? streams,
     String? title,
+    String? originalTitle,
     String? image,
     String? cursor,
     Fragment$PlayableMediaItem$context? context,
@@ -4517,6 +4532,7 @@ class _CopyWithImpl$Fragment$PlayableMediaItem<TRes>
     Object? id = _undefined,
     Object? streams = _undefined,
     Object? title = _undefined,
+    Object? originalTitle = _undefined,
     Object? image = _undefined,
     Object? cursor = _undefined,
     Object? context = _undefined,
@@ -4532,6 +4548,9 @@ class _CopyWithImpl$Fragment$PlayableMediaItem<TRes>
         title: title == _undefined || title == null
             ? _instance.title
             : (title as String),
+        originalTitle: originalTitle == _undefined || originalTitle == null
+            ? _instance.originalTitle
+            : (originalTitle as String),
         image: image == _undefined ? _instance.image : (image as String?),
         cursor: cursor == _undefined || cursor == null
             ? _instance.cursor
@@ -4588,6 +4607,7 @@ class _CopyWithStubImpl$Fragment$PlayableMediaItem<TRes>
     String? id,
     List<Fragment$BasicStream>? streams,
     String? title,
+    String? originalTitle,
     String? image,
     String? cursor,
     Fragment$PlayableMediaItem$context? context,
@@ -4643,6 +4663,13 @@ const fragmentDefinitionPlayableMediaItem = FragmentDefinitionNode(
     ),
     FieldNode(
       name: NameNode(value: 'title'),
+      alias: null,
+      arguments: [],
+      directives: [],
+      selectionSet: null,
+    ),
+    FieldNode(
+      name: NameNode(value: 'originalTitle'),
       alias: null,
       arguments: [],
       directives: [],
@@ -7266,6 +7293,7 @@ class Query$FetchEpisode$episode implements Fragment$PlayableMediaItem {
     required this.id,
     required this.streams,
     required this.title,
+    required this.originalTitle,
     this.image,
     required this.cursor,
     this.context,
@@ -7291,6 +7319,7 @@ class Query$FetchEpisode$episode implements Fragment$PlayableMediaItem {
     final l$id = json['id'];
     final l$streams = json['streams'];
     final l$title = json['title'];
+    final l$originalTitle = json['originalTitle'];
     final l$image = json['image'];
     final l$cursor = json['cursor'];
     final l$context = json['context'];
@@ -7317,6 +7346,7 @@ class Query$FetchEpisode$episode implements Fragment$PlayableMediaItem {
               (e) => Fragment$BasicStream.fromJson((e as Map<String, dynamic>)))
           .toList(),
       title: (l$title as String),
+      originalTitle: (l$originalTitle as String),
       image: (l$image as String?),
       cursor: (l$cursor as String),
       context: l$context == null
@@ -7358,6 +7388,8 @@ class Query$FetchEpisode$episode implements Fragment$PlayableMediaItem {
   final List<Fragment$BasicStream> streams;
 
   final String title;
+
+  final String originalTitle;
 
   final String? image;
 
@@ -7405,6 +7437,8 @@ class Query$FetchEpisode$episode implements Fragment$PlayableMediaItem {
     _resultData['streams'] = l$streams.map((e) => e.toJson()).toList();
     final l$title = title;
     _resultData['title'] = l$title;
+    final l$originalTitle = originalTitle;
+    _resultData['originalTitle'] = l$originalTitle;
     final l$image = image;
     _resultData['image'] = l$image;
     final l$cursor = cursor;
@@ -7452,6 +7486,7 @@ class Query$FetchEpisode$episode implements Fragment$PlayableMediaItem {
     final l$id = id;
     final l$streams = streams;
     final l$title = title;
+    final l$originalTitle = originalTitle;
     final l$image = image;
     final l$cursor = cursor;
     final l$context = context;
@@ -7475,6 +7510,7 @@ class Query$FetchEpisode$episode implements Fragment$PlayableMediaItem {
       l$id,
       Object.hashAll(l$streams.map((v) => v)),
       l$title,
+      l$originalTitle,
       l$image,
       l$cursor,
       l$context,
@@ -7526,6 +7562,11 @@ class Query$FetchEpisode$episode implements Fragment$PlayableMediaItem {
     final l$title = title;
     final lOther$title = other.title;
     if (l$title != lOther$title) {
+      return false;
+    }
+    final l$originalTitle = originalTitle;
+    final lOther$originalTitle = other.originalTitle;
+    if (l$originalTitle != lOther$originalTitle) {
       return false;
     }
     final l$image = image;
@@ -7656,6 +7697,7 @@ abstract class CopyWith$Query$FetchEpisode$episode<TRes> {
     String? id,
     List<Fragment$BasicStream>? streams,
     String? title,
+    String? originalTitle,
     String? image,
     String? cursor,
     Query$FetchEpisode$episode$context? context,
@@ -7709,6 +7751,7 @@ class _CopyWithImpl$Query$FetchEpisode$episode<TRes>
     Object? id = _undefined,
     Object? streams = _undefined,
     Object? title = _undefined,
+    Object? originalTitle = _undefined,
     Object? image = _undefined,
     Object? cursor = _undefined,
     Object? context = _undefined,
@@ -7737,6 +7780,9 @@ class _CopyWithImpl$Query$FetchEpisode$episode<TRes>
         title: title == _undefined || title == null
             ? _instance.title
             : (title as String),
+        originalTitle: originalTitle == _undefined || originalTitle == null
+            ? _instance.originalTitle
+            : (originalTitle as String),
         image: image == _undefined ? _instance.image : (image as String?),
         cursor: cursor == _undefined || cursor == null
             ? _instance.cursor
@@ -7857,6 +7903,7 @@ class _CopyWithStubImpl$Query$FetchEpisode$episode<TRes>
     String? id,
     List<Fragment$BasicStream>? streams,
     String? title,
+    String? originalTitle,
     String? image,
     String? cursor,
     Query$FetchEpisode$episode$context? context,

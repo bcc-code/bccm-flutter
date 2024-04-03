@@ -703,6 +703,7 @@ class Query$KidsGetNextEpisodes$episode$next
     required this.cursor,
     this.$__typename = 'Episode',
     required this.streams,
+    required this.originalTitle,
     this.context,
     this.season,
   });
@@ -716,6 +717,7 @@ class Query$KidsGetNextEpisodes$episode$next
     final l$cursor = json['cursor'];
     final l$$__typename = json['__typename'];
     final l$streams = json['streams'];
+    final l$originalTitle = json['originalTitle'];
     final l$context = json['context'];
     final l$season = json['season'];
     return Query$KidsGetNextEpisodes$episode$next(
@@ -729,6 +731,7 @@ class Query$KidsGetNextEpisodes$episode$next
           .map(
               (e) => Fragment$BasicStream.fromJson((e as Map<String, dynamic>)))
           .toList(),
+      originalTitle: (l$originalTitle as String),
       context: l$context == null
           ? null
           : Query$KidsGetNextEpisodes$episode$next$context.fromJson(
@@ -754,6 +757,8 @@ class Query$KidsGetNextEpisodes$episode$next
 
   final List<Fragment$BasicStream> streams;
 
+  final String originalTitle;
+
   final Query$KidsGetNextEpisodes$episode$next$context? context;
 
   final Query$KidsGetNextEpisodes$episode$next$season? season;
@@ -774,6 +779,8 @@ class Query$KidsGetNextEpisodes$episode$next
     _resultData['__typename'] = l$$__typename;
     final l$streams = streams;
     _resultData['streams'] = l$streams.map((e) => e.toJson()).toList();
+    final l$originalTitle = originalTitle;
+    _resultData['originalTitle'] = l$originalTitle;
     final l$context = context;
     _resultData['context'] = l$context?.toJson();
     final l$season = season;
@@ -790,6 +797,7 @@ class Query$KidsGetNextEpisodes$episode$next
     final l$cursor = cursor;
     final l$$__typename = $__typename;
     final l$streams = streams;
+    final l$originalTitle = originalTitle;
     final l$context = context;
     final l$season = season;
     return Object.hashAll([
@@ -800,6 +808,7 @@ class Query$KidsGetNextEpisodes$episode$next
       l$cursor,
       l$$__typename,
       Object.hashAll(l$streams.map((v) => v)),
+      l$originalTitle,
       l$context,
       l$season,
     ]);
@@ -856,6 +865,11 @@ class Query$KidsGetNextEpisodes$episode$next
         return false;
       }
     }
+    final l$originalTitle = originalTitle;
+    final lOther$originalTitle = other.originalTitle;
+    if (l$originalTitle != lOther$originalTitle) {
+      return false;
+    }
     final l$context = context;
     final lOther$context = other.context;
     if (l$context != lOther$context) {
@@ -897,6 +911,7 @@ abstract class CopyWith$Query$KidsGetNextEpisodes$episode$next<TRes> {
     String? cursor,
     String? $__typename,
     List<Fragment$BasicStream>? streams,
+    String? originalTitle,
     Query$KidsGetNextEpisodes$episode$next$context? context,
     Query$KidsGetNextEpisodes$episode$next$season? season,
   });
@@ -929,6 +944,7 @@ class _CopyWithImpl$Query$KidsGetNextEpisodes$episode$next<TRes>
     Object? cursor = _undefined,
     Object? $__typename = _undefined,
     Object? streams = _undefined,
+    Object? originalTitle = _undefined,
     Object? context = _undefined,
     Object? season = _undefined,
   }) =>
@@ -950,6 +966,9 @@ class _CopyWithImpl$Query$KidsGetNextEpisodes$episode$next<TRes>
         streams: streams == _undefined || streams == null
             ? _instance.streams
             : (streams as List<Fragment$BasicStream>),
+        originalTitle: originalTitle == _undefined || originalTitle == null
+            ? _instance.originalTitle
+            : (originalTitle as String),
         context: context == _undefined
             ? _instance.context
             : (context as Query$KidsGetNextEpisodes$episode$next$context?),
@@ -1002,6 +1021,7 @@ class _CopyWithStubImpl$Query$KidsGetNextEpisodes$episode$next<TRes>
     String? cursor,
     String? $__typename,
     List<Fragment$BasicStream>? streams,
+    String? originalTitle,
     Query$KidsGetNextEpisodes$episode$next$context? context,
     Query$KidsGetNextEpisodes$episode$next$season? season,
   }) =>
@@ -3620,6 +3640,7 @@ class Query$KidsFetchEpisode$episode implements Fragment$PlayableMediaItem {
     required this.id,
     required this.streams,
     required this.title,
+    required this.originalTitle,
     this.image,
     required this.cursor,
     this.context,
@@ -3634,6 +3655,7 @@ class Query$KidsFetchEpisode$episode implements Fragment$PlayableMediaItem {
     final l$id = json['id'];
     final l$streams = json['streams'];
     final l$title = json['title'];
+    final l$originalTitle = json['originalTitle'];
     final l$image = json['image'];
     final l$cursor = json['cursor'];
     final l$context = json['context'];
@@ -3649,6 +3671,7 @@ class Query$KidsFetchEpisode$episode implements Fragment$PlayableMediaItem {
               (e) => Fragment$BasicStream.fromJson((e as Map<String, dynamic>)))
           .toList(),
       title: (l$title as String),
+      originalTitle: (l$originalTitle as String),
       image: (l$image as String?),
       cursor: (l$cursor as String),
       context: l$context == null
@@ -3675,6 +3698,8 @@ class Query$KidsFetchEpisode$episode implements Fragment$PlayableMediaItem {
 
   final String title;
 
+  final String originalTitle;
+
   final String? image;
 
   final String cursor;
@@ -3699,6 +3724,8 @@ class Query$KidsFetchEpisode$episode implements Fragment$PlayableMediaItem {
     _resultData['streams'] = l$streams.map((e) => e.toJson()).toList();
     final l$title = title;
     _resultData['title'] = l$title;
+    final l$originalTitle = originalTitle;
+    _resultData['originalTitle'] = l$originalTitle;
     final l$image = image;
     _resultData['image'] = l$image;
     final l$cursor = cursor;
@@ -3723,6 +3750,7 @@ class Query$KidsFetchEpisode$episode implements Fragment$PlayableMediaItem {
     final l$id = id;
     final l$streams = streams;
     final l$title = title;
+    final l$originalTitle = originalTitle;
     final l$image = image;
     final l$cursor = cursor;
     final l$context = context;
@@ -3735,6 +3763,7 @@ class Query$KidsFetchEpisode$episode implements Fragment$PlayableMediaItem {
       l$id,
       Object.hashAll(l$streams.map((v) => v)),
       l$title,
+      l$originalTitle,
       l$image,
       l$cursor,
       l$context,
@@ -3775,6 +3804,11 @@ class Query$KidsFetchEpisode$episode implements Fragment$PlayableMediaItem {
     final l$title = title;
     final lOther$title = other.title;
     if (l$title != lOther$title) {
+      return false;
+    }
+    final l$originalTitle = originalTitle;
+    final lOther$originalTitle = other.originalTitle;
+    if (l$originalTitle != lOther$originalTitle) {
       return false;
     }
     final l$image = image;
@@ -3850,6 +3884,7 @@ abstract class CopyWith$Query$KidsFetchEpisode$episode<TRes> {
     String? id,
     List<Fragment$BasicStream>? streams,
     String? title,
+    String? originalTitle,
     String? image,
     String? cursor,
     Query$KidsFetchEpisode$episode$context? context,
@@ -3890,6 +3925,7 @@ class _CopyWithImpl$Query$KidsFetchEpisode$episode<TRes>
     Object? id = _undefined,
     Object? streams = _undefined,
     Object? title = _undefined,
+    Object? originalTitle = _undefined,
     Object? image = _undefined,
     Object? cursor = _undefined,
     Object? context = _undefined,
@@ -3907,6 +3943,9 @@ class _CopyWithImpl$Query$KidsFetchEpisode$episode<TRes>
         title: title == _undefined || title == null
             ? _instance.title
             : (title as String),
+        originalTitle: originalTitle == _undefined || originalTitle == null
+            ? _instance.originalTitle
+            : (originalTitle as String),
         image: image == _undefined ? _instance.image : (image as String?),
         cursor: cursor == _undefined || cursor == null
             ? _instance.cursor
@@ -3982,6 +4021,7 @@ class _CopyWithStubImpl$Query$KidsFetchEpisode$episode<TRes>
     String? id,
     List<Fragment$BasicStream>? streams,
     String? title,
+    String? originalTitle,
     String? image,
     String? cursor,
     Query$KidsFetchEpisode$episode$context? context,

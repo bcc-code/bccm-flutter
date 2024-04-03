@@ -12,6 +12,7 @@ class Fragment$ShortsEpisode implements Fragment$PlayableMediaItem {
     required this.cursor,
     this.image,
     required this.streams,
+    required this.originalTitle,
     this.context,
     required this.duration,
     this.season,
@@ -24,6 +25,7 @@ class Fragment$ShortsEpisode implements Fragment$PlayableMediaItem {
     final l$cursor = json['cursor'];
     final l$image = json['image'];
     final l$streams = json['streams'];
+    final l$originalTitle = json['originalTitle'];
     final l$context = json['context'];
     final l$duration = json['duration'];
     final l$season = json['season'];
@@ -37,6 +39,7 @@ class Fragment$ShortsEpisode implements Fragment$PlayableMediaItem {
           .map(
               (e) => Fragment$BasicStream.fromJson((e as Map<String, dynamic>)))
           .toList(),
+      originalTitle: (l$originalTitle as String),
       context: l$context == null
           ? null
           : Fragment$ShortsEpisode$context.fromJson(
@@ -60,6 +63,8 @@ class Fragment$ShortsEpisode implements Fragment$PlayableMediaItem {
 
   final List<Fragment$BasicStream> streams;
 
+  final String originalTitle;
+
   final Fragment$ShortsEpisode$context? context;
 
   final int duration;
@@ -80,6 +85,8 @@ class Fragment$ShortsEpisode implements Fragment$PlayableMediaItem {
     _resultData['image'] = l$image;
     final l$streams = streams;
     _resultData['streams'] = l$streams.map((e) => e.toJson()).toList();
+    final l$originalTitle = originalTitle;
+    _resultData['originalTitle'] = l$originalTitle;
     final l$context = context;
     _resultData['context'] = l$context?.toJson();
     final l$duration = duration;
@@ -98,6 +105,7 @@ class Fragment$ShortsEpisode implements Fragment$PlayableMediaItem {
     final l$cursor = cursor;
     final l$image = image;
     final l$streams = streams;
+    final l$originalTitle = originalTitle;
     final l$context = context;
     final l$duration = duration;
     final l$season = season;
@@ -108,6 +116,7 @@ class Fragment$ShortsEpisode implements Fragment$PlayableMediaItem {
       l$cursor,
       l$image,
       Object.hashAll(l$streams.map((v) => v)),
+      l$originalTitle,
       l$context,
       l$duration,
       l$season,
@@ -156,6 +165,11 @@ class Fragment$ShortsEpisode implements Fragment$PlayableMediaItem {
         return false;
       }
     }
+    final l$originalTitle = originalTitle;
+    final lOther$originalTitle = other.originalTitle;
+    if (l$originalTitle != lOther$originalTitle) {
+      return false;
+    }
     final l$context = context;
     final lOther$context = other.context;
     if (l$context != lOther$context) {
@@ -203,6 +217,7 @@ abstract class CopyWith$Fragment$ShortsEpisode<TRes> {
     String? cursor,
     String? image,
     List<Fragment$BasicStream>? streams,
+    String? originalTitle,
     Fragment$ShortsEpisode$context? context,
     int? duration,
     Fragment$ShortsEpisode$season? season,
@@ -235,6 +250,7 @@ class _CopyWithImpl$Fragment$ShortsEpisode<TRes>
     Object? cursor = _undefined,
     Object? image = _undefined,
     Object? streams = _undefined,
+    Object? originalTitle = _undefined,
     Object? context = _undefined,
     Object? duration = _undefined,
     Object? season = _undefined,
@@ -252,6 +268,9 @@ class _CopyWithImpl$Fragment$ShortsEpisode<TRes>
         streams: streams == _undefined || streams == null
             ? _instance.streams
             : (streams as List<Fragment$BasicStream>),
+        originalTitle: originalTitle == _undefined || originalTitle == null
+            ? _instance.originalTitle
+            : (originalTitle as String),
         context: context == _undefined
             ? _instance.context
             : (context as Fragment$ShortsEpisode$context?),
@@ -306,6 +325,7 @@ class _CopyWithStubImpl$Fragment$ShortsEpisode<TRes>
     String? cursor,
     String? image,
     List<Fragment$BasicStream>? streams,
+    String? originalTitle,
     Fragment$ShortsEpisode$context? context,
     int? duration,
     Fragment$ShortsEpisode$season? season,
