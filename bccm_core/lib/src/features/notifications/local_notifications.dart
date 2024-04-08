@@ -18,7 +18,7 @@ class LocalNotificationService {
   final InitializationSettings settings;
   Stream<NotificationResponse> get stream => _streamController.stream;
 
-  LocalNotificationService(FlutterLocalNotificationsPlugin localNotificationsPlugin, this.settings) {}
+  LocalNotificationService(FlutterLocalNotificationsPlugin localNotificationsPlugin, this.settings);
 
   Future<void> initialize() {
     _setupAndroidChannels();
