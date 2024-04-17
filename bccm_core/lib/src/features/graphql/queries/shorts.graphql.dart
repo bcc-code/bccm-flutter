@@ -1223,10 +1223,12 @@ class Variables$Query$getShorts {
   factory Variables$Query$getShorts({
     String? cursor,
     int? limit,
+    String? initialShortId,
   }) =>
       Variables$Query$getShorts._({
         if (cursor != null) r'cursor': cursor,
         if (limit != null) r'limit': limit,
+        if (initialShortId != null) r'initialShortId': initialShortId,
       });
 
   Variables$Query$getShorts._(this._$data);
@@ -1241,6 +1243,10 @@ class Variables$Query$getShorts {
       final l$limit = data['limit'];
       result$data['limit'] = (l$limit as int?);
     }
+    if (data.containsKey('initialShortId')) {
+      final l$initialShortId = data['initialShortId'];
+      result$data['initialShortId'] = (l$initialShortId as String?);
+    }
     return Variables$Query$getShorts._(result$data);
   }
 
@@ -1249,6 +1255,8 @@ class Variables$Query$getShorts {
   String? get cursor => (_$data['cursor'] as String?);
 
   int? get limit => (_$data['limit'] as int?);
+
+  String? get initialShortId => (_$data['initialShortId'] as String?);
 
   Map<String, dynamic> toJson() {
     final result$data = <String, dynamic>{};
@@ -1259,6 +1267,10 @@ class Variables$Query$getShorts {
     if (_$data.containsKey('limit')) {
       final l$limit = limit;
       result$data['limit'] = l$limit;
+    }
+    if (_$data.containsKey('initialShortId')) {
+      final l$initialShortId = initialShortId;
+      result$data['initialShortId'] = l$initialShortId;
     }
     return result$data;
   }
@@ -1294,6 +1306,15 @@ class Variables$Query$getShorts {
     if (l$limit != lOther$limit) {
       return false;
     }
+    final l$initialShortId = initialShortId;
+    final lOther$initialShortId = other.initialShortId;
+    if (_$data.containsKey('initialShortId') !=
+        other._$data.containsKey('initialShortId')) {
+      return false;
+    }
+    if (l$initialShortId != lOther$initialShortId) {
+      return false;
+    }
     return true;
   }
 
@@ -1301,9 +1322,11 @@ class Variables$Query$getShorts {
   int get hashCode {
     final l$cursor = cursor;
     final l$limit = limit;
+    final l$initialShortId = initialShortId;
     return Object.hashAll([
       _$data.containsKey('cursor') ? l$cursor : const {},
       _$data.containsKey('limit') ? l$limit : const {},
+      _$data.containsKey('initialShortId') ? l$initialShortId : const {},
     ]);
   }
 }
@@ -1320,6 +1343,7 @@ abstract class CopyWith$Variables$Query$getShorts<TRes> {
   TRes call({
     String? cursor,
     int? limit,
+    String? initialShortId,
   });
 }
 
@@ -1339,11 +1363,14 @@ class _CopyWithImpl$Variables$Query$getShorts<TRes>
   TRes call({
     Object? cursor = _undefined,
     Object? limit = _undefined,
+    Object? initialShortId = _undefined,
   }) =>
       _then(Variables$Query$getShorts._({
         ..._instance._$data,
         if (cursor != _undefined) 'cursor': (cursor as String?),
         if (limit != _undefined) 'limit': (limit as int?),
+        if (initialShortId != _undefined)
+          'initialShortId': (initialShortId as String?),
       }));
 }
 
@@ -1356,6 +1383,7 @@ class _CopyWithStubImpl$Variables$Query$getShorts<TRes>
   call({
     String? cursor,
     int? limit,
+    String? initialShortId,
   }) =>
       _res;
 }
@@ -1517,6 +1545,15 @@ const documentNodeQuerygetShorts = DocumentNode(definitions: [
         defaultValue: DefaultValueNode(value: null),
         directives: [],
       ),
+      VariableDefinitionNode(
+        variable: VariableNode(name: NameNode(value: 'initialShortId')),
+        type: NamedTypeNode(
+          name: NameNode(value: 'UUID'),
+          isNonNull: false,
+        ),
+        defaultValue: DefaultValueNode(value: null),
+        directives: [],
+      ),
     ],
     directives: [],
     selectionSet: SelectionSetNode(selections: [
@@ -1531,6 +1568,10 @@ const documentNodeQuerygetShorts = DocumentNode(definitions: [
           ArgumentNode(
             name: NameNode(value: 'limit'),
             value: VariableNode(name: NameNode(value: 'limit')),
+          ),
+          ArgumentNode(
+            name: NameNode(value: 'initialShortId'),
+            value: VariableNode(name: NameNode(value: 'initialShortId')),
           ),
         ],
         directives: [],

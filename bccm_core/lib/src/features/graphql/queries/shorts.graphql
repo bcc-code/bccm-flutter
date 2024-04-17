@@ -26,8 +26,8 @@ fragment Short on Short {
   ...PlayableMediaItemShort
 }
 
-query getShorts($cursor: String, $limit: Int) {
-  shorts(cursor: $cursor, limit: $limit) {
+query getShorts($cursor: String, $limit: Int, $initialShortId: UUID) {
+  shorts(cursor: $cursor, limit: $limit, initialShortId: $initialShortId) {
     cursor
     nextCursor
     shorts {
