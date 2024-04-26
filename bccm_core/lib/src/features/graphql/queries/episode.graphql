@@ -192,3 +192,13 @@ query getEpisodeAvailability($episodeId: ID!) {
     ...EpisodeAvailability
   }
 }
+
+fragment EpisodeListEpisode on Episode {
+  ...SeasonListEpisode
+  progress
+  season {
+    show {
+      title
+    }
+  }
+}

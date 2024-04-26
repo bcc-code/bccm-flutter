@@ -981,6 +981,9 @@ class Query$KidsPage$page$sections$items {
       case "LabelSection":
         return Query$KidsPage$page$sections$items$$LabelSection.fromJson(json);
 
+      case "AvatarSection":
+        return Query$KidsPage$page$sections$items$$AvatarSection.fromJson(json);
+
       case "MessageSection":
         return Query$KidsPage$page$sections$items$$MessageSection.fromJson(
             json);
@@ -1067,6 +1070,8 @@ extension UtilityExtension$Query$KidsPage$page$sections$items
         iconSection,
     required _T Function(Query$KidsPage$page$sections$items$$LabelSection)
         labelSection,
+    required _T Function(Query$KidsPage$page$sections$items$$AvatarSection)
+        avatarSection,
     required _T Function(Query$KidsPage$page$sections$items$$MessageSection)
         messageSection,
     required _T Function(Query$KidsPage$page$sections$items$$WebSection)
@@ -1122,6 +1127,10 @@ extension UtilityExtension$Query$KidsPage$page$sections$items
         return labelSection(
             this as Query$KidsPage$page$sections$items$$LabelSection);
 
+      case "AvatarSection":
+        return avatarSection(
+            this as Query$KidsPage$page$sections$items$$AvatarSection);
+
       case "MessageSection":
         return messageSection(
             this as Query$KidsPage$page$sections$items$$MessageSection);
@@ -1162,6 +1171,8 @@ extension UtilityExtension$Query$KidsPage$page$sections$items
         iconGridSection,
     _T Function(Query$KidsPage$page$sections$items$$IconSection)? iconSection,
     _T Function(Query$KidsPage$page$sections$items$$LabelSection)? labelSection,
+    _T Function(Query$KidsPage$page$sections$items$$AvatarSection)?
+        avatarSection,
     _T Function(Query$KidsPage$page$sections$items$$MessageSection)?
         messageSection,
     _T Function(Query$KidsPage$page$sections$items$$WebSection)? webSection,
@@ -1256,6 +1267,14 @@ extension UtilityExtension$Query$KidsPage$page$sections$items
         if (labelSection != null) {
           return labelSection(
               this as Query$KidsPage$page$sections$items$$LabelSection);
+        } else {
+          return orElse();
+        }
+
+      case "AvatarSection":
+        if (avatarSection != null) {
+          return avatarSection(
+              this as Query$KidsPage$page$sections$items$$AvatarSection);
         } else {
           return orElse();
         }
@@ -1909,6 +1928,10 @@ class Query$KidsPage$page$sections$items$$CardSection$items$items$item {
         return Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Short
             .fromJson(json);
 
+      case "Person":
+        return Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Person
+            .fromJson(json);
+
       default:
         final l$$__typename = json['__typename'];
         return Query$KidsPage$page$sections$items$$CardSection$items$items$item(
@@ -1987,6 +2010,9 @@ extension UtilityExtension$Query$KidsPage$page$sections$items$$CardSection$items
     required _T Function(
             Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Short)
         short,
+    required _T Function(
+            Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Person)
+        person,
     required _T Function() orElse,
   }) {
     switch ($__typename) {
@@ -2026,6 +2052,10 @@ extension UtilityExtension$Query$KidsPage$page$sections$items$$CardSection$items
         return short(this
             as Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Short);
 
+      case "Person":
+        return person(this
+            as Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Person);
+
       default:
         return orElse();
     }
@@ -2059,6 +2089,9 @@ extension UtilityExtension$Query$KidsPage$page$sections$items$$CardSection$items
     _T Function(
             Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Short)?
         short,
+    _T Function(
+            Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Person)?
+        person,
     required _T Function() orElse,
   }) {
     switch ($__typename) {
@@ -2130,6 +2163,14 @@ extension UtilityExtension$Query$KidsPage$page$sections$items$$CardSection$items
         if (short != null) {
           return short(this
               as Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Short);
+        } else {
+          return orElse();
+        }
+
+      case "Person":
+        if (person != null) {
+          return person(this
+              as Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Person);
         } else {
           return orElse();
         }
@@ -3253,6 +3294,120 @@ class _CopyWithStubImpl$Query$KidsPage$page$sections$items$$CardSection$items$it
   call({String? $__typename}) => _res;
 }
 
+class Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Person
+    implements
+        Query$KidsPage$page$sections$items$$CardSection$items$items$item {
+  Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Person(
+      {this.$__typename = 'Person'});
+
+  factory Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Person.fromJson(
+      Map<String, dynamic> json) {
+    final l$$__typename = json['__typename'];
+    return Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Person(
+        $__typename: (l$$__typename as String));
+  }
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$$__typename = $__typename;
+    return Object.hashAll([l$$__typename]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Person) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Person
+    on Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Person {
+  CopyWith$Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Person<
+          Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Person>
+      get copyWith =>
+          CopyWith$Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Person(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Person<
+    TRes> {
+  factory CopyWith$Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Person(
+    Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Person
+        instance,
+    TRes Function(
+            Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Person)
+        then,
+  ) = _CopyWithImpl$Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Person;
+
+  factory CopyWith$Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Person.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Person;
+
+  TRes call({String? $__typename});
+}
+
+class _CopyWithImpl$Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Person<
+        TRes>
+    implements
+        CopyWith$Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Person<
+            TRes> {
+  _CopyWithImpl$Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Person(
+    this._instance,
+    this._then,
+  );
+
+  final Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Person
+      _instance;
+
+  final TRes Function(
+          Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Person)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({Object? $__typename = _undefined}) => _then(
+      Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Person(
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String)));
+}
+
+class _CopyWithStubImpl$Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Person<
+        TRes>
+    implements
+        CopyWith$Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Person<
+            TRes> {
+  _CopyWithStubImpl$Query$KidsPage$page$sections$items$$CardSection$items$items$item$$Person(
+      this._res);
+
+  TRes _res;
+
+  call({String? $__typename}) => _res;
+}
+
 class Query$KidsPage$page$sections$items$$PosterSection
     implements Query$KidsPage$page$sections$items {
   Query$KidsPage$page$sections$items$$PosterSection(
@@ -4262,6 +4417,108 @@ class _CopyWithImpl$Query$KidsPage$page$sections$items$$LabelSection<TRes>
 class _CopyWithStubImpl$Query$KidsPage$page$sections$items$$LabelSection<TRes>
     implements CopyWith$Query$KidsPage$page$sections$items$$LabelSection<TRes> {
   _CopyWithStubImpl$Query$KidsPage$page$sections$items$$LabelSection(this._res);
+
+  TRes _res;
+
+  call({String? $__typename}) => _res;
+}
+
+class Query$KidsPage$page$sections$items$$AvatarSection
+    implements Query$KidsPage$page$sections$items {
+  Query$KidsPage$page$sections$items$$AvatarSection(
+      {this.$__typename = 'AvatarSection'});
+
+  factory Query$KidsPage$page$sections$items$$AvatarSection.fromJson(
+      Map<String, dynamic> json) {
+    final l$$__typename = json['__typename'];
+    return Query$KidsPage$page$sections$items$$AvatarSection(
+        $__typename: (l$$__typename as String));
+  }
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$$__typename = $__typename;
+    return Object.hashAll([l$$__typename]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Query$KidsPage$page$sections$items$$AvatarSection) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$KidsPage$page$sections$items$$AvatarSection
+    on Query$KidsPage$page$sections$items$$AvatarSection {
+  CopyWith$Query$KidsPage$page$sections$items$$AvatarSection<
+          Query$KidsPage$page$sections$items$$AvatarSection>
+      get copyWith =>
+          CopyWith$Query$KidsPage$page$sections$items$$AvatarSection(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$KidsPage$page$sections$items$$AvatarSection<
+    TRes> {
+  factory CopyWith$Query$KidsPage$page$sections$items$$AvatarSection(
+    Query$KidsPage$page$sections$items$$AvatarSection instance,
+    TRes Function(Query$KidsPage$page$sections$items$$AvatarSection) then,
+  ) = _CopyWithImpl$Query$KidsPage$page$sections$items$$AvatarSection;
+
+  factory CopyWith$Query$KidsPage$page$sections$items$$AvatarSection.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$KidsPage$page$sections$items$$AvatarSection;
+
+  TRes call({String? $__typename});
+}
+
+class _CopyWithImpl$Query$KidsPage$page$sections$items$$AvatarSection<TRes>
+    implements
+        CopyWith$Query$KidsPage$page$sections$items$$AvatarSection<TRes> {
+  _CopyWithImpl$Query$KidsPage$page$sections$items$$AvatarSection(
+    this._instance,
+    this._then,
+  );
+
+  final Query$KidsPage$page$sections$items$$AvatarSection _instance;
+
+  final TRes Function(Query$KidsPage$page$sections$items$$AvatarSection) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({Object? $__typename = _undefined}) =>
+      _then(Query$KidsPage$page$sections$items$$AvatarSection(
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String)));
+}
+
+class _CopyWithStubImpl$Query$KidsPage$page$sections$items$$AvatarSection<TRes>
+    implements
+        CopyWith$Query$KidsPage$page$sections$items$$AvatarSection<TRes> {
+  _CopyWithStubImpl$Query$KidsPage$page$sections$items$$AvatarSection(
+      this._res);
 
   TRes _res;
 

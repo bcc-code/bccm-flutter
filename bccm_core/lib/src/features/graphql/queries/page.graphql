@@ -23,6 +23,9 @@ fragment ItemSectionItem on SectionItem {
   title
   image
   item {
+    ... on Person {
+      id
+    }
     ... on Game {
       uuid: id
     }

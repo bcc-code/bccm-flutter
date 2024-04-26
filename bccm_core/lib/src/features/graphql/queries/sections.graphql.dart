@@ -670,6 +670,10 @@ class Query$FetchMoreItemsForItemSection$section implements Fragment$Section {
         return Query$FetchMoreItemsForItemSection$section$$LabelSection
             .fromJson(json);
 
+      case "AvatarSection":
+        return Query$FetchMoreItemsForItemSection$section$$AvatarSection
+            .fromJson(json);
+
       case "WebSection":
         return Query$FetchMoreItemsForItemSection$section$$WebSection.fromJson(
             json);
@@ -810,6 +814,9 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section
     required _T Function(
             Query$FetchMoreItemsForItemSection$section$$LabelSection)
         labelSection,
+    required _T Function(
+            Query$FetchMoreItemsForItemSection$section$$AvatarSection)
+        avatarSection,
     required _T Function(Query$FetchMoreItemsForItemSection$section$$WebSection)
         webSection,
     required _T Function(
@@ -868,6 +875,10 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section
         return labelSection(
             this as Query$FetchMoreItemsForItemSection$section$$LabelSection);
 
+      case "AvatarSection":
+        return avatarSection(
+            this as Query$FetchMoreItemsForItemSection$section$$AvatarSection);
+
       case "WebSection":
         return webSection(
             this as Query$FetchMoreItemsForItemSection$section$$WebSection);
@@ -912,6 +923,8 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section
         iconSection,
     _T Function(Query$FetchMoreItemsForItemSection$section$$LabelSection)?
         labelSection,
+    _T Function(Query$FetchMoreItemsForItemSection$section$$AvatarSection)?
+        avatarSection,
     _T Function(Query$FetchMoreItemsForItemSection$section$$WebSection)?
         webSection,
     _T Function(Query$FetchMoreItemsForItemSection$section$$MessageSection)?
@@ -1007,6 +1020,14 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section
         if (labelSection != null) {
           return labelSection(
               this as Query$FetchMoreItemsForItemSection$section$$LabelSection);
+        } else {
+          return orElse();
+        }
+
+      case "AvatarSection":
+        if (avatarSection != null) {
+          return avatarSection(this
+              as Query$FetchMoreItemsForItemSection$section$$AvatarSection);
         } else {
           return orElse();
         }
@@ -2097,6 +2118,10 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item
   factory Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item.fromJson(
       Map<String, dynamic> json) {
     switch (json["__typename"] as String) {
+      case "Person":
+        return Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Person
+            .fromJson(json);
+
       case "Game":
         return Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Game
             .fromJson(json);
@@ -2185,6 +2210,9 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$PosterSec
           );
   _T when<_T>({
     required _T Function(
+            Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Person)
+        person,
+    required _T Function(
             Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Game)
         game,
     required _T Function(
@@ -2214,6 +2242,10 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$PosterSec
     required _T Function() orElse,
   }) {
     switch ($__typename) {
+      case "Person":
+        return person(this
+            as Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Person);
+
       case "Game":
         return game(this
             as Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Game);
@@ -2257,6 +2289,9 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$PosterSec
 
   _T maybeWhen<_T>({
     _T Function(
+            Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Person)?
+        person,
+    _T Function(
             Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Game)?
         game,
     _T Function(
@@ -2286,6 +2321,14 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$PosterSec
     required _T Function() orElse,
   }) {
     switch ($__typename) {
+      case "Person":
+        if (person != null) {
+          return person(this
+              as Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Person);
+        } else {
+          return orElse();
+        }
+
       case "Game":
         if (game != null) {
           return game(this
@@ -2418,6 +2461,153 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$PosterSectio
   TRes _res;
 
   call({String? $__typename}) => _res;
+}
+
+class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Person
+    implements
+        Fragment$Section$$PosterSection$items$items$item$$Person,
+        Fragment$ItemSectionItem$item$$Person,
+        Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item {
+  Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Person({
+    required this.id,
+    this.$__typename = 'Person',
+  });
+
+  factory Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Person.fromJson(
+      Map<String, dynamic> json) {
+    final l$id = json['id'];
+    final l$$__typename = json['__typename'];
+    return Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Person(
+      id: (l$id as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String id;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$id = id;
+    _resultData['id'] = l$id;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$id = id;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$id,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Person) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$id = id;
+    final lOther$id = other.id;
+    if (l$id != lOther$id) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Person
+    on Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Person {
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Person<
+          Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Person>
+      get copyWith =>
+          CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Person(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Person<
+    TRes> {
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Person(
+    Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Person
+        instance,
+    TRes Function(
+            Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Person)
+        then,
+  ) = _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Person;
+
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Person.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Person;
+
+  TRes call({
+    String? id,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Person<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Person<
+            TRes> {
+  _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Person(
+    this._instance,
+    this._then,
+  );
+
+  final Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Person
+      _instance;
+
+  final TRes Function(
+          Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Person)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? id = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(
+          Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Person(
+        id: id == _undefined || id == null ? _instance.id : (id as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Person<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Person<
+            TRes> {
+  _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Person(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? id,
+    String? $__typename,
+  }) =>
+      _res;
 }
 
 class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Game
@@ -6870,6 +7060,10 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$it
   factory Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item.fromJson(
       Map<String, dynamic> json) {
     switch (json["__typename"] as String) {
+      case "Person":
+        return Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Person
+            .fromJson(json);
+
       case "Game":
         return Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Game
             .fromJson(json);
@@ -6958,6 +7152,9 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$FeaturedS
           );
   _T when<_T>({
     required _T Function(
+            Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Person)
+        person,
+    required _T Function(
             Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Game)
         game,
     required _T Function(
@@ -6987,6 +7184,10 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$FeaturedS
     required _T Function() orElse,
   }) {
     switch ($__typename) {
+      case "Person":
+        return person(this
+            as Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Person);
+
       case "Game":
         return game(this
             as Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Game);
@@ -7030,6 +7231,9 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$FeaturedS
 
   _T maybeWhen<_T>({
     _T Function(
+            Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Person)?
+        person,
+    _T Function(
             Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Game)?
         game,
     _T Function(
@@ -7059,6 +7263,14 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$FeaturedS
     required _T Function() orElse,
   }) {
     switch ($__typename) {
+      case "Person":
+        if (person != null) {
+          return person(this
+              as Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Person);
+        } else {
+          return orElse();
+        }
+
       case "Game":
         if (game != null) {
           return game(this
@@ -7191,6 +7403,153 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$FeaturedSect
   TRes _res;
 
   call({String? $__typename}) => _res;
+}
+
+class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Person
+    implements
+        Fragment$Section$$FeaturedSection$items$items$item$$Person,
+        Fragment$ItemSectionItem$item$$Person,
+        Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item {
+  Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Person({
+    required this.id,
+    this.$__typename = 'Person',
+  });
+
+  factory Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Person.fromJson(
+      Map<String, dynamic> json) {
+    final l$id = json['id'];
+    final l$$__typename = json['__typename'];
+    return Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Person(
+      id: (l$id as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String id;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$id = id;
+    _resultData['id'] = l$id;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$id = id;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$id,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Person) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$id = id;
+    final lOther$id = other.id;
+    if (l$id != lOther$id) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Person
+    on Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Person {
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Person<
+          Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Person>
+      get copyWith =>
+          CopyWith$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Person(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Person<
+    TRes> {
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Person(
+    Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Person
+        instance,
+    TRes Function(
+            Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Person)
+        then,
+  ) = _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Person;
+
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Person.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Person;
+
+  TRes call({
+    String? id,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Person<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Person<
+            TRes> {
+  _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Person(
+    this._instance,
+    this._then,
+  );
+
+  final Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Person
+      _instance;
+
+  final TRes Function(
+          Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Person)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? id = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(
+          Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Person(
+        id: id == _undefined || id == null ? _instance.id : (id as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Person<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Person<
+            TRes> {
+  _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Person(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? id,
+    String? $__typename,
+  }) =>
+      _res;
 }
 
 class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Game
@@ -10115,6 +10474,10 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$ite
   factory Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item.fromJson(
       Map<String, dynamic> json) {
     switch (json["__typename"] as String) {
+      case "Person":
+        return Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Person
+            .fromJson(json);
+
       case "Game":
         return Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Game
             .fromJson(json);
@@ -10203,6 +10566,9 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$DefaultSe
           );
   _T when<_T>({
     required _T Function(
+            Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Person)
+        person,
+    required _T Function(
             Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Game)
         game,
     required _T Function(
@@ -10232,6 +10598,10 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$DefaultSe
     required _T Function() orElse,
   }) {
     switch ($__typename) {
+      case "Person":
+        return person(this
+            as Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Person);
+
       case "Game":
         return game(this
             as Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Game);
@@ -10275,6 +10645,9 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$DefaultSe
 
   _T maybeWhen<_T>({
     _T Function(
+            Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Person)?
+        person,
+    _T Function(
             Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Game)?
         game,
     _T Function(
@@ -10304,6 +10677,14 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$DefaultSe
     required _T Function() orElse,
   }) {
     switch ($__typename) {
+      case "Person":
+        if (person != null) {
+          return person(this
+              as Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Person);
+        } else {
+          return orElse();
+        }
+
       case "Game":
         if (game != null) {
           return game(this
@@ -10436,6 +10817,153 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$DefaultSecti
   TRes _res;
 
   call({String? $__typename}) => _res;
+}
+
+class Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Person
+    implements
+        Fragment$Section$$DefaultSection$items$items$item$$Person,
+        Fragment$ItemSectionItem$item$$Person,
+        Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item {
+  Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Person({
+    required this.id,
+    this.$__typename = 'Person',
+  });
+
+  factory Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Person.fromJson(
+      Map<String, dynamic> json) {
+    final l$id = json['id'];
+    final l$$__typename = json['__typename'];
+    return Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Person(
+      id: (l$id as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String id;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$id = id;
+    _resultData['id'] = l$id;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$id = id;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$id,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Person) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$id = id;
+    final lOther$id = other.id;
+    if (l$id != lOther$id) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Person
+    on Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Person {
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Person<
+          Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Person>
+      get copyWith =>
+          CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Person(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Person<
+    TRes> {
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Person(
+    Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Person
+        instance,
+    TRes Function(
+            Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Person)
+        then,
+  ) = _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Person;
+
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Person.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Person;
+
+  TRes call({
+    String? id,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Person<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Person<
+            TRes> {
+  _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Person(
+    this._instance,
+    this._then,
+  );
+
+  final Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Person
+      _instance;
+
+  final TRes Function(
+          Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Person)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? id = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(
+          Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Person(
+        id: id == _undefined || id == null ? _instance.id : (id as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Person<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Person<
+            TRes> {
+  _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Person(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? id,
+    String? $__typename,
+  }) =>
+      _res;
 }
 
 class Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Game
@@ -13388,6 +13916,10 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item
   factory Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item.fromJson(
       Map<String, dynamic> json) {
     switch (json["__typename"] as String) {
+      case "Person":
+        return Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Person
+            .fromJson(json);
+
       case "Game":
         return Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Game
             .fromJson(json);
@@ -13476,6 +14008,9 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$CardSecti
           );
   _T when<_T>({
     required _T Function(
+            Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Person)
+        person,
+    required _T Function(
             Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Game)
         game,
     required _T Function(
@@ -13505,6 +14040,10 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$CardSecti
     required _T Function() orElse,
   }) {
     switch ($__typename) {
+      case "Person":
+        return person(this
+            as Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Person);
+
       case "Game":
         return game(this
             as Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Game);
@@ -13548,6 +14087,9 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$CardSecti
 
   _T maybeWhen<_T>({
     _T Function(
+            Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Person)?
+        person,
+    _T Function(
             Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Game)?
         game,
     _T Function(
@@ -13577,6 +14119,14 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$CardSecti
     required _T Function() orElse,
   }) {
     switch ($__typename) {
+      case "Person":
+        if (person != null) {
+          return person(this
+              as Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Person);
+        } else {
+          return orElse();
+        }
+
       case "Game":
         if (game != null) {
           return game(this
@@ -13709,6 +14259,153 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$CardSection$
   TRes _res;
 
   call({String? $__typename}) => _res;
+}
+
+class Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Person
+    implements
+        Fragment$Section$$CardSection$items$items$item$$Person,
+        Fragment$ItemSectionItem$item$$Person,
+        Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item {
+  Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Person({
+    required this.id,
+    this.$__typename = 'Person',
+  });
+
+  factory Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Person.fromJson(
+      Map<String, dynamic> json) {
+    final l$id = json['id'];
+    final l$$__typename = json['__typename'];
+    return Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Person(
+      id: (l$id as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String id;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$id = id;
+    _resultData['id'] = l$id;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$id = id;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$id,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Person) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$id = id;
+    final lOther$id = other.id;
+    if (l$id != lOther$id) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Person
+    on Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Person {
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Person<
+          Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Person>
+      get copyWith =>
+          CopyWith$Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Person(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Person<
+    TRes> {
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Person(
+    Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Person
+        instance,
+    TRes Function(
+            Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Person)
+        then,
+  ) = _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Person;
+
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Person.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Person;
+
+  TRes call({
+    String? id,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Person<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Person<
+            TRes> {
+  _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Person(
+    this._instance,
+    this._then,
+  );
+
+  final Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Person
+      _instance;
+
+  final TRes Function(
+          Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Person)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? id = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(
+          Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Person(
+        id: id == _undefined || id == null ? _instance.id : (id as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Person<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Person<
+            TRes> {
+  _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Person(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? id,
+    String? $__typename,
+  }) =>
+      _res;
 }
 
 class Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Game
@@ -16771,6 +17468,10 @@ class Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item
   factory Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item.fromJson(
       Map<String, dynamic> json) {
     switch (json["__typename"] as String) {
+      case "Person":
+        return Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Person
+            .fromJson(json);
+
       case "Game":
         return Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Game
             .fromJson(json);
@@ -16859,6 +17560,9 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$ListSecti
           );
   _T when<_T>({
     required _T Function(
+            Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Person)
+        person,
+    required _T Function(
             Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Game)
         game,
     required _T Function(
@@ -16888,6 +17592,10 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$ListSecti
     required _T Function() orElse,
   }) {
     switch ($__typename) {
+      case "Person":
+        return person(this
+            as Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Person);
+
       case "Game":
         return game(this
             as Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Game);
@@ -16931,6 +17639,9 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$ListSecti
 
   _T maybeWhen<_T>({
     _T Function(
+            Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Person)?
+        person,
+    _T Function(
             Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Game)?
         game,
     _T Function(
@@ -16960,6 +17671,14 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$ListSecti
     required _T Function() orElse,
   }) {
     switch ($__typename) {
+      case "Person":
+        if (person != null) {
+          return person(this
+              as Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Person);
+        } else {
+          return orElse();
+        }
+
       case "Game":
         if (game != null) {
           return game(this
@@ -17092,6 +17811,153 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$ListSection$
   TRes _res;
 
   call({String? $__typename}) => _res;
+}
+
+class Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Person
+    implements
+        Fragment$Section$$ListSection$items$items$item$$Person,
+        Fragment$ItemSectionItem$item$$Person,
+        Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item {
+  Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Person({
+    required this.id,
+    this.$__typename = 'Person',
+  });
+
+  factory Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Person.fromJson(
+      Map<String, dynamic> json) {
+    final l$id = json['id'];
+    final l$$__typename = json['__typename'];
+    return Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Person(
+      id: (l$id as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String id;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$id = id;
+    _resultData['id'] = l$id;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$id = id;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$id,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Person) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$id = id;
+    final lOther$id = other.id;
+    if (l$id != lOther$id) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Person
+    on Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Person {
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Person<
+          Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Person>
+      get copyWith =>
+          CopyWith$Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Person(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Person<
+    TRes> {
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Person(
+    Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Person
+        instance,
+    TRes Function(
+            Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Person)
+        then,
+  ) = _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Person;
+
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Person.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Person;
+
+  TRes call({
+    String? id,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Person<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Person<
+            TRes> {
+  _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Person(
+    this._instance,
+    this._then,
+  );
+
+  final Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Person
+      _instance;
+
+  final TRes Function(
+          Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Person)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? id = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(
+          Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Person(
+        id: id == _undefined || id == null ? _instance.id : (id as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Person<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Person<
+            TRes> {
+  _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Person(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? id,
+    String? $__typename,
+  }) =>
+      _res;
 }
 
 class Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Game
@@ -20814,6 +21680,10 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items
   factory Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item.fromJson(
       Map<String, dynamic> json) {
     switch (json["__typename"] as String) {
+      case "Person":
+        return Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Person
+            .fromJson(json);
+
       case "Game":
         return Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Game
             .fromJson(json);
@@ -20902,6 +21772,9 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$DefaultGr
           );
   _T when<_T>({
     required _T Function(
+            Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Person)
+        person,
+    required _T Function(
             Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Game)
         game,
     required _T Function(
@@ -20931,6 +21804,10 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$DefaultGr
     required _T Function() orElse,
   }) {
     switch ($__typename) {
+      case "Person":
+        return person(this
+            as Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Person);
+
       case "Game":
         return game(this
             as Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Game);
@@ -20974,6 +21851,9 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$DefaultGr
 
   _T maybeWhen<_T>({
     _T Function(
+            Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Person)?
+        person,
+    _T Function(
             Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Game)?
         game,
     _T Function(
@@ -21003,6 +21883,14 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$DefaultGr
     required _T Function() orElse,
   }) {
     switch ($__typename) {
+      case "Person":
+        if (person != null) {
+          return person(this
+              as Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Person);
+        } else {
+          return orElse();
+        }
+
       case "Game":
         if (game != null) {
           return game(this
@@ -21135,6 +22023,154 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$DefaultGridS
   TRes _res;
 
   call({String? $__typename}) => _res;
+}
+
+class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Person
+    implements
+        Fragment$Section$$DefaultGridSection$items$items$item$$Person,
+        Fragment$ItemSectionItem$item$$Person,
+        Fragment$GridSectionItem$item$$Person,
+        Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item {
+  Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Person({
+    required this.id,
+    this.$__typename = 'Person',
+  });
+
+  factory Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Person.fromJson(
+      Map<String, dynamic> json) {
+    final l$id = json['id'];
+    final l$$__typename = json['__typename'];
+    return Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Person(
+      id: (l$id as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String id;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$id = id;
+    _resultData['id'] = l$id;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$id = id;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$id,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Person) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$id = id;
+    final lOther$id = other.id;
+    if (l$id != lOther$id) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Person
+    on Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Person {
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Person<
+          Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Person>
+      get copyWith =>
+          CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Person(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Person<
+    TRes> {
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Person(
+    Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Person
+        instance,
+    TRes Function(
+            Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Person)
+        then,
+  ) = _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Person;
+
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Person.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Person;
+
+  TRes call({
+    String? id,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Person<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Person<
+            TRes> {
+  _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Person(
+    this._instance,
+    this._then,
+  );
+
+  final Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Person
+      _instance;
+
+  final TRes Function(
+          Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Person)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? id = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(
+          Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Person(
+        id: id == _undefined || id == null ? _instance.id : (id as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Person<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Person<
+            TRes> {
+  _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Person(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? id,
+    String? $__typename,
+  }) =>
+      _res;
 }
 
 class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Game
@@ -24117,6 +25153,10 @@ class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$
   factory Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item.fromJson(
       Map<String, dynamic> json) {
     switch (json["__typename"] as String) {
+      case "Person":
+        return Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Person
+            .fromJson(json);
+
       case "Game":
         return Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Game
             .fromJson(json);
@@ -24205,6 +25245,9 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$PosterGri
           );
   _T when<_T>({
     required _T Function(
+            Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Person)
+        person,
+    required _T Function(
             Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Game)
         game,
     required _T Function(
@@ -24234,6 +25277,10 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$PosterGri
     required _T Function() orElse,
   }) {
     switch ($__typename) {
+      case "Person":
+        return person(this
+            as Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Person);
+
       case "Game":
         return game(this
             as Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Game);
@@ -24277,6 +25324,9 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$PosterGri
 
   _T maybeWhen<_T>({
     _T Function(
+            Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Person)?
+        person,
+    _T Function(
             Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Game)?
         game,
     _T Function(
@@ -24306,6 +25356,14 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$PosterGri
     required _T Function() orElse,
   }) {
     switch ($__typename) {
+      case "Person":
+        if (person != null) {
+          return person(this
+              as Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Person);
+        } else {
+          return orElse();
+        }
+
       case "Game":
         if (game != null) {
           return game(this
@@ -24438,6 +25496,154 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$PosterGridSe
   TRes _res;
 
   call({String? $__typename}) => _res;
+}
+
+class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Person
+    implements
+        Fragment$Section$$PosterGridSection$items$items$item$$Person,
+        Fragment$ItemSectionItem$item$$Person,
+        Fragment$GridSectionItem$item$$Person,
+        Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item {
+  Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Person({
+    required this.id,
+    this.$__typename = 'Person',
+  });
+
+  factory Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Person.fromJson(
+      Map<String, dynamic> json) {
+    final l$id = json['id'];
+    final l$$__typename = json['__typename'];
+    return Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Person(
+      id: (l$id as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String id;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$id = id;
+    _resultData['id'] = l$id;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$id = id;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$id,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Person) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$id = id;
+    final lOther$id = other.id;
+    if (l$id != lOther$id) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Person
+    on Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Person {
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Person<
+          Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Person>
+      get copyWith =>
+          CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Person(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Person<
+    TRes> {
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Person(
+    Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Person
+        instance,
+    TRes Function(
+            Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Person)
+        then,
+  ) = _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Person;
+
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Person.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Person;
+
+  TRes call({
+    String? id,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Person<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Person<
+            TRes> {
+  _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Person(
+    this._instance,
+    this._then,
+  );
+
+  final Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Person
+      _instance;
+
+  final TRes Function(
+          Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Person)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? id = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(
+          Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Person(
+        id: id == _undefined || id == null ? _instance.id : (id as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Person<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Person<
+            TRes> {
+  _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Person(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? id,
+    String? $__typename,
+  }) =>
+      _res;
 }
 
 class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Game
@@ -27417,6 +28623,10 @@ class Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$it
   factory Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item.fromJson(
       Map<String, dynamic> json) {
     switch (json["__typename"] as String) {
+      case "Person":
+        return Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Person
+            .fromJson(json);
+
       case "Game":
         return Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Game
             .fromJson(json);
@@ -27505,6 +28715,9 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$IconGridS
           );
   _T when<_T>({
     required _T Function(
+            Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Person)
+        person,
+    required _T Function(
             Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Game)
         game,
     required _T Function(
@@ -27534,6 +28747,10 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$IconGridS
     required _T Function() orElse,
   }) {
     switch ($__typename) {
+      case "Person":
+        return person(this
+            as Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Person);
+
       case "Game":
         return game(this
             as Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Game);
@@ -27577,6 +28794,9 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$IconGridS
 
   _T maybeWhen<_T>({
     _T Function(
+            Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Person)?
+        person,
+    _T Function(
             Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Game)?
         game,
     _T Function(
@@ -27606,6 +28826,14 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$IconGridS
     required _T Function() orElse,
   }) {
     switch ($__typename) {
+      case "Person":
+        if (person != null) {
+          return person(this
+              as Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Person);
+        } else {
+          return orElse();
+        }
+
       case "Game":
         if (game != null) {
           return game(this
@@ -27738,6 +28966,154 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$IconGridSect
   TRes _res;
 
   call({String? $__typename}) => _res;
+}
+
+class Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Person
+    implements
+        Fragment$Section$$IconGridSection$items$items$item$$Person,
+        Fragment$ItemSectionItem$item$$Person,
+        Fragment$GridSectionItem$item$$Person,
+        Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item {
+  Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Person({
+    required this.id,
+    this.$__typename = 'Person',
+  });
+
+  factory Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Person.fromJson(
+      Map<String, dynamic> json) {
+    final l$id = json['id'];
+    final l$$__typename = json['__typename'];
+    return Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Person(
+      id: (l$id as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String id;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$id = id;
+    _resultData['id'] = l$id;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$id = id;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$id,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Person) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$id = id;
+    final lOther$id = other.id;
+    if (l$id != lOther$id) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Person
+    on Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Person {
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Person<
+          Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Person>
+      get copyWith =>
+          CopyWith$Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Person(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Person<
+    TRes> {
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Person(
+    Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Person
+        instance,
+    TRes Function(
+            Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Person)
+        then,
+  ) = _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Person;
+
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Person.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Person;
+
+  TRes call({
+    String? id,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Person<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Person<
+            TRes> {
+  _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Person(
+    this._instance,
+    this._then,
+  );
+
+  final Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Person
+      _instance;
+
+  final TRes Function(
+          Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Person)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? id = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(
+          Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Person(
+        id: id == _undefined || id == null ? _instance.id : (id as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Person<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Person<
+            TRes> {
+  _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Person(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? id,
+    String? $__typename,
+  }) =>
+      _res;
 }
 
 class Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Game
@@ -31160,6 +32536,729 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$LabelSection
   items(_fn) => _res;
 }
 
+class Query$FetchMoreItemsForItemSection$section$$AvatarSection
+    implements
+        Fragment$Section$$AvatarSection,
+        Fragment$ItemSection$$AvatarSection,
+        Query$FetchMoreItemsForItemSection$section {
+  Query$FetchMoreItemsForItemSection$section$$AvatarSection({
+    this.metadata,
+    required this.items,
+    this.$__typename = 'AvatarSection',
+    required this.id,
+    this.title,
+    this.description,
+  });
+
+  factory Query$FetchMoreItemsForItemSection$section$$AvatarSection.fromJson(
+      Map<String, dynamic> json) {
+    final l$metadata = json['metadata'];
+    final l$items = json['items'];
+    final l$$__typename = json['__typename'];
+    final l$id = json['id'];
+    final l$title = json['title'];
+    final l$description = json['description'];
+    return Query$FetchMoreItemsForItemSection$section$$AvatarSection(
+      metadata: l$metadata == null
+          ? null
+          : Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata
+              .fromJson((l$metadata as Map<String, dynamic>)),
+      items: Query$FetchMoreItemsForItemSection$section$$AvatarSection$items
+          .fromJson((l$items as Map<String, dynamic>)),
+      $__typename: (l$$__typename as String),
+      id: (l$id as String),
+      title: (l$title as String?),
+      description: (l$description as String?),
+    );
+  }
+
+  final Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata?
+      metadata;
+
+  final Query$FetchMoreItemsForItemSection$section$$AvatarSection$items items;
+
+  final String $__typename;
+
+  final String id;
+
+  final String? title;
+
+  final String? description;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$metadata = metadata;
+    _resultData['metadata'] = l$metadata?.toJson();
+    final l$items = items;
+    _resultData['items'] = l$items.toJson();
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    final l$id = id;
+    _resultData['id'] = l$id;
+    final l$title = title;
+    _resultData['title'] = l$title;
+    final l$description = description;
+    _resultData['description'] = l$description;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$metadata = metadata;
+    final l$items = items;
+    final l$$__typename = $__typename;
+    final l$id = id;
+    final l$title = title;
+    final l$description = description;
+    return Object.hashAll([
+      l$metadata,
+      l$items,
+      l$$__typename,
+      l$id,
+      l$title,
+      l$description,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Query$FetchMoreItemsForItemSection$section$$AvatarSection) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$metadata = metadata;
+    final lOther$metadata = other.metadata;
+    if (l$metadata != lOther$metadata) {
+      return false;
+    }
+    final l$items = items;
+    final lOther$items = other.items;
+    if (l$items != lOther$items) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    final l$id = id;
+    final lOther$id = other.id;
+    if (l$id != lOther$id) {
+      return false;
+    }
+    final l$title = title;
+    final lOther$title = other.title;
+    if (l$title != lOther$title) {
+      return false;
+    }
+    final l$description = description;
+    final lOther$description = other.description;
+    if (l$description != lOther$description) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$AvatarSection
+    on Query$FetchMoreItemsForItemSection$section$$AvatarSection {
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$AvatarSection<
+          Query$FetchMoreItemsForItemSection$section$$AvatarSection>
+      get copyWith =>
+          CopyWith$Query$FetchMoreItemsForItemSection$section$$AvatarSection(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$AvatarSection<
+    TRes> {
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$AvatarSection(
+    Query$FetchMoreItemsForItemSection$section$$AvatarSection instance,
+    TRes Function(Query$FetchMoreItemsForItemSection$section$$AvatarSection)
+        then,
+  ) = _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$AvatarSection;
+
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$AvatarSection.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$AvatarSection;
+
+  TRes call({
+    Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata?
+        metadata,
+    Query$FetchMoreItemsForItemSection$section$$AvatarSection$items? items,
+    String? $__typename,
+    String? id,
+    String? title,
+    String? description,
+  });
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata<
+      TRes> get metadata;
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$AvatarSection$items<TRes>
+      get items;
+}
+
+class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$AvatarSection<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$AvatarSection<
+            TRes> {
+  _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$AvatarSection(
+    this._instance,
+    this._then,
+  );
+
+  final Query$FetchMoreItemsForItemSection$section$$AvatarSection _instance;
+
+  final TRes Function(Query$FetchMoreItemsForItemSection$section$$AvatarSection)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? metadata = _undefined,
+    Object? items = _undefined,
+    Object? $__typename = _undefined,
+    Object? id = _undefined,
+    Object? title = _undefined,
+    Object? description = _undefined,
+  }) =>
+      _then(Query$FetchMoreItemsForItemSection$section$$AvatarSection(
+        metadata: metadata == _undefined
+            ? _instance.metadata
+            : (metadata
+                as Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata?),
+        items: items == _undefined || items == null
+            ? _instance.items
+            : (items
+                as Query$FetchMoreItemsForItemSection$section$$AvatarSection$items),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+        id: id == _undefined || id == null ? _instance.id : (id as String),
+        title: title == _undefined ? _instance.title : (title as String?),
+        description: description == _undefined
+            ? _instance.description
+            : (description as String?),
+      ));
+
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata<
+      TRes> get metadata {
+    final local$metadata = _instance.metadata;
+    return local$metadata == null
+        ? CopyWith$Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata
+            .stub(_then(_instance))
+        : CopyWith$Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata(
+            local$metadata, (e) => call(metadata: e));
+  }
+
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$AvatarSection$items<TRes>
+      get items {
+    final local$items = _instance.items;
+    return CopyWith$Query$FetchMoreItemsForItemSection$section$$AvatarSection$items(
+        local$items, (e) => call(items: e));
+  }
+}
+
+class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$AvatarSection<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$AvatarSection<
+            TRes> {
+  _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$AvatarSection(
+      this._res);
+
+  TRes _res;
+
+  call({
+    Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata?
+        metadata,
+    Query$FetchMoreItemsForItemSection$section$$AvatarSection$items? items,
+    String? $__typename,
+    String? id,
+    String? title,
+    String? description,
+  }) =>
+      _res;
+
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata<
+          TRes>
+      get metadata =>
+          CopyWith$Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata
+              .stub(_res);
+
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$AvatarSection$items<TRes>
+      get items =>
+          CopyWith$Query$FetchMoreItemsForItemSection$section$$AvatarSection$items
+              .stub(_res);
+}
+
+class Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata
+    implements
+        Fragment$Section$$AvatarSection$metadata,
+        Fragment$ItemSection$$AvatarSection$metadata {
+  Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata({
+    required this.continueWatching,
+    required this.myList,
+    required this.secondaryTitles,
+    required this.collectionId,
+    required this.useContext,
+    required this.prependLiveElement,
+    this.$__typename = 'ItemSectionMetadata',
+  });
+
+  factory Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata.fromJson(
+      Map<String, dynamic> json) {
+    final l$continueWatching = json['continueWatching'];
+    final l$myList = json['myList'];
+    final l$secondaryTitles = json['secondaryTitles'];
+    final l$collectionId = json['collectionId'];
+    final l$useContext = json['useContext'];
+    final l$prependLiveElement = json['prependLiveElement'];
+    final l$$__typename = json['__typename'];
+    return Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata(
+      continueWatching: (l$continueWatching as bool),
+      myList: (l$myList as bool),
+      secondaryTitles: (l$secondaryTitles as bool),
+      collectionId: (l$collectionId as String),
+      useContext: (l$useContext as bool),
+      prependLiveElement: (l$prependLiveElement as bool),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final bool continueWatching;
+
+  final bool myList;
+
+  final bool secondaryTitles;
+
+  final String collectionId;
+
+  final bool useContext;
+
+  final bool prependLiveElement;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$continueWatching = continueWatching;
+    _resultData['continueWatching'] = l$continueWatching;
+    final l$myList = myList;
+    _resultData['myList'] = l$myList;
+    final l$secondaryTitles = secondaryTitles;
+    _resultData['secondaryTitles'] = l$secondaryTitles;
+    final l$collectionId = collectionId;
+    _resultData['collectionId'] = l$collectionId;
+    final l$useContext = useContext;
+    _resultData['useContext'] = l$useContext;
+    final l$prependLiveElement = prependLiveElement;
+    _resultData['prependLiveElement'] = l$prependLiveElement;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$continueWatching = continueWatching;
+    final l$myList = myList;
+    final l$secondaryTitles = secondaryTitles;
+    final l$collectionId = collectionId;
+    final l$useContext = useContext;
+    final l$prependLiveElement = prependLiveElement;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$continueWatching,
+      l$myList,
+      l$secondaryTitles,
+      l$collectionId,
+      l$useContext,
+      l$prependLiveElement,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$continueWatching = continueWatching;
+    final lOther$continueWatching = other.continueWatching;
+    if (l$continueWatching != lOther$continueWatching) {
+      return false;
+    }
+    final l$myList = myList;
+    final lOther$myList = other.myList;
+    if (l$myList != lOther$myList) {
+      return false;
+    }
+    final l$secondaryTitles = secondaryTitles;
+    final lOther$secondaryTitles = other.secondaryTitles;
+    if (l$secondaryTitles != lOther$secondaryTitles) {
+      return false;
+    }
+    final l$collectionId = collectionId;
+    final lOther$collectionId = other.collectionId;
+    if (l$collectionId != lOther$collectionId) {
+      return false;
+    }
+    final l$useContext = useContext;
+    final lOther$useContext = other.useContext;
+    if (l$useContext != lOther$useContext) {
+      return false;
+    }
+    final l$prependLiveElement = prependLiveElement;
+    final lOther$prependLiveElement = other.prependLiveElement;
+    if (l$prependLiveElement != lOther$prependLiveElement) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata
+    on Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata {
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata<
+          Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata>
+      get copyWith =>
+          CopyWith$Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata<
+    TRes> {
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata(
+    Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata instance,
+    TRes Function(
+            Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata)
+        then,
+  ) = _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata;
+
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata;
+
+  TRes call({
+    bool? continueWatching,
+    bool? myList,
+    bool? secondaryTitles,
+    String? collectionId,
+    bool? useContext,
+    bool? prependLiveElement,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata<
+            TRes> {
+  _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata(
+    this._instance,
+    this._then,
+  );
+
+  final Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata
+      _instance;
+
+  final TRes Function(
+      Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? continueWatching = _undefined,
+    Object? myList = _undefined,
+    Object? secondaryTitles = _undefined,
+    Object? collectionId = _undefined,
+    Object? useContext = _undefined,
+    Object? prependLiveElement = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata(
+        continueWatching:
+            continueWatching == _undefined || continueWatching == null
+                ? _instance.continueWatching
+                : (continueWatching as bool),
+        myList: myList == _undefined || myList == null
+            ? _instance.myList
+            : (myList as bool),
+        secondaryTitles:
+            secondaryTitles == _undefined || secondaryTitles == null
+                ? _instance.secondaryTitles
+                : (secondaryTitles as bool),
+        collectionId: collectionId == _undefined || collectionId == null
+            ? _instance.collectionId
+            : (collectionId as String),
+        useContext: useContext == _undefined || useContext == null
+            ? _instance.useContext
+            : (useContext as bool),
+        prependLiveElement:
+            prependLiveElement == _undefined || prependLiveElement == null
+                ? _instance.prependLiveElement
+                : (prependLiveElement as bool),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata<
+            TRes> {
+  _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata(
+      this._res);
+
+  TRes _res;
+
+  call({
+    bool? continueWatching,
+    bool? myList,
+    bool? secondaryTitles,
+    String? collectionId,
+    bool? useContext,
+    bool? prependLiveElement,
+    String? $__typename,
+  }) =>
+      _res;
+}
+
+class Query$FetchMoreItemsForItemSection$section$$AvatarSection$items
+    implements
+        Fragment$Section$$AvatarSection$items,
+        Fragment$ItemSection$$AvatarSection$items {
+  Query$FetchMoreItemsForItemSection$section$$AvatarSection$items({
+    required this.offset,
+    required this.first,
+    required this.items,
+    this.$__typename = 'SectionItemPagination',
+  });
+
+  factory Query$FetchMoreItemsForItemSection$section$$AvatarSection$items.fromJson(
+      Map<String, dynamic> json) {
+    final l$offset = json['offset'];
+    final l$first = json['first'];
+    final l$items = json['items'];
+    final l$$__typename = json['__typename'];
+    return Query$FetchMoreItemsForItemSection$section$$AvatarSection$items(
+      offset: (l$offset as int),
+      first: (l$first as int),
+      items: (l$items as List<dynamic>)
+          .map((e) =>
+              Fragment$ItemSectionItem.fromJson((e as Map<String, dynamic>)))
+          .toList(),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final int offset;
+
+  final int first;
+
+  final List<Fragment$ItemSectionItem> items;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$offset = offset;
+    _resultData['offset'] = l$offset;
+    final l$first = first;
+    _resultData['first'] = l$first;
+    final l$items = items;
+    _resultData['items'] = l$items.map((e) => e.toJson()).toList();
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$offset = offset;
+    final l$first = first;
+    final l$items = items;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$offset,
+      l$first,
+      Object.hashAll(l$items.map((v) => v)),
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Query$FetchMoreItemsForItemSection$section$$AvatarSection$items) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$offset = offset;
+    final lOther$offset = other.offset;
+    if (l$offset != lOther$offset) {
+      return false;
+    }
+    final l$first = first;
+    final lOther$first = other.first;
+    if (l$first != lOther$first) {
+      return false;
+    }
+    final l$items = items;
+    final lOther$items = other.items;
+    if (l$items.length != lOther$items.length) {
+      return false;
+    }
+    for (int i = 0; i < l$items.length; i++) {
+      final l$items$entry = l$items[i];
+      final lOther$items$entry = lOther$items[i];
+      if (l$items$entry != lOther$items$entry) {
+        return false;
+      }
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$AvatarSection$items
+    on Query$FetchMoreItemsForItemSection$section$$AvatarSection$items {
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$AvatarSection$items<
+          Query$FetchMoreItemsForItemSection$section$$AvatarSection$items>
+      get copyWith =>
+          CopyWith$Query$FetchMoreItemsForItemSection$section$$AvatarSection$items(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$AvatarSection$items<
+    TRes> {
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$AvatarSection$items(
+    Query$FetchMoreItemsForItemSection$section$$AvatarSection$items instance,
+    TRes Function(
+            Query$FetchMoreItemsForItemSection$section$$AvatarSection$items)
+        then,
+  ) = _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$AvatarSection$items;
+
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$AvatarSection$items.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$AvatarSection$items;
+
+  TRes call({
+    int? offset,
+    int? first,
+    List<Fragment$ItemSectionItem>? items,
+    String? $__typename,
+  });
+  TRes items(
+      Iterable<Fragment$ItemSectionItem> Function(
+              Iterable<
+                  CopyWith$Fragment$ItemSectionItem<Fragment$ItemSectionItem>>)
+          _fn);
+}
+
+class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$AvatarSection$items<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$AvatarSection$items<
+            TRes> {
+  _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$AvatarSection$items(
+    this._instance,
+    this._then,
+  );
+
+  final Query$FetchMoreItemsForItemSection$section$$AvatarSection$items
+      _instance;
+
+  final TRes Function(
+      Query$FetchMoreItemsForItemSection$section$$AvatarSection$items) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? offset = _undefined,
+    Object? first = _undefined,
+    Object? items = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Query$FetchMoreItemsForItemSection$section$$AvatarSection$items(
+        offset: offset == _undefined || offset == null
+            ? _instance.offset
+            : (offset as int),
+        first: first == _undefined || first == null
+            ? _instance.first
+            : (first as int),
+        items: items == _undefined || items == null
+            ? _instance.items
+            : (items as List<Fragment$ItemSectionItem>),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+
+  TRes items(
+          Iterable<Fragment$ItemSectionItem> Function(
+                  Iterable<
+                      CopyWith$Fragment$ItemSectionItem<
+                          Fragment$ItemSectionItem>>)
+              _fn) =>
+      call(
+          items:
+              _fn(_instance.items.map((e) => CopyWith$Fragment$ItemSectionItem(
+                    e,
+                    (i) => i,
+                  ))).toList());
+}
+
+class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$AvatarSection$items<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$AvatarSection$items<
+            TRes> {
+  _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$AvatarSection$items(
+      this._res);
+
+  TRes _res;
+
+  call({
+    int? offset,
+    int? first,
+    List<Fragment$ItemSectionItem>? items,
+    String? $__typename,
+  }) =>
+      _res;
+
+  items(_fn) => _res;
+}
+
 class Query$FetchMoreItemsForItemSection$section$$WebSection
     implements
         Fragment$Section$$WebSection,
@@ -33316,6 +35415,9 @@ class Query$GetSection$section implements Fragment$Section {
       case "LabelSection":
         return Query$GetSection$section$$LabelSection.fromJson(json);
 
+      case "AvatarSection":
+        return Query$GetSection$section$$AvatarSection.fromJson(json);
+
       case "WebSection":
         return Query$GetSection$section$$WebSection.fromJson(json);
 
@@ -33435,6 +35537,7 @@ extension UtilityExtension$Query$GetSection$section
         iconGridSection,
     required _T Function(Query$GetSection$section$$IconSection) iconSection,
     required _T Function(Query$GetSection$section$$LabelSection) labelSection,
+    required _T Function(Query$GetSection$section$$AvatarSection) avatarSection,
     required _T Function(Query$GetSection$section$$WebSection) webSection,
     required _T Function(Query$GetSection$section$$MessageSection)
         messageSection,
@@ -33483,6 +35586,9 @@ extension UtilityExtension$Query$GetSection$section
       case "LabelSection":
         return labelSection(this as Query$GetSection$section$$LabelSection);
 
+      case "AvatarSection":
+        return avatarSection(this as Query$GetSection$section$$AvatarSection);
+
       case "WebSection":
         return webSection(this as Query$GetSection$section$$WebSection);
 
@@ -33515,6 +35621,7 @@ extension UtilityExtension$Query$GetSection$section
     _T Function(Query$GetSection$section$$IconGridSection)? iconGridSection,
     _T Function(Query$GetSection$section$$IconSection)? iconSection,
     _T Function(Query$GetSection$section$$LabelSection)? labelSection,
+    _T Function(Query$GetSection$section$$AvatarSection)? avatarSection,
     _T Function(Query$GetSection$section$$WebSection)? webSection,
     _T Function(Query$GetSection$section$$MessageSection)? messageSection,
     _T Function(Query$GetSection$section$$PageDetailsSection)?
@@ -33603,6 +35710,13 @@ extension UtilityExtension$Query$GetSection$section
       case "LabelSection":
         if (labelSection != null) {
           return labelSection(this as Query$GetSection$section$$LabelSection);
+        } else {
+          return orElse();
+        }
+
+      case "AvatarSection":
+        if (avatarSection != null) {
+          return avatarSection(this as Query$GetSection$section$$AvatarSection);
         } else {
           return orElse();
         }
@@ -34620,6 +36734,10 @@ class Query$GetSection$section$$PosterSection$items$items$item
   factory Query$GetSection$section$$PosterSection$items$items$item.fromJson(
       Map<String, dynamic> json) {
     switch (json["__typename"] as String) {
+      case "Person":
+        return Query$GetSection$section$$PosterSection$items$items$item$$Person
+            .fromJson(json);
+
       case "Game":
         return Query$GetSection$section$$PosterSection$items$items$item$$Game
             .fromJson(json);
@@ -34707,6 +36825,9 @@ extension UtilityExtension$Query$GetSection$section$$PosterSection$items$items$i
           );
   _T when<_T>({
     required _T Function(
+            Query$GetSection$section$$PosterSection$items$items$item$$Person)
+        person,
+    required _T Function(
             Query$GetSection$section$$PosterSection$items$items$item$$Game)
         game,
     required _T Function(
@@ -34736,6 +36857,10 @@ extension UtilityExtension$Query$GetSection$section$$PosterSection$items$items$i
     required _T Function() orElse,
   }) {
     switch ($__typename) {
+      case "Person":
+        return person(this
+            as Query$GetSection$section$$PosterSection$items$items$item$$Person);
+
       case "Game":
         return game(this
             as Query$GetSection$section$$PosterSection$items$items$item$$Game);
@@ -34778,6 +36903,9 @@ extension UtilityExtension$Query$GetSection$section$$PosterSection$items$items$i
   }
 
   _T maybeWhen<_T>({
+    _T Function(
+            Query$GetSection$section$$PosterSection$items$items$item$$Person)?
+        person,
     _T Function(Query$GetSection$section$$PosterSection$items$items$item$$Game)?
         game,
     _T Function(Query$GetSection$section$$PosterSection$items$items$item$$Link)?
@@ -34804,6 +36932,14 @@ extension UtilityExtension$Query$GetSection$section$$PosterSection$items$items$i
     required _T Function() orElse,
   }) {
     switch ($__typename) {
+      case "Person":
+        if (person != null) {
+          return person(this
+              as Query$GetSection$section$$PosterSection$items$items$item$$Person);
+        } else {
+          return orElse();
+        }
+
       case "Game":
         if (game != null) {
           return game(this
@@ -34932,6 +37068,150 @@ class _CopyWithStubImpl$Query$GetSection$section$$PosterSection$items$items$item
   TRes _res;
 
   call({String? $__typename}) => _res;
+}
+
+class Query$GetSection$section$$PosterSection$items$items$item$$Person
+    implements
+        Fragment$Section$$PosterSection$items$items$item$$Person,
+        Fragment$ItemSectionItem$item$$Person,
+        Query$GetSection$section$$PosterSection$items$items$item {
+  Query$GetSection$section$$PosterSection$items$items$item$$Person({
+    required this.id,
+    this.$__typename = 'Person',
+  });
+
+  factory Query$GetSection$section$$PosterSection$items$items$item$$Person.fromJson(
+      Map<String, dynamic> json) {
+    final l$id = json['id'];
+    final l$$__typename = json['__typename'];
+    return Query$GetSection$section$$PosterSection$items$items$item$$Person(
+      id: (l$id as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String id;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$id = id;
+    _resultData['id'] = l$id;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$id = id;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$id,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Query$GetSection$section$$PosterSection$items$items$item$$Person) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$id = id;
+    final lOther$id = other.id;
+    if (l$id != lOther$id) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$GetSection$section$$PosterSection$items$items$item$$Person
+    on Query$GetSection$section$$PosterSection$items$items$item$$Person {
+  CopyWith$Query$GetSection$section$$PosterSection$items$items$item$$Person<
+          Query$GetSection$section$$PosterSection$items$items$item$$Person>
+      get copyWith =>
+          CopyWith$Query$GetSection$section$$PosterSection$items$items$item$$Person(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$GetSection$section$$PosterSection$items$items$item$$Person<
+    TRes> {
+  factory CopyWith$Query$GetSection$section$$PosterSection$items$items$item$$Person(
+    Query$GetSection$section$$PosterSection$items$items$item$$Person instance,
+    TRes Function(
+            Query$GetSection$section$$PosterSection$items$items$item$$Person)
+        then,
+  ) = _CopyWithImpl$Query$GetSection$section$$PosterSection$items$items$item$$Person;
+
+  factory CopyWith$Query$GetSection$section$$PosterSection$items$items$item$$Person.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$GetSection$section$$PosterSection$items$items$item$$Person;
+
+  TRes call({
+    String? id,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Query$GetSection$section$$PosterSection$items$items$item$$Person<
+        TRes>
+    implements
+        CopyWith$Query$GetSection$section$$PosterSection$items$items$item$$Person<
+            TRes> {
+  _CopyWithImpl$Query$GetSection$section$$PosterSection$items$items$item$$Person(
+    this._instance,
+    this._then,
+  );
+
+  final Query$GetSection$section$$PosterSection$items$items$item$$Person
+      _instance;
+
+  final TRes Function(
+      Query$GetSection$section$$PosterSection$items$items$item$$Person) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? id = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Query$GetSection$section$$PosterSection$items$items$item$$Person(
+        id: id == _undefined || id == null ? _instance.id : (id as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Query$GetSection$section$$PosterSection$items$items$item$$Person<
+        TRes>
+    implements
+        CopyWith$Query$GetSection$section$$PosterSection$items$items$item$$Person<
+            TRes> {
+  _CopyWithStubImpl$Query$GetSection$section$$PosterSection$items$items$item$$Person(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? id,
+    String? $__typename,
+  }) =>
+      _res;
 }
 
 class Query$GetSection$section$$PosterSection$items$items$item$$Game
@@ -39292,6 +41572,10 @@ class Query$GetSection$section$$FeaturedSection$items$items$item
   factory Query$GetSection$section$$FeaturedSection$items$items$item.fromJson(
       Map<String, dynamic> json) {
     switch (json["__typename"] as String) {
+      case "Person":
+        return Query$GetSection$section$$FeaturedSection$items$items$item$$Person
+            .fromJson(json);
+
       case "Game":
         return Query$GetSection$section$$FeaturedSection$items$items$item$$Game
             .fromJson(json);
@@ -39380,6 +41664,9 @@ extension UtilityExtension$Query$GetSection$section$$FeaturedSection$items$items
           );
   _T when<_T>({
     required _T Function(
+            Query$GetSection$section$$FeaturedSection$items$items$item$$Person)
+        person,
+    required _T Function(
             Query$GetSection$section$$FeaturedSection$items$items$item$$Game)
         game,
     required _T Function(
@@ -39409,6 +41696,10 @@ extension UtilityExtension$Query$GetSection$section$$FeaturedSection$items$items
     required _T Function() orElse,
   }) {
     switch ($__typename) {
+      case "Person":
+        return person(this
+            as Query$GetSection$section$$FeaturedSection$items$items$item$$Person);
+
       case "Game":
         return game(this
             as Query$GetSection$section$$FeaturedSection$items$items$item$$Game);
@@ -39452,6 +41743,9 @@ extension UtilityExtension$Query$GetSection$section$$FeaturedSection$items$items
 
   _T maybeWhen<_T>({
     _T Function(
+            Query$GetSection$section$$FeaturedSection$items$items$item$$Person)?
+        person,
+    _T Function(
             Query$GetSection$section$$FeaturedSection$items$items$item$$Game)?
         game,
     _T Function(
@@ -39481,6 +41775,14 @@ extension UtilityExtension$Query$GetSection$section$$FeaturedSection$items$items
     required _T Function() orElse,
   }) {
     switch ($__typename) {
+      case "Person":
+        if (person != null) {
+          return person(this
+              as Query$GetSection$section$$FeaturedSection$items$items$item$$Person);
+        } else {
+          return orElse();
+        }
+
       case "Game":
         if (game != null) {
           return game(this
@@ -39609,6 +41911,150 @@ class _CopyWithStubImpl$Query$GetSection$section$$FeaturedSection$items$items$it
   TRes _res;
 
   call({String? $__typename}) => _res;
+}
+
+class Query$GetSection$section$$FeaturedSection$items$items$item$$Person
+    implements
+        Fragment$Section$$FeaturedSection$items$items$item$$Person,
+        Fragment$ItemSectionItem$item$$Person,
+        Query$GetSection$section$$FeaturedSection$items$items$item {
+  Query$GetSection$section$$FeaturedSection$items$items$item$$Person({
+    required this.id,
+    this.$__typename = 'Person',
+  });
+
+  factory Query$GetSection$section$$FeaturedSection$items$items$item$$Person.fromJson(
+      Map<String, dynamic> json) {
+    final l$id = json['id'];
+    final l$$__typename = json['__typename'];
+    return Query$GetSection$section$$FeaturedSection$items$items$item$$Person(
+      id: (l$id as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String id;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$id = id;
+    _resultData['id'] = l$id;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$id = id;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$id,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Query$GetSection$section$$FeaturedSection$items$items$item$$Person) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$id = id;
+    final lOther$id = other.id;
+    if (l$id != lOther$id) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$GetSection$section$$FeaturedSection$items$items$item$$Person
+    on Query$GetSection$section$$FeaturedSection$items$items$item$$Person {
+  CopyWith$Query$GetSection$section$$FeaturedSection$items$items$item$$Person<
+          Query$GetSection$section$$FeaturedSection$items$items$item$$Person>
+      get copyWith =>
+          CopyWith$Query$GetSection$section$$FeaturedSection$items$items$item$$Person(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$GetSection$section$$FeaturedSection$items$items$item$$Person<
+    TRes> {
+  factory CopyWith$Query$GetSection$section$$FeaturedSection$items$items$item$$Person(
+    Query$GetSection$section$$FeaturedSection$items$items$item$$Person instance,
+    TRes Function(
+            Query$GetSection$section$$FeaturedSection$items$items$item$$Person)
+        then,
+  ) = _CopyWithImpl$Query$GetSection$section$$FeaturedSection$items$items$item$$Person;
+
+  factory CopyWith$Query$GetSection$section$$FeaturedSection$items$items$item$$Person.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$GetSection$section$$FeaturedSection$items$items$item$$Person;
+
+  TRes call({
+    String? id,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Query$GetSection$section$$FeaturedSection$items$items$item$$Person<
+        TRes>
+    implements
+        CopyWith$Query$GetSection$section$$FeaturedSection$items$items$item$$Person<
+            TRes> {
+  _CopyWithImpl$Query$GetSection$section$$FeaturedSection$items$items$item$$Person(
+    this._instance,
+    this._then,
+  );
+
+  final Query$GetSection$section$$FeaturedSection$items$items$item$$Person
+      _instance;
+
+  final TRes Function(
+      Query$GetSection$section$$FeaturedSection$items$items$item$$Person) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? id = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Query$GetSection$section$$FeaturedSection$items$items$item$$Person(
+        id: id == _undefined || id == null ? _instance.id : (id as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Query$GetSection$section$$FeaturedSection$items$items$item$$Person<
+        TRes>
+    implements
+        CopyWith$Query$GetSection$section$$FeaturedSection$items$items$item$$Person<
+            TRes> {
+  _CopyWithStubImpl$Query$GetSection$section$$FeaturedSection$items$items$item$$Person(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? id,
+    String? $__typename,
+  }) =>
+      _res;
 }
 
 class Query$GetSection$section$$FeaturedSection$items$items$item$$Game
@@ -42445,6 +44891,10 @@ class Query$GetSection$section$$DefaultSection$items$items$item
   factory Query$GetSection$section$$DefaultSection$items$items$item.fromJson(
       Map<String, dynamic> json) {
     switch (json["__typename"] as String) {
+      case "Person":
+        return Query$GetSection$section$$DefaultSection$items$items$item$$Person
+            .fromJson(json);
+
       case "Game":
         return Query$GetSection$section$$DefaultSection$items$items$item$$Game
             .fromJson(json);
@@ -42532,6 +44982,9 @@ extension UtilityExtension$Query$GetSection$section$$DefaultSection$items$items$
           );
   _T when<_T>({
     required _T Function(
+            Query$GetSection$section$$DefaultSection$items$items$item$$Person)
+        person,
+    required _T Function(
             Query$GetSection$section$$DefaultSection$items$items$item$$Game)
         game,
     required _T Function(
@@ -42561,6 +45014,10 @@ extension UtilityExtension$Query$GetSection$section$$DefaultSection$items$items$
     required _T Function() orElse,
   }) {
     switch ($__typename) {
+      case "Person":
+        return person(this
+            as Query$GetSection$section$$DefaultSection$items$items$item$$Person);
+
       case "Game":
         return game(this
             as Query$GetSection$section$$DefaultSection$items$items$item$$Game);
@@ -42604,6 +45061,9 @@ extension UtilityExtension$Query$GetSection$section$$DefaultSection$items$items$
 
   _T maybeWhen<_T>({
     _T Function(
+            Query$GetSection$section$$DefaultSection$items$items$item$$Person)?
+        person,
+    _T Function(
             Query$GetSection$section$$DefaultSection$items$items$item$$Game)?
         game,
     _T Function(
@@ -42633,6 +45093,14 @@ extension UtilityExtension$Query$GetSection$section$$DefaultSection$items$items$
     required _T Function() orElse,
   }) {
     switch ($__typename) {
+      case "Person":
+        if (person != null) {
+          return person(this
+              as Query$GetSection$section$$DefaultSection$items$items$item$$Person);
+        } else {
+          return orElse();
+        }
+
       case "Game":
         if (game != null) {
           return game(this
@@ -42761,6 +45229,150 @@ class _CopyWithStubImpl$Query$GetSection$section$$DefaultSection$items$items$ite
   TRes _res;
 
   call({String? $__typename}) => _res;
+}
+
+class Query$GetSection$section$$DefaultSection$items$items$item$$Person
+    implements
+        Fragment$Section$$DefaultSection$items$items$item$$Person,
+        Fragment$ItemSectionItem$item$$Person,
+        Query$GetSection$section$$DefaultSection$items$items$item {
+  Query$GetSection$section$$DefaultSection$items$items$item$$Person({
+    required this.id,
+    this.$__typename = 'Person',
+  });
+
+  factory Query$GetSection$section$$DefaultSection$items$items$item$$Person.fromJson(
+      Map<String, dynamic> json) {
+    final l$id = json['id'];
+    final l$$__typename = json['__typename'];
+    return Query$GetSection$section$$DefaultSection$items$items$item$$Person(
+      id: (l$id as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String id;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$id = id;
+    _resultData['id'] = l$id;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$id = id;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$id,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Query$GetSection$section$$DefaultSection$items$items$item$$Person) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$id = id;
+    final lOther$id = other.id;
+    if (l$id != lOther$id) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$GetSection$section$$DefaultSection$items$items$item$$Person
+    on Query$GetSection$section$$DefaultSection$items$items$item$$Person {
+  CopyWith$Query$GetSection$section$$DefaultSection$items$items$item$$Person<
+          Query$GetSection$section$$DefaultSection$items$items$item$$Person>
+      get copyWith =>
+          CopyWith$Query$GetSection$section$$DefaultSection$items$items$item$$Person(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$GetSection$section$$DefaultSection$items$items$item$$Person<
+    TRes> {
+  factory CopyWith$Query$GetSection$section$$DefaultSection$items$items$item$$Person(
+    Query$GetSection$section$$DefaultSection$items$items$item$$Person instance,
+    TRes Function(
+            Query$GetSection$section$$DefaultSection$items$items$item$$Person)
+        then,
+  ) = _CopyWithImpl$Query$GetSection$section$$DefaultSection$items$items$item$$Person;
+
+  factory CopyWith$Query$GetSection$section$$DefaultSection$items$items$item$$Person.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$GetSection$section$$DefaultSection$items$items$item$$Person;
+
+  TRes call({
+    String? id,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Query$GetSection$section$$DefaultSection$items$items$item$$Person<
+        TRes>
+    implements
+        CopyWith$Query$GetSection$section$$DefaultSection$items$items$item$$Person<
+            TRes> {
+  _CopyWithImpl$Query$GetSection$section$$DefaultSection$items$items$item$$Person(
+    this._instance,
+    this._then,
+  );
+
+  final Query$GetSection$section$$DefaultSection$items$items$item$$Person
+      _instance;
+
+  final TRes Function(
+      Query$GetSection$section$$DefaultSection$items$items$item$$Person) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? id = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Query$GetSection$section$$DefaultSection$items$items$item$$Person(
+        id: id == _undefined || id == null ? _instance.id : (id as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Query$GetSection$section$$DefaultSection$items$items$item$$Person<
+        TRes>
+    implements
+        CopyWith$Query$GetSection$section$$DefaultSection$items$items$item$$Person<
+            TRes> {
+  _CopyWithStubImpl$Query$GetSection$section$$DefaultSection$items$items$item$$Person(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? id,
+    String? $__typename,
+  }) =>
+      _res;
 }
 
 class Query$GetSection$section$$DefaultSection$items$items$item$$Game
@@ -45623,6 +48235,10 @@ class Query$GetSection$section$$CardSection$items$items$item
   factory Query$GetSection$section$$CardSection$items$items$item.fromJson(
       Map<String, dynamic> json) {
     switch (json["__typename"] as String) {
+      case "Person":
+        return Query$GetSection$section$$CardSection$items$items$item$$Person
+            .fromJson(json);
+
       case "Game":
         return Query$GetSection$section$$CardSection$items$items$item$$Game
             .fromJson(json);
@@ -45710,6 +48326,9 @@ extension UtilityExtension$Query$GetSection$section$$CardSection$items$items$ite
           );
   _T when<_T>({
     required _T Function(
+            Query$GetSection$section$$CardSection$items$items$item$$Person)
+        person,
+    required _T Function(
             Query$GetSection$section$$CardSection$items$items$item$$Game)
         game,
     required _T Function(
@@ -45739,6 +48358,10 @@ extension UtilityExtension$Query$GetSection$section$$CardSection$items$items$ite
     required _T Function() orElse,
   }) {
     switch ($__typename) {
+      case "Person":
+        return person(this
+            as Query$GetSection$section$$CardSection$items$items$item$$Person);
+
       case "Game":
         return game(this
             as Query$GetSection$section$$CardSection$items$items$item$$Game);
@@ -45781,6 +48404,8 @@ extension UtilityExtension$Query$GetSection$section$$CardSection$items$items$ite
   }
 
   _T maybeWhen<_T>({
+    _T Function(Query$GetSection$section$$CardSection$items$items$item$$Person)?
+        person,
     _T Function(Query$GetSection$section$$CardSection$items$items$item$$Game)?
         game,
     _T Function(Query$GetSection$section$$CardSection$items$items$item$$Link)?
@@ -45805,6 +48430,14 @@ extension UtilityExtension$Query$GetSection$section$$CardSection$items$items$ite
     required _T Function() orElse,
   }) {
     switch ($__typename) {
+      case "Person":
+        if (person != null) {
+          return person(this
+              as Query$GetSection$section$$CardSection$items$items$item$$Person);
+        } else {
+          return orElse();
+        }
+
       case "Game":
         if (game != null) {
           return game(this
@@ -45929,6 +48562,150 @@ class _CopyWithStubImpl$Query$GetSection$section$$CardSection$items$items$item<
   TRes _res;
 
   call({String? $__typename}) => _res;
+}
+
+class Query$GetSection$section$$CardSection$items$items$item$$Person
+    implements
+        Fragment$Section$$CardSection$items$items$item$$Person,
+        Fragment$ItemSectionItem$item$$Person,
+        Query$GetSection$section$$CardSection$items$items$item {
+  Query$GetSection$section$$CardSection$items$items$item$$Person({
+    required this.id,
+    this.$__typename = 'Person',
+  });
+
+  factory Query$GetSection$section$$CardSection$items$items$item$$Person.fromJson(
+      Map<String, dynamic> json) {
+    final l$id = json['id'];
+    final l$$__typename = json['__typename'];
+    return Query$GetSection$section$$CardSection$items$items$item$$Person(
+      id: (l$id as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String id;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$id = id;
+    _resultData['id'] = l$id;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$id = id;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$id,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Query$GetSection$section$$CardSection$items$items$item$$Person) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$id = id;
+    final lOther$id = other.id;
+    if (l$id != lOther$id) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$GetSection$section$$CardSection$items$items$item$$Person
+    on Query$GetSection$section$$CardSection$items$items$item$$Person {
+  CopyWith$Query$GetSection$section$$CardSection$items$items$item$$Person<
+          Query$GetSection$section$$CardSection$items$items$item$$Person>
+      get copyWith =>
+          CopyWith$Query$GetSection$section$$CardSection$items$items$item$$Person(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$GetSection$section$$CardSection$items$items$item$$Person<
+    TRes> {
+  factory CopyWith$Query$GetSection$section$$CardSection$items$items$item$$Person(
+    Query$GetSection$section$$CardSection$items$items$item$$Person instance,
+    TRes Function(
+            Query$GetSection$section$$CardSection$items$items$item$$Person)
+        then,
+  ) = _CopyWithImpl$Query$GetSection$section$$CardSection$items$items$item$$Person;
+
+  factory CopyWith$Query$GetSection$section$$CardSection$items$items$item$$Person.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$GetSection$section$$CardSection$items$items$item$$Person;
+
+  TRes call({
+    String? id,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Query$GetSection$section$$CardSection$items$items$item$$Person<
+        TRes>
+    implements
+        CopyWith$Query$GetSection$section$$CardSection$items$items$item$$Person<
+            TRes> {
+  _CopyWithImpl$Query$GetSection$section$$CardSection$items$items$item$$Person(
+    this._instance,
+    this._then,
+  );
+
+  final Query$GetSection$section$$CardSection$items$items$item$$Person
+      _instance;
+
+  final TRes Function(
+      Query$GetSection$section$$CardSection$items$items$item$$Person) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? id = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Query$GetSection$section$$CardSection$items$items$item$$Person(
+        id: id == _undefined || id == null ? _instance.id : (id as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Query$GetSection$section$$CardSection$items$items$item$$Person<
+        TRes>
+    implements
+        CopyWith$Query$GetSection$section$$CardSection$items$items$item$$Person<
+            TRes> {
+  _CopyWithStubImpl$Query$GetSection$section$$CardSection$items$items$item$$Person(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? id,
+    String? $__typename,
+  }) =>
+      _res;
 }
 
 class Query$GetSection$section$$CardSection$items$items$item$$Game
@@ -48886,6 +51663,10 @@ class Query$GetSection$section$$ListSection$items$items$item
   factory Query$GetSection$section$$ListSection$items$items$item.fromJson(
       Map<String, dynamic> json) {
     switch (json["__typename"] as String) {
+      case "Person":
+        return Query$GetSection$section$$ListSection$items$items$item$$Person
+            .fromJson(json);
+
       case "Game":
         return Query$GetSection$section$$ListSection$items$items$item$$Game
             .fromJson(json);
@@ -48973,6 +51754,9 @@ extension UtilityExtension$Query$GetSection$section$$ListSection$items$items$ite
           );
   _T when<_T>({
     required _T Function(
+            Query$GetSection$section$$ListSection$items$items$item$$Person)
+        person,
+    required _T Function(
             Query$GetSection$section$$ListSection$items$items$item$$Game)
         game,
     required _T Function(
@@ -49002,6 +51786,10 @@ extension UtilityExtension$Query$GetSection$section$$ListSection$items$items$ite
     required _T Function() orElse,
   }) {
     switch ($__typename) {
+      case "Person":
+        return person(this
+            as Query$GetSection$section$$ListSection$items$items$item$$Person);
+
       case "Game":
         return game(this
             as Query$GetSection$section$$ListSection$items$items$item$$Game);
@@ -49044,6 +51832,8 @@ extension UtilityExtension$Query$GetSection$section$$ListSection$items$items$ite
   }
 
   _T maybeWhen<_T>({
+    _T Function(Query$GetSection$section$$ListSection$items$items$item$$Person)?
+        person,
     _T Function(Query$GetSection$section$$ListSection$items$items$item$$Game)?
         game,
     _T Function(Query$GetSection$section$$ListSection$items$items$item$$Link)?
@@ -49068,6 +51858,14 @@ extension UtilityExtension$Query$GetSection$section$$ListSection$items$items$ite
     required _T Function() orElse,
   }) {
     switch ($__typename) {
+      case "Person":
+        if (person != null) {
+          return person(this
+              as Query$GetSection$section$$ListSection$items$items$item$$Person);
+        } else {
+          return orElse();
+        }
+
       case "Game":
         if (game != null) {
           return game(this
@@ -49192,6 +51990,150 @@ class _CopyWithStubImpl$Query$GetSection$section$$ListSection$items$items$item<
   TRes _res;
 
   call({String? $__typename}) => _res;
+}
+
+class Query$GetSection$section$$ListSection$items$items$item$$Person
+    implements
+        Fragment$Section$$ListSection$items$items$item$$Person,
+        Fragment$ItemSectionItem$item$$Person,
+        Query$GetSection$section$$ListSection$items$items$item {
+  Query$GetSection$section$$ListSection$items$items$item$$Person({
+    required this.id,
+    this.$__typename = 'Person',
+  });
+
+  factory Query$GetSection$section$$ListSection$items$items$item$$Person.fromJson(
+      Map<String, dynamic> json) {
+    final l$id = json['id'];
+    final l$$__typename = json['__typename'];
+    return Query$GetSection$section$$ListSection$items$items$item$$Person(
+      id: (l$id as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String id;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$id = id;
+    _resultData['id'] = l$id;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$id = id;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$id,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Query$GetSection$section$$ListSection$items$items$item$$Person) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$id = id;
+    final lOther$id = other.id;
+    if (l$id != lOther$id) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$GetSection$section$$ListSection$items$items$item$$Person
+    on Query$GetSection$section$$ListSection$items$items$item$$Person {
+  CopyWith$Query$GetSection$section$$ListSection$items$items$item$$Person<
+          Query$GetSection$section$$ListSection$items$items$item$$Person>
+      get copyWith =>
+          CopyWith$Query$GetSection$section$$ListSection$items$items$item$$Person(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$GetSection$section$$ListSection$items$items$item$$Person<
+    TRes> {
+  factory CopyWith$Query$GetSection$section$$ListSection$items$items$item$$Person(
+    Query$GetSection$section$$ListSection$items$items$item$$Person instance,
+    TRes Function(
+            Query$GetSection$section$$ListSection$items$items$item$$Person)
+        then,
+  ) = _CopyWithImpl$Query$GetSection$section$$ListSection$items$items$item$$Person;
+
+  factory CopyWith$Query$GetSection$section$$ListSection$items$items$item$$Person.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$GetSection$section$$ListSection$items$items$item$$Person;
+
+  TRes call({
+    String? id,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Query$GetSection$section$$ListSection$items$items$item$$Person<
+        TRes>
+    implements
+        CopyWith$Query$GetSection$section$$ListSection$items$items$item$$Person<
+            TRes> {
+  _CopyWithImpl$Query$GetSection$section$$ListSection$items$items$item$$Person(
+    this._instance,
+    this._then,
+  );
+
+  final Query$GetSection$section$$ListSection$items$items$item$$Person
+      _instance;
+
+  final TRes Function(
+      Query$GetSection$section$$ListSection$items$items$item$$Person) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? id = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Query$GetSection$section$$ListSection$items$items$item$$Person(
+        id: id == _undefined || id == null ? _instance.id : (id as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Query$GetSection$section$$ListSection$items$items$item$$Person<
+        TRes>
+    implements
+        CopyWith$Query$GetSection$section$$ListSection$items$items$item$$Person<
+            TRes> {
+  _CopyWithStubImpl$Query$GetSection$section$$ListSection$items$items$item$$Person(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? id,
+    String? $__typename,
+  }) =>
+      _res;
 }
 
 class Query$GetSection$section$$ListSection$items$items$item$$Game
@@ -52765,6 +55707,10 @@ class Query$GetSection$section$$DefaultGridSection$items$items$item
   factory Query$GetSection$section$$DefaultGridSection$items$items$item.fromJson(
       Map<String, dynamic> json) {
     switch (json["__typename"] as String) {
+      case "Person":
+        return Query$GetSection$section$$DefaultGridSection$items$items$item$$Person
+            .fromJson(json);
+
       case "Game":
         return Query$GetSection$section$$DefaultGridSection$items$items$item$$Game
             .fromJson(json);
@@ -52853,6 +55799,9 @@ extension UtilityExtension$Query$GetSection$section$$DefaultGridSection$items$it
           );
   _T when<_T>({
     required _T Function(
+            Query$GetSection$section$$DefaultGridSection$items$items$item$$Person)
+        person,
+    required _T Function(
             Query$GetSection$section$$DefaultGridSection$items$items$item$$Game)
         game,
     required _T Function(
@@ -52882,6 +55831,10 @@ extension UtilityExtension$Query$GetSection$section$$DefaultGridSection$items$it
     required _T Function() orElse,
   }) {
     switch ($__typename) {
+      case "Person":
+        return person(this
+            as Query$GetSection$section$$DefaultGridSection$items$items$item$$Person);
+
       case "Game":
         return game(this
             as Query$GetSection$section$$DefaultGridSection$items$items$item$$Game);
@@ -52925,6 +55878,9 @@ extension UtilityExtension$Query$GetSection$section$$DefaultGridSection$items$it
 
   _T maybeWhen<_T>({
     _T Function(
+            Query$GetSection$section$$DefaultGridSection$items$items$item$$Person)?
+        person,
+    _T Function(
             Query$GetSection$section$$DefaultGridSection$items$items$item$$Game)?
         game,
     _T Function(
@@ -52954,6 +55910,14 @@ extension UtilityExtension$Query$GetSection$section$$DefaultGridSection$items$it
     required _T Function() orElse,
   }) {
     switch ($__typename) {
+      case "Person":
+        if (person != null) {
+          return person(this
+              as Query$GetSection$section$$DefaultGridSection$items$items$item$$Person);
+        } else {
+          return orElse();
+        }
+
       case "Game":
         if (game != null) {
           return game(this
@@ -53082,6 +56046,154 @@ class _CopyWithStubImpl$Query$GetSection$section$$DefaultGridSection$items$items
   TRes _res;
 
   call({String? $__typename}) => _res;
+}
+
+class Query$GetSection$section$$DefaultGridSection$items$items$item$$Person
+    implements
+        Fragment$Section$$DefaultGridSection$items$items$item$$Person,
+        Fragment$ItemSectionItem$item$$Person,
+        Fragment$GridSectionItem$item$$Person,
+        Query$GetSection$section$$DefaultGridSection$items$items$item {
+  Query$GetSection$section$$DefaultGridSection$items$items$item$$Person({
+    required this.id,
+    this.$__typename = 'Person',
+  });
+
+  factory Query$GetSection$section$$DefaultGridSection$items$items$item$$Person.fromJson(
+      Map<String, dynamic> json) {
+    final l$id = json['id'];
+    final l$$__typename = json['__typename'];
+    return Query$GetSection$section$$DefaultGridSection$items$items$item$$Person(
+      id: (l$id as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String id;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$id = id;
+    _resultData['id'] = l$id;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$id = id;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$id,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Query$GetSection$section$$DefaultGridSection$items$items$item$$Person) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$id = id;
+    final lOther$id = other.id;
+    if (l$id != lOther$id) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$GetSection$section$$DefaultGridSection$items$items$item$$Person
+    on Query$GetSection$section$$DefaultGridSection$items$items$item$$Person {
+  CopyWith$Query$GetSection$section$$DefaultGridSection$items$items$item$$Person<
+          Query$GetSection$section$$DefaultGridSection$items$items$item$$Person>
+      get copyWith =>
+          CopyWith$Query$GetSection$section$$DefaultGridSection$items$items$item$$Person(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$GetSection$section$$DefaultGridSection$items$items$item$$Person<
+    TRes> {
+  factory CopyWith$Query$GetSection$section$$DefaultGridSection$items$items$item$$Person(
+    Query$GetSection$section$$DefaultGridSection$items$items$item$$Person
+        instance,
+    TRes Function(
+            Query$GetSection$section$$DefaultGridSection$items$items$item$$Person)
+        then,
+  ) = _CopyWithImpl$Query$GetSection$section$$DefaultGridSection$items$items$item$$Person;
+
+  factory CopyWith$Query$GetSection$section$$DefaultGridSection$items$items$item$$Person.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$GetSection$section$$DefaultGridSection$items$items$item$$Person;
+
+  TRes call({
+    String? id,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Query$GetSection$section$$DefaultGridSection$items$items$item$$Person<
+        TRes>
+    implements
+        CopyWith$Query$GetSection$section$$DefaultGridSection$items$items$item$$Person<
+            TRes> {
+  _CopyWithImpl$Query$GetSection$section$$DefaultGridSection$items$items$item$$Person(
+    this._instance,
+    this._then,
+  );
+
+  final Query$GetSection$section$$DefaultGridSection$items$items$item$$Person
+      _instance;
+
+  final TRes Function(
+          Query$GetSection$section$$DefaultGridSection$items$items$item$$Person)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? id = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(
+          Query$GetSection$section$$DefaultGridSection$items$items$item$$Person(
+        id: id == _undefined || id == null ? _instance.id : (id as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Query$GetSection$section$$DefaultGridSection$items$items$item$$Person<
+        TRes>
+    implements
+        CopyWith$Query$GetSection$section$$DefaultGridSection$items$items$item$$Person<
+            TRes> {
+  _CopyWithStubImpl$Query$GetSection$section$$DefaultGridSection$items$items$item$$Person(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? id,
+    String? $__typename,
+  }) =>
+      _res;
 }
 
 class Query$GetSection$section$$DefaultGridSection$items$items$item$$Game
@@ -55998,6 +59110,10 @@ class Query$GetSection$section$$PosterGridSection$items$items$item
   factory Query$GetSection$section$$PosterGridSection$items$items$item.fromJson(
       Map<String, dynamic> json) {
     switch (json["__typename"] as String) {
+      case "Person":
+        return Query$GetSection$section$$PosterGridSection$items$items$item$$Person
+            .fromJson(json);
+
       case "Game":
         return Query$GetSection$section$$PosterGridSection$items$items$item$$Game
             .fromJson(json);
@@ -56086,6 +59202,9 @@ extension UtilityExtension$Query$GetSection$section$$PosterGridSection$items$ite
           );
   _T when<_T>({
     required _T Function(
+            Query$GetSection$section$$PosterGridSection$items$items$item$$Person)
+        person,
+    required _T Function(
             Query$GetSection$section$$PosterGridSection$items$items$item$$Game)
         game,
     required _T Function(
@@ -56115,6 +59234,10 @@ extension UtilityExtension$Query$GetSection$section$$PosterGridSection$items$ite
     required _T Function() orElse,
   }) {
     switch ($__typename) {
+      case "Person":
+        return person(this
+            as Query$GetSection$section$$PosterGridSection$items$items$item$$Person);
+
       case "Game":
         return game(this
             as Query$GetSection$section$$PosterGridSection$items$items$item$$Game);
@@ -56158,6 +59281,9 @@ extension UtilityExtension$Query$GetSection$section$$PosterGridSection$items$ite
 
   _T maybeWhen<_T>({
     _T Function(
+            Query$GetSection$section$$PosterGridSection$items$items$item$$Person)?
+        person,
+    _T Function(
             Query$GetSection$section$$PosterGridSection$items$items$item$$Game)?
         game,
     _T Function(
@@ -56187,6 +59313,14 @@ extension UtilityExtension$Query$GetSection$section$$PosterGridSection$items$ite
     required _T Function() orElse,
   }) {
     switch ($__typename) {
+      case "Person":
+        if (person != null) {
+          return person(this
+              as Query$GetSection$section$$PosterGridSection$items$items$item$$Person);
+        } else {
+          return orElse();
+        }
+
       case "Game":
         if (game != null) {
           return game(this
@@ -56315,6 +59449,154 @@ class _CopyWithStubImpl$Query$GetSection$section$$PosterGridSection$items$items$
   TRes _res;
 
   call({String? $__typename}) => _res;
+}
+
+class Query$GetSection$section$$PosterGridSection$items$items$item$$Person
+    implements
+        Fragment$Section$$PosterGridSection$items$items$item$$Person,
+        Fragment$ItemSectionItem$item$$Person,
+        Fragment$GridSectionItem$item$$Person,
+        Query$GetSection$section$$PosterGridSection$items$items$item {
+  Query$GetSection$section$$PosterGridSection$items$items$item$$Person({
+    required this.id,
+    this.$__typename = 'Person',
+  });
+
+  factory Query$GetSection$section$$PosterGridSection$items$items$item$$Person.fromJson(
+      Map<String, dynamic> json) {
+    final l$id = json['id'];
+    final l$$__typename = json['__typename'];
+    return Query$GetSection$section$$PosterGridSection$items$items$item$$Person(
+      id: (l$id as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String id;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$id = id;
+    _resultData['id'] = l$id;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$id = id;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$id,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Query$GetSection$section$$PosterGridSection$items$items$item$$Person) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$id = id;
+    final lOther$id = other.id;
+    if (l$id != lOther$id) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$GetSection$section$$PosterGridSection$items$items$item$$Person
+    on Query$GetSection$section$$PosterGridSection$items$items$item$$Person {
+  CopyWith$Query$GetSection$section$$PosterGridSection$items$items$item$$Person<
+          Query$GetSection$section$$PosterGridSection$items$items$item$$Person>
+      get copyWith =>
+          CopyWith$Query$GetSection$section$$PosterGridSection$items$items$item$$Person(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$GetSection$section$$PosterGridSection$items$items$item$$Person<
+    TRes> {
+  factory CopyWith$Query$GetSection$section$$PosterGridSection$items$items$item$$Person(
+    Query$GetSection$section$$PosterGridSection$items$items$item$$Person
+        instance,
+    TRes Function(
+            Query$GetSection$section$$PosterGridSection$items$items$item$$Person)
+        then,
+  ) = _CopyWithImpl$Query$GetSection$section$$PosterGridSection$items$items$item$$Person;
+
+  factory CopyWith$Query$GetSection$section$$PosterGridSection$items$items$item$$Person.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$GetSection$section$$PosterGridSection$items$items$item$$Person;
+
+  TRes call({
+    String? id,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Query$GetSection$section$$PosterGridSection$items$items$item$$Person<
+        TRes>
+    implements
+        CopyWith$Query$GetSection$section$$PosterGridSection$items$items$item$$Person<
+            TRes> {
+  _CopyWithImpl$Query$GetSection$section$$PosterGridSection$items$items$item$$Person(
+    this._instance,
+    this._then,
+  );
+
+  final Query$GetSection$section$$PosterGridSection$items$items$item$$Person
+      _instance;
+
+  final TRes Function(
+          Query$GetSection$section$$PosterGridSection$items$items$item$$Person)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? id = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(
+          Query$GetSection$section$$PosterGridSection$items$items$item$$Person(
+        id: id == _undefined || id == null ? _instance.id : (id as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Query$GetSection$section$$PosterGridSection$items$items$item$$Person<
+        TRes>
+    implements
+        CopyWith$Query$GetSection$section$$PosterGridSection$items$items$item$$Person<
+            TRes> {
+  _CopyWithStubImpl$Query$GetSection$section$$PosterGridSection$items$items$item$$Person(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? id,
+    String? $__typename,
+  }) =>
+      _res;
 }
 
 class Query$GetSection$section$$PosterGridSection$items$items$item$$Game
@@ -59212,6 +62494,10 @@ class Query$GetSection$section$$IconGridSection$items$items$item
   factory Query$GetSection$section$$IconGridSection$items$items$item.fromJson(
       Map<String, dynamic> json) {
     switch (json["__typename"] as String) {
+      case "Person":
+        return Query$GetSection$section$$IconGridSection$items$items$item$$Person
+            .fromJson(json);
+
       case "Game":
         return Query$GetSection$section$$IconGridSection$items$items$item$$Game
             .fromJson(json);
@@ -59300,6 +62586,9 @@ extension UtilityExtension$Query$GetSection$section$$IconGridSection$items$items
           );
   _T when<_T>({
     required _T Function(
+            Query$GetSection$section$$IconGridSection$items$items$item$$Person)
+        person,
+    required _T Function(
             Query$GetSection$section$$IconGridSection$items$items$item$$Game)
         game,
     required _T Function(
@@ -59329,6 +62618,10 @@ extension UtilityExtension$Query$GetSection$section$$IconGridSection$items$items
     required _T Function() orElse,
   }) {
     switch ($__typename) {
+      case "Person":
+        return person(this
+            as Query$GetSection$section$$IconGridSection$items$items$item$$Person);
+
       case "Game":
         return game(this
             as Query$GetSection$section$$IconGridSection$items$items$item$$Game);
@@ -59372,6 +62665,9 @@ extension UtilityExtension$Query$GetSection$section$$IconGridSection$items$items
 
   _T maybeWhen<_T>({
     _T Function(
+            Query$GetSection$section$$IconGridSection$items$items$item$$Person)?
+        person,
+    _T Function(
             Query$GetSection$section$$IconGridSection$items$items$item$$Game)?
         game,
     _T Function(
@@ -59401,6 +62697,14 @@ extension UtilityExtension$Query$GetSection$section$$IconGridSection$items$items
     required _T Function() orElse,
   }) {
     switch ($__typename) {
+      case "Person":
+        if (person != null) {
+          return person(this
+              as Query$GetSection$section$$IconGridSection$items$items$item$$Person);
+        } else {
+          return orElse();
+        }
+
       case "Game":
         if (game != null) {
           return game(this
@@ -59529,6 +62833,151 @@ class _CopyWithStubImpl$Query$GetSection$section$$IconGridSection$items$items$it
   TRes _res;
 
   call({String? $__typename}) => _res;
+}
+
+class Query$GetSection$section$$IconGridSection$items$items$item$$Person
+    implements
+        Fragment$Section$$IconGridSection$items$items$item$$Person,
+        Fragment$ItemSectionItem$item$$Person,
+        Fragment$GridSectionItem$item$$Person,
+        Query$GetSection$section$$IconGridSection$items$items$item {
+  Query$GetSection$section$$IconGridSection$items$items$item$$Person({
+    required this.id,
+    this.$__typename = 'Person',
+  });
+
+  factory Query$GetSection$section$$IconGridSection$items$items$item$$Person.fromJson(
+      Map<String, dynamic> json) {
+    final l$id = json['id'];
+    final l$$__typename = json['__typename'];
+    return Query$GetSection$section$$IconGridSection$items$items$item$$Person(
+      id: (l$id as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String id;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$id = id;
+    _resultData['id'] = l$id;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$id = id;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$id,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Query$GetSection$section$$IconGridSection$items$items$item$$Person) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$id = id;
+    final lOther$id = other.id;
+    if (l$id != lOther$id) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$GetSection$section$$IconGridSection$items$items$item$$Person
+    on Query$GetSection$section$$IconGridSection$items$items$item$$Person {
+  CopyWith$Query$GetSection$section$$IconGridSection$items$items$item$$Person<
+          Query$GetSection$section$$IconGridSection$items$items$item$$Person>
+      get copyWith =>
+          CopyWith$Query$GetSection$section$$IconGridSection$items$items$item$$Person(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$GetSection$section$$IconGridSection$items$items$item$$Person<
+    TRes> {
+  factory CopyWith$Query$GetSection$section$$IconGridSection$items$items$item$$Person(
+    Query$GetSection$section$$IconGridSection$items$items$item$$Person instance,
+    TRes Function(
+            Query$GetSection$section$$IconGridSection$items$items$item$$Person)
+        then,
+  ) = _CopyWithImpl$Query$GetSection$section$$IconGridSection$items$items$item$$Person;
+
+  factory CopyWith$Query$GetSection$section$$IconGridSection$items$items$item$$Person.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$GetSection$section$$IconGridSection$items$items$item$$Person;
+
+  TRes call({
+    String? id,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Query$GetSection$section$$IconGridSection$items$items$item$$Person<
+        TRes>
+    implements
+        CopyWith$Query$GetSection$section$$IconGridSection$items$items$item$$Person<
+            TRes> {
+  _CopyWithImpl$Query$GetSection$section$$IconGridSection$items$items$item$$Person(
+    this._instance,
+    this._then,
+  );
+
+  final Query$GetSection$section$$IconGridSection$items$items$item$$Person
+      _instance;
+
+  final TRes Function(
+      Query$GetSection$section$$IconGridSection$items$items$item$$Person) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? id = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Query$GetSection$section$$IconGridSection$items$items$item$$Person(
+        id: id == _undefined || id == null ? _instance.id : (id as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Query$GetSection$section$$IconGridSection$items$items$item$$Person<
+        TRes>
+    implements
+        CopyWith$Query$GetSection$section$$IconGridSection$items$items$item$$Person<
+            TRes> {
+  _CopyWithStubImpl$Query$GetSection$section$$IconGridSection$items$items$item$$Person(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? id,
+    String? $__typename,
+  }) =>
+      _res;
 }
 
 class Query$GetSection$section$$IconGridSection$items$items$item$$Game
@@ -62818,6 +66267,676 @@ class _CopyWithImpl$Query$GetSection$section$$LabelSection$items<TRes>
 class _CopyWithStubImpl$Query$GetSection$section$$LabelSection$items<TRes>
     implements CopyWith$Query$GetSection$section$$LabelSection$items<TRes> {
   _CopyWithStubImpl$Query$GetSection$section$$LabelSection$items(this._res);
+
+  TRes _res;
+
+  call({
+    int? offset,
+    int? first,
+    List<Fragment$ItemSectionItem>? items,
+    String? $__typename,
+  }) =>
+      _res;
+
+  items(_fn) => _res;
+}
+
+class Query$GetSection$section$$AvatarSection
+    implements
+        Fragment$Section$$AvatarSection,
+        Fragment$ItemSection$$AvatarSection,
+        Query$GetSection$section {
+  Query$GetSection$section$$AvatarSection({
+    this.metadata,
+    required this.items,
+    this.$__typename = 'AvatarSection',
+    required this.id,
+    this.title,
+    this.description,
+  });
+
+  factory Query$GetSection$section$$AvatarSection.fromJson(
+      Map<String, dynamic> json) {
+    final l$metadata = json['metadata'];
+    final l$items = json['items'];
+    final l$$__typename = json['__typename'];
+    final l$id = json['id'];
+    final l$title = json['title'];
+    final l$description = json['description'];
+    return Query$GetSection$section$$AvatarSection(
+      metadata: l$metadata == null
+          ? null
+          : Query$GetSection$section$$AvatarSection$metadata.fromJson(
+              (l$metadata as Map<String, dynamic>)),
+      items: Query$GetSection$section$$AvatarSection$items.fromJson(
+          (l$items as Map<String, dynamic>)),
+      $__typename: (l$$__typename as String),
+      id: (l$id as String),
+      title: (l$title as String?),
+      description: (l$description as String?),
+    );
+  }
+
+  final Query$GetSection$section$$AvatarSection$metadata? metadata;
+
+  final Query$GetSection$section$$AvatarSection$items items;
+
+  final String $__typename;
+
+  final String id;
+
+  final String? title;
+
+  final String? description;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$metadata = metadata;
+    _resultData['metadata'] = l$metadata?.toJson();
+    final l$items = items;
+    _resultData['items'] = l$items.toJson();
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    final l$id = id;
+    _resultData['id'] = l$id;
+    final l$title = title;
+    _resultData['title'] = l$title;
+    final l$description = description;
+    _resultData['description'] = l$description;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$metadata = metadata;
+    final l$items = items;
+    final l$$__typename = $__typename;
+    final l$id = id;
+    final l$title = title;
+    final l$description = description;
+    return Object.hashAll([
+      l$metadata,
+      l$items,
+      l$$__typename,
+      l$id,
+      l$title,
+      l$description,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Query$GetSection$section$$AvatarSection) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$metadata = metadata;
+    final lOther$metadata = other.metadata;
+    if (l$metadata != lOther$metadata) {
+      return false;
+    }
+    final l$items = items;
+    final lOther$items = other.items;
+    if (l$items != lOther$items) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    final l$id = id;
+    final lOther$id = other.id;
+    if (l$id != lOther$id) {
+      return false;
+    }
+    final l$title = title;
+    final lOther$title = other.title;
+    if (l$title != lOther$title) {
+      return false;
+    }
+    final l$description = description;
+    final lOther$description = other.description;
+    if (l$description != lOther$description) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$GetSection$section$$AvatarSection
+    on Query$GetSection$section$$AvatarSection {
+  CopyWith$Query$GetSection$section$$AvatarSection<
+          Query$GetSection$section$$AvatarSection>
+      get copyWith => CopyWith$Query$GetSection$section$$AvatarSection(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$GetSection$section$$AvatarSection<TRes> {
+  factory CopyWith$Query$GetSection$section$$AvatarSection(
+    Query$GetSection$section$$AvatarSection instance,
+    TRes Function(Query$GetSection$section$$AvatarSection) then,
+  ) = _CopyWithImpl$Query$GetSection$section$$AvatarSection;
+
+  factory CopyWith$Query$GetSection$section$$AvatarSection.stub(TRes res) =
+      _CopyWithStubImpl$Query$GetSection$section$$AvatarSection;
+
+  TRes call({
+    Query$GetSection$section$$AvatarSection$metadata? metadata,
+    Query$GetSection$section$$AvatarSection$items? items,
+    String? $__typename,
+    String? id,
+    String? title,
+    String? description,
+  });
+  CopyWith$Query$GetSection$section$$AvatarSection$metadata<TRes> get metadata;
+  CopyWith$Query$GetSection$section$$AvatarSection$items<TRes> get items;
+}
+
+class _CopyWithImpl$Query$GetSection$section$$AvatarSection<TRes>
+    implements CopyWith$Query$GetSection$section$$AvatarSection<TRes> {
+  _CopyWithImpl$Query$GetSection$section$$AvatarSection(
+    this._instance,
+    this._then,
+  );
+
+  final Query$GetSection$section$$AvatarSection _instance;
+
+  final TRes Function(Query$GetSection$section$$AvatarSection) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? metadata = _undefined,
+    Object? items = _undefined,
+    Object? $__typename = _undefined,
+    Object? id = _undefined,
+    Object? title = _undefined,
+    Object? description = _undefined,
+  }) =>
+      _then(Query$GetSection$section$$AvatarSection(
+        metadata: metadata == _undefined
+            ? _instance.metadata
+            : (metadata as Query$GetSection$section$$AvatarSection$metadata?),
+        items: items == _undefined || items == null
+            ? _instance.items
+            : (items as Query$GetSection$section$$AvatarSection$items),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+        id: id == _undefined || id == null ? _instance.id : (id as String),
+        title: title == _undefined ? _instance.title : (title as String?),
+        description: description == _undefined
+            ? _instance.description
+            : (description as String?),
+      ));
+
+  CopyWith$Query$GetSection$section$$AvatarSection$metadata<TRes> get metadata {
+    final local$metadata = _instance.metadata;
+    return local$metadata == null
+        ? CopyWith$Query$GetSection$section$$AvatarSection$metadata.stub(
+            _then(_instance))
+        : CopyWith$Query$GetSection$section$$AvatarSection$metadata(
+            local$metadata, (e) => call(metadata: e));
+  }
+
+  CopyWith$Query$GetSection$section$$AvatarSection$items<TRes> get items {
+    final local$items = _instance.items;
+    return CopyWith$Query$GetSection$section$$AvatarSection$items(
+        local$items, (e) => call(items: e));
+  }
+}
+
+class _CopyWithStubImpl$Query$GetSection$section$$AvatarSection<TRes>
+    implements CopyWith$Query$GetSection$section$$AvatarSection<TRes> {
+  _CopyWithStubImpl$Query$GetSection$section$$AvatarSection(this._res);
+
+  TRes _res;
+
+  call({
+    Query$GetSection$section$$AvatarSection$metadata? metadata,
+    Query$GetSection$section$$AvatarSection$items? items,
+    String? $__typename,
+    String? id,
+    String? title,
+    String? description,
+  }) =>
+      _res;
+
+  CopyWith$Query$GetSection$section$$AvatarSection$metadata<TRes>
+      get metadata =>
+          CopyWith$Query$GetSection$section$$AvatarSection$metadata.stub(_res);
+
+  CopyWith$Query$GetSection$section$$AvatarSection$items<TRes> get items =>
+      CopyWith$Query$GetSection$section$$AvatarSection$items.stub(_res);
+}
+
+class Query$GetSection$section$$AvatarSection$metadata
+    implements
+        Fragment$Section$$AvatarSection$metadata,
+        Fragment$ItemSection$$AvatarSection$metadata {
+  Query$GetSection$section$$AvatarSection$metadata({
+    required this.continueWatching,
+    required this.myList,
+    required this.secondaryTitles,
+    required this.collectionId,
+    required this.useContext,
+    required this.prependLiveElement,
+    this.$__typename = 'ItemSectionMetadata',
+  });
+
+  factory Query$GetSection$section$$AvatarSection$metadata.fromJson(
+      Map<String, dynamic> json) {
+    final l$continueWatching = json['continueWatching'];
+    final l$myList = json['myList'];
+    final l$secondaryTitles = json['secondaryTitles'];
+    final l$collectionId = json['collectionId'];
+    final l$useContext = json['useContext'];
+    final l$prependLiveElement = json['prependLiveElement'];
+    final l$$__typename = json['__typename'];
+    return Query$GetSection$section$$AvatarSection$metadata(
+      continueWatching: (l$continueWatching as bool),
+      myList: (l$myList as bool),
+      secondaryTitles: (l$secondaryTitles as bool),
+      collectionId: (l$collectionId as String),
+      useContext: (l$useContext as bool),
+      prependLiveElement: (l$prependLiveElement as bool),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final bool continueWatching;
+
+  final bool myList;
+
+  final bool secondaryTitles;
+
+  final String collectionId;
+
+  final bool useContext;
+
+  final bool prependLiveElement;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$continueWatching = continueWatching;
+    _resultData['continueWatching'] = l$continueWatching;
+    final l$myList = myList;
+    _resultData['myList'] = l$myList;
+    final l$secondaryTitles = secondaryTitles;
+    _resultData['secondaryTitles'] = l$secondaryTitles;
+    final l$collectionId = collectionId;
+    _resultData['collectionId'] = l$collectionId;
+    final l$useContext = useContext;
+    _resultData['useContext'] = l$useContext;
+    final l$prependLiveElement = prependLiveElement;
+    _resultData['prependLiveElement'] = l$prependLiveElement;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$continueWatching = continueWatching;
+    final l$myList = myList;
+    final l$secondaryTitles = secondaryTitles;
+    final l$collectionId = collectionId;
+    final l$useContext = useContext;
+    final l$prependLiveElement = prependLiveElement;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$continueWatching,
+      l$myList,
+      l$secondaryTitles,
+      l$collectionId,
+      l$useContext,
+      l$prependLiveElement,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Query$GetSection$section$$AvatarSection$metadata) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$continueWatching = continueWatching;
+    final lOther$continueWatching = other.continueWatching;
+    if (l$continueWatching != lOther$continueWatching) {
+      return false;
+    }
+    final l$myList = myList;
+    final lOther$myList = other.myList;
+    if (l$myList != lOther$myList) {
+      return false;
+    }
+    final l$secondaryTitles = secondaryTitles;
+    final lOther$secondaryTitles = other.secondaryTitles;
+    if (l$secondaryTitles != lOther$secondaryTitles) {
+      return false;
+    }
+    final l$collectionId = collectionId;
+    final lOther$collectionId = other.collectionId;
+    if (l$collectionId != lOther$collectionId) {
+      return false;
+    }
+    final l$useContext = useContext;
+    final lOther$useContext = other.useContext;
+    if (l$useContext != lOther$useContext) {
+      return false;
+    }
+    final l$prependLiveElement = prependLiveElement;
+    final lOther$prependLiveElement = other.prependLiveElement;
+    if (l$prependLiveElement != lOther$prependLiveElement) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$GetSection$section$$AvatarSection$metadata
+    on Query$GetSection$section$$AvatarSection$metadata {
+  CopyWith$Query$GetSection$section$$AvatarSection$metadata<
+          Query$GetSection$section$$AvatarSection$metadata>
+      get copyWith => CopyWith$Query$GetSection$section$$AvatarSection$metadata(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$GetSection$section$$AvatarSection$metadata<TRes> {
+  factory CopyWith$Query$GetSection$section$$AvatarSection$metadata(
+    Query$GetSection$section$$AvatarSection$metadata instance,
+    TRes Function(Query$GetSection$section$$AvatarSection$metadata) then,
+  ) = _CopyWithImpl$Query$GetSection$section$$AvatarSection$metadata;
+
+  factory CopyWith$Query$GetSection$section$$AvatarSection$metadata.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$GetSection$section$$AvatarSection$metadata;
+
+  TRes call({
+    bool? continueWatching,
+    bool? myList,
+    bool? secondaryTitles,
+    String? collectionId,
+    bool? useContext,
+    bool? prependLiveElement,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Query$GetSection$section$$AvatarSection$metadata<TRes>
+    implements CopyWith$Query$GetSection$section$$AvatarSection$metadata<TRes> {
+  _CopyWithImpl$Query$GetSection$section$$AvatarSection$metadata(
+    this._instance,
+    this._then,
+  );
+
+  final Query$GetSection$section$$AvatarSection$metadata _instance;
+
+  final TRes Function(Query$GetSection$section$$AvatarSection$metadata) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? continueWatching = _undefined,
+    Object? myList = _undefined,
+    Object? secondaryTitles = _undefined,
+    Object? collectionId = _undefined,
+    Object? useContext = _undefined,
+    Object? prependLiveElement = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Query$GetSection$section$$AvatarSection$metadata(
+        continueWatching:
+            continueWatching == _undefined || continueWatching == null
+                ? _instance.continueWatching
+                : (continueWatching as bool),
+        myList: myList == _undefined || myList == null
+            ? _instance.myList
+            : (myList as bool),
+        secondaryTitles:
+            secondaryTitles == _undefined || secondaryTitles == null
+                ? _instance.secondaryTitles
+                : (secondaryTitles as bool),
+        collectionId: collectionId == _undefined || collectionId == null
+            ? _instance.collectionId
+            : (collectionId as String),
+        useContext: useContext == _undefined || useContext == null
+            ? _instance.useContext
+            : (useContext as bool),
+        prependLiveElement:
+            prependLiveElement == _undefined || prependLiveElement == null
+                ? _instance.prependLiveElement
+                : (prependLiveElement as bool),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Query$GetSection$section$$AvatarSection$metadata<TRes>
+    implements CopyWith$Query$GetSection$section$$AvatarSection$metadata<TRes> {
+  _CopyWithStubImpl$Query$GetSection$section$$AvatarSection$metadata(this._res);
+
+  TRes _res;
+
+  call({
+    bool? continueWatching,
+    bool? myList,
+    bool? secondaryTitles,
+    String? collectionId,
+    bool? useContext,
+    bool? prependLiveElement,
+    String? $__typename,
+  }) =>
+      _res;
+}
+
+class Query$GetSection$section$$AvatarSection$items
+    implements
+        Fragment$Section$$AvatarSection$items,
+        Fragment$ItemSection$$AvatarSection$items {
+  Query$GetSection$section$$AvatarSection$items({
+    required this.offset,
+    required this.first,
+    required this.items,
+    this.$__typename = 'SectionItemPagination',
+  });
+
+  factory Query$GetSection$section$$AvatarSection$items.fromJson(
+      Map<String, dynamic> json) {
+    final l$offset = json['offset'];
+    final l$first = json['first'];
+    final l$items = json['items'];
+    final l$$__typename = json['__typename'];
+    return Query$GetSection$section$$AvatarSection$items(
+      offset: (l$offset as int),
+      first: (l$first as int),
+      items: (l$items as List<dynamic>)
+          .map((e) =>
+              Fragment$ItemSectionItem.fromJson((e as Map<String, dynamic>)))
+          .toList(),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final int offset;
+
+  final int first;
+
+  final List<Fragment$ItemSectionItem> items;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$offset = offset;
+    _resultData['offset'] = l$offset;
+    final l$first = first;
+    _resultData['first'] = l$first;
+    final l$items = items;
+    _resultData['items'] = l$items.map((e) => e.toJson()).toList();
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$offset = offset;
+    final l$first = first;
+    final l$items = items;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$offset,
+      l$first,
+      Object.hashAll(l$items.map((v) => v)),
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Query$GetSection$section$$AvatarSection$items) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$offset = offset;
+    final lOther$offset = other.offset;
+    if (l$offset != lOther$offset) {
+      return false;
+    }
+    final l$first = first;
+    final lOther$first = other.first;
+    if (l$first != lOther$first) {
+      return false;
+    }
+    final l$items = items;
+    final lOther$items = other.items;
+    if (l$items.length != lOther$items.length) {
+      return false;
+    }
+    for (int i = 0; i < l$items.length; i++) {
+      final l$items$entry = l$items[i];
+      final lOther$items$entry = lOther$items[i];
+      if (l$items$entry != lOther$items$entry) {
+        return false;
+      }
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$GetSection$section$$AvatarSection$items
+    on Query$GetSection$section$$AvatarSection$items {
+  CopyWith$Query$GetSection$section$$AvatarSection$items<
+          Query$GetSection$section$$AvatarSection$items>
+      get copyWith => CopyWith$Query$GetSection$section$$AvatarSection$items(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$GetSection$section$$AvatarSection$items<TRes> {
+  factory CopyWith$Query$GetSection$section$$AvatarSection$items(
+    Query$GetSection$section$$AvatarSection$items instance,
+    TRes Function(Query$GetSection$section$$AvatarSection$items) then,
+  ) = _CopyWithImpl$Query$GetSection$section$$AvatarSection$items;
+
+  factory CopyWith$Query$GetSection$section$$AvatarSection$items.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$GetSection$section$$AvatarSection$items;
+
+  TRes call({
+    int? offset,
+    int? first,
+    List<Fragment$ItemSectionItem>? items,
+    String? $__typename,
+  });
+  TRes items(
+      Iterable<Fragment$ItemSectionItem> Function(
+              Iterable<
+                  CopyWith$Fragment$ItemSectionItem<Fragment$ItemSectionItem>>)
+          _fn);
+}
+
+class _CopyWithImpl$Query$GetSection$section$$AvatarSection$items<TRes>
+    implements CopyWith$Query$GetSection$section$$AvatarSection$items<TRes> {
+  _CopyWithImpl$Query$GetSection$section$$AvatarSection$items(
+    this._instance,
+    this._then,
+  );
+
+  final Query$GetSection$section$$AvatarSection$items _instance;
+
+  final TRes Function(Query$GetSection$section$$AvatarSection$items) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? offset = _undefined,
+    Object? first = _undefined,
+    Object? items = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Query$GetSection$section$$AvatarSection$items(
+        offset: offset == _undefined || offset == null
+            ? _instance.offset
+            : (offset as int),
+        first: first == _undefined || first == null
+            ? _instance.first
+            : (first as int),
+        items: items == _undefined || items == null
+            ? _instance.items
+            : (items as List<Fragment$ItemSectionItem>),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+
+  TRes items(
+          Iterable<Fragment$ItemSectionItem> Function(
+                  Iterable<
+                      CopyWith$Fragment$ItemSectionItem<
+                          Fragment$ItemSectionItem>>)
+              _fn) =>
+      call(
+          items:
+              _fn(_instance.items.map((e) => CopyWith$Fragment$ItemSectionItem(
+                    e,
+                    (i) => i,
+                  ))).toList());
+}
+
+class _CopyWithStubImpl$Query$GetSection$section$$AvatarSection$items<TRes>
+    implements CopyWith$Query$GetSection$section$$AvatarSection$items<TRes> {
+  _CopyWithStubImpl$Query$GetSection$section$$AvatarSection$items(this._res);
 
   TRes _res;
 

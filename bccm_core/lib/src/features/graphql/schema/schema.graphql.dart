@@ -567,6 +567,7 @@ const possibleTypesMap = <String, Set<String>>{
     'SectionPagination',
     'SectionItemPagination',
     'PlaylistItemPagination',
+    'ContributionsPagination',
     'SeasonPagination',
     'QuestionPagination',
     'FAQCategoryPagination',
@@ -597,6 +598,7 @@ const possibleTypesMap = <String, Set<String>>{
     'IconGridSection',
     'IconSection',
     'LabelSection',
+    'AvatarSection',
     'MessageSection',
     'WebSection',
     'AchievementSection',
@@ -614,6 +616,7 @@ const possibleTypesMap = <String, Set<String>>{
     'IconGridSection',
     'IconSection',
     'LabelSection',
+    'AvatarSection',
   },
   'GridSection': {
     'DefaultGridSection',
@@ -630,6 +633,7 @@ const possibleTypesMap = <String, Set<String>>{
     'Game',
     'Playlist',
     'Short',
+    'Person',
   },
   'CollectionItem': {
     'Playlist',
@@ -645,6 +649,10 @@ const possibleTypesMap = <String, Set<String>>{
     'EpisodeCalendarEntry',
     'SeasonCalendarEntry',
     'ShowCalendarEntry',
+  },
+  'ContributionItem': {
+    'Episode',
+    'Chapter',
   },
   'SearchResultItem': {
     'EpisodeSearchItem',

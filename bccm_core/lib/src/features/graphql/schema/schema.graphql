@@ -1,34 +1,31 @@
-directive @goField(
-  forceResolver: Boolean
-  name: String
-) on INPUT_FIELD_DEFINITION | FIELD_DEFINITION
+directive @goField(forceResolver: Boolean, name: String) on INPUT_FIELD_DEFINITION | FIELD_DEFINITION
 
 schema {
-  query: QueryRoot
-  mutation: MutationRoot
+    query: QueryRoot
+    mutation: MutationRoot
 }
 
 interface Pagination {
-  total: Int!
-  first: Int!
-  offset: Int!
+    total: Int!
+    first: Int!
+    offset: Int!
 }
 
 interface CollectionItem {
-  id: ID!
-  title: String!
-  description: String
-  #image(style: ImageStyle): String
+    id: ID!
+    title: String!
+    description: String
+    #image(style: ImageStyle): String
 }
 
 interface MediaItem {
-  id: ID!
-  streams: [Stream!]!
-  files: [File!]!
-  title: String!
-  originalTitle: String!
-  image(style: ImageStyle): String
-  #duration: Int!
+    id: ID!
+    streams: [Stream!]!
+    files: [File!]!
+    title: String!
+    originalTitle: String!
+    image(style: ImageStyle): String
+    #duration: Int!
 }
 
 scalar Language
@@ -36,114 +33,112 @@ scalar Date
 scalar UUID
 
 type Image {
-  style: String!
-  url: String!
+    style: String!
+    url: String!
 }
 
 enum ImageStyle {
-  poster
-  featured
-  default
+    poster
+    featured
+    default
 }
 
 enum Status {
-  published
-  unlisted
+    published
+    unlisted
 }
 
 input LegacyIDLookupOptions {
-  episodeID: Int
-  programID: Int
+    episodeID: Int
+    programID: Int
 }
 
 type LegacyIDLookup {
-  id: ID!
+    id: ID!
 }
 
 input EpisodeContext {
-  collectionId: String
-  playlistId: String
-  shuffle: Boolean
-  cursor: String
+    collectionId: String
+    playlistId: String
+    shuffle: Boolean
+    cursor: String
 }
 
 type RedirectLink {
-  url: String!
-  requiresAuthentication: Boolean!
+    url: String!
+    requiresAuthentication: Boolean!
 }
 
 type RedirectParam {
-  key: String!
-  value: String!
+    key: String!
+    value: String!
 }
 
 type QueryRoot {
-  application(timestamp: String): Application!
-  languages: [Language!]!
+    application(timestamp: String): Application!
+    languages: [Language!]!
 
-  export(
-    # Only export for this groups. The groups will be filtered by the groups the users has access to.
-    # NOT IMPLEMENTED YET!
-    groups: [String!]
-  ): Export!
+    export(
+        # Only export for this groups. The groups will be filtered by the groups the users has access to.
+        # NOT IMPLEMENTED YET!
+        groups: [String!]
+    ): Export!
 
-  redirect(id: String!): RedirectLink!
+    redirect(id: String!): RedirectLink!
 
-  page(id: ID, code: String): Page!
+    page(id: ID, code: String): Page!
 
-  section(id: ID!, timestamp: String): Section!
+    section(id: ID!, timestamp: String): Section!
 
-  show(id: ID!): Show!
+    person(id: ID!): Person!
 
-  season(id: ID!): Season!
+    show(id: ID!): Show!
 
-  episode(id: ID!, context: EpisodeContext): Episode!
+    season(id: ID!): Season!
 
-  playlist(id: ID!): Playlist!
+    episode(id: ID!, context: EpisodeContext): Episode!
 
-  search(
-    queryString: String!
-    first: Int
-    offset: Int
-    type: String
-    minScore: Int
-  ): SearchResult!
+    episodes(ids: [ID!]!): [Episode!]!
 
-  game(id: UUID!): Game!
+    playlist(id: ID!): Playlist!
 
-  short(id: UUID!): Short!
+    search(queryString: String!, first: Int, offset: Int, type: String, minScore: Int): SearchResult!
 
-  shorts(cursor: String, limit: Int, initialShortId: UUID): ShortsPagination!
+    game(id: UUID!): Game!
 
-  pendingAchievements: [Achievement!]!
+    short(id: UUID!): Short!
 
-  achievement(id: ID!): Achievement!
+    shorts(cursor: String, limit: Int, initialShortId: UUID): ShortsPagination!
 
-  achievementGroup(id: ID!): AchievementGroup!
-  achievementGroups(first: Int, offset: Int): AchievementGroupPagination!
+    pendingAchievements: [Achievement!]!
 
-  studyTopic(id: ID!): StudyTopic!
-  studyLesson(id: ID!): Lesson!
+    achievement(id: ID!): Achievement!
 
-  calendar: Calendar
-  event(id: ID!): Event
+    achievementGroup(id: ID!): AchievementGroup!
+    achievementGroups(first: Int, offset: Int): AchievementGroupPagination!
 
-  faq: FAQ!
+    studyTopic(id: ID!): StudyTopic!
+    studyLesson(id: ID!): Lesson!
 
-  me: User!
+    calendar: Calendar
+    event(id: ID!): Event
 
-  myList: UserCollection!
+    faq: FAQ!
 
-  userCollection(id: UUID!): UserCollection!
+    me: User!
 
-  config: Config!
+    myList: UserCollection!
 
-  profiles: [Profile!]!
-  profile: Profile!
+    userCollection(id: UUID!): UserCollection!
 
-  legacyIDLookup(options: LegacyIDLookupOptions): LegacyIDLookup!
+    config: Config!
 
-  prompts(timestamp: Date): [Prompt!]!
+    profiles: [Profile!]!
+    profile: Profile!
 
-  subscriptions: [SubscriptionTopic!]!
+    legacyIDLookup(options: LegacyIDLookupOptions): LegacyIDLookup!
+
+    prompts(timestamp: Date): [Prompt!]!
+
+    subscriptions: [SubscriptionTopic!]!
 }

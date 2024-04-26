@@ -1,0 +1,68 @@
+query GetPerson($id: ID!) {
+  person(id: $id) {
+    id
+    name
+    image
+    contributionTypes {
+      type {
+        code
+        title
+      }
+      count
+    }
+  }
+}
+
+query GetRandomContribution($id: ID!, $types: [String!]) {
+  person(id: $id) {
+    contributions(shuffle: true, first: 1, types: $types) {
+      items {
+        ...Contribution
+      }
+    }
+  }
+}
+
+query GetContributions(
+  $id: ID!
+  $first: Int
+  $offset: Int
+  $shuffle: Boolean
+  $types: [String!]
+) {
+  person(id: $id) {
+    contributions(
+      first: $first
+      offset: $offset
+      shuffle: $shuffle
+      types: $types
+    ) {
+      total
+      first
+      offset
+      items {
+        ...Contribution
+      }
+    }
+  }
+}
+
+fragment Contribution on Contribution {
+  type {
+    code
+  }
+  item {
+    ... on Chapter {
+      id
+      start
+      title
+      image
+      episode {
+        ...EpisodeListEpisode
+      }
+    }
+    ... on Episode {
+      ...EpisodeListEpisode
+    }
+  }
+}
