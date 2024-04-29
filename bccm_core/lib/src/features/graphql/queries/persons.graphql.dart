@@ -244,6 +244,13 @@ const fragmentDefinitionContribution = FragmentDefinitionNode(
               selectionSet: null,
             ),
             FieldNode(
+              name: NameNode(value: 'duration'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null,
+            ),
+            FieldNode(
               name: NameNode(value: 'episode'),
               alias: null,
               arguments: [],
@@ -625,6 +632,7 @@ class Fragment$Contribution$item$$Chapter
     required this.start,
     required this.title,
     this.image,
+    required this.duration,
     this.episode,
     this.$__typename = 'Chapter',
   });
@@ -635,6 +643,7 @@ class Fragment$Contribution$item$$Chapter
     final l$start = json['start'];
     final l$title = json['title'];
     final l$image = json['image'];
+    final l$duration = json['duration'];
     final l$episode = json['episode'];
     final l$$__typename = json['__typename'];
     return Fragment$Contribution$item$$Chapter(
@@ -642,6 +651,7 @@ class Fragment$Contribution$item$$Chapter
       start: (l$start as int),
       title: (l$title as String),
       image: (l$image as String?),
+      duration: (l$duration as int),
       episode: l$episode == null
           ? null
           : Fragment$EpisodeListEpisode.fromJson(
@@ -658,6 +668,8 @@ class Fragment$Contribution$item$$Chapter
 
   final String? image;
 
+  final int duration;
+
   final Fragment$EpisodeListEpisode? episode;
 
   final String $__typename;
@@ -672,6 +684,8 @@ class Fragment$Contribution$item$$Chapter
     _resultData['title'] = l$title;
     final l$image = image;
     _resultData['image'] = l$image;
+    final l$duration = duration;
+    _resultData['duration'] = l$duration;
     final l$episode = episode;
     _resultData['episode'] = l$episode?.toJson();
     final l$$__typename = $__typename;
@@ -685,6 +699,7 @@ class Fragment$Contribution$item$$Chapter
     final l$start = start;
     final l$title = title;
     final l$image = image;
+    final l$duration = duration;
     final l$episode = episode;
     final l$$__typename = $__typename;
     return Object.hashAll([
@@ -692,6 +707,7 @@ class Fragment$Contribution$item$$Chapter
       l$start,
       l$title,
       l$image,
+      l$duration,
       l$episode,
       l$$__typename,
     ]);
@@ -724,6 +740,11 @@ class Fragment$Contribution$item$$Chapter
     final l$image = image;
     final lOther$image = other.image;
     if (l$image != lOther$image) {
+      return false;
+    }
+    final l$duration = duration;
+    final lOther$duration = other.duration;
+    if (l$duration != lOther$duration) {
       return false;
     }
     final l$episode = episode;
@@ -764,6 +785,7 @@ abstract class CopyWith$Fragment$Contribution$item$$Chapter<TRes> {
     int? start,
     String? title,
     String? image,
+    int? duration,
     Fragment$EpisodeListEpisode? episode,
     String? $__typename,
   });
@@ -788,6 +810,7 @@ class _CopyWithImpl$Fragment$Contribution$item$$Chapter<TRes>
     Object? start = _undefined,
     Object? title = _undefined,
     Object? image = _undefined,
+    Object? duration = _undefined,
     Object? episode = _undefined,
     Object? $__typename = _undefined,
   }) =>
@@ -800,6 +823,9 @@ class _CopyWithImpl$Fragment$Contribution$item$$Chapter<TRes>
             ? _instance.title
             : (title as String),
         image: image == _undefined ? _instance.image : (image as String?),
+        duration: duration == _undefined || duration == null
+            ? _instance.duration
+            : (duration as int),
         episode: episode == _undefined
             ? _instance.episode
             : (episode as Fragment$EpisodeListEpisode?),
@@ -828,6 +854,7 @@ class _CopyWithStubImpl$Fragment$Contribution$item$$Chapter<TRes>
     int? start,
     String? title,
     String? image,
+    int? duration,
     Fragment$EpisodeListEpisode? episode,
     String? $__typename,
   }) =>
