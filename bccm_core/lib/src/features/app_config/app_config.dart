@@ -12,11 +12,11 @@ bool isOldAppVersion(BuildContext context, Query$Application appConfig) {
   return getExtendedVersionNumber(minVersionNumber) > getExtendedVersionNumber(currentVersionNumber);
 }
 
-RealtimeUpdate? lastUpdate;
+RealtimeUpdate? _lastUpdate;
 final appConfigFutureProvider = StateProvider<Future<Query$Application>>((ref) async {
   final result = await ref
       .watch(bccmGraphQLProvider)
-      .query$Application(Options$Query$Application(variables: Variables$Query$Application(timestamp: lastUpdate?.updatedAt)));
+      .query$Application(Options$Query$Application(variables: Variables$Query$Application(timestamp: _lastUpdate?.updatedAt)));
   if (result.exception != null) {
     throw result.exception!;
   }
@@ -26,7 +26,7 @@ final appConfigFutureProvider = StateProvider<Future<Query$Application>>((ref) a
   ref.watch(featureFlagVariantListProvider);
   ref.listen(applicationUpdatesProvider(result.parsedData!.application.code), (_, next) {
     if (next.hasValue == true) {
-      lastUpdate = next.value;
+      _lastUpdate = next.value;
     }
     ref.invalidateSelf();
   }, fireImmediately: false);
