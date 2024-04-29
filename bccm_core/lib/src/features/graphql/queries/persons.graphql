@@ -57,6 +57,7 @@ fragment Contribution on Contribution {
       start
       title
       image
+      duration
       episode {
         ...EpisodeListEpisode
       }
