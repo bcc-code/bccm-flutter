@@ -63,9 +63,9 @@ class BccmCore {
       bccmGraphQLProviderOverride,
       authStateProviderOverride,
       analyticsProviderOverride,
-      featureFlagVariantListProviderOverride,
       rawUnleashProviderOverride,
       unleashContextProviderOverride,
+      featureFlagVariantListProviderOverride,
       notificationServiceProviderOverride,
     ].where((element) => element != null).cast<Override>().toList();
   }

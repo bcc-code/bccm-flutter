@@ -23,7 +23,6 @@ final appConfigFutureProvider = StateProvider<Future<Query$Application>>((ref) a
   if (result.parsedData == null) {
     throw ErrorDescription('App config data is null.');
   }
-  ref.watch(featureFlagVariantListProvider);
   ref.listen(applicationUpdatesProvider(result.parsedData!.application.code), (_, next) {
     if (next.hasValue == true) {
       _lastUpdate = next.value;
