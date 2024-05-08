@@ -64,3 +64,10 @@ extension NullableContinuation<T> on T? {
     return null;
   }
 }
+
+/// See https://stackoverflow.com/a/76902362
+bool get isTablet {
+  final firstView = WidgetsBinding.instance.platformDispatcher.views.first;
+  final logicalShortestSide = firstView.physicalSize.shortestSide / firstView.devicePixelRatio;
+  return logicalShortestSide > 550;
+}
