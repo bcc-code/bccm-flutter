@@ -6,13 +6,14 @@
 import 'dart:async' as _i5;
 
 import 'package:bccm_core/src/features/auth/auth0_api.dart' as _i3;
-import 'package:bccm_core/src/models/auth0/auth0_api.dart' as _i8;
+import 'package:bccm_core/src/models/auth0/auth0_api.dart' as _i9;
+import 'package:flutter/foundation.dart' as _i7;
 import 'package:flutter_appauth/src/flutter_appauth.dart' as _i4;
 import 'package:flutter_appauth_platform_interface/flutter_appauth_platform_interface.dart'
     as _i6;
 import 'package:flutter_secure_storage/flutter_secure_storage.dart' as _i2;
 import 'package:mockito/mockito.dart' as _i1;
-import 'package:mockito/src/dummies.dart' as _i7;
+import 'package:mockito/src/dummies.dart' as _i8;
 
 // ignore_for_file: type=lint
 // ignore_for_file: avoid_redundant_argument_values
@@ -248,6 +249,60 @@ class MockFlutterSecureStorage extends _i1.Mock
       ) as _i2.MacOsOptions);
 
   @override
+  void registerListener({
+    required String? key,
+    required _i7.ValueChanged<String?>? listener,
+  }) =>
+      super.noSuchMethod(
+        Invocation.method(
+          #registerListener,
+          [],
+          {
+            #key: key,
+            #listener: listener,
+          },
+        ),
+        returnValueForMissingStub: null,
+      );
+
+  @override
+  void unregisterListener({
+    required String? key,
+    required _i7.ValueChanged<String?>? listener,
+  }) =>
+      super.noSuchMethod(
+        Invocation.method(
+          #unregisterListener,
+          [],
+          {
+            #key: key,
+            #listener: listener,
+          },
+        ),
+        returnValueForMissingStub: null,
+      );
+
+  @override
+  void unregisterAllListenersForKey({required String? key}) =>
+      super.noSuchMethod(
+        Invocation.method(
+          #unregisterAllListenersForKey,
+          [],
+          {#key: key},
+        ),
+        returnValueForMissingStub: null,
+      );
+
+  @override
+  void unregisterAllListeners() => super.noSuchMethod(
+        Invocation.method(
+          #unregisterAllListeners,
+          [],
+        ),
+        returnValueForMissingStub: null,
+      );
+
+  @override
   _i5.Future<void> write({
     required String? key,
     required String? value,
@@ -413,6 +468,16 @@ class MockFlutterSecureStorage extends _i1.Mock
         returnValue: _i5.Future<void>.value(),
         returnValueForMissingStub: _i5.Future<void>.value(),
       ) as _i5.Future<void>);
+
+  @override
+  _i5.Future<bool?> isCupertinoProtectedDataAvailable() => (super.noSuchMethod(
+        Invocation.method(
+          #isCupertinoProtectedDataAvailable,
+          [],
+        ),
+        returnValue: _i5.Future<bool?>.value(),
+        returnValueForMissingStub: _i5.Future<bool?>.value(),
+      ) as _i5.Future<bool?>);
 }
 
 /// A class which mocks [Auth0Api].
@@ -422,11 +487,11 @@ class MockAuth0Api extends _i1.Mock implements _i3.Auth0Api {
   @override
   String get domain => (super.noSuchMethod(
         Invocation.getter(#domain),
-        returnValue: _i7.dummyValue<String>(
+        returnValue: _i8.dummyValue<String>(
           this,
           Invocation.getter(#domain),
         ),
-        returnValueForMissingStub: _i7.dummyValue<String>(
+        returnValueForMissingStub: _i8.dummyValue<String>(
           this,
           Invocation.getter(#domain),
         ),
@@ -435,11 +500,11 @@ class MockAuth0Api extends _i1.Mock implements _i3.Auth0Api {
   @override
   String get clientId => (super.noSuchMethod(
         Invocation.getter(#clientId),
-        returnValue: _i7.dummyValue<String>(
+        returnValue: _i8.dummyValue<String>(
           this,
           Invocation.getter(#clientId),
         ),
-        returnValueForMissingStub: _i7.dummyValue<String>(
+        returnValueForMissingStub: _i8.dummyValue<String>(
           this,
           Invocation.getter(#clientId),
         ),
@@ -448,27 +513,27 @@ class MockAuth0Api extends _i1.Mock implements _i3.Auth0Api {
   @override
   String get audience => (super.noSuchMethod(
         Invocation.getter(#audience),
-        returnValue: _i7.dummyValue<String>(
+        returnValue: _i8.dummyValue<String>(
           this,
           Invocation.getter(#audience),
         ),
-        returnValueForMissingStub: _i7.dummyValue<String>(
+        returnValueForMissingStub: _i8.dummyValue<String>(
           this,
           Invocation.getter(#audience),
         ),
       ) as String);
 
   @override
-  _i5.Future<_i8.Auth0SignupResponse?> signup(
-          _i8.Auth0SignupRequestBody? requestBody) =>
+  _i5.Future<_i9.Auth0SignupResponse?> signup(
+          _i9.Auth0SignupRequestBody? requestBody) =>
       (super.noSuchMethod(
         Invocation.method(
           #signup,
           [requestBody],
         ),
-        returnValue: _i5.Future<_i8.Auth0SignupResponse?>.value(),
-        returnValueForMissingStub: _i5.Future<_i8.Auth0SignupResponse?>.value(),
-      ) as _i5.Future<_i8.Auth0SignupResponse?>);
+        returnValue: _i5.Future<_i9.Auth0SignupResponse?>.value(),
+        returnValueForMissingStub: _i5.Future<_i9.Auth0SignupResponse?>.value(),
+      ) as _i5.Future<_i9.Auth0SignupResponse?>);
 
   @override
   _i5.Future<_i3.DeviceTokenRequestResponse> fetchDeviceCode(

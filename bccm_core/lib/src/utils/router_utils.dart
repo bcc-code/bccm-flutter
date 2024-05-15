@@ -6,8 +6,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 extension StackRouterCustomNavigation on StackRouter {
   Future navigateNamedFromRoot(String path, {OnNavigationFailure? onFailure}) async {
     final context = navigatorKey.currentState?.context;
-    debugPrint('navigateNamedFromRoot, navigatorKey: ${navigatorKey.currentState?.context}, using context: $context');
-    // ignore: use_build_context_synchronously
     if (context != null) {
       final ref = ProviderScope.containerOf(context, listen: false);
       if (await ref.read(specialRoutesHandlerProvider).handle(context, path)) {

@@ -15,5 +15,6 @@ class AuthState with _$AuthState {
     bool? signedOutManually,
   }) = _Auth;
 
-  bool get guestMode => auth0AccessToken == null || user?.hasMembership != true;
+  bool get isLoggedIn => auth0AccessToken != null && user != null;
+  bool get isBccMember => auth0AccessToken != null && user?.hasMembership == true;
 }

@@ -53,10 +53,6 @@ class Auth0IdToken {
   final int iat;
   final int exp;
 
-  bool? get mediaSubscriber => userMetadata?['media_subscriber'];
-  bool? get hasMembership => appMetadata?['hasMembership'];
-  String? get bccPersonId => appMetadata?['personId']?.toString();
-
   @JsonKey(name: 'auth_time')
   final int? authTime; // this might be null for the first time login
 
