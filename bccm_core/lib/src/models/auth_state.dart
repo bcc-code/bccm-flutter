@@ -16,5 +16,5 @@ class AuthState with _$AuthState {
   }) = _Auth;
 
   bool get isLoggedIn => auth0AccessToken != null && user != null;
-  bool get isBccMember => auth0AccessToken != null && user?.hasMembership == true;
+  bool get isBccMember => isLoggedIn && user?.hasMembership == true;
 }
