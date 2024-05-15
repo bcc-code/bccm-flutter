@@ -27,14 +27,15 @@ mixin _$UserProfile {
   String? get updatedAt => throw _privateConstructorUsedError;
   String? get countryIso2Code => throw _privateConstructorUsedError;
   int? get churchId => throw _privateConstructorUsedError;
-  Map<String, dynamic>? get appMetadata => throw _privateConstructorUsedError;
-  Map<String, dynamic>? get userMetadata => throw _privateConstructorUsedError;
   String? get birthdate => throw _privateConstructorUsedError;
   String? get email => throw _privateConstructorUsedError;
   String? get gender => throw _privateConstructorUsedError;
   String? get authTime => throw _privateConstructorUsedError;
   String? get givenName => throw _privateConstructorUsedError;
   String? get familyName => throw _privateConstructorUsedError;
+  bool? get mediaSubscriber => throw _privateConstructorUsedError;
+  bool? get hasMembership => throw _privateConstructorUsedError;
+  String? get bccPersonId => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -56,14 +57,15 @@ abstract class $UserProfileCopyWith<$Res> {
       String? updatedAt,
       String? countryIso2Code,
       int? churchId,
-      Map<String, dynamic>? appMetadata,
-      Map<String, dynamic>? userMetadata,
       String? birthdate,
       String? email,
       String? gender,
       String? authTime,
       String? givenName,
-      String? familyName});
+      String? familyName,
+      bool? mediaSubscriber,
+      bool? hasMembership,
+      String? bccPersonId});
 }
 
 /// @nodoc
@@ -86,14 +88,15 @@ class _$UserProfileCopyWithImpl<$Res, $Val extends UserProfile>
     Object? updatedAt = freezed,
     Object? countryIso2Code = freezed,
     Object? churchId = freezed,
-    Object? appMetadata = freezed,
-    Object? userMetadata = freezed,
     Object? birthdate = freezed,
     Object? email = freezed,
     Object? gender = freezed,
     Object? authTime = freezed,
     Object? givenName = freezed,
     Object? familyName = freezed,
+    Object? mediaSubscriber = freezed,
+    Object? hasMembership = freezed,
+    Object? bccPersonId = freezed,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -124,14 +127,6 @@ class _$UserProfileCopyWithImpl<$Res, $Val extends UserProfile>
           ? _value.churchId
           : churchId // ignore: cast_nullable_to_non_nullable
               as int?,
-      appMetadata: freezed == appMetadata
-          ? _value.appMetadata
-          : appMetadata // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
-      userMetadata: freezed == userMetadata
-          ? _value.userMetadata
-          : userMetadata // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
       birthdate: freezed == birthdate
           ? _value.birthdate
           : birthdate // ignore: cast_nullable_to_non_nullable
@@ -156,6 +151,18 @@ class _$UserProfileCopyWithImpl<$Res, $Val extends UserProfile>
           ? _value.familyName
           : familyName // ignore: cast_nullable_to_non_nullable
               as String?,
+      mediaSubscriber: freezed == mediaSubscriber
+          ? _value.mediaSubscriber
+          : mediaSubscriber // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      hasMembership: freezed == hasMembership
+          ? _value.hasMembership
+          : hasMembership // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      bccPersonId: freezed == bccPersonId
+          ? _value.bccPersonId
+          : bccPersonId // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
@@ -176,14 +183,15 @@ abstract class _$$UserProfileImplCopyWith<$Res>
       String? updatedAt,
       String? countryIso2Code,
       int? churchId,
-      Map<String, dynamic>? appMetadata,
-      Map<String, dynamic>? userMetadata,
       String? birthdate,
       String? email,
       String? gender,
       String? authTime,
       String? givenName,
-      String? familyName});
+      String? familyName,
+      bool? mediaSubscriber,
+      bool? hasMembership,
+      String? bccPersonId});
 }
 
 /// @nodoc
@@ -204,14 +212,15 @@ class __$$UserProfileImplCopyWithImpl<$Res>
     Object? updatedAt = freezed,
     Object? countryIso2Code = freezed,
     Object? churchId = freezed,
-    Object? appMetadata = freezed,
-    Object? userMetadata = freezed,
     Object? birthdate = freezed,
     Object? email = freezed,
     Object? gender = freezed,
     Object? authTime = freezed,
     Object? givenName = freezed,
     Object? familyName = freezed,
+    Object? mediaSubscriber = freezed,
+    Object? hasMembership = freezed,
+    Object? bccPersonId = freezed,
   }) {
     return _then(_$UserProfileImpl(
       id: null == id
@@ -242,14 +251,6 @@ class __$$UserProfileImplCopyWithImpl<$Res>
           ? _value.churchId
           : churchId // ignore: cast_nullable_to_non_nullable
               as int?,
-      appMetadata: freezed == appMetadata
-          ? _value._appMetadata
-          : appMetadata // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
-      userMetadata: freezed == userMetadata
-          ? _value._userMetadata
-          : userMetadata // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
       birthdate: freezed == birthdate
           ? _value.birthdate
           : birthdate // ignore: cast_nullable_to_non_nullable
@@ -274,6 +275,18 @@ class __$$UserProfileImplCopyWithImpl<$Res>
           ? _value.familyName
           : familyName // ignore: cast_nullable_to_non_nullable
               as String?,
+      mediaSubscriber: freezed == mediaSubscriber
+          ? _value.mediaSubscriber
+          : mediaSubscriber // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      hasMembership: freezed == hasMembership
+          ? _value.hasMembership
+          : hasMembership // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      bccPersonId: freezed == bccPersonId
+          ? _value.bccPersonId
+          : bccPersonId // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -289,17 +302,16 @@ class _$UserProfileImpl extends _UserProfile {
       this.updatedAt,
       this.countryIso2Code,
       this.churchId,
-      final Map<String, dynamic>? appMetadata,
-      final Map<String, dynamic>? userMetadata,
       this.birthdate,
       this.email,
       this.gender,
       this.authTime,
       this.givenName,
-      this.familyName})
-      : _appMetadata = appMetadata,
-        _userMetadata = userMetadata,
-        super._();
+      this.familyName,
+      this.mediaSubscriber,
+      this.hasMembership,
+      this.bccPersonId})
+      : super._();
 
   factory _$UserProfileImpl.fromJson(Map<String, dynamic> json) =>
       _$$UserProfileImplFromJson(json);
@@ -318,26 +330,6 @@ class _$UserProfileImpl extends _UserProfile {
   final String? countryIso2Code;
   @override
   final int? churchId;
-  final Map<String, dynamic>? _appMetadata;
-  @override
-  Map<String, dynamic>? get appMetadata {
-    final value = _appMetadata;
-    if (value == null) return null;
-    if (_appMetadata is EqualUnmodifiableMapView) return _appMetadata;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableMapView(value);
-  }
-
-  final Map<String, dynamic>? _userMetadata;
-  @override
-  Map<String, dynamic>? get userMetadata {
-    final value = _userMetadata;
-    if (value == null) return null;
-    if (_userMetadata is EqualUnmodifiableMapView) return _userMetadata;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableMapView(value);
-  }
-
   @override
   final String? birthdate;
   @override
@@ -350,10 +342,16 @@ class _$UserProfileImpl extends _UserProfile {
   final String? givenName;
   @override
   final String? familyName;
+  @override
+  final bool? mediaSubscriber;
+  @override
+  final bool? hasMembership;
+  @override
+  final String? bccPersonId;
 
   @override
   String toString() {
-    return 'UserProfile(id: $id, name: $name, nickname: $nickname, picture: $picture, updatedAt: $updatedAt, countryIso2Code: $countryIso2Code, churchId: $churchId, appMetadata: $appMetadata, userMetadata: $userMetadata, birthdate: $birthdate, email: $email, gender: $gender, authTime: $authTime, givenName: $givenName, familyName: $familyName)';
+    return 'UserProfile(id: $id, name: $name, nickname: $nickname, picture: $picture, updatedAt: $updatedAt, countryIso2Code: $countryIso2Code, churchId: $churchId, birthdate: $birthdate, email: $email, gender: $gender, authTime: $authTime, givenName: $givenName, familyName: $familyName, mediaSubscriber: $mediaSubscriber, hasMembership: $hasMembership, bccPersonId: $bccPersonId)';
   }
 
   @override
@@ -372,10 +370,6 @@ class _$UserProfileImpl extends _UserProfile {
                 other.countryIso2Code == countryIso2Code) &&
             (identical(other.churchId, churchId) ||
                 other.churchId == churchId) &&
-            const DeepCollectionEquality()
-                .equals(other._appMetadata, _appMetadata) &&
-            const DeepCollectionEquality()
-                .equals(other._userMetadata, _userMetadata) &&
             (identical(other.birthdate, birthdate) ||
                 other.birthdate == birthdate) &&
             (identical(other.email, email) || other.email == email) &&
@@ -385,7 +379,13 @@ class _$UserProfileImpl extends _UserProfile {
             (identical(other.givenName, givenName) ||
                 other.givenName == givenName) &&
             (identical(other.familyName, familyName) ||
-                other.familyName == familyName));
+                other.familyName == familyName) &&
+            (identical(other.mediaSubscriber, mediaSubscriber) ||
+                other.mediaSubscriber == mediaSubscriber) &&
+            (identical(other.hasMembership, hasMembership) ||
+                other.hasMembership == hasMembership) &&
+            (identical(other.bccPersonId, bccPersonId) ||
+                other.bccPersonId == bccPersonId));
   }
 
   @JsonKey(ignore: true)
@@ -399,14 +399,15 @@ class _$UserProfileImpl extends _UserProfile {
       updatedAt,
       countryIso2Code,
       churchId,
-      const DeepCollectionEquality().hash(_appMetadata),
-      const DeepCollectionEquality().hash(_userMetadata),
       birthdate,
       email,
       gender,
       authTime,
       givenName,
-      familyName);
+      familyName,
+      mediaSubscriber,
+      hasMembership,
+      bccPersonId);
 
   @JsonKey(ignore: true)
   @override
@@ -431,14 +432,15 @@ abstract class _UserProfile extends UserProfile {
       final String? updatedAt,
       final String? countryIso2Code,
       final int? churchId,
-      final Map<String, dynamic>? appMetadata,
-      final Map<String, dynamic>? userMetadata,
       final String? birthdate,
       final String? email,
       final String? gender,
       final String? authTime,
       final String? givenName,
-      final String? familyName}) = _$UserProfileImpl;
+      final String? familyName,
+      final bool? mediaSubscriber,
+      final bool? hasMembership,
+      final String? bccPersonId}) = _$UserProfileImpl;
   const _UserProfile._() : super._();
 
   factory _UserProfile.fromJson(Map<String, dynamic> json) =
@@ -459,10 +461,6 @@ abstract class _UserProfile extends UserProfile {
   @override
   int? get churchId;
   @override
-  Map<String, dynamic>? get appMetadata;
-  @override
-  Map<String, dynamic>? get userMetadata;
-  @override
   String? get birthdate;
   @override
   String? get email;
@@ -474,6 +472,12 @@ abstract class _UserProfile extends UserProfile {
   String? get givenName;
   @override
   String? get familyName;
+  @override
+  bool? get mediaSubscriber;
+  @override
+  bool? get hasMembership;
+  @override
+  String? get bccPersonId;
   @override
   @JsonKey(ignore: true)
   _$$UserProfileImplCopyWith<_$UserProfileImpl> get copyWith =>

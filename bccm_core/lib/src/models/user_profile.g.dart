@@ -15,14 +15,15 @@ _$UserProfileImpl _$$UserProfileImplFromJson(Map<String, dynamic> json) =>
       updatedAt: json['updatedAt'] as String?,
       countryIso2Code: json['countryIso2Code'] as String?,
       churchId: (json['churchId'] as num?)?.toInt(),
-      appMetadata: json['appMetadata'] as Map<String, dynamic>?,
-      userMetadata: json['userMetadata'] as Map<String, dynamic>?,
       birthdate: json['birthdate'] as String?,
       email: json['email'] as String?,
       gender: json['gender'] as String?,
       authTime: json['authTime'] as String?,
       givenName: json['givenName'] as String?,
       familyName: json['familyName'] as String?,
+      mediaSubscriber: json['mediaSubscriber'] as bool?,
+      hasMembership: json['hasMembership'] as bool?,
+      bccPersonId: json['bccPersonId'] as String?,
     );
 
 Map<String, dynamic> _$$UserProfileImplToJson(_$UserProfileImpl instance) =>
@@ -34,12 +35,13 @@ Map<String, dynamic> _$$UserProfileImplToJson(_$UserProfileImpl instance) =>
       'updatedAt': instance.updatedAt,
       'countryIso2Code': instance.countryIso2Code,
       'churchId': instance.churchId,
-      'appMetadata': instance.appMetadata,
-      'userMetadata': instance.userMetadata,
       'birthdate': instance.birthdate,
       'email': instance.email,
       'gender': instance.gender,
       'authTime': instance.authTime,
       'givenName': instance.givenName,
       'familyName': instance.familyName,
+      'mediaSubscriber': instance.mediaSubscriber,
+      'hasMembership': instance.hasMembership,
+      'bccPersonId': instance.bccPersonId,
     };

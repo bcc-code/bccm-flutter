@@ -15,19 +15,16 @@ class UserProfile with _$UserProfile {
     String? updatedAt,
     String? countryIso2Code,
     int? churchId,
-    Map<String, dynamic>? appMetadata,
-    Map<String, dynamic>? userMetadata,
     String? birthdate,
     String? email,
     String? gender,
     String? authTime,
     String? givenName,
     String? familyName,
+    bool? mediaSubscriber,
+    bool? hasMembership,
+    String? bccPersonId,
   }) = _UserProfile;
-
-  bool? get mediaSubscriber => userMetadata?['media_subscriber'];
-  bool? get hasMembership => appMetadata?['hasMembership'];
-  String? get bccPersonId => appMetadata?['personId']?.toString();
 
   static UserProfile mergeWithIdToken(Auth0IdToken token, UserProfile? user) {
     return UserProfile(
@@ -38,10 +35,11 @@ class UserProfile with _$UserProfile {
       updatedAt: token.updatedAt ?? user?.updatedAt,
       countryIso2Code: token.countryIso2Code ?? user?.countryIso2Code,
       churchId: token.churchId ?? user?.churchId,
-      appMetadata: token.appMetadata ?? user?.appMetadata,
-      userMetadata: token.userMetadata ?? user?.userMetadata,
       birthdate: token.birthdate ?? user?.birthdate,
       email: token.email ?? user?.email,
+      mediaSubscriber: token.userMetadata?['media_subscriber'] ?? user?.mediaSubscriber,
+      hasMembership: token.userMetadata?['has_membership'] ?? user?.hasMembership,
+      bccPersonId: token.userMetadata?['bcc_person_id'] ?? user?.bccPersonId,
     );
   }
 
