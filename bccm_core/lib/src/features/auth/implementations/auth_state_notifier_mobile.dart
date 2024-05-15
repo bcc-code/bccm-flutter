@@ -82,17 +82,11 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
     final idToken = await _secureStorage.read(key: SecureStorageKeys.idToken);
     final userProfileRaw = await _secureStorage.read(key: SecureStorageKeys.userProfile);
 
-    if (accessToken == null || idToken == null) {
+    if (accessToken == null || idToken == null || userProfileRaw == null) {
       return false;
     }
 
-    UserProfile userProfile;
-    if (userProfileRaw == null) {
-      // This should only happen during the transition period.
-      userProfile = UserProfile.mergeWithIdToken(_parseIdToken(idToken), null);
-    } else {
-      userProfile = UserProfile.fromJson(jsonDecode(userProfileRaw));
-    }
+    final userProfile = UserProfile.fromJson(jsonDecode(userProfileRaw));
 
     DateTime? expiry;
     try {
