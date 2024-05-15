@@ -18,7 +18,7 @@ class BccmGraphqlHeaders {
   final List<String> acceptLanguage;
   final String application;
   final String applicationVersion;
-  final String featureFlags;
+  final List<String>? featureFlags;
   final List<String> extraUsergroups;
 
   Map<String, String> toMap() {
@@ -26,7 +26,7 @@ class BccmGraphqlHeaders {
       'Accept-Language': acceptLanguage.join(','),
       'X-Application': application,
       'X-Application-Version': applicationVersion,
-      'X-Feature-Flags': featureFlags,
+      if (featureFlags?.isNotEmpty == true) 'X-Feature-Flags': featureFlags!.join(','),
       if (extraUsergroups.isNotEmpty) 'x-explicit-roles': extraUsergroups.join(','),
     };
   }
