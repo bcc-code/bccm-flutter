@@ -41,7 +41,7 @@ class UserProfile with _$UserProfile {
       familyName: token.familyName ?? user?.familyName,
       mediaSubscriber: token.userMetadata?['media_subscriber'] ?? user?.mediaSubscriber,
       hasMembership: token.appMetadata?['hasMembership'] ?? user?.hasMembership,
-      bccPersonId: token.appMetadata?['personId'] ?? user?.bccPersonId,
+      bccPersonId: token.appMetadata?['personId']?.toString() ?? user?.bccPersonId,
     );
   }
 
