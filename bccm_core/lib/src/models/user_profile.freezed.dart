@@ -30,7 +30,6 @@ mixin _$UserProfile {
   String? get birthdate => throw _privateConstructorUsedError;
   String? get email => throw _privateConstructorUsedError;
   String? get gender => throw _privateConstructorUsedError;
-  String? get authTime => throw _privateConstructorUsedError;
   String? get givenName => throw _privateConstructorUsedError;
   String? get familyName => throw _privateConstructorUsedError;
   bool? get mediaSubscriber => throw _privateConstructorUsedError;
@@ -60,7 +59,6 @@ abstract class $UserProfileCopyWith<$Res> {
       String? birthdate,
       String? email,
       String? gender,
-      String? authTime,
       String? givenName,
       String? familyName,
       bool? mediaSubscriber,
@@ -91,7 +89,6 @@ class _$UserProfileCopyWithImpl<$Res, $Val extends UserProfile>
     Object? birthdate = freezed,
     Object? email = freezed,
     Object? gender = freezed,
-    Object? authTime = freezed,
     Object? givenName = freezed,
     Object? familyName = freezed,
     Object? mediaSubscriber = freezed,
@@ -139,10 +136,6 @@ class _$UserProfileCopyWithImpl<$Res, $Val extends UserProfile>
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
               as String?,
-      authTime: freezed == authTime
-          ? _value.authTime
-          : authTime // ignore: cast_nullable_to_non_nullable
-              as String?,
       givenName: freezed == givenName
           ? _value.givenName
           : givenName // ignore: cast_nullable_to_non_nullable
@@ -186,7 +179,6 @@ abstract class _$$UserProfileImplCopyWith<$Res>
       String? birthdate,
       String? email,
       String? gender,
-      String? authTime,
       String? givenName,
       String? familyName,
       bool? mediaSubscriber,
@@ -215,7 +207,6 @@ class __$$UserProfileImplCopyWithImpl<$Res>
     Object? birthdate = freezed,
     Object? email = freezed,
     Object? gender = freezed,
-    Object? authTime = freezed,
     Object? givenName = freezed,
     Object? familyName = freezed,
     Object? mediaSubscriber = freezed,
@@ -263,10 +254,6 @@ class __$$UserProfileImplCopyWithImpl<$Res>
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
               as String?,
-      authTime: freezed == authTime
-          ? _value.authTime
-          : authTime // ignore: cast_nullable_to_non_nullable
-              as String?,
       givenName: freezed == givenName
           ? _value.givenName
           : givenName // ignore: cast_nullable_to_non_nullable
@@ -305,7 +292,6 @@ class _$UserProfileImpl extends _UserProfile {
       this.birthdate,
       this.email,
       this.gender,
-      this.authTime,
       this.givenName,
       this.familyName,
       this.mediaSubscriber,
@@ -337,8 +323,6 @@ class _$UserProfileImpl extends _UserProfile {
   @override
   final String? gender;
   @override
-  final String? authTime;
-  @override
   final String? givenName;
   @override
   final String? familyName;
@@ -351,7 +335,7 @@ class _$UserProfileImpl extends _UserProfile {
 
   @override
   String toString() {
-    return 'UserProfile(id: $id, name: $name, nickname: $nickname, picture: $picture, updatedAt: $updatedAt, countryIso2Code: $countryIso2Code, churchId: $churchId, birthdate: $birthdate, email: $email, gender: $gender, authTime: $authTime, givenName: $givenName, familyName: $familyName, mediaSubscriber: $mediaSubscriber, hasMembership: $hasMembership, bccPersonId: $bccPersonId)';
+    return 'UserProfile(id: $id, name: $name, nickname: $nickname, picture: $picture, updatedAt: $updatedAt, countryIso2Code: $countryIso2Code, churchId: $churchId, birthdate: $birthdate, email: $email, gender: $gender, givenName: $givenName, familyName: $familyName, mediaSubscriber: $mediaSubscriber, hasMembership: $hasMembership, bccPersonId: $bccPersonId)';
   }
 
   @override
@@ -374,8 +358,6 @@ class _$UserProfileImpl extends _UserProfile {
                 other.birthdate == birthdate) &&
             (identical(other.email, email) || other.email == email) &&
             (identical(other.gender, gender) || other.gender == gender) &&
-            (identical(other.authTime, authTime) ||
-                other.authTime == authTime) &&
             (identical(other.givenName, givenName) ||
                 other.givenName == givenName) &&
             (identical(other.familyName, familyName) ||
@@ -402,7 +384,6 @@ class _$UserProfileImpl extends _UserProfile {
       birthdate,
       email,
       gender,
-      authTime,
       givenName,
       familyName,
       mediaSubscriber,
@@ -435,7 +416,6 @@ abstract class _UserProfile extends UserProfile {
       final String? birthdate,
       final String? email,
       final String? gender,
-      final String? authTime,
       final String? givenName,
       final String? familyName,
       final bool? mediaSubscriber,
@@ -466,8 +446,6 @@ abstract class _UserProfile extends UserProfile {
   String? get email;
   @override
   String? get gender;
-  @override
-  String? get authTime;
   @override
   String? get givenName;
   @override
