@@ -11,10 +11,10 @@ _$SectionClickedEventImpl _$$SectionClickedEventImplFromJson(
     _$SectionClickedEventImpl(
       sectionId: json['sectionId'] as String,
       sectionName: json['sectionName'] as String?,
-      sectionPosition: json['sectionPosition'] as int,
+      sectionPosition: (json['sectionPosition'] as num).toInt(),
       sectionType: json['sectionType'] as String,
       elementName: json['elementName'] as String?,
-      elementPosition: json['elementPosition'] as int,
+      elementPosition: (json['elementPosition'] as num).toInt(),
       elementType: json['elementType'] as String,
       elementId: json['elementId'] as String,
       pageCode: json['pageCode'] as String?,

@@ -9,7 +9,7 @@ part of 'achievement_clicked.dart';
 _$AchievementClickedEventImpl _$$AchievementClickedEventImplFromJson(
         Map<String, dynamic> json) =>
     _$AchievementClickedEventImpl(
-      elementPosition: json['elementPosition'] as int,
+      elementPosition: (json['elementPosition'] as num).toInt(),
       elementTitle: json['elementTitle'] as String,
     );
 

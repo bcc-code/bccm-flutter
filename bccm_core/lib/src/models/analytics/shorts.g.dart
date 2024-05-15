@@ -11,10 +11,10 @@ _$ShortStartedEventImpl _$$ShortStartedEventImplFromJson(
     _$ShortStartedEventImpl(
       shortId: json['shortId'] as String,
       shortTitle: json['shortTitle'] as String,
-      replayCount: json['replayCount'] as int,
+      replayCount: (json['replayCount'] as num).toInt(),
       resumed: json['resumed'] as bool,
       positionFraction: (json['positionFraction'] as num).toDouble(),
-      positionSeconds: json['positionSeconds'] as int,
+      positionSeconds: (json['positionSeconds'] as num).toInt(),
     );
 
 Map<String, dynamic> _$$ShortStartedEventImplToJson(
@@ -34,8 +34,8 @@ _$ShortStoppedEventImpl _$$ShortStoppedEventImplFromJson(
       shortId: json['shortId'] as String,
       shortTitle: json['shortTitle'] as String?,
       positionFraction: (json['positionFraction'] as num).toDouble(),
-      positionSeconds: json['positionSeconds'] as int,
-      replayCount: json['replayCount'] as int,
+      positionSeconds: (json['positionSeconds'] as num).toInt(),
+      replayCount: (json['replayCount'] as num).toInt(),
     );
 
 Map<String, dynamic> _$$ShortStoppedEventImplToJson(

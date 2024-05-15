@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:bccm_core/bccm_core.dart';
+import 'package:bccm_core/src/models/user_profile.dart';
 import 'package:clock/clock.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_appauth/flutter_appauth.dart';
@@ -79,10 +80,14 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
   Future<bool> load() async {
     final accessToken = await _secureStorage.read(key: SecureStorageKeys.accessToken);
     final idToken = await _secureStorage.read(key: SecureStorageKeys.idToken);
+    final userProfileRaw = await _secureStorage.read(key: SecureStorageKeys.userProfile);
 
-    if (accessToken == null || idToken == null) {
+    if (accessToken == null || idToken == null || userProfileRaw == null) {
       return false;
     }
+
+    final userProfile = UserProfile.fromJson(jsonDecode(userProfileRaw));
+
     DateTime? expiry;
     try {
       expiry = _getAccessTokenExpiry(accessToken);
@@ -102,9 +107,9 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
         return true;
       } else {
         state = state.copyWith(
+          user: userProfile,
           auth0AccessToken: accessToken,
           idToken: idToken,
-          user: _parseIdToken(idToken),
           expiresAt: expiry,
           signedOutManually: null,
         );
@@ -112,9 +117,9 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
       }
     }
     state = state.copyWith(
+      user: userProfile,
       auth0AccessToken: accessToken,
       idToken: idToken,
-      user: _parseIdToken(idToken),
       expiresAt: expiry,
       signedOutManually: null,
     );
@@ -170,6 +175,7 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
         _secureStorage.delete(key: SecureStorageKeys.refreshToken),
         _secureStorage.delete(key: SecureStorageKeys.accessToken),
         _secureStorage.delete(key: SecureStorageKeys.idToken),
+        _secureStorage.delete(key: SecureStorageKeys.userProfile),
       ],
     );
   }
@@ -273,10 +279,16 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
       ));
     }
 
+    final userProfile = UserProfile.mergeWithIdToken(_parseIdToken(idToken), state.user);
+
     await Future.wait([
       _secureStorage.write(
         key: SecureStorageKeys.idToken,
         value: idToken,
+      ),
+      _secureStorage.write(
+        key: SecureStorageKeys.userProfile,
+        value: jsonEncode(userProfile.toJson()),
       ),
       _secureStorage.write(
         key: SecureStorageKeys.accessToken,
@@ -290,11 +302,12 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
     ]);
 
     state = state.copyWith(
-        auth0AccessToken: accessToken,
-        idToken: idToken,
-        user: _parseIdToken(idToken),
-        expiresAt: _getAccessTokenExpiry(accessToken),
-        signedOutManually: false);
+      auth0AccessToken: accessToken,
+      idToken: idToken,
+      user: userProfile,
+      expiresAt: _getAccessTokenExpiry(accessToken),
+      signedOutManually: false,
+    );
   }
 }
 

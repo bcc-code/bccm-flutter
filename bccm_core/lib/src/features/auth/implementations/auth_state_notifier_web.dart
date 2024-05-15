@@ -2,6 +2,7 @@ import 'package:auth0_flutter_web/auth0_flutter_web.dart';
 import 'package:bccm_core/src/models/auth0/auth0_id_token.dart';
 import 'package:bccm_core/src/models/auth_state.dart';
 import 'package:bccm_core/src/features/auth/auth0_api.dart';
+import 'package:bccm_core/src/models/user_profile.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../auth_state.dart';
@@ -43,11 +44,12 @@ class AuthStateNotifierWeb extends StateNotifier<AuthState> implements AuthState
       return;
     }
     final user = await auth0.getIdTokenClaims();
-    final userProfile = Auth0IdToken.fromJson(user!);
     final accessToken = await auth0.getTokenSilently();
-    final idToken = (await auth0.getIdTokenClaims())!['__raw'];
+    final idTokenRaw = (await auth0.getIdTokenClaims())!['__raw'];
+    final idToken = Auth0IdToken.fromJson(user!);
+    final userProfile = UserProfile.mergeWithIdToken(idToken, null);
     final expiresAt = DateTime.now().add(const Duration(days: 2));
-    state = state.copyWith(auth0AccessToken: accessToken, idToken: idToken, user: userProfile, expiresAt: expiresAt);
+    state = state.copyWith(auth0AccessToken: accessToken, idToken: idTokenRaw, user: userProfile, expiresAt: expiresAt);
   }
 
   @override

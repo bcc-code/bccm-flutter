@@ -12,7 +12,7 @@ _$ContentSharedEventImpl _$$ContentSharedEventImplFromJson(
       pageCode: json['pageCode'] as String,
       elementType: json['elementType'] as String,
       elementId: json['elementId'] as String,
-      position: json['position'] as int?,
+      position: (json['position'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$$ContentSharedEventImplToJson(

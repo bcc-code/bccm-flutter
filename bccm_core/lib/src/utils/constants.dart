@@ -6,6 +6,7 @@ class SecureStorageKeys {
   static const refreshToken = 'refresh_token';
   static const idToken = 'id_token';
   static const accessToken = 'access_token';
+  static const userProfile = 'user_profile';
 }
 
 const kBccmIosId = '913268220';
