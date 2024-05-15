@@ -16,7 +16,7 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$AuthState {
-  Auth0IdToken? get user => throw _privateConstructorUsedError;
+  UserProfile? get user => throw _privateConstructorUsedError;
   String? get auth0AccessToken => throw _privateConstructorUsedError;
   DateTime? get expiresAt => throw _privateConstructorUsedError;
   String? get idToken => throw _privateConstructorUsedError;
@@ -33,11 +33,13 @@ abstract class $AuthStateCopyWith<$Res> {
       _$AuthStateCopyWithImpl<$Res, AuthState>;
   @useResult
   $Res call(
-      {Auth0IdToken? user,
+      {UserProfile? user,
       String? auth0AccessToken,
       DateTime? expiresAt,
       String? idToken,
       bool? signedOutManually});
+
+  $UserProfileCopyWith<$Res>? get user;
 }
 
 /// @nodoc
@@ -63,7 +65,7 @@ class _$AuthStateCopyWithImpl<$Res, $Val extends AuthState>
       user: freezed == user
           ? _value.user
           : user // ignore: cast_nullable_to_non_nullable
-              as Auth0IdToken?,
+              as UserProfile?,
       auth0AccessToken: freezed == auth0AccessToken
           ? _value.auth0AccessToken
           : auth0AccessToken // ignore: cast_nullable_to_non_nullable
@@ -82,6 +84,18 @@ class _$AuthStateCopyWithImpl<$Res, $Val extends AuthState>
               as bool?,
     ) as $Val);
   }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UserProfileCopyWith<$Res>? get user {
+    if (_value.user == null) {
+      return null;
+    }
+
+    return $UserProfileCopyWith<$Res>(_value.user!, (value) {
+      return _then(_value.copyWith(user: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
@@ -92,11 +106,14 @@ abstract class _$$AuthImplCopyWith<$Res> implements $AuthStateCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {Auth0IdToken? user,
+      {UserProfile? user,
       String? auth0AccessToken,
       DateTime? expiresAt,
       String? idToken,
       bool? signedOutManually});
+
+  @override
+  $UserProfileCopyWith<$Res>? get user;
 }
 
 /// @nodoc
@@ -119,7 +136,7 @@ class __$$AuthImplCopyWithImpl<$Res>
       user: freezed == user
           ? _value.user
           : user // ignore: cast_nullable_to_non_nullable
-              as Auth0IdToken?,
+              as UserProfile?,
       auth0AccessToken: freezed == auth0AccessToken
           ? _value.auth0AccessToken
           : auth0AccessToken // ignore: cast_nullable_to_non_nullable
@@ -152,7 +169,7 @@ class _$AuthImpl extends _Auth {
       : super._();
 
   @override
-  final Auth0IdToken? user;
+  final UserProfile? user;
   @override
   final String? auth0AccessToken;
   @override
@@ -195,7 +212,7 @@ class _$AuthImpl extends _Auth {
 
 abstract class _Auth extends AuthState {
   const factory _Auth(
-      {final Auth0IdToken? user,
+      {final UserProfile? user,
       final String? auth0AccessToken,
       final DateTime? expiresAt,
       final String? idToken,
@@ -203,7 +220,7 @@ abstract class _Auth extends AuthState {
   const _Auth._() : super._();
 
   @override
-  Auth0IdToken? get user;
+  UserProfile? get user;
   @override
   String? get auth0AccessToken;
   @override

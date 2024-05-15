@@ -1,5 +1,6 @@
 import 'package:bccm_core/bccm_core.dart';
 import 'package:bccm_core/platform.dart';
+import 'package:bccm_core/src/models/user_profile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -48,7 +49,7 @@ class Analytics {
   @mustBeOverridden
   void chapterClicked(ChapterClickedEvent event) {}
   @mustBeOverridden
-  void identify(Auth0IdToken profile, String analyticsId) {}
+  void identify(UserProfile profile, String analyticsId) {}
   @mustBeOverridden
   void screen(String screenName, {Map<String, Object?>? properties}) {}
   @mustBeOverridden
@@ -273,7 +274,7 @@ class RudderAnalytics extends Analytics {
   }
 
   @override
-  void identify(Auth0IdToken profile, String analyticsId) {
+  void identify(UserProfile profile, String analyticsId) {
     final traits = RudderTraits();
 
     traits.put('ageGroup', getAgeGroupFromUser(profile).name);
@@ -377,7 +378,7 @@ int getAgeFromBirthDate(DateTime birthdate) {
   }
 }
 
-({int start, String name}) getAgeGroupFromUser(Auth0IdToken user) {
+({int start, String name}) getAgeGroupFromUser(UserProfile user) {
   final birthDateTime = user.birthdate?.let((b) => DateTime.tryParse(b));
   if (birthDateTime != null) {
     final age = getAgeFromBirthDate(birthDateTime);

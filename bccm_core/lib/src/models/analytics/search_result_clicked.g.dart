@@ -10,7 +10,7 @@ _$SectionClickedEventImpl _$$SectionClickedEventImplFromJson(
         Map<String, dynamic> json) =>
     _$SectionClickedEventImpl(
       searchText: json['searchText'] as String,
-      elementPosition: json['elementPosition'] as int,
+      elementPosition: (json['elementPosition'] as num).toInt(),
       elementType: json['elementType'] as String,
       elementId: json['elementId'] as String,
       group: json['group'] as String,

@@ -71,7 +71,7 @@ _$Auth0ApiExceptionImpl _$$Auth0ApiExceptionImplFromJson(
       name: json['name'] as String?,
       code: json['code'] as String?,
       description: json['description'] as String?,
-      statusCode: json['statusCode'] as int?,
+      statusCode: (json['statusCode'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$$Auth0ApiExceptionImplToJson(

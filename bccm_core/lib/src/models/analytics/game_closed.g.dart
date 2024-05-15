@@ -10,8 +10,8 @@ _$GameClosedEventImpl _$$GameClosedEventImplFromJson(
         Map<String, dynamic> json) =>
     _$GameClosedEventImpl(
       gameId: json['gameId'] as String,
-      timeSpent: json['timeSpent'] as int,
-      position: json['position'] as int?,
+      timeSpent: (json['timeSpent'] as num).toInt(),
+      position: (json['position'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$$GameClosedEventImplToJson(

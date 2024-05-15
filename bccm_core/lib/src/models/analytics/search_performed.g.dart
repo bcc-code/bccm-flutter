@@ -10,8 +10,8 @@ _$SearchPerformedEventImpl _$$SearchPerformedEventImplFromJson(
         Map<String, dynamic> json) =>
     _$SearchPerformedEventImpl(
       searchText: json['searchText'] as String,
-      searchLatency: json['searchLatency'] as int,
-      searchResultCount: json['searchResultCount'] as int,
+      searchLatency: (json['searchLatency'] as num).toInt(),
+      searchResultCount: (json['searchResultCount'] as num).toInt(),
     );
 
 Map<String, dynamic> _$$SearchPerformedEventImplToJson(
