@@ -8649,6 +8649,14 @@ const documentNodeQueryFetchEpisode = DocumentNode(definitions: [
   fragmentDefinitionSeasonListEpisode,
   fragmentDefinitionGridSectionItem,
   fragmentDefinitionItemSectionItem,
+  fragmentDefinitionNavigatablePerson,
+  fragmentDefinitionNavigatableGame,
+  fragmentDefinitionNavigatableLink,
+  fragmentDefinitionNavigatablePlaylist,
+  fragmentDefinitionNavigatablePage,
+  fragmentDefinitionNavigatableShort,
+  fragmentDefinitionNavigatableEpisode,
+  fragmentDefinitionNavigatableShow,
 ]);
 Query$FetchEpisode _parserFn$Query$FetchEpisode(Map<String, dynamic> data) =>
     Query$FetchEpisode.fromJson(data);

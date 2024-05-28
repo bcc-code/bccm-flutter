@@ -642,6 +642,7 @@ const possibleTypesMap = <String, Set<String>>{
     'StudyTopic',
     'Short',
     'Episode',
+    'Chapter',
     'Show',
   },
   'CalendarEntry': {

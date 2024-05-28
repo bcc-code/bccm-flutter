@@ -23,25 +23,14 @@ fragment ItemSectionItem on SectionItem {
   title
   image
   item {
-    ... on Person {
-      id
-    }
-    ... on Game {
-      uuid: id
-    }
-    ... on Link {
-      url
-    }
-    ... on Playlist {
-      id
-      __typename
-    }
-    ... on Page {
-      code
-    }
-    ... on Short {
-      id
-    }
+    ...NavigatablePerson
+    ...NavigatableGame
+    ...NavigatableLink
+    ...NavigatablePlaylist
+    ...NavigatablePage
+    ...NavigatableShort
+    ...NavigatableEpisode
+    ...NavigatableShow
     ... on Episode {
       id
       duration
@@ -56,13 +45,46 @@ fragment ItemSectionItem on SectionItem {
     }
     ... on Show {
       id
-      defaultEpisode {
-        id
-      }
       episodeCount
       seasonCount
     }
     __typename
+  }
+}
+
+fragment NavigatablePerson on Person {
+  id
+}
+fragment NavigatableGame on Game {
+  uuid: id
+}
+fragment NavigatableLink on Link {
+  url
+}
+fragment NavigatablePlaylist on Playlist {
+  id
+}
+fragment NavigatablePage on Page {
+  code
+}
+fragment NavigatableShort on Short {
+  id
+}
+fragment NavigatableEpisode on Episode {
+  id
+  locked
+}
+fragment NavigatableShow on Show {
+  id
+  defaultEpisode {
+    id
+  }
+}
+fragment NavigatableChapter on Chapter {
+  id
+  start
+  episode {
+    id
   }
 }
 

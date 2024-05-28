@@ -52,6 +52,7 @@ fragment Contribution on Contribution {
     code
   }
   item {
+    ...NavigatableChapter
     ... on Chapter {
       id
       start
@@ -66,4 +67,8 @@ fragment Contribution on Contribution {
       ...EpisodeListEpisode
     }
   }
+}
+
+fragment ContributionItemId on CollectionItem {
+  id
 }
