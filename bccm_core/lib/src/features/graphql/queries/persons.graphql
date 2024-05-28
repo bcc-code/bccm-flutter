@@ -52,7 +52,13 @@ fragment Contribution on Contribution {
     code
   }
   item {
+    ...ContributionItemId
     ...NavigatableChapter
+    ...NavigatableEpisode
+    ... on CollectionItem {
+      id
+      title
+    }
     ... on Chapter {
       id
       start

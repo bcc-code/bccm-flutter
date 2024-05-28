@@ -209,8 +209,47 @@ const fragmentDefinitionContribution = FragmentDefinitionNode(
       directives: [],
       selectionSet: SelectionSetNode(selections: [
         FragmentSpreadNode(
+          name: NameNode(value: 'ContributionItemId'),
+          directives: [],
+        ),
+        FragmentSpreadNode(
           name: NameNode(value: 'NavigatableChapter'),
           directives: [],
+        ),
+        FragmentSpreadNode(
+          name: NameNode(value: 'NavigatableEpisode'),
+          directives: [],
+        ),
+        InlineFragmentNode(
+          typeCondition: TypeConditionNode(
+              on: NamedTypeNode(
+            name: NameNode(value: 'CollectionItem'),
+            isNonNull: false,
+          )),
+          directives: [],
+          selectionSet: SelectionSetNode(selections: [
+            FieldNode(
+              name: NameNode(value: 'id'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null,
+            ),
+            FieldNode(
+              name: NameNode(value: 'title'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null,
+            ),
+            FieldNode(
+              name: NameNode(value: '__typename'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null,
+            ),
+          ]),
         ),
         InlineFragmentNode(
           typeCondition: TypeConditionNode(
@@ -324,7 +363,9 @@ const fragmentDefinitionContribution = FragmentDefinitionNode(
 );
 const documentNodeFragmentContribution = DocumentNode(definitions: [
   fragmentDefinitionContribution,
+  fragmentDefinitionContributionItemId,
   fragmentDefinitionNavigatableChapter,
+  fragmentDefinitionNavigatableEpisode,
   fragmentDefinitionEpisodeListEpisode,
   fragmentDefinitionSeasonListEpisode,
 ]);
@@ -494,11 +535,11 @@ class Fragment$Contribution$item {
 
   factory Fragment$Contribution$item.fromJson(Map<String, dynamic> json) {
     switch (json["__typename"] as String) {
-      case "Chapter":
-        return Fragment$Contribution$item$$Chapter.fromJson(json);
-
       case "Episode":
         return Fragment$Contribution$item$$Episode.fromJson(json);
+
+      case "Chapter":
+        return Fragment$Contribution$item$$Chapter.fromJson(json);
 
       default:
         final l$$__typename = json['__typename'];
@@ -548,16 +589,16 @@ extension UtilityExtension$Fragment$Contribution$item
             (i) => i,
           );
   _T when<_T>({
-    required _T Function(Fragment$Contribution$item$$Chapter) chapter,
     required _T Function(Fragment$Contribution$item$$Episode) episode,
+    required _T Function(Fragment$Contribution$item$$Chapter) chapter,
     required _T Function() orElse,
   }) {
     switch ($__typename) {
-      case "Chapter":
-        return chapter(this as Fragment$Contribution$item$$Chapter);
-
       case "Episode":
         return episode(this as Fragment$Contribution$item$$Episode);
+
+      case "Chapter":
+        return chapter(this as Fragment$Contribution$item$$Chapter);
 
       default:
         return orElse();
@@ -565,21 +606,21 @@ extension UtilityExtension$Fragment$Contribution$item
   }
 
   _T maybeWhen<_T>({
-    _T Function(Fragment$Contribution$item$$Chapter)? chapter,
     _T Function(Fragment$Contribution$item$$Episode)? episode,
+    _T Function(Fragment$Contribution$item$$Chapter)? chapter,
     required _T Function() orElse,
   }) {
     switch ($__typename) {
-      case "Chapter":
-        if (chapter != null) {
-          return chapter(this as Fragment$Contribution$item$$Chapter);
+      case "Episode":
+        if (episode != null) {
+          return episode(this as Fragment$Contribution$item$$Episode);
         } else {
           return orElse();
         }
 
-      case "Episode":
-        if (episode != null) {
-          return episode(this as Fragment$Contribution$item$$Episode);
+      case "Chapter":
+        if (chapter != null) {
+          return chapter(this as Fragment$Contribution$item$$Chapter);
         } else {
           return orElse();
         }
@@ -631,46 +672,404 @@ class _CopyWithStubImpl$Fragment$Contribution$item<TRes>
   call({String? $__typename}) => _res;
 }
 
+class Fragment$Contribution$item$$Episode
+    implements
+        Fragment$EpisodeListEpisode,
+        Fragment$SeasonListEpisode,
+        Fragment$ContributionItemId$$Episode,
+        Fragment$NavigatableEpisode,
+        Fragment$Contribution$item {
+  Fragment$Contribution$item$$Episode({
+    required this.id,
+    required this.title,
+    this.$__typename = 'Episode',
+    this.image,
+    this.number,
+    required this.publishDate,
+    required this.ageRating,
+    required this.duration,
+    required this.locked,
+    required this.lessons,
+    this.progress,
+    this.season,
+  });
+
+  factory Fragment$Contribution$item$$Episode.fromJson(
+      Map<String, dynamic> json) {
+    final l$id = json['id'];
+    final l$title = json['title'];
+    final l$$__typename = json['__typename'];
+    final l$image = json['image'];
+    final l$number = json['number'];
+    final l$publishDate = json['publishDate'];
+    final l$ageRating = json['ageRating'];
+    final l$duration = json['duration'];
+    final l$locked = json['locked'];
+    final l$lessons = json['lessons'];
+    final l$progress = json['progress'];
+    final l$season = json['season'];
+    return Fragment$Contribution$item$$Episode(
+      id: (l$id as String),
+      title: (l$title as String),
+      $__typename: (l$$__typename as String),
+      image: (l$image as String?),
+      number: (l$number as int?),
+      publishDate: (l$publishDate as String),
+      ageRating: (l$ageRating as String),
+      duration: (l$duration as int),
+      locked: (l$locked as bool),
+      lessons: Fragment$Contribution$item$$Episode$lessons.fromJson(
+          (l$lessons as Map<String, dynamic>)),
+      progress: (l$progress as int?),
+      season: l$season == null
+          ? null
+          : Fragment$Contribution$item$$Episode$season.fromJson(
+              (l$season as Map<String, dynamic>)),
+    );
+  }
+
+  final String id;
+
+  final String title;
+
+  final String $__typename;
+
+  final String? image;
+
+  final int? number;
+
+  final String publishDate;
+
+  final String ageRating;
+
+  final int duration;
+
+  final bool locked;
+
+  final Fragment$Contribution$item$$Episode$lessons lessons;
+
+  final int? progress;
+
+  final Fragment$Contribution$item$$Episode$season? season;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$id = id;
+    _resultData['id'] = l$id;
+    final l$title = title;
+    _resultData['title'] = l$title;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    final l$image = image;
+    _resultData['image'] = l$image;
+    final l$number = number;
+    _resultData['number'] = l$number;
+    final l$publishDate = publishDate;
+    _resultData['publishDate'] = l$publishDate;
+    final l$ageRating = ageRating;
+    _resultData['ageRating'] = l$ageRating;
+    final l$duration = duration;
+    _resultData['duration'] = l$duration;
+    final l$locked = locked;
+    _resultData['locked'] = l$locked;
+    final l$lessons = lessons;
+    _resultData['lessons'] = l$lessons.toJson();
+    final l$progress = progress;
+    _resultData['progress'] = l$progress;
+    final l$season = season;
+    _resultData['season'] = l$season?.toJson();
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$id = id;
+    final l$title = title;
+    final l$$__typename = $__typename;
+    final l$image = image;
+    final l$number = number;
+    final l$publishDate = publishDate;
+    final l$ageRating = ageRating;
+    final l$duration = duration;
+    final l$locked = locked;
+    final l$lessons = lessons;
+    final l$progress = progress;
+    final l$season = season;
+    return Object.hashAll([
+      l$id,
+      l$title,
+      l$$__typename,
+      l$image,
+      l$number,
+      l$publishDate,
+      l$ageRating,
+      l$duration,
+      l$locked,
+      l$lessons,
+      l$progress,
+      l$season,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Fragment$Contribution$item$$Episode) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$id = id;
+    final lOther$id = other.id;
+    if (l$id != lOther$id) {
+      return false;
+    }
+    final l$title = title;
+    final lOther$title = other.title;
+    if (l$title != lOther$title) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    final l$image = image;
+    final lOther$image = other.image;
+    if (l$image != lOther$image) {
+      return false;
+    }
+    final l$number = number;
+    final lOther$number = other.number;
+    if (l$number != lOther$number) {
+      return false;
+    }
+    final l$publishDate = publishDate;
+    final lOther$publishDate = other.publishDate;
+    if (l$publishDate != lOther$publishDate) {
+      return false;
+    }
+    final l$ageRating = ageRating;
+    final lOther$ageRating = other.ageRating;
+    if (l$ageRating != lOther$ageRating) {
+      return false;
+    }
+    final l$duration = duration;
+    final lOther$duration = other.duration;
+    if (l$duration != lOther$duration) {
+      return false;
+    }
+    final l$locked = locked;
+    final lOther$locked = other.locked;
+    if (l$locked != lOther$locked) {
+      return false;
+    }
+    final l$lessons = lessons;
+    final lOther$lessons = other.lessons;
+    if (l$lessons != lOther$lessons) {
+      return false;
+    }
+    final l$progress = progress;
+    final lOther$progress = other.progress;
+    if (l$progress != lOther$progress) {
+      return false;
+    }
+    final l$season = season;
+    final lOther$season = other.season;
+    if (l$season != lOther$season) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$Contribution$item$$Episode
+    on Fragment$Contribution$item$$Episode {
+  CopyWith$Fragment$Contribution$item$$Episode<
+          Fragment$Contribution$item$$Episode>
+      get copyWith => CopyWith$Fragment$Contribution$item$$Episode(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$Contribution$item$$Episode<TRes> {
+  factory CopyWith$Fragment$Contribution$item$$Episode(
+    Fragment$Contribution$item$$Episode instance,
+    TRes Function(Fragment$Contribution$item$$Episode) then,
+  ) = _CopyWithImpl$Fragment$Contribution$item$$Episode;
+
+  factory CopyWith$Fragment$Contribution$item$$Episode.stub(TRes res) =
+      _CopyWithStubImpl$Fragment$Contribution$item$$Episode;
+
+  TRes call({
+    String? id,
+    String? title,
+    String? $__typename,
+    String? image,
+    int? number,
+    String? publishDate,
+    String? ageRating,
+    int? duration,
+    bool? locked,
+    Fragment$Contribution$item$$Episode$lessons? lessons,
+    int? progress,
+    Fragment$Contribution$item$$Episode$season? season,
+  });
+  CopyWith$Fragment$Contribution$item$$Episode$lessons<TRes> get lessons;
+  CopyWith$Fragment$Contribution$item$$Episode$season<TRes> get season;
+}
+
+class _CopyWithImpl$Fragment$Contribution$item$$Episode<TRes>
+    implements CopyWith$Fragment$Contribution$item$$Episode<TRes> {
+  _CopyWithImpl$Fragment$Contribution$item$$Episode(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$Contribution$item$$Episode _instance;
+
+  final TRes Function(Fragment$Contribution$item$$Episode) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? id = _undefined,
+    Object? title = _undefined,
+    Object? $__typename = _undefined,
+    Object? image = _undefined,
+    Object? number = _undefined,
+    Object? publishDate = _undefined,
+    Object? ageRating = _undefined,
+    Object? duration = _undefined,
+    Object? locked = _undefined,
+    Object? lessons = _undefined,
+    Object? progress = _undefined,
+    Object? season = _undefined,
+  }) =>
+      _then(Fragment$Contribution$item$$Episode(
+        id: id == _undefined || id == null ? _instance.id : (id as String),
+        title: title == _undefined || title == null
+            ? _instance.title
+            : (title as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+        image: image == _undefined ? _instance.image : (image as String?),
+        number: number == _undefined ? _instance.number : (number as int?),
+        publishDate: publishDate == _undefined || publishDate == null
+            ? _instance.publishDate
+            : (publishDate as String),
+        ageRating: ageRating == _undefined || ageRating == null
+            ? _instance.ageRating
+            : (ageRating as String),
+        duration: duration == _undefined || duration == null
+            ? _instance.duration
+            : (duration as int),
+        locked: locked == _undefined || locked == null
+            ? _instance.locked
+            : (locked as bool),
+        lessons: lessons == _undefined || lessons == null
+            ? _instance.lessons
+            : (lessons as Fragment$Contribution$item$$Episode$lessons),
+        progress:
+            progress == _undefined ? _instance.progress : (progress as int?),
+        season: season == _undefined
+            ? _instance.season
+            : (season as Fragment$Contribution$item$$Episode$season?),
+      ));
+
+  CopyWith$Fragment$Contribution$item$$Episode$lessons<TRes> get lessons {
+    final local$lessons = _instance.lessons;
+    return CopyWith$Fragment$Contribution$item$$Episode$lessons(
+        local$lessons, (e) => call(lessons: e));
+  }
+
+  CopyWith$Fragment$Contribution$item$$Episode$season<TRes> get season {
+    final local$season = _instance.season;
+    return local$season == null
+        ? CopyWith$Fragment$Contribution$item$$Episode$season.stub(
+            _then(_instance))
+        : CopyWith$Fragment$Contribution$item$$Episode$season(
+            local$season, (e) => call(season: e));
+  }
+}
+
+class _CopyWithStubImpl$Fragment$Contribution$item$$Episode<TRes>
+    implements CopyWith$Fragment$Contribution$item$$Episode<TRes> {
+  _CopyWithStubImpl$Fragment$Contribution$item$$Episode(this._res);
+
+  TRes _res;
+
+  call({
+    String? id,
+    String? title,
+    String? $__typename,
+    String? image,
+    int? number,
+    String? publishDate,
+    String? ageRating,
+    int? duration,
+    bool? locked,
+    Fragment$Contribution$item$$Episode$lessons? lessons,
+    int? progress,
+    Fragment$Contribution$item$$Episode$season? season,
+  }) =>
+      _res;
+
+  CopyWith$Fragment$Contribution$item$$Episode$lessons<TRes> get lessons =>
+      CopyWith$Fragment$Contribution$item$$Episode$lessons.stub(_res);
+
+  CopyWith$Fragment$Contribution$item$$Episode$season<TRes> get season =>
+      CopyWith$Fragment$Contribution$item$$Episode$season.stub(_res);
+}
+
 class Fragment$Contribution$item$$Chapter
-    implements Fragment$NavigatableChapter, Fragment$Contribution$item {
+    implements
+        Fragment$ContributionItemId$$Chapter,
+        Fragment$NavigatableChapter,
+        Fragment$Contribution$item {
   Fragment$Contribution$item$$Chapter({
     required this.id,
-    required this.start,
     required this.title,
+    this.$__typename = 'Chapter',
+    required this.start,
     this.image,
     required this.duration,
     this.episode,
-    this.$__typename = 'Chapter',
   });
 
   factory Fragment$Contribution$item$$Chapter.fromJson(
       Map<String, dynamic> json) {
     final l$id = json['id'];
-    final l$start = json['start'];
     final l$title = json['title'];
+    final l$$__typename = json['__typename'];
+    final l$start = json['start'];
     final l$image = json['image'];
     final l$duration = json['duration'];
     final l$episode = json['episode'];
-    final l$$__typename = json['__typename'];
     return Fragment$Contribution$item$$Chapter(
       id: (l$id as String),
-      start: (l$start as int),
       title: (l$title as String),
+      $__typename: (l$$__typename as String),
+      start: (l$start as int),
       image: (l$image as String?),
       duration: (l$duration as int),
       episode: l$episode == null
           ? null
           : Fragment$Contribution$item$$Chapter$episode.fromJson(
               (l$episode as Map<String, dynamic>)),
-      $__typename: (l$$__typename as String),
     );
   }
 
   final String id;
 
-  final int start;
-
   final String title;
+
+  final String $__typename;
+
+  final int start;
 
   final String? image;
 
@@ -678,44 +1077,42 @@ class Fragment$Contribution$item$$Chapter
 
   final Fragment$Contribution$item$$Chapter$episode? episode;
 
-  final String $__typename;
-
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
     final l$id = id;
     _resultData['id'] = l$id;
-    final l$start = start;
-    _resultData['start'] = l$start;
     final l$title = title;
     _resultData['title'] = l$title;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    final l$start = start;
+    _resultData['start'] = l$start;
     final l$image = image;
     _resultData['image'] = l$image;
     final l$duration = duration;
     _resultData['duration'] = l$duration;
     final l$episode = episode;
     _resultData['episode'] = l$episode?.toJson();
-    final l$$__typename = $__typename;
-    _resultData['__typename'] = l$$__typename;
     return _resultData;
   }
 
   @override
   int get hashCode {
     final l$id = id;
-    final l$start = start;
     final l$title = title;
+    final l$$__typename = $__typename;
+    final l$start = start;
     final l$image = image;
     final l$duration = duration;
     final l$episode = episode;
-    final l$$__typename = $__typename;
     return Object.hashAll([
       l$id,
-      l$start,
       l$title,
+      l$$__typename,
+      l$start,
       l$image,
       l$duration,
       l$episode,
-      l$$__typename,
     ]);
   }
 
@@ -733,14 +1130,19 @@ class Fragment$Contribution$item$$Chapter
     if (l$id != lOther$id) {
       return false;
     }
-    final l$start = start;
-    final lOther$start = other.start;
-    if (l$start != lOther$start) {
-      return false;
-    }
     final l$title = title;
     final lOther$title = other.title;
     if (l$title != lOther$title) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    final l$start = start;
+    final lOther$start = other.start;
+    if (l$start != lOther$start) {
       return false;
     }
     final l$image = image;
@@ -756,11 +1158,6 @@ class Fragment$Contribution$item$$Chapter
     final l$episode = episode;
     final lOther$episode = other.episode;
     if (l$episode != lOther$episode) {
-      return false;
-    }
-    final l$$__typename = $__typename;
-    final lOther$$__typename = other.$__typename;
-    if (l$$__typename != lOther$$__typename) {
       return false;
     }
     return true;
@@ -788,12 +1185,12 @@ abstract class CopyWith$Fragment$Contribution$item$$Chapter<TRes> {
 
   TRes call({
     String? id,
-    int? start,
     String? title,
+    String? $__typename,
+    int? start,
     String? image,
     int? duration,
     Fragment$Contribution$item$$Chapter$episode? episode,
-    String? $__typename,
   });
   CopyWith$Fragment$Contribution$item$$Chapter$episode<TRes> get episode;
 }
@@ -813,21 +1210,24 @@ class _CopyWithImpl$Fragment$Contribution$item$$Chapter<TRes>
 
   TRes call({
     Object? id = _undefined,
-    Object? start = _undefined,
     Object? title = _undefined,
+    Object? $__typename = _undefined,
+    Object? start = _undefined,
     Object? image = _undefined,
     Object? duration = _undefined,
     Object? episode = _undefined,
-    Object? $__typename = _undefined,
   }) =>
       _then(Fragment$Contribution$item$$Chapter(
         id: id == _undefined || id == null ? _instance.id : (id as String),
-        start: start == _undefined || start == null
-            ? _instance.start
-            : (start as int),
         title: title == _undefined || title == null
             ? _instance.title
             : (title as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+        start: start == _undefined || start == null
+            ? _instance.start
+            : (start as int),
         image: image == _undefined ? _instance.image : (image as String?),
         duration: duration == _undefined || duration == null
             ? _instance.duration
@@ -835,9 +1235,6 @@ class _CopyWithImpl$Fragment$Contribution$item$$Chapter<TRes>
         episode: episode == _undefined
             ? _instance.episode
             : (episode as Fragment$Contribution$item$$Chapter$episode?),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
       ));
 
   CopyWith$Fragment$Contribution$item$$Chapter$episode<TRes> get episode {
@@ -858,12 +1255,12 @@ class _CopyWithStubImpl$Fragment$Contribution$item$$Chapter<TRes>
 
   call({
     String? id,
-    int? start,
     String? title,
+    String? $__typename,
+    int? start,
     String? image,
     int? duration,
     Fragment$Contribution$item$$Chapter$episode? episode,
-    String? $__typename,
   }) =>
       _res;
 
@@ -1651,357 +2048,6 @@ class _CopyWithStubImpl$Fragment$Contribution$item$$Chapter$episode$season$show<
     String? $__typename,
   }) =>
       _res;
-}
-
-class Fragment$Contribution$item$$Episode
-    implements
-        Fragment$EpisodeListEpisode,
-        Fragment$SeasonListEpisode,
-        Fragment$Contribution$item {
-  Fragment$Contribution$item$$Episode({
-    required this.id,
-    this.image,
-    this.number,
-    required this.title,
-    required this.publishDate,
-    required this.ageRating,
-    required this.duration,
-    required this.locked,
-    required this.lessons,
-    this.$__typename = 'Episode',
-    this.progress,
-    this.season,
-  });
-
-  factory Fragment$Contribution$item$$Episode.fromJson(
-      Map<String, dynamic> json) {
-    final l$id = json['id'];
-    final l$image = json['image'];
-    final l$number = json['number'];
-    final l$title = json['title'];
-    final l$publishDate = json['publishDate'];
-    final l$ageRating = json['ageRating'];
-    final l$duration = json['duration'];
-    final l$locked = json['locked'];
-    final l$lessons = json['lessons'];
-    final l$$__typename = json['__typename'];
-    final l$progress = json['progress'];
-    final l$season = json['season'];
-    return Fragment$Contribution$item$$Episode(
-      id: (l$id as String),
-      image: (l$image as String?),
-      number: (l$number as int?),
-      title: (l$title as String),
-      publishDate: (l$publishDate as String),
-      ageRating: (l$ageRating as String),
-      duration: (l$duration as int),
-      locked: (l$locked as bool),
-      lessons: Fragment$Contribution$item$$Episode$lessons.fromJson(
-          (l$lessons as Map<String, dynamic>)),
-      $__typename: (l$$__typename as String),
-      progress: (l$progress as int?),
-      season: l$season == null
-          ? null
-          : Fragment$Contribution$item$$Episode$season.fromJson(
-              (l$season as Map<String, dynamic>)),
-    );
-  }
-
-  final String id;
-
-  final String? image;
-
-  final int? number;
-
-  final String title;
-
-  final String publishDate;
-
-  final String ageRating;
-
-  final int duration;
-
-  final bool locked;
-
-  final Fragment$Contribution$item$$Episode$lessons lessons;
-
-  final String $__typename;
-
-  final int? progress;
-
-  final Fragment$Contribution$item$$Episode$season? season;
-
-  Map<String, dynamic> toJson() {
-    final _resultData = <String, dynamic>{};
-    final l$id = id;
-    _resultData['id'] = l$id;
-    final l$image = image;
-    _resultData['image'] = l$image;
-    final l$number = number;
-    _resultData['number'] = l$number;
-    final l$title = title;
-    _resultData['title'] = l$title;
-    final l$publishDate = publishDate;
-    _resultData['publishDate'] = l$publishDate;
-    final l$ageRating = ageRating;
-    _resultData['ageRating'] = l$ageRating;
-    final l$duration = duration;
-    _resultData['duration'] = l$duration;
-    final l$locked = locked;
-    _resultData['locked'] = l$locked;
-    final l$lessons = lessons;
-    _resultData['lessons'] = l$lessons.toJson();
-    final l$$__typename = $__typename;
-    _resultData['__typename'] = l$$__typename;
-    final l$progress = progress;
-    _resultData['progress'] = l$progress;
-    final l$season = season;
-    _resultData['season'] = l$season?.toJson();
-    return _resultData;
-  }
-
-  @override
-  int get hashCode {
-    final l$id = id;
-    final l$image = image;
-    final l$number = number;
-    final l$title = title;
-    final l$publishDate = publishDate;
-    final l$ageRating = ageRating;
-    final l$duration = duration;
-    final l$locked = locked;
-    final l$lessons = lessons;
-    final l$$__typename = $__typename;
-    final l$progress = progress;
-    final l$season = season;
-    return Object.hashAll([
-      l$id,
-      l$image,
-      l$number,
-      l$title,
-      l$publishDate,
-      l$ageRating,
-      l$duration,
-      l$locked,
-      l$lessons,
-      l$$__typename,
-      l$progress,
-      l$season,
-    ]);
-  }
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) {
-      return true;
-    }
-    if (!(other is Fragment$Contribution$item$$Episode) ||
-        runtimeType != other.runtimeType) {
-      return false;
-    }
-    final l$id = id;
-    final lOther$id = other.id;
-    if (l$id != lOther$id) {
-      return false;
-    }
-    final l$image = image;
-    final lOther$image = other.image;
-    if (l$image != lOther$image) {
-      return false;
-    }
-    final l$number = number;
-    final lOther$number = other.number;
-    if (l$number != lOther$number) {
-      return false;
-    }
-    final l$title = title;
-    final lOther$title = other.title;
-    if (l$title != lOther$title) {
-      return false;
-    }
-    final l$publishDate = publishDate;
-    final lOther$publishDate = other.publishDate;
-    if (l$publishDate != lOther$publishDate) {
-      return false;
-    }
-    final l$ageRating = ageRating;
-    final lOther$ageRating = other.ageRating;
-    if (l$ageRating != lOther$ageRating) {
-      return false;
-    }
-    final l$duration = duration;
-    final lOther$duration = other.duration;
-    if (l$duration != lOther$duration) {
-      return false;
-    }
-    final l$locked = locked;
-    final lOther$locked = other.locked;
-    if (l$locked != lOther$locked) {
-      return false;
-    }
-    final l$lessons = lessons;
-    final lOther$lessons = other.lessons;
-    if (l$lessons != lOther$lessons) {
-      return false;
-    }
-    final l$$__typename = $__typename;
-    final lOther$$__typename = other.$__typename;
-    if (l$$__typename != lOther$$__typename) {
-      return false;
-    }
-    final l$progress = progress;
-    final lOther$progress = other.progress;
-    if (l$progress != lOther$progress) {
-      return false;
-    }
-    final l$season = season;
-    final lOther$season = other.season;
-    if (l$season != lOther$season) {
-      return false;
-    }
-    return true;
-  }
-}
-
-extension UtilityExtension$Fragment$Contribution$item$$Episode
-    on Fragment$Contribution$item$$Episode {
-  CopyWith$Fragment$Contribution$item$$Episode<
-          Fragment$Contribution$item$$Episode>
-      get copyWith => CopyWith$Fragment$Contribution$item$$Episode(
-            this,
-            (i) => i,
-          );
-}
-
-abstract class CopyWith$Fragment$Contribution$item$$Episode<TRes> {
-  factory CopyWith$Fragment$Contribution$item$$Episode(
-    Fragment$Contribution$item$$Episode instance,
-    TRes Function(Fragment$Contribution$item$$Episode) then,
-  ) = _CopyWithImpl$Fragment$Contribution$item$$Episode;
-
-  factory CopyWith$Fragment$Contribution$item$$Episode.stub(TRes res) =
-      _CopyWithStubImpl$Fragment$Contribution$item$$Episode;
-
-  TRes call({
-    String? id,
-    String? image,
-    int? number,
-    String? title,
-    String? publishDate,
-    String? ageRating,
-    int? duration,
-    bool? locked,
-    Fragment$Contribution$item$$Episode$lessons? lessons,
-    String? $__typename,
-    int? progress,
-    Fragment$Contribution$item$$Episode$season? season,
-  });
-  CopyWith$Fragment$Contribution$item$$Episode$lessons<TRes> get lessons;
-  CopyWith$Fragment$Contribution$item$$Episode$season<TRes> get season;
-}
-
-class _CopyWithImpl$Fragment$Contribution$item$$Episode<TRes>
-    implements CopyWith$Fragment$Contribution$item$$Episode<TRes> {
-  _CopyWithImpl$Fragment$Contribution$item$$Episode(
-    this._instance,
-    this._then,
-  );
-
-  final Fragment$Contribution$item$$Episode _instance;
-
-  final TRes Function(Fragment$Contribution$item$$Episode) _then;
-
-  static const _undefined = <dynamic, dynamic>{};
-
-  TRes call({
-    Object? id = _undefined,
-    Object? image = _undefined,
-    Object? number = _undefined,
-    Object? title = _undefined,
-    Object? publishDate = _undefined,
-    Object? ageRating = _undefined,
-    Object? duration = _undefined,
-    Object? locked = _undefined,
-    Object? lessons = _undefined,
-    Object? $__typename = _undefined,
-    Object? progress = _undefined,
-    Object? season = _undefined,
-  }) =>
-      _then(Fragment$Contribution$item$$Episode(
-        id: id == _undefined || id == null ? _instance.id : (id as String),
-        image: image == _undefined ? _instance.image : (image as String?),
-        number: number == _undefined ? _instance.number : (number as int?),
-        title: title == _undefined || title == null
-            ? _instance.title
-            : (title as String),
-        publishDate: publishDate == _undefined || publishDate == null
-            ? _instance.publishDate
-            : (publishDate as String),
-        ageRating: ageRating == _undefined || ageRating == null
-            ? _instance.ageRating
-            : (ageRating as String),
-        duration: duration == _undefined || duration == null
-            ? _instance.duration
-            : (duration as int),
-        locked: locked == _undefined || locked == null
-            ? _instance.locked
-            : (locked as bool),
-        lessons: lessons == _undefined || lessons == null
-            ? _instance.lessons
-            : (lessons as Fragment$Contribution$item$$Episode$lessons),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-        progress:
-            progress == _undefined ? _instance.progress : (progress as int?),
-        season: season == _undefined
-            ? _instance.season
-            : (season as Fragment$Contribution$item$$Episode$season?),
-      ));
-
-  CopyWith$Fragment$Contribution$item$$Episode$lessons<TRes> get lessons {
-    final local$lessons = _instance.lessons;
-    return CopyWith$Fragment$Contribution$item$$Episode$lessons(
-        local$lessons, (e) => call(lessons: e));
-  }
-
-  CopyWith$Fragment$Contribution$item$$Episode$season<TRes> get season {
-    final local$season = _instance.season;
-    return local$season == null
-        ? CopyWith$Fragment$Contribution$item$$Episode$season.stub(
-            _then(_instance))
-        : CopyWith$Fragment$Contribution$item$$Episode$season(
-            local$season, (e) => call(season: e));
-  }
-}
-
-class _CopyWithStubImpl$Fragment$Contribution$item$$Episode<TRes>
-    implements CopyWith$Fragment$Contribution$item$$Episode<TRes> {
-  _CopyWithStubImpl$Fragment$Contribution$item$$Episode(this._res);
-
-  TRes _res;
-
-  call({
-    String? id,
-    String? image,
-    int? number,
-    String? title,
-    String? publishDate,
-    String? ageRating,
-    int? duration,
-    bool? locked,
-    Fragment$Contribution$item$$Episode$lessons? lessons,
-    String? $__typename,
-    int? progress,
-    Fragment$Contribution$item$$Episode$season? season,
-  }) =>
-      _res;
-
-  CopyWith$Fragment$Contribution$item$$Episode$lessons<TRes> get lessons =>
-      CopyWith$Fragment$Contribution$item$$Episode$lessons.stub(_res);
-
-  CopyWith$Fragment$Contribution$item$$Episode$season<TRes> get season =>
-      CopyWith$Fragment$Contribution$item$$Episode$season.stub(_res);
 }
 
 class Fragment$Contribution$item$$Episode$lessons
@@ -5145,7 +5191,9 @@ const documentNodeQueryGetRandomContribution = DocumentNode(definitions: [
     ]),
   ),
   fragmentDefinitionContribution,
+  fragmentDefinitionContributionItemId,
   fragmentDefinitionNavigatableChapter,
+  fragmentDefinitionNavigatableEpisode,
   fragmentDefinitionEpisodeListEpisode,
   fragmentDefinitionSeasonListEpisode,
 ]);
@@ -6128,7 +6176,9 @@ const documentNodeQueryGetContributions = DocumentNode(definitions: [
     ]),
   ),
   fragmentDefinitionContribution,
+  fragmentDefinitionContributionItemId,
   fragmentDefinitionNavigatableChapter,
+  fragmentDefinitionNavigatableEpisode,
   fragmentDefinitionEpisodeListEpisode,
   fragmentDefinitionSeasonListEpisode,
 ]);

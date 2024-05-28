@@ -23,8 +23,8 @@ class Analytics {
   @mustBeOverridden
   void sectionItemClicked(
     BuildContext context, {
-    SectionAnalytics? sectionAnalyticsOverride,
-    SectionItemAnalytics? itemAnalyticsOverride,
+    SectionAnalyticsData? sectionAnalyticsOverride,
+    SectionItemAnalyticsData? itemAnalyticsOverride,
   }) {}
   @mustBeOverridden
   void myListTabEntryClicked(BuildContext context) {}
@@ -136,10 +136,10 @@ class RudderAnalytics extends Analytics {
   @override
   void sectionItemClicked(
     BuildContext context, {
-    SectionAnalytics? sectionAnalyticsOverride,
-    SectionItemAnalytics? itemAnalyticsOverride,
+    SectionAnalyticsData? sectionAnalyticsOverride,
+    SectionItemAnalyticsData? itemAnalyticsOverride,
   }) {
-    var sectionAnalytics = sectionAnalyticsOverride ?? InheritedData.read<SectionAnalytics>(context);
+    var sectionAnalytics = sectionAnalyticsOverride ?? InheritedData.read<SectionAnalyticsData>(context);
     if (sectionAnalytics == null) {
       FlutterError.reportError(FlutterErrorDetails(
         exception: Exception('Missing SectionAnalytics.'),
@@ -149,7 +149,7 @@ class RudderAnalytics extends Analytics {
       ));
       return;
     }
-    var sectionItemAnalytics = itemAnalyticsOverride ?? InheritedData.read<SectionItemAnalytics>(context);
+    var sectionItemAnalytics = itemAnalyticsOverride ?? InheritedData.read<SectionItemAnalyticsData>(context);
     if (sectionItemAnalytics == null) {
       FlutterError.reportError(FlutterErrorDetails(
         exception: Exception('Missing sectionItemAnalytics.'),
@@ -175,7 +175,7 @@ class RudderAnalytics extends Analytics {
 
   @override
   void myListTabEntryClicked(BuildContext context) {
-    var sectionItemAnalytics = InheritedData.read<SectionItemAnalytics>(context);
+    var sectionItemAnalytics = InheritedData.read<SectionItemAnalyticsData>(context);
     if (sectionItemAnalytics == null) {
       FlutterError.reportError(FlutterErrorDetails(
         exception: Exception('Missing sectionItemAnalytics.'),
