@@ -16,6 +16,8 @@ export 'src/models/auth_state.dart';
 export 'src/models/auth0/auth0_id_token.dart';
 export 'src/models/events/app_ready.dart';
 export 'src/models/auth0/auth0_api.dart';
+export 'src/utils/hooks/use_on_init.dart';
+export 'src/utils/hooks/use_on_dispose.dart';
 export 'src/utils/hooks/use_interval.dart';
 export 'src/utils/hooks/use_route_aware.dart';
 export 'src/utils/bytes.dart';
