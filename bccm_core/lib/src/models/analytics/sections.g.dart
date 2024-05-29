@@ -18,6 +18,7 @@ _$SectionClickedEventImpl _$$SectionClickedEventImplFromJson(
       elementType: json['elementType'] as String,
       elementId: json['elementId'] as String,
       pageCode: json['pageCode'] as String?,
+      meta: json['meta'] as Map<String, dynamic>?,
     );
 
 Map<String, dynamic> _$$SectionClickedEventImplToJson(
@@ -32,4 +33,5 @@ Map<String, dynamic> _$$SectionClickedEventImplToJson(
       'elementType': instance.elementType,
       'elementId': instance.elementId,
       'pageCode': instance.pageCode,
+      'meta': instance.meta,
     };

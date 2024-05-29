@@ -17,6 +17,7 @@ class SectionClickedEvent with _$SectionClickedEvent {
     required String elementType,
     required String elementId,
     String? pageCode,
+    Map<String, dynamic>? meta,
   }) = _SectionClickedEvent;
 
   factory SectionClickedEvent.fromJson(Map<String, dynamic> json) => _$SectionClickedEventFromJson(json);
@@ -41,21 +42,48 @@ class SectionItemAnalyticsData with _$SectionItemAnalyticsData {
     required String type,
     required String id,
     String? name,
+    Map<String, dynamic>? meta,
   }) = _SectionItemAnalyticsData;
 }
 
-class SectionAnalytics extends InheritedData<SectionAnalyticsData> {
-  SectionAnalytics({
+class SectionAnalytics extends StatelessWidget {
+  const SectionAnalytics({
     super.key,
-    required SectionAnalyticsData data,
-    required Widget Function(BuildContext) child,
-  }) : super(inheritedData: data, child: child);
+    required this.data,
+    required this.builder,
+  });
+
+  final SectionAnalyticsData data;
+  final WidgetBuilder builder;
+
+  @override
+  Widget build(BuildContext context) {
+    return InheritedData<SectionAnalyticsData>(
+      inheritedData: data,
+      builder: builder,
+    );
+  }
+
+  static SectionAnalyticsData? read(BuildContext context) => InheritedData.read<SectionAnalyticsData>(context);
 }
 
-class SectionItemAnalytics extends InheritedData<SectionItemAnalyticsData> {
-  SectionItemAnalytics({
+class SectionItemAnalytics extends StatelessWidget {
+  const SectionItemAnalytics({
     super.key,
-    required SectionItemAnalyticsData data,
-    required Widget Function(BuildContext) child,
-  }) : super(inheritedData: data, child: child);
+    required this.data,
+    required this.builder,
+  });
+
+  final SectionItemAnalyticsData data;
+  final WidgetBuilder builder;
+
+  @override
+  Widget build(BuildContext context) {
+    return InheritedData<SectionItemAnalyticsData>(
+      inheritedData: data,
+      builder: builder,
+    );
+  }
+
+  static SectionItemAnalyticsData? read(BuildContext context) => InheritedData.read<SectionItemAnalyticsData>(context);
 }

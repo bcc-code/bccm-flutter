@@ -139,7 +139,7 @@ class RudderAnalytics extends Analytics {
     SectionAnalyticsData? sectionAnalyticsOverride,
     SectionItemAnalyticsData? itemAnalyticsOverride,
   }) {
-    var sectionAnalytics = sectionAnalyticsOverride ?? InheritedData.read<SectionAnalyticsData>(context);
+    var sectionAnalytics = sectionAnalyticsOverride ?? SectionAnalytics.read(context);
     if (sectionAnalytics == null) {
       FlutterError.reportError(FlutterErrorDetails(
         exception: Exception('Missing SectionAnalytics.'),
@@ -149,7 +149,7 @@ class RudderAnalytics extends Analytics {
       ));
       return;
     }
-    var sectionItemAnalytics = itemAnalyticsOverride ?? InheritedData.read<SectionItemAnalyticsData>(context);
+    var sectionItemAnalytics = itemAnalyticsOverride ?? SectionItemAnalytics.read(context);
     if (sectionItemAnalytics == null) {
       FlutterError.reportError(FlutterErrorDetails(
         exception: Exception('Missing sectionItemAnalytics.'),
@@ -169,13 +169,17 @@ class RudderAnalytics extends Analytics {
       elementPosition: sectionItemAnalytics.position,
       elementType: sectionItemAnalytics.type,
       elementId: sectionItemAnalytics.id,
+      meta: {
+        ...sectionAnalytics.meta ?? {},
+        ...sectionItemAnalytics.meta ?? {},
+      },
     );
     RudderController.instance.track('section_clicked', properties: getCommonData().putValue(map: event.toJson()));
   }
 
   @override
   void myListTabEntryClicked(BuildContext context) {
-    var sectionItemAnalytics = InheritedData.read<SectionItemAnalyticsData>(context);
+    var sectionItemAnalytics = SectionItemAnalytics.read(context);
     if (sectionItemAnalytics == null) {
       FlutterError.reportError(FlutterErrorDetails(
         exception: Exception('Missing sectionItemAnalytics.'),

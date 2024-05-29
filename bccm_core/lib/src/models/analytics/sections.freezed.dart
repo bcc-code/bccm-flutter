@@ -29,6 +29,7 @@ mixin _$SectionClickedEvent {
   String get elementType => throw _privateConstructorUsedError;
   String get elementId => throw _privateConstructorUsedError;
   String? get pageCode => throw _privateConstructorUsedError;
+  Map<String, dynamic>? get meta => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -51,7 +52,8 @@ abstract class $SectionClickedEventCopyWith<$Res> {
       int elementPosition,
       String elementType,
       String elementId,
-      String? pageCode});
+      String? pageCode,
+      Map<String, dynamic>? meta});
 }
 
 /// @nodoc
@@ -76,6 +78,7 @@ class _$SectionClickedEventCopyWithImpl<$Res, $Val extends SectionClickedEvent>
     Object? elementType = null,
     Object? elementId = null,
     Object? pageCode = freezed,
+    Object? meta = freezed,
   }) {
     return _then(_value.copyWith(
       sectionId: null == sectionId
@@ -114,6 +117,10 @@ class _$SectionClickedEventCopyWithImpl<$Res, $Val extends SectionClickedEvent>
           ? _value.pageCode
           : pageCode // ignore: cast_nullable_to_non_nullable
               as String?,
+      meta: freezed == meta
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>?,
     ) as $Val);
   }
 }
@@ -135,7 +142,8 @@ abstract class _$$SectionClickedEventImplCopyWith<$Res>
       int elementPosition,
       String elementType,
       String elementId,
-      String? pageCode});
+      String? pageCode,
+      Map<String, dynamic>? meta});
 }
 
 /// @nodoc
@@ -158,6 +166,7 @@ class __$$SectionClickedEventImplCopyWithImpl<$Res>
     Object? elementType = null,
     Object? elementId = null,
     Object? pageCode = freezed,
+    Object? meta = freezed,
   }) {
     return _then(_$SectionClickedEventImpl(
       sectionId: null == sectionId
@@ -196,6 +205,10 @@ class __$$SectionClickedEventImplCopyWithImpl<$Res>
           ? _value.pageCode
           : pageCode // ignore: cast_nullable_to_non_nullable
               as String?,
+      meta: freezed == meta
+          ? _value._meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>?,
     ));
   }
 }
@@ -212,7 +225,9 @@ class _$SectionClickedEventImpl implements _SectionClickedEvent {
       required this.elementPosition,
       required this.elementType,
       required this.elementId,
-      this.pageCode});
+      this.pageCode,
+      final Map<String, dynamic>? meta})
+      : _meta = meta;
 
   factory _$SectionClickedEventImpl.fromJson(Map<String, dynamic> json) =>
       _$$SectionClickedEventImplFromJson(json);
@@ -235,10 +250,19 @@ class _$SectionClickedEventImpl implements _SectionClickedEvent {
   final String elementId;
   @override
   final String? pageCode;
+  final Map<String, dynamic>? _meta;
+  @override
+  Map<String, dynamic>? get meta {
+    final value = _meta;
+    if (value == null) return null;
+    if (_meta is EqualUnmodifiableMapView) return _meta;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(value);
+  }
 
   @override
   String toString() {
-    return 'SectionClickedEvent(sectionId: $sectionId, sectionName: $sectionName, sectionPosition: $sectionPosition, sectionType: $sectionType, elementName: $elementName, elementPosition: $elementPosition, elementType: $elementType, elementId: $elementId, pageCode: $pageCode)';
+    return 'SectionClickedEvent(sectionId: $sectionId, sectionName: $sectionName, sectionPosition: $sectionPosition, sectionType: $sectionType, elementName: $elementName, elementPosition: $elementPosition, elementType: $elementType, elementId: $elementId, pageCode: $pageCode, meta: $meta)';
   }
 
   @override
@@ -263,7 +287,8 @@ class _$SectionClickedEventImpl implements _SectionClickedEvent {
             (identical(other.elementId, elementId) ||
                 other.elementId == elementId) &&
             (identical(other.pageCode, pageCode) ||
-                other.pageCode == pageCode));
+                other.pageCode == pageCode) &&
+            const DeepCollectionEquality().equals(other._meta, _meta));
   }
 
   @JsonKey(ignore: true)
@@ -278,7 +303,8 @@ class _$SectionClickedEventImpl implements _SectionClickedEvent {
       elementPosition,
       elementType,
       elementId,
-      pageCode);
+      pageCode,
+      const DeepCollectionEquality().hash(_meta));
 
   @JsonKey(ignore: true)
   @override
@@ -305,7 +331,8 @@ abstract class _SectionClickedEvent implements SectionClickedEvent {
       required final int elementPosition,
       required final String elementType,
       required final String elementId,
-      final String? pageCode}) = _$SectionClickedEventImpl;
+      final String? pageCode,
+      final Map<String, dynamic>? meta}) = _$SectionClickedEventImpl;
 
   factory _SectionClickedEvent.fromJson(Map<String, dynamic> json) =
       _$SectionClickedEventImpl.fromJson;
@@ -328,6 +355,8 @@ abstract class _SectionClickedEvent implements SectionClickedEvent {
   String get elementId;
   @override
   String? get pageCode;
+  @override
+  Map<String, dynamic>? get meta;
   @override
   @JsonKey(ignore: true)
   _$$SectionClickedEventImplCopyWith<_$SectionClickedEventImpl> get copyWith =>
@@ -575,6 +604,7 @@ mixin _$SectionItemAnalyticsData {
   String get type => throw _privateConstructorUsedError;
   String get id => throw _privateConstructorUsedError;
   String? get name => throw _privateConstructorUsedError;
+  Map<String, dynamic>? get meta => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $SectionItemAnalyticsDataCopyWith<SectionItemAnalyticsData> get copyWith =>
@@ -587,7 +617,12 @@ abstract class $SectionItemAnalyticsDataCopyWith<$Res> {
           $Res Function(SectionItemAnalyticsData) then) =
       _$SectionItemAnalyticsDataCopyWithImpl<$Res, SectionItemAnalyticsData>;
   @useResult
-  $Res call({int position, String type, String id, String? name});
+  $Res call(
+      {int position,
+      String type,
+      String id,
+      String? name,
+      Map<String, dynamic>? meta});
 }
 
 /// @nodoc
@@ -608,6 +643,7 @@ class _$SectionItemAnalyticsDataCopyWithImpl<$Res,
     Object? type = null,
     Object? id = null,
     Object? name = freezed,
+    Object? meta = freezed,
   }) {
     return _then(_value.copyWith(
       position: null == position
@@ -626,6 +662,10 @@ class _$SectionItemAnalyticsDataCopyWithImpl<$Res,
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
+      meta: freezed == meta
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>?,
     ) as $Val);
   }
 }
@@ -639,7 +679,12 @@ abstract class _$$SectionItemAnalyticsDataImplCopyWith<$Res>
       __$$SectionItemAnalyticsDataImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int position, String type, String id, String? name});
+  $Res call(
+      {int position,
+      String type,
+      String id,
+      String? name,
+      Map<String, dynamic>? meta});
 }
 
 /// @nodoc
@@ -659,6 +704,7 @@ class __$$SectionItemAnalyticsDataImplCopyWithImpl<$Res>
     Object? type = null,
     Object? id = null,
     Object? name = freezed,
+    Object? meta = freezed,
   }) {
     return _then(_$SectionItemAnalyticsDataImpl(
       position: null == position
@@ -677,6 +723,10 @@ class __$$SectionItemAnalyticsDataImplCopyWithImpl<$Res>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
+      meta: freezed == meta
+          ? _value._meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>?,
     ));
   }
 }
@@ -688,7 +738,9 @@ class _$SectionItemAnalyticsDataImpl implements _SectionItemAnalyticsData {
       {required this.position,
       required this.type,
       required this.id,
-      this.name});
+      this.name,
+      final Map<String, dynamic>? meta})
+      : _meta = meta;
 
   @override
   final int position;
@@ -698,10 +750,19 @@ class _$SectionItemAnalyticsDataImpl implements _SectionItemAnalyticsData {
   final String id;
   @override
   final String? name;
+  final Map<String, dynamic>? _meta;
+  @override
+  Map<String, dynamic>? get meta {
+    final value = _meta;
+    if (value == null) return null;
+    if (_meta is EqualUnmodifiableMapView) return _meta;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(value);
+  }
 
   @override
   String toString() {
-    return 'SectionItemAnalyticsData(position: $position, type: $type, id: $id, name: $name)';
+    return 'SectionItemAnalyticsData(position: $position, type: $type, id: $id, name: $name, meta: $meta)';
   }
 
   @override
@@ -713,11 +774,13 @@ class _$SectionItemAnalyticsDataImpl implements _SectionItemAnalyticsData {
                 other.position == position) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.id, id) || other.id == id) &&
-            (identical(other.name, name) || other.name == name));
+            (identical(other.name, name) || other.name == name) &&
+            const DeepCollectionEquality().equals(other._meta, _meta));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, position, type, id, name);
+  int get hashCode => Object.hash(runtimeType, position, type, id, name,
+      const DeepCollectionEquality().hash(_meta));
 
   @JsonKey(ignore: true)
   @override
@@ -732,7 +795,8 @@ abstract class _SectionItemAnalyticsData implements SectionItemAnalyticsData {
       {required final int position,
       required final String type,
       required final String id,
-      final String? name}) = _$SectionItemAnalyticsDataImpl;
+      final String? name,
+      final Map<String, dynamic>? meta}) = _$SectionItemAnalyticsDataImpl;
 
   @override
   int get position;
@@ -742,6 +806,8 @@ abstract class _SectionItemAnalyticsData implements SectionItemAnalyticsData {
   String get id;
   @override
   String? get name;
+  @override
+  Map<String, dynamic>? get meta;
   @override
   @JsonKey(ignore: true)
   _$$SectionItemAnalyticsDataImplCopyWith<_$SectionItemAnalyticsDataImpl>
