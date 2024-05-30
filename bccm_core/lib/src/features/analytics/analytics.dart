@@ -169,10 +169,12 @@ class RudderAnalytics extends Analytics {
       elementPosition: sectionItemAnalytics.position,
       elementType: sectionItemAnalytics.type,
       elementId: sectionItemAnalytics.id,
-      meta: {
-        ...sectionAnalytics.meta ?? {},
-        ...sectionItemAnalytics.meta ?? {},
-      },
+      meta: sectionAnalytics.meta == null && sectionItemAnalytics.meta == null
+          ? null
+          : {
+              ...sectionAnalytics.meta ?? {},
+              ...sectionItemAnalytics.meta ?? {},
+            },
     );
     RudderController.instance.track('section_clicked', properties: getCommonData().putValue(map: event.toJson()));
   }
