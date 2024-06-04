@@ -4059,7 +4059,7 @@ const documentNodeQueryGetPerson = DocumentNode(definitions: [
             selectionSet: null,
           ),
           FieldNode(
-            name: NameNode(value: 'contributionTypes'),
+            name: NameNode(value: 'contributionContentTypes'),
             alias: null,
             arguments: [],
             directives: [],
@@ -4282,7 +4282,7 @@ class Query$GetPerson$person {
     required this.id,
     required this.name,
     this.image,
-    required this.contributionTypes,
+    required this.contributionContentTypes,
     this.$__typename = 'Person',
   });
 
@@ -4290,14 +4290,14 @@ class Query$GetPerson$person {
     final l$id = json['id'];
     final l$name = json['name'];
     final l$image = json['image'];
-    final l$contributionTypes = json['contributionTypes'];
+    final l$contributionContentTypes = json['contributionContentTypes'];
     final l$$__typename = json['__typename'];
     return Query$GetPerson$person(
       id: (l$id as String),
       name: (l$name as String),
       image: (l$image as String?),
-      contributionTypes: (l$contributionTypes as List<dynamic>)
-          .map((e) => Query$GetPerson$person$contributionTypes.fromJson(
+      contributionContentTypes: (l$contributionContentTypes as List<dynamic>)
+          .map((e) => Query$GetPerson$person$contributionContentTypes.fromJson(
               (e as Map<String, dynamic>)))
           .toList(),
       $__typename: (l$$__typename as String),
@@ -4310,7 +4310,8 @@ class Query$GetPerson$person {
 
   final String? image;
 
-  final List<Query$GetPerson$person$contributionTypes> contributionTypes;
+  final List<Query$GetPerson$person$contributionContentTypes>
+      contributionContentTypes;
 
   final String $__typename;
 
@@ -4322,9 +4323,9 @@ class Query$GetPerson$person {
     _resultData['name'] = l$name;
     final l$image = image;
     _resultData['image'] = l$image;
-    final l$contributionTypes = contributionTypes;
-    _resultData['contributionTypes'] =
-        l$contributionTypes.map((e) => e.toJson()).toList();
+    final l$contributionContentTypes = contributionContentTypes;
+    _resultData['contributionContentTypes'] =
+        l$contributionContentTypes.map((e) => e.toJson()).toList();
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
     return _resultData;
@@ -4335,13 +4336,13 @@ class Query$GetPerson$person {
     final l$id = id;
     final l$name = name;
     final l$image = image;
-    final l$contributionTypes = contributionTypes;
+    final l$contributionContentTypes = contributionContentTypes;
     final l$$__typename = $__typename;
     return Object.hashAll([
       l$id,
       l$name,
       l$image,
-      Object.hashAll(l$contributionTypes.map((v) => v)),
+      Object.hashAll(l$contributionContentTypes.map((v) => v)),
       l$$__typename,
     ]);
   }
@@ -4370,15 +4371,18 @@ class Query$GetPerson$person {
     if (l$image != lOther$image) {
       return false;
     }
-    final l$contributionTypes = contributionTypes;
-    final lOther$contributionTypes = other.contributionTypes;
-    if (l$contributionTypes.length != lOther$contributionTypes.length) {
+    final l$contributionContentTypes = contributionContentTypes;
+    final lOther$contributionContentTypes = other.contributionContentTypes;
+    if (l$contributionContentTypes.length !=
+        lOther$contributionContentTypes.length) {
       return false;
     }
-    for (int i = 0; i < l$contributionTypes.length; i++) {
-      final l$contributionTypes$entry = l$contributionTypes[i];
-      final lOther$contributionTypes$entry = lOther$contributionTypes[i];
-      if (l$contributionTypes$entry != lOther$contributionTypes$entry) {
+    for (int i = 0; i < l$contributionContentTypes.length; i++) {
+      final l$contributionContentTypes$entry = l$contributionContentTypes[i];
+      final lOther$contributionContentTypes$entry =
+          lOther$contributionContentTypes[i];
+      if (l$contributionContentTypes$entry !=
+          lOther$contributionContentTypes$entry) {
         return false;
       }
     }
@@ -4412,14 +4416,15 @@ abstract class CopyWith$Query$GetPerson$person<TRes> {
     String? id,
     String? name,
     String? image,
-    List<Query$GetPerson$person$contributionTypes>? contributionTypes,
+    List<Query$GetPerson$person$contributionContentTypes>?
+        contributionContentTypes,
     String? $__typename,
   });
-  TRes contributionTypes(
-      Iterable<Query$GetPerson$person$contributionTypes> Function(
+  TRes contributionContentTypes(
+      Iterable<Query$GetPerson$person$contributionContentTypes> Function(
               Iterable<
-                  CopyWith$Query$GetPerson$person$contributionTypes<
-                      Query$GetPerson$person$contributionTypes>>)
+                  CopyWith$Query$GetPerson$person$contributionContentTypes<
+                      Query$GetPerson$person$contributionContentTypes>>)
           _fn);
 }
 
@@ -4440,7 +4445,7 @@ class _CopyWithImpl$Query$GetPerson$person<TRes>
     Object? id = _undefined,
     Object? name = _undefined,
     Object? image = _undefined,
-    Object? contributionTypes = _undefined,
+    Object? contributionContentTypes = _undefined,
     Object? $__typename = _undefined,
   }) =>
       _then(Query$GetPerson$person(
@@ -4449,25 +4454,25 @@ class _CopyWithImpl$Query$GetPerson$person<TRes>
             ? _instance.name
             : (name as String),
         image: image == _undefined ? _instance.image : (image as String?),
-        contributionTypes:
-            contributionTypes == _undefined || contributionTypes == null
-                ? _instance.contributionTypes
-                : (contributionTypes
-                    as List<Query$GetPerson$person$contributionTypes>),
+        contributionContentTypes: contributionContentTypes == _undefined ||
+                contributionContentTypes == null
+            ? _instance.contributionContentTypes
+            : (contributionContentTypes
+                as List<Query$GetPerson$person$contributionContentTypes>),
         $__typename: $__typename == _undefined || $__typename == null
             ? _instance.$__typename
             : ($__typename as String),
       ));
 
-  TRes contributionTypes(
-          Iterable<Query$GetPerson$person$contributionTypes> Function(
+  TRes contributionContentTypes(
+          Iterable<Query$GetPerson$person$contributionContentTypes> Function(
                   Iterable<
-                      CopyWith$Query$GetPerson$person$contributionTypes<
-                          Query$GetPerson$person$contributionTypes>>)
+                      CopyWith$Query$GetPerson$person$contributionContentTypes<
+                          Query$GetPerson$person$contributionContentTypes>>)
               _fn) =>
       call(
-          contributionTypes: _fn(_instance.contributionTypes
-              .map((e) => CopyWith$Query$GetPerson$person$contributionTypes(
+          contributionContentTypes: _fn(_instance.contributionContentTypes.map(
+              (e) => CopyWith$Query$GetPerson$person$contributionContentTypes(
                     e,
                     (i) => i,
                   ))).toList());
@@ -4483,35 +4488,36 @@ class _CopyWithStubImpl$Query$GetPerson$person<TRes>
     String? id,
     String? name,
     String? image,
-    List<Query$GetPerson$person$contributionTypes>? contributionTypes,
+    List<Query$GetPerson$person$contributionContentTypes>?
+        contributionContentTypes,
     String? $__typename,
   }) =>
       _res;
 
-  contributionTypes(_fn) => _res;
+  contributionContentTypes(_fn) => _res;
 }
 
-class Query$GetPerson$person$contributionTypes {
-  Query$GetPerson$person$contributionTypes({
+class Query$GetPerson$person$contributionContentTypes {
+  Query$GetPerson$person$contributionContentTypes({
     required this.type,
     required this.count,
-    this.$__typename = 'ContributionTypeCount',
+    this.$__typename = 'ContentTypeCount',
   });
 
-  factory Query$GetPerson$person$contributionTypes.fromJson(
+  factory Query$GetPerson$person$contributionContentTypes.fromJson(
       Map<String, dynamic> json) {
     final l$type = json['type'];
     final l$count = json['count'];
     final l$$__typename = json['__typename'];
-    return Query$GetPerson$person$contributionTypes(
-      type: Query$GetPerson$person$contributionTypes$type.fromJson(
+    return Query$GetPerson$person$contributionContentTypes(
+      type: Query$GetPerson$person$contributionContentTypes$type.fromJson(
           (l$type as Map<String, dynamic>)),
       count: (l$count as int),
       $__typename: (l$$__typename as String),
     );
   }
 
-  final Query$GetPerson$person$contributionTypes$type type;
+  final Query$GetPerson$person$contributionContentTypes$type type;
 
   final int count;
 
@@ -4545,7 +4551,7 @@ class Query$GetPerson$person$contributionTypes {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetPerson$person$contributionTypes) ||
+    if (!(other is Query$GetPerson$person$contributionContentTypes) ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -4568,43 +4574,44 @@ class Query$GetPerson$person$contributionTypes {
   }
 }
 
-extension UtilityExtension$Query$GetPerson$person$contributionTypes
-    on Query$GetPerson$person$contributionTypes {
-  CopyWith$Query$GetPerson$person$contributionTypes<
-          Query$GetPerson$person$contributionTypes>
-      get copyWith => CopyWith$Query$GetPerson$person$contributionTypes(
+extension UtilityExtension$Query$GetPerson$person$contributionContentTypes
+    on Query$GetPerson$person$contributionContentTypes {
+  CopyWith$Query$GetPerson$person$contributionContentTypes<
+          Query$GetPerson$person$contributionContentTypes>
+      get copyWith => CopyWith$Query$GetPerson$person$contributionContentTypes(
             this,
             (i) => i,
           );
 }
 
-abstract class CopyWith$Query$GetPerson$person$contributionTypes<TRes> {
-  factory CopyWith$Query$GetPerson$person$contributionTypes(
-    Query$GetPerson$person$contributionTypes instance,
-    TRes Function(Query$GetPerson$person$contributionTypes) then,
-  ) = _CopyWithImpl$Query$GetPerson$person$contributionTypes;
+abstract class CopyWith$Query$GetPerson$person$contributionContentTypes<TRes> {
+  factory CopyWith$Query$GetPerson$person$contributionContentTypes(
+    Query$GetPerson$person$contributionContentTypes instance,
+    TRes Function(Query$GetPerson$person$contributionContentTypes) then,
+  ) = _CopyWithImpl$Query$GetPerson$person$contributionContentTypes;
 
-  factory CopyWith$Query$GetPerson$person$contributionTypes.stub(TRes res) =
-      _CopyWithStubImpl$Query$GetPerson$person$contributionTypes;
+  factory CopyWith$Query$GetPerson$person$contributionContentTypes.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$GetPerson$person$contributionContentTypes;
 
   TRes call({
-    Query$GetPerson$person$contributionTypes$type? type,
+    Query$GetPerson$person$contributionContentTypes$type? type,
     int? count,
     String? $__typename,
   });
-  CopyWith$Query$GetPerson$person$contributionTypes$type<TRes> get type;
+  CopyWith$Query$GetPerson$person$contributionContentTypes$type<TRes> get type;
 }
 
-class _CopyWithImpl$Query$GetPerson$person$contributionTypes<TRes>
-    implements CopyWith$Query$GetPerson$person$contributionTypes<TRes> {
-  _CopyWithImpl$Query$GetPerson$person$contributionTypes(
+class _CopyWithImpl$Query$GetPerson$person$contributionContentTypes<TRes>
+    implements CopyWith$Query$GetPerson$person$contributionContentTypes<TRes> {
+  _CopyWithImpl$Query$GetPerson$person$contributionContentTypes(
     this._instance,
     this._then,
   );
 
-  final Query$GetPerson$person$contributionTypes _instance;
+  final Query$GetPerson$person$contributionContentTypes _instance;
 
-  final TRes Function(Query$GetPerson$person$contributionTypes) _then;
+  final TRes Function(Query$GetPerson$person$contributionContentTypes) _then;
 
   static const _undefined = <dynamic, dynamic>{};
 
@@ -4613,10 +4620,10 @@ class _CopyWithImpl$Query$GetPerson$person$contributionTypes<TRes>
     Object? count = _undefined,
     Object? $__typename = _undefined,
   }) =>
-      _then(Query$GetPerson$person$contributionTypes(
+      _then(Query$GetPerson$person$contributionContentTypes(
         type: type == _undefined || type == null
             ? _instance.type
-            : (type as Query$GetPerson$person$contributionTypes$type),
+            : (type as Query$GetPerson$person$contributionContentTypes$type),
         count: count == _undefined || count == null
             ? _instance.count
             : (count as int),
@@ -4625,43 +4632,45 @@ class _CopyWithImpl$Query$GetPerson$person$contributionTypes<TRes>
             : ($__typename as String),
       ));
 
-  CopyWith$Query$GetPerson$person$contributionTypes$type<TRes> get type {
+  CopyWith$Query$GetPerson$person$contributionContentTypes$type<TRes> get type {
     final local$type = _instance.type;
-    return CopyWith$Query$GetPerson$person$contributionTypes$type(
+    return CopyWith$Query$GetPerson$person$contributionContentTypes$type(
         local$type, (e) => call(type: e));
   }
 }
 
-class _CopyWithStubImpl$Query$GetPerson$person$contributionTypes<TRes>
-    implements CopyWith$Query$GetPerson$person$contributionTypes<TRes> {
-  _CopyWithStubImpl$Query$GetPerson$person$contributionTypes(this._res);
+class _CopyWithStubImpl$Query$GetPerson$person$contributionContentTypes<TRes>
+    implements CopyWith$Query$GetPerson$person$contributionContentTypes<TRes> {
+  _CopyWithStubImpl$Query$GetPerson$person$contributionContentTypes(this._res);
 
   TRes _res;
 
   call({
-    Query$GetPerson$person$contributionTypes$type? type,
+    Query$GetPerson$person$contributionContentTypes$type? type,
     int? count,
     String? $__typename,
   }) =>
       _res;
 
-  CopyWith$Query$GetPerson$person$contributionTypes$type<TRes> get type =>
-      CopyWith$Query$GetPerson$person$contributionTypes$type.stub(_res);
+  CopyWith$Query$GetPerson$person$contributionContentTypes$type<TRes>
+      get type =>
+          CopyWith$Query$GetPerson$person$contributionContentTypes$type.stub(
+              _res);
 }
 
-class Query$GetPerson$person$contributionTypes$type {
-  Query$GetPerson$person$contributionTypes$type({
+class Query$GetPerson$person$contributionContentTypes$type {
+  Query$GetPerson$person$contributionContentTypes$type({
     required this.code,
     required this.title,
-    this.$__typename = 'ContributionType',
+    this.$__typename = 'ContentType',
   });
 
-  factory Query$GetPerson$person$contributionTypes$type.fromJson(
+  factory Query$GetPerson$person$contributionContentTypes$type.fromJson(
       Map<String, dynamic> json) {
     final l$code = json['code'];
     final l$title = json['title'];
     final l$$__typename = json['__typename'];
-    return Query$GetPerson$person$contributionTypes$type(
+    return Query$GetPerson$person$contributionContentTypes$type(
       code: (l$code as String),
       title: (l$title as String),
       $__typename: (l$$__typename as String),
@@ -4702,7 +4711,7 @@ class Query$GetPerson$person$contributionTypes$type {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetPerson$person$contributionTypes$type) ||
+    if (!(other is Query$GetPerson$person$contributionContentTypes$type) ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -4725,25 +4734,27 @@ class Query$GetPerson$person$contributionTypes$type {
   }
 }
 
-extension UtilityExtension$Query$GetPerson$person$contributionTypes$type
-    on Query$GetPerson$person$contributionTypes$type {
-  CopyWith$Query$GetPerson$person$contributionTypes$type<
-          Query$GetPerson$person$contributionTypes$type>
-      get copyWith => CopyWith$Query$GetPerson$person$contributionTypes$type(
+extension UtilityExtension$Query$GetPerson$person$contributionContentTypes$type
+    on Query$GetPerson$person$contributionContentTypes$type {
+  CopyWith$Query$GetPerson$person$contributionContentTypes$type<
+          Query$GetPerson$person$contributionContentTypes$type>
+      get copyWith =>
+          CopyWith$Query$GetPerson$person$contributionContentTypes$type(
             this,
             (i) => i,
           );
 }
 
-abstract class CopyWith$Query$GetPerson$person$contributionTypes$type<TRes> {
-  factory CopyWith$Query$GetPerson$person$contributionTypes$type(
-    Query$GetPerson$person$contributionTypes$type instance,
-    TRes Function(Query$GetPerson$person$contributionTypes$type) then,
-  ) = _CopyWithImpl$Query$GetPerson$person$contributionTypes$type;
+abstract class CopyWith$Query$GetPerson$person$contributionContentTypes$type<
+    TRes> {
+  factory CopyWith$Query$GetPerson$person$contributionContentTypes$type(
+    Query$GetPerson$person$contributionContentTypes$type instance,
+    TRes Function(Query$GetPerson$person$contributionContentTypes$type) then,
+  ) = _CopyWithImpl$Query$GetPerson$person$contributionContentTypes$type;
 
-  factory CopyWith$Query$GetPerson$person$contributionTypes$type.stub(
+  factory CopyWith$Query$GetPerson$person$contributionContentTypes$type.stub(
           TRes res) =
-      _CopyWithStubImpl$Query$GetPerson$person$contributionTypes$type;
+      _CopyWithStubImpl$Query$GetPerson$person$contributionContentTypes$type;
 
   TRes call({
     String? code,
@@ -4752,16 +4763,18 @@ abstract class CopyWith$Query$GetPerson$person$contributionTypes$type<TRes> {
   });
 }
 
-class _CopyWithImpl$Query$GetPerson$person$contributionTypes$type<TRes>
-    implements CopyWith$Query$GetPerson$person$contributionTypes$type<TRes> {
-  _CopyWithImpl$Query$GetPerson$person$contributionTypes$type(
+class _CopyWithImpl$Query$GetPerson$person$contributionContentTypes$type<TRes>
+    implements
+        CopyWith$Query$GetPerson$person$contributionContentTypes$type<TRes> {
+  _CopyWithImpl$Query$GetPerson$person$contributionContentTypes$type(
     this._instance,
     this._then,
   );
 
-  final Query$GetPerson$person$contributionTypes$type _instance;
+  final Query$GetPerson$person$contributionContentTypes$type _instance;
 
-  final TRes Function(Query$GetPerson$person$contributionTypes$type) _then;
+  final TRes Function(Query$GetPerson$person$contributionContentTypes$type)
+      _then;
 
   static const _undefined = <dynamic, dynamic>{};
 
@@ -4770,7 +4783,7 @@ class _CopyWithImpl$Query$GetPerson$person$contributionTypes$type<TRes>
     Object? title = _undefined,
     Object? $__typename = _undefined,
   }) =>
-      _then(Query$GetPerson$person$contributionTypes$type(
+      _then(Query$GetPerson$person$contributionContentTypes$type(
         code: code == _undefined || code == null
             ? _instance.code
             : (code as String),
@@ -4783,9 +4796,12 @@ class _CopyWithImpl$Query$GetPerson$person$contributionTypes$type<TRes>
       ));
 }
 
-class _CopyWithStubImpl$Query$GetPerson$person$contributionTypes$type<TRes>
-    implements CopyWith$Query$GetPerson$person$contributionTypes$type<TRes> {
-  _CopyWithStubImpl$Query$GetPerson$person$contributionTypes$type(this._res);
+class _CopyWithStubImpl$Query$GetPerson$person$contributionContentTypes$type<
+        TRes>
+    implements
+        CopyWith$Query$GetPerson$person$contributionContentTypes$type<TRes> {
+  _CopyWithStubImpl$Query$GetPerson$person$contributionContentTypes$type(
+      this._res);
 
   TRes _res;
 
@@ -5661,14 +5677,14 @@ class Variables$Query$GetContributions {
     int? first,
     int? offset,
     bool? shuffle,
-    List<String>? types,
+    List<String>? contentTypes,
   }) =>
       Variables$Query$GetContributions._({
         r'id': id,
         if (first != null) r'first': first,
         if (offset != null) r'offset': offset,
         if (shuffle != null) r'shuffle': shuffle,
-        if (types != null) r'types': types,
+        if (contentTypes != null) r'contentTypes': contentTypes,
       });
 
   Variables$Query$GetContributions._(this._$data);
@@ -5689,10 +5705,11 @@ class Variables$Query$GetContributions {
       final l$shuffle = data['shuffle'];
       result$data['shuffle'] = (l$shuffle as bool?);
     }
-    if (data.containsKey('types')) {
-      final l$types = data['types'];
-      result$data['types'] =
-          (l$types as List<dynamic>?)?.map((e) => (e as String)).toList();
+    if (data.containsKey('contentTypes')) {
+      final l$contentTypes = data['contentTypes'];
+      result$data['contentTypes'] = (l$contentTypes as List<dynamic>?)
+          ?.map((e) => (e as String))
+          .toList();
     }
     return Variables$Query$GetContributions._(result$data);
   }
@@ -5707,7 +5724,7 @@ class Variables$Query$GetContributions {
 
   bool? get shuffle => (_$data['shuffle'] as bool?);
 
-  List<String>? get types => (_$data['types'] as List<String>?);
+  List<String>? get contentTypes => (_$data['contentTypes'] as List<String>?);
 
   Map<String, dynamic> toJson() {
     final result$data = <String, dynamic>{};
@@ -5725,9 +5742,9 @@ class Variables$Query$GetContributions {
       final l$shuffle = shuffle;
       result$data['shuffle'] = l$shuffle;
     }
-    if (_$data.containsKey('types')) {
-      final l$types = types;
-      result$data['types'] = l$types?.map((e) => e).toList();
+    if (_$data.containsKey('contentTypes')) {
+      final l$contentTypes = contentTypes;
+      result$data['contentTypes'] = l$contentTypes?.map((e) => e).toList();
     }
     return result$data;
   }
@@ -5776,23 +5793,24 @@ class Variables$Query$GetContributions {
     if (l$shuffle != lOther$shuffle) {
       return false;
     }
-    final l$types = types;
-    final lOther$types = other.types;
-    if (_$data.containsKey('types') != other._$data.containsKey('types')) {
+    final l$contentTypes = contentTypes;
+    final lOther$contentTypes = other.contentTypes;
+    if (_$data.containsKey('contentTypes') !=
+        other._$data.containsKey('contentTypes')) {
       return false;
     }
-    if (l$types != null && lOther$types != null) {
-      if (l$types.length != lOther$types.length) {
+    if (l$contentTypes != null && lOther$contentTypes != null) {
+      if (l$contentTypes.length != lOther$contentTypes.length) {
         return false;
       }
-      for (int i = 0; i < l$types.length; i++) {
-        final l$types$entry = l$types[i];
-        final lOther$types$entry = lOther$types[i];
-        if (l$types$entry != lOther$types$entry) {
+      for (int i = 0; i < l$contentTypes.length; i++) {
+        final l$contentTypes$entry = l$contentTypes[i];
+        final lOther$contentTypes$entry = lOther$contentTypes[i];
+        if (l$contentTypes$entry != lOther$contentTypes$entry) {
           return false;
         }
       }
-    } else if (l$types != lOther$types) {
+    } else if (l$contentTypes != lOther$contentTypes) {
       return false;
     }
     return true;
@@ -5804,16 +5822,16 @@ class Variables$Query$GetContributions {
     final l$first = first;
     final l$offset = offset;
     final l$shuffle = shuffle;
-    final l$types = types;
+    final l$contentTypes = contentTypes;
     return Object.hashAll([
       l$id,
       _$data.containsKey('first') ? l$first : const {},
       _$data.containsKey('offset') ? l$offset : const {},
       _$data.containsKey('shuffle') ? l$shuffle : const {},
-      _$data.containsKey('types')
-          ? l$types == null
+      _$data.containsKey('contentTypes')
+          ? l$contentTypes == null
               ? null
-              : Object.hashAll(l$types.map((v) => v))
+              : Object.hashAll(l$contentTypes.map((v) => v))
           : const {},
     ]);
   }
@@ -5833,7 +5851,7 @@ abstract class CopyWith$Variables$Query$GetContributions<TRes> {
     int? first,
     int? offset,
     bool? shuffle,
-    List<String>? types,
+    List<String>? contentTypes,
   });
 }
 
@@ -5855,7 +5873,7 @@ class _CopyWithImpl$Variables$Query$GetContributions<TRes>
     Object? first = _undefined,
     Object? offset = _undefined,
     Object? shuffle = _undefined,
-    Object? types = _undefined,
+    Object? contentTypes = _undefined,
   }) =>
       _then(Variables$Query$GetContributions._({
         ..._instance._$data,
@@ -5863,7 +5881,8 @@ class _CopyWithImpl$Variables$Query$GetContributions<TRes>
         if (first != _undefined) 'first': (first as int?),
         if (offset != _undefined) 'offset': (offset as int?),
         if (shuffle != _undefined) 'shuffle': (shuffle as bool?),
-        if (types != _undefined) 'types': (types as List<String>?),
+        if (contentTypes != _undefined)
+          'contentTypes': (contentTypes as List<String>?),
       }));
 }
 
@@ -5878,7 +5897,7 @@ class _CopyWithStubImpl$Variables$Query$GetContributions<TRes>
     int? first,
     int? offset,
     bool? shuffle,
-    List<String>? types,
+    List<String>? contentTypes,
   }) =>
       _res;
 }
@@ -6060,7 +6079,7 @@ const documentNodeQueryGetContributions = DocumentNode(definitions: [
         directives: [],
       ),
       VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'types')),
+        variable: VariableNode(name: NameNode(value: 'contentTypes')),
         type: ListTypeNode(
           type: NamedTypeNode(
             name: NameNode(value: 'String'),
@@ -6102,8 +6121,8 @@ const documentNodeQueryGetContributions = DocumentNode(definitions: [
                 value: VariableNode(name: NameNode(value: 'shuffle')),
               ),
               ArgumentNode(
-                name: NameNode(value: 'types'),
-                value: VariableNode(name: NameNode(value: 'types')),
+                name: NameNode(value: 'contentTypes'),
+                value: VariableNode(name: NameNode(value: 'contentTypes')),
               ),
             ],
             directives: [],

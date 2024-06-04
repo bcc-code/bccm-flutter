@@ -3,7 +3,7 @@ query GetPerson($id: ID!) {
     id
     name
     image
-    contributionTypes {
+    contributionContentTypes {
       type {
         code
         title
@@ -28,14 +28,14 @@ query GetContributions(
   $first: Int
   $offset: Int
   $shuffle: Boolean
-  $types: [String!]
+  $contentTypes: [String!]
 ) {
   person(id: $id) {
     contributions(
       first: $first
       offset: $offset
       shuffle: $shuffle
-      types: $types
+      contentTypes: $contentTypes
     ) {
       total
       first
