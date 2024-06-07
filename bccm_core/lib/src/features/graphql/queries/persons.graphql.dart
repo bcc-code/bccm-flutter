@@ -4816,11 +4816,11 @@ class _CopyWithStubImpl$Query$GetPerson$person$contributionContentTypes$type<
 class Variables$Query$GetRandomContribution {
   factory Variables$Query$GetRandomContribution({
     required String id,
-    List<String>? types,
+    List<String>? contentTypes,
   }) =>
       Variables$Query$GetRandomContribution._({
         r'id': id,
-        if (types != null) r'types': types,
+        if (contentTypes != null) r'contentTypes': contentTypes,
       });
 
   Variables$Query$GetRandomContribution._(this._$data);
@@ -4830,10 +4830,11 @@ class Variables$Query$GetRandomContribution {
     final result$data = <String, dynamic>{};
     final l$id = data['id'];
     result$data['id'] = (l$id as String);
-    if (data.containsKey('types')) {
-      final l$types = data['types'];
-      result$data['types'] =
-          (l$types as List<dynamic>?)?.map((e) => (e as String)).toList();
+    if (data.containsKey('contentTypes')) {
+      final l$contentTypes = data['contentTypes'];
+      result$data['contentTypes'] = (l$contentTypes as List<dynamic>?)
+          ?.map((e) => (e as String))
+          .toList();
     }
     return Variables$Query$GetRandomContribution._(result$data);
   }
@@ -4842,15 +4843,15 @@ class Variables$Query$GetRandomContribution {
 
   String get id => (_$data['id'] as String);
 
-  List<String>? get types => (_$data['types'] as List<String>?);
+  List<String>? get contentTypes => (_$data['contentTypes'] as List<String>?);
 
   Map<String, dynamic> toJson() {
     final result$data = <String, dynamic>{};
     final l$id = id;
     result$data['id'] = l$id;
-    if (_$data.containsKey('types')) {
-      final l$types = types;
-      result$data['types'] = l$types?.map((e) => e).toList();
+    if (_$data.containsKey('contentTypes')) {
+      final l$contentTypes = contentTypes;
+      result$data['contentTypes'] = l$contentTypes?.map((e) => e).toList();
     }
     return result$data;
   }
@@ -4876,23 +4877,24 @@ class Variables$Query$GetRandomContribution {
     if (l$id != lOther$id) {
       return false;
     }
-    final l$types = types;
-    final lOther$types = other.types;
-    if (_$data.containsKey('types') != other._$data.containsKey('types')) {
+    final l$contentTypes = contentTypes;
+    final lOther$contentTypes = other.contentTypes;
+    if (_$data.containsKey('contentTypes') !=
+        other._$data.containsKey('contentTypes')) {
       return false;
     }
-    if (l$types != null && lOther$types != null) {
-      if (l$types.length != lOther$types.length) {
+    if (l$contentTypes != null && lOther$contentTypes != null) {
+      if (l$contentTypes.length != lOther$contentTypes.length) {
         return false;
       }
-      for (int i = 0; i < l$types.length; i++) {
-        final l$types$entry = l$types[i];
-        final lOther$types$entry = lOther$types[i];
-        if (l$types$entry != lOther$types$entry) {
+      for (int i = 0; i < l$contentTypes.length; i++) {
+        final l$contentTypes$entry = l$contentTypes[i];
+        final lOther$contentTypes$entry = lOther$contentTypes[i];
+        if (l$contentTypes$entry != lOther$contentTypes$entry) {
           return false;
         }
       }
-    } else if (l$types != lOther$types) {
+    } else if (l$contentTypes != lOther$contentTypes) {
       return false;
     }
     return true;
@@ -4901,13 +4903,13 @@ class Variables$Query$GetRandomContribution {
   @override
   int get hashCode {
     final l$id = id;
-    final l$types = types;
+    final l$contentTypes = contentTypes;
     return Object.hashAll([
       l$id,
-      _$data.containsKey('types')
-          ? l$types == null
+      _$data.containsKey('contentTypes')
+          ? l$contentTypes == null
               ? null
-              : Object.hashAll(l$types.map((v) => v))
+              : Object.hashAll(l$contentTypes.map((v) => v))
           : const {},
     ]);
   }
@@ -4924,7 +4926,7 @@ abstract class CopyWith$Variables$Query$GetRandomContribution<TRes> {
 
   TRes call({
     String? id,
-    List<String>? types,
+    List<String>? contentTypes,
   });
 }
 
@@ -4943,12 +4945,13 @@ class _CopyWithImpl$Variables$Query$GetRandomContribution<TRes>
 
   TRes call({
     Object? id = _undefined,
-    Object? types = _undefined,
+    Object? contentTypes = _undefined,
   }) =>
       _then(Variables$Query$GetRandomContribution._({
         ..._instance._$data,
         if (id != _undefined && id != null) 'id': (id as String),
-        if (types != _undefined) 'types': (types as List<String>?),
+        if (contentTypes != _undefined)
+          'contentTypes': (contentTypes as List<String>?),
       }));
 }
 
@@ -4960,7 +4963,7 @@ class _CopyWithStubImpl$Variables$Query$GetRandomContribution<TRes>
 
   call({
     String? id,
-    List<String>? types,
+    List<String>? contentTypes,
   }) =>
       _res;
 }
@@ -5116,7 +5119,7 @@ const documentNodeQueryGetRandomContribution = DocumentNode(definitions: [
         directives: [],
       ),
       VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'types')),
+        variable: VariableNode(name: NameNode(value: 'contentTypes')),
         type: ListTypeNode(
           type: NamedTypeNode(
             name: NameNode(value: 'String'),
@@ -5154,8 +5157,8 @@ const documentNodeQueryGetRandomContribution = DocumentNode(definitions: [
                 value: IntValueNode(value: '1'),
               ),
               ArgumentNode(
-                name: NameNode(value: 'types'),
-                value: VariableNode(name: NameNode(value: 'types')),
+                name: NameNode(value: 'contentTypes'),
+                value: VariableNode(name: NameNode(value: 'contentTypes')),
               ),
             ],
             directives: [],

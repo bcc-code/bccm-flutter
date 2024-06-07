@@ -13,9 +13,9 @@ query GetPerson($id: ID!) {
   }
 }
 
-query GetRandomContribution($id: ID!, $types: [String!]) {
+query GetRandomContribution($id: ID!, $contentTypes: [String!]) {
   person(id: $id) {
-    contributions(shuffle: true, first: 1, types: $types) {
+    contributions(shuffle: true, first: 1, contentTypes: $contentTypes) {
       items {
         ...Contribution
       }
