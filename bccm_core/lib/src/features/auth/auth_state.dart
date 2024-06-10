@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:bccm_core/bccm_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -24,8 +26,9 @@ class AuthConfig {
 }
 
 abstract class AuthStateNotifier implements StateNotifier<AuthState> {
+  Completer<void> get initializeCompleter;
   Future<AuthState?> getExistingAndEnsureNotExpired();
-  Future<bool> load();
+  Future<void> initialize();
   Future<bool> forceRefresh();
   Future logout({bool manual = true});
   Future<bool> login({String? connection});

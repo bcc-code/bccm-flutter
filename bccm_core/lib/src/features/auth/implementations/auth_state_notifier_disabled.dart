@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:bccm_core/src/models/auth_state.dart';
 import 'package:bccm_core/src/features/auth/auth0_api.dart';
 import 'package:bccm_core/src/features/auth/auth_state.dart';
@@ -17,7 +19,7 @@ class AuthStateNotifierDisabled extends StateNotifier<AuthState> implements Auth
   }
 
   @override
-  Future<bool> load() {
+  Future<bool> initialize() {
     return Future.value(false);
   }
 
@@ -35,4 +37,7 @@ class AuthStateNotifierDisabled extends StateNotifier<AuthState> implements Auth
   Future<void> loginViaDeviceCode(DeviceTokenRequestResponse deviceToken) {
     return Future.value();
   }
+
+  @override
+  Completer<void> get initializeCompleter => throw UnimplementedError();
 }

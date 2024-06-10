@@ -50,7 +50,6 @@ class BccmCore {
     required Override? authStateProviderOverride,
     required Override? analyticsProviderOverride,
     required Override? featureFlagVariantListProviderOverride,
-    required Override? rawUnleashProviderOverride,
     required Override? unleashContextProviderOverride,
     required Override? notificationServiceProviderOverride,
   }) async {
@@ -63,7 +62,6 @@ class BccmCore {
       bccmGraphQLProviderOverride,
       authStateProviderOverride,
       analyticsProviderOverride,
-      rawUnleashProviderOverride,
       unleashContextProviderOverride,
       featureFlagVariantListProviderOverride,
       notificationServiceProviderOverride,

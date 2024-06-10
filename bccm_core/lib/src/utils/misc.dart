@@ -42,6 +42,15 @@ Completer<T> wrapInCompleter<T>(Future<T> future) {
   return completer;
 }
 
+Future<T?> tryCatchRecordErrorAsync<T>(Future<T> Function() fn) async {
+  try {
+    return await fn();
+  } catch (e) {
+    FlutterError.reportError(FlutterErrorDetails(exception: e, stack: StackTrace.current));
+  }
+  return null;
+}
+
 T? tryCatchRecordError<T>(T Function() fn) {
   try {
     return fn();

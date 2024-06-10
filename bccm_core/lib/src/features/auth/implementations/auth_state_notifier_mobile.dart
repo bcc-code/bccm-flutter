@@ -54,6 +54,9 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
   final AuthConfig config;
   final Auth0Api _auth0Api;
 
+  @override
+  Completer<void> initializeCompleter = Completer<void>();
+
   Future<T> _syncAppAuth<T>(Future<T> Function() call) {
     return appAuthLock.synchronized(
       () => call(),
@@ -77,44 +80,36 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
   }
 
   @override
-  Future<bool> load() async {
-    final accessToken = await _secureStorage.read(key: SecureStorageKeys.accessToken);
-    final idToken = await _secureStorage.read(key: SecureStorageKeys.idToken);
-    final userProfileRaw = await _secureStorage.read(key: SecureStorageKeys.userProfile);
-
-    if (accessToken == null || idToken == null || userProfileRaw == null) {
-      return false;
-    }
-
-    final userProfile = UserProfile.fromJson(jsonDecode(userProfileRaw));
-
-    DateTime? expiry;
+  Future<void> initialize() async {
     try {
-      expiry = _getAccessTokenExpiry(accessToken);
+      await _initialize();
     } catch (e, st) {
       FlutterError.reportError(FlutterErrorDetails(
         exception: e,
         stack: st,
         library: 'bccm_core',
-        context: ErrorDescription('during login'),
+        context: ErrorDescription('during init/login'),
       ));
-      logout();
-      return false;
+      rethrow;
+    } finally {
+      initializeCompleter.complete();
     }
+  }
+
+  Future<void> _initialize() async {
+    final accessToken = await _secureStorage.read(key: SecureStorageKeys.accessToken);
+    final idToken = await _secureStorage.read(key: SecureStorageKeys.idToken);
+    final userProfileRaw = await _secureStorage.read(key: SecureStorageKeys.userProfile);
+
+    if (accessToken == null || idToken == null || userProfileRaw == null) {
+      return;
+    }
+
+    final userProfile = UserProfile.fromJson(jsonDecode(userProfileRaw));
+
+    DateTime? expiry = _getAccessTokenExpiry(accessToken);
     if (expiry.difference(clock.now()) < kMinimumCredentialsTTL) {
-      final refreshSucceeded = await _refresh();
-      if (refreshSucceeded) {
-        return true;
-      } else {
-        state = state.copyWith(
-          user: userProfile,
-          auth0AccessToken: accessToken,
-          idToken: idToken,
-          expiresAt: expiry,
-          signedOutManually: null,
-        );
-        return false;
-      }
+      if (await _refresh()) return;
     }
     state = state.copyWith(
       user: userProfile,
@@ -123,7 +118,7 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
       expiresAt: expiry,
       signedOutManually: null,
     );
-    return true;
+    return;
   }
 
   @override

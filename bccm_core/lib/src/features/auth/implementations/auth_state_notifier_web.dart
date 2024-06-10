@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:auth0_flutter_web/auth0_flutter_web.dart';
 import 'package:bccm_core/src/models/auth0/auth0_id_token.dart';
 import 'package:bccm_core/src/models/auth_state.dart';
@@ -26,12 +28,15 @@ class AuthStateNotifierWeb extends StateNotifier<AuthState> implements AuthState
   AuthConfig config;
 
   @override
+  Completer<void> get initializeCompleter => Completer<void>();
+
+  @override
   Future<AuthState?> getExistingAndEnsureNotExpired() async {
     if (state.expiresAt == null || state.auth0AccessToken == null) {
       return null;
     }
     if (state.expiresAt!.isBefore(DateTime.now())) {
-      await load();
+      await initialize();
     }
     if (state.expiresAt!.isBefore(DateTime.now())) {
       throw Exception('Auth state is still expired after attempting to renew.');
@@ -53,13 +58,19 @@ class AuthStateNotifierWeb extends StateNotifier<AuthState> implements AuthState
   }
 
   @override
-  Future<bool> load() async {
+  Future<void> initialize() async {
+    try {
+      return await _initialize();
+    } finally {
+      initializeCompleter.complete();
+    }
+  }
+
+  Future<void> _initialize() async {
     final auth0 = await _auth0;
     if (await auth0.isAuthenticated()) {
       await setStateFromResult(auth0);
-      return true;
     }
-    return false;
   }
 
   @override

@@ -5,18 +5,17 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-bool isOldAppVersion(BuildContext context, Query$Application appConfig) {
-  final packageInfo = ProviderScope.containerOf(context, listen: false).read(packageInfoProvider);
-  final minVersionNumber = appConfig.application.clientVersion;
-  final currentVersionNumber = packageInfo.version;
-  return getExtendedVersionNumber(minVersionNumber) > getExtendedVersionNumber(currentVersionNumber);
+bool isOldAppVersion({required String current, required String minimum}) {
+  return getExtendedVersionNumber(minimum) > getExtendedVersionNumber(current);
 }
 
 RealtimeUpdate? _lastUpdate;
 final appConfigFutureProvider = StateProvider<Future<Query$Application>>((ref) async {
+  debugPrint('ag: appConfigFutureProvider building');
   final result = await ref
       .watch(bccmGraphQLProvider)
       .query$Application(Options$Query$Application(variables: Variables$Query$Application(timestamp: _lastUpdate?.updatedAt)));
+  debugPrint('ag: appConfigFutureProvider result: $result');
   if (result.exception != null) {
     throw result.exception!;
   }
@@ -32,8 +31,15 @@ final appConfigFutureProvider = StateProvider<Future<Query$Application>>((ref) a
   return result.parsedData!;
 });
 
-final appConfigProvider = FutureProvider<Query$Application>((ref) async {
+final _appConfigSnapshotProvider = FutureProvider<Query$Application>((ref) async {
   return ref.watch(appConfigFutureProvider);
+});
+
+/// Use this provider to get the current app config.
+///
+/// Note: To refresh, you need to invalidate the [appConfigFutureProvider].
+final appConfigProvider = Provider<Query$Application?>((ref) {
+  return ref.watch(_appConfigSnapshotProvider).valueOrNull;
 });
 
 class RealtimeUpdate {

@@ -25,12 +25,10 @@ class CustomHapticFeedback {
     return _overrideCache = false;
   }
 
-  static Future<void> vibrate() async => await tryCatchRecordError<Future<void>>(() async {
-        return HapticFeedback.vibrate();
-      });
+  static Future<void> vibrate() async => await tryCatchRecordErrorAsync<void>(HapticFeedback.vibrate);
 
   static Future<void> lightImpact() async {
-    await tryCatchRecordError<Future<void>>(() async {
+    await tryCatchRecordErrorAsync<void>(() async {
       if (await _shouldOverrideWithVibration()) {
         return Vibration.vibrate(duration: 30, amplitude: 30);
       }
@@ -39,7 +37,7 @@ class CustomHapticFeedback {
   }
 
   static Future<void> mediumImpact() async {
-    await tryCatchRecordError<Future<void>>(() async {
+    await tryCatchRecordErrorAsync<void>(() async {
       if (await _shouldOverrideWithVibration()) {
         return Vibration.vibrate(duration: 40, amplitude: 40);
       }
@@ -48,7 +46,7 @@ class CustomHapticFeedback {
   }
 
   static Future<void> heavyImpact() async {
-    await tryCatchRecordError<Future<void>>(() async {
+    await tryCatchRecordErrorAsync<void>(() async {
       if (await _shouldOverrideWithVibration()) {
         return Vibration.vibrate(duration: 50, amplitude: 60);
       }
@@ -57,7 +55,7 @@ class CustomHapticFeedback {
   }
 
   static Future<void> selectionClick() async {
-    await tryCatchRecordError<Future<void>>(() async {
+    await tryCatchRecordErrorAsync<void>(() async {
       if (await _shouldOverrideWithVibration()) {
         return Vibration.vibrate(duration: 30, amplitude: 30);
       }
