@@ -55,5 +55,5 @@ final applicationUpdatesProvider = StreamProvider.family<RealtimeUpdate, String>
       throw ErrorDescription('Realtime update data is null.');
     }
     return RealtimeUpdate(updatedAt);
-  });
+  }).skip(1);
 });

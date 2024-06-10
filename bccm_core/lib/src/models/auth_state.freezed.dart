@@ -16,7 +16,6 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$AuthState {
-  bool? get initialized => throw _privateConstructorUsedError;
   UserProfile? get user => throw _privateConstructorUsedError;
   String? get auth0AccessToken => throw _privateConstructorUsedError;
   DateTime? get expiresAt => throw _privateConstructorUsedError;
@@ -34,8 +33,7 @@ abstract class $AuthStateCopyWith<$Res> {
       _$AuthStateCopyWithImpl<$Res, AuthState>;
   @useResult
   $Res call(
-      {bool? initialized,
-      UserProfile? user,
+      {UserProfile? user,
       String? auth0AccessToken,
       DateTime? expiresAt,
       String? idToken,
@@ -57,7 +55,6 @@ class _$AuthStateCopyWithImpl<$Res, $Val extends AuthState>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? initialized = freezed,
     Object? user = freezed,
     Object? auth0AccessToken = freezed,
     Object? expiresAt = freezed,
@@ -65,10 +62,6 @@ class _$AuthStateCopyWithImpl<$Res, $Val extends AuthState>
     Object? signedOutManually = freezed,
   }) {
     return _then(_value.copyWith(
-      initialized: freezed == initialized
-          ? _value.initialized
-          : initialized // ignore: cast_nullable_to_non_nullable
-              as bool?,
       user: freezed == user
           ? _value.user
           : user // ignore: cast_nullable_to_non_nullable
@@ -113,8 +106,7 @@ abstract class _$$AuthImplCopyWith<$Res> implements $AuthStateCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {bool? initialized,
-      UserProfile? user,
+      {UserProfile? user,
       String? auth0AccessToken,
       DateTime? expiresAt,
       String? idToken,
@@ -134,7 +126,6 @@ class __$$AuthImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? initialized = freezed,
     Object? user = freezed,
     Object? auth0AccessToken = freezed,
     Object? expiresAt = freezed,
@@ -142,10 +133,6 @@ class __$$AuthImplCopyWithImpl<$Res>
     Object? signedOutManually = freezed,
   }) {
     return _then(_$AuthImpl(
-      initialized: freezed == initialized
-          ? _value.initialized
-          : initialized // ignore: cast_nullable_to_non_nullable
-              as bool?,
       user: freezed == user
           ? _value.user
           : user // ignore: cast_nullable_to_non_nullable
@@ -174,16 +161,13 @@ class __$$AuthImplCopyWithImpl<$Res>
 
 class _$AuthImpl extends _Auth {
   const _$AuthImpl(
-      {this.initialized,
-      this.user,
+      {this.user,
       this.auth0AccessToken,
       this.expiresAt,
       this.idToken,
       this.signedOutManually})
       : super._();
 
-  @override
-  final bool? initialized;
   @override
   final UserProfile? user;
   @override
@@ -197,7 +181,7 @@ class _$AuthImpl extends _Auth {
 
   @override
   String toString() {
-    return 'AuthState(initialized: $initialized, user: $user, auth0AccessToken: $auth0AccessToken, expiresAt: $expiresAt, idToken: $idToken, signedOutManually: $signedOutManually)';
+    return 'AuthState(user: $user, auth0AccessToken: $auth0AccessToken, expiresAt: $expiresAt, idToken: $idToken, signedOutManually: $signedOutManually)';
   }
 
   @override
@@ -205,8 +189,6 @@ class _$AuthImpl extends _Auth {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AuthImpl &&
-            (identical(other.initialized, initialized) ||
-                other.initialized == initialized) &&
             (identical(other.user, user) || other.user == user) &&
             (identical(other.auth0AccessToken, auth0AccessToken) ||
                 other.auth0AccessToken == auth0AccessToken) &&
@@ -218,8 +200,8 @@ class _$AuthImpl extends _Auth {
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, initialized, user,
-      auth0AccessToken, expiresAt, idToken, signedOutManually);
+  int get hashCode => Object.hash(runtimeType, user, auth0AccessToken,
+      expiresAt, idToken, signedOutManually);
 
   @JsonKey(ignore: true)
   @override
@@ -230,16 +212,13 @@ class _$AuthImpl extends _Auth {
 
 abstract class _Auth extends AuthState {
   const factory _Auth(
-      {final bool? initialized,
-      final UserProfile? user,
+      {final UserProfile? user,
       final String? auth0AccessToken,
       final DateTime? expiresAt,
       final String? idToken,
       final bool? signedOutManually}) = _$AuthImpl;
   const _Auth._() : super._();
 
-  @override
-  bool? get initialized;
   @override
   UserProfile? get user;
   @override
