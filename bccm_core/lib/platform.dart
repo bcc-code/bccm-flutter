@@ -65,6 +65,7 @@ export 'package:bccm_core/src/features/feature_flags/feature_flags.dart';
 export 'package:bccm_core/src/features/analytics/analytics.dart';
 export 'package:bccm_core/src/features/analytics/analytics_observer.dart';
 export 'package:bccm_core/src/features/redirect/redirect.dart';
+export 'package:bccm_core/src/features/progress/update_progress.dart';
 
 export 'package:bccm_core/src/models/analytics/achievement_clicked.dart';
 export 'package:bccm_core/src/models/analytics/achievement_shared.dart';

@@ -1,0 +1,2032 @@
+{
+    "title": "Dummy title",
+    "sections": {
+        "items": [
+            {
+                "metadata": {
+                    "continueWatching": false,
+                    "myList": false,
+                    "secondaryTitles": true,
+                    "collectionId": "211",
+                    "useContext": false,
+                    "prependLiveElement": false,
+                    "__typename": "ItemSectionMetadata"
+                },
+                "items": {
+                    "offset": 0,
+                    "first": 20,
+                    "items": [
+                        {
+                            "id": "1512",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "1512",
+                                "duration": 386,
+                                "locked": false,
+                                "progress": null,
+                                "publishDate": "2022-02-10T21:49:00Z",
+                                "season": {
+                                    "show": {
+                                        "title": "Dummy title",
+                                        "__typename": "Show"
+                                    },
+                                    "__typename": "Season"
+                                },
+                                "__typename": "Episode"
+                            },
+                            "__typename": "SectionItem",
+                            "description": "Dummy description"
+                        }
+                    ],
+                    "__typename": "SectionItemPagination"
+                },
+                "__typename": "FeaturedSection",
+                "size": "medium",
+                "id": "307",
+                "title": "Dummy title",
+                "description": null
+            },
+            {
+                "authentication": true,
+                "widthRatio": 1.5,
+                "height": null,
+                "url": "https://app.bcc.media/embed/something",
+                "__typename": "WebSection",
+                "id": "317",
+                "title": "Dummy title",
+                "description": null
+            },
+            {
+                "metadata": {
+                    "continueWatching": false,
+                    "myList": false,
+                    "secondaryTitles": true,
+                    "collectionId": "51",
+                    "useContext": false,
+                    "prependLiveElement": false,
+                    "__typename": "ItemSectionMetadata"
+                },
+                "items": {
+                    "offset": 0,
+                    "first": 20,
+                    "items": [
+                        {
+                            "id": "2705",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "2705",
+                                "duration": 446,
+                                "locked": false,
+                                "progress": null,
+                                "publishDate": "2024-05-29T15:42:00Z",
+                                "season": null,
+                                "__typename": "Episode",
+                                "productionDate": "2000-01-01T00:00:00Z"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "2654",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "2654",
+                                "duration": 5319,
+                                "locked": false,
+                                "progress": null,
+                                "publishDate": "2024-05-20T15:30:00Z",
+                                "season": {
+                                    "show": {
+                                        "title": "Dummy title",
+                                        "__typename": "Show"
+                                    },
+                                    "__typename": "Season"
+                                },
+                                "__typename": "Episode",
+                                "productionDate": "2024-05-20T10:00:00Z"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "2653",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "2653",
+                                "duration": 2430,
+                                "locked": false,
+                                "progress": null,
+                                "publishDate": "2024-05-19T23:00:00Z",
+                                "season": {
+                                    "show": {
+                                        "title": "Dummy title",
+                                        "__typename": "Show"
+                                    },
+                                    "__typename": "Season"
+                                },
+                                "__typename": "Episode",
+                                "productionDate": "2024-05-19T15:12:00Z"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "2664",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "2664",
+                                "duration": 3898,
+                                "locked": false,
+                                "progress": null,
+                                "publishDate": "2024-05-19T19:00:00Z",
+                                "season": {
+                                    "show": {
+                                        "title": "Dummy title",
+                                        "__typename": "Show"
+                                    },
+                                    "__typename": "Season"
+                                },
+                                "__typename": "Episode",
+                                "productionDate": "2024-05-19T16:00:00Z"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "2682",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "2682",
+                                "duration": 2549,
+                                "locked": false,
+                                "progress": 1775,
+                                "publishDate": "2024-05-19T12:00:00Z",
+                                "season": {
+                                    "show": {
+                                        "title": "Dummy title",
+                                        "__typename": "Show"
+                                    },
+                                    "__typename": "Season"
+                                },
+                                "__typename": "Episode",
+                                "productionDate": "2024-05-19T10:00:00Z"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "2681",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "2681",
+                                "duration": 6410,
+                                "locked": false,
+                                "progress": 2441,
+                                "publishDate": "2024-05-18T21:30:00Z",
+                                "season": {
+                                    "show": {
+                                        "title": "Dummy title",
+                                        "__typename": "Show"
+                                    },
+                                    "__typename": "Season"
+                                },
+                                "__typename": "Episode",
+                                "productionDate": "2024-05-18T17:00:00Z"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "2649",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "2649",
+                                "duration": 4930,
+                                "locked": false,
+                                "progress": 1727,
+                                "publishDate": "2024-05-18T14:30:00Z",
+                                "season": {
+                                    "show": {
+                                        "title": "Dummy title",
+                                        "__typename": "Show"
+                                    },
+                                    "__typename": "Season"
+                                },
+                                "__typename": "Episode",
+                                "productionDate": "2024-05-18T10:00:00Z"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "2647",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "2647",
+                                "duration": 4070,
+                                "locked": false,
+                                "progress": null,
+                                "publishDate": "2024-05-18T00:30:00Z",
+                                "season": {
+                                    "show": {
+                                        "title": "Dummy title",
+                                        "__typename": "Show"
+                                    },
+                                    "__typename": "Season"
+                                },
+                                "__typename": "Episode",
+                                "productionDate": "2024-05-17T18:00:00Z"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "2694",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "2694",
+                                "duration": 5449,
+                                "locked": false,
+                                "progress": null,
+                                "publishDate": "2024-05-16T07:00:00Z",
+                                "season": {
+                                    "show": {
+                                        "title": "Dummy title",
+                                        "__typename": "Show"
+                                    },
+                                    "__typename": "Season"
+                                },
+                                "__typename": "Episode",
+                                "productionDate": "2000-01-01T00:00:00Z"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "2693",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "2693",
+                                "duration": 9850,
+                                "locked": false,
+                                "progress": 2045,
+                                "publishDate": "2024-05-16T07:00:00Z",
+                                "season": {
+                                    "show": {
+                                        "title": "Dummy title",
+                                        "__typename": "Show"
+                                    },
+                                    "__typename": "Season"
+                                },
+                                "__typename": "Episode",
+                                "productionDate": "2024-05-15T12:00:00Z"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "2688",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "2688",
+                                "duration": 4875,
+                                "locked": false,
+                                "progress": null,
+                                "publishDate": "2024-05-15T13:00:00Z",
+                                "season": {
+                                    "show": {
+                                        "title": "Dummy title",
+                                        "__typename": "Show"
+                                    },
+                                    "__typename": "Season"
+                                },
+                                "__typename": "Episode",
+                                "productionDate": "2024-05-15T09:00:00Z"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "2595",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "2595",
+                                "duration": 1528,
+                                "locked": false,
+                                "progress": 79,
+                                "publishDate": "2024-05-01T23:00:00Z",
+                                "season": {
+                                    "show": {
+                                        "title": "Dummy title",
+                                        "__typename": "Show"
+                                    },
+                                    "__typename": "Season"
+                                },
+                                "__typename": "Episode",
+                                "productionDate": "2024-03-24T18:00:00Z"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "2690",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "2690",
+                                "duration": 65,
+                                "locked": false,
+                                "progress": null,
+                                "publishDate": "2024-05-01T12:00:00Z",
+                                "season": {
+                                    "show": {
+                                        "title": "Dummy title",
+                                        "__typename": "Show"
+                                    },
+                                    "__typename": "Season"
+                                },
+                                "__typename": "Episode",
+                                "productionDate": "2024-05-01T12:00:00Z"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "2673",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "2673",
+                                "duration": 1711,
+                                "locked": false,
+                                "progress": null,
+                                "publishDate": "2024-04-03T14:00:00Z",
+                                "season": {
+                                    "show": {
+                                        "title": "Dummy title",
+                                        "__typename": "Show"
+                                    },
+                                    "__typename": "Season"
+                                },
+                                "__typename": "Episode",
+                                "productionDate": "2000-01-01T00:00:00Z"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "2655",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "2655",
+                                "duration": 389,
+                                "locked": false,
+                                "progress": 58,
+                                "publishDate": "2024-04-02T14:50:36Z",
+                                "season": {
+                                    "show": {
+                                        "title": "Dummy title",
+                                        "__typename": "Show"
+                                    },
+                                    "__typename": "Season"
+                                },
+                                "__typename": "Episode",
+                                "productionDate": "2024-04-01T16:50:00Z"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "2602",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "2602",
+                                "duration": 3358,
+                                "locked": false,
+                                "progress": 1547,
+                                "publishDate": "2024-04-01T18:00:00Z",
+                                "season": {
+                                    "show": {
+                                        "title": "Dummy title",
+                                        "__typename": "Show"
+                                    },
+                                    "__typename": "Season"
+                                },
+                                "__typename": "Episode",
+                                "productionDate": "2024-04-01T09:00:00Z"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "2630",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "2630",
+                                "duration": 4903,
+                                "locked": false,
+                                "progress": null,
+                                "publishDate": "2024-04-01T01:00:00Z",
+                                "season": {
+                                    "show": {
+                                        "title": "Dummy title",
+                                        "__typename": "Show"
+                                    },
+                                    "__typename": "Season"
+                                },
+                                "__typename": "Episode",
+                                "productionDate": "2024-03-31T18:00:00Z"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "2603",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "2603",
+                                "duration": 3806,
+                                "locked": false,
+                                "progress": null,
+                                "publishDate": "2024-04-01T00:00:00Z",
+                                "season": {
+                                    "show": {
+                                        "title": "Dummy title",
+                                        "__typename": "Show"
+                                    },
+                                    "__typename": "Season"
+                                },
+                                "__typename": "Episode",
+                                "productionDate": "2024-03-31T16:00:00Z"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "2601",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "2601",
+                                "duration": 5676,
+                                "locked": false,
+                                "progress": 1019,
+                                "publishDate": "2024-03-31T14:00:00Z",
+                                "season": {
+                                    "show": {
+                                        "title": "Dummy title",
+                                        "__typename": "Show"
+                                    },
+                                    "__typename": "Season"
+                                },
+                                "__typename": "Episode",
+                                "productionDate": "2024-03-31T09:00:00Z"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "2600",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "2600",
+                                "duration": 4806,
+                                "locked": false,
+                                "progress": null,
+                                "publishDate": "2024-03-31T00:00:00Z",
+                                "season": {
+                                    "show": {
+                                        "title": "Dummy title",
+                                        "__typename": "Show"
+                                    },
+                                    "__typename": "Season"
+                                },
+                                "__typename": "Episode",
+                                "productionDate": "2024-03-30T18:00:00Z"
+                            },
+                            "__typename": "SectionItem"
+                        }
+                    ],
+                    "__typename": "SectionItemPagination"
+                },
+                "__typename": "DefaultSection",
+                "size": "small",
+                "id": "302",
+                "title": "Dummy title",
+                "description": null
+            },
+            {
+                "metadata": {
+                    "continueWatching": false,
+                    "myList": false,
+                    "secondaryTitles": true,
+                    "collectionId": "231",
+                    "useContext": false,
+                    "prependLiveElement": false,
+                    "__typename": "ItemSectionMetadata"
+                },
+                "items": {
+                    "offset": 0,
+                    "first": 20,
+                    "items": [
+                        {
+                            "id": "7e39462c-8f7f-49fa-ac9d-f2a01caaa0f2",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "7e39462c-8f7f-49fa-ac9d-f2a01caaa0f2",
+                                "__typename": "Person"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "ea314daf-b48e-4431-8539-0097098d608a",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "ea314daf-b48e-4431-8539-0097098d608a",
+                                "__typename": "Person"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "4aa84691-9669-42f8-9caf-3e0622d29a66",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "4aa84691-9669-42f8-9caf-3e0622d29a66",
+                                "__typename": "Person"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "7ec9b43e-b8bb-4fbe-bcc9-834f76a4d0b8",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "7ec9b43e-b8bb-4fbe-bcc9-834f76a4d0b8",
+                                "__typename": "Person"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "3c18d75e-367e-4d38-8ccf-9eb23d188343",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "3c18d75e-367e-4d38-8ccf-9eb23d188343",
+                                "__typename": "Person"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "09435dd8-62ec-4e8b-9e95-0e5fa2954629",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "09435dd8-62ec-4e8b-9e95-0e5fa2954629",
+                                "__typename": "Person"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "f49a923b-9b19-44de-b803-9a2ee578cc6d",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "f49a923b-9b19-44de-b803-9a2ee578cc6d",
+                                "__typename": "Person"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "9eb176c2-13e9-44d2-8338-643173e57974",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "9eb176c2-13e9-44d2-8338-643173e57974",
+                                "__typename": "Person"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "e55c091e-04d3-4f19-aaf2-89d4719f2fb1",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "e55c091e-04d3-4f19-aaf2-89d4719f2fb1",
+                                "__typename": "Person"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "d04e7673-06d9-49f0-881d-4bbdcae69d2f",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "d04e7673-06d9-49f0-881d-4bbdcae69d2f",
+                                "__typename": "Person"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "11317cec-83d3-43e0-a1cc-e8da10ac95e6",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "11317cec-83d3-43e0-a1cc-e8da10ac95e6",
+                                "__typename": "Person"
+                            },
+                            "__typename": "SectionItem"
+                        }
+                    ],
+                    "__typename": "SectionItemPagination"
+                },
+                "__typename": "AvatarSection",
+                "id": "383",
+                "title": "Dummy title",
+                "description": null
+            },
+            {
+                "metadata": {
+                    "continueWatching": false,
+                    "myList": false,
+                    "secondaryTitles": true,
+                    "collectionId": "266",
+                    "useContext": false,
+                    "prependLiveElement": false,
+                    "__typename": "ItemSectionMetadata"
+                },
+                "items": {
+                    "offset": 0,
+                    "first": 20,
+                    "items": [
+                        {
+                            "id": "58",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "code": "comic",
+                                "__typename": "Page"
+                            },
+                            "__typename": "SectionItem",
+                            "description": "Dummy description"
+                        }
+                    ],
+                    "__typename": "SectionItemPagination"
+                },
+                "__typename": "CardSection",
+                "cardSize": "large",
+                "id": "313",
+                "title": null,
+                "description": null
+            },
+            {
+                "metadata": {
+                    "continueWatching": false,
+                    "myList": false,
+                    "secondaryTitles": true,
+                    "collectionId": "209",
+                    "useContext": false,
+                    "prependLiveElement": false,
+                    "__typename": "ItemSectionMetadata"
+                },
+                "items": {
+                    "offset": 0,
+                    "first": 20,
+                    "items": [
+                        {
+                            "id": "584e03ff-1c33-4879-b3ae-a70851aaf8bf",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "584e03ff-1c33-4879-b3ae-a70851aaf8bf",
+                                "__typename": "Short"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "9968dd67-7e6d-45ce-a5f8-f6e8d0bdb725",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "9968dd67-7e6d-45ce-a5f8-f6e8d0bdb725",
+                                "__typename": "Short"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "943554c2-becb-4773-9110-33d41a7faa27",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "943554c2-becb-4773-9110-33d41a7faa27",
+                                "__typename": "Short"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "40104317-cc8f-4ba6-a996-cf2d00965180",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "40104317-cc8f-4ba6-a996-cf2d00965180",
+                                "__typename": "Short"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "3dde5400-a13b-4bf3-b47b-a1b1a434bb77",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "3dde5400-a13b-4bf3-b47b-a1b1a434bb77",
+                                "__typename": "Short"
+                            },
+                            "__typename": "SectionItem"
+                        }
+                    ],
+                    "__typename": "SectionItemPagination"
+                },
+                "__typename": "PosterSection",
+                "size": "small",
+                "id": "301",
+                "title": "Dummy title",
+                "description": null
+            },
+            {
+                "metadata": {
+                    "continueWatching": false,
+                    "myList": false,
+                    "secondaryTitles": true,
+                    "collectionId": "230",
+                    "useContext": false,
+                    "prependLiveElement": false,
+                    "__typename": "ItemSectionMetadata"
+                },
+                "items": {
+                    "offset": 0,
+                    "first": 20,
+                    "items": [
+                        {
+                            "id": "2705",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "2705",
+                                "duration": 446,
+                                "locked": false,
+                                "progress": null,
+                                "publishDate": "2024-05-29T15:42:00Z",
+                                "season": null,
+                                "__typename": "Episode",
+                                "productionDate": "2000-01-01T00:00:00Z"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "1511",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "1511",
+                                "duration": 309,
+                                "locked": false,
+                                "progress": null,
+                                "publishDate": "2022-03-10T21:36:00Z",
+                                "season": {
+                                    "show": {
+                                        "title": "Dummy title",
+                                        "__typename": "Show"
+                                    },
+                                    "__typename": "Season"
+                                },
+                                "__typename": "Episode",
+                                "productionDate": "2022-03-10T21:36:00Z"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "1563",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "1563",
+                                "duration": 446,
+                                "locked": false,
+                                "progress": null,
+                                "publishDate": "2022-09-08T07:12:00Z",
+                                "season": {
+                                    "show": {
+                                        "title": "Dummy title",
+                                        "__typename": "Show"
+                                    },
+                                    "__typename": "Season"
+                                },
+                                "__typename": "Episode",
+                                "productionDate": "2022-09-08T07:12:00Z"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "2595",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "2595",
+                                "duration": 1528,
+                                "locked": false,
+                                "progress": 79,
+                                "publishDate": "2024-05-01T23:00:00Z",
+                                "season": {
+                                    "show": {
+                                        "title": "Dummy title",
+                                        "__typename": "Show"
+                                    },
+                                    "__typename": "Season"
+                                },
+                                "__typename": "Episode",
+                                "productionDate": "2024-03-24T18:00:00Z"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "1549",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "1549",
+                                "duration": 344,
+                                "locked": false,
+                                "progress": null,
+                                "publishDate": "2022-04-10T12:26:00Z",
+                                "season": {
+                                    "show": {
+                                        "title": "Dummy title",
+                                        "__typename": "Show"
+                                    },
+                                    "__typename": "Season"
+                                },
+                                "__typename": "Episode",
+                                "productionDate": "2022-04-10T12:26:00Z"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "1999",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "1999",
+                                "duration": 442,
+                                "locked": false,
+                                "progress": null,
+                                "publishDate": "2023-11-16T11:00:00Z",
+                                "season": {
+                                    "show": {
+                                        "title": "Dummy title",
+                                        "__typename": "Show"
+                                    },
+                                    "__typename": "Season"
+                                },
+                                "__typename": "Episode",
+                                "productionDate": "2023-11-16T11:00:00Z"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "1356",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "1356",
+                                "duration": 766,
+                                "locked": false,
+                                "progress": null,
+                                "publishDate": "2017-05-02T22:00:00Z",
+                                "season": null,
+                                "__typename": "Episode",
+                                "productionDate": "2017-05-02T22:00:00Z"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "2655",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "2655",
+                                "duration": 389,
+                                "locked": false,
+                                "progress": 58,
+                                "publishDate": "2024-04-02T14:50:36Z",
+                                "season": {
+                                    "show": {
+                                        "title": "Dummy title",
+                                        "__typename": "Show"
+                                    },
+                                    "__typename": "Season"
+                                },
+                                "__typename": "Episode",
+                                "productionDate": "2024-04-01T16:50:00Z"
+                            },
+                            "__typename": "SectionItem"
+                        }
+                    ],
+                    "__typename": "SectionItemPagination"
+                },
+                "__typename": "DefaultSection",
+                "size": "medium",
+                "id": "337",
+                "title": "Dummy title",
+                "description": null
+            },
+            {
+                "metadata": {
+                    "continueWatching": false,
+                    "myList": false,
+                    "secondaryTitles": true,
+                    "collectionId": "52",
+                    "useContext": false,
+                    "prependLiveElement": false,
+                    "__typename": "ItemSectionMetadata"
+                },
+                "items": {
+                    "offset": 0,
+                    "first": 20,
+                    "items": [
+                        {
+                            "id": "3",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "code": "series",
+                                "__typename": "Page"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "4",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "code": "event",
+                                "__typename": "Page"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "1",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "code": "kids",
+                                "__typename": "Page"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "6",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "code": "music",
+                                "__typename": "Page"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "28",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "code": "studies",
+                                "__typename": "Page"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "5",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "code": "shortfilm",
+                                "__typename": "Page"
+                            },
+                            "__typename": "SectionItem"
+                        }
+                    ],
+                    "__typename": "SectionItemPagination"
+                },
+                "__typename": "IconSection",
+                "id": "308",
+                "title": "Dummy title",
+                "description": null
+            },
+            {
+                "metadata": {
+                    "continueWatching": false,
+                    "myList": true,
+                    "secondaryTitles": true,
+                    "collectionId": "154",
+                    "useContext": false,
+                    "prependLiveElement": false,
+                    "__typename": "ItemSectionMetadata"
+                },
+                "items": {
+                    "offset": 0,
+                    "first": 20,
+                    "items": [],
+                    "__typename": "SectionItemPagination"
+                },
+                "__typename": "DefaultSection",
+                "size": "small",
+                "id": "303",
+                "title": "Dummy title",
+                "description": null
+            },
+            {
+                "metadata": {
+                    "continueWatching": true,
+                    "myList": false,
+                    "secondaryTitles": true,
+                    "collectionId": "91",
+                    "useContext": false,
+                    "prependLiveElement": false,
+                    "__typename": "ItemSectionMetadata"
+                },
+                "items": {
+                    "offset": 0,
+                    "first": 20,
+                    "items": [
+                        {
+                            "id": "821",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "821",
+                                "duration": 491,
+                                "locked": false,
+                                "progress": 150,
+                                "publishDate": "2020-08-13T10:50:00Z",
+                                "season": {
+                                    "show": {
+                                        "title": "Dummy title",
+                                        "__typename": "Show"
+                                    },
+                                    "__typename": "Season"
+                                },
+                                "__typename": "Episode",
+                                "productionDate": "2020-08-13T10:50:00Z"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "2649",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "2649",
+                                "duration": 4930,
+                                "locked": false,
+                                "progress": 1727,
+                                "publishDate": "2024-05-18T14:30:00Z",
+                                "season": {
+                                    "show": {
+                                        "title": "Dummy title",
+                                        "__typename": "Show"
+                                    },
+                                    "__typename": "Season"
+                                },
+                                "__typename": "Episode",
+                                "productionDate": "2024-05-18T10:00:00Z"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "2681",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "2681",
+                                "duration": 6410,
+                                "locked": false,
+                                "progress": 2441,
+                                "publishDate": "2024-05-18T21:30:00Z",
+                                "season": {
+                                    "show": {
+                                        "title": "Dummy title",
+                                        "__typename": "Show"
+                                    },
+                                    "__typename": "Season"
+                                },
+                                "__typename": "Episode",
+                                "productionDate": "2024-05-18T17:00:00Z"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "2693",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "2693",
+                                "duration": 9850,
+                                "locked": false,
+                                "progress": 2045,
+                                "publishDate": "2024-05-16T07:00:00Z",
+                                "season": {
+                                    "show": {
+                                        "title": "Dummy title",
+                                        "__typename": "Show"
+                                    },
+                                    "__typename": "Season"
+                                },
+                                "__typename": "Episode",
+                                "productionDate": "2024-05-15T12:00:00Z"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "2561",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "2561",
+                                "duration": 7111,
+                                "locked": false,
+                                "progress": 3757,
+                                "publishDate": "2023-12-29T01:30:00Z",
+                                "season": {
+                                    "show": {
+                                        "title": "Dummy title",
+                                        "__typename": "Show"
+                                    },
+                                    "__typename": "Season"
+                                },
+                                "__typename": "Episode",
+                                "productionDate": "2023-12-28T18:00:00Z"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "2602",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "2602",
+                                "duration": 3358,
+                                "locked": false,
+                                "progress": 1547,
+                                "publishDate": "2024-04-01T18:00:00Z",
+                                "season": {
+                                    "show": {
+                                        "title": "Dummy title",
+                                        "__typename": "Show"
+                                    },
+                                    "__typename": "Season"
+                                },
+                                "__typename": "Episode",
+                                "productionDate": "2024-04-01T09:00:00Z"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "2597",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "2597",
+                                "duration": 3123,
+                                "locked": false,
+                                "progress": 639,
+                                "publishDate": "2024-03-27T23:00:00Z",
+                                "season": {
+                                    "show": {
+                                        "title": "Dummy title",
+                                        "__typename": "Show"
+                                    },
+                                    "__typename": "Season"
+                                },
+                                "__typename": "Episode",
+                                "productionDate": "2024-03-27T18:00:00Z"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "2590",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "2590",
+                                "duration": 5701,
+                                "locked": false,
+                                "progress": 707,
+                                "publishDate": "2024-03-09T23:00:00Z",
+                                "season": {
+                                    "show": {
+                                        "title": "Dummy title",
+                                        "__typename": "Show"
+                                    },
+                                    "__typename": "Season"
+                                },
+                                "__typename": "Episode",
+                                "productionDate": "2024-03-09T18:00:00Z"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "2682",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "2682",
+                                "duration": 2549,
+                                "locked": false,
+                                "progress": 1775,
+                                "publishDate": "2024-05-19T12:00:00Z",
+                                "season": {
+                                    "show": {
+                                        "title": "Dummy title",
+                                        "__typename": "Show"
+                                    },
+                                    "__typename": "Season"
+                                },
+                                "__typename": "Episode",
+                                "productionDate": "2024-05-19T10:00:00Z"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "1682",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "1682",
+                                "duration": 3621,
+                                "locked": false,
+                                "progress": 680,
+                                "publishDate": "2022-12-03T19:00:00Z",
+                                "season": {
+                                    "show": {
+                                        "title": "Dummy title",
+                                        "__typename": "Show"
+                                    },
+                                    "__typename": "Season"
+                                },
+                                "__typename": "Episode",
+                                "productionDate": "2022-12-03T19:00:00Z"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "1972",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "1972",
+                                "duration": 5835,
+                                "locked": false,
+                                "progress": 3798,
+                                "publishDate": "2023-11-11T15:30:00Z",
+                                "season": {
+                                    "show": {
+                                        "title": "Dummy title",
+                                        "__typename": "Show"
+                                    },
+                                    "__typename": "Season"
+                                },
+                                "__typename": "Episode",
+                                "productionDate": "2023-11-11T10:00:00Z"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "1741",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "1741",
+                                "duration": 1437,
+                                "locked": false,
+                                "progress": 475,
+                                "publishDate": "2022-12-22T09:00:00Z",
+                                "season": {
+                                    "show": {
+                                        "title": "Dummy title",
+                                        "__typename": "Show"
+                                    },
+                                    "__typename": "Season"
+                                },
+                                "__typename": "Episode",
+                                "productionDate": "2022-12-22T08:00:00Z"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "951",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "951",
+                                "duration": 442,
+                                "locked": false,
+                                "progress": 29,
+                                "publishDate": "2021-01-30T09:00:00Z",
+                                "season": {
+                                    "show": {
+                                        "title": "Dummy title",
+                                        "__typename": "Show"
+                                    },
+                                    "__typename": "Season"
+                                },
+                                "__typename": "Episode",
+                                "productionDate": "2021-01-30T09:00:00Z"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "1752",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "1752",
+                                "duration": 698,
+                                "locked": false,
+                                "progress": 17,
+                                "publishDate": "2023-02-17T02:59:00Z",
+                                "season": {
+                                    "show": {
+                                        "title": "Dummy title",
+                                        "__typename": "Show"
+                                    },
+                                    "__typename": "Season"
+                                },
+                                "__typename": "Episode",
+                                "productionDate": "2023-02-17T12:00:00Z"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "1848",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "1848",
+                                "duration": 3057,
+                                "locked": false,
+                                "progress": 38,
+                                "publishDate": "2023-04-22T21:00:00Z",
+                                "season": {
+                                    "show": {
+                                        "title": "Dummy title",
+                                        "__typename": "Show"
+                                    },
+                                    "__typename": "Season"
+                                },
+                                "__typename": "Episode",
+                                "productionDate": "2023-04-22T18:00:00Z"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "89",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "89",
+                                "duration": 1555,
+                                "locked": false,
+                                "progress": 199,
+                                "publishDate": "2017-01-05T00:00:00Z",
+                                "season": {
+                                    "show": {
+                                        "title": "Dummy title",
+                                        "__typename": "Show"
+                                    },
+                                    "__typename": "Season"
+                                },
+                                "__typename": "Episode",
+                                "productionDate": "2017-01-05T00:00:00Z"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "769",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "769",
+                                "duration": 549,
+                                "locked": false,
+                                "progress": 30,
+                                "publishDate": "2020-05-24T08:59:00Z",
+                                "season": {
+                                    "show": {
+                                        "title": "Dummy title",
+                                        "__typename": "Show"
+                                    },
+                                    "__typename": "Season"
+                                },
+                                "__typename": "Episode",
+                                "productionDate": "2020-05-24T08:59:00Z"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "1743",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "1743",
+                                "duration": 126,
+                                "locked": false,
+                                "progress": 42,
+                                "publishDate": "2023-01-06T15:00:00Z",
+                                "season": {
+                                    "show": {
+                                        "title": "Dummy title",
+                                        "__typename": "Show"
+                                    },
+                                    "__typename": "Season"
+                                },
+                                "__typename": "Episode",
+                                "productionDate": "2022-12-28T12:00:00Z"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "1648",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "1648",
+                                "duration": 243,
+                                "locked": false,
+                                "progress": 124,
+                                "publishDate": "2022-11-24T12:00:00Z",
+                                "season": {
+                                    "show": {
+                                        "title": "Dummy title",
+                                        "__typename": "Show"
+                                    },
+                                    "__typename": "Season"
+                                },
+                                "__typename": "Episode",
+                                "productionDate": "2022-11-24T12:00:00Z"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "926",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "926",
+                                "duration": 340,
+                                "locked": false,
+                                "progress": 164,
+                                "publishDate": "2020-12-06T09:00:00Z",
+                                "season": {
+                                    "show": {
+                                        "title": "Dummy title",
+                                        "__typename": "Show"
+                                    },
+                                    "__typename": "Season"
+                                },
+                                "__typename": "Episode",
+                                "productionDate": "2020-12-06T09:00:00Z"
+                            },
+                            "__typename": "SectionItem"
+                        }
+                    ],
+                    "__typename": "SectionItemPagination"
+                },
+                "__typename": "DefaultSection",
+                "size": "small",
+                "id": "304",
+                "title": "Dummy title",
+                "description": null
+            },
+            {
+                "metadata": {
+                    "continueWatching": false,
+                    "myList": false,
+                    "secondaryTitles": true,
+                    "collectionId": "120",
+                    "useContext": false,
+                    "prependLiveElement": false,
+                    "__typename": "ItemSectionMetadata"
+                },
+                "items": {
+                    "offset": 0,
+                    "first": 20,
+                    "items": [
+                        {
+                            "id": "da6ad621-cc74-4942-bc9a-60c02d7a1237",
+                            "title": "Dummy title",
+                            "image": null,
+                            "item": {
+                                "id": "da6ad621-cc74-4942-bc9a-60c02d7a1237",
+                                "__typename": "Playlist"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "25",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "code": "testing",
+                                "__typename": "Page"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "28",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "code": "studies",
+                                "__typename": "Page"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "48",
+                            "title": "Dummy title",
+                            "image": null,
+                            "item": {
+                                "code": "front-u36-v1",
+                                "__typename": "Page"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "-1",
+                            "title": "Dummy title",
+                            "image": null,
+                            "item": {
+                                "code": "frontpage",
+                                "__typename": "Page"
+                            },
+                            "__typename": "SectionItem"
+                        }
+                    ],
+                    "__typename": "SectionItemPagination"
+                },
+                "__typename": "IconSection",
+                "id": "371",
+                "title": null,
+                "description": null
+            },
+            {
+                "metadata": {
+                    "continueWatching": false,
+                    "myList": false,
+                    "secondaryTitles": true,
+                    "collectionId": "260",
+                    "useContext": true,
+                    "prependLiveElement": false,
+                    "__typename": "ItemSectionMetadata"
+                },
+                "items": {
+                    "offset": 0,
+                    "first": 20,
+                    "items": [
+                        {
+                            "id": "242bec7a-c446-47a4-8e57-7b795ffa8f25",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "242bec7a-c446-47a4-8e57-7b795ffa8f25",
+                                "__typename": "Short"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "91878277-d263-4844-a901-8f05f86ecdb9",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "91878277-d263-4844-a901-8f05f86ecdb9",
+                                "__typename": "Short"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "a162848d-8a35-4d2c-bd2f-bcea76d07d16",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "a162848d-8a35-4d2c-bd2f-bcea76d07d16",
+                                "__typename": "Short"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "4daea4ea-162c-40cb-b678-323a8382f11e",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "4daea4ea-162c-40cb-b678-323a8382f11e",
+                                "__typename": "Short"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "a02fb6fd-9b28-420e-9f40-244bac70be35",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "a02fb6fd-9b28-420e-9f40-244bac70be35",
+                                "__typename": "Short"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "949194eb-8620-4150-8686-993175f6a6b0",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "949194eb-8620-4150-8686-993175f6a6b0",
+                                "__typename": "Short"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "7e375b9d-5e12-4a5e-b97d-392af40751c2",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "7e375b9d-5e12-4a5e-b97d-392af40751c2",
+                                "__typename": "Short"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "ed9cccf6-93f6-497d-83f2-408b0a2c55d6",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "ed9cccf6-93f6-497d-83f2-408b0a2c55d6",
+                                "__typename": "Short"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "8272417d-a9a1-4ca0-aa88-e363cbdb485a",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "8272417d-a9a1-4ca0-aa88-e363cbdb485a",
+                                "__typename": "Short"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "fb78de28-186a-4d17-b4a9-65b7be244b8b",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "fb78de28-186a-4d17-b4a9-65b7be244b8b",
+                                "__typename": "Short"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "750e86a9-429b-439b-98d5-4c34cedd4f39",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "750e86a9-429b-439b-98d5-4c34cedd4f39",
+                                "__typename": "Short"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "e7ea51d7-d53f-492c-8fc6-1c1867576056",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "e7ea51d7-d53f-492c-8fc6-1c1867576056",
+                                "__typename": "Short"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "85db8465-ee65-44d5-9ba6-77feb8d7c4e8",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "85db8465-ee65-44d5-9ba6-77feb8d7c4e8",
+                                "__typename": "Short"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "cfa62c55-5b59-4c30-87d2-023c17a49285",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "cfa62c55-5b59-4c30-87d2-023c17a49285",
+                                "__typename": "Short"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "9dc47073-fdb0-40c1-9f0d-fc15ac541495",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "9dc47073-fdb0-40c1-9f0d-fc15ac541495",
+                                "__typename": "Short"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "f59f3704-ccca-49a1-8ba2-05d525ba2e91",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "f59f3704-ccca-49a1-8ba2-05d525ba2e91",
+                                "__typename": "Short"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "306d9445-324c-4695-acac-0df9116d0343",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "306d9445-324c-4695-acac-0df9116d0343",
+                                "__typename": "Short"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "f99302ed-578e-491e-a0ba-4c055ef26bc1",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "f99302ed-578e-491e-a0ba-4c055ef26bc1",
+                                "__typename": "Short"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "e47878e7-f57b-4953-b6d0-cd09b1931bf6",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "e47878e7-f57b-4953-b6d0-cd09b1931bf6",
+                                "__typename": "Short"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "e4fa0886-2eb2-4e6a-9d31-9c1db7d2fe80",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "e4fa0886-2eb2-4e6a-9d31-9c1db7d2fe80",
+                                "__typename": "Short"
+                            },
+                            "__typename": "SectionItem"
+                        }
+                    ],
+                    "__typename": "SectionItemPagination"
+                },
+                "__typename": "PosterSection",
+                "size": "small",
+                "id": "374",
+                "title": "Dummy title",
+                "description": null
+            },
+            {
+                "metadata": {
+                    "continueWatching": false,
+                    "myList": false,
+                    "secondaryTitles": true,
+                    "collectionId": "261",
+                    "useContext": false,
+                    "prependLiveElement": false,
+                    "__typename": "ItemSectionMetadata"
+                },
+                "items": {
+                    "offset": 0,
+                    "first": 20,
+                    "items": [
+                        {
+                            "id": "be04a15d-a40a-4f28-a876-90773c498bd3",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "be04a15d-a40a-4f28-a876-90773c498bd3",
+                                "__typename": "Short"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "c79ed788-a21d-4fce-b446-44e2c1af0647",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "c79ed788-a21d-4fce-b446-44e2c1af0647",
+                                "__typename": "Short"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "e63424cc-5949-483a-b898-a5a1b6f506f5",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "e63424cc-5949-483a-b898-a5a1b6f506f5",
+                                "__typename": "Short"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "0683a232-d7f1-4212-9cf0-c89d8843cdd1",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "0683a232-d7f1-4212-9cf0-c89d8843cdd1",
+                                "__typename": "Short"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "7ff0d3f5-8fa3-43cd-acd7-ea3160708b07",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "7ff0d3f5-8fa3-43cd-acd7-ea3160708b07",
+                                "__typename": "Short"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "0fd0462b-ab45-4c42-b759-34a3ef9620b3",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "0fd0462b-ab45-4c42-b759-34a3ef9620b3",
+                                "__typename": "Short"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "a2a20ad2-6bb7-40e8-97f0-04b721612311",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "a2a20ad2-6bb7-40e8-97f0-04b721612311",
+                                "__typename": "Short"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "56224e8e-83b2-4a5f-8a39-99a433aabd3b",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "56224e8e-83b2-4a5f-8a39-99a433aabd3b",
+                                "__typename": "Short"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "bad95047-0e84-44d6-970e-03c8c23dc4bf",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "bad95047-0e84-44d6-970e-03c8c23dc4bf",
+                                "__typename": "Short"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "ed84bb39-586f-472c-b653-8856f9c7b8ca",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "ed84bb39-586f-472c-b653-8856f9c7b8ca",
+                                "__typename": "Short"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "4269f702-038e-4b9a-8d33-a924c4f33e11",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "4269f702-038e-4b9a-8d33-a924c4f33e11",
+                                "__typename": "Short"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "9d579742-91bf-447c-b1a8-d4a63aa4c13b",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "9d579742-91bf-447c-b1a8-d4a63aa4c13b",
+                                "__typename": "Short"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "f9411568-65da-42d4-aa22-63032622be70",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "f9411568-65da-42d4-aa22-63032622be70",
+                                "__typename": "Short"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "fcba9fda-8c2c-44f0-a015-22bbc53b5e9e",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "fcba9fda-8c2c-44f0-a015-22bbc53b5e9e",
+                                "__typename": "Short"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "519f4810-777a-444c-b6ff-0f66d530f430",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "519f4810-777a-444c-b6ff-0f66d530f430",
+                                "__typename": "Short"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "fee49027-a161-4c71-aeeb-fa2b710f8d31",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "fee49027-a161-4c71-aeeb-fa2b710f8d31",
+                                "__typename": "Short"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "415cb504-e95b-4c33-a147-d97b23a2cb1a",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "415cb504-e95b-4c33-a147-d97b23a2cb1a",
+                                "__typename": "Short"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "eaaa5a8d-8c6d-42c7-a3c2-a7832cd87b0d",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "eaaa5a8d-8c6d-42c7-a3c2-a7832cd87b0d",
+                                "__typename": "Short"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "a3e4667e-cc0a-4329-b183-18b373f49a20",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "a3e4667e-cc0a-4329-b183-18b373f49a20",
+                                "__typename": "Short"
+                            },
+                            "__typename": "SectionItem"
+                        },
+                        {
+                            "id": "7534fc33-815e-4490-a770-c74e96e06ac4",
+                            "title": "Dummy title",
+                            "image": "",
+                            "item": {
+                                "id": "7534fc33-815e-4490-a770-c74e96e06ac4",
+                                "__typename": "Short"
+                            },
+                            "__typename": "SectionItem"
+                        }
+                    ],
+                    "__typename": "SectionItemPagination"
+                },
+                "__typename": "PosterSection",
+                "size": "small",
+                "id": "375",
+                "title": "Dummy title",
+                "description": null
+            }
+        ],
+        "__typename": "SectionPagination"
+    },
+    "__typename": "Page"
+}
