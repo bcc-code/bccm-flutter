@@ -28,6 +28,7 @@ final appConfigFutureProvider = StateProvider<Future<Query$Application>>((ref) a
     }
     ref.invalidateSelf();
   }, fireImmediately: false);
+  ref.scheduleRefresh(const Duration(minutes: 5));
   return result.parsedData!;
 });
 
