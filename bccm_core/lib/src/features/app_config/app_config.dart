@@ -11,27 +11,27 @@ bool isOldAppVersion({required String current, required String minimum}) {
 
 RealtimeUpdate? _lastUpdate;
 final appConfigFutureProvider = StateProvider<Future<Query$Application>>((ref) async {
-  debugPrint('ag: appConfigFutureProvider building');
-  final result = await ref
-      .watch(bccmGraphQLProvider)
-      .query$Application(Options$Query$Application(variables: Variables$Query$Application(timestamp: _lastUpdate?.updatedAt)));
-  debugPrint('ag: appConfigFutureProvider result: $result');
-  if (result.exception != null) {
-    throw result.exception!;
-  }
-  if (result.parsedData == null) {
-    throw ErrorDescription('App config data is null.');
-  }
-  ref.listen(applicationUpdatesProvider(result.parsedData!.application.code), (_, next) {
+  final gql = ref.watch(bccmGraphQLProvider);
+  final result = await gql.query$Application(Options$Query$Application(variables: Variables$Query$Application(timestamp: _lastUpdate?.updatedAt)));
+  if (result.exception != null) throw result.exception!;
+
+  final data = result.parsedData;
+  if (data == null) throw ErrorDescription('App config data is null.');
+
+  // Listen for realtime updates
+  ref.listen(applicationUpdatesProvider(data.application.code), (_, next) {
     if (next.hasValue == true) {
       _lastUpdate = next.value;
     }
     ref.invalidateSelf();
   }, fireImmediately: false);
+
   ref.scheduleRefresh(const Duration(minutes: 5));
-  return result.parsedData!;
+
+  return data;
 });
 
+/// A snapshot of the app config
 final _appConfigSnapshotProvider = FutureProvider<Query$Application>((ref) async {
   return ref.watch(appConfigFutureProvider);
 });
@@ -43,12 +43,7 @@ final appConfigProvider = Provider<Query$Application?>((ref) {
   return ref.watch(_appConfigSnapshotProvider).valueOrNull;
 });
 
-class RealtimeUpdate {
-  final String updatedAt;
-
-  RealtimeUpdate(this.updatedAt);
-}
-
+/// Listen to firebase updates
 final applicationUpdatesProvider = StreamProvider.family<RealtimeUpdate, String>((ref, String appCode) {
   return FirebaseFirestore.instanceFor(app: Firebase.app('bccm')).collection('updates:applications').doc(appCode).snapshots().map((event) {
     final updatedAt = event.data()?['Updated'];
@@ -58,3 +53,8 @@ final applicationUpdatesProvider = StreamProvider.family<RealtimeUpdate, String>
     return RealtimeUpdate(updatedAt);
   }).skip(1);
 });
+
+class RealtimeUpdate {
+  RealtimeUpdate(this.updatedAt);
+  final String updatedAt;
+}

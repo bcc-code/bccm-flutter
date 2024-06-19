@@ -14,9 +14,9 @@ class TimeMeasurement extends Stopwatch {
   final String key;
   bool _tracked = false;
 
-  // Stops the stopwatch and tracks the time
-  //
-  // Can be called multiple times, but will only track the first time
+  /// Stops the stopwatch and tracks the time
+  ///
+  /// Can be called multiple times, but will only track the first time
   void track(Analytics analytics) {
     if (_tracked) return;
     _tracked = true;
