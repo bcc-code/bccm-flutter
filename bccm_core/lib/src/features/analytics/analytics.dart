@@ -73,6 +73,8 @@ class Analytics {
   @mustBeOverridden
   void guideShown(GuideShownEvent event) {}
   @mustBeOverridden
+  void timeMeasurement(TimeMeasurementEvent event) {}
+  @mustBeOverridden
   void reset() {}
 }
 
@@ -348,6 +350,11 @@ class RudderAnalytics extends Analytics {
   @override
   void guideShown(GuideShownEvent event) {
     RudderController.instance.track('guide_shown', properties: getCommonData().putValue(map: event.toJson()));
+  }
+
+  @override
+  void timeMeasurement(TimeMeasurementEvent event) {
+    RudderController.instance.track('time_measurement', properties: getCommonData().putValue(map: event.toJson()));
   }
 
   @override

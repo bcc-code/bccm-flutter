@@ -39,3 +39,19 @@ Map<String, dynamic> _$$GuideShownEventImplToJson(
       'guide': instance.guide,
       'meta': instance.meta,
     };
+
+_$TimeMeasurementEventImpl _$$TimeMeasurementEventImplFromJson(
+        Map<String, dynamic> json) =>
+    _$TimeMeasurementEventImpl(
+      key: json['key'] as String?,
+      seconds: (json['seconds'] as num?)?.toDouble(),
+      meta: json['meta'] as Map<String, dynamic>?,
+    );
+
+Map<String, dynamic> _$$TimeMeasurementEventImplToJson(
+        _$TimeMeasurementEventImpl instance) =>
+    <String, dynamic>{
+      'key': instance.key,
+      'seconds': instance.seconds,
+      'meta': instance.meta,
+    };

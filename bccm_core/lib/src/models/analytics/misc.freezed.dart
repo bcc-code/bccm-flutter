@@ -416,3 +416,187 @@ abstract class _GuideShownEvent implements GuideShownEvent {
   _$$GuideShownEventImplCopyWith<_$GuideShownEventImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
+
+TimeMeasurementEvent _$TimeMeasurementEventFromJson(Map<String, dynamic> json) {
+  return _TimeMeasurementEvent.fromJson(json);
+}
+
+/// @nodoc
+mixin _$TimeMeasurementEvent {
+  String? get key => throw _privateConstructorUsedError;
+  double? get seconds => throw _privateConstructorUsedError;
+  Map<String, dynamic>? get meta => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $TimeMeasurementEventCopyWith<TimeMeasurementEvent> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $TimeMeasurementEventCopyWith<$Res> {
+  factory $TimeMeasurementEventCopyWith(TimeMeasurementEvent value,
+          $Res Function(TimeMeasurementEvent) then) =
+      _$TimeMeasurementEventCopyWithImpl<$Res, TimeMeasurementEvent>;
+  @useResult
+  $Res call({String? key, double? seconds, Map<String, dynamic>? meta});
+}
+
+/// @nodoc
+class _$TimeMeasurementEventCopyWithImpl<$Res,
+        $Val extends TimeMeasurementEvent>
+    implements $TimeMeasurementEventCopyWith<$Res> {
+  _$TimeMeasurementEventCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? key = freezed,
+    Object? seconds = freezed,
+    Object? meta = freezed,
+  }) {
+    return _then(_value.copyWith(
+      key: freezed == key
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as String?,
+      seconds: freezed == seconds
+          ? _value.seconds
+          : seconds // ignore: cast_nullable_to_non_nullable
+              as double?,
+      meta: freezed == meta
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$TimeMeasurementEventImplCopyWith<$Res>
+    implements $TimeMeasurementEventCopyWith<$Res> {
+  factory _$$TimeMeasurementEventImplCopyWith(_$TimeMeasurementEventImpl value,
+          $Res Function(_$TimeMeasurementEventImpl) then) =
+      __$$TimeMeasurementEventImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String? key, double? seconds, Map<String, dynamic>? meta});
+}
+
+/// @nodoc
+class __$$TimeMeasurementEventImplCopyWithImpl<$Res>
+    extends _$TimeMeasurementEventCopyWithImpl<$Res, _$TimeMeasurementEventImpl>
+    implements _$$TimeMeasurementEventImplCopyWith<$Res> {
+  __$$TimeMeasurementEventImplCopyWithImpl(_$TimeMeasurementEventImpl _value,
+      $Res Function(_$TimeMeasurementEventImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? key = freezed,
+    Object? seconds = freezed,
+    Object? meta = freezed,
+  }) {
+    return _then(_$TimeMeasurementEventImpl(
+      key: freezed == key
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as String?,
+      seconds: freezed == seconds
+          ? _value.seconds
+          : seconds // ignore: cast_nullable_to_non_nullable
+              as double?,
+      meta: freezed == meta
+          ? _value._meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$TimeMeasurementEventImpl implements _TimeMeasurementEvent {
+  const _$TimeMeasurementEventImpl(
+      {this.key, this.seconds, final Map<String, dynamic>? meta})
+      : _meta = meta;
+
+  factory _$TimeMeasurementEventImpl.fromJson(Map<String, dynamic> json) =>
+      _$$TimeMeasurementEventImplFromJson(json);
+
+  @override
+  final String? key;
+  @override
+  final double? seconds;
+  final Map<String, dynamic>? _meta;
+  @override
+  Map<String, dynamic>? get meta {
+    final value = _meta;
+    if (value == null) return null;
+    if (_meta is EqualUnmodifiableMapView) return _meta;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(value);
+  }
+
+  @override
+  String toString() {
+    return 'TimeMeasurementEvent(key: $key, seconds: $seconds, meta: $meta)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$TimeMeasurementEventImpl &&
+            (identical(other.key, key) || other.key == key) &&
+            (identical(other.seconds, seconds) || other.seconds == seconds) &&
+            const DeepCollectionEquality().equals(other._meta, _meta));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, key, seconds, const DeepCollectionEquality().hash(_meta));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$TimeMeasurementEventImplCopyWith<_$TimeMeasurementEventImpl>
+      get copyWith =>
+          __$$TimeMeasurementEventImplCopyWithImpl<_$TimeMeasurementEventImpl>(
+              this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$TimeMeasurementEventImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _TimeMeasurementEvent implements TimeMeasurementEvent {
+  const factory _TimeMeasurementEvent(
+      {final String? key,
+      final double? seconds,
+      final Map<String, dynamic>? meta}) = _$TimeMeasurementEventImpl;
+
+  factory _TimeMeasurementEvent.fromJson(Map<String, dynamic> json) =
+      _$TimeMeasurementEventImpl.fromJson;
+
+  @override
+  String? get key;
+  @override
+  double? get seconds;
+  @override
+  Map<String, dynamic>? get meta;
+  @override
+  @JsonKey(ignore: true)
+  _$$TimeMeasurementEventImplCopyWith<_$TimeMeasurementEventImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}

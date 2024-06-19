@@ -25,3 +25,14 @@ class GuideShownEvent with _$GuideShownEvent {
 
   factory GuideShownEvent.fromJson(Map<String, dynamic> json) => _$GuideShownEventFromJson(json);
 }
+
+@freezed
+class TimeMeasurementEvent with _$TimeMeasurementEvent {
+  const factory TimeMeasurementEvent({
+    String? key,
+    double? seconds,
+    Map<String, dynamic>? meta,
+  }) = _TimeMeasurementEvent;
+
+  factory TimeMeasurementEvent.fromJson(Map<String, dynamic> json) => _$TimeMeasurementEventFromJson(json);
+}
