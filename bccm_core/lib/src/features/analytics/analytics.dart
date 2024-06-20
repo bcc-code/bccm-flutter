@@ -354,6 +354,9 @@ class RudderAnalytics extends Analytics {
 
   @override
   void timeMeasurement(TimeMeasurementEvent event) {
+    if (event.meta?.isEmpty == true) {
+      event = event.copyWith(meta: null);
+    }
     RudderController.instance.track('time_measurement', properties: getCommonData().putValue(map: event.toJson()));
   }
 
