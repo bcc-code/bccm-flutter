@@ -1,4 +1,13 @@
-enum Enum$SectionSize { small, medium, $unknown }
+enum Enum$SectionSize {
+  small,
+  medium,
+  $unknown;
+
+  factory Enum$SectionSize.fromJson(String value) =>
+      fromJson$Enum$SectionSize(value);
+
+  String toJson() => toJson$Enum$SectionSize(this);
+}
 
 String toJson$Enum$SectionSize(Enum$SectionSize e) {
   switch (e) {
@@ -22,7 +31,16 @@ Enum$SectionSize fromJson$Enum$SectionSize(String value) {
   }
 }
 
-enum Enum$CardSectionSize { large, mini, $unknown }
+enum Enum$CardSectionSize {
+  large,
+  mini,
+  $unknown;
+
+  factory Enum$CardSectionSize.fromJson(String value) =>
+      fromJson$Enum$CardSectionSize(value);
+
+  String toJson() => toJson$Enum$CardSectionSize(this);
+}
 
 String toJson$Enum$CardSectionSize(Enum$CardSectionSize e) {
   switch (e) {
@@ -46,7 +64,15 @@ Enum$CardSectionSize fromJson$Enum$CardSectionSize(String value) {
   }
 }
 
-enum Enum$GridSectionSize { half, $unknown }
+enum Enum$GridSectionSize {
+  half,
+  $unknown;
+
+  factory Enum$GridSectionSize.fromJson(String value) =>
+      fromJson$Enum$GridSectionSize(value);
+
+  String toJson() => toJson$Enum$GridSectionSize(this);
+}
 
 String toJson$Enum$GridSectionSize(Enum$GridSectionSize e) {
   switch (e) {

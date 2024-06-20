@@ -344,7 +344,15 @@ class _CopyWithStubImpl$Input$EmailOptions<TRes>
       _res;
 }
 
-enum Enum$SubscriptionTopic { comics, $unknown }
+enum Enum$SubscriptionTopic {
+  comics,
+  $unknown;
+
+  factory Enum$SubscriptionTopic.fromJson(String value) =>
+      fromJson$Enum$SubscriptionTopic(value);
+
+  String toJson() => toJson$Enum$SubscriptionTopic(this);
+}
 
 String toJson$Enum$SubscriptionTopic(Enum$SubscriptionTopic e) {
   switch (e) {

@@ -1,4 +1,13 @@
-enum Enum$Gender { male, female, unknown, $unknown }
+enum Enum$Gender {
+  male,
+  female,
+  unknown,
+  $unknown;
+
+  factory Enum$Gender.fromJson(String value) => fromJson$Enum$Gender(value);
+
+  String toJson() => toJson$Enum$Gender(this);
+}
 
 String toJson$Enum$Gender(Enum$Gender e) {
   switch (e) {

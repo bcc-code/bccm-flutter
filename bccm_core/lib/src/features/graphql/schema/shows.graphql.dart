@@ -1,4 +1,12 @@
-enum Enum$ShowType { event, series, $unknown }
+enum Enum$ShowType {
+  event,
+  series,
+  $unknown;
+
+  factory Enum$ShowType.fromJson(String value) => fromJson$Enum$ShowType(value);
+
+  String toJson() => toJson$Enum$ShowType(this);
+}
 
 String toJson$Enum$ShowType(Enum$ShowType e) {
   switch (e) {

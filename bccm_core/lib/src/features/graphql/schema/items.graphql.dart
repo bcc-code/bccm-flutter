@@ -1,4 +1,14 @@
-enum Enum$LinkType { text, audio, video, other, $unknown }
+enum Enum$LinkType {
+  text,
+  audio,
+  video,
+  other,
+  $unknown;
+
+  factory Enum$LinkType.fromJson(String value) => fromJson$Enum$LinkType(value);
+
+  String toJson() => toJson$Enum$LinkType(this);
+}
 
 String toJson$Enum$LinkType(Enum$LinkType e) {
   switch (e) {

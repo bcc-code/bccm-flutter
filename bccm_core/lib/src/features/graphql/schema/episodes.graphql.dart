@@ -1,4 +1,13 @@
-enum Enum$EpisodeType { episode, standalone, $unknown }
+enum Enum$EpisodeType {
+  episode,
+  standalone,
+  $unknown;
+
+  factory Enum$EpisodeType.fromJson(String value) =>
+      fromJson$Enum$EpisodeType(value);
+
+  String toJson() => toJson$Enum$EpisodeType(this);
+}
 
 String toJson$Enum$EpisodeType(Enum$EpisodeType e) {
   switch (e) {
@@ -22,7 +31,17 @@ Enum$EpisodeType fromJson$Enum$EpisodeType(String value) {
   }
 }
 
-enum Enum$ShareRestriction { registered, members, public, $unknown }
+enum Enum$ShareRestriction {
+  registered,
+  members,
+  public,
+  $unknown;
+
+  factory Enum$ShareRestriction.fromJson(String value) =>
+      fromJson$Enum$ShareRestriction(value);
+
+  String toJson() => toJson$Enum$ShareRestriction(this);
+}
 
 String toJson$Enum$ShareRestriction(Enum$ShareRestriction e) {
   switch (e) {
@@ -50,7 +69,17 @@ Enum$ShareRestriction fromJson$Enum$ShareRestriction(String value) {
   }
 }
 
-enum Enum$StreamType { hls_ts, hls_cmaf, dash, $unknown }
+enum Enum$StreamType {
+  hls_ts,
+  hls_cmaf,
+  dash,
+  $unknown;
+
+  factory Enum$StreamType.fromJson(String value) =>
+      fromJson$Enum$StreamType(value);
+
+  String toJson() => toJson$Enum$StreamType(this);
+}
 
 String toJson$Enum$StreamType(Enum$StreamType e) {
   switch (e) {

@@ -336,7 +336,17 @@ class _CopyWithStubImpl$Input$EpisodeContext<TRes>
       _res;
 }
 
-enum Enum$ImageStyle { poster, featured, $default, $unknown }
+enum Enum$ImageStyle {
+  poster,
+  featured,
+  $default,
+  $unknown;
+
+  factory Enum$ImageStyle.fromJson(String value) =>
+      fromJson$Enum$ImageStyle(value);
+
+  String toJson() => toJson$Enum$ImageStyle(this);
+}
 
 String toJson$Enum$ImageStyle(Enum$ImageStyle e) {
   switch (e) {
@@ -364,7 +374,15 @@ Enum$ImageStyle fromJson$Enum$ImageStyle(String value) {
   }
 }
 
-enum Enum$Status { published, unlisted, $unknown }
+enum Enum$Status {
+  published,
+  unlisted,
+  $unknown;
+
+  factory Enum$Status.fromJson(String value) => fromJson$Enum$Status(value);
+
+  String toJson() => toJson$Enum$Status(this);
+}
 
 String toJson$Enum$Status(Enum$Status e) {
   switch (e) {
@@ -397,7 +415,12 @@ enum Enum$__TypeKind {
   INPUT_OBJECT,
   LIST,
   NON_NULL,
-  $unknown
+  $unknown;
+
+  factory Enum$__TypeKind.fromJson(String value) =>
+      fromJson$Enum$__TypeKind(value);
+
+  String toJson() => toJson$Enum$__TypeKind(this);
 }
 
 String toJson$Enum$__TypeKind(Enum$__TypeKind e) {
@@ -466,7 +489,12 @@ enum Enum$__DirectiveLocation {
   ENUM_VALUE,
   INPUT_OBJECT,
   INPUT_FIELD_DEFINITION,
-  $unknown
+  $unknown;
+
+  factory Enum$__DirectiveLocation.fromJson(String value) =>
+      fromJson$Enum$__DirectiveLocation(value);
+
+  String toJson() => toJson$Enum$__DirectiveLocation(this);
 }
 
 String toJson$Enum$__DirectiveLocation(Enum$__DirectiveLocation e) {
