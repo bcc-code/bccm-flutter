@@ -6,18 +6,18 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 final isOfflineProvider = Provider.autoDispose((ref) {
   final data = ref.watch(connectivityProvider).asData?.valueOrNull;
-  return data == ConnectivityResult.none;
+  return data?.contains(ConnectivityResult.none) == true;
 });
 
 final connectivityProvider = StreamProvider.autoDispose((ref) {
   return _connectivityStream();
 });
 
-Stream<ConnectivityResult> _connectivityStream() async* {
+Stream<List<ConnectivityResult>> _connectivityStream() async* {
   try {
     yield await Connectivity().checkConnectivity();
   } catch (e) {
-    yield ConnectivityResult.none;
+    yield [ConnectivityResult.none];
   }
   await for (final event in Connectivity().onConnectivityChanged) {
     yield event;
