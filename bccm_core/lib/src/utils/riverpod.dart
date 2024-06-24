@@ -12,7 +12,7 @@ extension KeepAliveRef on WidgetRef {
 }
 
 extension ScheduleProviderRefreshX on Ref {
-  Future<void> scheduleRefresh(Duration duration) async {
+  void scheduleRefresh(Duration duration) {
     final timer = Timer(duration, () {
       invalidateSelf();
     });
