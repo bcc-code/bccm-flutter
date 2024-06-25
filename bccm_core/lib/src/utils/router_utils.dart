@@ -3,21 +3,35 @@ import 'package:bccm_core/src/features/providers/special_routes_handler_provider
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+class UnknownNavigationFailure implements NavigationFailure {
+  UnknownNavigationFailure();
+}
+
 extension StackRouterCustomNavigation on StackRouter {
-  Future navigateNamedFromRoot(String path, {OnNavigationFailure? onFailure}) async {
+  Future<bool> navigateNamedFromRoot(String path, {OnNavigationFailure? onFailure}) async {
     final context = navigatorKey.currentState?.context;
     if (context != null) {
       final ref = ProviderScope.containerOf(context, listen: false);
       if (await ref.read(specialRoutesHandlerProvider).handle(context, path)) {
         debugPrint('Route handled by SpecialRoutesHandler');
-        return;
+        return true;
       }
     }
     var result = root.matcher.match(path, includePrefixMatches: true);
     if (result != null) {
-      return navigateAll(result, onFailure: onFailure);
+      var success = true;
+      try {
+        await navigateAll(result, onFailure: (f) {
+          success = false;
+          onFailure?.call(f);
+        });
+      } catch (e) {
+        success = false;
+        onFailure?.call(UnknownNavigationFailure());
+      }
+      return success;
     }
-    return Future.value();
+    return false;
   }
 }
 
