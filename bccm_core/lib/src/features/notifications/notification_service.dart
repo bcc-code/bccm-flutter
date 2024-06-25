@@ -79,7 +79,6 @@ class FcmNotificationService implements NotificationService {
 
   void _onTokenChanged(String token) {
     fcmToken = token;
-    debugPrint('FCM token changed: $token');
     onTokenChanged(token);
   }
 
