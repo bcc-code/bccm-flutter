@@ -17,26 +17,21 @@ class _RouteCallbacks implements AutoRouteAware {
 
   @override
   void didPopNext() {
-    debugPrint('SHRT: didPopNext');
     handleDidPopNext?.call();
   }
 
   @override
   void didPush() {
-    debugPrint('SHRT: didPush');
     handleDidPush?.call();
   }
 
   @override
   void didPop() {
-    debugPrint('SHRT: didPop');
     handleDidPop?.call();
   }
 
   @override
   void didPushNext() {
-    debugPrint('SHRT: didPushNext');
-
     handleDidPushNext?.call();
   }
 
@@ -47,44 +42,28 @@ class _RouteCallbacks implements AutoRouteAware {
   void didInitTabRoute(TabPageRoute? previousRoute) {}
 }
 
-bool isRouteInCurrentTab(
-  TabsRouter tabsRouter,
-  RouteData route,
-) {
-  return [tabsRouter.current.route, tabsRouter.topMatch, ...?tabsRouter.current.route.children].contains(route.route);
-}
-
-bool Function() useIsTabActive({
-  void Function(bool active)? onChange,
-}) {
+bool useIsRouteActive() {
   final context = useContext();
-  final route = context.routeData;
-  final tabsController = TabsRouterScope.of(context)?.controller;
-  final isActive = useState(true);
+  final router = AutoRouter.of(context);
+  final isActive = useState(router.topMatch == context.routeData.route);
 
   useEffect(() {
-    debugPrint('SHRT: route: $route');
-    if (tabsController == null) return () {};
-
-    isActive.value = isRouteInCurrentTab(tabsController, route);
-
     void listener() {
       if (!context.mounted) return;
-      final newIsActive = isRouteInCurrentTab(tabsController, route);
+      final routeData = RouteDataScope.of(context).routeData;
+      final newIsActive = router.root.topMatch == routeData.route;
       if (newIsActive == isActive.value) return;
-      onChange?.call(newIsActive);
       isActive.value = newIsActive;
     }
 
-    debugPrint('tab active isActive: $isActive');
+    router.root.navigationHistory.addListener(listener);
 
-    Future.delayed(const Duration(seconds: 1), listener);
-    tabsController.addListener(listener);
+    return () {
+      router.root.navigationHistory.removeListener(listener);
+    };
+  }, [router.root, router.root.navigationHistory]);
 
-    return () => tabsController.removeListener(listener);
-  }, [route]);
-
-  return () => isActive.value;
+  return isActive.value;
 }
 
 AutoRouteObserver? useAutoRouteObserver({
