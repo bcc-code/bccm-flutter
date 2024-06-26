@@ -19,6 +19,7 @@ export 'src/models/auth0/auth0_api.dart';
 export 'src/utils/hooks/use_on_init.dart';
 export 'src/utils/hooks/use_on_dispose.dart';
 export 'src/utils/hooks/use_interval.dart';
+export 'src/utils/hooks/use_value_changed_simple.dart';
 export 'src/utils/hooks/use_route_aware.dart';
 export 'src/utils/bytes.dart';
 export 'src/utils/colors.dart';
