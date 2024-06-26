@@ -45,7 +45,8 @@ class _RouteCallbacks implements AutoRouteAware {
 bool useIsRouteActive() {
   final context = useContext();
   final router = AutoRouter.of(context);
-  final isActive = useState(router.topMatch == context.routeData.route);
+  final routeData = RouteDataScope.of(context).routeData;
+  final isActive = useState(router.root.topMatch == routeData.route);
 
   useEffect(() {
     void listener() {
