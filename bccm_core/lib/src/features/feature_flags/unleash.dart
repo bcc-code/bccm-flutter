@@ -23,7 +23,6 @@ UnleashContext getStandardUnleashContext({
     if (ageGroup != null) 'ageGroupStart': ageGroup.start.toString(),
     if (ageGroup != null) 'ageGroup': ageGroup.name,
     if (gender != null) 'gender': gender,
-    if (gender != null) 'gender': gender,
     if (isBetaTester != null) 'isBetaTester': isBetaTester.toString(),
     'isAndroidTv': isAndroidTv.toString(),
   });
