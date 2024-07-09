@@ -7694,6 +7694,35 @@ const fragmentDefinitionItemSection = FragmentDefinitionNode(
           selectionSet: null,
         ),
         FieldNode(
+          name: NameNode(value: 'page'),
+          alias: null,
+          arguments: [],
+          directives: [],
+          selectionSet: SelectionSetNode(selections: [
+            FieldNode(
+              name: NameNode(value: 'code'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null,
+            ),
+            FieldNode(
+              name: NameNode(value: '__typename'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null,
+            ),
+          ]),
+        ),
+        FieldNode(
+          name: NameNode(value: 'limit'),
+          alias: null,
+          arguments: [],
+          directives: [],
+          selectionSet: null,
+        ),
+        FieldNode(
           name: NameNode(value: 'prependLiveElement'),
           alias: null,
           arguments: [],
@@ -7834,6 +7863,8 @@ class Fragment$ItemSection$metadata {
     required this.secondaryTitles,
     required this.collectionId,
     required this.useContext,
+    this.page,
+    this.limit,
     required this.prependLiveElement,
     this.$__typename = 'ItemSectionMetadata',
   });
@@ -7844,6 +7875,8 @@ class Fragment$ItemSection$metadata {
     final l$secondaryTitles = json['secondaryTitles'];
     final l$collectionId = json['collectionId'];
     final l$useContext = json['useContext'];
+    final l$page = json['page'];
+    final l$limit = json['limit'];
     final l$prependLiveElement = json['prependLiveElement'];
     final l$$__typename = json['__typename'];
     return Fragment$ItemSection$metadata(
@@ -7852,6 +7885,11 @@ class Fragment$ItemSection$metadata {
       secondaryTitles: (l$secondaryTitles as bool),
       collectionId: (l$collectionId as String),
       useContext: (l$useContext as bool),
+      page: l$page == null
+          ? null
+          : Fragment$ItemSection$metadata$page.fromJson(
+              (l$page as Map<String, dynamic>)),
+      limit: (l$limit as int?),
       prependLiveElement: (l$prependLiveElement as bool),
       $__typename: (l$$__typename as String),
     );
@@ -7866,6 +7904,10 @@ class Fragment$ItemSection$metadata {
   final String collectionId;
 
   final bool useContext;
+
+  final Fragment$ItemSection$metadata$page? page;
+
+  final int? limit;
 
   final bool prependLiveElement;
 
@@ -7883,6 +7925,10 @@ class Fragment$ItemSection$metadata {
     _resultData['collectionId'] = l$collectionId;
     final l$useContext = useContext;
     _resultData['useContext'] = l$useContext;
+    final l$page = page;
+    _resultData['page'] = l$page?.toJson();
+    final l$limit = limit;
+    _resultData['limit'] = l$limit;
     final l$prependLiveElement = prependLiveElement;
     _resultData['prependLiveElement'] = l$prependLiveElement;
     final l$$__typename = $__typename;
@@ -7897,6 +7943,8 @@ class Fragment$ItemSection$metadata {
     final l$secondaryTitles = secondaryTitles;
     final l$collectionId = collectionId;
     final l$useContext = useContext;
+    final l$page = page;
+    final l$limit = limit;
     final l$prependLiveElement = prependLiveElement;
     final l$$__typename = $__typename;
     return Object.hashAll([
@@ -7905,6 +7953,8 @@ class Fragment$ItemSection$metadata {
       l$secondaryTitles,
       l$collectionId,
       l$useContext,
+      l$page,
+      l$limit,
       l$prependLiveElement,
       l$$__typename,
     ]);
@@ -7942,6 +7992,16 @@ class Fragment$ItemSection$metadata {
     final l$useContext = useContext;
     final lOther$useContext = other.useContext;
     if (l$useContext != lOther$useContext) {
+      return false;
+    }
+    final l$page = page;
+    final lOther$page = other.page;
+    if (l$page != lOther$page) {
+      return false;
+    }
+    final l$limit = limit;
+    final lOther$limit = other.limit;
+    if (l$limit != lOther$limit) {
       return false;
     }
     final l$prependLiveElement = prependLiveElement;
@@ -7982,9 +8042,12 @@ abstract class CopyWith$Fragment$ItemSection$metadata<TRes> {
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Fragment$ItemSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
     String? $__typename,
   });
+  CopyWith$Fragment$ItemSection$metadata$page<TRes> get page;
 }
 
 class _CopyWithImpl$Fragment$ItemSection$metadata<TRes>
@@ -8006,6 +8069,8 @@ class _CopyWithImpl$Fragment$ItemSection$metadata<TRes>
     Object? secondaryTitles = _undefined,
     Object? collectionId = _undefined,
     Object? useContext = _undefined,
+    Object? page = _undefined,
+    Object? limit = _undefined,
     Object? prependLiveElement = _undefined,
     Object? $__typename = _undefined,
   }) =>
@@ -8027,6 +8092,10 @@ class _CopyWithImpl$Fragment$ItemSection$metadata<TRes>
         useContext: useContext == _undefined || useContext == null
             ? _instance.useContext
             : (useContext as bool),
+        page: page == _undefined
+            ? _instance.page
+            : (page as Fragment$ItemSection$metadata$page?),
+        limit: limit == _undefined ? _instance.limit : (limit as int?),
         prependLiveElement:
             prependLiveElement == _undefined || prependLiveElement == null
                 ? _instance.prependLiveElement
@@ -8035,6 +8104,14 @@ class _CopyWithImpl$Fragment$ItemSection$metadata<TRes>
             ? _instance.$__typename
             : ($__typename as String),
       ));
+
+  CopyWith$Fragment$ItemSection$metadata$page<TRes> get page {
+    final local$page = _instance.page;
+    return local$page == null
+        ? CopyWith$Fragment$ItemSection$metadata$page.stub(_then(_instance))
+        : CopyWith$Fragment$ItemSection$metadata$page(
+            local$page, (e) => call(page: e));
+  }
 }
 
 class _CopyWithStubImpl$Fragment$ItemSection$metadata<TRes>
@@ -8049,7 +8126,139 @@ class _CopyWithStubImpl$Fragment$ItemSection$metadata<TRes>
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Fragment$ItemSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Fragment$ItemSection$metadata$page<TRes> get page =>
+      CopyWith$Fragment$ItemSection$metadata$page.stub(_res);
+}
+
+class Fragment$ItemSection$metadata$page {
+  Fragment$ItemSection$metadata$page({
+    required this.code,
+    this.$__typename = 'Page',
+  });
+
+  factory Fragment$ItemSection$metadata$page.fromJson(
+      Map<String, dynamic> json) {
+    final l$code = json['code'];
+    final l$$__typename = json['__typename'];
+    return Fragment$ItemSection$metadata$page(
+      code: (l$code as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String code;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$code = code;
+    _resultData['code'] = l$code;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$code = code;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$code,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Fragment$ItemSection$metadata$page) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$code = code;
+    final lOther$code = other.code;
+    if (l$code != lOther$code) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$ItemSection$metadata$page
+    on Fragment$ItemSection$metadata$page {
+  CopyWith$Fragment$ItemSection$metadata$page<
+          Fragment$ItemSection$metadata$page>
+      get copyWith => CopyWith$Fragment$ItemSection$metadata$page(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$ItemSection$metadata$page<TRes> {
+  factory CopyWith$Fragment$ItemSection$metadata$page(
+    Fragment$ItemSection$metadata$page instance,
+    TRes Function(Fragment$ItemSection$metadata$page) then,
+  ) = _CopyWithImpl$Fragment$ItemSection$metadata$page;
+
+  factory CopyWith$Fragment$ItemSection$metadata$page.stub(TRes res) =
+      _CopyWithStubImpl$Fragment$ItemSection$metadata$page;
+
+  TRes call({
+    String? code,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Fragment$ItemSection$metadata$page<TRes>
+    implements CopyWith$Fragment$ItemSection$metadata$page<TRes> {
+  _CopyWithImpl$Fragment$ItemSection$metadata$page(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$ItemSection$metadata$page _instance;
+
+  final TRes Function(Fragment$ItemSection$metadata$page) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? code = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Fragment$ItemSection$metadata$page(
+        code: code == _undefined || code == null
+            ? _instance.code
+            : (code as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Fragment$ItemSection$metadata$page<TRes>
+    implements CopyWith$Fragment$ItemSection$metadata$page<TRes> {
+  _CopyWithStubImpl$Fragment$ItemSection$metadata$page(this._res);
+
+  TRes _res;
+
+  call({
+    String? code,
     String? $__typename,
   }) =>
       _res;
@@ -8432,6 +8641,8 @@ class Fragment$ItemSection$$PosterSection$metadata
     required this.secondaryTitles,
     required this.collectionId,
     required this.useContext,
+    this.page,
+    this.limit,
     required this.prependLiveElement,
     this.$__typename = 'ItemSectionMetadata',
   });
@@ -8443,6 +8654,8 @@ class Fragment$ItemSection$$PosterSection$metadata
     final l$secondaryTitles = json['secondaryTitles'];
     final l$collectionId = json['collectionId'];
     final l$useContext = json['useContext'];
+    final l$page = json['page'];
+    final l$limit = json['limit'];
     final l$prependLiveElement = json['prependLiveElement'];
     final l$$__typename = json['__typename'];
     return Fragment$ItemSection$$PosterSection$metadata(
@@ -8451,6 +8664,11 @@ class Fragment$ItemSection$$PosterSection$metadata
       secondaryTitles: (l$secondaryTitles as bool),
       collectionId: (l$collectionId as String),
       useContext: (l$useContext as bool),
+      page: l$page == null
+          ? null
+          : Fragment$ItemSection$$PosterSection$metadata$page.fromJson(
+              (l$page as Map<String, dynamic>)),
+      limit: (l$limit as int?),
       prependLiveElement: (l$prependLiveElement as bool),
       $__typename: (l$$__typename as String),
     );
@@ -8465,6 +8683,10 @@ class Fragment$ItemSection$$PosterSection$metadata
   final String collectionId;
 
   final bool useContext;
+
+  final Fragment$ItemSection$$PosterSection$metadata$page? page;
+
+  final int? limit;
 
   final bool prependLiveElement;
 
@@ -8482,6 +8704,10 @@ class Fragment$ItemSection$$PosterSection$metadata
     _resultData['collectionId'] = l$collectionId;
     final l$useContext = useContext;
     _resultData['useContext'] = l$useContext;
+    final l$page = page;
+    _resultData['page'] = l$page?.toJson();
+    final l$limit = limit;
+    _resultData['limit'] = l$limit;
     final l$prependLiveElement = prependLiveElement;
     _resultData['prependLiveElement'] = l$prependLiveElement;
     final l$$__typename = $__typename;
@@ -8496,6 +8722,8 @@ class Fragment$ItemSection$$PosterSection$metadata
     final l$secondaryTitles = secondaryTitles;
     final l$collectionId = collectionId;
     final l$useContext = useContext;
+    final l$page = page;
+    final l$limit = limit;
     final l$prependLiveElement = prependLiveElement;
     final l$$__typename = $__typename;
     return Object.hashAll([
@@ -8504,6 +8732,8 @@ class Fragment$ItemSection$$PosterSection$metadata
       l$secondaryTitles,
       l$collectionId,
       l$useContext,
+      l$page,
+      l$limit,
       l$prependLiveElement,
       l$$__typename,
     ]);
@@ -8541,6 +8771,16 @@ class Fragment$ItemSection$$PosterSection$metadata
     final l$useContext = useContext;
     final lOther$useContext = other.useContext;
     if (l$useContext != lOther$useContext) {
+      return false;
+    }
+    final l$page = page;
+    final lOther$page = other.page;
+    if (l$page != lOther$page) {
+      return false;
+    }
+    final l$limit = limit;
+    final lOther$limit = other.limit;
+    if (l$limit != lOther$limit) {
       return false;
     }
     final l$prependLiveElement = prependLiveElement;
@@ -8582,9 +8822,12 @@ abstract class CopyWith$Fragment$ItemSection$$PosterSection$metadata<TRes> {
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Fragment$ItemSection$$PosterSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
     String? $__typename,
   });
+  CopyWith$Fragment$ItemSection$$PosterSection$metadata$page<TRes> get page;
 }
 
 class _CopyWithImpl$Fragment$ItemSection$$PosterSection$metadata<TRes>
@@ -8606,6 +8849,8 @@ class _CopyWithImpl$Fragment$ItemSection$$PosterSection$metadata<TRes>
     Object? secondaryTitles = _undefined,
     Object? collectionId = _undefined,
     Object? useContext = _undefined,
+    Object? page = _undefined,
+    Object? limit = _undefined,
     Object? prependLiveElement = _undefined,
     Object? $__typename = _undefined,
   }) =>
@@ -8627,6 +8872,10 @@ class _CopyWithImpl$Fragment$ItemSection$$PosterSection$metadata<TRes>
         useContext: useContext == _undefined || useContext == null
             ? _instance.useContext
             : (useContext as bool),
+        page: page == _undefined
+            ? _instance.page
+            : (page as Fragment$ItemSection$$PosterSection$metadata$page?),
+        limit: limit == _undefined ? _instance.limit : (limit as int?),
         prependLiveElement:
             prependLiveElement == _undefined || prependLiveElement == null
                 ? _instance.prependLiveElement
@@ -8635,6 +8884,15 @@ class _CopyWithImpl$Fragment$ItemSection$$PosterSection$metadata<TRes>
             ? _instance.$__typename
             : ($__typename as String),
       ));
+
+  CopyWith$Fragment$ItemSection$$PosterSection$metadata$page<TRes> get page {
+    final local$page = _instance.page;
+    return local$page == null
+        ? CopyWith$Fragment$ItemSection$$PosterSection$metadata$page.stub(
+            _then(_instance))
+        : CopyWith$Fragment$ItemSection$$PosterSection$metadata$page(
+            local$page, (e) => call(page: e));
+  }
 }
 
 class _CopyWithStubImpl$Fragment$ItemSection$$PosterSection$metadata<TRes>
@@ -8649,7 +8907,146 @@ class _CopyWithStubImpl$Fragment$ItemSection$$PosterSection$metadata<TRes>
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Fragment$ItemSection$$PosterSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Fragment$ItemSection$$PosterSection$metadata$page<TRes> get page =>
+      CopyWith$Fragment$ItemSection$$PosterSection$metadata$page.stub(_res);
+}
+
+class Fragment$ItemSection$$PosterSection$metadata$page
+    implements Fragment$ItemSection$metadata$page {
+  Fragment$ItemSection$$PosterSection$metadata$page({
+    required this.code,
+    this.$__typename = 'Page',
+  });
+
+  factory Fragment$ItemSection$$PosterSection$metadata$page.fromJson(
+      Map<String, dynamic> json) {
+    final l$code = json['code'];
+    final l$$__typename = json['__typename'];
+    return Fragment$ItemSection$$PosterSection$metadata$page(
+      code: (l$code as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String code;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$code = code;
+    _resultData['code'] = l$code;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$code = code;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$code,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Fragment$ItemSection$$PosterSection$metadata$page) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$code = code;
+    final lOther$code = other.code;
+    if (l$code != lOther$code) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$ItemSection$$PosterSection$metadata$page
+    on Fragment$ItemSection$$PosterSection$metadata$page {
+  CopyWith$Fragment$ItemSection$$PosterSection$metadata$page<
+          Fragment$ItemSection$$PosterSection$metadata$page>
+      get copyWith =>
+          CopyWith$Fragment$ItemSection$$PosterSection$metadata$page(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$ItemSection$$PosterSection$metadata$page<
+    TRes> {
+  factory CopyWith$Fragment$ItemSection$$PosterSection$metadata$page(
+    Fragment$ItemSection$$PosterSection$metadata$page instance,
+    TRes Function(Fragment$ItemSection$$PosterSection$metadata$page) then,
+  ) = _CopyWithImpl$Fragment$ItemSection$$PosterSection$metadata$page;
+
+  factory CopyWith$Fragment$ItemSection$$PosterSection$metadata$page.stub(
+          TRes res) =
+      _CopyWithStubImpl$Fragment$ItemSection$$PosterSection$metadata$page;
+
+  TRes call({
+    String? code,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Fragment$ItemSection$$PosterSection$metadata$page<TRes>
+    implements
+        CopyWith$Fragment$ItemSection$$PosterSection$metadata$page<TRes> {
+  _CopyWithImpl$Fragment$ItemSection$$PosterSection$metadata$page(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$ItemSection$$PosterSection$metadata$page _instance;
+
+  final TRes Function(Fragment$ItemSection$$PosterSection$metadata$page) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? code = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Fragment$ItemSection$$PosterSection$metadata$page(
+        code: code == _undefined || code == null
+            ? _instance.code
+            : (code as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Fragment$ItemSection$$PosterSection$metadata$page<TRes>
+    implements
+        CopyWith$Fragment$ItemSection$$PosterSection$metadata$page<TRes> {
+  _CopyWithStubImpl$Fragment$ItemSection$$PosterSection$metadata$page(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? code,
     String? $__typename,
   }) =>
       _res;
@@ -9035,6 +9432,8 @@ class Fragment$ItemSection$$FeaturedSection$metadata
     required this.secondaryTitles,
     required this.collectionId,
     required this.useContext,
+    this.page,
+    this.limit,
     required this.prependLiveElement,
     this.$__typename = 'ItemSectionMetadata',
   });
@@ -9046,6 +9445,8 @@ class Fragment$ItemSection$$FeaturedSection$metadata
     final l$secondaryTitles = json['secondaryTitles'];
     final l$collectionId = json['collectionId'];
     final l$useContext = json['useContext'];
+    final l$page = json['page'];
+    final l$limit = json['limit'];
     final l$prependLiveElement = json['prependLiveElement'];
     final l$$__typename = json['__typename'];
     return Fragment$ItemSection$$FeaturedSection$metadata(
@@ -9054,6 +9455,11 @@ class Fragment$ItemSection$$FeaturedSection$metadata
       secondaryTitles: (l$secondaryTitles as bool),
       collectionId: (l$collectionId as String),
       useContext: (l$useContext as bool),
+      page: l$page == null
+          ? null
+          : Fragment$ItemSection$$FeaturedSection$metadata$page.fromJson(
+              (l$page as Map<String, dynamic>)),
+      limit: (l$limit as int?),
       prependLiveElement: (l$prependLiveElement as bool),
       $__typename: (l$$__typename as String),
     );
@@ -9068,6 +9474,10 @@ class Fragment$ItemSection$$FeaturedSection$metadata
   final String collectionId;
 
   final bool useContext;
+
+  final Fragment$ItemSection$$FeaturedSection$metadata$page? page;
+
+  final int? limit;
 
   final bool prependLiveElement;
 
@@ -9085,6 +9495,10 @@ class Fragment$ItemSection$$FeaturedSection$metadata
     _resultData['collectionId'] = l$collectionId;
     final l$useContext = useContext;
     _resultData['useContext'] = l$useContext;
+    final l$page = page;
+    _resultData['page'] = l$page?.toJson();
+    final l$limit = limit;
+    _resultData['limit'] = l$limit;
     final l$prependLiveElement = prependLiveElement;
     _resultData['prependLiveElement'] = l$prependLiveElement;
     final l$$__typename = $__typename;
@@ -9099,6 +9513,8 @@ class Fragment$ItemSection$$FeaturedSection$metadata
     final l$secondaryTitles = secondaryTitles;
     final l$collectionId = collectionId;
     final l$useContext = useContext;
+    final l$page = page;
+    final l$limit = limit;
     final l$prependLiveElement = prependLiveElement;
     final l$$__typename = $__typename;
     return Object.hashAll([
@@ -9107,6 +9523,8 @@ class Fragment$ItemSection$$FeaturedSection$metadata
       l$secondaryTitles,
       l$collectionId,
       l$useContext,
+      l$page,
+      l$limit,
       l$prependLiveElement,
       l$$__typename,
     ]);
@@ -9144,6 +9562,16 @@ class Fragment$ItemSection$$FeaturedSection$metadata
     final l$useContext = useContext;
     final lOther$useContext = other.useContext;
     if (l$useContext != lOther$useContext) {
+      return false;
+    }
+    final l$page = page;
+    final lOther$page = other.page;
+    if (l$page != lOther$page) {
+      return false;
+    }
+    final l$limit = limit;
+    final lOther$limit = other.limit;
+    if (l$limit != lOther$limit) {
       return false;
     }
     final l$prependLiveElement = prependLiveElement;
@@ -9186,9 +9614,12 @@ abstract class CopyWith$Fragment$ItemSection$$FeaturedSection$metadata<TRes> {
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Fragment$ItemSection$$FeaturedSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
     String? $__typename,
   });
+  CopyWith$Fragment$ItemSection$$FeaturedSection$metadata$page<TRes> get page;
 }
 
 class _CopyWithImpl$Fragment$ItemSection$$FeaturedSection$metadata<TRes>
@@ -9210,6 +9641,8 @@ class _CopyWithImpl$Fragment$ItemSection$$FeaturedSection$metadata<TRes>
     Object? secondaryTitles = _undefined,
     Object? collectionId = _undefined,
     Object? useContext = _undefined,
+    Object? page = _undefined,
+    Object? limit = _undefined,
     Object? prependLiveElement = _undefined,
     Object? $__typename = _undefined,
   }) =>
@@ -9231,6 +9664,10 @@ class _CopyWithImpl$Fragment$ItemSection$$FeaturedSection$metadata<TRes>
         useContext: useContext == _undefined || useContext == null
             ? _instance.useContext
             : (useContext as bool),
+        page: page == _undefined
+            ? _instance.page
+            : (page as Fragment$ItemSection$$FeaturedSection$metadata$page?),
+        limit: limit == _undefined ? _instance.limit : (limit as int?),
         prependLiveElement:
             prependLiveElement == _undefined || prependLiveElement == null
                 ? _instance.prependLiveElement
@@ -9239,6 +9676,15 @@ class _CopyWithImpl$Fragment$ItemSection$$FeaturedSection$metadata<TRes>
             ? _instance.$__typename
             : ($__typename as String),
       ));
+
+  CopyWith$Fragment$ItemSection$$FeaturedSection$metadata$page<TRes> get page {
+    final local$page = _instance.page;
+    return local$page == null
+        ? CopyWith$Fragment$ItemSection$$FeaturedSection$metadata$page.stub(
+            _then(_instance))
+        : CopyWith$Fragment$ItemSection$$FeaturedSection$metadata$page(
+            local$page, (e) => call(page: e));
+  }
 }
 
 class _CopyWithStubImpl$Fragment$ItemSection$$FeaturedSection$metadata<TRes>
@@ -9253,7 +9699,148 @@ class _CopyWithStubImpl$Fragment$ItemSection$$FeaturedSection$metadata<TRes>
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Fragment$ItemSection$$FeaturedSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Fragment$ItemSection$$FeaturedSection$metadata$page<TRes> get page =>
+      CopyWith$Fragment$ItemSection$$FeaturedSection$metadata$page.stub(_res);
+}
+
+class Fragment$ItemSection$$FeaturedSection$metadata$page
+    implements Fragment$ItemSection$metadata$page {
+  Fragment$ItemSection$$FeaturedSection$metadata$page({
+    required this.code,
+    this.$__typename = 'Page',
+  });
+
+  factory Fragment$ItemSection$$FeaturedSection$metadata$page.fromJson(
+      Map<String, dynamic> json) {
+    final l$code = json['code'];
+    final l$$__typename = json['__typename'];
+    return Fragment$ItemSection$$FeaturedSection$metadata$page(
+      code: (l$code as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String code;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$code = code;
+    _resultData['code'] = l$code;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$code = code;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$code,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Fragment$ItemSection$$FeaturedSection$metadata$page) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$code = code;
+    final lOther$code = other.code;
+    if (l$code != lOther$code) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$ItemSection$$FeaturedSection$metadata$page
+    on Fragment$ItemSection$$FeaturedSection$metadata$page {
+  CopyWith$Fragment$ItemSection$$FeaturedSection$metadata$page<
+          Fragment$ItemSection$$FeaturedSection$metadata$page>
+      get copyWith =>
+          CopyWith$Fragment$ItemSection$$FeaturedSection$metadata$page(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$ItemSection$$FeaturedSection$metadata$page<
+    TRes> {
+  factory CopyWith$Fragment$ItemSection$$FeaturedSection$metadata$page(
+    Fragment$ItemSection$$FeaturedSection$metadata$page instance,
+    TRes Function(Fragment$ItemSection$$FeaturedSection$metadata$page) then,
+  ) = _CopyWithImpl$Fragment$ItemSection$$FeaturedSection$metadata$page;
+
+  factory CopyWith$Fragment$ItemSection$$FeaturedSection$metadata$page.stub(
+          TRes res) =
+      _CopyWithStubImpl$Fragment$ItemSection$$FeaturedSection$metadata$page;
+
+  TRes call({
+    String? code,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Fragment$ItemSection$$FeaturedSection$metadata$page<TRes>
+    implements
+        CopyWith$Fragment$ItemSection$$FeaturedSection$metadata$page<TRes> {
+  _CopyWithImpl$Fragment$ItemSection$$FeaturedSection$metadata$page(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$ItemSection$$FeaturedSection$metadata$page _instance;
+
+  final TRes Function(Fragment$ItemSection$$FeaturedSection$metadata$page)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? code = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Fragment$ItemSection$$FeaturedSection$metadata$page(
+        code: code == _undefined || code == null
+            ? _instance.code
+            : (code as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Fragment$ItemSection$$FeaturedSection$metadata$page<
+        TRes>
+    implements
+        CopyWith$Fragment$ItemSection$$FeaturedSection$metadata$page<TRes> {
+  _CopyWithStubImpl$Fragment$ItemSection$$FeaturedSection$metadata$page(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? code,
     String? $__typename,
   }) =>
       _res;
@@ -9639,6 +10226,8 @@ class Fragment$ItemSection$$DefaultSection$metadata
     required this.secondaryTitles,
     required this.collectionId,
     required this.useContext,
+    this.page,
+    this.limit,
     required this.prependLiveElement,
     this.$__typename = 'ItemSectionMetadata',
   });
@@ -9650,6 +10239,8 @@ class Fragment$ItemSection$$DefaultSection$metadata
     final l$secondaryTitles = json['secondaryTitles'];
     final l$collectionId = json['collectionId'];
     final l$useContext = json['useContext'];
+    final l$page = json['page'];
+    final l$limit = json['limit'];
     final l$prependLiveElement = json['prependLiveElement'];
     final l$$__typename = json['__typename'];
     return Fragment$ItemSection$$DefaultSection$metadata(
@@ -9658,6 +10249,11 @@ class Fragment$ItemSection$$DefaultSection$metadata
       secondaryTitles: (l$secondaryTitles as bool),
       collectionId: (l$collectionId as String),
       useContext: (l$useContext as bool),
+      page: l$page == null
+          ? null
+          : Fragment$ItemSection$$DefaultSection$metadata$page.fromJson(
+              (l$page as Map<String, dynamic>)),
+      limit: (l$limit as int?),
       prependLiveElement: (l$prependLiveElement as bool),
       $__typename: (l$$__typename as String),
     );
@@ -9672,6 +10268,10 @@ class Fragment$ItemSection$$DefaultSection$metadata
   final String collectionId;
 
   final bool useContext;
+
+  final Fragment$ItemSection$$DefaultSection$metadata$page? page;
+
+  final int? limit;
 
   final bool prependLiveElement;
 
@@ -9689,6 +10289,10 @@ class Fragment$ItemSection$$DefaultSection$metadata
     _resultData['collectionId'] = l$collectionId;
     final l$useContext = useContext;
     _resultData['useContext'] = l$useContext;
+    final l$page = page;
+    _resultData['page'] = l$page?.toJson();
+    final l$limit = limit;
+    _resultData['limit'] = l$limit;
     final l$prependLiveElement = prependLiveElement;
     _resultData['prependLiveElement'] = l$prependLiveElement;
     final l$$__typename = $__typename;
@@ -9703,6 +10307,8 @@ class Fragment$ItemSection$$DefaultSection$metadata
     final l$secondaryTitles = secondaryTitles;
     final l$collectionId = collectionId;
     final l$useContext = useContext;
+    final l$page = page;
+    final l$limit = limit;
     final l$prependLiveElement = prependLiveElement;
     final l$$__typename = $__typename;
     return Object.hashAll([
@@ -9711,6 +10317,8 @@ class Fragment$ItemSection$$DefaultSection$metadata
       l$secondaryTitles,
       l$collectionId,
       l$useContext,
+      l$page,
+      l$limit,
       l$prependLiveElement,
       l$$__typename,
     ]);
@@ -9748,6 +10356,16 @@ class Fragment$ItemSection$$DefaultSection$metadata
     final l$useContext = useContext;
     final lOther$useContext = other.useContext;
     if (l$useContext != lOther$useContext) {
+      return false;
+    }
+    final l$page = page;
+    final lOther$page = other.page;
+    if (l$page != lOther$page) {
+      return false;
+    }
+    final l$limit = limit;
+    final lOther$limit = other.limit;
+    if (l$limit != lOther$limit) {
       return false;
     }
     final l$prependLiveElement = prependLiveElement;
@@ -9790,9 +10408,12 @@ abstract class CopyWith$Fragment$ItemSection$$DefaultSection$metadata<TRes> {
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Fragment$ItemSection$$DefaultSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
     String? $__typename,
   });
+  CopyWith$Fragment$ItemSection$$DefaultSection$metadata$page<TRes> get page;
 }
 
 class _CopyWithImpl$Fragment$ItemSection$$DefaultSection$metadata<TRes>
@@ -9814,6 +10435,8 @@ class _CopyWithImpl$Fragment$ItemSection$$DefaultSection$metadata<TRes>
     Object? secondaryTitles = _undefined,
     Object? collectionId = _undefined,
     Object? useContext = _undefined,
+    Object? page = _undefined,
+    Object? limit = _undefined,
     Object? prependLiveElement = _undefined,
     Object? $__typename = _undefined,
   }) =>
@@ -9835,6 +10458,10 @@ class _CopyWithImpl$Fragment$ItemSection$$DefaultSection$metadata<TRes>
         useContext: useContext == _undefined || useContext == null
             ? _instance.useContext
             : (useContext as bool),
+        page: page == _undefined
+            ? _instance.page
+            : (page as Fragment$ItemSection$$DefaultSection$metadata$page?),
+        limit: limit == _undefined ? _instance.limit : (limit as int?),
         prependLiveElement:
             prependLiveElement == _undefined || prependLiveElement == null
                 ? _instance.prependLiveElement
@@ -9843,6 +10470,15 @@ class _CopyWithImpl$Fragment$ItemSection$$DefaultSection$metadata<TRes>
             ? _instance.$__typename
             : ($__typename as String),
       ));
+
+  CopyWith$Fragment$ItemSection$$DefaultSection$metadata$page<TRes> get page {
+    final local$page = _instance.page;
+    return local$page == null
+        ? CopyWith$Fragment$ItemSection$$DefaultSection$metadata$page.stub(
+            _then(_instance))
+        : CopyWith$Fragment$ItemSection$$DefaultSection$metadata$page(
+            local$page, (e) => call(page: e));
+  }
 }
 
 class _CopyWithStubImpl$Fragment$ItemSection$$DefaultSection$metadata<TRes>
@@ -9857,7 +10493,146 @@ class _CopyWithStubImpl$Fragment$ItemSection$$DefaultSection$metadata<TRes>
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Fragment$ItemSection$$DefaultSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Fragment$ItemSection$$DefaultSection$metadata$page<TRes> get page =>
+      CopyWith$Fragment$ItemSection$$DefaultSection$metadata$page.stub(_res);
+}
+
+class Fragment$ItemSection$$DefaultSection$metadata$page
+    implements Fragment$ItemSection$metadata$page {
+  Fragment$ItemSection$$DefaultSection$metadata$page({
+    required this.code,
+    this.$__typename = 'Page',
+  });
+
+  factory Fragment$ItemSection$$DefaultSection$metadata$page.fromJson(
+      Map<String, dynamic> json) {
+    final l$code = json['code'];
+    final l$$__typename = json['__typename'];
+    return Fragment$ItemSection$$DefaultSection$metadata$page(
+      code: (l$code as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String code;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$code = code;
+    _resultData['code'] = l$code;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$code = code;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$code,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Fragment$ItemSection$$DefaultSection$metadata$page) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$code = code;
+    final lOther$code = other.code;
+    if (l$code != lOther$code) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$ItemSection$$DefaultSection$metadata$page
+    on Fragment$ItemSection$$DefaultSection$metadata$page {
+  CopyWith$Fragment$ItemSection$$DefaultSection$metadata$page<
+          Fragment$ItemSection$$DefaultSection$metadata$page>
+      get copyWith =>
+          CopyWith$Fragment$ItemSection$$DefaultSection$metadata$page(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$ItemSection$$DefaultSection$metadata$page<
+    TRes> {
+  factory CopyWith$Fragment$ItemSection$$DefaultSection$metadata$page(
+    Fragment$ItemSection$$DefaultSection$metadata$page instance,
+    TRes Function(Fragment$ItemSection$$DefaultSection$metadata$page) then,
+  ) = _CopyWithImpl$Fragment$ItemSection$$DefaultSection$metadata$page;
+
+  factory CopyWith$Fragment$ItemSection$$DefaultSection$metadata$page.stub(
+          TRes res) =
+      _CopyWithStubImpl$Fragment$ItemSection$$DefaultSection$metadata$page;
+
+  TRes call({
+    String? code,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Fragment$ItemSection$$DefaultSection$metadata$page<TRes>
+    implements
+        CopyWith$Fragment$ItemSection$$DefaultSection$metadata$page<TRes> {
+  _CopyWithImpl$Fragment$ItemSection$$DefaultSection$metadata$page(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$ItemSection$$DefaultSection$metadata$page _instance;
+
+  final TRes Function(Fragment$ItemSection$$DefaultSection$metadata$page) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? code = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Fragment$ItemSection$$DefaultSection$metadata$page(
+        code: code == _undefined || code == null
+            ? _instance.code
+            : (code as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Fragment$ItemSection$$DefaultSection$metadata$page<TRes>
+    implements
+        CopyWith$Fragment$ItemSection$$DefaultSection$metadata$page<TRes> {
+  _CopyWithStubImpl$Fragment$ItemSection$$DefaultSection$metadata$page(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? code,
     String? $__typename,
   }) =>
       _res;
@@ -10242,6 +11017,8 @@ class Fragment$ItemSection$$CardSection$metadata
     required this.secondaryTitles,
     required this.collectionId,
     required this.useContext,
+    this.page,
+    this.limit,
     required this.prependLiveElement,
     this.$__typename = 'ItemSectionMetadata',
   });
@@ -10253,6 +11030,8 @@ class Fragment$ItemSection$$CardSection$metadata
     final l$secondaryTitles = json['secondaryTitles'];
     final l$collectionId = json['collectionId'];
     final l$useContext = json['useContext'];
+    final l$page = json['page'];
+    final l$limit = json['limit'];
     final l$prependLiveElement = json['prependLiveElement'];
     final l$$__typename = json['__typename'];
     return Fragment$ItemSection$$CardSection$metadata(
@@ -10261,6 +11040,11 @@ class Fragment$ItemSection$$CardSection$metadata
       secondaryTitles: (l$secondaryTitles as bool),
       collectionId: (l$collectionId as String),
       useContext: (l$useContext as bool),
+      page: l$page == null
+          ? null
+          : Fragment$ItemSection$$CardSection$metadata$page.fromJson(
+              (l$page as Map<String, dynamic>)),
+      limit: (l$limit as int?),
       prependLiveElement: (l$prependLiveElement as bool),
       $__typename: (l$$__typename as String),
     );
@@ -10275,6 +11059,10 @@ class Fragment$ItemSection$$CardSection$metadata
   final String collectionId;
 
   final bool useContext;
+
+  final Fragment$ItemSection$$CardSection$metadata$page? page;
+
+  final int? limit;
 
   final bool prependLiveElement;
 
@@ -10292,6 +11080,10 @@ class Fragment$ItemSection$$CardSection$metadata
     _resultData['collectionId'] = l$collectionId;
     final l$useContext = useContext;
     _resultData['useContext'] = l$useContext;
+    final l$page = page;
+    _resultData['page'] = l$page?.toJson();
+    final l$limit = limit;
+    _resultData['limit'] = l$limit;
     final l$prependLiveElement = prependLiveElement;
     _resultData['prependLiveElement'] = l$prependLiveElement;
     final l$$__typename = $__typename;
@@ -10306,6 +11098,8 @@ class Fragment$ItemSection$$CardSection$metadata
     final l$secondaryTitles = secondaryTitles;
     final l$collectionId = collectionId;
     final l$useContext = useContext;
+    final l$page = page;
+    final l$limit = limit;
     final l$prependLiveElement = prependLiveElement;
     final l$$__typename = $__typename;
     return Object.hashAll([
@@ -10314,6 +11108,8 @@ class Fragment$ItemSection$$CardSection$metadata
       l$secondaryTitles,
       l$collectionId,
       l$useContext,
+      l$page,
+      l$limit,
       l$prependLiveElement,
       l$$__typename,
     ]);
@@ -10351,6 +11147,16 @@ class Fragment$ItemSection$$CardSection$metadata
     final l$useContext = useContext;
     final lOther$useContext = other.useContext;
     if (l$useContext != lOther$useContext) {
+      return false;
+    }
+    final l$page = page;
+    final lOther$page = other.page;
+    if (l$page != lOther$page) {
+      return false;
+    }
+    final l$limit = limit;
+    final lOther$limit = other.limit;
+    if (l$limit != lOther$limit) {
       return false;
     }
     final l$prependLiveElement = prependLiveElement;
@@ -10392,9 +11198,12 @@ abstract class CopyWith$Fragment$ItemSection$$CardSection$metadata<TRes> {
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Fragment$ItemSection$$CardSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
     String? $__typename,
   });
+  CopyWith$Fragment$ItemSection$$CardSection$metadata$page<TRes> get page;
 }
 
 class _CopyWithImpl$Fragment$ItemSection$$CardSection$metadata<TRes>
@@ -10416,6 +11225,8 @@ class _CopyWithImpl$Fragment$ItemSection$$CardSection$metadata<TRes>
     Object? secondaryTitles = _undefined,
     Object? collectionId = _undefined,
     Object? useContext = _undefined,
+    Object? page = _undefined,
+    Object? limit = _undefined,
     Object? prependLiveElement = _undefined,
     Object? $__typename = _undefined,
   }) =>
@@ -10437,6 +11248,10 @@ class _CopyWithImpl$Fragment$ItemSection$$CardSection$metadata<TRes>
         useContext: useContext == _undefined || useContext == null
             ? _instance.useContext
             : (useContext as bool),
+        page: page == _undefined
+            ? _instance.page
+            : (page as Fragment$ItemSection$$CardSection$metadata$page?),
+        limit: limit == _undefined ? _instance.limit : (limit as int?),
         prependLiveElement:
             prependLiveElement == _undefined || prependLiveElement == null
                 ? _instance.prependLiveElement
@@ -10445,6 +11260,15 @@ class _CopyWithImpl$Fragment$ItemSection$$CardSection$metadata<TRes>
             ? _instance.$__typename
             : ($__typename as String),
       ));
+
+  CopyWith$Fragment$ItemSection$$CardSection$metadata$page<TRes> get page {
+    final local$page = _instance.page;
+    return local$page == null
+        ? CopyWith$Fragment$ItemSection$$CardSection$metadata$page.stub(
+            _then(_instance))
+        : CopyWith$Fragment$ItemSection$$CardSection$metadata$page(
+            local$page, (e) => call(page: e));
+  }
 }
 
 class _CopyWithStubImpl$Fragment$ItemSection$$CardSection$metadata<TRes>
@@ -10459,7 +11283,141 @@ class _CopyWithStubImpl$Fragment$ItemSection$$CardSection$metadata<TRes>
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Fragment$ItemSection$$CardSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Fragment$ItemSection$$CardSection$metadata$page<TRes> get page =>
+      CopyWith$Fragment$ItemSection$$CardSection$metadata$page.stub(_res);
+}
+
+class Fragment$ItemSection$$CardSection$metadata$page
+    implements Fragment$ItemSection$metadata$page {
+  Fragment$ItemSection$$CardSection$metadata$page({
+    required this.code,
+    this.$__typename = 'Page',
+  });
+
+  factory Fragment$ItemSection$$CardSection$metadata$page.fromJson(
+      Map<String, dynamic> json) {
+    final l$code = json['code'];
+    final l$$__typename = json['__typename'];
+    return Fragment$ItemSection$$CardSection$metadata$page(
+      code: (l$code as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String code;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$code = code;
+    _resultData['code'] = l$code;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$code = code;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$code,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Fragment$ItemSection$$CardSection$metadata$page) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$code = code;
+    final lOther$code = other.code;
+    if (l$code != lOther$code) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$ItemSection$$CardSection$metadata$page
+    on Fragment$ItemSection$$CardSection$metadata$page {
+  CopyWith$Fragment$ItemSection$$CardSection$metadata$page<
+          Fragment$ItemSection$$CardSection$metadata$page>
+      get copyWith => CopyWith$Fragment$ItemSection$$CardSection$metadata$page(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$ItemSection$$CardSection$metadata$page<TRes> {
+  factory CopyWith$Fragment$ItemSection$$CardSection$metadata$page(
+    Fragment$ItemSection$$CardSection$metadata$page instance,
+    TRes Function(Fragment$ItemSection$$CardSection$metadata$page) then,
+  ) = _CopyWithImpl$Fragment$ItemSection$$CardSection$metadata$page;
+
+  factory CopyWith$Fragment$ItemSection$$CardSection$metadata$page.stub(
+          TRes res) =
+      _CopyWithStubImpl$Fragment$ItemSection$$CardSection$metadata$page;
+
+  TRes call({
+    String? code,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Fragment$ItemSection$$CardSection$metadata$page<TRes>
+    implements CopyWith$Fragment$ItemSection$$CardSection$metadata$page<TRes> {
+  _CopyWithImpl$Fragment$ItemSection$$CardSection$metadata$page(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$ItemSection$$CardSection$metadata$page _instance;
+
+  final TRes Function(Fragment$ItemSection$$CardSection$metadata$page) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? code = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Fragment$ItemSection$$CardSection$metadata$page(
+        code: code == _undefined || code == null
+            ? _instance.code
+            : (code as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Fragment$ItemSection$$CardSection$metadata$page<TRes>
+    implements CopyWith$Fragment$ItemSection$$CardSection$metadata$page<TRes> {
+  _CopyWithStubImpl$Fragment$ItemSection$$CardSection$metadata$page(this._res);
+
+  TRes _res;
+
+  call({
+    String? code,
     String? $__typename,
   }) =>
       _res;
@@ -10844,6 +11802,8 @@ class Fragment$ItemSection$$ListSection$metadata
     required this.secondaryTitles,
     required this.collectionId,
     required this.useContext,
+    this.page,
+    this.limit,
     required this.prependLiveElement,
     this.$__typename = 'ItemSectionMetadata',
   });
@@ -10855,6 +11815,8 @@ class Fragment$ItemSection$$ListSection$metadata
     final l$secondaryTitles = json['secondaryTitles'];
     final l$collectionId = json['collectionId'];
     final l$useContext = json['useContext'];
+    final l$page = json['page'];
+    final l$limit = json['limit'];
     final l$prependLiveElement = json['prependLiveElement'];
     final l$$__typename = json['__typename'];
     return Fragment$ItemSection$$ListSection$metadata(
@@ -10863,6 +11825,11 @@ class Fragment$ItemSection$$ListSection$metadata
       secondaryTitles: (l$secondaryTitles as bool),
       collectionId: (l$collectionId as String),
       useContext: (l$useContext as bool),
+      page: l$page == null
+          ? null
+          : Fragment$ItemSection$$ListSection$metadata$page.fromJson(
+              (l$page as Map<String, dynamic>)),
+      limit: (l$limit as int?),
       prependLiveElement: (l$prependLiveElement as bool),
       $__typename: (l$$__typename as String),
     );
@@ -10877,6 +11844,10 @@ class Fragment$ItemSection$$ListSection$metadata
   final String collectionId;
 
   final bool useContext;
+
+  final Fragment$ItemSection$$ListSection$metadata$page? page;
+
+  final int? limit;
 
   final bool prependLiveElement;
 
@@ -10894,6 +11865,10 @@ class Fragment$ItemSection$$ListSection$metadata
     _resultData['collectionId'] = l$collectionId;
     final l$useContext = useContext;
     _resultData['useContext'] = l$useContext;
+    final l$page = page;
+    _resultData['page'] = l$page?.toJson();
+    final l$limit = limit;
+    _resultData['limit'] = l$limit;
     final l$prependLiveElement = prependLiveElement;
     _resultData['prependLiveElement'] = l$prependLiveElement;
     final l$$__typename = $__typename;
@@ -10908,6 +11883,8 @@ class Fragment$ItemSection$$ListSection$metadata
     final l$secondaryTitles = secondaryTitles;
     final l$collectionId = collectionId;
     final l$useContext = useContext;
+    final l$page = page;
+    final l$limit = limit;
     final l$prependLiveElement = prependLiveElement;
     final l$$__typename = $__typename;
     return Object.hashAll([
@@ -10916,6 +11893,8 @@ class Fragment$ItemSection$$ListSection$metadata
       l$secondaryTitles,
       l$collectionId,
       l$useContext,
+      l$page,
+      l$limit,
       l$prependLiveElement,
       l$$__typename,
     ]);
@@ -10953,6 +11932,16 @@ class Fragment$ItemSection$$ListSection$metadata
     final l$useContext = useContext;
     final lOther$useContext = other.useContext;
     if (l$useContext != lOther$useContext) {
+      return false;
+    }
+    final l$page = page;
+    final lOther$page = other.page;
+    if (l$page != lOther$page) {
+      return false;
+    }
+    final l$limit = limit;
+    final lOther$limit = other.limit;
+    if (l$limit != lOther$limit) {
       return false;
     }
     final l$prependLiveElement = prependLiveElement;
@@ -10994,9 +11983,12 @@ abstract class CopyWith$Fragment$ItemSection$$ListSection$metadata<TRes> {
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Fragment$ItemSection$$ListSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
     String? $__typename,
   });
+  CopyWith$Fragment$ItemSection$$ListSection$metadata$page<TRes> get page;
 }
 
 class _CopyWithImpl$Fragment$ItemSection$$ListSection$metadata<TRes>
@@ -11018,6 +12010,8 @@ class _CopyWithImpl$Fragment$ItemSection$$ListSection$metadata<TRes>
     Object? secondaryTitles = _undefined,
     Object? collectionId = _undefined,
     Object? useContext = _undefined,
+    Object? page = _undefined,
+    Object? limit = _undefined,
     Object? prependLiveElement = _undefined,
     Object? $__typename = _undefined,
   }) =>
@@ -11039,6 +12033,10 @@ class _CopyWithImpl$Fragment$ItemSection$$ListSection$metadata<TRes>
         useContext: useContext == _undefined || useContext == null
             ? _instance.useContext
             : (useContext as bool),
+        page: page == _undefined
+            ? _instance.page
+            : (page as Fragment$ItemSection$$ListSection$metadata$page?),
+        limit: limit == _undefined ? _instance.limit : (limit as int?),
         prependLiveElement:
             prependLiveElement == _undefined || prependLiveElement == null
                 ? _instance.prependLiveElement
@@ -11047,6 +12045,15 @@ class _CopyWithImpl$Fragment$ItemSection$$ListSection$metadata<TRes>
             ? _instance.$__typename
             : ($__typename as String),
       ));
+
+  CopyWith$Fragment$ItemSection$$ListSection$metadata$page<TRes> get page {
+    final local$page = _instance.page;
+    return local$page == null
+        ? CopyWith$Fragment$ItemSection$$ListSection$metadata$page.stub(
+            _then(_instance))
+        : CopyWith$Fragment$ItemSection$$ListSection$metadata$page(
+            local$page, (e) => call(page: e));
+  }
 }
 
 class _CopyWithStubImpl$Fragment$ItemSection$$ListSection$metadata<TRes>
@@ -11061,7 +12068,141 @@ class _CopyWithStubImpl$Fragment$ItemSection$$ListSection$metadata<TRes>
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Fragment$ItemSection$$ListSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Fragment$ItemSection$$ListSection$metadata$page<TRes> get page =>
+      CopyWith$Fragment$ItemSection$$ListSection$metadata$page.stub(_res);
+}
+
+class Fragment$ItemSection$$ListSection$metadata$page
+    implements Fragment$ItemSection$metadata$page {
+  Fragment$ItemSection$$ListSection$metadata$page({
+    required this.code,
+    this.$__typename = 'Page',
+  });
+
+  factory Fragment$ItemSection$$ListSection$metadata$page.fromJson(
+      Map<String, dynamic> json) {
+    final l$code = json['code'];
+    final l$$__typename = json['__typename'];
+    return Fragment$ItemSection$$ListSection$metadata$page(
+      code: (l$code as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String code;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$code = code;
+    _resultData['code'] = l$code;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$code = code;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$code,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Fragment$ItemSection$$ListSection$metadata$page) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$code = code;
+    final lOther$code = other.code;
+    if (l$code != lOther$code) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$ItemSection$$ListSection$metadata$page
+    on Fragment$ItemSection$$ListSection$metadata$page {
+  CopyWith$Fragment$ItemSection$$ListSection$metadata$page<
+          Fragment$ItemSection$$ListSection$metadata$page>
+      get copyWith => CopyWith$Fragment$ItemSection$$ListSection$metadata$page(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$ItemSection$$ListSection$metadata$page<TRes> {
+  factory CopyWith$Fragment$ItemSection$$ListSection$metadata$page(
+    Fragment$ItemSection$$ListSection$metadata$page instance,
+    TRes Function(Fragment$ItemSection$$ListSection$metadata$page) then,
+  ) = _CopyWithImpl$Fragment$ItemSection$$ListSection$metadata$page;
+
+  factory CopyWith$Fragment$ItemSection$$ListSection$metadata$page.stub(
+          TRes res) =
+      _CopyWithStubImpl$Fragment$ItemSection$$ListSection$metadata$page;
+
+  TRes call({
+    String? code,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Fragment$ItemSection$$ListSection$metadata$page<TRes>
+    implements CopyWith$Fragment$ItemSection$$ListSection$metadata$page<TRes> {
+  _CopyWithImpl$Fragment$ItemSection$$ListSection$metadata$page(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$ItemSection$$ListSection$metadata$page _instance;
+
+  final TRes Function(Fragment$ItemSection$$ListSection$metadata$page) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? code = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Fragment$ItemSection$$ListSection$metadata$page(
+        code: code == _undefined || code == null
+            ? _instance.code
+            : (code as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Fragment$ItemSection$$ListSection$metadata$page<TRes>
+    implements CopyWith$Fragment$ItemSection$$ListSection$metadata$page<TRes> {
+  _CopyWithStubImpl$Fragment$ItemSection$$ListSection$metadata$page(this._res);
+
+  TRes _res;
+
+  call({
+    String? code,
     String? $__typename,
   }) =>
       _res;
@@ -11447,6 +12588,8 @@ class Fragment$ItemSection$$CardListSection$metadata
     required this.secondaryTitles,
     required this.collectionId,
     required this.useContext,
+    this.page,
+    this.limit,
     required this.prependLiveElement,
     this.$__typename = 'ItemSectionMetadata',
   });
@@ -11458,6 +12601,8 @@ class Fragment$ItemSection$$CardListSection$metadata
     final l$secondaryTitles = json['secondaryTitles'];
     final l$collectionId = json['collectionId'];
     final l$useContext = json['useContext'];
+    final l$page = json['page'];
+    final l$limit = json['limit'];
     final l$prependLiveElement = json['prependLiveElement'];
     final l$$__typename = json['__typename'];
     return Fragment$ItemSection$$CardListSection$metadata(
@@ -11466,6 +12611,11 @@ class Fragment$ItemSection$$CardListSection$metadata
       secondaryTitles: (l$secondaryTitles as bool),
       collectionId: (l$collectionId as String),
       useContext: (l$useContext as bool),
+      page: l$page == null
+          ? null
+          : Fragment$ItemSection$$CardListSection$metadata$page.fromJson(
+              (l$page as Map<String, dynamic>)),
+      limit: (l$limit as int?),
       prependLiveElement: (l$prependLiveElement as bool),
       $__typename: (l$$__typename as String),
     );
@@ -11480,6 +12630,10 @@ class Fragment$ItemSection$$CardListSection$metadata
   final String collectionId;
 
   final bool useContext;
+
+  final Fragment$ItemSection$$CardListSection$metadata$page? page;
+
+  final int? limit;
 
   final bool prependLiveElement;
 
@@ -11497,6 +12651,10 @@ class Fragment$ItemSection$$CardListSection$metadata
     _resultData['collectionId'] = l$collectionId;
     final l$useContext = useContext;
     _resultData['useContext'] = l$useContext;
+    final l$page = page;
+    _resultData['page'] = l$page?.toJson();
+    final l$limit = limit;
+    _resultData['limit'] = l$limit;
     final l$prependLiveElement = prependLiveElement;
     _resultData['prependLiveElement'] = l$prependLiveElement;
     final l$$__typename = $__typename;
@@ -11511,6 +12669,8 @@ class Fragment$ItemSection$$CardListSection$metadata
     final l$secondaryTitles = secondaryTitles;
     final l$collectionId = collectionId;
     final l$useContext = useContext;
+    final l$page = page;
+    final l$limit = limit;
     final l$prependLiveElement = prependLiveElement;
     final l$$__typename = $__typename;
     return Object.hashAll([
@@ -11519,6 +12679,8 @@ class Fragment$ItemSection$$CardListSection$metadata
       l$secondaryTitles,
       l$collectionId,
       l$useContext,
+      l$page,
+      l$limit,
       l$prependLiveElement,
       l$$__typename,
     ]);
@@ -11556,6 +12718,16 @@ class Fragment$ItemSection$$CardListSection$metadata
     final l$useContext = useContext;
     final lOther$useContext = other.useContext;
     if (l$useContext != lOther$useContext) {
+      return false;
+    }
+    final l$page = page;
+    final lOther$page = other.page;
+    if (l$page != lOther$page) {
+      return false;
+    }
+    final l$limit = limit;
+    final lOther$limit = other.limit;
+    if (l$limit != lOther$limit) {
       return false;
     }
     final l$prependLiveElement = prependLiveElement;
@@ -11598,9 +12770,12 @@ abstract class CopyWith$Fragment$ItemSection$$CardListSection$metadata<TRes> {
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Fragment$ItemSection$$CardListSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
     String? $__typename,
   });
+  CopyWith$Fragment$ItemSection$$CardListSection$metadata$page<TRes> get page;
 }
 
 class _CopyWithImpl$Fragment$ItemSection$$CardListSection$metadata<TRes>
@@ -11622,6 +12797,8 @@ class _CopyWithImpl$Fragment$ItemSection$$CardListSection$metadata<TRes>
     Object? secondaryTitles = _undefined,
     Object? collectionId = _undefined,
     Object? useContext = _undefined,
+    Object? page = _undefined,
+    Object? limit = _undefined,
     Object? prependLiveElement = _undefined,
     Object? $__typename = _undefined,
   }) =>
@@ -11643,6 +12820,10 @@ class _CopyWithImpl$Fragment$ItemSection$$CardListSection$metadata<TRes>
         useContext: useContext == _undefined || useContext == null
             ? _instance.useContext
             : (useContext as bool),
+        page: page == _undefined
+            ? _instance.page
+            : (page as Fragment$ItemSection$$CardListSection$metadata$page?),
+        limit: limit == _undefined ? _instance.limit : (limit as int?),
         prependLiveElement:
             prependLiveElement == _undefined || prependLiveElement == null
                 ? _instance.prependLiveElement
@@ -11651,6 +12832,15 @@ class _CopyWithImpl$Fragment$ItemSection$$CardListSection$metadata<TRes>
             ? _instance.$__typename
             : ($__typename as String),
       ));
+
+  CopyWith$Fragment$ItemSection$$CardListSection$metadata$page<TRes> get page {
+    final local$page = _instance.page;
+    return local$page == null
+        ? CopyWith$Fragment$ItemSection$$CardListSection$metadata$page.stub(
+            _then(_instance))
+        : CopyWith$Fragment$ItemSection$$CardListSection$metadata$page(
+            local$page, (e) => call(page: e));
+  }
 }
 
 class _CopyWithStubImpl$Fragment$ItemSection$$CardListSection$metadata<TRes>
@@ -11665,7 +12855,148 @@ class _CopyWithStubImpl$Fragment$ItemSection$$CardListSection$metadata<TRes>
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Fragment$ItemSection$$CardListSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Fragment$ItemSection$$CardListSection$metadata$page<TRes> get page =>
+      CopyWith$Fragment$ItemSection$$CardListSection$metadata$page.stub(_res);
+}
+
+class Fragment$ItemSection$$CardListSection$metadata$page
+    implements Fragment$ItemSection$metadata$page {
+  Fragment$ItemSection$$CardListSection$metadata$page({
+    required this.code,
+    this.$__typename = 'Page',
+  });
+
+  factory Fragment$ItemSection$$CardListSection$metadata$page.fromJson(
+      Map<String, dynamic> json) {
+    final l$code = json['code'];
+    final l$$__typename = json['__typename'];
+    return Fragment$ItemSection$$CardListSection$metadata$page(
+      code: (l$code as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String code;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$code = code;
+    _resultData['code'] = l$code;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$code = code;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$code,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Fragment$ItemSection$$CardListSection$metadata$page) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$code = code;
+    final lOther$code = other.code;
+    if (l$code != lOther$code) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$ItemSection$$CardListSection$metadata$page
+    on Fragment$ItemSection$$CardListSection$metadata$page {
+  CopyWith$Fragment$ItemSection$$CardListSection$metadata$page<
+          Fragment$ItemSection$$CardListSection$metadata$page>
+      get copyWith =>
+          CopyWith$Fragment$ItemSection$$CardListSection$metadata$page(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$ItemSection$$CardListSection$metadata$page<
+    TRes> {
+  factory CopyWith$Fragment$ItemSection$$CardListSection$metadata$page(
+    Fragment$ItemSection$$CardListSection$metadata$page instance,
+    TRes Function(Fragment$ItemSection$$CardListSection$metadata$page) then,
+  ) = _CopyWithImpl$Fragment$ItemSection$$CardListSection$metadata$page;
+
+  factory CopyWith$Fragment$ItemSection$$CardListSection$metadata$page.stub(
+          TRes res) =
+      _CopyWithStubImpl$Fragment$ItemSection$$CardListSection$metadata$page;
+
+  TRes call({
+    String? code,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Fragment$ItemSection$$CardListSection$metadata$page<TRes>
+    implements
+        CopyWith$Fragment$ItemSection$$CardListSection$metadata$page<TRes> {
+  _CopyWithImpl$Fragment$ItemSection$$CardListSection$metadata$page(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$ItemSection$$CardListSection$metadata$page _instance;
+
+  final TRes Function(Fragment$ItemSection$$CardListSection$metadata$page)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? code = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Fragment$ItemSection$$CardListSection$metadata$page(
+        code: code == _undefined || code == null
+            ? _instance.code
+            : (code as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Fragment$ItemSection$$CardListSection$metadata$page<
+        TRes>
+    implements
+        CopyWith$Fragment$ItemSection$$CardListSection$metadata$page<TRes> {
+  _CopyWithStubImpl$Fragment$ItemSection$$CardListSection$metadata$page(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? code,
     String? $__typename,
   }) =>
       _res;
@@ -12053,6 +13384,8 @@ class Fragment$ItemSection$$DefaultGridSection$metadata
     required this.secondaryTitles,
     required this.collectionId,
     required this.useContext,
+    this.page,
+    this.limit,
     required this.prependLiveElement,
     this.$__typename = 'ItemSectionMetadata',
   });
@@ -12064,6 +13397,8 @@ class Fragment$ItemSection$$DefaultGridSection$metadata
     final l$secondaryTitles = json['secondaryTitles'];
     final l$collectionId = json['collectionId'];
     final l$useContext = json['useContext'];
+    final l$page = json['page'];
+    final l$limit = json['limit'];
     final l$prependLiveElement = json['prependLiveElement'];
     final l$$__typename = json['__typename'];
     return Fragment$ItemSection$$DefaultGridSection$metadata(
@@ -12072,6 +13407,11 @@ class Fragment$ItemSection$$DefaultGridSection$metadata
       secondaryTitles: (l$secondaryTitles as bool),
       collectionId: (l$collectionId as String),
       useContext: (l$useContext as bool),
+      page: l$page == null
+          ? null
+          : Fragment$ItemSection$$DefaultGridSection$metadata$page.fromJson(
+              (l$page as Map<String, dynamic>)),
+      limit: (l$limit as int?),
       prependLiveElement: (l$prependLiveElement as bool),
       $__typename: (l$$__typename as String),
     );
@@ -12086,6 +13426,10 @@ class Fragment$ItemSection$$DefaultGridSection$metadata
   final String collectionId;
 
   final bool useContext;
+
+  final Fragment$ItemSection$$DefaultGridSection$metadata$page? page;
+
+  final int? limit;
 
   final bool prependLiveElement;
 
@@ -12103,6 +13447,10 @@ class Fragment$ItemSection$$DefaultGridSection$metadata
     _resultData['collectionId'] = l$collectionId;
     final l$useContext = useContext;
     _resultData['useContext'] = l$useContext;
+    final l$page = page;
+    _resultData['page'] = l$page?.toJson();
+    final l$limit = limit;
+    _resultData['limit'] = l$limit;
     final l$prependLiveElement = prependLiveElement;
     _resultData['prependLiveElement'] = l$prependLiveElement;
     final l$$__typename = $__typename;
@@ -12117,6 +13465,8 @@ class Fragment$ItemSection$$DefaultGridSection$metadata
     final l$secondaryTitles = secondaryTitles;
     final l$collectionId = collectionId;
     final l$useContext = useContext;
+    final l$page = page;
+    final l$limit = limit;
     final l$prependLiveElement = prependLiveElement;
     final l$$__typename = $__typename;
     return Object.hashAll([
@@ -12125,6 +13475,8 @@ class Fragment$ItemSection$$DefaultGridSection$metadata
       l$secondaryTitles,
       l$collectionId,
       l$useContext,
+      l$page,
+      l$limit,
       l$prependLiveElement,
       l$$__typename,
     ]);
@@ -12162,6 +13514,16 @@ class Fragment$ItemSection$$DefaultGridSection$metadata
     final l$useContext = useContext;
     final lOther$useContext = other.useContext;
     if (l$useContext != lOther$useContext) {
+      return false;
+    }
+    final l$page = page;
+    final lOther$page = other.page;
+    if (l$page != lOther$page) {
+      return false;
+    }
+    final l$limit = limit;
+    final lOther$limit = other.limit;
+    if (l$limit != lOther$limit) {
       return false;
     }
     final l$prependLiveElement = prependLiveElement;
@@ -12206,9 +13568,13 @@ abstract class CopyWith$Fragment$ItemSection$$DefaultGridSection$metadata<
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Fragment$ItemSection$$DefaultGridSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
     String? $__typename,
   });
+  CopyWith$Fragment$ItemSection$$DefaultGridSection$metadata$page<TRes>
+      get page;
 }
 
 class _CopyWithImpl$Fragment$ItemSection$$DefaultGridSection$metadata<TRes>
@@ -12231,6 +13597,8 @@ class _CopyWithImpl$Fragment$ItemSection$$DefaultGridSection$metadata<TRes>
     Object? secondaryTitles = _undefined,
     Object? collectionId = _undefined,
     Object? useContext = _undefined,
+    Object? page = _undefined,
+    Object? limit = _undefined,
     Object? prependLiveElement = _undefined,
     Object? $__typename = _undefined,
   }) =>
@@ -12252,6 +13620,10 @@ class _CopyWithImpl$Fragment$ItemSection$$DefaultGridSection$metadata<TRes>
         useContext: useContext == _undefined || useContext == null
             ? _instance.useContext
             : (useContext as bool),
+        page: page == _undefined
+            ? _instance.page
+            : (page as Fragment$ItemSection$$DefaultGridSection$metadata$page?),
+        limit: limit == _undefined ? _instance.limit : (limit as int?),
         prependLiveElement:
             prependLiveElement == _undefined || prependLiveElement == null
                 ? _instance.prependLiveElement
@@ -12260,6 +13632,16 @@ class _CopyWithImpl$Fragment$ItemSection$$DefaultGridSection$metadata<TRes>
             ? _instance.$__typename
             : ($__typename as String),
       ));
+
+  CopyWith$Fragment$ItemSection$$DefaultGridSection$metadata$page<TRes>
+      get page {
+    final local$page = _instance.page;
+    return local$page == null
+        ? CopyWith$Fragment$ItemSection$$DefaultGridSection$metadata$page.stub(
+            _then(_instance))
+        : CopyWith$Fragment$ItemSection$$DefaultGridSection$metadata$page(
+            local$page, (e) => call(page: e));
+  }
 }
 
 class _CopyWithStubImpl$Fragment$ItemSection$$DefaultGridSection$metadata<TRes>
@@ -12276,7 +13658,150 @@ class _CopyWithStubImpl$Fragment$ItemSection$$DefaultGridSection$metadata<TRes>
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Fragment$ItemSection$$DefaultGridSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Fragment$ItemSection$$DefaultGridSection$metadata$page<TRes>
+      get page =>
+          CopyWith$Fragment$ItemSection$$DefaultGridSection$metadata$page.stub(
+              _res);
+}
+
+class Fragment$ItemSection$$DefaultGridSection$metadata$page
+    implements Fragment$ItemSection$metadata$page {
+  Fragment$ItemSection$$DefaultGridSection$metadata$page({
+    required this.code,
+    this.$__typename = 'Page',
+  });
+
+  factory Fragment$ItemSection$$DefaultGridSection$metadata$page.fromJson(
+      Map<String, dynamic> json) {
+    final l$code = json['code'];
+    final l$$__typename = json['__typename'];
+    return Fragment$ItemSection$$DefaultGridSection$metadata$page(
+      code: (l$code as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String code;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$code = code;
+    _resultData['code'] = l$code;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$code = code;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$code,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Fragment$ItemSection$$DefaultGridSection$metadata$page) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$code = code;
+    final lOther$code = other.code;
+    if (l$code != lOther$code) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$ItemSection$$DefaultGridSection$metadata$page
+    on Fragment$ItemSection$$DefaultGridSection$metadata$page {
+  CopyWith$Fragment$ItemSection$$DefaultGridSection$metadata$page<
+          Fragment$ItemSection$$DefaultGridSection$metadata$page>
+      get copyWith =>
+          CopyWith$Fragment$ItemSection$$DefaultGridSection$metadata$page(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$ItemSection$$DefaultGridSection$metadata$page<
+    TRes> {
+  factory CopyWith$Fragment$ItemSection$$DefaultGridSection$metadata$page(
+    Fragment$ItemSection$$DefaultGridSection$metadata$page instance,
+    TRes Function(Fragment$ItemSection$$DefaultGridSection$metadata$page) then,
+  ) = _CopyWithImpl$Fragment$ItemSection$$DefaultGridSection$metadata$page;
+
+  factory CopyWith$Fragment$ItemSection$$DefaultGridSection$metadata$page.stub(
+          TRes res) =
+      _CopyWithStubImpl$Fragment$ItemSection$$DefaultGridSection$metadata$page;
+
+  TRes call({
+    String? code,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Fragment$ItemSection$$DefaultGridSection$metadata$page<TRes>
+    implements
+        CopyWith$Fragment$ItemSection$$DefaultGridSection$metadata$page<TRes> {
+  _CopyWithImpl$Fragment$ItemSection$$DefaultGridSection$metadata$page(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$ItemSection$$DefaultGridSection$metadata$page _instance;
+
+  final TRes Function(Fragment$ItemSection$$DefaultGridSection$metadata$page)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? code = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Fragment$ItemSection$$DefaultGridSection$metadata$page(
+        code: code == _undefined || code == null
+            ? _instance.code
+            : (code as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Fragment$ItemSection$$DefaultGridSection$metadata$page<
+        TRes>
+    implements
+        CopyWith$Fragment$ItemSection$$DefaultGridSection$metadata$page<TRes> {
+  _CopyWithStubImpl$Fragment$ItemSection$$DefaultGridSection$metadata$page(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? code,
     String? $__typename,
   }) =>
       _res;
@@ -12664,6 +14189,8 @@ class Fragment$ItemSection$$PosterGridSection$metadata
     required this.secondaryTitles,
     required this.collectionId,
     required this.useContext,
+    this.page,
+    this.limit,
     required this.prependLiveElement,
     this.$__typename = 'ItemSectionMetadata',
   });
@@ -12675,6 +14202,8 @@ class Fragment$ItemSection$$PosterGridSection$metadata
     final l$secondaryTitles = json['secondaryTitles'];
     final l$collectionId = json['collectionId'];
     final l$useContext = json['useContext'];
+    final l$page = json['page'];
+    final l$limit = json['limit'];
     final l$prependLiveElement = json['prependLiveElement'];
     final l$$__typename = json['__typename'];
     return Fragment$ItemSection$$PosterGridSection$metadata(
@@ -12683,6 +14212,11 @@ class Fragment$ItemSection$$PosterGridSection$metadata
       secondaryTitles: (l$secondaryTitles as bool),
       collectionId: (l$collectionId as String),
       useContext: (l$useContext as bool),
+      page: l$page == null
+          ? null
+          : Fragment$ItemSection$$PosterGridSection$metadata$page.fromJson(
+              (l$page as Map<String, dynamic>)),
+      limit: (l$limit as int?),
       prependLiveElement: (l$prependLiveElement as bool),
       $__typename: (l$$__typename as String),
     );
@@ -12697,6 +14231,10 @@ class Fragment$ItemSection$$PosterGridSection$metadata
   final String collectionId;
 
   final bool useContext;
+
+  final Fragment$ItemSection$$PosterGridSection$metadata$page? page;
+
+  final int? limit;
 
   final bool prependLiveElement;
 
@@ -12714,6 +14252,10 @@ class Fragment$ItemSection$$PosterGridSection$metadata
     _resultData['collectionId'] = l$collectionId;
     final l$useContext = useContext;
     _resultData['useContext'] = l$useContext;
+    final l$page = page;
+    _resultData['page'] = l$page?.toJson();
+    final l$limit = limit;
+    _resultData['limit'] = l$limit;
     final l$prependLiveElement = prependLiveElement;
     _resultData['prependLiveElement'] = l$prependLiveElement;
     final l$$__typename = $__typename;
@@ -12728,6 +14270,8 @@ class Fragment$ItemSection$$PosterGridSection$metadata
     final l$secondaryTitles = secondaryTitles;
     final l$collectionId = collectionId;
     final l$useContext = useContext;
+    final l$page = page;
+    final l$limit = limit;
     final l$prependLiveElement = prependLiveElement;
     final l$$__typename = $__typename;
     return Object.hashAll([
@@ -12736,6 +14280,8 @@ class Fragment$ItemSection$$PosterGridSection$metadata
       l$secondaryTitles,
       l$collectionId,
       l$useContext,
+      l$page,
+      l$limit,
       l$prependLiveElement,
       l$$__typename,
     ]);
@@ -12773,6 +14319,16 @@ class Fragment$ItemSection$$PosterGridSection$metadata
     final l$useContext = useContext;
     final lOther$useContext = other.useContext;
     if (l$useContext != lOther$useContext) {
+      return false;
+    }
+    final l$page = page;
+    final lOther$page = other.page;
+    if (l$page != lOther$page) {
+      return false;
+    }
+    final l$limit = limit;
+    final lOther$limit = other.limit;
+    if (l$limit != lOther$limit) {
       return false;
     }
     final l$prependLiveElement = prependLiveElement;
@@ -12815,9 +14371,12 @@ abstract class CopyWith$Fragment$ItemSection$$PosterGridSection$metadata<TRes> {
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Fragment$ItemSection$$PosterGridSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
     String? $__typename,
   });
+  CopyWith$Fragment$ItemSection$$PosterGridSection$metadata$page<TRes> get page;
 }
 
 class _CopyWithImpl$Fragment$ItemSection$$PosterGridSection$metadata<TRes>
@@ -12839,6 +14398,8 @@ class _CopyWithImpl$Fragment$ItemSection$$PosterGridSection$metadata<TRes>
     Object? secondaryTitles = _undefined,
     Object? collectionId = _undefined,
     Object? useContext = _undefined,
+    Object? page = _undefined,
+    Object? limit = _undefined,
     Object? prependLiveElement = _undefined,
     Object? $__typename = _undefined,
   }) =>
@@ -12860,6 +14421,10 @@ class _CopyWithImpl$Fragment$ItemSection$$PosterGridSection$metadata<TRes>
         useContext: useContext == _undefined || useContext == null
             ? _instance.useContext
             : (useContext as bool),
+        page: page == _undefined
+            ? _instance.page
+            : (page as Fragment$ItemSection$$PosterGridSection$metadata$page?),
+        limit: limit == _undefined ? _instance.limit : (limit as int?),
         prependLiveElement:
             prependLiveElement == _undefined || prependLiveElement == null
                 ? _instance.prependLiveElement
@@ -12868,6 +14433,16 @@ class _CopyWithImpl$Fragment$ItemSection$$PosterGridSection$metadata<TRes>
             ? _instance.$__typename
             : ($__typename as String),
       ));
+
+  CopyWith$Fragment$ItemSection$$PosterGridSection$metadata$page<TRes>
+      get page {
+    final local$page = _instance.page;
+    return local$page == null
+        ? CopyWith$Fragment$ItemSection$$PosterGridSection$metadata$page.stub(
+            _then(_instance))
+        : CopyWith$Fragment$ItemSection$$PosterGridSection$metadata$page(
+            local$page, (e) => call(page: e));
+  }
 }
 
 class _CopyWithStubImpl$Fragment$ItemSection$$PosterGridSection$metadata<TRes>
@@ -12882,7 +14457,150 @@ class _CopyWithStubImpl$Fragment$ItemSection$$PosterGridSection$metadata<TRes>
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Fragment$ItemSection$$PosterGridSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Fragment$ItemSection$$PosterGridSection$metadata$page<TRes>
+      get page =>
+          CopyWith$Fragment$ItemSection$$PosterGridSection$metadata$page.stub(
+              _res);
+}
+
+class Fragment$ItemSection$$PosterGridSection$metadata$page
+    implements Fragment$ItemSection$metadata$page {
+  Fragment$ItemSection$$PosterGridSection$metadata$page({
+    required this.code,
+    this.$__typename = 'Page',
+  });
+
+  factory Fragment$ItemSection$$PosterGridSection$metadata$page.fromJson(
+      Map<String, dynamic> json) {
+    final l$code = json['code'];
+    final l$$__typename = json['__typename'];
+    return Fragment$ItemSection$$PosterGridSection$metadata$page(
+      code: (l$code as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String code;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$code = code;
+    _resultData['code'] = l$code;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$code = code;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$code,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Fragment$ItemSection$$PosterGridSection$metadata$page) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$code = code;
+    final lOther$code = other.code;
+    if (l$code != lOther$code) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$ItemSection$$PosterGridSection$metadata$page
+    on Fragment$ItemSection$$PosterGridSection$metadata$page {
+  CopyWith$Fragment$ItemSection$$PosterGridSection$metadata$page<
+          Fragment$ItemSection$$PosterGridSection$metadata$page>
+      get copyWith =>
+          CopyWith$Fragment$ItemSection$$PosterGridSection$metadata$page(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$ItemSection$$PosterGridSection$metadata$page<
+    TRes> {
+  factory CopyWith$Fragment$ItemSection$$PosterGridSection$metadata$page(
+    Fragment$ItemSection$$PosterGridSection$metadata$page instance,
+    TRes Function(Fragment$ItemSection$$PosterGridSection$metadata$page) then,
+  ) = _CopyWithImpl$Fragment$ItemSection$$PosterGridSection$metadata$page;
+
+  factory CopyWith$Fragment$ItemSection$$PosterGridSection$metadata$page.stub(
+          TRes res) =
+      _CopyWithStubImpl$Fragment$ItemSection$$PosterGridSection$metadata$page;
+
+  TRes call({
+    String? code,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Fragment$ItemSection$$PosterGridSection$metadata$page<TRes>
+    implements
+        CopyWith$Fragment$ItemSection$$PosterGridSection$metadata$page<TRes> {
+  _CopyWithImpl$Fragment$ItemSection$$PosterGridSection$metadata$page(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$ItemSection$$PosterGridSection$metadata$page _instance;
+
+  final TRes Function(Fragment$ItemSection$$PosterGridSection$metadata$page)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? code = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Fragment$ItemSection$$PosterGridSection$metadata$page(
+        code: code == _undefined || code == null
+            ? _instance.code
+            : (code as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Fragment$ItemSection$$PosterGridSection$metadata$page<
+        TRes>
+    implements
+        CopyWith$Fragment$ItemSection$$PosterGridSection$metadata$page<TRes> {
+  _CopyWithStubImpl$Fragment$ItemSection$$PosterGridSection$metadata$page(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? code,
     String? $__typename,
   }) =>
       _res;
@@ -13269,6 +14987,8 @@ class Fragment$ItemSection$$IconGridSection$metadata
     required this.secondaryTitles,
     required this.collectionId,
     required this.useContext,
+    this.page,
+    this.limit,
     required this.prependLiveElement,
     this.$__typename = 'ItemSectionMetadata',
   });
@@ -13280,6 +15000,8 @@ class Fragment$ItemSection$$IconGridSection$metadata
     final l$secondaryTitles = json['secondaryTitles'];
     final l$collectionId = json['collectionId'];
     final l$useContext = json['useContext'];
+    final l$page = json['page'];
+    final l$limit = json['limit'];
     final l$prependLiveElement = json['prependLiveElement'];
     final l$$__typename = json['__typename'];
     return Fragment$ItemSection$$IconGridSection$metadata(
@@ -13288,6 +15010,11 @@ class Fragment$ItemSection$$IconGridSection$metadata
       secondaryTitles: (l$secondaryTitles as bool),
       collectionId: (l$collectionId as String),
       useContext: (l$useContext as bool),
+      page: l$page == null
+          ? null
+          : Fragment$ItemSection$$IconGridSection$metadata$page.fromJson(
+              (l$page as Map<String, dynamic>)),
+      limit: (l$limit as int?),
       prependLiveElement: (l$prependLiveElement as bool),
       $__typename: (l$$__typename as String),
     );
@@ -13302,6 +15029,10 @@ class Fragment$ItemSection$$IconGridSection$metadata
   final String collectionId;
 
   final bool useContext;
+
+  final Fragment$ItemSection$$IconGridSection$metadata$page? page;
+
+  final int? limit;
 
   final bool prependLiveElement;
 
@@ -13319,6 +15050,10 @@ class Fragment$ItemSection$$IconGridSection$metadata
     _resultData['collectionId'] = l$collectionId;
     final l$useContext = useContext;
     _resultData['useContext'] = l$useContext;
+    final l$page = page;
+    _resultData['page'] = l$page?.toJson();
+    final l$limit = limit;
+    _resultData['limit'] = l$limit;
     final l$prependLiveElement = prependLiveElement;
     _resultData['prependLiveElement'] = l$prependLiveElement;
     final l$$__typename = $__typename;
@@ -13333,6 +15068,8 @@ class Fragment$ItemSection$$IconGridSection$metadata
     final l$secondaryTitles = secondaryTitles;
     final l$collectionId = collectionId;
     final l$useContext = useContext;
+    final l$page = page;
+    final l$limit = limit;
     final l$prependLiveElement = prependLiveElement;
     final l$$__typename = $__typename;
     return Object.hashAll([
@@ -13341,6 +15078,8 @@ class Fragment$ItemSection$$IconGridSection$metadata
       l$secondaryTitles,
       l$collectionId,
       l$useContext,
+      l$page,
+      l$limit,
       l$prependLiveElement,
       l$$__typename,
     ]);
@@ -13378,6 +15117,16 @@ class Fragment$ItemSection$$IconGridSection$metadata
     final l$useContext = useContext;
     final lOther$useContext = other.useContext;
     if (l$useContext != lOther$useContext) {
+      return false;
+    }
+    final l$page = page;
+    final lOther$page = other.page;
+    if (l$page != lOther$page) {
+      return false;
+    }
+    final l$limit = limit;
+    final lOther$limit = other.limit;
+    if (l$limit != lOther$limit) {
       return false;
     }
     final l$prependLiveElement = prependLiveElement;
@@ -13420,9 +15169,12 @@ abstract class CopyWith$Fragment$ItemSection$$IconGridSection$metadata<TRes> {
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Fragment$ItemSection$$IconGridSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
     String? $__typename,
   });
+  CopyWith$Fragment$ItemSection$$IconGridSection$metadata$page<TRes> get page;
 }
 
 class _CopyWithImpl$Fragment$ItemSection$$IconGridSection$metadata<TRes>
@@ -13444,6 +15196,8 @@ class _CopyWithImpl$Fragment$ItemSection$$IconGridSection$metadata<TRes>
     Object? secondaryTitles = _undefined,
     Object? collectionId = _undefined,
     Object? useContext = _undefined,
+    Object? page = _undefined,
+    Object? limit = _undefined,
     Object? prependLiveElement = _undefined,
     Object? $__typename = _undefined,
   }) =>
@@ -13465,6 +15219,10 @@ class _CopyWithImpl$Fragment$ItemSection$$IconGridSection$metadata<TRes>
         useContext: useContext == _undefined || useContext == null
             ? _instance.useContext
             : (useContext as bool),
+        page: page == _undefined
+            ? _instance.page
+            : (page as Fragment$ItemSection$$IconGridSection$metadata$page?),
+        limit: limit == _undefined ? _instance.limit : (limit as int?),
         prependLiveElement:
             prependLiveElement == _undefined || prependLiveElement == null
                 ? _instance.prependLiveElement
@@ -13473,6 +15231,15 @@ class _CopyWithImpl$Fragment$ItemSection$$IconGridSection$metadata<TRes>
             ? _instance.$__typename
             : ($__typename as String),
       ));
+
+  CopyWith$Fragment$ItemSection$$IconGridSection$metadata$page<TRes> get page {
+    final local$page = _instance.page;
+    return local$page == null
+        ? CopyWith$Fragment$ItemSection$$IconGridSection$metadata$page.stub(
+            _then(_instance))
+        : CopyWith$Fragment$ItemSection$$IconGridSection$metadata$page(
+            local$page, (e) => call(page: e));
+  }
 }
 
 class _CopyWithStubImpl$Fragment$ItemSection$$IconGridSection$metadata<TRes>
@@ -13487,7 +15254,148 @@ class _CopyWithStubImpl$Fragment$ItemSection$$IconGridSection$metadata<TRes>
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Fragment$ItemSection$$IconGridSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Fragment$ItemSection$$IconGridSection$metadata$page<TRes> get page =>
+      CopyWith$Fragment$ItemSection$$IconGridSection$metadata$page.stub(_res);
+}
+
+class Fragment$ItemSection$$IconGridSection$metadata$page
+    implements Fragment$ItemSection$metadata$page {
+  Fragment$ItemSection$$IconGridSection$metadata$page({
+    required this.code,
+    this.$__typename = 'Page',
+  });
+
+  factory Fragment$ItemSection$$IconGridSection$metadata$page.fromJson(
+      Map<String, dynamic> json) {
+    final l$code = json['code'];
+    final l$$__typename = json['__typename'];
+    return Fragment$ItemSection$$IconGridSection$metadata$page(
+      code: (l$code as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String code;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$code = code;
+    _resultData['code'] = l$code;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$code = code;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$code,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Fragment$ItemSection$$IconGridSection$metadata$page) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$code = code;
+    final lOther$code = other.code;
+    if (l$code != lOther$code) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$ItemSection$$IconGridSection$metadata$page
+    on Fragment$ItemSection$$IconGridSection$metadata$page {
+  CopyWith$Fragment$ItemSection$$IconGridSection$metadata$page<
+          Fragment$ItemSection$$IconGridSection$metadata$page>
+      get copyWith =>
+          CopyWith$Fragment$ItemSection$$IconGridSection$metadata$page(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$ItemSection$$IconGridSection$metadata$page<
+    TRes> {
+  factory CopyWith$Fragment$ItemSection$$IconGridSection$metadata$page(
+    Fragment$ItemSection$$IconGridSection$metadata$page instance,
+    TRes Function(Fragment$ItemSection$$IconGridSection$metadata$page) then,
+  ) = _CopyWithImpl$Fragment$ItemSection$$IconGridSection$metadata$page;
+
+  factory CopyWith$Fragment$ItemSection$$IconGridSection$metadata$page.stub(
+          TRes res) =
+      _CopyWithStubImpl$Fragment$ItemSection$$IconGridSection$metadata$page;
+
+  TRes call({
+    String? code,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Fragment$ItemSection$$IconGridSection$metadata$page<TRes>
+    implements
+        CopyWith$Fragment$ItemSection$$IconGridSection$metadata$page<TRes> {
+  _CopyWithImpl$Fragment$ItemSection$$IconGridSection$metadata$page(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$ItemSection$$IconGridSection$metadata$page _instance;
+
+  final TRes Function(Fragment$ItemSection$$IconGridSection$metadata$page)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? code = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Fragment$ItemSection$$IconGridSection$metadata$page(
+        code: code == _undefined || code == null
+            ? _instance.code
+            : (code as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Fragment$ItemSection$$IconGridSection$metadata$page<
+        TRes>
+    implements
+        CopyWith$Fragment$ItemSection$$IconGridSection$metadata$page<TRes> {
+  _CopyWithStubImpl$Fragment$ItemSection$$IconGridSection$metadata$page(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? code,
     String? $__typename,
   }) =>
       _res;
@@ -13872,6 +15780,8 @@ class Fragment$ItemSection$$IconSection$metadata
     required this.secondaryTitles,
     required this.collectionId,
     required this.useContext,
+    this.page,
+    this.limit,
     required this.prependLiveElement,
     this.$__typename = 'ItemSectionMetadata',
   });
@@ -13883,6 +15793,8 @@ class Fragment$ItemSection$$IconSection$metadata
     final l$secondaryTitles = json['secondaryTitles'];
     final l$collectionId = json['collectionId'];
     final l$useContext = json['useContext'];
+    final l$page = json['page'];
+    final l$limit = json['limit'];
     final l$prependLiveElement = json['prependLiveElement'];
     final l$$__typename = json['__typename'];
     return Fragment$ItemSection$$IconSection$metadata(
@@ -13891,6 +15803,11 @@ class Fragment$ItemSection$$IconSection$metadata
       secondaryTitles: (l$secondaryTitles as bool),
       collectionId: (l$collectionId as String),
       useContext: (l$useContext as bool),
+      page: l$page == null
+          ? null
+          : Fragment$ItemSection$$IconSection$metadata$page.fromJson(
+              (l$page as Map<String, dynamic>)),
+      limit: (l$limit as int?),
       prependLiveElement: (l$prependLiveElement as bool),
       $__typename: (l$$__typename as String),
     );
@@ -13905,6 +15822,10 @@ class Fragment$ItemSection$$IconSection$metadata
   final String collectionId;
 
   final bool useContext;
+
+  final Fragment$ItemSection$$IconSection$metadata$page? page;
+
+  final int? limit;
 
   final bool prependLiveElement;
 
@@ -13922,6 +15843,10 @@ class Fragment$ItemSection$$IconSection$metadata
     _resultData['collectionId'] = l$collectionId;
     final l$useContext = useContext;
     _resultData['useContext'] = l$useContext;
+    final l$page = page;
+    _resultData['page'] = l$page?.toJson();
+    final l$limit = limit;
+    _resultData['limit'] = l$limit;
     final l$prependLiveElement = prependLiveElement;
     _resultData['prependLiveElement'] = l$prependLiveElement;
     final l$$__typename = $__typename;
@@ -13936,6 +15861,8 @@ class Fragment$ItemSection$$IconSection$metadata
     final l$secondaryTitles = secondaryTitles;
     final l$collectionId = collectionId;
     final l$useContext = useContext;
+    final l$page = page;
+    final l$limit = limit;
     final l$prependLiveElement = prependLiveElement;
     final l$$__typename = $__typename;
     return Object.hashAll([
@@ -13944,6 +15871,8 @@ class Fragment$ItemSection$$IconSection$metadata
       l$secondaryTitles,
       l$collectionId,
       l$useContext,
+      l$page,
+      l$limit,
       l$prependLiveElement,
       l$$__typename,
     ]);
@@ -13981,6 +15910,16 @@ class Fragment$ItemSection$$IconSection$metadata
     final l$useContext = useContext;
     final lOther$useContext = other.useContext;
     if (l$useContext != lOther$useContext) {
+      return false;
+    }
+    final l$page = page;
+    final lOther$page = other.page;
+    if (l$page != lOther$page) {
+      return false;
+    }
+    final l$limit = limit;
+    final lOther$limit = other.limit;
+    if (l$limit != lOther$limit) {
       return false;
     }
     final l$prependLiveElement = prependLiveElement;
@@ -14022,9 +15961,12 @@ abstract class CopyWith$Fragment$ItemSection$$IconSection$metadata<TRes> {
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Fragment$ItemSection$$IconSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
     String? $__typename,
   });
+  CopyWith$Fragment$ItemSection$$IconSection$metadata$page<TRes> get page;
 }
 
 class _CopyWithImpl$Fragment$ItemSection$$IconSection$metadata<TRes>
@@ -14046,6 +15988,8 @@ class _CopyWithImpl$Fragment$ItemSection$$IconSection$metadata<TRes>
     Object? secondaryTitles = _undefined,
     Object? collectionId = _undefined,
     Object? useContext = _undefined,
+    Object? page = _undefined,
+    Object? limit = _undefined,
     Object? prependLiveElement = _undefined,
     Object? $__typename = _undefined,
   }) =>
@@ -14067,6 +16011,10 @@ class _CopyWithImpl$Fragment$ItemSection$$IconSection$metadata<TRes>
         useContext: useContext == _undefined || useContext == null
             ? _instance.useContext
             : (useContext as bool),
+        page: page == _undefined
+            ? _instance.page
+            : (page as Fragment$ItemSection$$IconSection$metadata$page?),
+        limit: limit == _undefined ? _instance.limit : (limit as int?),
         prependLiveElement:
             prependLiveElement == _undefined || prependLiveElement == null
                 ? _instance.prependLiveElement
@@ -14075,6 +16023,15 @@ class _CopyWithImpl$Fragment$ItemSection$$IconSection$metadata<TRes>
             ? _instance.$__typename
             : ($__typename as String),
       ));
+
+  CopyWith$Fragment$ItemSection$$IconSection$metadata$page<TRes> get page {
+    final local$page = _instance.page;
+    return local$page == null
+        ? CopyWith$Fragment$ItemSection$$IconSection$metadata$page.stub(
+            _then(_instance))
+        : CopyWith$Fragment$ItemSection$$IconSection$metadata$page(
+            local$page, (e) => call(page: e));
+  }
 }
 
 class _CopyWithStubImpl$Fragment$ItemSection$$IconSection$metadata<TRes>
@@ -14089,7 +16046,141 @@ class _CopyWithStubImpl$Fragment$ItemSection$$IconSection$metadata<TRes>
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Fragment$ItemSection$$IconSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Fragment$ItemSection$$IconSection$metadata$page<TRes> get page =>
+      CopyWith$Fragment$ItemSection$$IconSection$metadata$page.stub(_res);
+}
+
+class Fragment$ItemSection$$IconSection$metadata$page
+    implements Fragment$ItemSection$metadata$page {
+  Fragment$ItemSection$$IconSection$metadata$page({
+    required this.code,
+    this.$__typename = 'Page',
+  });
+
+  factory Fragment$ItemSection$$IconSection$metadata$page.fromJson(
+      Map<String, dynamic> json) {
+    final l$code = json['code'];
+    final l$$__typename = json['__typename'];
+    return Fragment$ItemSection$$IconSection$metadata$page(
+      code: (l$code as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String code;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$code = code;
+    _resultData['code'] = l$code;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$code = code;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$code,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Fragment$ItemSection$$IconSection$metadata$page) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$code = code;
+    final lOther$code = other.code;
+    if (l$code != lOther$code) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$ItemSection$$IconSection$metadata$page
+    on Fragment$ItemSection$$IconSection$metadata$page {
+  CopyWith$Fragment$ItemSection$$IconSection$metadata$page<
+          Fragment$ItemSection$$IconSection$metadata$page>
+      get copyWith => CopyWith$Fragment$ItemSection$$IconSection$metadata$page(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$ItemSection$$IconSection$metadata$page<TRes> {
+  factory CopyWith$Fragment$ItemSection$$IconSection$metadata$page(
+    Fragment$ItemSection$$IconSection$metadata$page instance,
+    TRes Function(Fragment$ItemSection$$IconSection$metadata$page) then,
+  ) = _CopyWithImpl$Fragment$ItemSection$$IconSection$metadata$page;
+
+  factory CopyWith$Fragment$ItemSection$$IconSection$metadata$page.stub(
+          TRes res) =
+      _CopyWithStubImpl$Fragment$ItemSection$$IconSection$metadata$page;
+
+  TRes call({
+    String? code,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Fragment$ItemSection$$IconSection$metadata$page<TRes>
+    implements CopyWith$Fragment$ItemSection$$IconSection$metadata$page<TRes> {
+  _CopyWithImpl$Fragment$ItemSection$$IconSection$metadata$page(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$ItemSection$$IconSection$metadata$page _instance;
+
+  final TRes Function(Fragment$ItemSection$$IconSection$metadata$page) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? code = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Fragment$ItemSection$$IconSection$metadata$page(
+        code: code == _undefined || code == null
+            ? _instance.code
+            : (code as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Fragment$ItemSection$$IconSection$metadata$page<TRes>
+    implements CopyWith$Fragment$ItemSection$$IconSection$metadata$page<TRes> {
+  _CopyWithStubImpl$Fragment$ItemSection$$IconSection$metadata$page(this._res);
+
+  TRes _res;
+
+  call({
+    String? code,
     String? $__typename,
   }) =>
       _res;
@@ -14475,6 +16566,8 @@ class Fragment$ItemSection$$LabelSection$metadata
     required this.secondaryTitles,
     required this.collectionId,
     required this.useContext,
+    this.page,
+    this.limit,
     required this.prependLiveElement,
     this.$__typename = 'ItemSectionMetadata',
   });
@@ -14486,6 +16579,8 @@ class Fragment$ItemSection$$LabelSection$metadata
     final l$secondaryTitles = json['secondaryTitles'];
     final l$collectionId = json['collectionId'];
     final l$useContext = json['useContext'];
+    final l$page = json['page'];
+    final l$limit = json['limit'];
     final l$prependLiveElement = json['prependLiveElement'];
     final l$$__typename = json['__typename'];
     return Fragment$ItemSection$$LabelSection$metadata(
@@ -14494,6 +16589,11 @@ class Fragment$ItemSection$$LabelSection$metadata
       secondaryTitles: (l$secondaryTitles as bool),
       collectionId: (l$collectionId as String),
       useContext: (l$useContext as bool),
+      page: l$page == null
+          ? null
+          : Fragment$ItemSection$$LabelSection$metadata$page.fromJson(
+              (l$page as Map<String, dynamic>)),
+      limit: (l$limit as int?),
       prependLiveElement: (l$prependLiveElement as bool),
       $__typename: (l$$__typename as String),
     );
@@ -14508,6 +16608,10 @@ class Fragment$ItemSection$$LabelSection$metadata
   final String collectionId;
 
   final bool useContext;
+
+  final Fragment$ItemSection$$LabelSection$metadata$page? page;
+
+  final int? limit;
 
   final bool prependLiveElement;
 
@@ -14525,6 +16629,10 @@ class Fragment$ItemSection$$LabelSection$metadata
     _resultData['collectionId'] = l$collectionId;
     final l$useContext = useContext;
     _resultData['useContext'] = l$useContext;
+    final l$page = page;
+    _resultData['page'] = l$page?.toJson();
+    final l$limit = limit;
+    _resultData['limit'] = l$limit;
     final l$prependLiveElement = prependLiveElement;
     _resultData['prependLiveElement'] = l$prependLiveElement;
     final l$$__typename = $__typename;
@@ -14539,6 +16647,8 @@ class Fragment$ItemSection$$LabelSection$metadata
     final l$secondaryTitles = secondaryTitles;
     final l$collectionId = collectionId;
     final l$useContext = useContext;
+    final l$page = page;
+    final l$limit = limit;
     final l$prependLiveElement = prependLiveElement;
     final l$$__typename = $__typename;
     return Object.hashAll([
@@ -14547,6 +16657,8 @@ class Fragment$ItemSection$$LabelSection$metadata
       l$secondaryTitles,
       l$collectionId,
       l$useContext,
+      l$page,
+      l$limit,
       l$prependLiveElement,
       l$$__typename,
     ]);
@@ -14584,6 +16696,16 @@ class Fragment$ItemSection$$LabelSection$metadata
     final l$useContext = useContext;
     final lOther$useContext = other.useContext;
     if (l$useContext != lOther$useContext) {
+      return false;
+    }
+    final l$page = page;
+    final lOther$page = other.page;
+    if (l$page != lOther$page) {
+      return false;
+    }
+    final l$limit = limit;
+    final lOther$limit = other.limit;
+    if (l$limit != lOther$limit) {
       return false;
     }
     final l$prependLiveElement = prependLiveElement;
@@ -14625,9 +16747,12 @@ abstract class CopyWith$Fragment$ItemSection$$LabelSection$metadata<TRes> {
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Fragment$ItemSection$$LabelSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
     String? $__typename,
   });
+  CopyWith$Fragment$ItemSection$$LabelSection$metadata$page<TRes> get page;
 }
 
 class _CopyWithImpl$Fragment$ItemSection$$LabelSection$metadata<TRes>
@@ -14649,6 +16774,8 @@ class _CopyWithImpl$Fragment$ItemSection$$LabelSection$metadata<TRes>
     Object? secondaryTitles = _undefined,
     Object? collectionId = _undefined,
     Object? useContext = _undefined,
+    Object? page = _undefined,
+    Object? limit = _undefined,
     Object? prependLiveElement = _undefined,
     Object? $__typename = _undefined,
   }) =>
@@ -14670,6 +16797,10 @@ class _CopyWithImpl$Fragment$ItemSection$$LabelSection$metadata<TRes>
         useContext: useContext == _undefined || useContext == null
             ? _instance.useContext
             : (useContext as bool),
+        page: page == _undefined
+            ? _instance.page
+            : (page as Fragment$ItemSection$$LabelSection$metadata$page?),
+        limit: limit == _undefined ? _instance.limit : (limit as int?),
         prependLiveElement:
             prependLiveElement == _undefined || prependLiveElement == null
                 ? _instance.prependLiveElement
@@ -14678,6 +16809,15 @@ class _CopyWithImpl$Fragment$ItemSection$$LabelSection$metadata<TRes>
             ? _instance.$__typename
             : ($__typename as String),
       ));
+
+  CopyWith$Fragment$ItemSection$$LabelSection$metadata$page<TRes> get page {
+    final local$page = _instance.page;
+    return local$page == null
+        ? CopyWith$Fragment$ItemSection$$LabelSection$metadata$page.stub(
+            _then(_instance))
+        : CopyWith$Fragment$ItemSection$$LabelSection$metadata$page(
+            local$page, (e) => call(page: e));
+  }
 }
 
 class _CopyWithStubImpl$Fragment$ItemSection$$LabelSection$metadata<TRes>
@@ -14692,7 +16832,141 @@ class _CopyWithStubImpl$Fragment$ItemSection$$LabelSection$metadata<TRes>
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Fragment$ItemSection$$LabelSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Fragment$ItemSection$$LabelSection$metadata$page<TRes> get page =>
+      CopyWith$Fragment$ItemSection$$LabelSection$metadata$page.stub(_res);
+}
+
+class Fragment$ItemSection$$LabelSection$metadata$page
+    implements Fragment$ItemSection$metadata$page {
+  Fragment$ItemSection$$LabelSection$metadata$page({
+    required this.code,
+    this.$__typename = 'Page',
+  });
+
+  factory Fragment$ItemSection$$LabelSection$metadata$page.fromJson(
+      Map<String, dynamic> json) {
+    final l$code = json['code'];
+    final l$$__typename = json['__typename'];
+    return Fragment$ItemSection$$LabelSection$metadata$page(
+      code: (l$code as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String code;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$code = code;
+    _resultData['code'] = l$code;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$code = code;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$code,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Fragment$ItemSection$$LabelSection$metadata$page) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$code = code;
+    final lOther$code = other.code;
+    if (l$code != lOther$code) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$ItemSection$$LabelSection$metadata$page
+    on Fragment$ItemSection$$LabelSection$metadata$page {
+  CopyWith$Fragment$ItemSection$$LabelSection$metadata$page<
+          Fragment$ItemSection$$LabelSection$metadata$page>
+      get copyWith => CopyWith$Fragment$ItemSection$$LabelSection$metadata$page(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$ItemSection$$LabelSection$metadata$page<TRes> {
+  factory CopyWith$Fragment$ItemSection$$LabelSection$metadata$page(
+    Fragment$ItemSection$$LabelSection$metadata$page instance,
+    TRes Function(Fragment$ItemSection$$LabelSection$metadata$page) then,
+  ) = _CopyWithImpl$Fragment$ItemSection$$LabelSection$metadata$page;
+
+  factory CopyWith$Fragment$ItemSection$$LabelSection$metadata$page.stub(
+          TRes res) =
+      _CopyWithStubImpl$Fragment$ItemSection$$LabelSection$metadata$page;
+
+  TRes call({
+    String? code,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Fragment$ItemSection$$LabelSection$metadata$page<TRes>
+    implements CopyWith$Fragment$ItemSection$$LabelSection$metadata$page<TRes> {
+  _CopyWithImpl$Fragment$ItemSection$$LabelSection$metadata$page(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$ItemSection$$LabelSection$metadata$page _instance;
+
+  final TRes Function(Fragment$ItemSection$$LabelSection$metadata$page) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? code = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Fragment$ItemSection$$LabelSection$metadata$page(
+        code: code == _undefined || code == null
+            ? _instance.code
+            : (code as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Fragment$ItemSection$$LabelSection$metadata$page<TRes>
+    implements CopyWith$Fragment$ItemSection$$LabelSection$metadata$page<TRes> {
+  _CopyWithStubImpl$Fragment$ItemSection$$LabelSection$metadata$page(this._res);
+
+  TRes _res;
+
+  call({
+    String? code,
     String? $__typename,
   }) =>
       _res;
@@ -15078,6 +17352,8 @@ class Fragment$ItemSection$$AvatarSection$metadata
     required this.secondaryTitles,
     required this.collectionId,
     required this.useContext,
+    this.page,
+    this.limit,
     required this.prependLiveElement,
     this.$__typename = 'ItemSectionMetadata',
   });
@@ -15089,6 +17365,8 @@ class Fragment$ItemSection$$AvatarSection$metadata
     final l$secondaryTitles = json['secondaryTitles'];
     final l$collectionId = json['collectionId'];
     final l$useContext = json['useContext'];
+    final l$page = json['page'];
+    final l$limit = json['limit'];
     final l$prependLiveElement = json['prependLiveElement'];
     final l$$__typename = json['__typename'];
     return Fragment$ItemSection$$AvatarSection$metadata(
@@ -15097,6 +17375,11 @@ class Fragment$ItemSection$$AvatarSection$metadata
       secondaryTitles: (l$secondaryTitles as bool),
       collectionId: (l$collectionId as String),
       useContext: (l$useContext as bool),
+      page: l$page == null
+          ? null
+          : Fragment$ItemSection$$AvatarSection$metadata$page.fromJson(
+              (l$page as Map<String, dynamic>)),
+      limit: (l$limit as int?),
       prependLiveElement: (l$prependLiveElement as bool),
       $__typename: (l$$__typename as String),
     );
@@ -15111,6 +17394,10 @@ class Fragment$ItemSection$$AvatarSection$metadata
   final String collectionId;
 
   final bool useContext;
+
+  final Fragment$ItemSection$$AvatarSection$metadata$page? page;
+
+  final int? limit;
 
   final bool prependLiveElement;
 
@@ -15128,6 +17415,10 @@ class Fragment$ItemSection$$AvatarSection$metadata
     _resultData['collectionId'] = l$collectionId;
     final l$useContext = useContext;
     _resultData['useContext'] = l$useContext;
+    final l$page = page;
+    _resultData['page'] = l$page?.toJson();
+    final l$limit = limit;
+    _resultData['limit'] = l$limit;
     final l$prependLiveElement = prependLiveElement;
     _resultData['prependLiveElement'] = l$prependLiveElement;
     final l$$__typename = $__typename;
@@ -15142,6 +17433,8 @@ class Fragment$ItemSection$$AvatarSection$metadata
     final l$secondaryTitles = secondaryTitles;
     final l$collectionId = collectionId;
     final l$useContext = useContext;
+    final l$page = page;
+    final l$limit = limit;
     final l$prependLiveElement = prependLiveElement;
     final l$$__typename = $__typename;
     return Object.hashAll([
@@ -15150,6 +17443,8 @@ class Fragment$ItemSection$$AvatarSection$metadata
       l$secondaryTitles,
       l$collectionId,
       l$useContext,
+      l$page,
+      l$limit,
       l$prependLiveElement,
       l$$__typename,
     ]);
@@ -15187,6 +17482,16 @@ class Fragment$ItemSection$$AvatarSection$metadata
     final l$useContext = useContext;
     final lOther$useContext = other.useContext;
     if (l$useContext != lOther$useContext) {
+      return false;
+    }
+    final l$page = page;
+    final lOther$page = other.page;
+    if (l$page != lOther$page) {
+      return false;
+    }
+    final l$limit = limit;
+    final lOther$limit = other.limit;
+    if (l$limit != lOther$limit) {
       return false;
     }
     final l$prependLiveElement = prependLiveElement;
@@ -15228,9 +17533,12 @@ abstract class CopyWith$Fragment$ItemSection$$AvatarSection$metadata<TRes> {
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Fragment$ItemSection$$AvatarSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
     String? $__typename,
   });
+  CopyWith$Fragment$ItemSection$$AvatarSection$metadata$page<TRes> get page;
 }
 
 class _CopyWithImpl$Fragment$ItemSection$$AvatarSection$metadata<TRes>
@@ -15252,6 +17560,8 @@ class _CopyWithImpl$Fragment$ItemSection$$AvatarSection$metadata<TRes>
     Object? secondaryTitles = _undefined,
     Object? collectionId = _undefined,
     Object? useContext = _undefined,
+    Object? page = _undefined,
+    Object? limit = _undefined,
     Object? prependLiveElement = _undefined,
     Object? $__typename = _undefined,
   }) =>
@@ -15273,6 +17583,10 @@ class _CopyWithImpl$Fragment$ItemSection$$AvatarSection$metadata<TRes>
         useContext: useContext == _undefined || useContext == null
             ? _instance.useContext
             : (useContext as bool),
+        page: page == _undefined
+            ? _instance.page
+            : (page as Fragment$ItemSection$$AvatarSection$metadata$page?),
+        limit: limit == _undefined ? _instance.limit : (limit as int?),
         prependLiveElement:
             prependLiveElement == _undefined || prependLiveElement == null
                 ? _instance.prependLiveElement
@@ -15281,6 +17595,15 @@ class _CopyWithImpl$Fragment$ItemSection$$AvatarSection$metadata<TRes>
             ? _instance.$__typename
             : ($__typename as String),
       ));
+
+  CopyWith$Fragment$ItemSection$$AvatarSection$metadata$page<TRes> get page {
+    final local$page = _instance.page;
+    return local$page == null
+        ? CopyWith$Fragment$ItemSection$$AvatarSection$metadata$page.stub(
+            _then(_instance))
+        : CopyWith$Fragment$ItemSection$$AvatarSection$metadata$page(
+            local$page, (e) => call(page: e));
+  }
 }
 
 class _CopyWithStubImpl$Fragment$ItemSection$$AvatarSection$metadata<TRes>
@@ -15295,7 +17618,146 @@ class _CopyWithStubImpl$Fragment$ItemSection$$AvatarSection$metadata<TRes>
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Fragment$ItemSection$$AvatarSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Fragment$ItemSection$$AvatarSection$metadata$page<TRes> get page =>
+      CopyWith$Fragment$ItemSection$$AvatarSection$metadata$page.stub(_res);
+}
+
+class Fragment$ItemSection$$AvatarSection$metadata$page
+    implements Fragment$ItemSection$metadata$page {
+  Fragment$ItemSection$$AvatarSection$metadata$page({
+    required this.code,
+    this.$__typename = 'Page',
+  });
+
+  factory Fragment$ItemSection$$AvatarSection$metadata$page.fromJson(
+      Map<String, dynamic> json) {
+    final l$code = json['code'];
+    final l$$__typename = json['__typename'];
+    return Fragment$ItemSection$$AvatarSection$metadata$page(
+      code: (l$code as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String code;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$code = code;
+    _resultData['code'] = l$code;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$code = code;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$code,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Fragment$ItemSection$$AvatarSection$metadata$page) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$code = code;
+    final lOther$code = other.code;
+    if (l$code != lOther$code) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$ItemSection$$AvatarSection$metadata$page
+    on Fragment$ItemSection$$AvatarSection$metadata$page {
+  CopyWith$Fragment$ItemSection$$AvatarSection$metadata$page<
+          Fragment$ItemSection$$AvatarSection$metadata$page>
+      get copyWith =>
+          CopyWith$Fragment$ItemSection$$AvatarSection$metadata$page(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$ItemSection$$AvatarSection$metadata$page<
+    TRes> {
+  factory CopyWith$Fragment$ItemSection$$AvatarSection$metadata$page(
+    Fragment$ItemSection$$AvatarSection$metadata$page instance,
+    TRes Function(Fragment$ItemSection$$AvatarSection$metadata$page) then,
+  ) = _CopyWithImpl$Fragment$ItemSection$$AvatarSection$metadata$page;
+
+  factory CopyWith$Fragment$ItemSection$$AvatarSection$metadata$page.stub(
+          TRes res) =
+      _CopyWithStubImpl$Fragment$ItemSection$$AvatarSection$metadata$page;
+
+  TRes call({
+    String? code,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Fragment$ItemSection$$AvatarSection$metadata$page<TRes>
+    implements
+        CopyWith$Fragment$ItemSection$$AvatarSection$metadata$page<TRes> {
+  _CopyWithImpl$Fragment$ItemSection$$AvatarSection$metadata$page(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$ItemSection$$AvatarSection$metadata$page _instance;
+
+  final TRes Function(Fragment$ItemSection$$AvatarSection$metadata$page) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? code = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Fragment$ItemSection$$AvatarSection$metadata$page(
+        code: code == _undefined || code == null
+            ? _instance.code
+            : (code as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Fragment$ItemSection$$AvatarSection$metadata$page<TRes>
+    implements
+        CopyWith$Fragment$ItemSection$$AvatarSection$metadata$page<TRes> {
+  _CopyWithStubImpl$Fragment$ItemSection$$AvatarSection$metadata$page(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? code,
     String? $__typename,
   }) =>
       _res;
@@ -18994,6 +21456,8 @@ class Fragment$Section$$PosterSection$metadata
     required this.secondaryTitles,
     required this.collectionId,
     required this.useContext,
+    this.page,
+    this.limit,
     required this.prependLiveElement,
     this.$__typename = 'ItemSectionMetadata',
   });
@@ -19005,6 +21469,8 @@ class Fragment$Section$$PosterSection$metadata
     final l$secondaryTitles = json['secondaryTitles'];
     final l$collectionId = json['collectionId'];
     final l$useContext = json['useContext'];
+    final l$page = json['page'];
+    final l$limit = json['limit'];
     final l$prependLiveElement = json['prependLiveElement'];
     final l$$__typename = json['__typename'];
     return Fragment$Section$$PosterSection$metadata(
@@ -19013,6 +21479,11 @@ class Fragment$Section$$PosterSection$metadata
       secondaryTitles: (l$secondaryTitles as bool),
       collectionId: (l$collectionId as String),
       useContext: (l$useContext as bool),
+      page: l$page == null
+          ? null
+          : Fragment$Section$$PosterSection$metadata$page.fromJson(
+              (l$page as Map<String, dynamic>)),
+      limit: (l$limit as int?),
       prependLiveElement: (l$prependLiveElement as bool),
       $__typename: (l$$__typename as String),
     );
@@ -19027,6 +21498,10 @@ class Fragment$Section$$PosterSection$metadata
   final String collectionId;
 
   final bool useContext;
+
+  final Fragment$Section$$PosterSection$metadata$page? page;
+
+  final int? limit;
 
   final bool prependLiveElement;
 
@@ -19044,6 +21519,10 @@ class Fragment$Section$$PosterSection$metadata
     _resultData['collectionId'] = l$collectionId;
     final l$useContext = useContext;
     _resultData['useContext'] = l$useContext;
+    final l$page = page;
+    _resultData['page'] = l$page?.toJson();
+    final l$limit = limit;
+    _resultData['limit'] = l$limit;
     final l$prependLiveElement = prependLiveElement;
     _resultData['prependLiveElement'] = l$prependLiveElement;
     final l$$__typename = $__typename;
@@ -19058,6 +21537,8 @@ class Fragment$Section$$PosterSection$metadata
     final l$secondaryTitles = secondaryTitles;
     final l$collectionId = collectionId;
     final l$useContext = useContext;
+    final l$page = page;
+    final l$limit = limit;
     final l$prependLiveElement = prependLiveElement;
     final l$$__typename = $__typename;
     return Object.hashAll([
@@ -19066,6 +21547,8 @@ class Fragment$Section$$PosterSection$metadata
       l$secondaryTitles,
       l$collectionId,
       l$useContext,
+      l$page,
+      l$limit,
       l$prependLiveElement,
       l$$__typename,
     ]);
@@ -19103,6 +21586,16 @@ class Fragment$Section$$PosterSection$metadata
     final l$useContext = useContext;
     final lOther$useContext = other.useContext;
     if (l$useContext != lOther$useContext) {
+      return false;
+    }
+    final l$page = page;
+    final lOther$page = other.page;
+    if (l$page != lOther$page) {
+      return false;
+    }
+    final l$limit = limit;
+    final lOther$limit = other.limit;
+    if (l$limit != lOther$limit) {
       return false;
     }
     final l$prependLiveElement = prependLiveElement;
@@ -19144,9 +21637,12 @@ abstract class CopyWith$Fragment$Section$$PosterSection$metadata<TRes> {
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Fragment$Section$$PosterSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
     String? $__typename,
   });
+  CopyWith$Fragment$Section$$PosterSection$metadata$page<TRes> get page;
 }
 
 class _CopyWithImpl$Fragment$Section$$PosterSection$metadata<TRes>
@@ -19168,6 +21664,8 @@ class _CopyWithImpl$Fragment$Section$$PosterSection$metadata<TRes>
     Object? secondaryTitles = _undefined,
     Object? collectionId = _undefined,
     Object? useContext = _undefined,
+    Object? page = _undefined,
+    Object? limit = _undefined,
     Object? prependLiveElement = _undefined,
     Object? $__typename = _undefined,
   }) =>
@@ -19189,6 +21687,10 @@ class _CopyWithImpl$Fragment$Section$$PosterSection$metadata<TRes>
         useContext: useContext == _undefined || useContext == null
             ? _instance.useContext
             : (useContext as bool),
+        page: page == _undefined
+            ? _instance.page
+            : (page as Fragment$Section$$PosterSection$metadata$page?),
+        limit: limit == _undefined ? _instance.limit : (limit as int?),
         prependLiveElement:
             prependLiveElement == _undefined || prependLiveElement == null
                 ? _instance.prependLiveElement
@@ -19197,6 +21699,15 @@ class _CopyWithImpl$Fragment$Section$$PosterSection$metadata<TRes>
             ? _instance.$__typename
             : ($__typename as String),
       ));
+
+  CopyWith$Fragment$Section$$PosterSection$metadata$page<TRes> get page {
+    final local$page = _instance.page;
+    return local$page == null
+        ? CopyWith$Fragment$Section$$PosterSection$metadata$page.stub(
+            _then(_instance))
+        : CopyWith$Fragment$Section$$PosterSection$metadata$page(
+            local$page, (e) => call(page: e));
+  }
 }
 
 class _CopyWithStubImpl$Fragment$Section$$PosterSection$metadata<TRes>
@@ -19211,7 +21722,141 @@ class _CopyWithStubImpl$Fragment$Section$$PosterSection$metadata<TRes>
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Fragment$Section$$PosterSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Fragment$Section$$PosterSection$metadata$page<TRes> get page =>
+      CopyWith$Fragment$Section$$PosterSection$metadata$page.stub(_res);
+}
+
+class Fragment$Section$$PosterSection$metadata$page
+    implements Fragment$ItemSection$$PosterSection$metadata$page {
+  Fragment$Section$$PosterSection$metadata$page({
+    required this.code,
+    this.$__typename = 'Page',
+  });
+
+  factory Fragment$Section$$PosterSection$metadata$page.fromJson(
+      Map<String, dynamic> json) {
+    final l$code = json['code'];
+    final l$$__typename = json['__typename'];
+    return Fragment$Section$$PosterSection$metadata$page(
+      code: (l$code as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String code;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$code = code;
+    _resultData['code'] = l$code;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$code = code;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$code,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Fragment$Section$$PosterSection$metadata$page) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$code = code;
+    final lOther$code = other.code;
+    if (l$code != lOther$code) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$Section$$PosterSection$metadata$page
+    on Fragment$Section$$PosterSection$metadata$page {
+  CopyWith$Fragment$Section$$PosterSection$metadata$page<
+          Fragment$Section$$PosterSection$metadata$page>
+      get copyWith => CopyWith$Fragment$Section$$PosterSection$metadata$page(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$Section$$PosterSection$metadata$page<TRes> {
+  factory CopyWith$Fragment$Section$$PosterSection$metadata$page(
+    Fragment$Section$$PosterSection$metadata$page instance,
+    TRes Function(Fragment$Section$$PosterSection$metadata$page) then,
+  ) = _CopyWithImpl$Fragment$Section$$PosterSection$metadata$page;
+
+  factory CopyWith$Fragment$Section$$PosterSection$metadata$page.stub(
+          TRes res) =
+      _CopyWithStubImpl$Fragment$Section$$PosterSection$metadata$page;
+
+  TRes call({
+    String? code,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Fragment$Section$$PosterSection$metadata$page<TRes>
+    implements CopyWith$Fragment$Section$$PosterSection$metadata$page<TRes> {
+  _CopyWithImpl$Fragment$Section$$PosterSection$metadata$page(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$Section$$PosterSection$metadata$page _instance;
+
+  final TRes Function(Fragment$Section$$PosterSection$metadata$page) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? code = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Fragment$Section$$PosterSection$metadata$page(
+        code: code == _undefined || code == null
+            ? _instance.code
+            : (code as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Fragment$Section$$PosterSection$metadata$page<TRes>
+    implements CopyWith$Fragment$Section$$PosterSection$metadata$page<TRes> {
+  _CopyWithStubImpl$Fragment$Section$$PosterSection$metadata$page(this._res);
+
+  TRes _res;
+
+  call({
+    String? code,
     String? $__typename,
   }) =>
       _res;
@@ -23659,6 +26304,8 @@ class Fragment$Section$$FeaturedSection$metadata
     required this.secondaryTitles,
     required this.collectionId,
     required this.useContext,
+    this.page,
+    this.limit,
     required this.prependLiveElement,
     this.$__typename = 'ItemSectionMetadata',
   });
@@ -23670,6 +26317,8 @@ class Fragment$Section$$FeaturedSection$metadata
     final l$secondaryTitles = json['secondaryTitles'];
     final l$collectionId = json['collectionId'];
     final l$useContext = json['useContext'];
+    final l$page = json['page'];
+    final l$limit = json['limit'];
     final l$prependLiveElement = json['prependLiveElement'];
     final l$$__typename = json['__typename'];
     return Fragment$Section$$FeaturedSection$metadata(
@@ -23678,6 +26327,11 @@ class Fragment$Section$$FeaturedSection$metadata
       secondaryTitles: (l$secondaryTitles as bool),
       collectionId: (l$collectionId as String),
       useContext: (l$useContext as bool),
+      page: l$page == null
+          ? null
+          : Fragment$Section$$FeaturedSection$metadata$page.fromJson(
+              (l$page as Map<String, dynamic>)),
+      limit: (l$limit as int?),
       prependLiveElement: (l$prependLiveElement as bool),
       $__typename: (l$$__typename as String),
     );
@@ -23692,6 +26346,10 @@ class Fragment$Section$$FeaturedSection$metadata
   final String collectionId;
 
   final bool useContext;
+
+  final Fragment$Section$$FeaturedSection$metadata$page? page;
+
+  final int? limit;
 
   final bool prependLiveElement;
 
@@ -23709,6 +26367,10 @@ class Fragment$Section$$FeaturedSection$metadata
     _resultData['collectionId'] = l$collectionId;
     final l$useContext = useContext;
     _resultData['useContext'] = l$useContext;
+    final l$page = page;
+    _resultData['page'] = l$page?.toJson();
+    final l$limit = limit;
+    _resultData['limit'] = l$limit;
     final l$prependLiveElement = prependLiveElement;
     _resultData['prependLiveElement'] = l$prependLiveElement;
     final l$$__typename = $__typename;
@@ -23723,6 +26385,8 @@ class Fragment$Section$$FeaturedSection$metadata
     final l$secondaryTitles = secondaryTitles;
     final l$collectionId = collectionId;
     final l$useContext = useContext;
+    final l$page = page;
+    final l$limit = limit;
     final l$prependLiveElement = prependLiveElement;
     final l$$__typename = $__typename;
     return Object.hashAll([
@@ -23731,6 +26395,8 @@ class Fragment$Section$$FeaturedSection$metadata
       l$secondaryTitles,
       l$collectionId,
       l$useContext,
+      l$page,
+      l$limit,
       l$prependLiveElement,
       l$$__typename,
     ]);
@@ -23768,6 +26434,16 @@ class Fragment$Section$$FeaturedSection$metadata
     final l$useContext = useContext;
     final lOther$useContext = other.useContext;
     if (l$useContext != lOther$useContext) {
+      return false;
+    }
+    final l$page = page;
+    final lOther$page = other.page;
+    if (l$page != lOther$page) {
+      return false;
+    }
+    final l$limit = limit;
+    final lOther$limit = other.limit;
+    if (l$limit != lOther$limit) {
       return false;
     }
     final l$prependLiveElement = prependLiveElement;
@@ -23809,9 +26485,12 @@ abstract class CopyWith$Fragment$Section$$FeaturedSection$metadata<TRes> {
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Fragment$Section$$FeaturedSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
     String? $__typename,
   });
+  CopyWith$Fragment$Section$$FeaturedSection$metadata$page<TRes> get page;
 }
 
 class _CopyWithImpl$Fragment$Section$$FeaturedSection$metadata<TRes>
@@ -23833,6 +26512,8 @@ class _CopyWithImpl$Fragment$Section$$FeaturedSection$metadata<TRes>
     Object? secondaryTitles = _undefined,
     Object? collectionId = _undefined,
     Object? useContext = _undefined,
+    Object? page = _undefined,
+    Object? limit = _undefined,
     Object? prependLiveElement = _undefined,
     Object? $__typename = _undefined,
   }) =>
@@ -23854,6 +26535,10 @@ class _CopyWithImpl$Fragment$Section$$FeaturedSection$metadata<TRes>
         useContext: useContext == _undefined || useContext == null
             ? _instance.useContext
             : (useContext as bool),
+        page: page == _undefined
+            ? _instance.page
+            : (page as Fragment$Section$$FeaturedSection$metadata$page?),
+        limit: limit == _undefined ? _instance.limit : (limit as int?),
         prependLiveElement:
             prependLiveElement == _undefined || prependLiveElement == null
                 ? _instance.prependLiveElement
@@ -23862,6 +26547,15 @@ class _CopyWithImpl$Fragment$Section$$FeaturedSection$metadata<TRes>
             ? _instance.$__typename
             : ($__typename as String),
       ));
+
+  CopyWith$Fragment$Section$$FeaturedSection$metadata$page<TRes> get page {
+    final local$page = _instance.page;
+    return local$page == null
+        ? CopyWith$Fragment$Section$$FeaturedSection$metadata$page.stub(
+            _then(_instance))
+        : CopyWith$Fragment$Section$$FeaturedSection$metadata$page(
+            local$page, (e) => call(page: e));
+  }
 }
 
 class _CopyWithStubImpl$Fragment$Section$$FeaturedSection$metadata<TRes>
@@ -23876,7 +26570,141 @@ class _CopyWithStubImpl$Fragment$Section$$FeaturedSection$metadata<TRes>
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Fragment$Section$$FeaturedSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Fragment$Section$$FeaturedSection$metadata$page<TRes> get page =>
+      CopyWith$Fragment$Section$$FeaturedSection$metadata$page.stub(_res);
+}
+
+class Fragment$Section$$FeaturedSection$metadata$page
+    implements Fragment$ItemSection$$FeaturedSection$metadata$page {
+  Fragment$Section$$FeaturedSection$metadata$page({
+    required this.code,
+    this.$__typename = 'Page',
+  });
+
+  factory Fragment$Section$$FeaturedSection$metadata$page.fromJson(
+      Map<String, dynamic> json) {
+    final l$code = json['code'];
+    final l$$__typename = json['__typename'];
+    return Fragment$Section$$FeaturedSection$metadata$page(
+      code: (l$code as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String code;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$code = code;
+    _resultData['code'] = l$code;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$code = code;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$code,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Fragment$Section$$FeaturedSection$metadata$page) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$code = code;
+    final lOther$code = other.code;
+    if (l$code != lOther$code) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$Section$$FeaturedSection$metadata$page
+    on Fragment$Section$$FeaturedSection$metadata$page {
+  CopyWith$Fragment$Section$$FeaturedSection$metadata$page<
+          Fragment$Section$$FeaturedSection$metadata$page>
+      get copyWith => CopyWith$Fragment$Section$$FeaturedSection$metadata$page(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$Section$$FeaturedSection$metadata$page<TRes> {
+  factory CopyWith$Fragment$Section$$FeaturedSection$metadata$page(
+    Fragment$Section$$FeaturedSection$metadata$page instance,
+    TRes Function(Fragment$Section$$FeaturedSection$metadata$page) then,
+  ) = _CopyWithImpl$Fragment$Section$$FeaturedSection$metadata$page;
+
+  factory CopyWith$Fragment$Section$$FeaturedSection$metadata$page.stub(
+          TRes res) =
+      _CopyWithStubImpl$Fragment$Section$$FeaturedSection$metadata$page;
+
+  TRes call({
+    String? code,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Fragment$Section$$FeaturedSection$metadata$page<TRes>
+    implements CopyWith$Fragment$Section$$FeaturedSection$metadata$page<TRes> {
+  _CopyWithImpl$Fragment$Section$$FeaturedSection$metadata$page(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$Section$$FeaturedSection$metadata$page _instance;
+
+  final TRes Function(Fragment$Section$$FeaturedSection$metadata$page) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? code = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Fragment$Section$$FeaturedSection$metadata$page(
+        code: code == _undefined || code == null
+            ? _instance.code
+            : (code as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Fragment$Section$$FeaturedSection$metadata$page<TRes>
+    implements CopyWith$Fragment$Section$$FeaturedSection$metadata$page<TRes> {
+  _CopyWithStubImpl$Fragment$Section$$FeaturedSection$metadata$page(this._res);
+
+  TRes _res;
+
+  call({
+    String? code,
     String? $__typename,
   }) =>
       _res;
@@ -26900,6 +29728,8 @@ class Fragment$Section$$DefaultSection$metadata
     required this.secondaryTitles,
     required this.collectionId,
     required this.useContext,
+    this.page,
+    this.limit,
     required this.prependLiveElement,
     this.$__typename = 'ItemSectionMetadata',
   });
@@ -26911,6 +29741,8 @@ class Fragment$Section$$DefaultSection$metadata
     final l$secondaryTitles = json['secondaryTitles'];
     final l$collectionId = json['collectionId'];
     final l$useContext = json['useContext'];
+    final l$page = json['page'];
+    final l$limit = json['limit'];
     final l$prependLiveElement = json['prependLiveElement'];
     final l$$__typename = json['__typename'];
     return Fragment$Section$$DefaultSection$metadata(
@@ -26919,6 +29751,11 @@ class Fragment$Section$$DefaultSection$metadata
       secondaryTitles: (l$secondaryTitles as bool),
       collectionId: (l$collectionId as String),
       useContext: (l$useContext as bool),
+      page: l$page == null
+          ? null
+          : Fragment$Section$$DefaultSection$metadata$page.fromJson(
+              (l$page as Map<String, dynamic>)),
+      limit: (l$limit as int?),
       prependLiveElement: (l$prependLiveElement as bool),
       $__typename: (l$$__typename as String),
     );
@@ -26933,6 +29770,10 @@ class Fragment$Section$$DefaultSection$metadata
   final String collectionId;
 
   final bool useContext;
+
+  final Fragment$Section$$DefaultSection$metadata$page? page;
+
+  final int? limit;
 
   final bool prependLiveElement;
 
@@ -26950,6 +29791,10 @@ class Fragment$Section$$DefaultSection$metadata
     _resultData['collectionId'] = l$collectionId;
     final l$useContext = useContext;
     _resultData['useContext'] = l$useContext;
+    final l$page = page;
+    _resultData['page'] = l$page?.toJson();
+    final l$limit = limit;
+    _resultData['limit'] = l$limit;
     final l$prependLiveElement = prependLiveElement;
     _resultData['prependLiveElement'] = l$prependLiveElement;
     final l$$__typename = $__typename;
@@ -26964,6 +29809,8 @@ class Fragment$Section$$DefaultSection$metadata
     final l$secondaryTitles = secondaryTitles;
     final l$collectionId = collectionId;
     final l$useContext = useContext;
+    final l$page = page;
+    final l$limit = limit;
     final l$prependLiveElement = prependLiveElement;
     final l$$__typename = $__typename;
     return Object.hashAll([
@@ -26972,6 +29819,8 @@ class Fragment$Section$$DefaultSection$metadata
       l$secondaryTitles,
       l$collectionId,
       l$useContext,
+      l$page,
+      l$limit,
       l$prependLiveElement,
       l$$__typename,
     ]);
@@ -27009,6 +29858,16 @@ class Fragment$Section$$DefaultSection$metadata
     final l$useContext = useContext;
     final lOther$useContext = other.useContext;
     if (l$useContext != lOther$useContext) {
+      return false;
+    }
+    final l$page = page;
+    final lOther$page = other.page;
+    if (l$page != lOther$page) {
+      return false;
+    }
+    final l$limit = limit;
+    final lOther$limit = other.limit;
+    if (l$limit != lOther$limit) {
       return false;
     }
     final l$prependLiveElement = prependLiveElement;
@@ -27050,9 +29909,12 @@ abstract class CopyWith$Fragment$Section$$DefaultSection$metadata<TRes> {
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Fragment$Section$$DefaultSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
     String? $__typename,
   });
+  CopyWith$Fragment$Section$$DefaultSection$metadata$page<TRes> get page;
 }
 
 class _CopyWithImpl$Fragment$Section$$DefaultSection$metadata<TRes>
@@ -27074,6 +29936,8 @@ class _CopyWithImpl$Fragment$Section$$DefaultSection$metadata<TRes>
     Object? secondaryTitles = _undefined,
     Object? collectionId = _undefined,
     Object? useContext = _undefined,
+    Object? page = _undefined,
+    Object? limit = _undefined,
     Object? prependLiveElement = _undefined,
     Object? $__typename = _undefined,
   }) =>
@@ -27095,6 +29959,10 @@ class _CopyWithImpl$Fragment$Section$$DefaultSection$metadata<TRes>
         useContext: useContext == _undefined || useContext == null
             ? _instance.useContext
             : (useContext as bool),
+        page: page == _undefined
+            ? _instance.page
+            : (page as Fragment$Section$$DefaultSection$metadata$page?),
+        limit: limit == _undefined ? _instance.limit : (limit as int?),
         prependLiveElement:
             prependLiveElement == _undefined || prependLiveElement == null
                 ? _instance.prependLiveElement
@@ -27103,6 +29971,15 @@ class _CopyWithImpl$Fragment$Section$$DefaultSection$metadata<TRes>
             ? _instance.$__typename
             : ($__typename as String),
       ));
+
+  CopyWith$Fragment$Section$$DefaultSection$metadata$page<TRes> get page {
+    final local$page = _instance.page;
+    return local$page == null
+        ? CopyWith$Fragment$Section$$DefaultSection$metadata$page.stub(
+            _then(_instance))
+        : CopyWith$Fragment$Section$$DefaultSection$metadata$page(
+            local$page, (e) => call(page: e));
+  }
 }
 
 class _CopyWithStubImpl$Fragment$Section$$DefaultSection$metadata<TRes>
@@ -27117,7 +29994,141 @@ class _CopyWithStubImpl$Fragment$Section$$DefaultSection$metadata<TRes>
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Fragment$Section$$DefaultSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Fragment$Section$$DefaultSection$metadata$page<TRes> get page =>
+      CopyWith$Fragment$Section$$DefaultSection$metadata$page.stub(_res);
+}
+
+class Fragment$Section$$DefaultSection$metadata$page
+    implements Fragment$ItemSection$$DefaultSection$metadata$page {
+  Fragment$Section$$DefaultSection$metadata$page({
+    required this.code,
+    this.$__typename = 'Page',
+  });
+
+  factory Fragment$Section$$DefaultSection$metadata$page.fromJson(
+      Map<String, dynamic> json) {
+    final l$code = json['code'];
+    final l$$__typename = json['__typename'];
+    return Fragment$Section$$DefaultSection$metadata$page(
+      code: (l$code as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String code;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$code = code;
+    _resultData['code'] = l$code;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$code = code;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$code,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Fragment$Section$$DefaultSection$metadata$page) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$code = code;
+    final lOther$code = other.code;
+    if (l$code != lOther$code) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$Section$$DefaultSection$metadata$page
+    on Fragment$Section$$DefaultSection$metadata$page {
+  CopyWith$Fragment$Section$$DefaultSection$metadata$page<
+          Fragment$Section$$DefaultSection$metadata$page>
+      get copyWith => CopyWith$Fragment$Section$$DefaultSection$metadata$page(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$Section$$DefaultSection$metadata$page<TRes> {
+  factory CopyWith$Fragment$Section$$DefaultSection$metadata$page(
+    Fragment$Section$$DefaultSection$metadata$page instance,
+    TRes Function(Fragment$Section$$DefaultSection$metadata$page) then,
+  ) = _CopyWithImpl$Fragment$Section$$DefaultSection$metadata$page;
+
+  factory CopyWith$Fragment$Section$$DefaultSection$metadata$page.stub(
+          TRes res) =
+      _CopyWithStubImpl$Fragment$Section$$DefaultSection$metadata$page;
+
+  TRes call({
+    String? code,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Fragment$Section$$DefaultSection$metadata$page<TRes>
+    implements CopyWith$Fragment$Section$$DefaultSection$metadata$page<TRes> {
+  _CopyWithImpl$Fragment$Section$$DefaultSection$metadata$page(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$Section$$DefaultSection$metadata$page _instance;
+
+  final TRes Function(Fragment$Section$$DefaultSection$metadata$page) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? code = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Fragment$Section$$DefaultSection$metadata$page(
+        code: code == _undefined || code == null
+            ? _instance.code
+            : (code as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Fragment$Section$$DefaultSection$metadata$page<TRes>
+    implements CopyWith$Fragment$Section$$DefaultSection$metadata$page<TRes> {
+  _CopyWithStubImpl$Fragment$Section$$DefaultSection$metadata$page(this._res);
+
+  TRes _res;
+
+  call({
+    String? code,
     String? $__typename,
   }) =>
       _res;
@@ -30123,6 +33134,8 @@ class Fragment$Section$$CardSection$metadata
     required this.secondaryTitles,
     required this.collectionId,
     required this.useContext,
+    this.page,
+    this.limit,
     required this.prependLiveElement,
     this.$__typename = 'ItemSectionMetadata',
   });
@@ -30134,6 +33147,8 @@ class Fragment$Section$$CardSection$metadata
     final l$secondaryTitles = json['secondaryTitles'];
     final l$collectionId = json['collectionId'];
     final l$useContext = json['useContext'];
+    final l$page = json['page'];
+    final l$limit = json['limit'];
     final l$prependLiveElement = json['prependLiveElement'];
     final l$$__typename = json['__typename'];
     return Fragment$Section$$CardSection$metadata(
@@ -30142,6 +33157,11 @@ class Fragment$Section$$CardSection$metadata
       secondaryTitles: (l$secondaryTitles as bool),
       collectionId: (l$collectionId as String),
       useContext: (l$useContext as bool),
+      page: l$page == null
+          ? null
+          : Fragment$Section$$CardSection$metadata$page.fromJson(
+              (l$page as Map<String, dynamic>)),
+      limit: (l$limit as int?),
       prependLiveElement: (l$prependLiveElement as bool),
       $__typename: (l$$__typename as String),
     );
@@ -30156,6 +33176,10 @@ class Fragment$Section$$CardSection$metadata
   final String collectionId;
 
   final bool useContext;
+
+  final Fragment$Section$$CardSection$metadata$page? page;
+
+  final int? limit;
 
   final bool prependLiveElement;
 
@@ -30173,6 +33197,10 @@ class Fragment$Section$$CardSection$metadata
     _resultData['collectionId'] = l$collectionId;
     final l$useContext = useContext;
     _resultData['useContext'] = l$useContext;
+    final l$page = page;
+    _resultData['page'] = l$page?.toJson();
+    final l$limit = limit;
+    _resultData['limit'] = l$limit;
     final l$prependLiveElement = prependLiveElement;
     _resultData['prependLiveElement'] = l$prependLiveElement;
     final l$$__typename = $__typename;
@@ -30187,6 +33215,8 @@ class Fragment$Section$$CardSection$metadata
     final l$secondaryTitles = secondaryTitles;
     final l$collectionId = collectionId;
     final l$useContext = useContext;
+    final l$page = page;
+    final l$limit = limit;
     final l$prependLiveElement = prependLiveElement;
     final l$$__typename = $__typename;
     return Object.hashAll([
@@ -30195,6 +33225,8 @@ class Fragment$Section$$CardSection$metadata
       l$secondaryTitles,
       l$collectionId,
       l$useContext,
+      l$page,
+      l$limit,
       l$prependLiveElement,
       l$$__typename,
     ]);
@@ -30232,6 +33264,16 @@ class Fragment$Section$$CardSection$metadata
     final l$useContext = useContext;
     final lOther$useContext = other.useContext;
     if (l$useContext != lOther$useContext) {
+      return false;
+    }
+    final l$page = page;
+    final lOther$page = other.page;
+    if (l$page != lOther$page) {
+      return false;
+    }
+    final l$limit = limit;
+    final lOther$limit = other.limit;
+    if (l$limit != lOther$limit) {
       return false;
     }
     final l$prependLiveElement = prependLiveElement;
@@ -30273,9 +33315,12 @@ abstract class CopyWith$Fragment$Section$$CardSection$metadata<TRes> {
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Fragment$Section$$CardSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
     String? $__typename,
   });
+  CopyWith$Fragment$Section$$CardSection$metadata$page<TRes> get page;
 }
 
 class _CopyWithImpl$Fragment$Section$$CardSection$metadata<TRes>
@@ -30297,6 +33342,8 @@ class _CopyWithImpl$Fragment$Section$$CardSection$metadata<TRes>
     Object? secondaryTitles = _undefined,
     Object? collectionId = _undefined,
     Object? useContext = _undefined,
+    Object? page = _undefined,
+    Object? limit = _undefined,
     Object? prependLiveElement = _undefined,
     Object? $__typename = _undefined,
   }) =>
@@ -30318,6 +33365,10 @@ class _CopyWithImpl$Fragment$Section$$CardSection$metadata<TRes>
         useContext: useContext == _undefined || useContext == null
             ? _instance.useContext
             : (useContext as bool),
+        page: page == _undefined
+            ? _instance.page
+            : (page as Fragment$Section$$CardSection$metadata$page?),
+        limit: limit == _undefined ? _instance.limit : (limit as int?),
         prependLiveElement:
             prependLiveElement == _undefined || prependLiveElement == null
                 ? _instance.prependLiveElement
@@ -30326,6 +33377,15 @@ class _CopyWithImpl$Fragment$Section$$CardSection$metadata<TRes>
             ? _instance.$__typename
             : ($__typename as String),
       ));
+
+  CopyWith$Fragment$Section$$CardSection$metadata$page<TRes> get page {
+    final local$page = _instance.page;
+    return local$page == null
+        ? CopyWith$Fragment$Section$$CardSection$metadata$page.stub(
+            _then(_instance))
+        : CopyWith$Fragment$Section$$CardSection$metadata$page(
+            local$page, (e) => call(page: e));
+  }
 }
 
 class _CopyWithStubImpl$Fragment$Section$$CardSection$metadata<TRes>
@@ -30340,7 +33400,140 @@ class _CopyWithStubImpl$Fragment$Section$$CardSection$metadata<TRes>
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Fragment$Section$$CardSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Fragment$Section$$CardSection$metadata$page<TRes> get page =>
+      CopyWith$Fragment$Section$$CardSection$metadata$page.stub(_res);
+}
+
+class Fragment$Section$$CardSection$metadata$page
+    implements Fragment$ItemSection$$CardSection$metadata$page {
+  Fragment$Section$$CardSection$metadata$page({
+    required this.code,
+    this.$__typename = 'Page',
+  });
+
+  factory Fragment$Section$$CardSection$metadata$page.fromJson(
+      Map<String, dynamic> json) {
+    final l$code = json['code'];
+    final l$$__typename = json['__typename'];
+    return Fragment$Section$$CardSection$metadata$page(
+      code: (l$code as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String code;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$code = code;
+    _resultData['code'] = l$code;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$code = code;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$code,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Fragment$Section$$CardSection$metadata$page) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$code = code;
+    final lOther$code = other.code;
+    if (l$code != lOther$code) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$Section$$CardSection$metadata$page
+    on Fragment$Section$$CardSection$metadata$page {
+  CopyWith$Fragment$Section$$CardSection$metadata$page<
+          Fragment$Section$$CardSection$metadata$page>
+      get copyWith => CopyWith$Fragment$Section$$CardSection$metadata$page(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$Section$$CardSection$metadata$page<TRes> {
+  factory CopyWith$Fragment$Section$$CardSection$metadata$page(
+    Fragment$Section$$CardSection$metadata$page instance,
+    TRes Function(Fragment$Section$$CardSection$metadata$page) then,
+  ) = _CopyWithImpl$Fragment$Section$$CardSection$metadata$page;
+
+  factory CopyWith$Fragment$Section$$CardSection$metadata$page.stub(TRes res) =
+      _CopyWithStubImpl$Fragment$Section$$CardSection$metadata$page;
+
+  TRes call({
+    String? code,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Fragment$Section$$CardSection$metadata$page<TRes>
+    implements CopyWith$Fragment$Section$$CardSection$metadata$page<TRes> {
+  _CopyWithImpl$Fragment$Section$$CardSection$metadata$page(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$Section$$CardSection$metadata$page _instance;
+
+  final TRes Function(Fragment$Section$$CardSection$metadata$page) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? code = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Fragment$Section$$CardSection$metadata$page(
+        code: code == _undefined || code == null
+            ? _instance.code
+            : (code as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Fragment$Section$$CardSection$metadata$page<TRes>
+    implements CopyWith$Fragment$Section$$CardSection$metadata$page<TRes> {
+  _CopyWithStubImpl$Fragment$Section$$CardSection$metadata$page(this._res);
+
+  TRes _res;
+
+  call({
+    String? code,
     String? $__typename,
   }) =>
       _res;
@@ -33450,6 +36643,8 @@ class Fragment$Section$$ListSection$metadata
     required this.secondaryTitles,
     required this.collectionId,
     required this.useContext,
+    this.page,
+    this.limit,
     required this.prependLiveElement,
     this.$__typename = 'ItemSectionMetadata',
   });
@@ -33461,6 +36656,8 @@ class Fragment$Section$$ListSection$metadata
     final l$secondaryTitles = json['secondaryTitles'];
     final l$collectionId = json['collectionId'];
     final l$useContext = json['useContext'];
+    final l$page = json['page'];
+    final l$limit = json['limit'];
     final l$prependLiveElement = json['prependLiveElement'];
     final l$$__typename = json['__typename'];
     return Fragment$Section$$ListSection$metadata(
@@ -33469,6 +36666,11 @@ class Fragment$Section$$ListSection$metadata
       secondaryTitles: (l$secondaryTitles as bool),
       collectionId: (l$collectionId as String),
       useContext: (l$useContext as bool),
+      page: l$page == null
+          ? null
+          : Fragment$Section$$ListSection$metadata$page.fromJson(
+              (l$page as Map<String, dynamic>)),
+      limit: (l$limit as int?),
       prependLiveElement: (l$prependLiveElement as bool),
       $__typename: (l$$__typename as String),
     );
@@ -33483,6 +36685,10 @@ class Fragment$Section$$ListSection$metadata
   final String collectionId;
 
   final bool useContext;
+
+  final Fragment$Section$$ListSection$metadata$page? page;
+
+  final int? limit;
 
   final bool prependLiveElement;
 
@@ -33500,6 +36706,10 @@ class Fragment$Section$$ListSection$metadata
     _resultData['collectionId'] = l$collectionId;
     final l$useContext = useContext;
     _resultData['useContext'] = l$useContext;
+    final l$page = page;
+    _resultData['page'] = l$page?.toJson();
+    final l$limit = limit;
+    _resultData['limit'] = l$limit;
     final l$prependLiveElement = prependLiveElement;
     _resultData['prependLiveElement'] = l$prependLiveElement;
     final l$$__typename = $__typename;
@@ -33514,6 +36724,8 @@ class Fragment$Section$$ListSection$metadata
     final l$secondaryTitles = secondaryTitles;
     final l$collectionId = collectionId;
     final l$useContext = useContext;
+    final l$page = page;
+    final l$limit = limit;
     final l$prependLiveElement = prependLiveElement;
     final l$$__typename = $__typename;
     return Object.hashAll([
@@ -33522,6 +36734,8 @@ class Fragment$Section$$ListSection$metadata
       l$secondaryTitles,
       l$collectionId,
       l$useContext,
+      l$page,
+      l$limit,
       l$prependLiveElement,
       l$$__typename,
     ]);
@@ -33559,6 +36773,16 @@ class Fragment$Section$$ListSection$metadata
     final l$useContext = useContext;
     final lOther$useContext = other.useContext;
     if (l$useContext != lOther$useContext) {
+      return false;
+    }
+    final l$page = page;
+    final lOther$page = other.page;
+    if (l$page != lOther$page) {
+      return false;
+    }
+    final l$limit = limit;
+    final lOther$limit = other.limit;
+    if (l$limit != lOther$limit) {
       return false;
     }
     final l$prependLiveElement = prependLiveElement;
@@ -33600,9 +36824,12 @@ abstract class CopyWith$Fragment$Section$$ListSection$metadata<TRes> {
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Fragment$Section$$ListSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
     String? $__typename,
   });
+  CopyWith$Fragment$Section$$ListSection$metadata$page<TRes> get page;
 }
 
 class _CopyWithImpl$Fragment$Section$$ListSection$metadata<TRes>
@@ -33624,6 +36851,8 @@ class _CopyWithImpl$Fragment$Section$$ListSection$metadata<TRes>
     Object? secondaryTitles = _undefined,
     Object? collectionId = _undefined,
     Object? useContext = _undefined,
+    Object? page = _undefined,
+    Object? limit = _undefined,
     Object? prependLiveElement = _undefined,
     Object? $__typename = _undefined,
   }) =>
@@ -33645,6 +36874,10 @@ class _CopyWithImpl$Fragment$Section$$ListSection$metadata<TRes>
         useContext: useContext == _undefined || useContext == null
             ? _instance.useContext
             : (useContext as bool),
+        page: page == _undefined
+            ? _instance.page
+            : (page as Fragment$Section$$ListSection$metadata$page?),
+        limit: limit == _undefined ? _instance.limit : (limit as int?),
         prependLiveElement:
             prependLiveElement == _undefined || prependLiveElement == null
                 ? _instance.prependLiveElement
@@ -33653,6 +36886,15 @@ class _CopyWithImpl$Fragment$Section$$ListSection$metadata<TRes>
             ? _instance.$__typename
             : ($__typename as String),
       ));
+
+  CopyWith$Fragment$Section$$ListSection$metadata$page<TRes> get page {
+    final local$page = _instance.page;
+    return local$page == null
+        ? CopyWith$Fragment$Section$$ListSection$metadata$page.stub(
+            _then(_instance))
+        : CopyWith$Fragment$Section$$ListSection$metadata$page(
+            local$page, (e) => call(page: e));
+  }
 }
 
 class _CopyWithStubImpl$Fragment$Section$$ListSection$metadata<TRes>
@@ -33667,7 +36909,140 @@ class _CopyWithStubImpl$Fragment$Section$$ListSection$metadata<TRes>
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Fragment$Section$$ListSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Fragment$Section$$ListSection$metadata$page<TRes> get page =>
+      CopyWith$Fragment$Section$$ListSection$metadata$page.stub(_res);
+}
+
+class Fragment$Section$$ListSection$metadata$page
+    implements Fragment$ItemSection$$ListSection$metadata$page {
+  Fragment$Section$$ListSection$metadata$page({
+    required this.code,
+    this.$__typename = 'Page',
+  });
+
+  factory Fragment$Section$$ListSection$metadata$page.fromJson(
+      Map<String, dynamic> json) {
+    final l$code = json['code'];
+    final l$$__typename = json['__typename'];
+    return Fragment$Section$$ListSection$metadata$page(
+      code: (l$code as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String code;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$code = code;
+    _resultData['code'] = l$code;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$code = code;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$code,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Fragment$Section$$ListSection$metadata$page) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$code = code;
+    final lOther$code = other.code;
+    if (l$code != lOther$code) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$Section$$ListSection$metadata$page
+    on Fragment$Section$$ListSection$metadata$page {
+  CopyWith$Fragment$Section$$ListSection$metadata$page<
+          Fragment$Section$$ListSection$metadata$page>
+      get copyWith => CopyWith$Fragment$Section$$ListSection$metadata$page(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$Section$$ListSection$metadata$page<TRes> {
+  factory CopyWith$Fragment$Section$$ListSection$metadata$page(
+    Fragment$Section$$ListSection$metadata$page instance,
+    TRes Function(Fragment$Section$$ListSection$metadata$page) then,
+  ) = _CopyWithImpl$Fragment$Section$$ListSection$metadata$page;
+
+  factory CopyWith$Fragment$Section$$ListSection$metadata$page.stub(TRes res) =
+      _CopyWithStubImpl$Fragment$Section$$ListSection$metadata$page;
+
+  TRes call({
+    String? code,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Fragment$Section$$ListSection$metadata$page<TRes>
+    implements CopyWith$Fragment$Section$$ListSection$metadata$page<TRes> {
+  _CopyWithImpl$Fragment$Section$$ListSection$metadata$page(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$Section$$ListSection$metadata$page _instance;
+
+  final TRes Function(Fragment$Section$$ListSection$metadata$page) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? code = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Fragment$Section$$ListSection$metadata$page(
+        code: code == _undefined || code == null
+            ? _instance.code
+            : (code as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Fragment$Section$$ListSection$metadata$page<TRes>
+    implements CopyWith$Fragment$Section$$ListSection$metadata$page<TRes> {
+  _CopyWithStubImpl$Fragment$Section$$ListSection$metadata$page(this._res);
+
+  TRes _res;
+
+  call({
+    String? code,
     String? $__typename,
   }) =>
       _res;
@@ -36649,6 +40024,8 @@ class Fragment$Section$$CardListSection$metadata
     required this.secondaryTitles,
     required this.collectionId,
     required this.useContext,
+    this.page,
+    this.limit,
     required this.prependLiveElement,
     this.$__typename = 'ItemSectionMetadata',
   });
@@ -36660,6 +40037,8 @@ class Fragment$Section$$CardListSection$metadata
     final l$secondaryTitles = json['secondaryTitles'];
     final l$collectionId = json['collectionId'];
     final l$useContext = json['useContext'];
+    final l$page = json['page'];
+    final l$limit = json['limit'];
     final l$prependLiveElement = json['prependLiveElement'];
     final l$$__typename = json['__typename'];
     return Fragment$Section$$CardListSection$metadata(
@@ -36668,6 +40047,11 @@ class Fragment$Section$$CardListSection$metadata
       secondaryTitles: (l$secondaryTitles as bool),
       collectionId: (l$collectionId as String),
       useContext: (l$useContext as bool),
+      page: l$page == null
+          ? null
+          : Fragment$Section$$CardListSection$metadata$page.fromJson(
+              (l$page as Map<String, dynamic>)),
+      limit: (l$limit as int?),
       prependLiveElement: (l$prependLiveElement as bool),
       $__typename: (l$$__typename as String),
     );
@@ -36682,6 +40066,10 @@ class Fragment$Section$$CardListSection$metadata
   final String collectionId;
 
   final bool useContext;
+
+  final Fragment$Section$$CardListSection$metadata$page? page;
+
+  final int? limit;
 
   final bool prependLiveElement;
 
@@ -36699,6 +40087,10 @@ class Fragment$Section$$CardListSection$metadata
     _resultData['collectionId'] = l$collectionId;
     final l$useContext = useContext;
     _resultData['useContext'] = l$useContext;
+    final l$page = page;
+    _resultData['page'] = l$page?.toJson();
+    final l$limit = limit;
+    _resultData['limit'] = l$limit;
     final l$prependLiveElement = prependLiveElement;
     _resultData['prependLiveElement'] = l$prependLiveElement;
     final l$$__typename = $__typename;
@@ -36713,6 +40105,8 @@ class Fragment$Section$$CardListSection$metadata
     final l$secondaryTitles = secondaryTitles;
     final l$collectionId = collectionId;
     final l$useContext = useContext;
+    final l$page = page;
+    final l$limit = limit;
     final l$prependLiveElement = prependLiveElement;
     final l$$__typename = $__typename;
     return Object.hashAll([
@@ -36721,6 +40115,8 @@ class Fragment$Section$$CardListSection$metadata
       l$secondaryTitles,
       l$collectionId,
       l$useContext,
+      l$page,
+      l$limit,
       l$prependLiveElement,
       l$$__typename,
     ]);
@@ -36758,6 +40154,16 @@ class Fragment$Section$$CardListSection$metadata
     final l$useContext = useContext;
     final lOther$useContext = other.useContext;
     if (l$useContext != lOther$useContext) {
+      return false;
+    }
+    final l$page = page;
+    final lOther$page = other.page;
+    if (l$page != lOther$page) {
+      return false;
+    }
+    final l$limit = limit;
+    final lOther$limit = other.limit;
+    if (l$limit != lOther$limit) {
       return false;
     }
     final l$prependLiveElement = prependLiveElement;
@@ -36799,9 +40205,12 @@ abstract class CopyWith$Fragment$Section$$CardListSection$metadata<TRes> {
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Fragment$Section$$CardListSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
     String? $__typename,
   });
+  CopyWith$Fragment$Section$$CardListSection$metadata$page<TRes> get page;
 }
 
 class _CopyWithImpl$Fragment$Section$$CardListSection$metadata<TRes>
@@ -36823,6 +40232,8 @@ class _CopyWithImpl$Fragment$Section$$CardListSection$metadata<TRes>
     Object? secondaryTitles = _undefined,
     Object? collectionId = _undefined,
     Object? useContext = _undefined,
+    Object? page = _undefined,
+    Object? limit = _undefined,
     Object? prependLiveElement = _undefined,
     Object? $__typename = _undefined,
   }) =>
@@ -36844,6 +40255,10 @@ class _CopyWithImpl$Fragment$Section$$CardListSection$metadata<TRes>
         useContext: useContext == _undefined || useContext == null
             ? _instance.useContext
             : (useContext as bool),
+        page: page == _undefined
+            ? _instance.page
+            : (page as Fragment$Section$$CardListSection$metadata$page?),
+        limit: limit == _undefined ? _instance.limit : (limit as int?),
         prependLiveElement:
             prependLiveElement == _undefined || prependLiveElement == null
                 ? _instance.prependLiveElement
@@ -36852,6 +40267,15 @@ class _CopyWithImpl$Fragment$Section$$CardListSection$metadata<TRes>
             ? _instance.$__typename
             : ($__typename as String),
       ));
+
+  CopyWith$Fragment$Section$$CardListSection$metadata$page<TRes> get page {
+    final local$page = _instance.page;
+    return local$page == null
+        ? CopyWith$Fragment$Section$$CardListSection$metadata$page.stub(
+            _then(_instance))
+        : CopyWith$Fragment$Section$$CardListSection$metadata$page(
+            local$page, (e) => call(page: e));
+  }
 }
 
 class _CopyWithStubImpl$Fragment$Section$$CardListSection$metadata<TRes>
@@ -36866,7 +40290,141 @@ class _CopyWithStubImpl$Fragment$Section$$CardListSection$metadata<TRes>
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Fragment$Section$$CardListSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Fragment$Section$$CardListSection$metadata$page<TRes> get page =>
+      CopyWith$Fragment$Section$$CardListSection$metadata$page.stub(_res);
+}
+
+class Fragment$Section$$CardListSection$metadata$page
+    implements Fragment$ItemSection$$CardListSection$metadata$page {
+  Fragment$Section$$CardListSection$metadata$page({
+    required this.code,
+    this.$__typename = 'Page',
+  });
+
+  factory Fragment$Section$$CardListSection$metadata$page.fromJson(
+      Map<String, dynamic> json) {
+    final l$code = json['code'];
+    final l$$__typename = json['__typename'];
+    return Fragment$Section$$CardListSection$metadata$page(
+      code: (l$code as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String code;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$code = code;
+    _resultData['code'] = l$code;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$code = code;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$code,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Fragment$Section$$CardListSection$metadata$page) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$code = code;
+    final lOther$code = other.code;
+    if (l$code != lOther$code) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$Section$$CardListSection$metadata$page
+    on Fragment$Section$$CardListSection$metadata$page {
+  CopyWith$Fragment$Section$$CardListSection$metadata$page<
+          Fragment$Section$$CardListSection$metadata$page>
+      get copyWith => CopyWith$Fragment$Section$$CardListSection$metadata$page(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$Section$$CardListSection$metadata$page<TRes> {
+  factory CopyWith$Fragment$Section$$CardListSection$metadata$page(
+    Fragment$Section$$CardListSection$metadata$page instance,
+    TRes Function(Fragment$Section$$CardListSection$metadata$page) then,
+  ) = _CopyWithImpl$Fragment$Section$$CardListSection$metadata$page;
+
+  factory CopyWith$Fragment$Section$$CardListSection$metadata$page.stub(
+          TRes res) =
+      _CopyWithStubImpl$Fragment$Section$$CardListSection$metadata$page;
+
+  TRes call({
+    String? code,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Fragment$Section$$CardListSection$metadata$page<TRes>
+    implements CopyWith$Fragment$Section$$CardListSection$metadata$page<TRes> {
+  _CopyWithImpl$Fragment$Section$$CardListSection$metadata$page(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$Section$$CardListSection$metadata$page _instance;
+
+  final TRes Function(Fragment$Section$$CardListSection$metadata$page) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? code = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Fragment$Section$$CardListSection$metadata$page(
+        code: code == _undefined || code == null
+            ? _instance.code
+            : (code as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Fragment$Section$$CardListSection$metadata$page<TRes>
+    implements CopyWith$Fragment$Section$$CardListSection$metadata$page<TRes> {
+  _CopyWithStubImpl$Fragment$Section$$CardListSection$metadata$page(this._res);
+
+  TRes _res;
+
+  call({
+    String? code,
     String? $__typename,
   }) =>
       _res;
@@ -37332,6 +40890,8 @@ class Fragment$Section$$DefaultGridSection$metadata
     required this.secondaryTitles,
     required this.collectionId,
     required this.useContext,
+    this.page,
+    this.limit,
     required this.prependLiveElement,
     this.$__typename = 'ItemSectionMetadata',
   });
@@ -37343,6 +40903,8 @@ class Fragment$Section$$DefaultGridSection$metadata
     final l$secondaryTitles = json['secondaryTitles'];
     final l$collectionId = json['collectionId'];
     final l$useContext = json['useContext'];
+    final l$page = json['page'];
+    final l$limit = json['limit'];
     final l$prependLiveElement = json['prependLiveElement'];
     final l$$__typename = json['__typename'];
     return Fragment$Section$$DefaultGridSection$metadata(
@@ -37351,6 +40913,11 @@ class Fragment$Section$$DefaultGridSection$metadata
       secondaryTitles: (l$secondaryTitles as bool),
       collectionId: (l$collectionId as String),
       useContext: (l$useContext as bool),
+      page: l$page == null
+          ? null
+          : Fragment$Section$$DefaultGridSection$metadata$page.fromJson(
+              (l$page as Map<String, dynamic>)),
+      limit: (l$limit as int?),
       prependLiveElement: (l$prependLiveElement as bool),
       $__typename: (l$$__typename as String),
     );
@@ -37365,6 +40932,10 @@ class Fragment$Section$$DefaultGridSection$metadata
   final String collectionId;
 
   final bool useContext;
+
+  final Fragment$Section$$DefaultGridSection$metadata$page? page;
+
+  final int? limit;
 
   final bool prependLiveElement;
 
@@ -37382,6 +40953,10 @@ class Fragment$Section$$DefaultGridSection$metadata
     _resultData['collectionId'] = l$collectionId;
     final l$useContext = useContext;
     _resultData['useContext'] = l$useContext;
+    final l$page = page;
+    _resultData['page'] = l$page?.toJson();
+    final l$limit = limit;
+    _resultData['limit'] = l$limit;
     final l$prependLiveElement = prependLiveElement;
     _resultData['prependLiveElement'] = l$prependLiveElement;
     final l$$__typename = $__typename;
@@ -37396,6 +40971,8 @@ class Fragment$Section$$DefaultGridSection$metadata
     final l$secondaryTitles = secondaryTitles;
     final l$collectionId = collectionId;
     final l$useContext = useContext;
+    final l$page = page;
+    final l$limit = limit;
     final l$prependLiveElement = prependLiveElement;
     final l$$__typename = $__typename;
     return Object.hashAll([
@@ -37404,6 +40981,8 @@ class Fragment$Section$$DefaultGridSection$metadata
       l$secondaryTitles,
       l$collectionId,
       l$useContext,
+      l$page,
+      l$limit,
       l$prependLiveElement,
       l$$__typename,
     ]);
@@ -37441,6 +41020,16 @@ class Fragment$Section$$DefaultGridSection$metadata
     final l$useContext = useContext;
     final lOther$useContext = other.useContext;
     if (l$useContext != lOther$useContext) {
+      return false;
+    }
+    final l$page = page;
+    final lOther$page = other.page;
+    if (l$page != lOther$page) {
+      return false;
+    }
+    final l$limit = limit;
+    final lOther$limit = other.limit;
+    if (l$limit != lOther$limit) {
       return false;
     }
     final l$prependLiveElement = prependLiveElement;
@@ -37483,9 +41072,12 @@ abstract class CopyWith$Fragment$Section$$DefaultGridSection$metadata<TRes> {
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Fragment$Section$$DefaultGridSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
     String? $__typename,
   });
+  CopyWith$Fragment$Section$$DefaultGridSection$metadata$page<TRes> get page;
 }
 
 class _CopyWithImpl$Fragment$Section$$DefaultGridSection$metadata<TRes>
@@ -37507,6 +41099,8 @@ class _CopyWithImpl$Fragment$Section$$DefaultGridSection$metadata<TRes>
     Object? secondaryTitles = _undefined,
     Object? collectionId = _undefined,
     Object? useContext = _undefined,
+    Object? page = _undefined,
+    Object? limit = _undefined,
     Object? prependLiveElement = _undefined,
     Object? $__typename = _undefined,
   }) =>
@@ -37528,6 +41122,10 @@ class _CopyWithImpl$Fragment$Section$$DefaultGridSection$metadata<TRes>
         useContext: useContext == _undefined || useContext == null
             ? _instance.useContext
             : (useContext as bool),
+        page: page == _undefined
+            ? _instance.page
+            : (page as Fragment$Section$$DefaultGridSection$metadata$page?),
+        limit: limit == _undefined ? _instance.limit : (limit as int?),
         prependLiveElement:
             prependLiveElement == _undefined || prependLiveElement == null
                 ? _instance.prependLiveElement
@@ -37536,6 +41134,15 @@ class _CopyWithImpl$Fragment$Section$$DefaultGridSection$metadata<TRes>
             ? _instance.$__typename
             : ($__typename as String),
       ));
+
+  CopyWith$Fragment$Section$$DefaultGridSection$metadata$page<TRes> get page {
+    final local$page = _instance.page;
+    return local$page == null
+        ? CopyWith$Fragment$Section$$DefaultGridSection$metadata$page.stub(
+            _then(_instance))
+        : CopyWith$Fragment$Section$$DefaultGridSection$metadata$page(
+            local$page, (e) => call(page: e));
+  }
 }
 
 class _CopyWithStubImpl$Fragment$Section$$DefaultGridSection$metadata<TRes>
@@ -37550,7 +41157,146 @@ class _CopyWithStubImpl$Fragment$Section$$DefaultGridSection$metadata<TRes>
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Fragment$Section$$DefaultGridSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Fragment$Section$$DefaultGridSection$metadata$page<TRes> get page =>
+      CopyWith$Fragment$Section$$DefaultGridSection$metadata$page.stub(_res);
+}
+
+class Fragment$Section$$DefaultGridSection$metadata$page
+    implements Fragment$ItemSection$$DefaultGridSection$metadata$page {
+  Fragment$Section$$DefaultGridSection$metadata$page({
+    required this.code,
+    this.$__typename = 'Page',
+  });
+
+  factory Fragment$Section$$DefaultGridSection$metadata$page.fromJson(
+      Map<String, dynamic> json) {
+    final l$code = json['code'];
+    final l$$__typename = json['__typename'];
+    return Fragment$Section$$DefaultGridSection$metadata$page(
+      code: (l$code as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String code;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$code = code;
+    _resultData['code'] = l$code;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$code = code;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$code,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Fragment$Section$$DefaultGridSection$metadata$page) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$code = code;
+    final lOther$code = other.code;
+    if (l$code != lOther$code) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$Section$$DefaultGridSection$metadata$page
+    on Fragment$Section$$DefaultGridSection$metadata$page {
+  CopyWith$Fragment$Section$$DefaultGridSection$metadata$page<
+          Fragment$Section$$DefaultGridSection$metadata$page>
+      get copyWith =>
+          CopyWith$Fragment$Section$$DefaultGridSection$metadata$page(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$Section$$DefaultGridSection$metadata$page<
+    TRes> {
+  factory CopyWith$Fragment$Section$$DefaultGridSection$metadata$page(
+    Fragment$Section$$DefaultGridSection$metadata$page instance,
+    TRes Function(Fragment$Section$$DefaultGridSection$metadata$page) then,
+  ) = _CopyWithImpl$Fragment$Section$$DefaultGridSection$metadata$page;
+
+  factory CopyWith$Fragment$Section$$DefaultGridSection$metadata$page.stub(
+          TRes res) =
+      _CopyWithStubImpl$Fragment$Section$$DefaultGridSection$metadata$page;
+
+  TRes call({
+    String? code,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Fragment$Section$$DefaultGridSection$metadata$page<TRes>
+    implements
+        CopyWith$Fragment$Section$$DefaultGridSection$metadata$page<TRes> {
+  _CopyWithImpl$Fragment$Section$$DefaultGridSection$metadata$page(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$Section$$DefaultGridSection$metadata$page _instance;
+
+  final TRes Function(Fragment$Section$$DefaultGridSection$metadata$page) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? code = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Fragment$Section$$DefaultGridSection$metadata$page(
+        code: code == _undefined || code == null
+            ? _instance.code
+            : (code as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Fragment$Section$$DefaultGridSection$metadata$page<TRes>
+    implements
+        CopyWith$Fragment$Section$$DefaultGridSection$metadata$page<TRes> {
+  _CopyWithStubImpl$Fragment$Section$$DefaultGridSection$metadata$page(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? code,
     String? $__typename,
   }) =>
       _res;
@@ -40639,6 +44385,8 @@ class Fragment$Section$$PosterGridSection$metadata
     required this.secondaryTitles,
     required this.collectionId,
     required this.useContext,
+    this.page,
+    this.limit,
     required this.prependLiveElement,
     this.$__typename = 'ItemSectionMetadata',
   });
@@ -40650,6 +44398,8 @@ class Fragment$Section$$PosterGridSection$metadata
     final l$secondaryTitles = json['secondaryTitles'];
     final l$collectionId = json['collectionId'];
     final l$useContext = json['useContext'];
+    final l$page = json['page'];
+    final l$limit = json['limit'];
     final l$prependLiveElement = json['prependLiveElement'];
     final l$$__typename = json['__typename'];
     return Fragment$Section$$PosterGridSection$metadata(
@@ -40658,6 +44408,11 @@ class Fragment$Section$$PosterGridSection$metadata
       secondaryTitles: (l$secondaryTitles as bool),
       collectionId: (l$collectionId as String),
       useContext: (l$useContext as bool),
+      page: l$page == null
+          ? null
+          : Fragment$Section$$PosterGridSection$metadata$page.fromJson(
+              (l$page as Map<String, dynamic>)),
+      limit: (l$limit as int?),
       prependLiveElement: (l$prependLiveElement as bool),
       $__typename: (l$$__typename as String),
     );
@@ -40672,6 +44427,10 @@ class Fragment$Section$$PosterGridSection$metadata
   final String collectionId;
 
   final bool useContext;
+
+  final Fragment$Section$$PosterGridSection$metadata$page? page;
+
+  final int? limit;
 
   final bool prependLiveElement;
 
@@ -40689,6 +44448,10 @@ class Fragment$Section$$PosterGridSection$metadata
     _resultData['collectionId'] = l$collectionId;
     final l$useContext = useContext;
     _resultData['useContext'] = l$useContext;
+    final l$page = page;
+    _resultData['page'] = l$page?.toJson();
+    final l$limit = limit;
+    _resultData['limit'] = l$limit;
     final l$prependLiveElement = prependLiveElement;
     _resultData['prependLiveElement'] = l$prependLiveElement;
     final l$$__typename = $__typename;
@@ -40703,6 +44466,8 @@ class Fragment$Section$$PosterGridSection$metadata
     final l$secondaryTitles = secondaryTitles;
     final l$collectionId = collectionId;
     final l$useContext = useContext;
+    final l$page = page;
+    final l$limit = limit;
     final l$prependLiveElement = prependLiveElement;
     final l$$__typename = $__typename;
     return Object.hashAll([
@@ -40711,6 +44476,8 @@ class Fragment$Section$$PosterGridSection$metadata
       l$secondaryTitles,
       l$collectionId,
       l$useContext,
+      l$page,
+      l$limit,
       l$prependLiveElement,
       l$$__typename,
     ]);
@@ -40748,6 +44515,16 @@ class Fragment$Section$$PosterGridSection$metadata
     final l$useContext = useContext;
     final lOther$useContext = other.useContext;
     if (l$useContext != lOther$useContext) {
+      return false;
+    }
+    final l$page = page;
+    final lOther$page = other.page;
+    if (l$page != lOther$page) {
+      return false;
+    }
+    final l$limit = limit;
+    final lOther$limit = other.limit;
+    if (l$limit != lOther$limit) {
       return false;
     }
     final l$prependLiveElement = prependLiveElement;
@@ -40789,9 +44566,12 @@ abstract class CopyWith$Fragment$Section$$PosterGridSection$metadata<TRes> {
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Fragment$Section$$PosterGridSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
     String? $__typename,
   });
+  CopyWith$Fragment$Section$$PosterGridSection$metadata$page<TRes> get page;
 }
 
 class _CopyWithImpl$Fragment$Section$$PosterGridSection$metadata<TRes>
@@ -40813,6 +44593,8 @@ class _CopyWithImpl$Fragment$Section$$PosterGridSection$metadata<TRes>
     Object? secondaryTitles = _undefined,
     Object? collectionId = _undefined,
     Object? useContext = _undefined,
+    Object? page = _undefined,
+    Object? limit = _undefined,
     Object? prependLiveElement = _undefined,
     Object? $__typename = _undefined,
   }) =>
@@ -40834,6 +44616,10 @@ class _CopyWithImpl$Fragment$Section$$PosterGridSection$metadata<TRes>
         useContext: useContext == _undefined || useContext == null
             ? _instance.useContext
             : (useContext as bool),
+        page: page == _undefined
+            ? _instance.page
+            : (page as Fragment$Section$$PosterGridSection$metadata$page?),
+        limit: limit == _undefined ? _instance.limit : (limit as int?),
         prependLiveElement:
             prependLiveElement == _undefined || prependLiveElement == null
                 ? _instance.prependLiveElement
@@ -40842,6 +44628,15 @@ class _CopyWithImpl$Fragment$Section$$PosterGridSection$metadata<TRes>
             ? _instance.$__typename
             : ($__typename as String),
       ));
+
+  CopyWith$Fragment$Section$$PosterGridSection$metadata$page<TRes> get page {
+    final local$page = _instance.page;
+    return local$page == null
+        ? CopyWith$Fragment$Section$$PosterGridSection$metadata$page.stub(
+            _then(_instance))
+        : CopyWith$Fragment$Section$$PosterGridSection$metadata$page(
+            local$page, (e) => call(page: e));
+  }
 }
 
 class _CopyWithStubImpl$Fragment$Section$$PosterGridSection$metadata<TRes>
@@ -40856,7 +44651,146 @@ class _CopyWithStubImpl$Fragment$Section$$PosterGridSection$metadata<TRes>
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Fragment$Section$$PosterGridSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Fragment$Section$$PosterGridSection$metadata$page<TRes> get page =>
+      CopyWith$Fragment$Section$$PosterGridSection$metadata$page.stub(_res);
+}
+
+class Fragment$Section$$PosterGridSection$metadata$page
+    implements Fragment$ItemSection$$PosterGridSection$metadata$page {
+  Fragment$Section$$PosterGridSection$metadata$page({
+    required this.code,
+    this.$__typename = 'Page',
+  });
+
+  factory Fragment$Section$$PosterGridSection$metadata$page.fromJson(
+      Map<String, dynamic> json) {
+    final l$code = json['code'];
+    final l$$__typename = json['__typename'];
+    return Fragment$Section$$PosterGridSection$metadata$page(
+      code: (l$code as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String code;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$code = code;
+    _resultData['code'] = l$code;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$code = code;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$code,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Fragment$Section$$PosterGridSection$metadata$page) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$code = code;
+    final lOther$code = other.code;
+    if (l$code != lOther$code) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$Section$$PosterGridSection$metadata$page
+    on Fragment$Section$$PosterGridSection$metadata$page {
+  CopyWith$Fragment$Section$$PosterGridSection$metadata$page<
+          Fragment$Section$$PosterGridSection$metadata$page>
+      get copyWith =>
+          CopyWith$Fragment$Section$$PosterGridSection$metadata$page(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$Section$$PosterGridSection$metadata$page<
+    TRes> {
+  factory CopyWith$Fragment$Section$$PosterGridSection$metadata$page(
+    Fragment$Section$$PosterGridSection$metadata$page instance,
+    TRes Function(Fragment$Section$$PosterGridSection$metadata$page) then,
+  ) = _CopyWithImpl$Fragment$Section$$PosterGridSection$metadata$page;
+
+  factory CopyWith$Fragment$Section$$PosterGridSection$metadata$page.stub(
+          TRes res) =
+      _CopyWithStubImpl$Fragment$Section$$PosterGridSection$metadata$page;
+
+  TRes call({
+    String? code,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Fragment$Section$$PosterGridSection$metadata$page<TRes>
+    implements
+        CopyWith$Fragment$Section$$PosterGridSection$metadata$page<TRes> {
+  _CopyWithImpl$Fragment$Section$$PosterGridSection$metadata$page(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$Section$$PosterGridSection$metadata$page _instance;
+
+  final TRes Function(Fragment$Section$$PosterGridSection$metadata$page) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? code = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Fragment$Section$$PosterGridSection$metadata$page(
+        code: code == _undefined || code == null
+            ? _instance.code
+            : (code as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Fragment$Section$$PosterGridSection$metadata$page<TRes>
+    implements
+        CopyWith$Fragment$Section$$PosterGridSection$metadata$page<TRes> {
+  _CopyWithStubImpl$Fragment$Section$$PosterGridSection$metadata$page(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? code,
     String? $__typename,
   }) =>
       _res;
@@ -43940,6 +47874,8 @@ class Fragment$Section$$IconGridSection$metadata
     required this.secondaryTitles,
     required this.collectionId,
     required this.useContext,
+    this.page,
+    this.limit,
     required this.prependLiveElement,
     this.$__typename = 'ItemSectionMetadata',
   });
@@ -43951,6 +47887,8 @@ class Fragment$Section$$IconGridSection$metadata
     final l$secondaryTitles = json['secondaryTitles'];
     final l$collectionId = json['collectionId'];
     final l$useContext = json['useContext'];
+    final l$page = json['page'];
+    final l$limit = json['limit'];
     final l$prependLiveElement = json['prependLiveElement'];
     final l$$__typename = json['__typename'];
     return Fragment$Section$$IconGridSection$metadata(
@@ -43959,6 +47897,11 @@ class Fragment$Section$$IconGridSection$metadata
       secondaryTitles: (l$secondaryTitles as bool),
       collectionId: (l$collectionId as String),
       useContext: (l$useContext as bool),
+      page: l$page == null
+          ? null
+          : Fragment$Section$$IconGridSection$metadata$page.fromJson(
+              (l$page as Map<String, dynamic>)),
+      limit: (l$limit as int?),
       prependLiveElement: (l$prependLiveElement as bool),
       $__typename: (l$$__typename as String),
     );
@@ -43973,6 +47916,10 @@ class Fragment$Section$$IconGridSection$metadata
   final String collectionId;
 
   final bool useContext;
+
+  final Fragment$Section$$IconGridSection$metadata$page? page;
+
+  final int? limit;
 
   final bool prependLiveElement;
 
@@ -43990,6 +47937,10 @@ class Fragment$Section$$IconGridSection$metadata
     _resultData['collectionId'] = l$collectionId;
     final l$useContext = useContext;
     _resultData['useContext'] = l$useContext;
+    final l$page = page;
+    _resultData['page'] = l$page?.toJson();
+    final l$limit = limit;
+    _resultData['limit'] = l$limit;
     final l$prependLiveElement = prependLiveElement;
     _resultData['prependLiveElement'] = l$prependLiveElement;
     final l$$__typename = $__typename;
@@ -44004,6 +47955,8 @@ class Fragment$Section$$IconGridSection$metadata
     final l$secondaryTitles = secondaryTitles;
     final l$collectionId = collectionId;
     final l$useContext = useContext;
+    final l$page = page;
+    final l$limit = limit;
     final l$prependLiveElement = prependLiveElement;
     final l$$__typename = $__typename;
     return Object.hashAll([
@@ -44012,6 +47965,8 @@ class Fragment$Section$$IconGridSection$metadata
       l$secondaryTitles,
       l$collectionId,
       l$useContext,
+      l$page,
+      l$limit,
       l$prependLiveElement,
       l$$__typename,
     ]);
@@ -44049,6 +48004,16 @@ class Fragment$Section$$IconGridSection$metadata
     final l$useContext = useContext;
     final lOther$useContext = other.useContext;
     if (l$useContext != lOther$useContext) {
+      return false;
+    }
+    final l$page = page;
+    final lOther$page = other.page;
+    if (l$page != lOther$page) {
+      return false;
+    }
+    final l$limit = limit;
+    final lOther$limit = other.limit;
+    if (l$limit != lOther$limit) {
       return false;
     }
     final l$prependLiveElement = prependLiveElement;
@@ -44090,9 +48055,12 @@ abstract class CopyWith$Fragment$Section$$IconGridSection$metadata<TRes> {
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Fragment$Section$$IconGridSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
     String? $__typename,
   });
+  CopyWith$Fragment$Section$$IconGridSection$metadata$page<TRes> get page;
 }
 
 class _CopyWithImpl$Fragment$Section$$IconGridSection$metadata<TRes>
@@ -44114,6 +48082,8 @@ class _CopyWithImpl$Fragment$Section$$IconGridSection$metadata<TRes>
     Object? secondaryTitles = _undefined,
     Object? collectionId = _undefined,
     Object? useContext = _undefined,
+    Object? page = _undefined,
+    Object? limit = _undefined,
     Object? prependLiveElement = _undefined,
     Object? $__typename = _undefined,
   }) =>
@@ -44135,6 +48105,10 @@ class _CopyWithImpl$Fragment$Section$$IconGridSection$metadata<TRes>
         useContext: useContext == _undefined || useContext == null
             ? _instance.useContext
             : (useContext as bool),
+        page: page == _undefined
+            ? _instance.page
+            : (page as Fragment$Section$$IconGridSection$metadata$page?),
+        limit: limit == _undefined ? _instance.limit : (limit as int?),
         prependLiveElement:
             prependLiveElement == _undefined || prependLiveElement == null
                 ? _instance.prependLiveElement
@@ -44143,6 +48117,15 @@ class _CopyWithImpl$Fragment$Section$$IconGridSection$metadata<TRes>
             ? _instance.$__typename
             : ($__typename as String),
       ));
+
+  CopyWith$Fragment$Section$$IconGridSection$metadata$page<TRes> get page {
+    final local$page = _instance.page;
+    return local$page == null
+        ? CopyWith$Fragment$Section$$IconGridSection$metadata$page.stub(
+            _then(_instance))
+        : CopyWith$Fragment$Section$$IconGridSection$metadata$page(
+            local$page, (e) => call(page: e));
+  }
 }
 
 class _CopyWithStubImpl$Fragment$Section$$IconGridSection$metadata<TRes>
@@ -44157,7 +48140,141 @@ class _CopyWithStubImpl$Fragment$Section$$IconGridSection$metadata<TRes>
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Fragment$Section$$IconGridSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Fragment$Section$$IconGridSection$metadata$page<TRes> get page =>
+      CopyWith$Fragment$Section$$IconGridSection$metadata$page.stub(_res);
+}
+
+class Fragment$Section$$IconGridSection$metadata$page
+    implements Fragment$ItemSection$$IconGridSection$metadata$page {
+  Fragment$Section$$IconGridSection$metadata$page({
+    required this.code,
+    this.$__typename = 'Page',
+  });
+
+  factory Fragment$Section$$IconGridSection$metadata$page.fromJson(
+      Map<String, dynamic> json) {
+    final l$code = json['code'];
+    final l$$__typename = json['__typename'];
+    return Fragment$Section$$IconGridSection$metadata$page(
+      code: (l$code as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String code;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$code = code;
+    _resultData['code'] = l$code;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$code = code;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$code,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Fragment$Section$$IconGridSection$metadata$page) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$code = code;
+    final lOther$code = other.code;
+    if (l$code != lOther$code) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$Section$$IconGridSection$metadata$page
+    on Fragment$Section$$IconGridSection$metadata$page {
+  CopyWith$Fragment$Section$$IconGridSection$metadata$page<
+          Fragment$Section$$IconGridSection$metadata$page>
+      get copyWith => CopyWith$Fragment$Section$$IconGridSection$metadata$page(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$Section$$IconGridSection$metadata$page<TRes> {
+  factory CopyWith$Fragment$Section$$IconGridSection$metadata$page(
+    Fragment$Section$$IconGridSection$metadata$page instance,
+    TRes Function(Fragment$Section$$IconGridSection$metadata$page) then,
+  ) = _CopyWithImpl$Fragment$Section$$IconGridSection$metadata$page;
+
+  factory CopyWith$Fragment$Section$$IconGridSection$metadata$page.stub(
+          TRes res) =
+      _CopyWithStubImpl$Fragment$Section$$IconGridSection$metadata$page;
+
+  TRes call({
+    String? code,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Fragment$Section$$IconGridSection$metadata$page<TRes>
+    implements CopyWith$Fragment$Section$$IconGridSection$metadata$page<TRes> {
+  _CopyWithImpl$Fragment$Section$$IconGridSection$metadata$page(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$Section$$IconGridSection$metadata$page _instance;
+
+  final TRes Function(Fragment$Section$$IconGridSection$metadata$page) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? code = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Fragment$Section$$IconGridSection$metadata$page(
+        code: code == _undefined || code == null
+            ? _instance.code
+            : (code as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Fragment$Section$$IconGridSection$metadata$page<TRes>
+    implements CopyWith$Fragment$Section$$IconGridSection$metadata$page<TRes> {
+  _CopyWithStubImpl$Fragment$Section$$IconGridSection$metadata$page(this._res);
+
+  TRes _res;
+
+  call({
+    String? code,
     String? $__typename,
   }) =>
       _res;
@@ -47195,6 +51312,8 @@ class Fragment$Section$$IconSection$metadata
     required this.secondaryTitles,
     required this.collectionId,
     required this.useContext,
+    this.page,
+    this.limit,
     required this.prependLiveElement,
     this.$__typename = 'ItemSectionMetadata',
   });
@@ -47206,6 +51325,8 @@ class Fragment$Section$$IconSection$metadata
     final l$secondaryTitles = json['secondaryTitles'];
     final l$collectionId = json['collectionId'];
     final l$useContext = json['useContext'];
+    final l$page = json['page'];
+    final l$limit = json['limit'];
     final l$prependLiveElement = json['prependLiveElement'];
     final l$$__typename = json['__typename'];
     return Fragment$Section$$IconSection$metadata(
@@ -47214,6 +51335,11 @@ class Fragment$Section$$IconSection$metadata
       secondaryTitles: (l$secondaryTitles as bool),
       collectionId: (l$collectionId as String),
       useContext: (l$useContext as bool),
+      page: l$page == null
+          ? null
+          : Fragment$Section$$IconSection$metadata$page.fromJson(
+              (l$page as Map<String, dynamic>)),
+      limit: (l$limit as int?),
       prependLiveElement: (l$prependLiveElement as bool),
       $__typename: (l$$__typename as String),
     );
@@ -47228,6 +51354,10 @@ class Fragment$Section$$IconSection$metadata
   final String collectionId;
 
   final bool useContext;
+
+  final Fragment$Section$$IconSection$metadata$page? page;
+
+  final int? limit;
 
   final bool prependLiveElement;
 
@@ -47245,6 +51375,10 @@ class Fragment$Section$$IconSection$metadata
     _resultData['collectionId'] = l$collectionId;
     final l$useContext = useContext;
     _resultData['useContext'] = l$useContext;
+    final l$page = page;
+    _resultData['page'] = l$page?.toJson();
+    final l$limit = limit;
+    _resultData['limit'] = l$limit;
     final l$prependLiveElement = prependLiveElement;
     _resultData['prependLiveElement'] = l$prependLiveElement;
     final l$$__typename = $__typename;
@@ -47259,6 +51393,8 @@ class Fragment$Section$$IconSection$metadata
     final l$secondaryTitles = secondaryTitles;
     final l$collectionId = collectionId;
     final l$useContext = useContext;
+    final l$page = page;
+    final l$limit = limit;
     final l$prependLiveElement = prependLiveElement;
     final l$$__typename = $__typename;
     return Object.hashAll([
@@ -47267,6 +51403,8 @@ class Fragment$Section$$IconSection$metadata
       l$secondaryTitles,
       l$collectionId,
       l$useContext,
+      l$page,
+      l$limit,
       l$prependLiveElement,
       l$$__typename,
     ]);
@@ -47304,6 +51442,16 @@ class Fragment$Section$$IconSection$metadata
     final l$useContext = useContext;
     final lOther$useContext = other.useContext;
     if (l$useContext != lOther$useContext) {
+      return false;
+    }
+    final l$page = page;
+    final lOther$page = other.page;
+    if (l$page != lOther$page) {
+      return false;
+    }
+    final l$limit = limit;
+    final lOther$limit = other.limit;
+    if (l$limit != lOther$limit) {
       return false;
     }
     final l$prependLiveElement = prependLiveElement;
@@ -47345,9 +51493,12 @@ abstract class CopyWith$Fragment$Section$$IconSection$metadata<TRes> {
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Fragment$Section$$IconSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
     String? $__typename,
   });
+  CopyWith$Fragment$Section$$IconSection$metadata$page<TRes> get page;
 }
 
 class _CopyWithImpl$Fragment$Section$$IconSection$metadata<TRes>
@@ -47369,6 +51520,8 @@ class _CopyWithImpl$Fragment$Section$$IconSection$metadata<TRes>
     Object? secondaryTitles = _undefined,
     Object? collectionId = _undefined,
     Object? useContext = _undefined,
+    Object? page = _undefined,
+    Object? limit = _undefined,
     Object? prependLiveElement = _undefined,
     Object? $__typename = _undefined,
   }) =>
@@ -47390,6 +51543,10 @@ class _CopyWithImpl$Fragment$Section$$IconSection$metadata<TRes>
         useContext: useContext == _undefined || useContext == null
             ? _instance.useContext
             : (useContext as bool),
+        page: page == _undefined
+            ? _instance.page
+            : (page as Fragment$Section$$IconSection$metadata$page?),
+        limit: limit == _undefined ? _instance.limit : (limit as int?),
         prependLiveElement:
             prependLiveElement == _undefined || prependLiveElement == null
                 ? _instance.prependLiveElement
@@ -47398,6 +51555,15 @@ class _CopyWithImpl$Fragment$Section$$IconSection$metadata<TRes>
             ? _instance.$__typename
             : ($__typename as String),
       ));
+
+  CopyWith$Fragment$Section$$IconSection$metadata$page<TRes> get page {
+    final local$page = _instance.page;
+    return local$page == null
+        ? CopyWith$Fragment$Section$$IconSection$metadata$page.stub(
+            _then(_instance))
+        : CopyWith$Fragment$Section$$IconSection$metadata$page(
+            local$page, (e) => call(page: e));
+  }
 }
 
 class _CopyWithStubImpl$Fragment$Section$$IconSection$metadata<TRes>
@@ -47412,7 +51578,140 @@ class _CopyWithStubImpl$Fragment$Section$$IconSection$metadata<TRes>
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Fragment$Section$$IconSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Fragment$Section$$IconSection$metadata$page<TRes> get page =>
+      CopyWith$Fragment$Section$$IconSection$metadata$page.stub(_res);
+}
+
+class Fragment$Section$$IconSection$metadata$page
+    implements Fragment$ItemSection$$IconSection$metadata$page {
+  Fragment$Section$$IconSection$metadata$page({
+    required this.code,
+    this.$__typename = 'Page',
+  });
+
+  factory Fragment$Section$$IconSection$metadata$page.fromJson(
+      Map<String, dynamic> json) {
+    final l$code = json['code'];
+    final l$$__typename = json['__typename'];
+    return Fragment$Section$$IconSection$metadata$page(
+      code: (l$code as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String code;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$code = code;
+    _resultData['code'] = l$code;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$code = code;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$code,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Fragment$Section$$IconSection$metadata$page) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$code = code;
+    final lOther$code = other.code;
+    if (l$code != lOther$code) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$Section$$IconSection$metadata$page
+    on Fragment$Section$$IconSection$metadata$page {
+  CopyWith$Fragment$Section$$IconSection$metadata$page<
+          Fragment$Section$$IconSection$metadata$page>
+      get copyWith => CopyWith$Fragment$Section$$IconSection$metadata$page(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$Section$$IconSection$metadata$page<TRes> {
+  factory CopyWith$Fragment$Section$$IconSection$metadata$page(
+    Fragment$Section$$IconSection$metadata$page instance,
+    TRes Function(Fragment$Section$$IconSection$metadata$page) then,
+  ) = _CopyWithImpl$Fragment$Section$$IconSection$metadata$page;
+
+  factory CopyWith$Fragment$Section$$IconSection$metadata$page.stub(TRes res) =
+      _CopyWithStubImpl$Fragment$Section$$IconSection$metadata$page;
+
+  TRes call({
+    String? code,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Fragment$Section$$IconSection$metadata$page<TRes>
+    implements CopyWith$Fragment$Section$$IconSection$metadata$page<TRes> {
+  _CopyWithImpl$Fragment$Section$$IconSection$metadata$page(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$Section$$IconSection$metadata$page _instance;
+
+  final TRes Function(Fragment$Section$$IconSection$metadata$page) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? code = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Fragment$Section$$IconSection$metadata$page(
+        code: code == _undefined || code == null
+            ? _instance.code
+            : (code as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Fragment$Section$$IconSection$metadata$page<TRes>
+    implements CopyWith$Fragment$Section$$IconSection$metadata$page<TRes> {
+  _CopyWithStubImpl$Fragment$Section$$IconSection$metadata$page(this._res);
+
+  TRes _res;
+
+  call({
+    String? code,
     String? $__typename,
   }) =>
       _res;
@@ -47853,6 +52152,8 @@ class Fragment$Section$$LabelSection$metadata
     required this.secondaryTitles,
     required this.collectionId,
     required this.useContext,
+    this.page,
+    this.limit,
     required this.prependLiveElement,
     this.$__typename = 'ItemSectionMetadata',
   });
@@ -47864,6 +52165,8 @@ class Fragment$Section$$LabelSection$metadata
     final l$secondaryTitles = json['secondaryTitles'];
     final l$collectionId = json['collectionId'];
     final l$useContext = json['useContext'];
+    final l$page = json['page'];
+    final l$limit = json['limit'];
     final l$prependLiveElement = json['prependLiveElement'];
     final l$$__typename = json['__typename'];
     return Fragment$Section$$LabelSection$metadata(
@@ -47872,6 +52175,11 @@ class Fragment$Section$$LabelSection$metadata
       secondaryTitles: (l$secondaryTitles as bool),
       collectionId: (l$collectionId as String),
       useContext: (l$useContext as bool),
+      page: l$page == null
+          ? null
+          : Fragment$Section$$LabelSection$metadata$page.fromJson(
+              (l$page as Map<String, dynamic>)),
+      limit: (l$limit as int?),
       prependLiveElement: (l$prependLiveElement as bool),
       $__typename: (l$$__typename as String),
     );
@@ -47886,6 +52194,10 @@ class Fragment$Section$$LabelSection$metadata
   final String collectionId;
 
   final bool useContext;
+
+  final Fragment$Section$$LabelSection$metadata$page? page;
+
+  final int? limit;
 
   final bool prependLiveElement;
 
@@ -47903,6 +52215,10 @@ class Fragment$Section$$LabelSection$metadata
     _resultData['collectionId'] = l$collectionId;
     final l$useContext = useContext;
     _resultData['useContext'] = l$useContext;
+    final l$page = page;
+    _resultData['page'] = l$page?.toJson();
+    final l$limit = limit;
+    _resultData['limit'] = l$limit;
     final l$prependLiveElement = prependLiveElement;
     _resultData['prependLiveElement'] = l$prependLiveElement;
     final l$$__typename = $__typename;
@@ -47917,6 +52233,8 @@ class Fragment$Section$$LabelSection$metadata
     final l$secondaryTitles = secondaryTitles;
     final l$collectionId = collectionId;
     final l$useContext = useContext;
+    final l$page = page;
+    final l$limit = limit;
     final l$prependLiveElement = prependLiveElement;
     final l$$__typename = $__typename;
     return Object.hashAll([
@@ -47925,6 +52243,8 @@ class Fragment$Section$$LabelSection$metadata
       l$secondaryTitles,
       l$collectionId,
       l$useContext,
+      l$page,
+      l$limit,
       l$prependLiveElement,
       l$$__typename,
     ]);
@@ -47962,6 +52282,16 @@ class Fragment$Section$$LabelSection$metadata
     final l$useContext = useContext;
     final lOther$useContext = other.useContext;
     if (l$useContext != lOther$useContext) {
+      return false;
+    }
+    final l$page = page;
+    final lOther$page = other.page;
+    if (l$page != lOther$page) {
+      return false;
+    }
+    final l$limit = limit;
+    final lOther$limit = other.limit;
+    if (l$limit != lOther$limit) {
       return false;
     }
     final l$prependLiveElement = prependLiveElement;
@@ -48003,9 +52333,12 @@ abstract class CopyWith$Fragment$Section$$LabelSection$metadata<TRes> {
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Fragment$Section$$LabelSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
     String? $__typename,
   });
+  CopyWith$Fragment$Section$$LabelSection$metadata$page<TRes> get page;
 }
 
 class _CopyWithImpl$Fragment$Section$$LabelSection$metadata<TRes>
@@ -48027,6 +52360,8 @@ class _CopyWithImpl$Fragment$Section$$LabelSection$metadata<TRes>
     Object? secondaryTitles = _undefined,
     Object? collectionId = _undefined,
     Object? useContext = _undefined,
+    Object? page = _undefined,
+    Object? limit = _undefined,
     Object? prependLiveElement = _undefined,
     Object? $__typename = _undefined,
   }) =>
@@ -48048,6 +52383,10 @@ class _CopyWithImpl$Fragment$Section$$LabelSection$metadata<TRes>
         useContext: useContext == _undefined || useContext == null
             ? _instance.useContext
             : (useContext as bool),
+        page: page == _undefined
+            ? _instance.page
+            : (page as Fragment$Section$$LabelSection$metadata$page?),
+        limit: limit == _undefined ? _instance.limit : (limit as int?),
         prependLiveElement:
             prependLiveElement == _undefined || prependLiveElement == null
                 ? _instance.prependLiveElement
@@ -48056,6 +52395,15 @@ class _CopyWithImpl$Fragment$Section$$LabelSection$metadata<TRes>
             ? _instance.$__typename
             : ($__typename as String),
       ));
+
+  CopyWith$Fragment$Section$$LabelSection$metadata$page<TRes> get page {
+    final local$page = _instance.page;
+    return local$page == null
+        ? CopyWith$Fragment$Section$$LabelSection$metadata$page.stub(
+            _then(_instance))
+        : CopyWith$Fragment$Section$$LabelSection$metadata$page(
+            local$page, (e) => call(page: e));
+  }
 }
 
 class _CopyWithStubImpl$Fragment$Section$$LabelSection$metadata<TRes>
@@ -48070,7 +52418,140 @@ class _CopyWithStubImpl$Fragment$Section$$LabelSection$metadata<TRes>
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Fragment$Section$$LabelSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Fragment$Section$$LabelSection$metadata$page<TRes> get page =>
+      CopyWith$Fragment$Section$$LabelSection$metadata$page.stub(_res);
+}
+
+class Fragment$Section$$LabelSection$metadata$page
+    implements Fragment$ItemSection$$LabelSection$metadata$page {
+  Fragment$Section$$LabelSection$metadata$page({
+    required this.code,
+    this.$__typename = 'Page',
+  });
+
+  factory Fragment$Section$$LabelSection$metadata$page.fromJson(
+      Map<String, dynamic> json) {
+    final l$code = json['code'];
+    final l$$__typename = json['__typename'];
+    return Fragment$Section$$LabelSection$metadata$page(
+      code: (l$code as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String code;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$code = code;
+    _resultData['code'] = l$code;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$code = code;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$code,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Fragment$Section$$LabelSection$metadata$page) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$code = code;
+    final lOther$code = other.code;
+    if (l$code != lOther$code) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$Section$$LabelSection$metadata$page
+    on Fragment$Section$$LabelSection$metadata$page {
+  CopyWith$Fragment$Section$$LabelSection$metadata$page<
+          Fragment$Section$$LabelSection$metadata$page>
+      get copyWith => CopyWith$Fragment$Section$$LabelSection$metadata$page(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$Section$$LabelSection$metadata$page<TRes> {
+  factory CopyWith$Fragment$Section$$LabelSection$metadata$page(
+    Fragment$Section$$LabelSection$metadata$page instance,
+    TRes Function(Fragment$Section$$LabelSection$metadata$page) then,
+  ) = _CopyWithImpl$Fragment$Section$$LabelSection$metadata$page;
+
+  factory CopyWith$Fragment$Section$$LabelSection$metadata$page.stub(TRes res) =
+      _CopyWithStubImpl$Fragment$Section$$LabelSection$metadata$page;
+
+  TRes call({
+    String? code,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Fragment$Section$$LabelSection$metadata$page<TRes>
+    implements CopyWith$Fragment$Section$$LabelSection$metadata$page<TRes> {
+  _CopyWithImpl$Fragment$Section$$LabelSection$metadata$page(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$Section$$LabelSection$metadata$page _instance;
+
+  final TRes Function(Fragment$Section$$LabelSection$metadata$page) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? code = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Fragment$Section$$LabelSection$metadata$page(
+        code: code == _undefined || code == null
+            ? _instance.code
+            : (code as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Fragment$Section$$LabelSection$metadata$page<TRes>
+    implements CopyWith$Fragment$Section$$LabelSection$metadata$page<TRes> {
+  _CopyWithStubImpl$Fragment$Section$$LabelSection$metadata$page(this._res);
+
+  TRes _res;
+
+  call({
+    String? code,
     String? $__typename,
   }) =>
       _res;
@@ -48511,6 +52992,8 @@ class Fragment$Section$$AvatarSection$metadata
     required this.secondaryTitles,
     required this.collectionId,
     required this.useContext,
+    this.page,
+    this.limit,
     required this.prependLiveElement,
     this.$__typename = 'ItemSectionMetadata',
   });
@@ -48522,6 +53005,8 @@ class Fragment$Section$$AvatarSection$metadata
     final l$secondaryTitles = json['secondaryTitles'];
     final l$collectionId = json['collectionId'];
     final l$useContext = json['useContext'];
+    final l$page = json['page'];
+    final l$limit = json['limit'];
     final l$prependLiveElement = json['prependLiveElement'];
     final l$$__typename = json['__typename'];
     return Fragment$Section$$AvatarSection$metadata(
@@ -48530,6 +53015,11 @@ class Fragment$Section$$AvatarSection$metadata
       secondaryTitles: (l$secondaryTitles as bool),
       collectionId: (l$collectionId as String),
       useContext: (l$useContext as bool),
+      page: l$page == null
+          ? null
+          : Fragment$Section$$AvatarSection$metadata$page.fromJson(
+              (l$page as Map<String, dynamic>)),
+      limit: (l$limit as int?),
       prependLiveElement: (l$prependLiveElement as bool),
       $__typename: (l$$__typename as String),
     );
@@ -48544,6 +53034,10 @@ class Fragment$Section$$AvatarSection$metadata
   final String collectionId;
 
   final bool useContext;
+
+  final Fragment$Section$$AvatarSection$metadata$page? page;
+
+  final int? limit;
 
   final bool prependLiveElement;
 
@@ -48561,6 +53055,10 @@ class Fragment$Section$$AvatarSection$metadata
     _resultData['collectionId'] = l$collectionId;
     final l$useContext = useContext;
     _resultData['useContext'] = l$useContext;
+    final l$page = page;
+    _resultData['page'] = l$page?.toJson();
+    final l$limit = limit;
+    _resultData['limit'] = l$limit;
     final l$prependLiveElement = prependLiveElement;
     _resultData['prependLiveElement'] = l$prependLiveElement;
     final l$$__typename = $__typename;
@@ -48575,6 +53073,8 @@ class Fragment$Section$$AvatarSection$metadata
     final l$secondaryTitles = secondaryTitles;
     final l$collectionId = collectionId;
     final l$useContext = useContext;
+    final l$page = page;
+    final l$limit = limit;
     final l$prependLiveElement = prependLiveElement;
     final l$$__typename = $__typename;
     return Object.hashAll([
@@ -48583,6 +53083,8 @@ class Fragment$Section$$AvatarSection$metadata
       l$secondaryTitles,
       l$collectionId,
       l$useContext,
+      l$page,
+      l$limit,
       l$prependLiveElement,
       l$$__typename,
     ]);
@@ -48620,6 +53122,16 @@ class Fragment$Section$$AvatarSection$metadata
     final l$useContext = useContext;
     final lOther$useContext = other.useContext;
     if (l$useContext != lOther$useContext) {
+      return false;
+    }
+    final l$page = page;
+    final lOther$page = other.page;
+    if (l$page != lOther$page) {
+      return false;
+    }
+    final l$limit = limit;
+    final lOther$limit = other.limit;
+    if (l$limit != lOther$limit) {
       return false;
     }
     final l$prependLiveElement = prependLiveElement;
@@ -48661,9 +53173,12 @@ abstract class CopyWith$Fragment$Section$$AvatarSection$metadata<TRes> {
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Fragment$Section$$AvatarSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
     String? $__typename,
   });
+  CopyWith$Fragment$Section$$AvatarSection$metadata$page<TRes> get page;
 }
 
 class _CopyWithImpl$Fragment$Section$$AvatarSection$metadata<TRes>
@@ -48685,6 +53200,8 @@ class _CopyWithImpl$Fragment$Section$$AvatarSection$metadata<TRes>
     Object? secondaryTitles = _undefined,
     Object? collectionId = _undefined,
     Object? useContext = _undefined,
+    Object? page = _undefined,
+    Object? limit = _undefined,
     Object? prependLiveElement = _undefined,
     Object? $__typename = _undefined,
   }) =>
@@ -48706,6 +53223,10 @@ class _CopyWithImpl$Fragment$Section$$AvatarSection$metadata<TRes>
         useContext: useContext == _undefined || useContext == null
             ? _instance.useContext
             : (useContext as bool),
+        page: page == _undefined
+            ? _instance.page
+            : (page as Fragment$Section$$AvatarSection$metadata$page?),
+        limit: limit == _undefined ? _instance.limit : (limit as int?),
         prependLiveElement:
             prependLiveElement == _undefined || prependLiveElement == null
                 ? _instance.prependLiveElement
@@ -48714,6 +53235,15 @@ class _CopyWithImpl$Fragment$Section$$AvatarSection$metadata<TRes>
             ? _instance.$__typename
             : ($__typename as String),
       ));
+
+  CopyWith$Fragment$Section$$AvatarSection$metadata$page<TRes> get page {
+    final local$page = _instance.page;
+    return local$page == null
+        ? CopyWith$Fragment$Section$$AvatarSection$metadata$page.stub(
+            _then(_instance))
+        : CopyWith$Fragment$Section$$AvatarSection$metadata$page(
+            local$page, (e) => call(page: e));
+  }
 }
 
 class _CopyWithStubImpl$Fragment$Section$$AvatarSection$metadata<TRes>
@@ -48728,7 +53258,141 @@ class _CopyWithStubImpl$Fragment$Section$$AvatarSection$metadata<TRes>
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Fragment$Section$$AvatarSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Fragment$Section$$AvatarSection$metadata$page<TRes> get page =>
+      CopyWith$Fragment$Section$$AvatarSection$metadata$page.stub(_res);
+}
+
+class Fragment$Section$$AvatarSection$metadata$page
+    implements Fragment$ItemSection$$AvatarSection$metadata$page {
+  Fragment$Section$$AvatarSection$metadata$page({
+    required this.code,
+    this.$__typename = 'Page',
+  });
+
+  factory Fragment$Section$$AvatarSection$metadata$page.fromJson(
+      Map<String, dynamic> json) {
+    final l$code = json['code'];
+    final l$$__typename = json['__typename'];
+    return Fragment$Section$$AvatarSection$metadata$page(
+      code: (l$code as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String code;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$code = code;
+    _resultData['code'] = l$code;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$code = code;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$code,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Fragment$Section$$AvatarSection$metadata$page) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$code = code;
+    final lOther$code = other.code;
+    if (l$code != lOther$code) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$Section$$AvatarSection$metadata$page
+    on Fragment$Section$$AvatarSection$metadata$page {
+  CopyWith$Fragment$Section$$AvatarSection$metadata$page<
+          Fragment$Section$$AvatarSection$metadata$page>
+      get copyWith => CopyWith$Fragment$Section$$AvatarSection$metadata$page(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$Section$$AvatarSection$metadata$page<TRes> {
+  factory CopyWith$Fragment$Section$$AvatarSection$metadata$page(
+    Fragment$Section$$AvatarSection$metadata$page instance,
+    TRes Function(Fragment$Section$$AvatarSection$metadata$page) then,
+  ) = _CopyWithImpl$Fragment$Section$$AvatarSection$metadata$page;
+
+  factory CopyWith$Fragment$Section$$AvatarSection$metadata$page.stub(
+          TRes res) =
+      _CopyWithStubImpl$Fragment$Section$$AvatarSection$metadata$page;
+
+  TRes call({
+    String? code,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Fragment$Section$$AvatarSection$metadata$page<TRes>
+    implements CopyWith$Fragment$Section$$AvatarSection$metadata$page<TRes> {
+  _CopyWithImpl$Fragment$Section$$AvatarSection$metadata$page(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$Section$$AvatarSection$metadata$page _instance;
+
+  final TRes Function(Fragment$Section$$AvatarSection$metadata$page) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? code = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Fragment$Section$$AvatarSection$metadata$page(
+        code: code == _undefined || code == null
+            ? _instance.code
+            : (code as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Fragment$Section$$AvatarSection$metadata$page<TRes>
+    implements CopyWith$Fragment$Section$$AvatarSection$metadata$page<TRes> {
+  _CopyWithStubImpl$Fragment$Section$$AvatarSection$metadata$page(this._res);
+
+  TRes _res;
+
+  call({
+    String? code,
     String? $__typename,
   }) =>
       _res;

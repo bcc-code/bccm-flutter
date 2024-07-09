@@ -1431,6 +1431,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$metadata
     required this.secondaryTitles,
     required this.collectionId,
     required this.useContext,
+    this.page,
+    this.limit,
     required this.prependLiveElement,
     this.$__typename = 'ItemSectionMetadata',
   });
@@ -1442,6 +1444,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$metadata
     final l$secondaryTitles = json['secondaryTitles'];
     final l$collectionId = json['collectionId'];
     final l$useContext = json['useContext'];
+    final l$page = json['page'];
+    final l$limit = json['limit'];
     final l$prependLiveElement = json['prependLiveElement'];
     final l$$__typename = json['__typename'];
     return Query$FetchMoreItemsForItemSection$section$$PosterSection$metadata(
@@ -1450,6 +1454,11 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$metadata
       secondaryTitles: (l$secondaryTitles as bool),
       collectionId: (l$collectionId as String),
       useContext: (l$useContext as bool),
+      page: l$page == null
+          ? null
+          : Query$FetchMoreItemsForItemSection$section$$PosterSection$metadata$page
+              .fromJson((l$page as Map<String, dynamic>)),
+      limit: (l$limit as int?),
       prependLiveElement: (l$prependLiveElement as bool),
       $__typename: (l$$__typename as String),
     );
@@ -1464,6 +1473,11 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$metadata
   final String collectionId;
 
   final bool useContext;
+
+  final Query$FetchMoreItemsForItemSection$section$$PosterSection$metadata$page?
+      page;
+
+  final int? limit;
 
   final bool prependLiveElement;
 
@@ -1481,6 +1495,10 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$metadata
     _resultData['collectionId'] = l$collectionId;
     final l$useContext = useContext;
     _resultData['useContext'] = l$useContext;
+    final l$page = page;
+    _resultData['page'] = l$page?.toJson();
+    final l$limit = limit;
+    _resultData['limit'] = l$limit;
     final l$prependLiveElement = prependLiveElement;
     _resultData['prependLiveElement'] = l$prependLiveElement;
     final l$$__typename = $__typename;
@@ -1495,6 +1513,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$metadata
     final l$secondaryTitles = secondaryTitles;
     final l$collectionId = collectionId;
     final l$useContext = useContext;
+    final l$page = page;
+    final l$limit = limit;
     final l$prependLiveElement = prependLiveElement;
     final l$$__typename = $__typename;
     return Object.hashAll([
@@ -1503,6 +1523,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$metadata
       l$secondaryTitles,
       l$collectionId,
       l$useContext,
+      l$page,
+      l$limit,
       l$prependLiveElement,
       l$$__typename,
     ]);
@@ -1541,6 +1563,16 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$metadata
     final l$useContext = useContext;
     final lOther$useContext = other.useContext;
     if (l$useContext != lOther$useContext) {
+      return false;
+    }
+    final l$page = page;
+    final lOther$page = other.page;
+    if (l$page != lOther$page) {
+      return false;
+    }
+    final l$limit = limit;
+    final lOther$limit = other.limit;
+    if (l$limit != lOther$limit) {
       return false;
     }
     final l$prependLiveElement = prependLiveElement;
@@ -1587,9 +1619,14 @@ abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterSectio
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Query$FetchMoreItemsForItemSection$section$$PosterSection$metadata$page?
+        page,
+    int? limit,
     bool? prependLiveElement,
     String? $__typename,
   });
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterSection$metadata$page<
+      TRes> get page;
 }
 
 class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$PosterSection$metadata<
@@ -1616,6 +1653,8 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$PosterSection$me
     Object? secondaryTitles = _undefined,
     Object? collectionId = _undefined,
     Object? useContext = _undefined,
+    Object? page = _undefined,
+    Object? limit = _undefined,
     Object? prependLiveElement = _undefined,
     Object? $__typename = _undefined,
   }) =>
@@ -1637,6 +1676,11 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$PosterSection$me
         useContext: useContext == _undefined || useContext == null
             ? _instance.useContext
             : (useContext as bool),
+        page: page == _undefined
+            ? _instance.page
+            : (page
+                as Query$FetchMoreItemsForItemSection$section$$PosterSection$metadata$page?),
+        limit: limit == _undefined ? _instance.limit : (limit as int?),
         prependLiveElement:
             prependLiveElement == _undefined || prependLiveElement == null
                 ? _instance.prependLiveElement
@@ -1645,6 +1689,16 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$PosterSection$me
             ? _instance.$__typename
             : ($__typename as String),
       ));
+
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterSection$metadata$page<
+      TRes> get page {
+    final local$page = _instance.page;
+    return local$page == null
+        ? CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterSection$metadata$page
+            .stub(_then(_instance))
+        : CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterSection$metadata$page(
+            local$page, (e) => call(page: e));
+  }
 }
 
 class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$PosterSection$metadata<
@@ -1663,7 +1717,164 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$PosterSectio
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Query$FetchMoreItemsForItemSection$section$$PosterSection$metadata$page?
+        page,
+    int? limit,
     bool? prependLiveElement,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterSection$metadata$page<
+          TRes>
+      get page =>
+          CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterSection$metadata$page
+              .stub(_res);
+}
+
+class Query$FetchMoreItemsForItemSection$section$$PosterSection$metadata$page
+    implements
+        Fragment$Section$$PosterSection$metadata$page,
+        Fragment$ItemSection$$PosterSection$metadata$page {
+  Query$FetchMoreItemsForItemSection$section$$PosterSection$metadata$page({
+    required this.code,
+    this.$__typename = 'Page',
+  });
+
+  factory Query$FetchMoreItemsForItemSection$section$$PosterSection$metadata$page.fromJson(
+      Map<String, dynamic> json) {
+    final l$code = json['code'];
+    final l$$__typename = json['__typename'];
+    return Query$FetchMoreItemsForItemSection$section$$PosterSection$metadata$page(
+      code: (l$code as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String code;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$code = code;
+    _resultData['code'] = l$code;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$code = code;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$code,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Query$FetchMoreItemsForItemSection$section$$PosterSection$metadata$page) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$code = code;
+    final lOther$code = other.code;
+    if (l$code != lOther$code) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$PosterSection$metadata$page
+    on Query$FetchMoreItemsForItemSection$section$$PosterSection$metadata$page {
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterSection$metadata$page<
+          Query$FetchMoreItemsForItemSection$section$$PosterSection$metadata$page>
+      get copyWith =>
+          CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterSection$metadata$page(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterSection$metadata$page<
+    TRes> {
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterSection$metadata$page(
+    Query$FetchMoreItemsForItemSection$section$$PosterSection$metadata$page
+        instance,
+    TRes Function(
+            Query$FetchMoreItemsForItemSection$section$$PosterSection$metadata$page)
+        then,
+  ) = _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$PosterSection$metadata$page;
+
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterSection$metadata$page.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$PosterSection$metadata$page;
+
+  TRes call({
+    String? code,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$PosterSection$metadata$page<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterSection$metadata$page<
+            TRes> {
+  _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$PosterSection$metadata$page(
+    this._instance,
+    this._then,
+  );
+
+  final Query$FetchMoreItemsForItemSection$section$$PosterSection$metadata$page
+      _instance;
+
+  final TRes Function(
+          Query$FetchMoreItemsForItemSection$section$$PosterSection$metadata$page)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? code = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(
+          Query$FetchMoreItemsForItemSection$section$$PosterSection$metadata$page(
+        code: code == _undefined || code == null
+            ? _instance.code
+            : (code as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$PosterSection$metadata$page<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterSection$metadata$page<
+            TRes> {
+  _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$PosterSection$metadata$page(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? code,
     String? $__typename,
   }) =>
       _res;
@@ -6359,6 +6570,8 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$metadata
     required this.secondaryTitles,
     required this.collectionId,
     required this.useContext,
+    this.page,
+    this.limit,
     required this.prependLiveElement,
     this.$__typename = 'ItemSectionMetadata',
   });
@@ -6370,6 +6583,8 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$metadata
     final l$secondaryTitles = json['secondaryTitles'];
     final l$collectionId = json['collectionId'];
     final l$useContext = json['useContext'];
+    final l$page = json['page'];
+    final l$limit = json['limit'];
     final l$prependLiveElement = json['prependLiveElement'];
     final l$$__typename = json['__typename'];
     return Query$FetchMoreItemsForItemSection$section$$FeaturedSection$metadata(
@@ -6378,6 +6593,11 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$metadata
       secondaryTitles: (l$secondaryTitles as bool),
       collectionId: (l$collectionId as String),
       useContext: (l$useContext as bool),
+      page: l$page == null
+          ? null
+          : Query$FetchMoreItemsForItemSection$section$$FeaturedSection$metadata$page
+              .fromJson((l$page as Map<String, dynamic>)),
+      limit: (l$limit as int?),
       prependLiveElement: (l$prependLiveElement as bool),
       $__typename: (l$$__typename as String),
     );
@@ -6392,6 +6612,11 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$metadata
   final String collectionId;
 
   final bool useContext;
+
+  final Query$FetchMoreItemsForItemSection$section$$FeaturedSection$metadata$page?
+      page;
+
+  final int? limit;
 
   final bool prependLiveElement;
 
@@ -6409,6 +6634,10 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$metadata
     _resultData['collectionId'] = l$collectionId;
     final l$useContext = useContext;
     _resultData['useContext'] = l$useContext;
+    final l$page = page;
+    _resultData['page'] = l$page?.toJson();
+    final l$limit = limit;
+    _resultData['limit'] = l$limit;
     final l$prependLiveElement = prependLiveElement;
     _resultData['prependLiveElement'] = l$prependLiveElement;
     final l$$__typename = $__typename;
@@ -6423,6 +6652,8 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$metadata
     final l$secondaryTitles = secondaryTitles;
     final l$collectionId = collectionId;
     final l$useContext = useContext;
+    final l$page = page;
+    final l$limit = limit;
     final l$prependLiveElement = prependLiveElement;
     final l$$__typename = $__typename;
     return Object.hashAll([
@@ -6431,6 +6662,8 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$metadata
       l$secondaryTitles,
       l$collectionId,
       l$useContext,
+      l$page,
+      l$limit,
       l$prependLiveElement,
       l$$__typename,
     ]);
@@ -6469,6 +6702,16 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$metadata
     final l$useContext = useContext;
     final lOther$useContext = other.useContext;
     if (l$useContext != lOther$useContext) {
+      return false;
+    }
+    final l$page = page;
+    final lOther$page = other.page;
+    if (l$page != lOther$page) {
+      return false;
+    }
+    final l$limit = limit;
+    final lOther$limit = other.limit;
+    if (l$limit != lOther$limit) {
       return false;
     }
     final l$prependLiveElement = prependLiveElement;
@@ -6516,9 +6759,14 @@ abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$FeaturedSect
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Query$FetchMoreItemsForItemSection$section$$FeaturedSection$metadata$page?
+        page,
+    int? limit,
     bool? prependLiveElement,
     String? $__typename,
   });
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$metadata$page<
+      TRes> get page;
 }
 
 class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$metadata<
@@ -6546,6 +6794,8 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$
     Object? secondaryTitles = _undefined,
     Object? collectionId = _undefined,
     Object? useContext = _undefined,
+    Object? page = _undefined,
+    Object? limit = _undefined,
     Object? prependLiveElement = _undefined,
     Object? $__typename = _undefined,
   }) =>
@@ -6568,6 +6818,11 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$
         useContext: useContext == _undefined || useContext == null
             ? _instance.useContext
             : (useContext as bool),
+        page: page == _undefined
+            ? _instance.page
+            : (page
+                as Query$FetchMoreItemsForItemSection$section$$FeaturedSection$metadata$page?),
+        limit: limit == _undefined ? _instance.limit : (limit as int?),
         prependLiveElement:
             prependLiveElement == _undefined || prependLiveElement == null
                 ? _instance.prependLiveElement
@@ -6576,6 +6831,16 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$
             ? _instance.$__typename
             : ($__typename as String),
       ));
+
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$metadata$page<
+      TRes> get page {
+    final local$page = _instance.page;
+    return local$page == null
+        ? CopyWith$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$metadata$page
+            .stub(_then(_instance))
+        : CopyWith$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$metadata$page(
+            local$page, (e) => call(page: e));
+  }
 }
 
 class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$metadata<
@@ -6594,7 +6859,164 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$FeaturedSect
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Query$FetchMoreItemsForItemSection$section$$FeaturedSection$metadata$page?
+        page,
+    int? limit,
     bool? prependLiveElement,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$metadata$page<
+          TRes>
+      get page =>
+          CopyWith$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$metadata$page
+              .stub(_res);
+}
+
+class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$metadata$page
+    implements
+        Fragment$Section$$FeaturedSection$metadata$page,
+        Fragment$ItemSection$$FeaturedSection$metadata$page {
+  Query$FetchMoreItemsForItemSection$section$$FeaturedSection$metadata$page({
+    required this.code,
+    this.$__typename = 'Page',
+  });
+
+  factory Query$FetchMoreItemsForItemSection$section$$FeaturedSection$metadata$page.fromJson(
+      Map<String, dynamic> json) {
+    final l$code = json['code'];
+    final l$$__typename = json['__typename'];
+    return Query$FetchMoreItemsForItemSection$section$$FeaturedSection$metadata$page(
+      code: (l$code as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String code;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$code = code;
+    _resultData['code'] = l$code;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$code = code;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$code,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Query$FetchMoreItemsForItemSection$section$$FeaturedSection$metadata$page) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$code = code;
+    final lOther$code = other.code;
+    if (l$code != lOther$code) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$metadata$page
+    on Query$FetchMoreItemsForItemSection$section$$FeaturedSection$metadata$page {
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$metadata$page<
+          Query$FetchMoreItemsForItemSection$section$$FeaturedSection$metadata$page>
+      get copyWith =>
+          CopyWith$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$metadata$page(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$metadata$page<
+    TRes> {
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$metadata$page(
+    Query$FetchMoreItemsForItemSection$section$$FeaturedSection$metadata$page
+        instance,
+    TRes Function(
+            Query$FetchMoreItemsForItemSection$section$$FeaturedSection$metadata$page)
+        then,
+  ) = _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$metadata$page;
+
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$metadata$page.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$metadata$page;
+
+  TRes call({
+    String? code,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$metadata$page<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$metadata$page<
+            TRes> {
+  _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$metadata$page(
+    this._instance,
+    this._then,
+  );
+
+  final Query$FetchMoreItemsForItemSection$section$$FeaturedSection$metadata$page
+      _instance;
+
+  final TRes Function(
+          Query$FetchMoreItemsForItemSection$section$$FeaturedSection$metadata$page)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? code = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(
+          Query$FetchMoreItemsForItemSection$section$$FeaturedSection$metadata$page(
+        code: code == _undefined || code == null
+            ? _instance.code
+            : (code as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$metadata$page<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$metadata$page<
+            TRes> {
+  _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$metadata$page(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? code,
     String? $__typename,
   }) =>
       _res;
@@ -9803,6 +10225,8 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection$metadata
     required this.secondaryTitles,
     required this.collectionId,
     required this.useContext,
+    this.page,
+    this.limit,
     required this.prependLiveElement,
     this.$__typename = 'ItemSectionMetadata',
   });
@@ -9814,6 +10238,8 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection$metadata
     final l$secondaryTitles = json['secondaryTitles'];
     final l$collectionId = json['collectionId'];
     final l$useContext = json['useContext'];
+    final l$page = json['page'];
+    final l$limit = json['limit'];
     final l$prependLiveElement = json['prependLiveElement'];
     final l$$__typename = json['__typename'];
     return Query$FetchMoreItemsForItemSection$section$$DefaultSection$metadata(
@@ -9822,6 +10248,11 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection$metadata
       secondaryTitles: (l$secondaryTitles as bool),
       collectionId: (l$collectionId as String),
       useContext: (l$useContext as bool),
+      page: l$page == null
+          ? null
+          : Query$FetchMoreItemsForItemSection$section$$DefaultSection$metadata$page
+              .fromJson((l$page as Map<String, dynamic>)),
+      limit: (l$limit as int?),
       prependLiveElement: (l$prependLiveElement as bool),
       $__typename: (l$$__typename as String),
     );
@@ -9836,6 +10267,11 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection$metadata
   final String collectionId;
 
   final bool useContext;
+
+  final Query$FetchMoreItemsForItemSection$section$$DefaultSection$metadata$page?
+      page;
+
+  final int? limit;
 
   final bool prependLiveElement;
 
@@ -9853,6 +10289,10 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection$metadata
     _resultData['collectionId'] = l$collectionId;
     final l$useContext = useContext;
     _resultData['useContext'] = l$useContext;
+    final l$page = page;
+    _resultData['page'] = l$page?.toJson();
+    final l$limit = limit;
+    _resultData['limit'] = l$limit;
     final l$prependLiveElement = prependLiveElement;
     _resultData['prependLiveElement'] = l$prependLiveElement;
     final l$$__typename = $__typename;
@@ -9867,6 +10307,8 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection$metadata
     final l$secondaryTitles = secondaryTitles;
     final l$collectionId = collectionId;
     final l$useContext = useContext;
+    final l$page = page;
+    final l$limit = limit;
     final l$prependLiveElement = prependLiveElement;
     final l$$__typename = $__typename;
     return Object.hashAll([
@@ -9875,6 +10317,8 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection$metadata
       l$secondaryTitles,
       l$collectionId,
       l$useContext,
+      l$page,
+      l$limit,
       l$prependLiveElement,
       l$$__typename,
     ]);
@@ -9913,6 +10357,16 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection$metadata
     final l$useContext = useContext;
     final lOther$useContext = other.useContext;
     if (l$useContext != lOther$useContext) {
+      return false;
+    }
+    final l$page = page;
+    final lOther$page = other.page;
+    if (l$page != lOther$page) {
+      return false;
+    }
+    final l$limit = limit;
+    final lOther$limit = other.limit;
+    if (l$limit != lOther$limit) {
       return false;
     }
     final l$prependLiveElement = prependLiveElement;
@@ -9960,9 +10414,14 @@ abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultSecti
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Query$FetchMoreItemsForItemSection$section$$DefaultSection$metadata$page?
+        page,
+    int? limit,
     bool? prependLiveElement,
     String? $__typename,
   });
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultSection$metadata$page<
+      TRes> get page;
 }
 
 class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$DefaultSection$metadata<
@@ -9990,6 +10449,8 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$DefaultSection$m
     Object? secondaryTitles = _undefined,
     Object? collectionId = _undefined,
     Object? useContext = _undefined,
+    Object? page = _undefined,
+    Object? limit = _undefined,
     Object? prependLiveElement = _undefined,
     Object? $__typename = _undefined,
   }) =>
@@ -10011,6 +10472,11 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$DefaultSection$m
         useContext: useContext == _undefined || useContext == null
             ? _instance.useContext
             : (useContext as bool),
+        page: page == _undefined
+            ? _instance.page
+            : (page
+                as Query$FetchMoreItemsForItemSection$section$$DefaultSection$metadata$page?),
+        limit: limit == _undefined ? _instance.limit : (limit as int?),
         prependLiveElement:
             prependLiveElement == _undefined || prependLiveElement == null
                 ? _instance.prependLiveElement
@@ -10019,6 +10485,16 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$DefaultSection$m
             ? _instance.$__typename
             : ($__typename as String),
       ));
+
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultSection$metadata$page<
+      TRes> get page {
+    final local$page = _instance.page;
+    return local$page == null
+        ? CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultSection$metadata$page
+            .stub(_then(_instance))
+        : CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultSection$metadata$page(
+            local$page, (e) => call(page: e));
+  }
 }
 
 class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$DefaultSection$metadata<
@@ -10037,7 +10513,164 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$DefaultSecti
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Query$FetchMoreItemsForItemSection$section$$DefaultSection$metadata$page?
+        page,
+    int? limit,
     bool? prependLiveElement,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultSection$metadata$page<
+          TRes>
+      get page =>
+          CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultSection$metadata$page
+              .stub(_res);
+}
+
+class Query$FetchMoreItemsForItemSection$section$$DefaultSection$metadata$page
+    implements
+        Fragment$Section$$DefaultSection$metadata$page,
+        Fragment$ItemSection$$DefaultSection$metadata$page {
+  Query$FetchMoreItemsForItemSection$section$$DefaultSection$metadata$page({
+    required this.code,
+    this.$__typename = 'Page',
+  });
+
+  factory Query$FetchMoreItemsForItemSection$section$$DefaultSection$metadata$page.fromJson(
+      Map<String, dynamic> json) {
+    final l$code = json['code'];
+    final l$$__typename = json['__typename'];
+    return Query$FetchMoreItemsForItemSection$section$$DefaultSection$metadata$page(
+      code: (l$code as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String code;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$code = code;
+    _resultData['code'] = l$code;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$code = code;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$code,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Query$FetchMoreItemsForItemSection$section$$DefaultSection$metadata$page) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$code = code;
+    final lOther$code = other.code;
+    if (l$code != lOther$code) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$DefaultSection$metadata$page
+    on Query$FetchMoreItemsForItemSection$section$$DefaultSection$metadata$page {
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultSection$metadata$page<
+          Query$FetchMoreItemsForItemSection$section$$DefaultSection$metadata$page>
+      get copyWith =>
+          CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultSection$metadata$page(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultSection$metadata$page<
+    TRes> {
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultSection$metadata$page(
+    Query$FetchMoreItemsForItemSection$section$$DefaultSection$metadata$page
+        instance,
+    TRes Function(
+            Query$FetchMoreItemsForItemSection$section$$DefaultSection$metadata$page)
+        then,
+  ) = _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$DefaultSection$metadata$page;
+
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultSection$metadata$page.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$DefaultSection$metadata$page;
+
+  TRes call({
+    String? code,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$DefaultSection$metadata$page<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultSection$metadata$page<
+            TRes> {
+  _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$DefaultSection$metadata$page(
+    this._instance,
+    this._then,
+  );
+
+  final Query$FetchMoreItemsForItemSection$section$$DefaultSection$metadata$page
+      _instance;
+
+  final TRes Function(
+          Query$FetchMoreItemsForItemSection$section$$DefaultSection$metadata$page)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? code = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(
+          Query$FetchMoreItemsForItemSection$section$$DefaultSection$metadata$page(
+        code: code == _undefined || code == null
+            ? _instance.code
+            : (code as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$DefaultSection$metadata$page<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultSection$metadata$page<
+            TRes> {
+  _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$DefaultSection$metadata$page(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? code,
     String? $__typename,
   }) =>
       _res;
@@ -13239,6 +13872,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$metadata
     required this.secondaryTitles,
     required this.collectionId,
     required this.useContext,
+    this.page,
+    this.limit,
     required this.prependLiveElement,
     this.$__typename = 'ItemSectionMetadata',
   });
@@ -13250,6 +13885,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$metadata
     final l$secondaryTitles = json['secondaryTitles'];
     final l$collectionId = json['collectionId'];
     final l$useContext = json['useContext'];
+    final l$page = json['page'];
+    final l$limit = json['limit'];
     final l$prependLiveElement = json['prependLiveElement'];
     final l$$__typename = json['__typename'];
     return Query$FetchMoreItemsForItemSection$section$$CardSection$metadata(
@@ -13258,6 +13895,11 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$metadata
       secondaryTitles: (l$secondaryTitles as bool),
       collectionId: (l$collectionId as String),
       useContext: (l$useContext as bool),
+      page: l$page == null
+          ? null
+          : Query$FetchMoreItemsForItemSection$section$$CardSection$metadata$page
+              .fromJson((l$page as Map<String, dynamic>)),
+      limit: (l$limit as int?),
       prependLiveElement: (l$prependLiveElement as bool),
       $__typename: (l$$__typename as String),
     );
@@ -13272,6 +13914,11 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$metadata
   final String collectionId;
 
   final bool useContext;
+
+  final Query$FetchMoreItemsForItemSection$section$$CardSection$metadata$page?
+      page;
+
+  final int? limit;
 
   final bool prependLiveElement;
 
@@ -13289,6 +13936,10 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$metadata
     _resultData['collectionId'] = l$collectionId;
     final l$useContext = useContext;
     _resultData['useContext'] = l$useContext;
+    final l$page = page;
+    _resultData['page'] = l$page?.toJson();
+    final l$limit = limit;
+    _resultData['limit'] = l$limit;
     final l$prependLiveElement = prependLiveElement;
     _resultData['prependLiveElement'] = l$prependLiveElement;
     final l$$__typename = $__typename;
@@ -13303,6 +13954,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$metadata
     final l$secondaryTitles = secondaryTitles;
     final l$collectionId = collectionId;
     final l$useContext = useContext;
+    final l$page = page;
+    final l$limit = limit;
     final l$prependLiveElement = prependLiveElement;
     final l$$__typename = $__typename;
     return Object.hashAll([
@@ -13311,6 +13964,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$metadata
       l$secondaryTitles,
       l$collectionId,
       l$useContext,
+      l$page,
+      l$limit,
       l$prependLiveElement,
       l$$__typename,
     ]);
@@ -13349,6 +14004,16 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$metadata
     final l$useContext = useContext;
     final lOther$useContext = other.useContext;
     if (l$useContext != lOther$useContext) {
+      return false;
+    }
+    final l$page = page;
+    final lOther$page = other.page;
+    if (l$page != lOther$page) {
+      return false;
+    }
+    final l$limit = limit;
+    final lOther$limit = other.limit;
+    if (l$limit != lOther$limit) {
       return false;
     }
     final l$prependLiveElement = prependLiveElement;
@@ -13395,9 +14060,13 @@ abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$CardSection$
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Query$FetchMoreItemsForItemSection$section$$CardSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
     String? $__typename,
   });
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$CardSection$metadata$page<
+      TRes> get page;
 }
 
 class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$CardSection$metadata<
@@ -13424,6 +14093,8 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$CardSection$meta
     Object? secondaryTitles = _undefined,
     Object? collectionId = _undefined,
     Object? useContext = _undefined,
+    Object? page = _undefined,
+    Object? limit = _undefined,
     Object? prependLiveElement = _undefined,
     Object? $__typename = _undefined,
   }) =>
@@ -13445,6 +14116,11 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$CardSection$meta
         useContext: useContext == _undefined || useContext == null
             ? _instance.useContext
             : (useContext as bool),
+        page: page == _undefined
+            ? _instance.page
+            : (page
+                as Query$FetchMoreItemsForItemSection$section$$CardSection$metadata$page?),
+        limit: limit == _undefined ? _instance.limit : (limit as int?),
         prependLiveElement:
             prependLiveElement == _undefined || prependLiveElement == null
                 ? _instance.prependLiveElement
@@ -13453,6 +14129,16 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$CardSection$meta
             ? _instance.$__typename
             : ($__typename as String),
       ));
+
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$CardSection$metadata$page<
+      TRes> get page {
+    final local$page = _instance.page;
+    return local$page == null
+        ? CopyWith$Query$FetchMoreItemsForItemSection$section$$CardSection$metadata$page
+            .stub(_then(_instance))
+        : CopyWith$Query$FetchMoreItemsForItemSection$section$$CardSection$metadata$page(
+            local$page, (e) => call(page: e));
+  }
 }
 
 class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$CardSection$metadata<
@@ -13471,7 +14157,163 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$CardSection$
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Query$FetchMoreItemsForItemSection$section$$CardSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$CardSection$metadata$page<
+          TRes>
+      get page =>
+          CopyWith$Query$FetchMoreItemsForItemSection$section$$CardSection$metadata$page
+              .stub(_res);
+}
+
+class Query$FetchMoreItemsForItemSection$section$$CardSection$metadata$page
+    implements
+        Fragment$Section$$CardSection$metadata$page,
+        Fragment$ItemSection$$CardSection$metadata$page {
+  Query$FetchMoreItemsForItemSection$section$$CardSection$metadata$page({
+    required this.code,
+    this.$__typename = 'Page',
+  });
+
+  factory Query$FetchMoreItemsForItemSection$section$$CardSection$metadata$page.fromJson(
+      Map<String, dynamic> json) {
+    final l$code = json['code'];
+    final l$$__typename = json['__typename'];
+    return Query$FetchMoreItemsForItemSection$section$$CardSection$metadata$page(
+      code: (l$code as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String code;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$code = code;
+    _resultData['code'] = l$code;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$code = code;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$code,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Query$FetchMoreItemsForItemSection$section$$CardSection$metadata$page) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$code = code;
+    final lOther$code = other.code;
+    if (l$code != lOther$code) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$CardSection$metadata$page
+    on Query$FetchMoreItemsForItemSection$section$$CardSection$metadata$page {
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$CardSection$metadata$page<
+          Query$FetchMoreItemsForItemSection$section$$CardSection$metadata$page>
+      get copyWith =>
+          CopyWith$Query$FetchMoreItemsForItemSection$section$$CardSection$metadata$page(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$CardSection$metadata$page<
+    TRes> {
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$CardSection$metadata$page(
+    Query$FetchMoreItemsForItemSection$section$$CardSection$metadata$page
+        instance,
+    TRes Function(
+            Query$FetchMoreItemsForItemSection$section$$CardSection$metadata$page)
+        then,
+  ) = _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$CardSection$metadata$page;
+
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$CardSection$metadata$page.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$CardSection$metadata$page;
+
+  TRes call({
+    String? code,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$CardSection$metadata$page<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$CardSection$metadata$page<
+            TRes> {
+  _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$CardSection$metadata$page(
+    this._instance,
+    this._then,
+  );
+
+  final Query$FetchMoreItemsForItemSection$section$$CardSection$metadata$page
+      _instance;
+
+  final TRes Function(
+          Query$FetchMoreItemsForItemSection$section$$CardSection$metadata$page)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? code = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(
+          Query$FetchMoreItemsForItemSection$section$$CardSection$metadata$page(
+        code: code == _undefined || code == null
+            ? _instance.code
+            : (code as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$CardSection$metadata$page<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$CardSection$metadata$page<
+            TRes> {
+  _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$CardSection$metadata$page(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? code,
     String? $__typename,
   }) =>
       _res;
@@ -16820,6 +17662,8 @@ class Query$FetchMoreItemsForItemSection$section$$ListSection$metadata
     required this.secondaryTitles,
     required this.collectionId,
     required this.useContext,
+    this.page,
+    this.limit,
     required this.prependLiveElement,
     this.$__typename = 'ItemSectionMetadata',
   });
@@ -16831,6 +17675,8 @@ class Query$FetchMoreItemsForItemSection$section$$ListSection$metadata
     final l$secondaryTitles = json['secondaryTitles'];
     final l$collectionId = json['collectionId'];
     final l$useContext = json['useContext'];
+    final l$page = json['page'];
+    final l$limit = json['limit'];
     final l$prependLiveElement = json['prependLiveElement'];
     final l$$__typename = json['__typename'];
     return Query$FetchMoreItemsForItemSection$section$$ListSection$metadata(
@@ -16839,6 +17685,11 @@ class Query$FetchMoreItemsForItemSection$section$$ListSection$metadata
       secondaryTitles: (l$secondaryTitles as bool),
       collectionId: (l$collectionId as String),
       useContext: (l$useContext as bool),
+      page: l$page == null
+          ? null
+          : Query$FetchMoreItemsForItemSection$section$$ListSection$metadata$page
+              .fromJson((l$page as Map<String, dynamic>)),
+      limit: (l$limit as int?),
       prependLiveElement: (l$prependLiveElement as bool),
       $__typename: (l$$__typename as String),
     );
@@ -16853,6 +17704,11 @@ class Query$FetchMoreItemsForItemSection$section$$ListSection$metadata
   final String collectionId;
 
   final bool useContext;
+
+  final Query$FetchMoreItemsForItemSection$section$$ListSection$metadata$page?
+      page;
+
+  final int? limit;
 
   final bool prependLiveElement;
 
@@ -16870,6 +17726,10 @@ class Query$FetchMoreItemsForItemSection$section$$ListSection$metadata
     _resultData['collectionId'] = l$collectionId;
     final l$useContext = useContext;
     _resultData['useContext'] = l$useContext;
+    final l$page = page;
+    _resultData['page'] = l$page?.toJson();
+    final l$limit = limit;
+    _resultData['limit'] = l$limit;
     final l$prependLiveElement = prependLiveElement;
     _resultData['prependLiveElement'] = l$prependLiveElement;
     final l$$__typename = $__typename;
@@ -16884,6 +17744,8 @@ class Query$FetchMoreItemsForItemSection$section$$ListSection$metadata
     final l$secondaryTitles = secondaryTitles;
     final l$collectionId = collectionId;
     final l$useContext = useContext;
+    final l$page = page;
+    final l$limit = limit;
     final l$prependLiveElement = prependLiveElement;
     final l$$__typename = $__typename;
     return Object.hashAll([
@@ -16892,6 +17754,8 @@ class Query$FetchMoreItemsForItemSection$section$$ListSection$metadata
       l$secondaryTitles,
       l$collectionId,
       l$useContext,
+      l$page,
+      l$limit,
       l$prependLiveElement,
       l$$__typename,
     ]);
@@ -16930,6 +17794,16 @@ class Query$FetchMoreItemsForItemSection$section$$ListSection$metadata
     final l$useContext = useContext;
     final lOther$useContext = other.useContext;
     if (l$useContext != lOther$useContext) {
+      return false;
+    }
+    final l$page = page;
+    final lOther$page = other.page;
+    if (l$page != lOther$page) {
+      return false;
+    }
+    final l$limit = limit;
+    final lOther$limit = other.limit;
+    if (l$limit != lOther$limit) {
       return false;
     }
     final l$prependLiveElement = prependLiveElement;
@@ -16976,9 +17850,13 @@ abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$ListSection$
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Query$FetchMoreItemsForItemSection$section$$ListSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
     String? $__typename,
   });
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$ListSection$metadata$page<
+      TRes> get page;
 }
 
 class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$ListSection$metadata<
@@ -17005,6 +17883,8 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$ListSection$meta
     Object? secondaryTitles = _undefined,
     Object? collectionId = _undefined,
     Object? useContext = _undefined,
+    Object? page = _undefined,
+    Object? limit = _undefined,
     Object? prependLiveElement = _undefined,
     Object? $__typename = _undefined,
   }) =>
@@ -17026,6 +17906,11 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$ListSection$meta
         useContext: useContext == _undefined || useContext == null
             ? _instance.useContext
             : (useContext as bool),
+        page: page == _undefined
+            ? _instance.page
+            : (page
+                as Query$FetchMoreItemsForItemSection$section$$ListSection$metadata$page?),
+        limit: limit == _undefined ? _instance.limit : (limit as int?),
         prependLiveElement:
             prependLiveElement == _undefined || prependLiveElement == null
                 ? _instance.prependLiveElement
@@ -17034,6 +17919,16 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$ListSection$meta
             ? _instance.$__typename
             : ($__typename as String),
       ));
+
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$ListSection$metadata$page<
+      TRes> get page {
+    final local$page = _instance.page;
+    return local$page == null
+        ? CopyWith$Query$FetchMoreItemsForItemSection$section$$ListSection$metadata$page
+            .stub(_then(_instance))
+        : CopyWith$Query$FetchMoreItemsForItemSection$section$$ListSection$metadata$page(
+            local$page, (e) => call(page: e));
+  }
 }
 
 class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$ListSection$metadata<
@@ -17052,7 +17947,163 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$ListSection$
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Query$FetchMoreItemsForItemSection$section$$ListSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$ListSection$metadata$page<
+          TRes>
+      get page =>
+          CopyWith$Query$FetchMoreItemsForItemSection$section$$ListSection$metadata$page
+              .stub(_res);
+}
+
+class Query$FetchMoreItemsForItemSection$section$$ListSection$metadata$page
+    implements
+        Fragment$Section$$ListSection$metadata$page,
+        Fragment$ItemSection$$ListSection$metadata$page {
+  Query$FetchMoreItemsForItemSection$section$$ListSection$metadata$page({
+    required this.code,
+    this.$__typename = 'Page',
+  });
+
+  factory Query$FetchMoreItemsForItemSection$section$$ListSection$metadata$page.fromJson(
+      Map<String, dynamic> json) {
+    final l$code = json['code'];
+    final l$$__typename = json['__typename'];
+    return Query$FetchMoreItemsForItemSection$section$$ListSection$metadata$page(
+      code: (l$code as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String code;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$code = code;
+    _resultData['code'] = l$code;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$code = code;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$code,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Query$FetchMoreItemsForItemSection$section$$ListSection$metadata$page) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$code = code;
+    final lOther$code = other.code;
+    if (l$code != lOther$code) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$ListSection$metadata$page
+    on Query$FetchMoreItemsForItemSection$section$$ListSection$metadata$page {
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$ListSection$metadata$page<
+          Query$FetchMoreItemsForItemSection$section$$ListSection$metadata$page>
+      get copyWith =>
+          CopyWith$Query$FetchMoreItemsForItemSection$section$$ListSection$metadata$page(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$ListSection$metadata$page<
+    TRes> {
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$ListSection$metadata$page(
+    Query$FetchMoreItemsForItemSection$section$$ListSection$metadata$page
+        instance,
+    TRes Function(
+            Query$FetchMoreItemsForItemSection$section$$ListSection$metadata$page)
+        then,
+  ) = _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$ListSection$metadata$page;
+
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$ListSection$metadata$page.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$ListSection$metadata$page;
+
+  TRes call({
+    String? code,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$ListSection$metadata$page<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$ListSection$metadata$page<
+            TRes> {
+  _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$ListSection$metadata$page(
+    this._instance,
+    this._then,
+  );
+
+  final Query$FetchMoreItemsForItemSection$section$$ListSection$metadata$page
+      _instance;
+
+  final TRes Function(
+          Query$FetchMoreItemsForItemSection$section$$ListSection$metadata$page)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? code = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(
+          Query$FetchMoreItemsForItemSection$section$$ListSection$metadata$page(
+        code: code == _undefined || code == null
+            ? _instance.code
+            : (code as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$ListSection$metadata$page<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$ListSection$metadata$page<
+            TRes> {
+  _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$ListSection$metadata$page(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? code,
     String? $__typename,
   }) =>
       _res;
@@ -20276,6 +21327,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$metadata
     required this.secondaryTitles,
     required this.collectionId,
     required this.useContext,
+    this.page,
+    this.limit,
     required this.prependLiveElement,
     this.$__typename = 'ItemSectionMetadata',
   });
@@ -20287,6 +21340,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$metadata
     final l$secondaryTitles = json['secondaryTitles'];
     final l$collectionId = json['collectionId'];
     final l$useContext = json['useContext'];
+    final l$page = json['page'];
+    final l$limit = json['limit'];
     final l$prependLiveElement = json['prependLiveElement'];
     final l$$__typename = json['__typename'];
     return Query$FetchMoreItemsForItemSection$section$$CardListSection$metadata(
@@ -20295,6 +21350,11 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$metadata
       secondaryTitles: (l$secondaryTitles as bool),
       collectionId: (l$collectionId as String),
       useContext: (l$useContext as bool),
+      page: l$page == null
+          ? null
+          : Query$FetchMoreItemsForItemSection$section$$CardListSection$metadata$page
+              .fromJson((l$page as Map<String, dynamic>)),
+      limit: (l$limit as int?),
       prependLiveElement: (l$prependLiveElement as bool),
       $__typename: (l$$__typename as String),
     );
@@ -20309,6 +21369,11 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$metadata
   final String collectionId;
 
   final bool useContext;
+
+  final Query$FetchMoreItemsForItemSection$section$$CardListSection$metadata$page?
+      page;
+
+  final int? limit;
 
   final bool prependLiveElement;
 
@@ -20326,6 +21391,10 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$metadata
     _resultData['collectionId'] = l$collectionId;
     final l$useContext = useContext;
     _resultData['useContext'] = l$useContext;
+    final l$page = page;
+    _resultData['page'] = l$page?.toJson();
+    final l$limit = limit;
+    _resultData['limit'] = l$limit;
     final l$prependLiveElement = prependLiveElement;
     _resultData['prependLiveElement'] = l$prependLiveElement;
     final l$$__typename = $__typename;
@@ -20340,6 +21409,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$metadata
     final l$secondaryTitles = secondaryTitles;
     final l$collectionId = collectionId;
     final l$useContext = useContext;
+    final l$page = page;
+    final l$limit = limit;
     final l$prependLiveElement = prependLiveElement;
     final l$$__typename = $__typename;
     return Object.hashAll([
@@ -20348,6 +21419,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$metadata
       l$secondaryTitles,
       l$collectionId,
       l$useContext,
+      l$page,
+      l$limit,
       l$prependLiveElement,
       l$$__typename,
     ]);
@@ -20386,6 +21459,16 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$metadata
     final l$useContext = useContext;
     final lOther$useContext = other.useContext;
     if (l$useContext != lOther$useContext) {
+      return false;
+    }
+    final l$page = page;
+    final lOther$page = other.page;
+    if (l$page != lOther$page) {
+      return false;
+    }
+    final l$limit = limit;
+    final lOther$limit = other.limit;
+    if (l$limit != lOther$limit) {
       return false;
     }
     final l$prependLiveElement = prependLiveElement;
@@ -20433,9 +21516,14 @@ abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$CardListSect
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Query$FetchMoreItemsForItemSection$section$$CardListSection$metadata$page?
+        page,
+    int? limit,
     bool? prependLiveElement,
     String? $__typename,
   });
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$CardListSection$metadata$page<
+      TRes> get page;
 }
 
 class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$CardListSection$metadata<
@@ -20463,6 +21551,8 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$CardListSection$
     Object? secondaryTitles = _undefined,
     Object? collectionId = _undefined,
     Object? useContext = _undefined,
+    Object? page = _undefined,
+    Object? limit = _undefined,
     Object? prependLiveElement = _undefined,
     Object? $__typename = _undefined,
   }) =>
@@ -20485,6 +21575,11 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$CardListSection$
         useContext: useContext == _undefined || useContext == null
             ? _instance.useContext
             : (useContext as bool),
+        page: page == _undefined
+            ? _instance.page
+            : (page
+                as Query$FetchMoreItemsForItemSection$section$$CardListSection$metadata$page?),
+        limit: limit == _undefined ? _instance.limit : (limit as int?),
         prependLiveElement:
             prependLiveElement == _undefined || prependLiveElement == null
                 ? _instance.prependLiveElement
@@ -20493,6 +21588,16 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$CardListSection$
             ? _instance.$__typename
             : ($__typename as String),
       ));
+
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$CardListSection$metadata$page<
+      TRes> get page {
+    final local$page = _instance.page;
+    return local$page == null
+        ? CopyWith$Query$FetchMoreItemsForItemSection$section$$CardListSection$metadata$page
+            .stub(_then(_instance))
+        : CopyWith$Query$FetchMoreItemsForItemSection$section$$CardListSection$metadata$page(
+            local$page, (e) => call(page: e));
+  }
 }
 
 class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$CardListSection$metadata<
@@ -20511,7 +21616,164 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$CardListSect
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Query$FetchMoreItemsForItemSection$section$$CardListSection$metadata$page?
+        page,
+    int? limit,
     bool? prependLiveElement,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$CardListSection$metadata$page<
+          TRes>
+      get page =>
+          CopyWith$Query$FetchMoreItemsForItemSection$section$$CardListSection$metadata$page
+              .stub(_res);
+}
+
+class Query$FetchMoreItemsForItemSection$section$$CardListSection$metadata$page
+    implements
+        Fragment$Section$$CardListSection$metadata$page,
+        Fragment$ItemSection$$CardListSection$metadata$page {
+  Query$FetchMoreItemsForItemSection$section$$CardListSection$metadata$page({
+    required this.code,
+    this.$__typename = 'Page',
+  });
+
+  factory Query$FetchMoreItemsForItemSection$section$$CardListSection$metadata$page.fromJson(
+      Map<String, dynamic> json) {
+    final l$code = json['code'];
+    final l$$__typename = json['__typename'];
+    return Query$FetchMoreItemsForItemSection$section$$CardListSection$metadata$page(
+      code: (l$code as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String code;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$code = code;
+    _resultData['code'] = l$code;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$code = code;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$code,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Query$FetchMoreItemsForItemSection$section$$CardListSection$metadata$page) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$code = code;
+    final lOther$code = other.code;
+    if (l$code != lOther$code) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$CardListSection$metadata$page
+    on Query$FetchMoreItemsForItemSection$section$$CardListSection$metadata$page {
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$CardListSection$metadata$page<
+          Query$FetchMoreItemsForItemSection$section$$CardListSection$metadata$page>
+      get copyWith =>
+          CopyWith$Query$FetchMoreItemsForItemSection$section$$CardListSection$metadata$page(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$CardListSection$metadata$page<
+    TRes> {
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$CardListSection$metadata$page(
+    Query$FetchMoreItemsForItemSection$section$$CardListSection$metadata$page
+        instance,
+    TRes Function(
+            Query$FetchMoreItemsForItemSection$section$$CardListSection$metadata$page)
+        then,
+  ) = _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$CardListSection$metadata$page;
+
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$CardListSection$metadata$page.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$CardListSection$metadata$page;
+
+  TRes call({
+    String? code,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$CardListSection$metadata$page<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$CardListSection$metadata$page<
+            TRes> {
+  _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$CardListSection$metadata$page(
+    this._instance,
+    this._then,
+  );
+
+  final Query$FetchMoreItemsForItemSection$section$$CardListSection$metadata$page
+      _instance;
+
+  final TRes Function(
+          Query$FetchMoreItemsForItemSection$section$$CardListSection$metadata$page)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? code = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(
+          Query$FetchMoreItemsForItemSection$section$$CardListSection$metadata$page(
+        code: code == _undefined || code == null
+            ? _instance.code
+            : (code as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$CardListSection$metadata$page<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$CardListSection$metadata$page<
+            TRes> {
+  _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$CardListSection$metadata$page(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? code,
     String? $__typename,
   }) =>
       _res;
@@ -21029,6 +22291,8 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$metadata
     required this.secondaryTitles,
     required this.collectionId,
     required this.useContext,
+    this.page,
+    this.limit,
     required this.prependLiveElement,
     this.$__typename = 'ItemSectionMetadata',
   });
@@ -21040,6 +22304,8 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$metadata
     final l$secondaryTitles = json['secondaryTitles'];
     final l$collectionId = json['collectionId'];
     final l$useContext = json['useContext'];
+    final l$page = json['page'];
+    final l$limit = json['limit'];
     final l$prependLiveElement = json['prependLiveElement'];
     final l$$__typename = json['__typename'];
     return Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$metadata(
@@ -21048,6 +22314,11 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$metadata
       secondaryTitles: (l$secondaryTitles as bool),
       collectionId: (l$collectionId as String),
       useContext: (l$useContext as bool),
+      page: l$page == null
+          ? null
+          : Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$metadata$page
+              .fromJson((l$page as Map<String, dynamic>)),
+      limit: (l$limit as int?),
       prependLiveElement: (l$prependLiveElement as bool),
       $__typename: (l$$__typename as String),
     );
@@ -21062,6 +22333,11 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$metadata
   final String collectionId;
 
   final bool useContext;
+
+  final Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$metadata$page?
+      page;
+
+  final int? limit;
 
   final bool prependLiveElement;
 
@@ -21079,6 +22355,10 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$metadata
     _resultData['collectionId'] = l$collectionId;
     final l$useContext = useContext;
     _resultData['useContext'] = l$useContext;
+    final l$page = page;
+    _resultData['page'] = l$page?.toJson();
+    final l$limit = limit;
+    _resultData['limit'] = l$limit;
     final l$prependLiveElement = prependLiveElement;
     _resultData['prependLiveElement'] = l$prependLiveElement;
     final l$$__typename = $__typename;
@@ -21093,6 +22373,8 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$metadata
     final l$secondaryTitles = secondaryTitles;
     final l$collectionId = collectionId;
     final l$useContext = useContext;
+    final l$page = page;
+    final l$limit = limit;
     final l$prependLiveElement = prependLiveElement;
     final l$$__typename = $__typename;
     return Object.hashAll([
@@ -21101,6 +22383,8 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$metadata
       l$secondaryTitles,
       l$collectionId,
       l$useContext,
+      l$page,
+      l$limit,
       l$prependLiveElement,
       l$$__typename,
     ]);
@@ -21139,6 +22423,16 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$metadata
     final l$useContext = useContext;
     final lOther$useContext = other.useContext;
     if (l$useContext != lOther$useContext) {
+      return false;
+    }
+    final l$page = page;
+    final lOther$page = other.page;
+    if (l$page != lOther$page) {
+      return false;
+    }
+    final l$limit = limit;
+    final lOther$limit = other.limit;
+    if (l$limit != lOther$limit) {
       return false;
     }
     final l$prependLiveElement = prependLiveElement;
@@ -21186,9 +22480,14 @@ abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultGridS
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$metadata$page?
+        page,
+    int? limit,
     bool? prependLiveElement,
     String? $__typename,
   });
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$metadata$page<
+      TRes> get page;
 }
 
 class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$metadata<
@@ -21216,6 +22515,8 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$DefaultGridSecti
     Object? secondaryTitles = _undefined,
     Object? collectionId = _undefined,
     Object? useContext = _undefined,
+    Object? page = _undefined,
+    Object? limit = _undefined,
     Object? prependLiveElement = _undefined,
     Object? $__typename = _undefined,
   }) =>
@@ -21238,6 +22539,11 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$DefaultGridSecti
         useContext: useContext == _undefined || useContext == null
             ? _instance.useContext
             : (useContext as bool),
+        page: page == _undefined
+            ? _instance.page
+            : (page
+                as Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$metadata$page?),
+        limit: limit == _undefined ? _instance.limit : (limit as int?),
         prependLiveElement:
             prependLiveElement == _undefined || prependLiveElement == null
                 ? _instance.prependLiveElement
@@ -21246,6 +22552,16 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$DefaultGridSecti
             ? _instance.$__typename
             : ($__typename as String),
       ));
+
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$metadata$page<
+      TRes> get page {
+    final local$page = _instance.page;
+    return local$page == null
+        ? CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$metadata$page
+            .stub(_then(_instance))
+        : CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$metadata$page(
+            local$page, (e) => call(page: e));
+  }
 }
 
 class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$metadata<
@@ -21264,7 +22580,164 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$DefaultGridS
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$metadata$page?
+        page,
+    int? limit,
     bool? prependLiveElement,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$metadata$page<
+          TRes>
+      get page =>
+          CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$metadata$page
+              .stub(_res);
+}
+
+class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$metadata$page
+    implements
+        Fragment$Section$$DefaultGridSection$metadata$page,
+        Fragment$ItemSection$$DefaultGridSection$metadata$page {
+  Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$metadata$page({
+    required this.code,
+    this.$__typename = 'Page',
+  });
+
+  factory Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$metadata$page.fromJson(
+      Map<String, dynamic> json) {
+    final l$code = json['code'];
+    final l$$__typename = json['__typename'];
+    return Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$metadata$page(
+      code: (l$code as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String code;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$code = code;
+    _resultData['code'] = l$code;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$code = code;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$code,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$metadata$page) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$code = code;
+    final lOther$code = other.code;
+    if (l$code != lOther$code) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$metadata$page
+    on Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$metadata$page {
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$metadata$page<
+          Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$metadata$page>
+      get copyWith =>
+          CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$metadata$page(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$metadata$page<
+    TRes> {
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$metadata$page(
+    Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$metadata$page
+        instance,
+    TRes Function(
+            Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$metadata$page)
+        then,
+  ) = _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$metadata$page;
+
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$metadata$page.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$metadata$page;
+
+  TRes call({
+    String? code,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$metadata$page<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$metadata$page<
+            TRes> {
+  _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$metadata$page(
+    this._instance,
+    this._then,
+  );
+
+  final Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$metadata$page
+      _instance;
+
+  final TRes Function(
+          Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$metadata$page)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? code = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(
+          Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$metadata$page(
+        code: code == _undefined || code == null
+            ? _instance.code
+            : (code as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$metadata$page<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$metadata$page<
+            TRes> {
+  _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$metadata$page(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? code,
     String? $__typename,
   }) =>
       _res;
@@ -24512,6 +25985,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$metadata
     required this.secondaryTitles,
     required this.collectionId,
     required this.useContext,
+    this.page,
+    this.limit,
     required this.prependLiveElement,
     this.$__typename = 'ItemSectionMetadata',
   });
@@ -24523,6 +25998,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$metadata
     final l$secondaryTitles = json['secondaryTitles'];
     final l$collectionId = json['collectionId'];
     final l$useContext = json['useContext'];
+    final l$page = json['page'];
+    final l$limit = json['limit'];
     final l$prependLiveElement = json['prependLiveElement'];
     final l$$__typename = json['__typename'];
     return Query$FetchMoreItemsForItemSection$section$$PosterGridSection$metadata(
@@ -24531,6 +26008,11 @@ class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$metadata
       secondaryTitles: (l$secondaryTitles as bool),
       collectionId: (l$collectionId as String),
       useContext: (l$useContext as bool),
+      page: l$page == null
+          ? null
+          : Query$FetchMoreItemsForItemSection$section$$PosterGridSection$metadata$page
+              .fromJson((l$page as Map<String, dynamic>)),
+      limit: (l$limit as int?),
       prependLiveElement: (l$prependLiveElement as bool),
       $__typename: (l$$__typename as String),
     );
@@ -24545,6 +26027,11 @@ class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$metadata
   final String collectionId;
 
   final bool useContext;
+
+  final Query$FetchMoreItemsForItemSection$section$$PosterGridSection$metadata$page?
+      page;
+
+  final int? limit;
 
   final bool prependLiveElement;
 
@@ -24562,6 +26049,10 @@ class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$metadata
     _resultData['collectionId'] = l$collectionId;
     final l$useContext = useContext;
     _resultData['useContext'] = l$useContext;
+    final l$page = page;
+    _resultData['page'] = l$page?.toJson();
+    final l$limit = limit;
+    _resultData['limit'] = l$limit;
     final l$prependLiveElement = prependLiveElement;
     _resultData['prependLiveElement'] = l$prependLiveElement;
     final l$$__typename = $__typename;
@@ -24576,6 +26067,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$metadata
     final l$secondaryTitles = secondaryTitles;
     final l$collectionId = collectionId;
     final l$useContext = useContext;
+    final l$page = page;
+    final l$limit = limit;
     final l$prependLiveElement = prependLiveElement;
     final l$$__typename = $__typename;
     return Object.hashAll([
@@ -24584,6 +26077,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$metadata
       l$secondaryTitles,
       l$collectionId,
       l$useContext,
+      l$page,
+      l$limit,
       l$prependLiveElement,
       l$$__typename,
     ]);
@@ -24622,6 +26117,16 @@ class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$metadata
     final l$useContext = useContext;
     final lOther$useContext = other.useContext;
     if (l$useContext != lOther$useContext) {
+      return false;
+    }
+    final l$page = page;
+    final lOther$page = other.page;
+    if (l$page != lOther$page) {
+      return false;
+    }
+    final l$limit = limit;
+    final lOther$limit = other.limit;
+    if (l$limit != lOther$limit) {
       return false;
     }
     final l$prependLiveElement = prependLiveElement;
@@ -24669,9 +26174,14 @@ abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterGridSe
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Query$FetchMoreItemsForItemSection$section$$PosterGridSection$metadata$page?
+        page,
+    int? limit,
     bool? prependLiveElement,
     String? $__typename,
   });
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterGridSection$metadata$page<
+      TRes> get page;
 }
 
 class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$PosterGridSection$metadata<
@@ -24699,6 +26209,8 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$PosterGridSectio
     Object? secondaryTitles = _undefined,
     Object? collectionId = _undefined,
     Object? useContext = _undefined,
+    Object? page = _undefined,
+    Object? limit = _undefined,
     Object? prependLiveElement = _undefined,
     Object? $__typename = _undefined,
   }) =>
@@ -24721,6 +26233,11 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$PosterGridSectio
         useContext: useContext == _undefined || useContext == null
             ? _instance.useContext
             : (useContext as bool),
+        page: page == _undefined
+            ? _instance.page
+            : (page
+                as Query$FetchMoreItemsForItemSection$section$$PosterGridSection$metadata$page?),
+        limit: limit == _undefined ? _instance.limit : (limit as int?),
         prependLiveElement:
             prependLiveElement == _undefined || prependLiveElement == null
                 ? _instance.prependLiveElement
@@ -24729,6 +26246,16 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$PosterGridSectio
             ? _instance.$__typename
             : ($__typename as String),
       ));
+
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterGridSection$metadata$page<
+      TRes> get page {
+    final local$page = _instance.page;
+    return local$page == null
+        ? CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterGridSection$metadata$page
+            .stub(_then(_instance))
+        : CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterGridSection$metadata$page(
+            local$page, (e) => call(page: e));
+  }
 }
 
 class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$PosterGridSection$metadata<
@@ -24747,7 +26274,164 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$PosterGridSe
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Query$FetchMoreItemsForItemSection$section$$PosterGridSection$metadata$page?
+        page,
+    int? limit,
     bool? prependLiveElement,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterGridSection$metadata$page<
+          TRes>
+      get page =>
+          CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterGridSection$metadata$page
+              .stub(_res);
+}
+
+class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$metadata$page
+    implements
+        Fragment$Section$$PosterGridSection$metadata$page,
+        Fragment$ItemSection$$PosterGridSection$metadata$page {
+  Query$FetchMoreItemsForItemSection$section$$PosterGridSection$metadata$page({
+    required this.code,
+    this.$__typename = 'Page',
+  });
+
+  factory Query$FetchMoreItemsForItemSection$section$$PosterGridSection$metadata$page.fromJson(
+      Map<String, dynamic> json) {
+    final l$code = json['code'];
+    final l$$__typename = json['__typename'];
+    return Query$FetchMoreItemsForItemSection$section$$PosterGridSection$metadata$page(
+      code: (l$code as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String code;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$code = code;
+    _resultData['code'] = l$code;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$code = code;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$code,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Query$FetchMoreItemsForItemSection$section$$PosterGridSection$metadata$page) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$code = code;
+    final lOther$code = other.code;
+    if (l$code != lOther$code) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$PosterGridSection$metadata$page
+    on Query$FetchMoreItemsForItemSection$section$$PosterGridSection$metadata$page {
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterGridSection$metadata$page<
+          Query$FetchMoreItemsForItemSection$section$$PosterGridSection$metadata$page>
+      get copyWith =>
+          CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterGridSection$metadata$page(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterGridSection$metadata$page<
+    TRes> {
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterGridSection$metadata$page(
+    Query$FetchMoreItemsForItemSection$section$$PosterGridSection$metadata$page
+        instance,
+    TRes Function(
+            Query$FetchMoreItemsForItemSection$section$$PosterGridSection$metadata$page)
+        then,
+  ) = _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$PosterGridSection$metadata$page;
+
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterGridSection$metadata$page.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$PosterGridSection$metadata$page;
+
+  TRes call({
+    String? code,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$PosterGridSection$metadata$page<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterGridSection$metadata$page<
+            TRes> {
+  _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$PosterGridSection$metadata$page(
+    this._instance,
+    this._then,
+  );
+
+  final Query$FetchMoreItemsForItemSection$section$$PosterGridSection$metadata$page
+      _instance;
+
+  final TRes Function(
+          Query$FetchMoreItemsForItemSection$section$$PosterGridSection$metadata$page)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? code = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(
+          Query$FetchMoreItemsForItemSection$section$$PosterGridSection$metadata$page(
+        code: code == _undefined || code == null
+            ? _instance.code
+            : (code as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$PosterGridSection$metadata$page<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterGridSection$metadata$page<
+            TRes> {
+  _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$PosterGridSection$metadata$page(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? code,
     String? $__typename,
   }) =>
       _res;
@@ -27993,6 +29677,8 @@ class Query$FetchMoreItemsForItemSection$section$$IconGridSection$metadata
     required this.secondaryTitles,
     required this.collectionId,
     required this.useContext,
+    this.page,
+    this.limit,
     required this.prependLiveElement,
     this.$__typename = 'ItemSectionMetadata',
   });
@@ -28004,6 +29690,8 @@ class Query$FetchMoreItemsForItemSection$section$$IconGridSection$metadata
     final l$secondaryTitles = json['secondaryTitles'];
     final l$collectionId = json['collectionId'];
     final l$useContext = json['useContext'];
+    final l$page = json['page'];
+    final l$limit = json['limit'];
     final l$prependLiveElement = json['prependLiveElement'];
     final l$$__typename = json['__typename'];
     return Query$FetchMoreItemsForItemSection$section$$IconGridSection$metadata(
@@ -28012,6 +29700,11 @@ class Query$FetchMoreItemsForItemSection$section$$IconGridSection$metadata
       secondaryTitles: (l$secondaryTitles as bool),
       collectionId: (l$collectionId as String),
       useContext: (l$useContext as bool),
+      page: l$page == null
+          ? null
+          : Query$FetchMoreItemsForItemSection$section$$IconGridSection$metadata$page
+              .fromJson((l$page as Map<String, dynamic>)),
+      limit: (l$limit as int?),
       prependLiveElement: (l$prependLiveElement as bool),
       $__typename: (l$$__typename as String),
     );
@@ -28026,6 +29719,11 @@ class Query$FetchMoreItemsForItemSection$section$$IconGridSection$metadata
   final String collectionId;
 
   final bool useContext;
+
+  final Query$FetchMoreItemsForItemSection$section$$IconGridSection$metadata$page?
+      page;
+
+  final int? limit;
 
   final bool prependLiveElement;
 
@@ -28043,6 +29741,10 @@ class Query$FetchMoreItemsForItemSection$section$$IconGridSection$metadata
     _resultData['collectionId'] = l$collectionId;
     final l$useContext = useContext;
     _resultData['useContext'] = l$useContext;
+    final l$page = page;
+    _resultData['page'] = l$page?.toJson();
+    final l$limit = limit;
+    _resultData['limit'] = l$limit;
     final l$prependLiveElement = prependLiveElement;
     _resultData['prependLiveElement'] = l$prependLiveElement;
     final l$$__typename = $__typename;
@@ -28057,6 +29759,8 @@ class Query$FetchMoreItemsForItemSection$section$$IconGridSection$metadata
     final l$secondaryTitles = secondaryTitles;
     final l$collectionId = collectionId;
     final l$useContext = useContext;
+    final l$page = page;
+    final l$limit = limit;
     final l$prependLiveElement = prependLiveElement;
     final l$$__typename = $__typename;
     return Object.hashAll([
@@ -28065,6 +29769,8 @@ class Query$FetchMoreItemsForItemSection$section$$IconGridSection$metadata
       l$secondaryTitles,
       l$collectionId,
       l$useContext,
+      l$page,
+      l$limit,
       l$prependLiveElement,
       l$$__typename,
     ]);
@@ -28103,6 +29809,16 @@ class Query$FetchMoreItemsForItemSection$section$$IconGridSection$metadata
     final l$useContext = useContext;
     final lOther$useContext = other.useContext;
     if (l$useContext != lOther$useContext) {
+      return false;
+    }
+    final l$page = page;
+    final lOther$page = other.page;
+    if (l$page != lOther$page) {
+      return false;
+    }
+    final l$limit = limit;
+    final lOther$limit = other.limit;
+    if (l$limit != lOther$limit) {
       return false;
     }
     final l$prependLiveElement = prependLiveElement;
@@ -28150,9 +29866,14 @@ abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$IconGridSect
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Query$FetchMoreItemsForItemSection$section$$IconGridSection$metadata$page?
+        page,
+    int? limit,
     bool? prependLiveElement,
     String? $__typename,
   });
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$IconGridSection$metadata$page<
+      TRes> get page;
 }
 
 class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$IconGridSection$metadata<
@@ -28180,6 +29901,8 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$IconGridSection$
     Object? secondaryTitles = _undefined,
     Object? collectionId = _undefined,
     Object? useContext = _undefined,
+    Object? page = _undefined,
+    Object? limit = _undefined,
     Object? prependLiveElement = _undefined,
     Object? $__typename = _undefined,
   }) =>
@@ -28202,6 +29925,11 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$IconGridSection$
         useContext: useContext == _undefined || useContext == null
             ? _instance.useContext
             : (useContext as bool),
+        page: page == _undefined
+            ? _instance.page
+            : (page
+                as Query$FetchMoreItemsForItemSection$section$$IconGridSection$metadata$page?),
+        limit: limit == _undefined ? _instance.limit : (limit as int?),
         prependLiveElement:
             prependLiveElement == _undefined || prependLiveElement == null
                 ? _instance.prependLiveElement
@@ -28210,6 +29938,16 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$IconGridSection$
             ? _instance.$__typename
             : ($__typename as String),
       ));
+
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$IconGridSection$metadata$page<
+      TRes> get page {
+    final local$page = _instance.page;
+    return local$page == null
+        ? CopyWith$Query$FetchMoreItemsForItemSection$section$$IconGridSection$metadata$page
+            .stub(_then(_instance))
+        : CopyWith$Query$FetchMoreItemsForItemSection$section$$IconGridSection$metadata$page(
+            local$page, (e) => call(page: e));
+  }
 }
 
 class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$IconGridSection$metadata<
@@ -28228,7 +29966,164 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$IconGridSect
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Query$FetchMoreItemsForItemSection$section$$IconGridSection$metadata$page?
+        page,
+    int? limit,
     bool? prependLiveElement,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$IconGridSection$metadata$page<
+          TRes>
+      get page =>
+          CopyWith$Query$FetchMoreItemsForItemSection$section$$IconGridSection$metadata$page
+              .stub(_res);
+}
+
+class Query$FetchMoreItemsForItemSection$section$$IconGridSection$metadata$page
+    implements
+        Fragment$Section$$IconGridSection$metadata$page,
+        Fragment$ItemSection$$IconGridSection$metadata$page {
+  Query$FetchMoreItemsForItemSection$section$$IconGridSection$metadata$page({
+    required this.code,
+    this.$__typename = 'Page',
+  });
+
+  factory Query$FetchMoreItemsForItemSection$section$$IconGridSection$metadata$page.fromJson(
+      Map<String, dynamic> json) {
+    final l$code = json['code'];
+    final l$$__typename = json['__typename'];
+    return Query$FetchMoreItemsForItemSection$section$$IconGridSection$metadata$page(
+      code: (l$code as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String code;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$code = code;
+    _resultData['code'] = l$code;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$code = code;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$code,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Query$FetchMoreItemsForItemSection$section$$IconGridSection$metadata$page) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$code = code;
+    final lOther$code = other.code;
+    if (l$code != lOther$code) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$IconGridSection$metadata$page
+    on Query$FetchMoreItemsForItemSection$section$$IconGridSection$metadata$page {
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$IconGridSection$metadata$page<
+          Query$FetchMoreItemsForItemSection$section$$IconGridSection$metadata$page>
+      get copyWith =>
+          CopyWith$Query$FetchMoreItemsForItemSection$section$$IconGridSection$metadata$page(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$IconGridSection$metadata$page<
+    TRes> {
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$IconGridSection$metadata$page(
+    Query$FetchMoreItemsForItemSection$section$$IconGridSection$metadata$page
+        instance,
+    TRes Function(
+            Query$FetchMoreItemsForItemSection$section$$IconGridSection$metadata$page)
+        then,
+  ) = _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$IconGridSection$metadata$page;
+
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$IconGridSection$metadata$page.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$IconGridSection$metadata$page;
+
+  TRes call({
+    String? code,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$IconGridSection$metadata$page<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$IconGridSection$metadata$page<
+            TRes> {
+  _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$IconGridSection$metadata$page(
+    this._instance,
+    this._then,
+  );
+
+  final Query$FetchMoreItemsForItemSection$section$$IconGridSection$metadata$page
+      _instance;
+
+  final TRes Function(
+          Query$FetchMoreItemsForItemSection$section$$IconGridSection$metadata$page)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? code = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(
+          Query$FetchMoreItemsForItemSection$section$$IconGridSection$metadata$page(
+        code: code == _undefined || code == null
+            ? _instance.code
+            : (code as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$IconGridSection$metadata$page<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$IconGridSection$metadata$page<
+            TRes> {
+  _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$IconGridSection$metadata$page(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? code,
     String? $__typename,
   }) =>
       _res;
@@ -31444,6 +33339,8 @@ class Query$FetchMoreItemsForItemSection$section$$IconSection$metadata
     required this.secondaryTitles,
     required this.collectionId,
     required this.useContext,
+    this.page,
+    this.limit,
     required this.prependLiveElement,
     this.$__typename = 'ItemSectionMetadata',
   });
@@ -31455,6 +33352,8 @@ class Query$FetchMoreItemsForItemSection$section$$IconSection$metadata
     final l$secondaryTitles = json['secondaryTitles'];
     final l$collectionId = json['collectionId'];
     final l$useContext = json['useContext'];
+    final l$page = json['page'];
+    final l$limit = json['limit'];
     final l$prependLiveElement = json['prependLiveElement'];
     final l$$__typename = json['__typename'];
     return Query$FetchMoreItemsForItemSection$section$$IconSection$metadata(
@@ -31463,6 +33362,11 @@ class Query$FetchMoreItemsForItemSection$section$$IconSection$metadata
       secondaryTitles: (l$secondaryTitles as bool),
       collectionId: (l$collectionId as String),
       useContext: (l$useContext as bool),
+      page: l$page == null
+          ? null
+          : Query$FetchMoreItemsForItemSection$section$$IconSection$metadata$page
+              .fromJson((l$page as Map<String, dynamic>)),
+      limit: (l$limit as int?),
       prependLiveElement: (l$prependLiveElement as bool),
       $__typename: (l$$__typename as String),
     );
@@ -31477,6 +33381,11 @@ class Query$FetchMoreItemsForItemSection$section$$IconSection$metadata
   final String collectionId;
 
   final bool useContext;
+
+  final Query$FetchMoreItemsForItemSection$section$$IconSection$metadata$page?
+      page;
+
+  final int? limit;
 
   final bool prependLiveElement;
 
@@ -31494,6 +33403,10 @@ class Query$FetchMoreItemsForItemSection$section$$IconSection$metadata
     _resultData['collectionId'] = l$collectionId;
     final l$useContext = useContext;
     _resultData['useContext'] = l$useContext;
+    final l$page = page;
+    _resultData['page'] = l$page?.toJson();
+    final l$limit = limit;
+    _resultData['limit'] = l$limit;
     final l$prependLiveElement = prependLiveElement;
     _resultData['prependLiveElement'] = l$prependLiveElement;
     final l$$__typename = $__typename;
@@ -31508,6 +33421,8 @@ class Query$FetchMoreItemsForItemSection$section$$IconSection$metadata
     final l$secondaryTitles = secondaryTitles;
     final l$collectionId = collectionId;
     final l$useContext = useContext;
+    final l$page = page;
+    final l$limit = limit;
     final l$prependLiveElement = prependLiveElement;
     final l$$__typename = $__typename;
     return Object.hashAll([
@@ -31516,6 +33431,8 @@ class Query$FetchMoreItemsForItemSection$section$$IconSection$metadata
       l$secondaryTitles,
       l$collectionId,
       l$useContext,
+      l$page,
+      l$limit,
       l$prependLiveElement,
       l$$__typename,
     ]);
@@ -31554,6 +33471,16 @@ class Query$FetchMoreItemsForItemSection$section$$IconSection$metadata
     final l$useContext = useContext;
     final lOther$useContext = other.useContext;
     if (l$useContext != lOther$useContext) {
+      return false;
+    }
+    final l$page = page;
+    final lOther$page = other.page;
+    if (l$page != lOther$page) {
+      return false;
+    }
+    final l$limit = limit;
+    final lOther$limit = other.limit;
+    if (l$limit != lOther$limit) {
       return false;
     }
     final l$prependLiveElement = prependLiveElement;
@@ -31600,9 +33527,13 @@ abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$IconSection$
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Query$FetchMoreItemsForItemSection$section$$IconSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
     String? $__typename,
   });
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$IconSection$metadata$page<
+      TRes> get page;
 }
 
 class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$IconSection$metadata<
@@ -31629,6 +33560,8 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$IconSection$meta
     Object? secondaryTitles = _undefined,
     Object? collectionId = _undefined,
     Object? useContext = _undefined,
+    Object? page = _undefined,
+    Object? limit = _undefined,
     Object? prependLiveElement = _undefined,
     Object? $__typename = _undefined,
   }) =>
@@ -31650,6 +33583,11 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$IconSection$meta
         useContext: useContext == _undefined || useContext == null
             ? _instance.useContext
             : (useContext as bool),
+        page: page == _undefined
+            ? _instance.page
+            : (page
+                as Query$FetchMoreItemsForItemSection$section$$IconSection$metadata$page?),
+        limit: limit == _undefined ? _instance.limit : (limit as int?),
         prependLiveElement:
             prependLiveElement == _undefined || prependLiveElement == null
                 ? _instance.prependLiveElement
@@ -31658,6 +33596,16 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$IconSection$meta
             ? _instance.$__typename
             : ($__typename as String),
       ));
+
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$IconSection$metadata$page<
+      TRes> get page {
+    final local$page = _instance.page;
+    return local$page == null
+        ? CopyWith$Query$FetchMoreItemsForItemSection$section$$IconSection$metadata$page
+            .stub(_then(_instance))
+        : CopyWith$Query$FetchMoreItemsForItemSection$section$$IconSection$metadata$page(
+            local$page, (e) => call(page: e));
+  }
 }
 
 class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$IconSection$metadata<
@@ -31676,7 +33624,163 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$IconSection$
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Query$FetchMoreItemsForItemSection$section$$IconSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$IconSection$metadata$page<
+          TRes>
+      get page =>
+          CopyWith$Query$FetchMoreItemsForItemSection$section$$IconSection$metadata$page
+              .stub(_res);
+}
+
+class Query$FetchMoreItemsForItemSection$section$$IconSection$metadata$page
+    implements
+        Fragment$Section$$IconSection$metadata$page,
+        Fragment$ItemSection$$IconSection$metadata$page {
+  Query$FetchMoreItemsForItemSection$section$$IconSection$metadata$page({
+    required this.code,
+    this.$__typename = 'Page',
+  });
+
+  factory Query$FetchMoreItemsForItemSection$section$$IconSection$metadata$page.fromJson(
+      Map<String, dynamic> json) {
+    final l$code = json['code'];
+    final l$$__typename = json['__typename'];
+    return Query$FetchMoreItemsForItemSection$section$$IconSection$metadata$page(
+      code: (l$code as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String code;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$code = code;
+    _resultData['code'] = l$code;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$code = code;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$code,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Query$FetchMoreItemsForItemSection$section$$IconSection$metadata$page) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$code = code;
+    final lOther$code = other.code;
+    if (l$code != lOther$code) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$IconSection$metadata$page
+    on Query$FetchMoreItemsForItemSection$section$$IconSection$metadata$page {
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$IconSection$metadata$page<
+          Query$FetchMoreItemsForItemSection$section$$IconSection$metadata$page>
+      get copyWith =>
+          CopyWith$Query$FetchMoreItemsForItemSection$section$$IconSection$metadata$page(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$IconSection$metadata$page<
+    TRes> {
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$IconSection$metadata$page(
+    Query$FetchMoreItemsForItemSection$section$$IconSection$metadata$page
+        instance,
+    TRes Function(
+            Query$FetchMoreItemsForItemSection$section$$IconSection$metadata$page)
+        then,
+  ) = _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$IconSection$metadata$page;
+
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$IconSection$metadata$page.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$IconSection$metadata$page;
+
+  TRes call({
+    String? code,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$IconSection$metadata$page<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$IconSection$metadata$page<
+            TRes> {
+  _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$IconSection$metadata$page(
+    this._instance,
+    this._then,
+  );
+
+  final Query$FetchMoreItemsForItemSection$section$$IconSection$metadata$page
+      _instance;
+
+  final TRes Function(
+          Query$FetchMoreItemsForItemSection$section$$IconSection$metadata$page)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? code = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(
+          Query$FetchMoreItemsForItemSection$section$$IconSection$metadata$page(
+        code: code == _undefined || code == null
+            ? _instance.code
+            : (code as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$IconSection$metadata$page<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$IconSection$metadata$page<
+            TRes> {
+  _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$IconSection$metadata$page(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? code,
     String? $__typename,
   }) =>
       _res;
@@ -32163,6 +34267,8 @@ class Query$FetchMoreItemsForItemSection$section$$LabelSection$metadata
     required this.secondaryTitles,
     required this.collectionId,
     required this.useContext,
+    this.page,
+    this.limit,
     required this.prependLiveElement,
     this.$__typename = 'ItemSectionMetadata',
   });
@@ -32174,6 +34280,8 @@ class Query$FetchMoreItemsForItemSection$section$$LabelSection$metadata
     final l$secondaryTitles = json['secondaryTitles'];
     final l$collectionId = json['collectionId'];
     final l$useContext = json['useContext'];
+    final l$page = json['page'];
+    final l$limit = json['limit'];
     final l$prependLiveElement = json['prependLiveElement'];
     final l$$__typename = json['__typename'];
     return Query$FetchMoreItemsForItemSection$section$$LabelSection$metadata(
@@ -32182,6 +34290,11 @@ class Query$FetchMoreItemsForItemSection$section$$LabelSection$metadata
       secondaryTitles: (l$secondaryTitles as bool),
       collectionId: (l$collectionId as String),
       useContext: (l$useContext as bool),
+      page: l$page == null
+          ? null
+          : Query$FetchMoreItemsForItemSection$section$$LabelSection$metadata$page
+              .fromJson((l$page as Map<String, dynamic>)),
+      limit: (l$limit as int?),
       prependLiveElement: (l$prependLiveElement as bool),
       $__typename: (l$$__typename as String),
     );
@@ -32196,6 +34309,11 @@ class Query$FetchMoreItemsForItemSection$section$$LabelSection$metadata
   final String collectionId;
 
   final bool useContext;
+
+  final Query$FetchMoreItemsForItemSection$section$$LabelSection$metadata$page?
+      page;
+
+  final int? limit;
 
   final bool prependLiveElement;
 
@@ -32213,6 +34331,10 @@ class Query$FetchMoreItemsForItemSection$section$$LabelSection$metadata
     _resultData['collectionId'] = l$collectionId;
     final l$useContext = useContext;
     _resultData['useContext'] = l$useContext;
+    final l$page = page;
+    _resultData['page'] = l$page?.toJson();
+    final l$limit = limit;
+    _resultData['limit'] = l$limit;
     final l$prependLiveElement = prependLiveElement;
     _resultData['prependLiveElement'] = l$prependLiveElement;
     final l$$__typename = $__typename;
@@ -32227,6 +34349,8 @@ class Query$FetchMoreItemsForItemSection$section$$LabelSection$metadata
     final l$secondaryTitles = secondaryTitles;
     final l$collectionId = collectionId;
     final l$useContext = useContext;
+    final l$page = page;
+    final l$limit = limit;
     final l$prependLiveElement = prependLiveElement;
     final l$$__typename = $__typename;
     return Object.hashAll([
@@ -32235,6 +34359,8 @@ class Query$FetchMoreItemsForItemSection$section$$LabelSection$metadata
       l$secondaryTitles,
       l$collectionId,
       l$useContext,
+      l$page,
+      l$limit,
       l$prependLiveElement,
       l$$__typename,
     ]);
@@ -32273,6 +34399,16 @@ class Query$FetchMoreItemsForItemSection$section$$LabelSection$metadata
     final l$useContext = useContext;
     final lOther$useContext = other.useContext;
     if (l$useContext != lOther$useContext) {
+      return false;
+    }
+    final l$page = page;
+    final lOther$page = other.page;
+    if (l$page != lOther$page) {
+      return false;
+    }
+    final l$limit = limit;
+    final lOther$limit = other.limit;
+    if (l$limit != lOther$limit) {
       return false;
     }
     final l$prependLiveElement = prependLiveElement;
@@ -32319,9 +34455,14 @@ abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$LabelSection
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Query$FetchMoreItemsForItemSection$section$$LabelSection$metadata$page?
+        page,
+    int? limit,
     bool? prependLiveElement,
     String? $__typename,
   });
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$LabelSection$metadata$page<
+      TRes> get page;
 }
 
 class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$LabelSection$metadata<
@@ -32348,6 +34489,8 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$LabelSection$met
     Object? secondaryTitles = _undefined,
     Object? collectionId = _undefined,
     Object? useContext = _undefined,
+    Object? page = _undefined,
+    Object? limit = _undefined,
     Object? prependLiveElement = _undefined,
     Object? $__typename = _undefined,
   }) =>
@@ -32369,6 +34512,11 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$LabelSection$met
         useContext: useContext == _undefined || useContext == null
             ? _instance.useContext
             : (useContext as bool),
+        page: page == _undefined
+            ? _instance.page
+            : (page
+                as Query$FetchMoreItemsForItemSection$section$$LabelSection$metadata$page?),
+        limit: limit == _undefined ? _instance.limit : (limit as int?),
         prependLiveElement:
             prependLiveElement == _undefined || prependLiveElement == null
                 ? _instance.prependLiveElement
@@ -32377,6 +34525,16 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$LabelSection$met
             ? _instance.$__typename
             : ($__typename as String),
       ));
+
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$LabelSection$metadata$page<
+      TRes> get page {
+    final local$page = _instance.page;
+    return local$page == null
+        ? CopyWith$Query$FetchMoreItemsForItemSection$section$$LabelSection$metadata$page
+            .stub(_then(_instance))
+        : CopyWith$Query$FetchMoreItemsForItemSection$section$$LabelSection$metadata$page(
+            local$page, (e) => call(page: e));
+  }
 }
 
 class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$LabelSection$metadata<
@@ -32395,7 +34553,164 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$LabelSection
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Query$FetchMoreItemsForItemSection$section$$LabelSection$metadata$page?
+        page,
+    int? limit,
     bool? prependLiveElement,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$LabelSection$metadata$page<
+          TRes>
+      get page =>
+          CopyWith$Query$FetchMoreItemsForItemSection$section$$LabelSection$metadata$page
+              .stub(_res);
+}
+
+class Query$FetchMoreItemsForItemSection$section$$LabelSection$metadata$page
+    implements
+        Fragment$Section$$LabelSection$metadata$page,
+        Fragment$ItemSection$$LabelSection$metadata$page {
+  Query$FetchMoreItemsForItemSection$section$$LabelSection$metadata$page({
+    required this.code,
+    this.$__typename = 'Page',
+  });
+
+  factory Query$FetchMoreItemsForItemSection$section$$LabelSection$metadata$page.fromJson(
+      Map<String, dynamic> json) {
+    final l$code = json['code'];
+    final l$$__typename = json['__typename'];
+    return Query$FetchMoreItemsForItemSection$section$$LabelSection$metadata$page(
+      code: (l$code as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String code;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$code = code;
+    _resultData['code'] = l$code;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$code = code;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$code,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Query$FetchMoreItemsForItemSection$section$$LabelSection$metadata$page) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$code = code;
+    final lOther$code = other.code;
+    if (l$code != lOther$code) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$LabelSection$metadata$page
+    on Query$FetchMoreItemsForItemSection$section$$LabelSection$metadata$page {
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$LabelSection$metadata$page<
+          Query$FetchMoreItemsForItemSection$section$$LabelSection$metadata$page>
+      get copyWith =>
+          CopyWith$Query$FetchMoreItemsForItemSection$section$$LabelSection$metadata$page(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$LabelSection$metadata$page<
+    TRes> {
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$LabelSection$metadata$page(
+    Query$FetchMoreItemsForItemSection$section$$LabelSection$metadata$page
+        instance,
+    TRes Function(
+            Query$FetchMoreItemsForItemSection$section$$LabelSection$metadata$page)
+        then,
+  ) = _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$LabelSection$metadata$page;
+
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$LabelSection$metadata$page.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$LabelSection$metadata$page;
+
+  TRes call({
+    String? code,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$LabelSection$metadata$page<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$LabelSection$metadata$page<
+            TRes> {
+  _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$LabelSection$metadata$page(
+    this._instance,
+    this._then,
+  );
+
+  final Query$FetchMoreItemsForItemSection$section$$LabelSection$metadata$page
+      _instance;
+
+  final TRes Function(
+          Query$FetchMoreItemsForItemSection$section$$LabelSection$metadata$page)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? code = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(
+          Query$FetchMoreItemsForItemSection$section$$LabelSection$metadata$page(
+        code: code == _undefined || code == null
+            ? _instance.code
+            : (code as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$LabelSection$metadata$page<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$LabelSection$metadata$page<
+            TRes> {
+  _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$LabelSection$metadata$page(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? code,
     String? $__typename,
   }) =>
       _res;
@@ -32886,6 +35201,8 @@ class Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata
     required this.secondaryTitles,
     required this.collectionId,
     required this.useContext,
+    this.page,
+    this.limit,
     required this.prependLiveElement,
     this.$__typename = 'ItemSectionMetadata',
   });
@@ -32897,6 +35214,8 @@ class Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata
     final l$secondaryTitles = json['secondaryTitles'];
     final l$collectionId = json['collectionId'];
     final l$useContext = json['useContext'];
+    final l$page = json['page'];
+    final l$limit = json['limit'];
     final l$prependLiveElement = json['prependLiveElement'];
     final l$$__typename = json['__typename'];
     return Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata(
@@ -32905,6 +35224,11 @@ class Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata
       secondaryTitles: (l$secondaryTitles as bool),
       collectionId: (l$collectionId as String),
       useContext: (l$useContext as bool),
+      page: l$page == null
+          ? null
+          : Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata$page
+              .fromJson((l$page as Map<String, dynamic>)),
+      limit: (l$limit as int?),
       prependLiveElement: (l$prependLiveElement as bool),
       $__typename: (l$$__typename as String),
     );
@@ -32919,6 +35243,11 @@ class Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata
   final String collectionId;
 
   final bool useContext;
+
+  final Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata$page?
+      page;
+
+  final int? limit;
 
   final bool prependLiveElement;
 
@@ -32936,6 +35265,10 @@ class Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata
     _resultData['collectionId'] = l$collectionId;
     final l$useContext = useContext;
     _resultData['useContext'] = l$useContext;
+    final l$page = page;
+    _resultData['page'] = l$page?.toJson();
+    final l$limit = limit;
+    _resultData['limit'] = l$limit;
     final l$prependLiveElement = prependLiveElement;
     _resultData['prependLiveElement'] = l$prependLiveElement;
     final l$$__typename = $__typename;
@@ -32950,6 +35283,8 @@ class Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata
     final l$secondaryTitles = secondaryTitles;
     final l$collectionId = collectionId;
     final l$useContext = useContext;
+    final l$page = page;
+    final l$limit = limit;
     final l$prependLiveElement = prependLiveElement;
     final l$$__typename = $__typename;
     return Object.hashAll([
@@ -32958,6 +35293,8 @@ class Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata
       l$secondaryTitles,
       l$collectionId,
       l$useContext,
+      l$page,
+      l$limit,
       l$prependLiveElement,
       l$$__typename,
     ]);
@@ -32996,6 +35333,16 @@ class Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata
     final l$useContext = useContext;
     final lOther$useContext = other.useContext;
     if (l$useContext != lOther$useContext) {
+      return false;
+    }
+    final l$page = page;
+    final lOther$page = other.page;
+    if (l$page != lOther$page) {
+      return false;
+    }
+    final l$limit = limit;
+    final lOther$limit = other.limit;
+    if (l$limit != lOther$limit) {
       return false;
     }
     final l$prependLiveElement = prependLiveElement;
@@ -33042,9 +35389,14 @@ abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$AvatarSectio
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata$page?
+        page,
+    int? limit,
     bool? prependLiveElement,
     String? $__typename,
   });
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata$page<
+      TRes> get page;
 }
 
 class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata<
@@ -33071,6 +35423,8 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$AvatarSection$me
     Object? secondaryTitles = _undefined,
     Object? collectionId = _undefined,
     Object? useContext = _undefined,
+    Object? page = _undefined,
+    Object? limit = _undefined,
     Object? prependLiveElement = _undefined,
     Object? $__typename = _undefined,
   }) =>
@@ -33092,6 +35446,11 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$AvatarSection$me
         useContext: useContext == _undefined || useContext == null
             ? _instance.useContext
             : (useContext as bool),
+        page: page == _undefined
+            ? _instance.page
+            : (page
+                as Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata$page?),
+        limit: limit == _undefined ? _instance.limit : (limit as int?),
         prependLiveElement:
             prependLiveElement == _undefined || prependLiveElement == null
                 ? _instance.prependLiveElement
@@ -33100,6 +35459,16 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$AvatarSection$me
             ? _instance.$__typename
             : ($__typename as String),
       ));
+
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata$page<
+      TRes> get page {
+    final local$page = _instance.page;
+    return local$page == null
+        ? CopyWith$Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata$page
+            .stub(_then(_instance))
+        : CopyWith$Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata$page(
+            local$page, (e) => call(page: e));
+  }
 }
 
 class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata<
@@ -33118,7 +35487,164 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$AvatarSectio
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata$page?
+        page,
+    int? limit,
     bool? prependLiveElement,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata$page<
+          TRes>
+      get page =>
+          CopyWith$Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata$page
+              .stub(_res);
+}
+
+class Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata$page
+    implements
+        Fragment$Section$$AvatarSection$metadata$page,
+        Fragment$ItemSection$$AvatarSection$metadata$page {
+  Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata$page({
+    required this.code,
+    this.$__typename = 'Page',
+  });
+
+  factory Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata$page.fromJson(
+      Map<String, dynamic> json) {
+    final l$code = json['code'];
+    final l$$__typename = json['__typename'];
+    return Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata$page(
+      code: (l$code as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String code;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$code = code;
+    _resultData['code'] = l$code;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$code = code;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$code,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata$page) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$code = code;
+    final lOther$code = other.code;
+    if (l$code != lOther$code) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata$page
+    on Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata$page {
+  CopyWith$Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata$page<
+          Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata$page>
+      get copyWith =>
+          CopyWith$Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata$page(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata$page<
+    TRes> {
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata$page(
+    Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata$page
+        instance,
+    TRes Function(
+            Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata$page)
+        then,
+  ) = _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata$page;
+
+  factory CopyWith$Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata$page.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata$page;
+
+  TRes call({
+    String? code,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata$page<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata$page<
+            TRes> {
+  _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata$page(
+    this._instance,
+    this._then,
+  );
+
+  final Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata$page
+      _instance;
+
+  final TRes Function(
+          Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata$page)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? code = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(
+          Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata$page(
+        code: code == _undefined || code == null
+            ? _instance.code
+            : (code as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata$page<
+        TRes>
+    implements
+        CopyWith$Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata$page<
+            TRes> {
+  _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata$page(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? code,
     String? $__typename,
   }) =>
       _res;
@@ -36174,6 +38700,8 @@ class Query$GetSection$section$$PosterSection$metadata
     required this.secondaryTitles,
     required this.collectionId,
     required this.useContext,
+    this.page,
+    this.limit,
     required this.prependLiveElement,
     this.$__typename = 'ItemSectionMetadata',
   });
@@ -36185,6 +38713,8 @@ class Query$GetSection$section$$PosterSection$metadata
     final l$secondaryTitles = json['secondaryTitles'];
     final l$collectionId = json['collectionId'];
     final l$useContext = json['useContext'];
+    final l$page = json['page'];
+    final l$limit = json['limit'];
     final l$prependLiveElement = json['prependLiveElement'];
     final l$$__typename = json['__typename'];
     return Query$GetSection$section$$PosterSection$metadata(
@@ -36193,6 +38723,11 @@ class Query$GetSection$section$$PosterSection$metadata
       secondaryTitles: (l$secondaryTitles as bool),
       collectionId: (l$collectionId as String),
       useContext: (l$useContext as bool),
+      page: l$page == null
+          ? null
+          : Query$GetSection$section$$PosterSection$metadata$page.fromJson(
+              (l$page as Map<String, dynamic>)),
+      limit: (l$limit as int?),
       prependLiveElement: (l$prependLiveElement as bool),
       $__typename: (l$$__typename as String),
     );
@@ -36207,6 +38742,10 @@ class Query$GetSection$section$$PosterSection$metadata
   final String collectionId;
 
   final bool useContext;
+
+  final Query$GetSection$section$$PosterSection$metadata$page? page;
+
+  final int? limit;
 
   final bool prependLiveElement;
 
@@ -36224,6 +38763,10 @@ class Query$GetSection$section$$PosterSection$metadata
     _resultData['collectionId'] = l$collectionId;
     final l$useContext = useContext;
     _resultData['useContext'] = l$useContext;
+    final l$page = page;
+    _resultData['page'] = l$page?.toJson();
+    final l$limit = limit;
+    _resultData['limit'] = l$limit;
     final l$prependLiveElement = prependLiveElement;
     _resultData['prependLiveElement'] = l$prependLiveElement;
     final l$$__typename = $__typename;
@@ -36238,6 +38781,8 @@ class Query$GetSection$section$$PosterSection$metadata
     final l$secondaryTitles = secondaryTitles;
     final l$collectionId = collectionId;
     final l$useContext = useContext;
+    final l$page = page;
+    final l$limit = limit;
     final l$prependLiveElement = prependLiveElement;
     final l$$__typename = $__typename;
     return Object.hashAll([
@@ -36246,6 +38791,8 @@ class Query$GetSection$section$$PosterSection$metadata
       l$secondaryTitles,
       l$collectionId,
       l$useContext,
+      l$page,
+      l$limit,
       l$prependLiveElement,
       l$$__typename,
     ]);
@@ -36283,6 +38830,16 @@ class Query$GetSection$section$$PosterSection$metadata
     final l$useContext = useContext;
     final lOther$useContext = other.useContext;
     if (l$useContext != lOther$useContext) {
+      return false;
+    }
+    final l$page = page;
+    final lOther$page = other.page;
+    if (l$page != lOther$page) {
+      return false;
+    }
+    final l$limit = limit;
+    final lOther$limit = other.limit;
+    if (l$limit != lOther$limit) {
       return false;
     }
     final l$prependLiveElement = prependLiveElement;
@@ -36325,9 +38882,12 @@ abstract class CopyWith$Query$GetSection$section$$PosterSection$metadata<TRes> {
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Query$GetSection$section$$PosterSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
     String? $__typename,
   });
+  CopyWith$Query$GetSection$section$$PosterSection$metadata$page<TRes> get page;
 }
 
 class _CopyWithImpl$Query$GetSection$section$$PosterSection$metadata<TRes>
@@ -36349,6 +38909,8 @@ class _CopyWithImpl$Query$GetSection$section$$PosterSection$metadata<TRes>
     Object? secondaryTitles = _undefined,
     Object? collectionId = _undefined,
     Object? useContext = _undefined,
+    Object? page = _undefined,
+    Object? limit = _undefined,
     Object? prependLiveElement = _undefined,
     Object? $__typename = _undefined,
   }) =>
@@ -36370,6 +38932,10 @@ class _CopyWithImpl$Query$GetSection$section$$PosterSection$metadata<TRes>
         useContext: useContext == _undefined || useContext == null
             ? _instance.useContext
             : (useContext as bool),
+        page: page == _undefined
+            ? _instance.page
+            : (page as Query$GetSection$section$$PosterSection$metadata$page?),
+        limit: limit == _undefined ? _instance.limit : (limit as int?),
         prependLiveElement:
             prependLiveElement == _undefined || prependLiveElement == null
                 ? _instance.prependLiveElement
@@ -36378,6 +38944,16 @@ class _CopyWithImpl$Query$GetSection$section$$PosterSection$metadata<TRes>
             ? _instance.$__typename
             : ($__typename as String),
       ));
+
+  CopyWith$Query$GetSection$section$$PosterSection$metadata$page<TRes>
+      get page {
+    final local$page = _instance.page;
+    return local$page == null
+        ? CopyWith$Query$GetSection$section$$PosterSection$metadata$page.stub(
+            _then(_instance))
+        : CopyWith$Query$GetSection$section$$PosterSection$metadata$page(
+            local$page, (e) => call(page: e));
+  }
 }
 
 class _CopyWithStubImpl$Query$GetSection$section$$PosterSection$metadata<TRes>
@@ -36392,7 +38968,152 @@ class _CopyWithStubImpl$Query$GetSection$section$$PosterSection$metadata<TRes>
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Query$GetSection$section$$PosterSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Query$GetSection$section$$PosterSection$metadata$page<TRes>
+      get page =>
+          CopyWith$Query$GetSection$section$$PosterSection$metadata$page.stub(
+              _res);
+}
+
+class Query$GetSection$section$$PosterSection$metadata$page
+    implements
+        Fragment$Section$$PosterSection$metadata$page,
+        Fragment$ItemSection$$PosterSection$metadata$page {
+  Query$GetSection$section$$PosterSection$metadata$page({
+    required this.code,
+    this.$__typename = 'Page',
+  });
+
+  factory Query$GetSection$section$$PosterSection$metadata$page.fromJson(
+      Map<String, dynamic> json) {
+    final l$code = json['code'];
+    final l$$__typename = json['__typename'];
+    return Query$GetSection$section$$PosterSection$metadata$page(
+      code: (l$code as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String code;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$code = code;
+    _resultData['code'] = l$code;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$code = code;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$code,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Query$GetSection$section$$PosterSection$metadata$page) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$code = code;
+    final lOther$code = other.code;
+    if (l$code != lOther$code) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$GetSection$section$$PosterSection$metadata$page
+    on Query$GetSection$section$$PosterSection$metadata$page {
+  CopyWith$Query$GetSection$section$$PosterSection$metadata$page<
+          Query$GetSection$section$$PosterSection$metadata$page>
+      get copyWith =>
+          CopyWith$Query$GetSection$section$$PosterSection$metadata$page(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$GetSection$section$$PosterSection$metadata$page<
+    TRes> {
+  factory CopyWith$Query$GetSection$section$$PosterSection$metadata$page(
+    Query$GetSection$section$$PosterSection$metadata$page instance,
+    TRes Function(Query$GetSection$section$$PosterSection$metadata$page) then,
+  ) = _CopyWithImpl$Query$GetSection$section$$PosterSection$metadata$page;
+
+  factory CopyWith$Query$GetSection$section$$PosterSection$metadata$page.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$GetSection$section$$PosterSection$metadata$page;
+
+  TRes call({
+    String? code,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Query$GetSection$section$$PosterSection$metadata$page<TRes>
+    implements
+        CopyWith$Query$GetSection$section$$PosterSection$metadata$page<TRes> {
+  _CopyWithImpl$Query$GetSection$section$$PosterSection$metadata$page(
+    this._instance,
+    this._then,
+  );
+
+  final Query$GetSection$section$$PosterSection$metadata$page _instance;
+
+  final TRes Function(Query$GetSection$section$$PosterSection$metadata$page)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? code = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Query$GetSection$section$$PosterSection$metadata$page(
+        code: code == _undefined || code == null
+            ? _instance.code
+            : (code as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Query$GetSection$section$$PosterSection$metadata$page<
+        TRes>
+    implements
+        CopyWith$Query$GetSection$section$$PosterSection$metadata$page<TRes> {
+  _CopyWithStubImpl$Query$GetSection$section$$PosterSection$metadata$page(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? code,
     String? $__typename,
   }) =>
       _res;
@@ -40996,6 +43717,8 @@ class Query$GetSection$section$$FeaturedSection$metadata
     required this.secondaryTitles,
     required this.collectionId,
     required this.useContext,
+    this.page,
+    this.limit,
     required this.prependLiveElement,
     this.$__typename = 'ItemSectionMetadata',
   });
@@ -41007,6 +43730,8 @@ class Query$GetSection$section$$FeaturedSection$metadata
     final l$secondaryTitles = json['secondaryTitles'];
     final l$collectionId = json['collectionId'];
     final l$useContext = json['useContext'];
+    final l$page = json['page'];
+    final l$limit = json['limit'];
     final l$prependLiveElement = json['prependLiveElement'];
     final l$$__typename = json['__typename'];
     return Query$GetSection$section$$FeaturedSection$metadata(
@@ -41015,6 +43740,11 @@ class Query$GetSection$section$$FeaturedSection$metadata
       secondaryTitles: (l$secondaryTitles as bool),
       collectionId: (l$collectionId as String),
       useContext: (l$useContext as bool),
+      page: l$page == null
+          ? null
+          : Query$GetSection$section$$FeaturedSection$metadata$page.fromJson(
+              (l$page as Map<String, dynamic>)),
+      limit: (l$limit as int?),
       prependLiveElement: (l$prependLiveElement as bool),
       $__typename: (l$$__typename as String),
     );
@@ -41029,6 +43759,10 @@ class Query$GetSection$section$$FeaturedSection$metadata
   final String collectionId;
 
   final bool useContext;
+
+  final Query$GetSection$section$$FeaturedSection$metadata$page? page;
+
+  final int? limit;
 
   final bool prependLiveElement;
 
@@ -41046,6 +43780,10 @@ class Query$GetSection$section$$FeaturedSection$metadata
     _resultData['collectionId'] = l$collectionId;
     final l$useContext = useContext;
     _resultData['useContext'] = l$useContext;
+    final l$page = page;
+    _resultData['page'] = l$page?.toJson();
+    final l$limit = limit;
+    _resultData['limit'] = l$limit;
     final l$prependLiveElement = prependLiveElement;
     _resultData['prependLiveElement'] = l$prependLiveElement;
     final l$$__typename = $__typename;
@@ -41060,6 +43798,8 @@ class Query$GetSection$section$$FeaturedSection$metadata
     final l$secondaryTitles = secondaryTitles;
     final l$collectionId = collectionId;
     final l$useContext = useContext;
+    final l$page = page;
+    final l$limit = limit;
     final l$prependLiveElement = prependLiveElement;
     final l$$__typename = $__typename;
     return Object.hashAll([
@@ -41068,6 +43808,8 @@ class Query$GetSection$section$$FeaturedSection$metadata
       l$secondaryTitles,
       l$collectionId,
       l$useContext,
+      l$page,
+      l$limit,
       l$prependLiveElement,
       l$$__typename,
     ]);
@@ -41105,6 +43847,16 @@ class Query$GetSection$section$$FeaturedSection$metadata
     final l$useContext = useContext;
     final lOther$useContext = other.useContext;
     if (l$useContext != lOther$useContext) {
+      return false;
+    }
+    final l$page = page;
+    final lOther$page = other.page;
+    if (l$page != lOther$page) {
+      return false;
+    }
+    final l$limit = limit;
+    final lOther$limit = other.limit;
+    if (l$limit != lOther$limit) {
       return false;
     }
     final l$prependLiveElement = prependLiveElement;
@@ -41149,9 +43901,13 @@ abstract class CopyWith$Query$GetSection$section$$FeaturedSection$metadata<
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Query$GetSection$section$$FeaturedSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
     String? $__typename,
   });
+  CopyWith$Query$GetSection$section$$FeaturedSection$metadata$page<TRes>
+      get page;
 }
 
 class _CopyWithImpl$Query$GetSection$section$$FeaturedSection$metadata<TRes>
@@ -41174,6 +43930,8 @@ class _CopyWithImpl$Query$GetSection$section$$FeaturedSection$metadata<TRes>
     Object? secondaryTitles = _undefined,
     Object? collectionId = _undefined,
     Object? useContext = _undefined,
+    Object? page = _undefined,
+    Object? limit = _undefined,
     Object? prependLiveElement = _undefined,
     Object? $__typename = _undefined,
   }) =>
@@ -41195,6 +43953,11 @@ class _CopyWithImpl$Query$GetSection$section$$FeaturedSection$metadata<TRes>
         useContext: useContext == _undefined || useContext == null
             ? _instance.useContext
             : (useContext as bool),
+        page: page == _undefined
+            ? _instance.page
+            : (page
+                as Query$GetSection$section$$FeaturedSection$metadata$page?),
+        limit: limit == _undefined ? _instance.limit : (limit as int?),
         prependLiveElement:
             prependLiveElement == _undefined || prependLiveElement == null
                 ? _instance.prependLiveElement
@@ -41203,6 +43966,16 @@ class _CopyWithImpl$Query$GetSection$section$$FeaturedSection$metadata<TRes>
             ? _instance.$__typename
             : ($__typename as String),
       ));
+
+  CopyWith$Query$GetSection$section$$FeaturedSection$metadata$page<TRes>
+      get page {
+    final local$page = _instance.page;
+    return local$page == null
+        ? CopyWith$Query$GetSection$section$$FeaturedSection$metadata$page.stub(
+            _then(_instance))
+        : CopyWith$Query$GetSection$section$$FeaturedSection$metadata$page(
+            local$page, (e) => call(page: e));
+  }
 }
 
 class _CopyWithStubImpl$Query$GetSection$section$$FeaturedSection$metadata<TRes>
@@ -41219,7 +43992,153 @@ class _CopyWithStubImpl$Query$GetSection$section$$FeaturedSection$metadata<TRes>
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Query$GetSection$section$$FeaturedSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Query$GetSection$section$$FeaturedSection$metadata$page<TRes>
+      get page =>
+          CopyWith$Query$GetSection$section$$FeaturedSection$metadata$page.stub(
+              _res);
+}
+
+class Query$GetSection$section$$FeaturedSection$metadata$page
+    implements
+        Fragment$Section$$FeaturedSection$metadata$page,
+        Fragment$ItemSection$$FeaturedSection$metadata$page {
+  Query$GetSection$section$$FeaturedSection$metadata$page({
+    required this.code,
+    this.$__typename = 'Page',
+  });
+
+  factory Query$GetSection$section$$FeaturedSection$metadata$page.fromJson(
+      Map<String, dynamic> json) {
+    final l$code = json['code'];
+    final l$$__typename = json['__typename'];
+    return Query$GetSection$section$$FeaturedSection$metadata$page(
+      code: (l$code as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String code;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$code = code;
+    _resultData['code'] = l$code;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$code = code;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$code,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Query$GetSection$section$$FeaturedSection$metadata$page) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$code = code;
+    final lOther$code = other.code;
+    if (l$code != lOther$code) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$GetSection$section$$FeaturedSection$metadata$page
+    on Query$GetSection$section$$FeaturedSection$metadata$page {
+  CopyWith$Query$GetSection$section$$FeaturedSection$metadata$page<
+          Query$GetSection$section$$FeaturedSection$metadata$page>
+      get copyWith =>
+          CopyWith$Query$GetSection$section$$FeaturedSection$metadata$page(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$GetSection$section$$FeaturedSection$metadata$page<
+    TRes> {
+  factory CopyWith$Query$GetSection$section$$FeaturedSection$metadata$page(
+    Query$GetSection$section$$FeaturedSection$metadata$page instance,
+    TRes Function(Query$GetSection$section$$FeaturedSection$metadata$page) then,
+  ) = _CopyWithImpl$Query$GetSection$section$$FeaturedSection$metadata$page;
+
+  factory CopyWith$Query$GetSection$section$$FeaturedSection$metadata$page.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$GetSection$section$$FeaturedSection$metadata$page;
+
+  TRes call({
+    String? code,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Query$GetSection$section$$FeaturedSection$metadata$page<
+        TRes>
+    implements
+        CopyWith$Query$GetSection$section$$FeaturedSection$metadata$page<TRes> {
+  _CopyWithImpl$Query$GetSection$section$$FeaturedSection$metadata$page(
+    this._instance,
+    this._then,
+  );
+
+  final Query$GetSection$section$$FeaturedSection$metadata$page _instance;
+
+  final TRes Function(Query$GetSection$section$$FeaturedSection$metadata$page)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? code = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Query$GetSection$section$$FeaturedSection$metadata$page(
+        code: code == _undefined || code == null
+            ? _instance.code
+            : (code as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Query$GetSection$section$$FeaturedSection$metadata$page<
+        TRes>
+    implements
+        CopyWith$Query$GetSection$section$$FeaturedSection$metadata$page<TRes> {
+  _CopyWithStubImpl$Query$GetSection$section$$FeaturedSection$metadata$page(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? code,
     String? $__typename,
   }) =>
       _res;
@@ -44344,6 +47263,8 @@ class Query$GetSection$section$$DefaultSection$metadata
     required this.secondaryTitles,
     required this.collectionId,
     required this.useContext,
+    this.page,
+    this.limit,
     required this.prependLiveElement,
     this.$__typename = 'ItemSectionMetadata',
   });
@@ -44355,6 +47276,8 @@ class Query$GetSection$section$$DefaultSection$metadata
     final l$secondaryTitles = json['secondaryTitles'];
     final l$collectionId = json['collectionId'];
     final l$useContext = json['useContext'];
+    final l$page = json['page'];
+    final l$limit = json['limit'];
     final l$prependLiveElement = json['prependLiveElement'];
     final l$$__typename = json['__typename'];
     return Query$GetSection$section$$DefaultSection$metadata(
@@ -44363,6 +47286,11 @@ class Query$GetSection$section$$DefaultSection$metadata
       secondaryTitles: (l$secondaryTitles as bool),
       collectionId: (l$collectionId as String),
       useContext: (l$useContext as bool),
+      page: l$page == null
+          ? null
+          : Query$GetSection$section$$DefaultSection$metadata$page.fromJson(
+              (l$page as Map<String, dynamic>)),
+      limit: (l$limit as int?),
       prependLiveElement: (l$prependLiveElement as bool),
       $__typename: (l$$__typename as String),
     );
@@ -44377,6 +47305,10 @@ class Query$GetSection$section$$DefaultSection$metadata
   final String collectionId;
 
   final bool useContext;
+
+  final Query$GetSection$section$$DefaultSection$metadata$page? page;
+
+  final int? limit;
 
   final bool prependLiveElement;
 
@@ -44394,6 +47326,10 @@ class Query$GetSection$section$$DefaultSection$metadata
     _resultData['collectionId'] = l$collectionId;
     final l$useContext = useContext;
     _resultData['useContext'] = l$useContext;
+    final l$page = page;
+    _resultData['page'] = l$page?.toJson();
+    final l$limit = limit;
+    _resultData['limit'] = l$limit;
     final l$prependLiveElement = prependLiveElement;
     _resultData['prependLiveElement'] = l$prependLiveElement;
     final l$$__typename = $__typename;
@@ -44408,6 +47344,8 @@ class Query$GetSection$section$$DefaultSection$metadata
     final l$secondaryTitles = secondaryTitles;
     final l$collectionId = collectionId;
     final l$useContext = useContext;
+    final l$page = page;
+    final l$limit = limit;
     final l$prependLiveElement = prependLiveElement;
     final l$$__typename = $__typename;
     return Object.hashAll([
@@ -44416,6 +47354,8 @@ class Query$GetSection$section$$DefaultSection$metadata
       l$secondaryTitles,
       l$collectionId,
       l$useContext,
+      l$page,
+      l$limit,
       l$prependLiveElement,
       l$$__typename,
     ]);
@@ -44453,6 +47393,16 @@ class Query$GetSection$section$$DefaultSection$metadata
     final l$useContext = useContext;
     final lOther$useContext = other.useContext;
     if (l$useContext != lOther$useContext) {
+      return false;
+    }
+    final l$page = page;
+    final lOther$page = other.page;
+    if (l$page != lOther$page) {
+      return false;
+    }
+    final l$limit = limit;
+    final lOther$limit = other.limit;
+    if (l$limit != lOther$limit) {
       return false;
     }
     final l$prependLiveElement = prependLiveElement;
@@ -44497,9 +47447,13 @@ abstract class CopyWith$Query$GetSection$section$$DefaultSection$metadata<
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Query$GetSection$section$$DefaultSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
     String? $__typename,
   });
+  CopyWith$Query$GetSection$section$$DefaultSection$metadata$page<TRes>
+      get page;
 }
 
 class _CopyWithImpl$Query$GetSection$section$$DefaultSection$metadata<TRes>
@@ -44522,6 +47476,8 @@ class _CopyWithImpl$Query$GetSection$section$$DefaultSection$metadata<TRes>
     Object? secondaryTitles = _undefined,
     Object? collectionId = _undefined,
     Object? useContext = _undefined,
+    Object? page = _undefined,
+    Object? limit = _undefined,
     Object? prependLiveElement = _undefined,
     Object? $__typename = _undefined,
   }) =>
@@ -44543,6 +47499,10 @@ class _CopyWithImpl$Query$GetSection$section$$DefaultSection$metadata<TRes>
         useContext: useContext == _undefined || useContext == null
             ? _instance.useContext
             : (useContext as bool),
+        page: page == _undefined
+            ? _instance.page
+            : (page as Query$GetSection$section$$DefaultSection$metadata$page?),
+        limit: limit == _undefined ? _instance.limit : (limit as int?),
         prependLiveElement:
             prependLiveElement == _undefined || prependLiveElement == null
                 ? _instance.prependLiveElement
@@ -44551,6 +47511,16 @@ class _CopyWithImpl$Query$GetSection$section$$DefaultSection$metadata<TRes>
             ? _instance.$__typename
             : ($__typename as String),
       ));
+
+  CopyWith$Query$GetSection$section$$DefaultSection$metadata$page<TRes>
+      get page {
+    final local$page = _instance.page;
+    return local$page == null
+        ? CopyWith$Query$GetSection$section$$DefaultSection$metadata$page.stub(
+            _then(_instance))
+        : CopyWith$Query$GetSection$section$$DefaultSection$metadata$page(
+            local$page, (e) => call(page: e));
+  }
 }
 
 class _CopyWithStubImpl$Query$GetSection$section$$DefaultSection$metadata<TRes>
@@ -44567,7 +47537,152 @@ class _CopyWithStubImpl$Query$GetSection$section$$DefaultSection$metadata<TRes>
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Query$GetSection$section$$DefaultSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Query$GetSection$section$$DefaultSection$metadata$page<TRes>
+      get page =>
+          CopyWith$Query$GetSection$section$$DefaultSection$metadata$page.stub(
+              _res);
+}
+
+class Query$GetSection$section$$DefaultSection$metadata$page
+    implements
+        Fragment$Section$$DefaultSection$metadata$page,
+        Fragment$ItemSection$$DefaultSection$metadata$page {
+  Query$GetSection$section$$DefaultSection$metadata$page({
+    required this.code,
+    this.$__typename = 'Page',
+  });
+
+  factory Query$GetSection$section$$DefaultSection$metadata$page.fromJson(
+      Map<String, dynamic> json) {
+    final l$code = json['code'];
+    final l$$__typename = json['__typename'];
+    return Query$GetSection$section$$DefaultSection$metadata$page(
+      code: (l$code as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String code;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$code = code;
+    _resultData['code'] = l$code;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$code = code;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$code,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Query$GetSection$section$$DefaultSection$metadata$page) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$code = code;
+    final lOther$code = other.code;
+    if (l$code != lOther$code) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$GetSection$section$$DefaultSection$metadata$page
+    on Query$GetSection$section$$DefaultSection$metadata$page {
+  CopyWith$Query$GetSection$section$$DefaultSection$metadata$page<
+          Query$GetSection$section$$DefaultSection$metadata$page>
+      get copyWith =>
+          CopyWith$Query$GetSection$section$$DefaultSection$metadata$page(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$GetSection$section$$DefaultSection$metadata$page<
+    TRes> {
+  factory CopyWith$Query$GetSection$section$$DefaultSection$metadata$page(
+    Query$GetSection$section$$DefaultSection$metadata$page instance,
+    TRes Function(Query$GetSection$section$$DefaultSection$metadata$page) then,
+  ) = _CopyWithImpl$Query$GetSection$section$$DefaultSection$metadata$page;
+
+  factory CopyWith$Query$GetSection$section$$DefaultSection$metadata$page.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$GetSection$section$$DefaultSection$metadata$page;
+
+  TRes call({
+    String? code,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Query$GetSection$section$$DefaultSection$metadata$page<TRes>
+    implements
+        CopyWith$Query$GetSection$section$$DefaultSection$metadata$page<TRes> {
+  _CopyWithImpl$Query$GetSection$section$$DefaultSection$metadata$page(
+    this._instance,
+    this._then,
+  );
+
+  final Query$GetSection$section$$DefaultSection$metadata$page _instance;
+
+  final TRes Function(Query$GetSection$section$$DefaultSection$metadata$page)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? code = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Query$GetSection$section$$DefaultSection$metadata$page(
+        code: code == _undefined || code == null
+            ? _instance.code
+            : (code as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Query$GetSection$section$$DefaultSection$metadata$page<
+        TRes>
+    implements
+        CopyWith$Query$GetSection$section$$DefaultSection$metadata$page<TRes> {
+  _CopyWithStubImpl$Query$GetSection$section$$DefaultSection$metadata$page(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? code,
     String? $__typename,
   }) =>
       _res;
@@ -47686,6 +50801,8 @@ class Query$GetSection$section$$CardSection$metadata
     required this.secondaryTitles,
     required this.collectionId,
     required this.useContext,
+    this.page,
+    this.limit,
     required this.prependLiveElement,
     this.$__typename = 'ItemSectionMetadata',
   });
@@ -47697,6 +50814,8 @@ class Query$GetSection$section$$CardSection$metadata
     final l$secondaryTitles = json['secondaryTitles'];
     final l$collectionId = json['collectionId'];
     final l$useContext = json['useContext'];
+    final l$page = json['page'];
+    final l$limit = json['limit'];
     final l$prependLiveElement = json['prependLiveElement'];
     final l$$__typename = json['__typename'];
     return Query$GetSection$section$$CardSection$metadata(
@@ -47705,6 +50824,11 @@ class Query$GetSection$section$$CardSection$metadata
       secondaryTitles: (l$secondaryTitles as bool),
       collectionId: (l$collectionId as String),
       useContext: (l$useContext as bool),
+      page: l$page == null
+          ? null
+          : Query$GetSection$section$$CardSection$metadata$page.fromJson(
+              (l$page as Map<String, dynamic>)),
+      limit: (l$limit as int?),
       prependLiveElement: (l$prependLiveElement as bool),
       $__typename: (l$$__typename as String),
     );
@@ -47719,6 +50843,10 @@ class Query$GetSection$section$$CardSection$metadata
   final String collectionId;
 
   final bool useContext;
+
+  final Query$GetSection$section$$CardSection$metadata$page? page;
+
+  final int? limit;
 
   final bool prependLiveElement;
 
@@ -47736,6 +50864,10 @@ class Query$GetSection$section$$CardSection$metadata
     _resultData['collectionId'] = l$collectionId;
     final l$useContext = useContext;
     _resultData['useContext'] = l$useContext;
+    final l$page = page;
+    _resultData['page'] = l$page?.toJson();
+    final l$limit = limit;
+    _resultData['limit'] = l$limit;
     final l$prependLiveElement = prependLiveElement;
     _resultData['prependLiveElement'] = l$prependLiveElement;
     final l$$__typename = $__typename;
@@ -47750,6 +50882,8 @@ class Query$GetSection$section$$CardSection$metadata
     final l$secondaryTitles = secondaryTitles;
     final l$collectionId = collectionId;
     final l$useContext = useContext;
+    final l$page = page;
+    final l$limit = limit;
     final l$prependLiveElement = prependLiveElement;
     final l$$__typename = $__typename;
     return Object.hashAll([
@@ -47758,6 +50892,8 @@ class Query$GetSection$section$$CardSection$metadata
       l$secondaryTitles,
       l$collectionId,
       l$useContext,
+      l$page,
+      l$limit,
       l$prependLiveElement,
       l$$__typename,
     ]);
@@ -47795,6 +50931,16 @@ class Query$GetSection$section$$CardSection$metadata
     final l$useContext = useContext;
     final lOther$useContext = other.useContext;
     if (l$useContext != lOther$useContext) {
+      return false;
+    }
+    final l$page = page;
+    final lOther$page = other.page;
+    if (l$page != lOther$page) {
+      return false;
+    }
+    final l$limit = limit;
+    final lOther$limit = other.limit;
+    if (l$limit != lOther$limit) {
       return false;
     }
     final l$prependLiveElement = prependLiveElement;
@@ -47837,9 +50983,12 @@ abstract class CopyWith$Query$GetSection$section$$CardSection$metadata<TRes> {
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Query$GetSection$section$$CardSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
     String? $__typename,
   });
+  CopyWith$Query$GetSection$section$$CardSection$metadata$page<TRes> get page;
 }
 
 class _CopyWithImpl$Query$GetSection$section$$CardSection$metadata<TRes>
@@ -47861,6 +51010,8 @@ class _CopyWithImpl$Query$GetSection$section$$CardSection$metadata<TRes>
     Object? secondaryTitles = _undefined,
     Object? collectionId = _undefined,
     Object? useContext = _undefined,
+    Object? page = _undefined,
+    Object? limit = _undefined,
     Object? prependLiveElement = _undefined,
     Object? $__typename = _undefined,
   }) =>
@@ -47882,6 +51033,10 @@ class _CopyWithImpl$Query$GetSection$section$$CardSection$metadata<TRes>
         useContext: useContext == _undefined || useContext == null
             ? _instance.useContext
             : (useContext as bool),
+        page: page == _undefined
+            ? _instance.page
+            : (page as Query$GetSection$section$$CardSection$metadata$page?),
+        limit: limit == _undefined ? _instance.limit : (limit as int?),
         prependLiveElement:
             prependLiveElement == _undefined || prependLiveElement == null
                 ? _instance.prependLiveElement
@@ -47890,6 +51045,15 @@ class _CopyWithImpl$Query$GetSection$section$$CardSection$metadata<TRes>
             ? _instance.$__typename
             : ($__typename as String),
       ));
+
+  CopyWith$Query$GetSection$section$$CardSection$metadata$page<TRes> get page {
+    final local$page = _instance.page;
+    return local$page == null
+        ? CopyWith$Query$GetSection$section$$CardSection$metadata$page.stub(
+            _then(_instance))
+        : CopyWith$Query$GetSection$section$$CardSection$metadata$page(
+            local$page, (e) => call(page: e));
+  }
 }
 
 class _CopyWithStubImpl$Query$GetSection$section$$CardSection$metadata<TRes>
@@ -47904,7 +51068,150 @@ class _CopyWithStubImpl$Query$GetSection$section$$CardSection$metadata<TRes>
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Query$GetSection$section$$CardSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Query$GetSection$section$$CardSection$metadata$page<TRes> get page =>
+      CopyWith$Query$GetSection$section$$CardSection$metadata$page.stub(_res);
+}
+
+class Query$GetSection$section$$CardSection$metadata$page
+    implements
+        Fragment$Section$$CardSection$metadata$page,
+        Fragment$ItemSection$$CardSection$metadata$page {
+  Query$GetSection$section$$CardSection$metadata$page({
+    required this.code,
+    this.$__typename = 'Page',
+  });
+
+  factory Query$GetSection$section$$CardSection$metadata$page.fromJson(
+      Map<String, dynamic> json) {
+    final l$code = json['code'];
+    final l$$__typename = json['__typename'];
+    return Query$GetSection$section$$CardSection$metadata$page(
+      code: (l$code as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String code;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$code = code;
+    _resultData['code'] = l$code;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$code = code;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$code,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Query$GetSection$section$$CardSection$metadata$page) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$code = code;
+    final lOther$code = other.code;
+    if (l$code != lOther$code) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$GetSection$section$$CardSection$metadata$page
+    on Query$GetSection$section$$CardSection$metadata$page {
+  CopyWith$Query$GetSection$section$$CardSection$metadata$page<
+          Query$GetSection$section$$CardSection$metadata$page>
+      get copyWith =>
+          CopyWith$Query$GetSection$section$$CardSection$metadata$page(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$GetSection$section$$CardSection$metadata$page<
+    TRes> {
+  factory CopyWith$Query$GetSection$section$$CardSection$metadata$page(
+    Query$GetSection$section$$CardSection$metadata$page instance,
+    TRes Function(Query$GetSection$section$$CardSection$metadata$page) then,
+  ) = _CopyWithImpl$Query$GetSection$section$$CardSection$metadata$page;
+
+  factory CopyWith$Query$GetSection$section$$CardSection$metadata$page.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$GetSection$section$$CardSection$metadata$page;
+
+  TRes call({
+    String? code,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Query$GetSection$section$$CardSection$metadata$page<TRes>
+    implements
+        CopyWith$Query$GetSection$section$$CardSection$metadata$page<TRes> {
+  _CopyWithImpl$Query$GetSection$section$$CardSection$metadata$page(
+    this._instance,
+    this._then,
+  );
+
+  final Query$GetSection$section$$CardSection$metadata$page _instance;
+
+  final TRes Function(Query$GetSection$section$$CardSection$metadata$page)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? code = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Query$GetSection$section$$CardSection$metadata$page(
+        code: code == _undefined || code == null
+            ? _instance.code
+            : (code as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Query$GetSection$section$$CardSection$metadata$page<
+        TRes>
+    implements
+        CopyWith$Query$GetSection$section$$CardSection$metadata$page<TRes> {
+  _CopyWithStubImpl$Query$GetSection$section$$CardSection$metadata$page(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? code,
     String? $__typename,
   }) =>
       _res;
@@ -51143,6 +54450,8 @@ class Query$GetSection$section$$ListSection$metadata
     required this.secondaryTitles,
     required this.collectionId,
     required this.useContext,
+    this.page,
+    this.limit,
     required this.prependLiveElement,
     this.$__typename = 'ItemSectionMetadata',
   });
@@ -51154,6 +54463,8 @@ class Query$GetSection$section$$ListSection$metadata
     final l$secondaryTitles = json['secondaryTitles'];
     final l$collectionId = json['collectionId'];
     final l$useContext = json['useContext'];
+    final l$page = json['page'];
+    final l$limit = json['limit'];
     final l$prependLiveElement = json['prependLiveElement'];
     final l$$__typename = json['__typename'];
     return Query$GetSection$section$$ListSection$metadata(
@@ -51162,6 +54473,11 @@ class Query$GetSection$section$$ListSection$metadata
       secondaryTitles: (l$secondaryTitles as bool),
       collectionId: (l$collectionId as String),
       useContext: (l$useContext as bool),
+      page: l$page == null
+          ? null
+          : Query$GetSection$section$$ListSection$metadata$page.fromJson(
+              (l$page as Map<String, dynamic>)),
+      limit: (l$limit as int?),
       prependLiveElement: (l$prependLiveElement as bool),
       $__typename: (l$$__typename as String),
     );
@@ -51176,6 +54492,10 @@ class Query$GetSection$section$$ListSection$metadata
   final String collectionId;
 
   final bool useContext;
+
+  final Query$GetSection$section$$ListSection$metadata$page? page;
+
+  final int? limit;
 
   final bool prependLiveElement;
 
@@ -51193,6 +54513,10 @@ class Query$GetSection$section$$ListSection$metadata
     _resultData['collectionId'] = l$collectionId;
     final l$useContext = useContext;
     _resultData['useContext'] = l$useContext;
+    final l$page = page;
+    _resultData['page'] = l$page?.toJson();
+    final l$limit = limit;
+    _resultData['limit'] = l$limit;
     final l$prependLiveElement = prependLiveElement;
     _resultData['prependLiveElement'] = l$prependLiveElement;
     final l$$__typename = $__typename;
@@ -51207,6 +54531,8 @@ class Query$GetSection$section$$ListSection$metadata
     final l$secondaryTitles = secondaryTitles;
     final l$collectionId = collectionId;
     final l$useContext = useContext;
+    final l$page = page;
+    final l$limit = limit;
     final l$prependLiveElement = prependLiveElement;
     final l$$__typename = $__typename;
     return Object.hashAll([
@@ -51215,6 +54541,8 @@ class Query$GetSection$section$$ListSection$metadata
       l$secondaryTitles,
       l$collectionId,
       l$useContext,
+      l$page,
+      l$limit,
       l$prependLiveElement,
       l$$__typename,
     ]);
@@ -51252,6 +54580,16 @@ class Query$GetSection$section$$ListSection$metadata
     final l$useContext = useContext;
     final lOther$useContext = other.useContext;
     if (l$useContext != lOther$useContext) {
+      return false;
+    }
+    final l$page = page;
+    final lOther$page = other.page;
+    if (l$page != lOther$page) {
+      return false;
+    }
+    final l$limit = limit;
+    final lOther$limit = other.limit;
+    if (l$limit != lOther$limit) {
       return false;
     }
     final l$prependLiveElement = prependLiveElement;
@@ -51294,9 +54632,12 @@ abstract class CopyWith$Query$GetSection$section$$ListSection$metadata<TRes> {
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Query$GetSection$section$$ListSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
     String? $__typename,
   });
+  CopyWith$Query$GetSection$section$$ListSection$metadata$page<TRes> get page;
 }
 
 class _CopyWithImpl$Query$GetSection$section$$ListSection$metadata<TRes>
@@ -51318,6 +54659,8 @@ class _CopyWithImpl$Query$GetSection$section$$ListSection$metadata<TRes>
     Object? secondaryTitles = _undefined,
     Object? collectionId = _undefined,
     Object? useContext = _undefined,
+    Object? page = _undefined,
+    Object? limit = _undefined,
     Object? prependLiveElement = _undefined,
     Object? $__typename = _undefined,
   }) =>
@@ -51339,6 +54682,10 @@ class _CopyWithImpl$Query$GetSection$section$$ListSection$metadata<TRes>
         useContext: useContext == _undefined || useContext == null
             ? _instance.useContext
             : (useContext as bool),
+        page: page == _undefined
+            ? _instance.page
+            : (page as Query$GetSection$section$$ListSection$metadata$page?),
+        limit: limit == _undefined ? _instance.limit : (limit as int?),
         prependLiveElement:
             prependLiveElement == _undefined || prependLiveElement == null
                 ? _instance.prependLiveElement
@@ -51347,6 +54694,15 @@ class _CopyWithImpl$Query$GetSection$section$$ListSection$metadata<TRes>
             ? _instance.$__typename
             : ($__typename as String),
       ));
+
+  CopyWith$Query$GetSection$section$$ListSection$metadata$page<TRes> get page {
+    final local$page = _instance.page;
+    return local$page == null
+        ? CopyWith$Query$GetSection$section$$ListSection$metadata$page.stub(
+            _then(_instance))
+        : CopyWith$Query$GetSection$section$$ListSection$metadata$page(
+            local$page, (e) => call(page: e));
+  }
 }
 
 class _CopyWithStubImpl$Query$GetSection$section$$ListSection$metadata<TRes>
@@ -51361,7 +54717,150 @@ class _CopyWithStubImpl$Query$GetSection$section$$ListSection$metadata<TRes>
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Query$GetSection$section$$ListSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Query$GetSection$section$$ListSection$metadata$page<TRes> get page =>
+      CopyWith$Query$GetSection$section$$ListSection$metadata$page.stub(_res);
+}
+
+class Query$GetSection$section$$ListSection$metadata$page
+    implements
+        Fragment$Section$$ListSection$metadata$page,
+        Fragment$ItemSection$$ListSection$metadata$page {
+  Query$GetSection$section$$ListSection$metadata$page({
+    required this.code,
+    this.$__typename = 'Page',
+  });
+
+  factory Query$GetSection$section$$ListSection$metadata$page.fromJson(
+      Map<String, dynamic> json) {
+    final l$code = json['code'];
+    final l$$__typename = json['__typename'];
+    return Query$GetSection$section$$ListSection$metadata$page(
+      code: (l$code as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String code;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$code = code;
+    _resultData['code'] = l$code;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$code = code;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$code,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Query$GetSection$section$$ListSection$metadata$page) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$code = code;
+    final lOther$code = other.code;
+    if (l$code != lOther$code) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$GetSection$section$$ListSection$metadata$page
+    on Query$GetSection$section$$ListSection$metadata$page {
+  CopyWith$Query$GetSection$section$$ListSection$metadata$page<
+          Query$GetSection$section$$ListSection$metadata$page>
+      get copyWith =>
+          CopyWith$Query$GetSection$section$$ListSection$metadata$page(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$GetSection$section$$ListSection$metadata$page<
+    TRes> {
+  factory CopyWith$Query$GetSection$section$$ListSection$metadata$page(
+    Query$GetSection$section$$ListSection$metadata$page instance,
+    TRes Function(Query$GetSection$section$$ListSection$metadata$page) then,
+  ) = _CopyWithImpl$Query$GetSection$section$$ListSection$metadata$page;
+
+  factory CopyWith$Query$GetSection$section$$ListSection$metadata$page.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$GetSection$section$$ListSection$metadata$page;
+
+  TRes call({
+    String? code,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Query$GetSection$section$$ListSection$metadata$page<TRes>
+    implements
+        CopyWith$Query$GetSection$section$$ListSection$metadata$page<TRes> {
+  _CopyWithImpl$Query$GetSection$section$$ListSection$metadata$page(
+    this._instance,
+    this._then,
+  );
+
+  final Query$GetSection$section$$ListSection$metadata$page _instance;
+
+  final TRes Function(Query$GetSection$section$$ListSection$metadata$page)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? code = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Query$GetSection$section$$ListSection$metadata$page(
+        code: code == _undefined || code == null
+            ? _instance.code
+            : (code as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Query$GetSection$section$$ListSection$metadata$page<
+        TRes>
+    implements
+        CopyWith$Query$GetSection$section$$ListSection$metadata$page<TRes> {
+  _CopyWithStubImpl$Query$GetSection$section$$ListSection$metadata$page(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? code,
     String? $__typename,
   }) =>
       _res;
@@ -54473,6 +57972,8 @@ class Query$GetSection$section$$CardListSection$metadata
     required this.secondaryTitles,
     required this.collectionId,
     required this.useContext,
+    this.page,
+    this.limit,
     required this.prependLiveElement,
     this.$__typename = 'ItemSectionMetadata',
   });
@@ -54484,6 +57985,8 @@ class Query$GetSection$section$$CardListSection$metadata
     final l$secondaryTitles = json['secondaryTitles'];
     final l$collectionId = json['collectionId'];
     final l$useContext = json['useContext'];
+    final l$page = json['page'];
+    final l$limit = json['limit'];
     final l$prependLiveElement = json['prependLiveElement'];
     final l$$__typename = json['__typename'];
     return Query$GetSection$section$$CardListSection$metadata(
@@ -54492,6 +57995,11 @@ class Query$GetSection$section$$CardListSection$metadata
       secondaryTitles: (l$secondaryTitles as bool),
       collectionId: (l$collectionId as String),
       useContext: (l$useContext as bool),
+      page: l$page == null
+          ? null
+          : Query$GetSection$section$$CardListSection$metadata$page.fromJson(
+              (l$page as Map<String, dynamic>)),
+      limit: (l$limit as int?),
       prependLiveElement: (l$prependLiveElement as bool),
       $__typename: (l$$__typename as String),
     );
@@ -54506,6 +58014,10 @@ class Query$GetSection$section$$CardListSection$metadata
   final String collectionId;
 
   final bool useContext;
+
+  final Query$GetSection$section$$CardListSection$metadata$page? page;
+
+  final int? limit;
 
   final bool prependLiveElement;
 
@@ -54523,6 +58035,10 @@ class Query$GetSection$section$$CardListSection$metadata
     _resultData['collectionId'] = l$collectionId;
     final l$useContext = useContext;
     _resultData['useContext'] = l$useContext;
+    final l$page = page;
+    _resultData['page'] = l$page?.toJson();
+    final l$limit = limit;
+    _resultData['limit'] = l$limit;
     final l$prependLiveElement = prependLiveElement;
     _resultData['prependLiveElement'] = l$prependLiveElement;
     final l$$__typename = $__typename;
@@ -54537,6 +58053,8 @@ class Query$GetSection$section$$CardListSection$metadata
     final l$secondaryTitles = secondaryTitles;
     final l$collectionId = collectionId;
     final l$useContext = useContext;
+    final l$page = page;
+    final l$limit = limit;
     final l$prependLiveElement = prependLiveElement;
     final l$$__typename = $__typename;
     return Object.hashAll([
@@ -54545,6 +58063,8 @@ class Query$GetSection$section$$CardListSection$metadata
       l$secondaryTitles,
       l$collectionId,
       l$useContext,
+      l$page,
+      l$limit,
       l$prependLiveElement,
       l$$__typename,
     ]);
@@ -54582,6 +58102,16 @@ class Query$GetSection$section$$CardListSection$metadata
     final l$useContext = useContext;
     final lOther$useContext = other.useContext;
     if (l$useContext != lOther$useContext) {
+      return false;
+    }
+    final l$page = page;
+    final lOther$page = other.page;
+    if (l$page != lOther$page) {
+      return false;
+    }
+    final l$limit = limit;
+    final lOther$limit = other.limit;
+    if (l$limit != lOther$limit) {
       return false;
     }
     final l$prependLiveElement = prependLiveElement;
@@ -54626,9 +58156,13 @@ abstract class CopyWith$Query$GetSection$section$$CardListSection$metadata<
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Query$GetSection$section$$CardListSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
     String? $__typename,
   });
+  CopyWith$Query$GetSection$section$$CardListSection$metadata$page<TRes>
+      get page;
 }
 
 class _CopyWithImpl$Query$GetSection$section$$CardListSection$metadata<TRes>
@@ -54651,6 +58185,8 @@ class _CopyWithImpl$Query$GetSection$section$$CardListSection$metadata<TRes>
     Object? secondaryTitles = _undefined,
     Object? collectionId = _undefined,
     Object? useContext = _undefined,
+    Object? page = _undefined,
+    Object? limit = _undefined,
     Object? prependLiveElement = _undefined,
     Object? $__typename = _undefined,
   }) =>
@@ -54672,6 +58208,11 @@ class _CopyWithImpl$Query$GetSection$section$$CardListSection$metadata<TRes>
         useContext: useContext == _undefined || useContext == null
             ? _instance.useContext
             : (useContext as bool),
+        page: page == _undefined
+            ? _instance.page
+            : (page
+                as Query$GetSection$section$$CardListSection$metadata$page?),
+        limit: limit == _undefined ? _instance.limit : (limit as int?),
         prependLiveElement:
             prependLiveElement == _undefined || prependLiveElement == null
                 ? _instance.prependLiveElement
@@ -54680,6 +58221,16 @@ class _CopyWithImpl$Query$GetSection$section$$CardListSection$metadata<TRes>
             ? _instance.$__typename
             : ($__typename as String),
       ));
+
+  CopyWith$Query$GetSection$section$$CardListSection$metadata$page<TRes>
+      get page {
+    final local$page = _instance.page;
+    return local$page == null
+        ? CopyWith$Query$GetSection$section$$CardListSection$metadata$page.stub(
+            _then(_instance))
+        : CopyWith$Query$GetSection$section$$CardListSection$metadata$page(
+            local$page, (e) => call(page: e));
+  }
 }
 
 class _CopyWithStubImpl$Query$GetSection$section$$CardListSection$metadata<TRes>
@@ -54696,7 +58247,153 @@ class _CopyWithStubImpl$Query$GetSection$section$$CardListSection$metadata<TRes>
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Query$GetSection$section$$CardListSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Query$GetSection$section$$CardListSection$metadata$page<TRes>
+      get page =>
+          CopyWith$Query$GetSection$section$$CardListSection$metadata$page.stub(
+              _res);
+}
+
+class Query$GetSection$section$$CardListSection$metadata$page
+    implements
+        Fragment$Section$$CardListSection$metadata$page,
+        Fragment$ItemSection$$CardListSection$metadata$page {
+  Query$GetSection$section$$CardListSection$metadata$page({
+    required this.code,
+    this.$__typename = 'Page',
+  });
+
+  factory Query$GetSection$section$$CardListSection$metadata$page.fromJson(
+      Map<String, dynamic> json) {
+    final l$code = json['code'];
+    final l$$__typename = json['__typename'];
+    return Query$GetSection$section$$CardListSection$metadata$page(
+      code: (l$code as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String code;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$code = code;
+    _resultData['code'] = l$code;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$code = code;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$code,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Query$GetSection$section$$CardListSection$metadata$page) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$code = code;
+    final lOther$code = other.code;
+    if (l$code != lOther$code) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$GetSection$section$$CardListSection$metadata$page
+    on Query$GetSection$section$$CardListSection$metadata$page {
+  CopyWith$Query$GetSection$section$$CardListSection$metadata$page<
+          Query$GetSection$section$$CardListSection$metadata$page>
+      get copyWith =>
+          CopyWith$Query$GetSection$section$$CardListSection$metadata$page(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$GetSection$section$$CardListSection$metadata$page<
+    TRes> {
+  factory CopyWith$Query$GetSection$section$$CardListSection$metadata$page(
+    Query$GetSection$section$$CardListSection$metadata$page instance,
+    TRes Function(Query$GetSection$section$$CardListSection$metadata$page) then,
+  ) = _CopyWithImpl$Query$GetSection$section$$CardListSection$metadata$page;
+
+  factory CopyWith$Query$GetSection$section$$CardListSection$metadata$page.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$GetSection$section$$CardListSection$metadata$page;
+
+  TRes call({
+    String? code,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Query$GetSection$section$$CardListSection$metadata$page<
+        TRes>
+    implements
+        CopyWith$Query$GetSection$section$$CardListSection$metadata$page<TRes> {
+  _CopyWithImpl$Query$GetSection$section$$CardListSection$metadata$page(
+    this._instance,
+    this._then,
+  );
+
+  final Query$GetSection$section$$CardListSection$metadata$page _instance;
+
+  final TRes Function(Query$GetSection$section$$CardListSection$metadata$page)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? code = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Query$GetSection$section$$CardListSection$metadata$page(
+        code: code == _undefined || code == null
+            ? _instance.code
+            : (code as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Query$GetSection$section$$CardListSection$metadata$page<
+        TRes>
+    implements
+        CopyWith$Query$GetSection$section$$CardListSection$metadata$page<TRes> {
+  _CopyWithStubImpl$Query$GetSection$section$$CardListSection$metadata$page(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? code,
     String? $__typename,
   }) =>
       _res;
@@ -55173,6 +58870,8 @@ class Query$GetSection$section$$DefaultGridSection$metadata
     required this.secondaryTitles,
     required this.collectionId,
     required this.useContext,
+    this.page,
+    this.limit,
     required this.prependLiveElement,
     this.$__typename = 'ItemSectionMetadata',
   });
@@ -55184,6 +58883,8 @@ class Query$GetSection$section$$DefaultGridSection$metadata
     final l$secondaryTitles = json['secondaryTitles'];
     final l$collectionId = json['collectionId'];
     final l$useContext = json['useContext'];
+    final l$page = json['page'];
+    final l$limit = json['limit'];
     final l$prependLiveElement = json['prependLiveElement'];
     final l$$__typename = json['__typename'];
     return Query$GetSection$section$$DefaultGridSection$metadata(
@@ -55192,6 +58893,11 @@ class Query$GetSection$section$$DefaultGridSection$metadata
       secondaryTitles: (l$secondaryTitles as bool),
       collectionId: (l$collectionId as String),
       useContext: (l$useContext as bool),
+      page: l$page == null
+          ? null
+          : Query$GetSection$section$$DefaultGridSection$metadata$page.fromJson(
+              (l$page as Map<String, dynamic>)),
+      limit: (l$limit as int?),
       prependLiveElement: (l$prependLiveElement as bool),
       $__typename: (l$$__typename as String),
     );
@@ -55206,6 +58912,10 @@ class Query$GetSection$section$$DefaultGridSection$metadata
   final String collectionId;
 
   final bool useContext;
+
+  final Query$GetSection$section$$DefaultGridSection$metadata$page? page;
+
+  final int? limit;
 
   final bool prependLiveElement;
 
@@ -55223,6 +58933,10 @@ class Query$GetSection$section$$DefaultGridSection$metadata
     _resultData['collectionId'] = l$collectionId;
     final l$useContext = useContext;
     _resultData['useContext'] = l$useContext;
+    final l$page = page;
+    _resultData['page'] = l$page?.toJson();
+    final l$limit = limit;
+    _resultData['limit'] = l$limit;
     final l$prependLiveElement = prependLiveElement;
     _resultData['prependLiveElement'] = l$prependLiveElement;
     final l$$__typename = $__typename;
@@ -55237,6 +58951,8 @@ class Query$GetSection$section$$DefaultGridSection$metadata
     final l$secondaryTitles = secondaryTitles;
     final l$collectionId = collectionId;
     final l$useContext = useContext;
+    final l$page = page;
+    final l$limit = limit;
     final l$prependLiveElement = prependLiveElement;
     final l$$__typename = $__typename;
     return Object.hashAll([
@@ -55245,6 +58961,8 @@ class Query$GetSection$section$$DefaultGridSection$metadata
       l$secondaryTitles,
       l$collectionId,
       l$useContext,
+      l$page,
+      l$limit,
       l$prependLiveElement,
       l$$__typename,
     ]);
@@ -55282,6 +59000,16 @@ class Query$GetSection$section$$DefaultGridSection$metadata
     final l$useContext = useContext;
     final lOther$useContext = other.useContext;
     if (l$useContext != lOther$useContext) {
+      return false;
+    }
+    final l$page = page;
+    final lOther$page = other.page;
+    if (l$page != lOther$page) {
+      return false;
+    }
+    final l$limit = limit;
+    final lOther$limit = other.limit;
+    if (l$limit != lOther$limit) {
       return false;
     }
     final l$prependLiveElement = prependLiveElement;
@@ -55326,9 +59054,13 @@ abstract class CopyWith$Query$GetSection$section$$DefaultGridSection$metadata<
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Query$GetSection$section$$DefaultGridSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
     String? $__typename,
   });
+  CopyWith$Query$GetSection$section$$DefaultGridSection$metadata$page<TRes>
+      get page;
 }
 
 class _CopyWithImpl$Query$GetSection$section$$DefaultGridSection$metadata<TRes>
@@ -55352,6 +59084,8 @@ class _CopyWithImpl$Query$GetSection$section$$DefaultGridSection$metadata<TRes>
     Object? secondaryTitles = _undefined,
     Object? collectionId = _undefined,
     Object? useContext = _undefined,
+    Object? page = _undefined,
+    Object? limit = _undefined,
     Object? prependLiveElement = _undefined,
     Object? $__typename = _undefined,
   }) =>
@@ -55373,6 +59107,11 @@ class _CopyWithImpl$Query$GetSection$section$$DefaultGridSection$metadata<TRes>
         useContext: useContext == _undefined || useContext == null
             ? _instance.useContext
             : (useContext as bool),
+        page: page == _undefined
+            ? _instance.page
+            : (page
+                as Query$GetSection$section$$DefaultGridSection$metadata$page?),
+        limit: limit == _undefined ? _instance.limit : (limit as int?),
         prependLiveElement:
             prependLiveElement == _undefined || prependLiveElement == null
                 ? _instance.prependLiveElement
@@ -55381,6 +59120,16 @@ class _CopyWithImpl$Query$GetSection$section$$DefaultGridSection$metadata<TRes>
             ? _instance.$__typename
             : ($__typename as String),
       ));
+
+  CopyWith$Query$GetSection$section$$DefaultGridSection$metadata$page<TRes>
+      get page {
+    final local$page = _instance.page;
+    return local$page == null
+        ? CopyWith$Query$GetSection$section$$DefaultGridSection$metadata$page
+            .stub(_then(_instance))
+        : CopyWith$Query$GetSection$section$$DefaultGridSection$metadata$page(
+            local$page, (e) => call(page: e));
+  }
 }
 
 class _CopyWithStubImpl$Query$GetSection$section$$DefaultGridSection$metadata<
@@ -55398,7 +59147,157 @@ class _CopyWithStubImpl$Query$GetSection$section$$DefaultGridSection$metadata<
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Query$GetSection$section$$DefaultGridSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Query$GetSection$section$$DefaultGridSection$metadata$page<TRes>
+      get page =>
+          CopyWith$Query$GetSection$section$$DefaultGridSection$metadata$page
+              .stub(_res);
+}
+
+class Query$GetSection$section$$DefaultGridSection$metadata$page
+    implements
+        Fragment$Section$$DefaultGridSection$metadata$page,
+        Fragment$ItemSection$$DefaultGridSection$metadata$page {
+  Query$GetSection$section$$DefaultGridSection$metadata$page({
+    required this.code,
+    this.$__typename = 'Page',
+  });
+
+  factory Query$GetSection$section$$DefaultGridSection$metadata$page.fromJson(
+      Map<String, dynamic> json) {
+    final l$code = json['code'];
+    final l$$__typename = json['__typename'];
+    return Query$GetSection$section$$DefaultGridSection$metadata$page(
+      code: (l$code as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String code;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$code = code;
+    _resultData['code'] = l$code;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$code = code;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$code,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Query$GetSection$section$$DefaultGridSection$metadata$page) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$code = code;
+    final lOther$code = other.code;
+    if (l$code != lOther$code) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$GetSection$section$$DefaultGridSection$metadata$page
+    on Query$GetSection$section$$DefaultGridSection$metadata$page {
+  CopyWith$Query$GetSection$section$$DefaultGridSection$metadata$page<
+          Query$GetSection$section$$DefaultGridSection$metadata$page>
+      get copyWith =>
+          CopyWith$Query$GetSection$section$$DefaultGridSection$metadata$page(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$GetSection$section$$DefaultGridSection$metadata$page<
+    TRes> {
+  factory CopyWith$Query$GetSection$section$$DefaultGridSection$metadata$page(
+    Query$GetSection$section$$DefaultGridSection$metadata$page instance,
+    TRes Function(Query$GetSection$section$$DefaultGridSection$metadata$page)
+        then,
+  ) = _CopyWithImpl$Query$GetSection$section$$DefaultGridSection$metadata$page;
+
+  factory CopyWith$Query$GetSection$section$$DefaultGridSection$metadata$page.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$GetSection$section$$DefaultGridSection$metadata$page;
+
+  TRes call({
+    String? code,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Query$GetSection$section$$DefaultGridSection$metadata$page<
+        TRes>
+    implements
+        CopyWith$Query$GetSection$section$$DefaultGridSection$metadata$page<
+            TRes> {
+  _CopyWithImpl$Query$GetSection$section$$DefaultGridSection$metadata$page(
+    this._instance,
+    this._then,
+  );
+
+  final Query$GetSection$section$$DefaultGridSection$metadata$page _instance;
+
+  final TRes Function(
+      Query$GetSection$section$$DefaultGridSection$metadata$page) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? code = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Query$GetSection$section$$DefaultGridSection$metadata$page(
+        code: code == _undefined || code == null
+            ? _instance.code
+            : (code as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Query$GetSection$section$$DefaultGridSection$metadata$page<
+        TRes>
+    implements
+        CopyWith$Query$GetSection$section$$DefaultGridSection$metadata$page<
+            TRes> {
+  _CopyWithStubImpl$Query$GetSection$section$$DefaultGridSection$metadata$page(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? code,
     String? $__typename,
   }) =>
       _res;
@@ -58587,6 +62486,8 @@ class Query$GetSection$section$$PosterGridSection$metadata
     required this.secondaryTitles,
     required this.collectionId,
     required this.useContext,
+    this.page,
+    this.limit,
     required this.prependLiveElement,
     this.$__typename = 'ItemSectionMetadata',
   });
@@ -58598,6 +62499,8 @@ class Query$GetSection$section$$PosterGridSection$metadata
     final l$secondaryTitles = json['secondaryTitles'];
     final l$collectionId = json['collectionId'];
     final l$useContext = json['useContext'];
+    final l$page = json['page'];
+    final l$limit = json['limit'];
     final l$prependLiveElement = json['prependLiveElement'];
     final l$$__typename = json['__typename'];
     return Query$GetSection$section$$PosterGridSection$metadata(
@@ -58606,6 +62509,11 @@ class Query$GetSection$section$$PosterGridSection$metadata
       secondaryTitles: (l$secondaryTitles as bool),
       collectionId: (l$collectionId as String),
       useContext: (l$useContext as bool),
+      page: l$page == null
+          ? null
+          : Query$GetSection$section$$PosterGridSection$metadata$page.fromJson(
+              (l$page as Map<String, dynamic>)),
+      limit: (l$limit as int?),
       prependLiveElement: (l$prependLiveElement as bool),
       $__typename: (l$$__typename as String),
     );
@@ -58620,6 +62528,10 @@ class Query$GetSection$section$$PosterGridSection$metadata
   final String collectionId;
 
   final bool useContext;
+
+  final Query$GetSection$section$$PosterGridSection$metadata$page? page;
+
+  final int? limit;
 
   final bool prependLiveElement;
 
@@ -58637,6 +62549,10 @@ class Query$GetSection$section$$PosterGridSection$metadata
     _resultData['collectionId'] = l$collectionId;
     final l$useContext = useContext;
     _resultData['useContext'] = l$useContext;
+    final l$page = page;
+    _resultData['page'] = l$page?.toJson();
+    final l$limit = limit;
+    _resultData['limit'] = l$limit;
     final l$prependLiveElement = prependLiveElement;
     _resultData['prependLiveElement'] = l$prependLiveElement;
     final l$$__typename = $__typename;
@@ -58651,6 +62567,8 @@ class Query$GetSection$section$$PosterGridSection$metadata
     final l$secondaryTitles = secondaryTitles;
     final l$collectionId = collectionId;
     final l$useContext = useContext;
+    final l$page = page;
+    final l$limit = limit;
     final l$prependLiveElement = prependLiveElement;
     final l$$__typename = $__typename;
     return Object.hashAll([
@@ -58659,6 +62577,8 @@ class Query$GetSection$section$$PosterGridSection$metadata
       l$secondaryTitles,
       l$collectionId,
       l$useContext,
+      l$page,
+      l$limit,
       l$prependLiveElement,
       l$$__typename,
     ]);
@@ -58696,6 +62616,16 @@ class Query$GetSection$section$$PosterGridSection$metadata
     final l$useContext = useContext;
     final lOther$useContext = other.useContext;
     if (l$useContext != lOther$useContext) {
+      return false;
+    }
+    final l$page = page;
+    final lOther$page = other.page;
+    if (l$page != lOther$page) {
+      return false;
+    }
+    final l$limit = limit;
+    final lOther$limit = other.limit;
+    if (l$limit != lOther$limit) {
       return false;
     }
     final l$prependLiveElement = prependLiveElement;
@@ -58740,9 +62670,13 @@ abstract class CopyWith$Query$GetSection$section$$PosterGridSection$metadata<
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Query$GetSection$section$$PosterGridSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
     String? $__typename,
   });
+  CopyWith$Query$GetSection$section$$PosterGridSection$metadata$page<TRes>
+      get page;
 }
 
 class _CopyWithImpl$Query$GetSection$section$$PosterGridSection$metadata<TRes>
@@ -58766,6 +62700,8 @@ class _CopyWithImpl$Query$GetSection$section$$PosterGridSection$metadata<TRes>
     Object? secondaryTitles = _undefined,
     Object? collectionId = _undefined,
     Object? useContext = _undefined,
+    Object? page = _undefined,
+    Object? limit = _undefined,
     Object? prependLiveElement = _undefined,
     Object? $__typename = _undefined,
   }) =>
@@ -58787,6 +62723,11 @@ class _CopyWithImpl$Query$GetSection$section$$PosterGridSection$metadata<TRes>
         useContext: useContext == _undefined || useContext == null
             ? _instance.useContext
             : (useContext as bool),
+        page: page == _undefined
+            ? _instance.page
+            : (page
+                as Query$GetSection$section$$PosterGridSection$metadata$page?),
+        limit: limit == _undefined ? _instance.limit : (limit as int?),
         prependLiveElement:
             prependLiveElement == _undefined || prependLiveElement == null
                 ? _instance.prependLiveElement
@@ -58795,6 +62736,16 @@ class _CopyWithImpl$Query$GetSection$section$$PosterGridSection$metadata<TRes>
             ? _instance.$__typename
             : ($__typename as String),
       ));
+
+  CopyWith$Query$GetSection$section$$PosterGridSection$metadata$page<TRes>
+      get page {
+    final local$page = _instance.page;
+    return local$page == null
+        ? CopyWith$Query$GetSection$section$$PosterGridSection$metadata$page
+            .stub(_then(_instance))
+        : CopyWith$Query$GetSection$section$$PosterGridSection$metadata$page(
+            local$page, (e) => call(page: e));
+  }
 }
 
 class _CopyWithStubImpl$Query$GetSection$section$$PosterGridSection$metadata<
@@ -58812,7 +62763,156 @@ class _CopyWithStubImpl$Query$GetSection$section$$PosterGridSection$metadata<
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Query$GetSection$section$$PosterGridSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Query$GetSection$section$$PosterGridSection$metadata$page<TRes>
+      get page =>
+          CopyWith$Query$GetSection$section$$PosterGridSection$metadata$page
+              .stub(_res);
+}
+
+class Query$GetSection$section$$PosterGridSection$metadata$page
+    implements
+        Fragment$Section$$PosterGridSection$metadata$page,
+        Fragment$ItemSection$$PosterGridSection$metadata$page {
+  Query$GetSection$section$$PosterGridSection$metadata$page({
+    required this.code,
+    this.$__typename = 'Page',
+  });
+
+  factory Query$GetSection$section$$PosterGridSection$metadata$page.fromJson(
+      Map<String, dynamic> json) {
+    final l$code = json['code'];
+    final l$$__typename = json['__typename'];
+    return Query$GetSection$section$$PosterGridSection$metadata$page(
+      code: (l$code as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String code;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$code = code;
+    _resultData['code'] = l$code;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$code = code;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$code,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Query$GetSection$section$$PosterGridSection$metadata$page) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$code = code;
+    final lOther$code = other.code;
+    if (l$code != lOther$code) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$GetSection$section$$PosterGridSection$metadata$page
+    on Query$GetSection$section$$PosterGridSection$metadata$page {
+  CopyWith$Query$GetSection$section$$PosterGridSection$metadata$page<
+          Query$GetSection$section$$PosterGridSection$metadata$page>
+      get copyWith =>
+          CopyWith$Query$GetSection$section$$PosterGridSection$metadata$page(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$GetSection$section$$PosterGridSection$metadata$page<
+    TRes> {
+  factory CopyWith$Query$GetSection$section$$PosterGridSection$metadata$page(
+    Query$GetSection$section$$PosterGridSection$metadata$page instance,
+    TRes Function(Query$GetSection$section$$PosterGridSection$metadata$page)
+        then,
+  ) = _CopyWithImpl$Query$GetSection$section$$PosterGridSection$metadata$page;
+
+  factory CopyWith$Query$GetSection$section$$PosterGridSection$metadata$page.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$GetSection$section$$PosterGridSection$metadata$page;
+
+  TRes call({
+    String? code,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Query$GetSection$section$$PosterGridSection$metadata$page<
+        TRes>
+    implements
+        CopyWith$Query$GetSection$section$$PosterGridSection$metadata$page<
+            TRes> {
+  _CopyWithImpl$Query$GetSection$section$$PosterGridSection$metadata$page(
+    this._instance,
+    this._then,
+  );
+
+  final Query$GetSection$section$$PosterGridSection$metadata$page _instance;
+
+  final TRes Function(Query$GetSection$section$$PosterGridSection$metadata$page)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? code = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Query$GetSection$section$$PosterGridSection$metadata$page(
+        code: code == _undefined || code == null
+            ? _instance.code
+            : (code as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Query$GetSection$section$$PosterGridSection$metadata$page<
+        TRes>
+    implements
+        CopyWith$Query$GetSection$section$$PosterGridSection$metadata$page<
+            TRes> {
+  _CopyWithStubImpl$Query$GetSection$section$$PosterGridSection$metadata$page(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? code,
     String? $__typename,
   }) =>
       _res;
@@ -61989,6 +66089,8 @@ class Query$GetSection$section$$IconGridSection$metadata
     required this.secondaryTitles,
     required this.collectionId,
     required this.useContext,
+    this.page,
+    this.limit,
     required this.prependLiveElement,
     this.$__typename = 'ItemSectionMetadata',
   });
@@ -62000,6 +66102,8 @@ class Query$GetSection$section$$IconGridSection$metadata
     final l$secondaryTitles = json['secondaryTitles'];
     final l$collectionId = json['collectionId'];
     final l$useContext = json['useContext'];
+    final l$page = json['page'];
+    final l$limit = json['limit'];
     final l$prependLiveElement = json['prependLiveElement'];
     final l$$__typename = json['__typename'];
     return Query$GetSection$section$$IconGridSection$metadata(
@@ -62008,6 +66112,11 @@ class Query$GetSection$section$$IconGridSection$metadata
       secondaryTitles: (l$secondaryTitles as bool),
       collectionId: (l$collectionId as String),
       useContext: (l$useContext as bool),
+      page: l$page == null
+          ? null
+          : Query$GetSection$section$$IconGridSection$metadata$page.fromJson(
+              (l$page as Map<String, dynamic>)),
+      limit: (l$limit as int?),
       prependLiveElement: (l$prependLiveElement as bool),
       $__typename: (l$$__typename as String),
     );
@@ -62022,6 +66131,10 @@ class Query$GetSection$section$$IconGridSection$metadata
   final String collectionId;
 
   final bool useContext;
+
+  final Query$GetSection$section$$IconGridSection$metadata$page? page;
+
+  final int? limit;
 
   final bool prependLiveElement;
 
@@ -62039,6 +66152,10 @@ class Query$GetSection$section$$IconGridSection$metadata
     _resultData['collectionId'] = l$collectionId;
     final l$useContext = useContext;
     _resultData['useContext'] = l$useContext;
+    final l$page = page;
+    _resultData['page'] = l$page?.toJson();
+    final l$limit = limit;
+    _resultData['limit'] = l$limit;
     final l$prependLiveElement = prependLiveElement;
     _resultData['prependLiveElement'] = l$prependLiveElement;
     final l$$__typename = $__typename;
@@ -62053,6 +66170,8 @@ class Query$GetSection$section$$IconGridSection$metadata
     final l$secondaryTitles = secondaryTitles;
     final l$collectionId = collectionId;
     final l$useContext = useContext;
+    final l$page = page;
+    final l$limit = limit;
     final l$prependLiveElement = prependLiveElement;
     final l$$__typename = $__typename;
     return Object.hashAll([
@@ -62061,6 +66180,8 @@ class Query$GetSection$section$$IconGridSection$metadata
       l$secondaryTitles,
       l$collectionId,
       l$useContext,
+      l$page,
+      l$limit,
       l$prependLiveElement,
       l$$__typename,
     ]);
@@ -62098,6 +66219,16 @@ class Query$GetSection$section$$IconGridSection$metadata
     final l$useContext = useContext;
     final lOther$useContext = other.useContext;
     if (l$useContext != lOther$useContext) {
+      return false;
+    }
+    final l$page = page;
+    final lOther$page = other.page;
+    if (l$page != lOther$page) {
+      return false;
+    }
+    final l$limit = limit;
+    final lOther$limit = other.limit;
+    if (l$limit != lOther$limit) {
       return false;
     }
     final l$prependLiveElement = prependLiveElement;
@@ -62142,9 +66273,13 @@ abstract class CopyWith$Query$GetSection$section$$IconGridSection$metadata<
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Query$GetSection$section$$IconGridSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
     String? $__typename,
   });
+  CopyWith$Query$GetSection$section$$IconGridSection$metadata$page<TRes>
+      get page;
 }
 
 class _CopyWithImpl$Query$GetSection$section$$IconGridSection$metadata<TRes>
@@ -62167,6 +66302,8 @@ class _CopyWithImpl$Query$GetSection$section$$IconGridSection$metadata<TRes>
     Object? secondaryTitles = _undefined,
     Object? collectionId = _undefined,
     Object? useContext = _undefined,
+    Object? page = _undefined,
+    Object? limit = _undefined,
     Object? prependLiveElement = _undefined,
     Object? $__typename = _undefined,
   }) =>
@@ -62188,6 +66325,11 @@ class _CopyWithImpl$Query$GetSection$section$$IconGridSection$metadata<TRes>
         useContext: useContext == _undefined || useContext == null
             ? _instance.useContext
             : (useContext as bool),
+        page: page == _undefined
+            ? _instance.page
+            : (page
+                as Query$GetSection$section$$IconGridSection$metadata$page?),
+        limit: limit == _undefined ? _instance.limit : (limit as int?),
         prependLiveElement:
             prependLiveElement == _undefined || prependLiveElement == null
                 ? _instance.prependLiveElement
@@ -62196,6 +66338,16 @@ class _CopyWithImpl$Query$GetSection$section$$IconGridSection$metadata<TRes>
             ? _instance.$__typename
             : ($__typename as String),
       ));
+
+  CopyWith$Query$GetSection$section$$IconGridSection$metadata$page<TRes>
+      get page {
+    final local$page = _instance.page;
+    return local$page == null
+        ? CopyWith$Query$GetSection$section$$IconGridSection$metadata$page.stub(
+            _then(_instance))
+        : CopyWith$Query$GetSection$section$$IconGridSection$metadata$page(
+            local$page, (e) => call(page: e));
+  }
 }
 
 class _CopyWithStubImpl$Query$GetSection$section$$IconGridSection$metadata<TRes>
@@ -62212,7 +66364,153 @@ class _CopyWithStubImpl$Query$GetSection$section$$IconGridSection$metadata<TRes>
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Query$GetSection$section$$IconGridSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Query$GetSection$section$$IconGridSection$metadata$page<TRes>
+      get page =>
+          CopyWith$Query$GetSection$section$$IconGridSection$metadata$page.stub(
+              _res);
+}
+
+class Query$GetSection$section$$IconGridSection$metadata$page
+    implements
+        Fragment$Section$$IconGridSection$metadata$page,
+        Fragment$ItemSection$$IconGridSection$metadata$page {
+  Query$GetSection$section$$IconGridSection$metadata$page({
+    required this.code,
+    this.$__typename = 'Page',
+  });
+
+  factory Query$GetSection$section$$IconGridSection$metadata$page.fromJson(
+      Map<String, dynamic> json) {
+    final l$code = json['code'];
+    final l$$__typename = json['__typename'];
+    return Query$GetSection$section$$IconGridSection$metadata$page(
+      code: (l$code as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String code;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$code = code;
+    _resultData['code'] = l$code;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$code = code;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$code,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Query$GetSection$section$$IconGridSection$metadata$page) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$code = code;
+    final lOther$code = other.code;
+    if (l$code != lOther$code) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$GetSection$section$$IconGridSection$metadata$page
+    on Query$GetSection$section$$IconGridSection$metadata$page {
+  CopyWith$Query$GetSection$section$$IconGridSection$metadata$page<
+          Query$GetSection$section$$IconGridSection$metadata$page>
+      get copyWith =>
+          CopyWith$Query$GetSection$section$$IconGridSection$metadata$page(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$GetSection$section$$IconGridSection$metadata$page<
+    TRes> {
+  factory CopyWith$Query$GetSection$section$$IconGridSection$metadata$page(
+    Query$GetSection$section$$IconGridSection$metadata$page instance,
+    TRes Function(Query$GetSection$section$$IconGridSection$metadata$page) then,
+  ) = _CopyWithImpl$Query$GetSection$section$$IconGridSection$metadata$page;
+
+  factory CopyWith$Query$GetSection$section$$IconGridSection$metadata$page.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$GetSection$section$$IconGridSection$metadata$page;
+
+  TRes call({
+    String? code,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Query$GetSection$section$$IconGridSection$metadata$page<
+        TRes>
+    implements
+        CopyWith$Query$GetSection$section$$IconGridSection$metadata$page<TRes> {
+  _CopyWithImpl$Query$GetSection$section$$IconGridSection$metadata$page(
+    this._instance,
+    this._then,
+  );
+
+  final Query$GetSection$section$$IconGridSection$metadata$page _instance;
+
+  final TRes Function(Query$GetSection$section$$IconGridSection$metadata$page)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? code = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Query$GetSection$section$$IconGridSection$metadata$page(
+        code: code == _undefined || code == null
+            ? _instance.code
+            : (code as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Query$GetSection$section$$IconGridSection$metadata$page<
+        TRes>
+    implements
+        CopyWith$Query$GetSection$section$$IconGridSection$metadata$page<TRes> {
+  _CopyWithStubImpl$Query$GetSection$section$$IconGridSection$metadata$page(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? code,
     String? $__typename,
   }) =>
       _res;
@@ -65349,6 +69647,8 @@ class Query$GetSection$section$$IconSection$metadata
     required this.secondaryTitles,
     required this.collectionId,
     required this.useContext,
+    this.page,
+    this.limit,
     required this.prependLiveElement,
     this.$__typename = 'ItemSectionMetadata',
   });
@@ -65360,6 +69660,8 @@ class Query$GetSection$section$$IconSection$metadata
     final l$secondaryTitles = json['secondaryTitles'];
     final l$collectionId = json['collectionId'];
     final l$useContext = json['useContext'];
+    final l$page = json['page'];
+    final l$limit = json['limit'];
     final l$prependLiveElement = json['prependLiveElement'];
     final l$$__typename = json['__typename'];
     return Query$GetSection$section$$IconSection$metadata(
@@ -65368,6 +69670,11 @@ class Query$GetSection$section$$IconSection$metadata
       secondaryTitles: (l$secondaryTitles as bool),
       collectionId: (l$collectionId as String),
       useContext: (l$useContext as bool),
+      page: l$page == null
+          ? null
+          : Query$GetSection$section$$IconSection$metadata$page.fromJson(
+              (l$page as Map<String, dynamic>)),
+      limit: (l$limit as int?),
       prependLiveElement: (l$prependLiveElement as bool),
       $__typename: (l$$__typename as String),
     );
@@ -65382,6 +69689,10 @@ class Query$GetSection$section$$IconSection$metadata
   final String collectionId;
 
   final bool useContext;
+
+  final Query$GetSection$section$$IconSection$metadata$page? page;
+
+  final int? limit;
 
   final bool prependLiveElement;
 
@@ -65399,6 +69710,10 @@ class Query$GetSection$section$$IconSection$metadata
     _resultData['collectionId'] = l$collectionId;
     final l$useContext = useContext;
     _resultData['useContext'] = l$useContext;
+    final l$page = page;
+    _resultData['page'] = l$page?.toJson();
+    final l$limit = limit;
+    _resultData['limit'] = l$limit;
     final l$prependLiveElement = prependLiveElement;
     _resultData['prependLiveElement'] = l$prependLiveElement;
     final l$$__typename = $__typename;
@@ -65413,6 +69728,8 @@ class Query$GetSection$section$$IconSection$metadata
     final l$secondaryTitles = secondaryTitles;
     final l$collectionId = collectionId;
     final l$useContext = useContext;
+    final l$page = page;
+    final l$limit = limit;
     final l$prependLiveElement = prependLiveElement;
     final l$$__typename = $__typename;
     return Object.hashAll([
@@ -65421,6 +69738,8 @@ class Query$GetSection$section$$IconSection$metadata
       l$secondaryTitles,
       l$collectionId,
       l$useContext,
+      l$page,
+      l$limit,
       l$prependLiveElement,
       l$$__typename,
     ]);
@@ -65458,6 +69777,16 @@ class Query$GetSection$section$$IconSection$metadata
     final l$useContext = useContext;
     final lOther$useContext = other.useContext;
     if (l$useContext != lOther$useContext) {
+      return false;
+    }
+    final l$page = page;
+    final lOther$page = other.page;
+    if (l$page != lOther$page) {
+      return false;
+    }
+    final l$limit = limit;
+    final lOther$limit = other.limit;
+    if (l$limit != lOther$limit) {
       return false;
     }
     final l$prependLiveElement = prependLiveElement;
@@ -65500,9 +69829,12 @@ abstract class CopyWith$Query$GetSection$section$$IconSection$metadata<TRes> {
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Query$GetSection$section$$IconSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
     String? $__typename,
   });
+  CopyWith$Query$GetSection$section$$IconSection$metadata$page<TRes> get page;
 }
 
 class _CopyWithImpl$Query$GetSection$section$$IconSection$metadata<TRes>
@@ -65524,6 +69856,8 @@ class _CopyWithImpl$Query$GetSection$section$$IconSection$metadata<TRes>
     Object? secondaryTitles = _undefined,
     Object? collectionId = _undefined,
     Object? useContext = _undefined,
+    Object? page = _undefined,
+    Object? limit = _undefined,
     Object? prependLiveElement = _undefined,
     Object? $__typename = _undefined,
   }) =>
@@ -65545,6 +69879,10 @@ class _CopyWithImpl$Query$GetSection$section$$IconSection$metadata<TRes>
         useContext: useContext == _undefined || useContext == null
             ? _instance.useContext
             : (useContext as bool),
+        page: page == _undefined
+            ? _instance.page
+            : (page as Query$GetSection$section$$IconSection$metadata$page?),
+        limit: limit == _undefined ? _instance.limit : (limit as int?),
         prependLiveElement:
             prependLiveElement == _undefined || prependLiveElement == null
                 ? _instance.prependLiveElement
@@ -65553,6 +69891,15 @@ class _CopyWithImpl$Query$GetSection$section$$IconSection$metadata<TRes>
             ? _instance.$__typename
             : ($__typename as String),
       ));
+
+  CopyWith$Query$GetSection$section$$IconSection$metadata$page<TRes> get page {
+    final local$page = _instance.page;
+    return local$page == null
+        ? CopyWith$Query$GetSection$section$$IconSection$metadata$page.stub(
+            _then(_instance))
+        : CopyWith$Query$GetSection$section$$IconSection$metadata$page(
+            local$page, (e) => call(page: e));
+  }
 }
 
 class _CopyWithStubImpl$Query$GetSection$section$$IconSection$metadata<TRes>
@@ -65567,7 +69914,150 @@ class _CopyWithStubImpl$Query$GetSection$section$$IconSection$metadata<TRes>
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Query$GetSection$section$$IconSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Query$GetSection$section$$IconSection$metadata$page<TRes> get page =>
+      CopyWith$Query$GetSection$section$$IconSection$metadata$page.stub(_res);
+}
+
+class Query$GetSection$section$$IconSection$metadata$page
+    implements
+        Fragment$Section$$IconSection$metadata$page,
+        Fragment$ItemSection$$IconSection$metadata$page {
+  Query$GetSection$section$$IconSection$metadata$page({
+    required this.code,
+    this.$__typename = 'Page',
+  });
+
+  factory Query$GetSection$section$$IconSection$metadata$page.fromJson(
+      Map<String, dynamic> json) {
+    final l$code = json['code'];
+    final l$$__typename = json['__typename'];
+    return Query$GetSection$section$$IconSection$metadata$page(
+      code: (l$code as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String code;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$code = code;
+    _resultData['code'] = l$code;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$code = code;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$code,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Query$GetSection$section$$IconSection$metadata$page) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$code = code;
+    final lOther$code = other.code;
+    if (l$code != lOther$code) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$GetSection$section$$IconSection$metadata$page
+    on Query$GetSection$section$$IconSection$metadata$page {
+  CopyWith$Query$GetSection$section$$IconSection$metadata$page<
+          Query$GetSection$section$$IconSection$metadata$page>
+      get copyWith =>
+          CopyWith$Query$GetSection$section$$IconSection$metadata$page(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$GetSection$section$$IconSection$metadata$page<
+    TRes> {
+  factory CopyWith$Query$GetSection$section$$IconSection$metadata$page(
+    Query$GetSection$section$$IconSection$metadata$page instance,
+    TRes Function(Query$GetSection$section$$IconSection$metadata$page) then,
+  ) = _CopyWithImpl$Query$GetSection$section$$IconSection$metadata$page;
+
+  factory CopyWith$Query$GetSection$section$$IconSection$metadata$page.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$GetSection$section$$IconSection$metadata$page;
+
+  TRes call({
+    String? code,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Query$GetSection$section$$IconSection$metadata$page<TRes>
+    implements
+        CopyWith$Query$GetSection$section$$IconSection$metadata$page<TRes> {
+  _CopyWithImpl$Query$GetSection$section$$IconSection$metadata$page(
+    this._instance,
+    this._then,
+  );
+
+  final Query$GetSection$section$$IconSection$metadata$page _instance;
+
+  final TRes Function(Query$GetSection$section$$IconSection$metadata$page)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? code = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Query$GetSection$section$$IconSection$metadata$page(
+        code: code == _undefined || code == null
+            ? _instance.code
+            : (code as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Query$GetSection$section$$IconSection$metadata$page<
+        TRes>
+    implements
+        CopyWith$Query$GetSection$section$$IconSection$metadata$page<TRes> {
+  _CopyWithStubImpl$Query$GetSection$section$$IconSection$metadata$page(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? code,
     String? $__typename,
   }) =>
       _res;
@@ -66017,6 +70507,8 @@ class Query$GetSection$section$$LabelSection$metadata
     required this.secondaryTitles,
     required this.collectionId,
     required this.useContext,
+    this.page,
+    this.limit,
     required this.prependLiveElement,
     this.$__typename = 'ItemSectionMetadata',
   });
@@ -66028,6 +70520,8 @@ class Query$GetSection$section$$LabelSection$metadata
     final l$secondaryTitles = json['secondaryTitles'];
     final l$collectionId = json['collectionId'];
     final l$useContext = json['useContext'];
+    final l$page = json['page'];
+    final l$limit = json['limit'];
     final l$prependLiveElement = json['prependLiveElement'];
     final l$$__typename = json['__typename'];
     return Query$GetSection$section$$LabelSection$metadata(
@@ -66036,6 +70530,11 @@ class Query$GetSection$section$$LabelSection$metadata
       secondaryTitles: (l$secondaryTitles as bool),
       collectionId: (l$collectionId as String),
       useContext: (l$useContext as bool),
+      page: l$page == null
+          ? null
+          : Query$GetSection$section$$LabelSection$metadata$page.fromJson(
+              (l$page as Map<String, dynamic>)),
+      limit: (l$limit as int?),
       prependLiveElement: (l$prependLiveElement as bool),
       $__typename: (l$$__typename as String),
     );
@@ -66050,6 +70549,10 @@ class Query$GetSection$section$$LabelSection$metadata
   final String collectionId;
 
   final bool useContext;
+
+  final Query$GetSection$section$$LabelSection$metadata$page? page;
+
+  final int? limit;
 
   final bool prependLiveElement;
 
@@ -66067,6 +70570,10 @@ class Query$GetSection$section$$LabelSection$metadata
     _resultData['collectionId'] = l$collectionId;
     final l$useContext = useContext;
     _resultData['useContext'] = l$useContext;
+    final l$page = page;
+    _resultData['page'] = l$page?.toJson();
+    final l$limit = limit;
+    _resultData['limit'] = l$limit;
     final l$prependLiveElement = prependLiveElement;
     _resultData['prependLiveElement'] = l$prependLiveElement;
     final l$$__typename = $__typename;
@@ -66081,6 +70588,8 @@ class Query$GetSection$section$$LabelSection$metadata
     final l$secondaryTitles = secondaryTitles;
     final l$collectionId = collectionId;
     final l$useContext = useContext;
+    final l$page = page;
+    final l$limit = limit;
     final l$prependLiveElement = prependLiveElement;
     final l$$__typename = $__typename;
     return Object.hashAll([
@@ -66089,6 +70598,8 @@ class Query$GetSection$section$$LabelSection$metadata
       l$secondaryTitles,
       l$collectionId,
       l$useContext,
+      l$page,
+      l$limit,
       l$prependLiveElement,
       l$$__typename,
     ]);
@@ -66126,6 +70637,16 @@ class Query$GetSection$section$$LabelSection$metadata
     final l$useContext = useContext;
     final lOther$useContext = other.useContext;
     if (l$useContext != lOther$useContext) {
+      return false;
+    }
+    final l$page = page;
+    final lOther$page = other.page;
+    if (l$page != lOther$page) {
+      return false;
+    }
+    final l$limit = limit;
+    final lOther$limit = other.limit;
+    if (l$limit != lOther$limit) {
       return false;
     }
     final l$prependLiveElement = prependLiveElement;
@@ -66168,9 +70689,12 @@ abstract class CopyWith$Query$GetSection$section$$LabelSection$metadata<TRes> {
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Query$GetSection$section$$LabelSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
     String? $__typename,
   });
+  CopyWith$Query$GetSection$section$$LabelSection$metadata$page<TRes> get page;
 }
 
 class _CopyWithImpl$Query$GetSection$section$$LabelSection$metadata<TRes>
@@ -66192,6 +70716,8 @@ class _CopyWithImpl$Query$GetSection$section$$LabelSection$metadata<TRes>
     Object? secondaryTitles = _undefined,
     Object? collectionId = _undefined,
     Object? useContext = _undefined,
+    Object? page = _undefined,
+    Object? limit = _undefined,
     Object? prependLiveElement = _undefined,
     Object? $__typename = _undefined,
   }) =>
@@ -66213,6 +70739,10 @@ class _CopyWithImpl$Query$GetSection$section$$LabelSection$metadata<TRes>
         useContext: useContext == _undefined || useContext == null
             ? _instance.useContext
             : (useContext as bool),
+        page: page == _undefined
+            ? _instance.page
+            : (page as Query$GetSection$section$$LabelSection$metadata$page?),
+        limit: limit == _undefined ? _instance.limit : (limit as int?),
         prependLiveElement:
             prependLiveElement == _undefined || prependLiveElement == null
                 ? _instance.prependLiveElement
@@ -66221,6 +70751,15 @@ class _CopyWithImpl$Query$GetSection$section$$LabelSection$metadata<TRes>
             ? _instance.$__typename
             : ($__typename as String),
       ));
+
+  CopyWith$Query$GetSection$section$$LabelSection$metadata$page<TRes> get page {
+    final local$page = _instance.page;
+    return local$page == null
+        ? CopyWith$Query$GetSection$section$$LabelSection$metadata$page.stub(
+            _then(_instance))
+        : CopyWith$Query$GetSection$section$$LabelSection$metadata$page(
+            local$page, (e) => call(page: e));
+  }
 }
 
 class _CopyWithStubImpl$Query$GetSection$section$$LabelSection$metadata<TRes>
@@ -66235,7 +70774,152 @@ class _CopyWithStubImpl$Query$GetSection$section$$LabelSection$metadata<TRes>
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Query$GetSection$section$$LabelSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Query$GetSection$section$$LabelSection$metadata$page<TRes>
+      get page =>
+          CopyWith$Query$GetSection$section$$LabelSection$metadata$page.stub(
+              _res);
+}
+
+class Query$GetSection$section$$LabelSection$metadata$page
+    implements
+        Fragment$Section$$LabelSection$metadata$page,
+        Fragment$ItemSection$$LabelSection$metadata$page {
+  Query$GetSection$section$$LabelSection$metadata$page({
+    required this.code,
+    this.$__typename = 'Page',
+  });
+
+  factory Query$GetSection$section$$LabelSection$metadata$page.fromJson(
+      Map<String, dynamic> json) {
+    final l$code = json['code'];
+    final l$$__typename = json['__typename'];
+    return Query$GetSection$section$$LabelSection$metadata$page(
+      code: (l$code as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String code;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$code = code;
+    _resultData['code'] = l$code;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$code = code;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$code,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Query$GetSection$section$$LabelSection$metadata$page) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$code = code;
+    final lOther$code = other.code;
+    if (l$code != lOther$code) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$GetSection$section$$LabelSection$metadata$page
+    on Query$GetSection$section$$LabelSection$metadata$page {
+  CopyWith$Query$GetSection$section$$LabelSection$metadata$page<
+          Query$GetSection$section$$LabelSection$metadata$page>
+      get copyWith =>
+          CopyWith$Query$GetSection$section$$LabelSection$metadata$page(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$GetSection$section$$LabelSection$metadata$page<
+    TRes> {
+  factory CopyWith$Query$GetSection$section$$LabelSection$metadata$page(
+    Query$GetSection$section$$LabelSection$metadata$page instance,
+    TRes Function(Query$GetSection$section$$LabelSection$metadata$page) then,
+  ) = _CopyWithImpl$Query$GetSection$section$$LabelSection$metadata$page;
+
+  factory CopyWith$Query$GetSection$section$$LabelSection$metadata$page.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$GetSection$section$$LabelSection$metadata$page;
+
+  TRes call({
+    String? code,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Query$GetSection$section$$LabelSection$metadata$page<TRes>
+    implements
+        CopyWith$Query$GetSection$section$$LabelSection$metadata$page<TRes> {
+  _CopyWithImpl$Query$GetSection$section$$LabelSection$metadata$page(
+    this._instance,
+    this._then,
+  );
+
+  final Query$GetSection$section$$LabelSection$metadata$page _instance;
+
+  final TRes Function(Query$GetSection$section$$LabelSection$metadata$page)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? code = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Query$GetSection$section$$LabelSection$metadata$page(
+        code: code == _undefined || code == null
+            ? _instance.code
+            : (code as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Query$GetSection$section$$LabelSection$metadata$page<
+        TRes>
+    implements
+        CopyWith$Query$GetSection$section$$LabelSection$metadata$page<TRes> {
+  _CopyWithStubImpl$Query$GetSection$section$$LabelSection$metadata$page(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? code,
     String? $__typename,
   }) =>
       _res;
@@ -66686,6 +71370,8 @@ class Query$GetSection$section$$AvatarSection$metadata
     required this.secondaryTitles,
     required this.collectionId,
     required this.useContext,
+    this.page,
+    this.limit,
     required this.prependLiveElement,
     this.$__typename = 'ItemSectionMetadata',
   });
@@ -66697,6 +71383,8 @@ class Query$GetSection$section$$AvatarSection$metadata
     final l$secondaryTitles = json['secondaryTitles'];
     final l$collectionId = json['collectionId'];
     final l$useContext = json['useContext'];
+    final l$page = json['page'];
+    final l$limit = json['limit'];
     final l$prependLiveElement = json['prependLiveElement'];
     final l$$__typename = json['__typename'];
     return Query$GetSection$section$$AvatarSection$metadata(
@@ -66705,6 +71393,11 @@ class Query$GetSection$section$$AvatarSection$metadata
       secondaryTitles: (l$secondaryTitles as bool),
       collectionId: (l$collectionId as String),
       useContext: (l$useContext as bool),
+      page: l$page == null
+          ? null
+          : Query$GetSection$section$$AvatarSection$metadata$page.fromJson(
+              (l$page as Map<String, dynamic>)),
+      limit: (l$limit as int?),
       prependLiveElement: (l$prependLiveElement as bool),
       $__typename: (l$$__typename as String),
     );
@@ -66719,6 +71412,10 @@ class Query$GetSection$section$$AvatarSection$metadata
   final String collectionId;
 
   final bool useContext;
+
+  final Query$GetSection$section$$AvatarSection$metadata$page? page;
+
+  final int? limit;
 
   final bool prependLiveElement;
 
@@ -66736,6 +71433,10 @@ class Query$GetSection$section$$AvatarSection$metadata
     _resultData['collectionId'] = l$collectionId;
     final l$useContext = useContext;
     _resultData['useContext'] = l$useContext;
+    final l$page = page;
+    _resultData['page'] = l$page?.toJson();
+    final l$limit = limit;
+    _resultData['limit'] = l$limit;
     final l$prependLiveElement = prependLiveElement;
     _resultData['prependLiveElement'] = l$prependLiveElement;
     final l$$__typename = $__typename;
@@ -66750,6 +71451,8 @@ class Query$GetSection$section$$AvatarSection$metadata
     final l$secondaryTitles = secondaryTitles;
     final l$collectionId = collectionId;
     final l$useContext = useContext;
+    final l$page = page;
+    final l$limit = limit;
     final l$prependLiveElement = prependLiveElement;
     final l$$__typename = $__typename;
     return Object.hashAll([
@@ -66758,6 +71461,8 @@ class Query$GetSection$section$$AvatarSection$metadata
       l$secondaryTitles,
       l$collectionId,
       l$useContext,
+      l$page,
+      l$limit,
       l$prependLiveElement,
       l$$__typename,
     ]);
@@ -66795,6 +71500,16 @@ class Query$GetSection$section$$AvatarSection$metadata
     final l$useContext = useContext;
     final lOther$useContext = other.useContext;
     if (l$useContext != lOther$useContext) {
+      return false;
+    }
+    final l$page = page;
+    final lOther$page = other.page;
+    if (l$page != lOther$page) {
+      return false;
+    }
+    final l$limit = limit;
+    final lOther$limit = other.limit;
+    if (l$limit != lOther$limit) {
       return false;
     }
     final l$prependLiveElement = prependLiveElement;
@@ -66837,9 +71552,12 @@ abstract class CopyWith$Query$GetSection$section$$AvatarSection$metadata<TRes> {
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Query$GetSection$section$$AvatarSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
     String? $__typename,
   });
+  CopyWith$Query$GetSection$section$$AvatarSection$metadata$page<TRes> get page;
 }
 
 class _CopyWithImpl$Query$GetSection$section$$AvatarSection$metadata<TRes>
@@ -66861,6 +71579,8 @@ class _CopyWithImpl$Query$GetSection$section$$AvatarSection$metadata<TRes>
     Object? secondaryTitles = _undefined,
     Object? collectionId = _undefined,
     Object? useContext = _undefined,
+    Object? page = _undefined,
+    Object? limit = _undefined,
     Object? prependLiveElement = _undefined,
     Object? $__typename = _undefined,
   }) =>
@@ -66882,6 +71602,10 @@ class _CopyWithImpl$Query$GetSection$section$$AvatarSection$metadata<TRes>
         useContext: useContext == _undefined || useContext == null
             ? _instance.useContext
             : (useContext as bool),
+        page: page == _undefined
+            ? _instance.page
+            : (page as Query$GetSection$section$$AvatarSection$metadata$page?),
+        limit: limit == _undefined ? _instance.limit : (limit as int?),
         prependLiveElement:
             prependLiveElement == _undefined || prependLiveElement == null
                 ? _instance.prependLiveElement
@@ -66890,6 +71614,16 @@ class _CopyWithImpl$Query$GetSection$section$$AvatarSection$metadata<TRes>
             ? _instance.$__typename
             : ($__typename as String),
       ));
+
+  CopyWith$Query$GetSection$section$$AvatarSection$metadata$page<TRes>
+      get page {
+    final local$page = _instance.page;
+    return local$page == null
+        ? CopyWith$Query$GetSection$section$$AvatarSection$metadata$page.stub(
+            _then(_instance))
+        : CopyWith$Query$GetSection$section$$AvatarSection$metadata$page(
+            local$page, (e) => call(page: e));
+  }
 }
 
 class _CopyWithStubImpl$Query$GetSection$section$$AvatarSection$metadata<TRes>
@@ -66904,7 +71638,152 @@ class _CopyWithStubImpl$Query$GetSection$section$$AvatarSection$metadata<TRes>
     bool? secondaryTitles,
     String? collectionId,
     bool? useContext,
+    Query$GetSection$section$$AvatarSection$metadata$page? page,
+    int? limit,
     bool? prependLiveElement,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Query$GetSection$section$$AvatarSection$metadata$page<TRes>
+      get page =>
+          CopyWith$Query$GetSection$section$$AvatarSection$metadata$page.stub(
+              _res);
+}
+
+class Query$GetSection$section$$AvatarSection$metadata$page
+    implements
+        Fragment$Section$$AvatarSection$metadata$page,
+        Fragment$ItemSection$$AvatarSection$metadata$page {
+  Query$GetSection$section$$AvatarSection$metadata$page({
+    required this.code,
+    this.$__typename = 'Page',
+  });
+
+  factory Query$GetSection$section$$AvatarSection$metadata$page.fromJson(
+      Map<String, dynamic> json) {
+    final l$code = json['code'];
+    final l$$__typename = json['__typename'];
+    return Query$GetSection$section$$AvatarSection$metadata$page(
+      code: (l$code as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String code;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$code = code;
+    _resultData['code'] = l$code;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$code = code;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$code,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Query$GetSection$section$$AvatarSection$metadata$page) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$code = code;
+    final lOther$code = other.code;
+    if (l$code != lOther$code) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$GetSection$section$$AvatarSection$metadata$page
+    on Query$GetSection$section$$AvatarSection$metadata$page {
+  CopyWith$Query$GetSection$section$$AvatarSection$metadata$page<
+          Query$GetSection$section$$AvatarSection$metadata$page>
+      get copyWith =>
+          CopyWith$Query$GetSection$section$$AvatarSection$metadata$page(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$GetSection$section$$AvatarSection$metadata$page<
+    TRes> {
+  factory CopyWith$Query$GetSection$section$$AvatarSection$metadata$page(
+    Query$GetSection$section$$AvatarSection$metadata$page instance,
+    TRes Function(Query$GetSection$section$$AvatarSection$metadata$page) then,
+  ) = _CopyWithImpl$Query$GetSection$section$$AvatarSection$metadata$page;
+
+  factory CopyWith$Query$GetSection$section$$AvatarSection$metadata$page.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$GetSection$section$$AvatarSection$metadata$page;
+
+  TRes call({
+    String? code,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Query$GetSection$section$$AvatarSection$metadata$page<TRes>
+    implements
+        CopyWith$Query$GetSection$section$$AvatarSection$metadata$page<TRes> {
+  _CopyWithImpl$Query$GetSection$section$$AvatarSection$metadata$page(
+    this._instance,
+    this._then,
+  );
+
+  final Query$GetSection$section$$AvatarSection$metadata$page _instance;
+
+  final TRes Function(Query$GetSection$section$$AvatarSection$metadata$page)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? code = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Query$GetSection$section$$AvatarSection$metadata$page(
+        code: code == _undefined || code == null
+            ? _instance.code
+            : (code as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Query$GetSection$section$$AvatarSection$metadata$page<
+        TRes>
+    implements
+        CopyWith$Query$GetSection$section$$AvatarSection$metadata$page<TRes> {
+  _CopyWithStubImpl$Query$GetSection$section$$AvatarSection$metadata$page(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? code,
     String? $__typename,
   }) =>
       _res;

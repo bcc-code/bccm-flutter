@@ -95,6 +95,10 @@ fragment ItemSection on ItemSection {
     secondaryTitles
     collectionId
     useContext
+    page {
+      code
+    }
+    limit
     prependLiveElement
   }
   items(first: $first, offset: $offset) {
