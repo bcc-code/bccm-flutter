@@ -1,7 +1,7 @@
 const apiEnvUrls = <String, String>{
   EnvironmentOverride.dev: 'https://api.dev.brunstad.tv/query',
   EnvironmentOverride.sta: 'https://api.sta.brunstad.tv/query',
-  EnvironmentOverride.prod: 'https://e27d-85-112-141-130.ngrok-free.app/query',
+  EnvironmentOverride.prod: 'https://api.brunstad.tv/query',
 };
 
 class EnvironmentOverride {
