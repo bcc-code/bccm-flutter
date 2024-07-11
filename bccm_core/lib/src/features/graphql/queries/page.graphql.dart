@@ -55360,6 +55360,13 @@ const documentNodeQueryPage = DocumentNode(definitions: [
         directives: [],
         selectionSet: SelectionSetNode(selections: [
           FieldNode(
+            name: NameNode(value: 'code'),
+            alias: null,
+            arguments: [],
+            directives: [],
+            selectionSet: null,
+          ),
+          FieldNode(
             name: NameNode(value: 'title'),
             alias: null,
             arguments: [],
@@ -55587,22 +55594,27 @@ class Query$Page$Widget extends graphql_flutter.Query<Query$Page> {
 
 class Query$Page$page {
   Query$Page$page({
+    required this.code,
     required this.title,
     required this.sections,
     this.$__typename = 'Page',
   });
 
   factory Query$Page$page.fromJson(Map<String, dynamic> json) {
+    final l$code = json['code'];
     final l$title = json['title'];
     final l$sections = json['sections'];
     final l$$__typename = json['__typename'];
     return Query$Page$page(
+      code: (l$code as String),
       title: (l$title as String),
       sections: Query$Page$page$sections.fromJson(
           (l$sections as Map<String, dynamic>)),
       $__typename: (l$$__typename as String),
     );
   }
+
+  final String code;
 
   final String title;
 
@@ -55612,6 +55624,8 @@ class Query$Page$page {
 
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
+    final l$code = code;
+    _resultData['code'] = l$code;
     final l$title = title;
     _resultData['title'] = l$title;
     final l$sections = sections;
@@ -55623,10 +55637,12 @@ class Query$Page$page {
 
   @override
   int get hashCode {
+    final l$code = code;
     final l$title = title;
     final l$sections = sections;
     final l$$__typename = $__typename;
     return Object.hashAll([
+      l$code,
       l$title,
       l$sections,
       l$$__typename,
@@ -55639,6 +55655,11 @@ class Query$Page$page {
       return true;
     }
     if (!(other is Query$Page$page) || runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$code = code;
+    final lOther$code = other.code;
+    if (l$code != lOther$code) {
       return false;
     }
     final l$title = title;
@@ -55678,6 +55699,7 @@ abstract class CopyWith$Query$Page$page<TRes> {
       _CopyWithStubImpl$Query$Page$page;
 
   TRes call({
+    String? code,
     String? title,
     Query$Page$page$sections? sections,
     String? $__typename,
@@ -55699,11 +55721,15 @@ class _CopyWithImpl$Query$Page$page<TRes>
   static const _undefined = <dynamic, dynamic>{};
 
   TRes call({
+    Object? code = _undefined,
     Object? title = _undefined,
     Object? sections = _undefined,
     Object? $__typename = _undefined,
   }) =>
       _then(Query$Page$page(
+        code: code == _undefined || code == null
+            ? _instance.code
+            : (code as String),
         title: title == _undefined || title == null
             ? _instance.title
             : (title as String),
@@ -55729,6 +55755,7 @@ class _CopyWithStubImpl$Query$Page$page<TRes>
   TRes _res;
 
   call({
+    String? code,
     String? title,
     Query$Page$page$sections? sections,
     String? $__typename,

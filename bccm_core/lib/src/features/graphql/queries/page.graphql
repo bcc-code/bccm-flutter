@@ -250,6 +250,7 @@ fragment Section on Section {
 
 query Page($code: String!, $first: Int, $offset: Int) {
   page(code: $code) {
+    code
     title
     sections(first: 30) {
       items {
