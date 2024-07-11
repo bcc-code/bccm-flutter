@@ -110,6 +110,7 @@ class DesignSystemColors {
 enum ButtonVariant {
   primary,
   secondary,
+  dark,
   green,
   red,
 }
