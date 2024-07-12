@@ -7,6 +7,7 @@ export 'src/features/auth/auth_state.dart';
 export 'src/features/auth/implementations/auth_state_notifier_disabled.dart';
 export 'src/features/providers/shared_preferences_provider.dart';
 export 'src/features/providers/package_info_provider.dart';
+export 'src/features/providers/device_info_provider.dart';
 export 'src/features/providers/router_provider.dart';
 export 'src/features/providers/special_routes_handler_provider.dart';
 export 'src/features/providers/connectivity_provider.dart';

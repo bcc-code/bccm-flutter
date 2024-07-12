@@ -1,4 +1,5 @@
 import 'package:bccm_core/src/features/globals/globals.dart';
+import 'package:bccm_core/src/features/providers/device_info_provider.dart';
 import 'package:bccm_core/src/features/providers/package_info_provider.dart';
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:package_info_plus/package_info_plus.dart';
@@ -71,9 +72,11 @@ class BccmCore {
   Future<List<Override>> _setupCoreProviders() async {
     final sharedPrefs = await SharedPreferences.getInstance();
     final packageInfo = await PackageInfo.fromPlatform();
+    final deviceInfo = await DeviceInfoPlugin().deviceInfo;
     return [
       sharedPreferencesProvider.overrideWith((ref) => sharedPrefs),
       packageInfoProvider.overrideWith((ref) => packageInfo),
+      deviceInfoProvider.overrideWith((ref) => deviceInfo),
     ];
   }
 }
