@@ -19,9 +19,10 @@ class WebviewNavigationManager extends NavigationDelegate {
 
   @override
   NavigationRequestCallback? get onNavigationRequest {
-    return (request) {
+    return (request) async {
       for (final delegate in _delegates) {
-        if (delegate.onNavigationRequest?.call(request) == NavigationDecision.prevent) {
+        final result = await delegate.onNavigationRequest?.call(request);
+        if (result == NavigationDecision.prevent) {
           return NavigationDecision.prevent;
         }
       }

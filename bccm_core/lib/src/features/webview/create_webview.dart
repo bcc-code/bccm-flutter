@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:bccm_core/bccm_core.dart';
 import 'package:flutter/foundation.dart';
+import 'package:universal_io/io.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import 'package:webview_flutter_android/webview_flutter_android.dart';
 import 'package:webview_flutter_wkwebview/webview_flutter_wkwebview.dart';
@@ -27,7 +28,7 @@ import 'package:webview_flutter_wkwebview/webview_flutter_wkwebview.dart';
   }
   final ios = controller.platform.asOrNull<WebKitWebViewController>();
   if (ios != null) {
-    if (kDebugMode) ios.setInspectable(true);
+    if (kDebugMode && !Platform.operatingSystemVersion.contains('Version 16')) ios.setInspectable(true);
   }
   return (controller, android, ios);
 }

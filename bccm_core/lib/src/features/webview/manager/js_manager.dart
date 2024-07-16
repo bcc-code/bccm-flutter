@@ -22,7 +22,7 @@ class WebViewJsManager {
   WebViewJsManager(this.controller, WebviewNavigationManager navigation) {
     navigation.addDelegate(
       NavigationDelegate(
-        onPageStarted: (url) {
+        onPageFinished: (url) {
           _injectJs();
         },
       ),

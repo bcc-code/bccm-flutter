@@ -8,11 +8,15 @@ WebViewManager? useWebViewManager(Uri? uri, {void Function(WebViewManager)? setu
     if (uri == null) {
       return null;
     }
+    uri = uri!.replace(queryParameters: {
+      ...uri!.queryParameters,
+      'webview_delayed_type': 'flutter_webview_manager',
+    });
     final (controller, _, _) = createStandardWebViewController();
     final m = manager.value = WebViewManager.setup(controller);
-    m.navigation.addDelegate(NavigationDelegate(onNavigationRequest: strictNavigationCallback(uri)));
+    m.navigation.addDelegate(NavigationDelegate(onNavigationRequest: strictNavigationCallback(uri!)));
     setup?.call(m);
-    controller.loadRequest(uri);
+    controller.loadRequest(uri!);
     return m.dispose;
   }, [uri]);
   return manager.value;
