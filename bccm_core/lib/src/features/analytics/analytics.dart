@@ -71,6 +71,8 @@ class Analytics {
   @mustBeOverridden
   void interaction(InteractionEvent event) {}
   @mustBeOverridden
+  void impression(ImpressionEvent event) {}
+  @mustBeOverridden
   void guideShown(GuideShownEvent event) {}
   @mustBeOverridden
   void timeMeasurement(TimeMeasurementEvent event) {}
@@ -345,6 +347,11 @@ class RudderAnalytics extends Analytics {
   @override
   void interaction(InteractionEvent event) {
     RudderController.instance.track('interaction', properties: getCommonData().putValue(map: event.toJson()));
+  }
+
+  @override
+  void impression(ImpressionEvent event) {
+    RudderController.instance.track('impression', properties: getCommonData().putValue(map: event.toJson()));
   }
 
   @override

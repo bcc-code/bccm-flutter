@@ -253,6 +253,244 @@ abstract class _InteractionEvent implements InteractionEvent {
       throw _privateConstructorUsedError;
 }
 
+ImpressionEvent _$ImpressionEventFromJson(Map<String, dynamic> json) {
+  return _ImpressionEvent.fromJson(json);
+}
+
+/// @nodoc
+mixin _$ImpressionEvent {
+  String? get name => throw _privateConstructorUsedError;
+  String? get pageCode => throw _privateConstructorUsedError;
+  String? get contextElementType => throw _privateConstructorUsedError;
+  String? get contextElementId => throw _privateConstructorUsedError;
+  Map<String, dynamic>? get meta => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ImpressionEventCopyWith<ImpressionEvent> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ImpressionEventCopyWith<$Res> {
+  factory $ImpressionEventCopyWith(
+          ImpressionEvent value, $Res Function(ImpressionEvent) then) =
+      _$ImpressionEventCopyWithImpl<$Res, ImpressionEvent>;
+  @useResult
+  $Res call(
+      {String? name,
+      String? pageCode,
+      String? contextElementType,
+      String? contextElementId,
+      Map<String, dynamic>? meta});
+}
+
+/// @nodoc
+class _$ImpressionEventCopyWithImpl<$Res, $Val extends ImpressionEvent>
+    implements $ImpressionEventCopyWith<$Res> {
+  _$ImpressionEventCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? name = freezed,
+    Object? pageCode = freezed,
+    Object? contextElementType = freezed,
+    Object? contextElementId = freezed,
+    Object? meta = freezed,
+  }) {
+    return _then(_value.copyWith(
+      name: freezed == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      pageCode: freezed == pageCode
+          ? _value.pageCode
+          : pageCode // ignore: cast_nullable_to_non_nullable
+              as String?,
+      contextElementType: freezed == contextElementType
+          ? _value.contextElementType
+          : contextElementType // ignore: cast_nullable_to_non_nullable
+              as String?,
+      contextElementId: freezed == contextElementId
+          ? _value.contextElementId
+          : contextElementId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      meta: freezed == meta
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$ImpressionEventImplCopyWith<$Res>
+    implements $ImpressionEventCopyWith<$Res> {
+  factory _$$ImpressionEventImplCopyWith(_$ImpressionEventImpl value,
+          $Res Function(_$ImpressionEventImpl) then) =
+      __$$ImpressionEventImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String? name,
+      String? pageCode,
+      String? contextElementType,
+      String? contextElementId,
+      Map<String, dynamic>? meta});
+}
+
+/// @nodoc
+class __$$ImpressionEventImplCopyWithImpl<$Res>
+    extends _$ImpressionEventCopyWithImpl<$Res, _$ImpressionEventImpl>
+    implements _$$ImpressionEventImplCopyWith<$Res> {
+  __$$ImpressionEventImplCopyWithImpl(
+      _$ImpressionEventImpl _value, $Res Function(_$ImpressionEventImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? name = freezed,
+    Object? pageCode = freezed,
+    Object? contextElementType = freezed,
+    Object? contextElementId = freezed,
+    Object? meta = freezed,
+  }) {
+    return _then(_$ImpressionEventImpl(
+      name: freezed == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      pageCode: freezed == pageCode
+          ? _value.pageCode
+          : pageCode // ignore: cast_nullable_to_non_nullable
+              as String?,
+      contextElementType: freezed == contextElementType
+          ? _value.contextElementType
+          : contextElementType // ignore: cast_nullable_to_non_nullable
+              as String?,
+      contextElementId: freezed == contextElementId
+          ? _value.contextElementId
+          : contextElementId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      meta: freezed == meta
+          ? _value._meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$ImpressionEventImpl implements _ImpressionEvent {
+  const _$ImpressionEventImpl(
+      {this.name,
+      this.pageCode,
+      this.contextElementType,
+      this.contextElementId,
+      final Map<String, dynamic>? meta})
+      : _meta = meta;
+
+  factory _$ImpressionEventImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ImpressionEventImplFromJson(json);
+
+  @override
+  final String? name;
+  @override
+  final String? pageCode;
+  @override
+  final String? contextElementType;
+  @override
+  final String? contextElementId;
+  final Map<String, dynamic>? _meta;
+  @override
+  Map<String, dynamic>? get meta {
+    final value = _meta;
+    if (value == null) return null;
+    if (_meta is EqualUnmodifiableMapView) return _meta;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(value);
+  }
+
+  @override
+  String toString() {
+    return 'ImpressionEvent(name: $name, pageCode: $pageCode, contextElementType: $contextElementType, contextElementId: $contextElementId, meta: $meta)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ImpressionEventImpl &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.pageCode, pageCode) ||
+                other.pageCode == pageCode) &&
+            (identical(other.contextElementType, contextElementType) ||
+                other.contextElementType == contextElementType) &&
+            (identical(other.contextElementId, contextElementId) ||
+                other.contextElementId == contextElementId) &&
+            const DeepCollectionEquality().equals(other._meta, _meta));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      name,
+      pageCode,
+      contextElementType,
+      contextElementId,
+      const DeepCollectionEquality().hash(_meta));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ImpressionEventImplCopyWith<_$ImpressionEventImpl> get copyWith =>
+      __$$ImpressionEventImplCopyWithImpl<_$ImpressionEventImpl>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$ImpressionEventImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _ImpressionEvent implements ImpressionEvent {
+  const factory _ImpressionEvent(
+      {final String? name,
+      final String? pageCode,
+      final String? contextElementType,
+      final String? contextElementId,
+      final Map<String, dynamic>? meta}) = _$ImpressionEventImpl;
+
+  factory _ImpressionEvent.fromJson(Map<String, dynamic> json) =
+      _$ImpressionEventImpl.fromJson;
+
+  @override
+  String? get name;
+  @override
+  String? get pageCode;
+  @override
+  String? get contextElementType;
+  @override
+  String? get contextElementId;
+  @override
+  Map<String, dynamic>? get meta;
+  @override
+  @JsonKey(ignore: true)
+  _$$ImpressionEventImplCopyWith<_$ImpressionEventImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
 GuideShownEvent _$GuideShownEventFromJson(Map<String, dynamic> json) {
   return _GuideShownEvent.fromJson(json);
 }

@@ -17,6 +17,19 @@ class InteractionEvent with _$InteractionEvent {
 }
 
 @freezed
+class ImpressionEvent with _$ImpressionEvent {
+  const factory ImpressionEvent({
+    String? name,
+    String? pageCode,
+    String? contextElementType,
+    String? contextElementId,
+    Map<String, dynamic>? meta,
+  }) = _ImpressionEvent;
+
+  factory ImpressionEvent.fromJson(Map<String, dynamic> json) => _$ImpressionEventFromJson(json);
+}
+
+@freezed
 class GuideShownEvent with _$GuideShownEvent {
   const factory GuideShownEvent({
     String? guide,

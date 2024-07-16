@@ -26,6 +26,26 @@ Map<String, dynamic> _$$InteractionEventImplToJson(
       'meta': instance.meta,
     };
 
+_$ImpressionEventImpl _$$ImpressionEventImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ImpressionEventImpl(
+      name: json['name'] as String?,
+      pageCode: json['pageCode'] as String?,
+      contextElementType: json['contextElementType'] as String?,
+      contextElementId: json['contextElementId'] as String?,
+      meta: json['meta'] as Map<String, dynamic>?,
+    );
+
+Map<String, dynamic> _$$ImpressionEventImplToJson(
+        _$ImpressionEventImpl instance) =>
+    <String, dynamic>{
+      'name': instance.name,
+      'pageCode': instance.pageCode,
+      'contextElementType': instance.contextElementType,
+      'contextElementId': instance.contextElementId,
+      'meta': instance.meta,
+    };
+
 _$GuideShownEventImpl _$$GuideShownEventImplFromJson(
         Map<String, dynamic> json) =>
     _$GuideShownEventImpl(
