@@ -1,4 +1,3 @@
-import 'package:bccm_core/bccm_core.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:graphql/client.dart';
 

@@ -2,7 +2,7 @@ import 'package:bccm_core/platform.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
-WebViewManager? useWebView(Uri? uri, {void Function(WebViewManager)? setup}) {
+WebViewManager? useWebViewManager(Uri? uri, {void Function(WebViewManager)? setup}) {
   final manager = useState<WebViewManager?>(null);
   useEffect(() {
     if (uri == null) {
