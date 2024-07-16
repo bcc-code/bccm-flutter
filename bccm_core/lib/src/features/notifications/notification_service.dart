@@ -199,8 +199,7 @@ class FcmNotificationService implements NotificationService {
       if (data['deep_link'] is String) {
         String path = data['deep_link'];
         debugPrint('navigating to deep_link from notification: $path');
-        debugPrint('router in notification handler: ${context!.router.currentPath} ${context.router.currentSegments}');
-        context.router.navigateNamedFromRoot(path);
+        context!.router.navigateNamedFromRoot(path);
       }
     }
     if (data['action'] == 'clear_cache') {
