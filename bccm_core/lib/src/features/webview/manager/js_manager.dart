@@ -74,6 +74,7 @@ window.flutter_webview_manager = {
     window.flutterResponses[id] = new Error(error);
   }
 };
+window.dispatchEvent(new Event("app_webview_ready"))
 
 ''');
   }
