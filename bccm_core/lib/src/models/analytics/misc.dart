@@ -49,3 +49,23 @@ class TimeMeasurementEvent with _$TimeMeasurementEvent {
 
   factory TimeMeasurementEvent.fromJson(Map<String, dynamic> json) => _$TimeMeasurementEventFromJson(json);
 }
+
+@freezed
+class NotificationReceivedEvent with _$NotificationReceivedEvent {
+  const factory NotificationReceivedEvent({
+    String? notificationId,
+    String? action,
+    String? deeplink,
+  }) = _NotificationReceivedEvent;
+
+  factory NotificationReceivedEvent.fromJson(Map<String, dynamic> json) => _$NotificationReceivedEventFromJson(json);
+}
+
+@freezed
+class NotificationOpenedEvent with _$NotificationOpenedEvent {
+  const factory NotificationOpenedEvent({
+    String? notificationId,
+  }) = _NotificationOpenedEvent;
+
+  factory NotificationOpenedEvent.fromJson(Map<String, dynamic> json) => _$NotificationOpenedEventFromJson(json);
+}

@@ -21,3 +21,5 @@ extension ScheduleProviderRefreshX on Ref {
     });
   }
 }
+
+typedef RefReadFn = T Function<T>(ProviderListenable<T> provider);

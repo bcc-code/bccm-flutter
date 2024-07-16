@@ -75,3 +75,31 @@ Map<String, dynamic> _$$TimeMeasurementEventImplToJson(
       'seconds': instance.seconds,
       'meta': instance.meta,
     };
+
+_$NotificationReceivedEventImpl _$$NotificationReceivedEventImplFromJson(
+        Map<String, dynamic> json) =>
+    _$NotificationReceivedEventImpl(
+      notificationId: json['notificationId'] as String?,
+      action: json['action'] as String?,
+      deeplink: json['deeplink'] as String?,
+    );
+
+Map<String, dynamic> _$$NotificationReceivedEventImplToJson(
+        _$NotificationReceivedEventImpl instance) =>
+    <String, dynamic>{
+      'notificationId': instance.notificationId,
+      'action': instance.action,
+      'deeplink': instance.deeplink,
+    };
+
+_$NotificationOpenedEventImpl _$$NotificationOpenedEventImplFromJson(
+        Map<String, dynamic> json) =>
+    _$NotificationOpenedEventImpl(
+      notificationId: json['notificationId'] as String?,
+    );
+
+Map<String, dynamic> _$$NotificationOpenedEventImplToJson(
+        _$NotificationOpenedEventImpl instance) =>
+    <String, dynamic>{
+      'notificationId': instance.notificationId,
+    };

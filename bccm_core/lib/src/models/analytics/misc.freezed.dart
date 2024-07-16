@@ -838,3 +838,328 @@ abstract class _TimeMeasurementEvent implements TimeMeasurementEvent {
   _$$TimeMeasurementEventImplCopyWith<_$TimeMeasurementEventImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
+
+NotificationReceivedEvent _$NotificationReceivedEventFromJson(
+    Map<String, dynamic> json) {
+  return _NotificationReceivedEvent.fromJson(json);
+}
+
+/// @nodoc
+mixin _$NotificationReceivedEvent {
+  String? get notificationId => throw _privateConstructorUsedError;
+  String? get action => throw _privateConstructorUsedError;
+  String? get deeplink => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $NotificationReceivedEventCopyWith<NotificationReceivedEvent> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $NotificationReceivedEventCopyWith<$Res> {
+  factory $NotificationReceivedEventCopyWith(NotificationReceivedEvent value,
+          $Res Function(NotificationReceivedEvent) then) =
+      _$NotificationReceivedEventCopyWithImpl<$Res, NotificationReceivedEvent>;
+  @useResult
+  $Res call({String? notificationId, String? action, String? deeplink});
+}
+
+/// @nodoc
+class _$NotificationReceivedEventCopyWithImpl<$Res,
+        $Val extends NotificationReceivedEvent>
+    implements $NotificationReceivedEventCopyWith<$Res> {
+  _$NotificationReceivedEventCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? notificationId = freezed,
+    Object? action = freezed,
+    Object? deeplink = freezed,
+  }) {
+    return _then(_value.copyWith(
+      notificationId: freezed == notificationId
+          ? _value.notificationId
+          : notificationId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      action: freezed == action
+          ? _value.action
+          : action // ignore: cast_nullable_to_non_nullable
+              as String?,
+      deeplink: freezed == deeplink
+          ? _value.deeplink
+          : deeplink // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$NotificationReceivedEventImplCopyWith<$Res>
+    implements $NotificationReceivedEventCopyWith<$Res> {
+  factory _$$NotificationReceivedEventImplCopyWith(
+          _$NotificationReceivedEventImpl value,
+          $Res Function(_$NotificationReceivedEventImpl) then) =
+      __$$NotificationReceivedEventImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String? notificationId, String? action, String? deeplink});
+}
+
+/// @nodoc
+class __$$NotificationReceivedEventImplCopyWithImpl<$Res>
+    extends _$NotificationReceivedEventCopyWithImpl<$Res,
+        _$NotificationReceivedEventImpl>
+    implements _$$NotificationReceivedEventImplCopyWith<$Res> {
+  __$$NotificationReceivedEventImplCopyWithImpl(
+      _$NotificationReceivedEventImpl _value,
+      $Res Function(_$NotificationReceivedEventImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? notificationId = freezed,
+    Object? action = freezed,
+    Object? deeplink = freezed,
+  }) {
+    return _then(_$NotificationReceivedEventImpl(
+      notificationId: freezed == notificationId
+          ? _value.notificationId
+          : notificationId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      action: freezed == action
+          ? _value.action
+          : action // ignore: cast_nullable_to_non_nullable
+              as String?,
+      deeplink: freezed == deeplink
+          ? _value.deeplink
+          : deeplink // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$NotificationReceivedEventImpl implements _NotificationReceivedEvent {
+  const _$NotificationReceivedEventImpl(
+      {this.notificationId, this.action, this.deeplink});
+
+  factory _$NotificationReceivedEventImpl.fromJson(Map<String, dynamic> json) =>
+      _$$NotificationReceivedEventImplFromJson(json);
+
+  @override
+  final String? notificationId;
+  @override
+  final String? action;
+  @override
+  final String? deeplink;
+
+  @override
+  String toString() {
+    return 'NotificationReceivedEvent(notificationId: $notificationId, action: $action, deeplink: $deeplink)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$NotificationReceivedEventImpl &&
+            (identical(other.notificationId, notificationId) ||
+                other.notificationId == notificationId) &&
+            (identical(other.action, action) || other.action == action) &&
+            (identical(other.deeplink, deeplink) ||
+                other.deeplink == deeplink));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, notificationId, action, deeplink);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$NotificationReceivedEventImplCopyWith<_$NotificationReceivedEventImpl>
+      get copyWith => __$$NotificationReceivedEventImplCopyWithImpl<
+          _$NotificationReceivedEventImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$NotificationReceivedEventImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _NotificationReceivedEvent implements NotificationReceivedEvent {
+  const factory _NotificationReceivedEvent(
+      {final String? notificationId,
+      final String? action,
+      final String? deeplink}) = _$NotificationReceivedEventImpl;
+
+  factory _NotificationReceivedEvent.fromJson(Map<String, dynamic> json) =
+      _$NotificationReceivedEventImpl.fromJson;
+
+  @override
+  String? get notificationId;
+  @override
+  String? get action;
+  @override
+  String? get deeplink;
+  @override
+  @JsonKey(ignore: true)
+  _$$NotificationReceivedEventImplCopyWith<_$NotificationReceivedEventImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+NotificationOpenedEvent _$NotificationOpenedEventFromJson(
+    Map<String, dynamic> json) {
+  return _NotificationOpenedEvent.fromJson(json);
+}
+
+/// @nodoc
+mixin _$NotificationOpenedEvent {
+  String? get notificationId => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $NotificationOpenedEventCopyWith<NotificationOpenedEvent> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $NotificationOpenedEventCopyWith<$Res> {
+  factory $NotificationOpenedEventCopyWith(NotificationOpenedEvent value,
+          $Res Function(NotificationOpenedEvent) then) =
+      _$NotificationOpenedEventCopyWithImpl<$Res, NotificationOpenedEvent>;
+  @useResult
+  $Res call({String? notificationId});
+}
+
+/// @nodoc
+class _$NotificationOpenedEventCopyWithImpl<$Res,
+        $Val extends NotificationOpenedEvent>
+    implements $NotificationOpenedEventCopyWith<$Res> {
+  _$NotificationOpenedEventCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? notificationId = freezed,
+  }) {
+    return _then(_value.copyWith(
+      notificationId: freezed == notificationId
+          ? _value.notificationId
+          : notificationId // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$NotificationOpenedEventImplCopyWith<$Res>
+    implements $NotificationOpenedEventCopyWith<$Res> {
+  factory _$$NotificationOpenedEventImplCopyWith(
+          _$NotificationOpenedEventImpl value,
+          $Res Function(_$NotificationOpenedEventImpl) then) =
+      __$$NotificationOpenedEventImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String? notificationId});
+}
+
+/// @nodoc
+class __$$NotificationOpenedEventImplCopyWithImpl<$Res>
+    extends _$NotificationOpenedEventCopyWithImpl<$Res,
+        _$NotificationOpenedEventImpl>
+    implements _$$NotificationOpenedEventImplCopyWith<$Res> {
+  __$$NotificationOpenedEventImplCopyWithImpl(
+      _$NotificationOpenedEventImpl _value,
+      $Res Function(_$NotificationOpenedEventImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? notificationId = freezed,
+  }) {
+    return _then(_$NotificationOpenedEventImpl(
+      notificationId: freezed == notificationId
+          ? _value.notificationId
+          : notificationId // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$NotificationOpenedEventImpl implements _NotificationOpenedEvent {
+  const _$NotificationOpenedEventImpl({this.notificationId});
+
+  factory _$NotificationOpenedEventImpl.fromJson(Map<String, dynamic> json) =>
+      _$$NotificationOpenedEventImplFromJson(json);
+
+  @override
+  final String? notificationId;
+
+  @override
+  String toString() {
+    return 'NotificationOpenedEvent(notificationId: $notificationId)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$NotificationOpenedEventImpl &&
+            (identical(other.notificationId, notificationId) ||
+                other.notificationId == notificationId));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, notificationId);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$NotificationOpenedEventImplCopyWith<_$NotificationOpenedEventImpl>
+      get copyWith => __$$NotificationOpenedEventImplCopyWithImpl<
+          _$NotificationOpenedEventImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$NotificationOpenedEventImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _NotificationOpenedEvent implements NotificationOpenedEvent {
+  const factory _NotificationOpenedEvent({final String? notificationId}) =
+      _$NotificationOpenedEventImpl;
+
+  factory _NotificationOpenedEvent.fromJson(Map<String, dynamic> json) =
+      _$NotificationOpenedEventImpl.fromJson;
+
+  @override
+  String? get notificationId;
+  @override
+  @JsonKey(ignore: true)
+  _$$NotificationOpenedEventImplCopyWith<_$NotificationOpenedEventImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}

@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'dart:io';
 import 'package:auto_route/auto_route.dart';
 import 'package:bccm_core/bccm_core.dart';
-import 'package:bccm_core/src/features/notifications/local_notifications.dart';
+import 'package:bccm_core/platform.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
@@ -44,6 +44,7 @@ class FcmNotificationService implements NotificationService {
   final void Function(RemoteMessage? message)? onAppOpenWhenNotificationReceived;
   final void Function(RemoteMessage? message)? onShowInAppRequested;
   final void Function(RemoteMessage? message)? onCacheClearRequested;
+  final RefReadFn refRead;
 
   FcmNotificationService({
     required this.localNotificationService,
@@ -51,6 +52,7 @@ class FcmNotificationService implements NotificationService {
     required this.onAppOpenWhenNotificationReceived,
     required this.onShowInAppRequested,
     required this.onCacheClearRequested,
+    required this.refRead,
   }) {
     _appReadySubscription = globalEventBus.on<AppReadyEvent>().listen(_onAppReady);
   }
@@ -116,7 +118,7 @@ class FcmNotificationService implements NotificationService {
     var initialMessage = await FirebaseMessaging.instance.getInitialMessage();
     if (initialMessage != null) {
       debugPrint('Handling initial notification message.');
-      _handleMessage(initialMessage, openedFromBackground: true);
+      _handleMessage(initialMessage, userInteracted: true);
     }
 
     FirebaseMessaging.instance.setDeliveryMetricsExportToBigQuery(true);
@@ -124,30 +126,30 @@ class FcmNotificationService implements NotificationService {
     _onMessageSubscription ??= FirebaseMessaging.onMessage.listen(_handleMessage);
     _onMessageOpenedApp ??= FirebaseMessaging.onMessageOpenedApp.listen((message) {
       debugPrint('_onMessageOpenedApp');
-      _handleMessage(message, openedFromBackground: true);
+      _handleMessage(message, userInteracted: true);
     });
     debugPrint('Notification listeners set up.');
   }
 
-  void _handleMessage(RemoteMessage message, {bool openedFromBackground = false}) {
-    if (!openedFromBackground) {
-      debugPrint('Got a message whilst in the foreground!');
-    }
-    debugPrint('Message data: ${message.data}, notification: ${message.notification?.title}');
-
+  void _handleMessage(RemoteMessage message, {bool userInteracted = false}) {
     final notification = message.notification;
-    if (!openedFromBackground && notification != null) {
+    if (!userInteracted && notification != null) {
       onAppOpenWhenNotificationReceived?.call(message);
       if (Platform.isAndroid) {
         _showLocalNotification(message);
       }
+      _trackNotificationReceived(message);
     }
-    if (openedFromBackground && notification != null && message.data['show_in_app'] == true) {
+    if (userInteracted && notification != null && message.data['show_in_app'] == true) {
+      _trackNotificationOpened(message);
+    }
+
+    if (userInteracted && notification != null && message.data['show_in_app'] == true) {
       onShowInAppRequested?.call(message);
     }
     _handleAction(
       data: message.data,
-      openedFromBackground: openedFromBackground,
+      openedFromBackground: userInteracted,
       message: message,
     );
   }
@@ -204,5 +206,27 @@ class FcmNotificationService implements NotificationService {
     if (data['action'] == 'clear_cache') {
       onCacheClearRequested?.call(message);
     }
+  }
+
+  void _trackNotificationReceived(RemoteMessage message) {
+    tryCatchRecordError(() {
+      refRead(analyticsProvider).notificationReceived(
+        NotificationReceivedEvent(
+          notificationId: message.messageId,
+          action: message.data['action'],
+          deeplink: message.data['deep_link'],
+        ),
+      );
+    });
+  }
+
+  void _trackNotificationOpened(RemoteMessage message) {
+    tryCatchRecordError(() {
+      refRead(analyticsProvider).notificationOpened(
+        NotificationOpenedEvent(
+          notificationId: message.messageId,
+        ),
+      );
+    });
   }
 }
