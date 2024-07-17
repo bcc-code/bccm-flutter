@@ -93,3 +93,12 @@ class ContactDeviceInfo {
     };
   }
 }
+
+String getOsVersion(BaseDeviceInfo deviceInfo) {
+  if (deviceInfo is IosDeviceInfo) {
+    return deviceInfo.systemVersion;
+  } else if (deviceInfo is AndroidDeviceInfo) {
+    return deviceInfo.version.release;
+  }
+  return '';
+}
