@@ -20895,6 +20895,73 @@ const fragmentDefinitionSection = FragmentDefinitionNode(
     InlineFragmentNode(
       typeCondition: TypeConditionNode(
           on: NamedTypeNode(
+        name: NameNode(value: 'CardListSection'),
+        isNonNull: false,
+      )),
+      directives: [],
+      selectionSet: SelectionSetNode(selections: [
+        FieldNode(
+          name: NameNode(value: 'size'),
+          alias: NameNode(value: 'cardSize'),
+          arguments: [],
+          directives: [],
+          selectionSet: null,
+        ),
+        FieldNode(
+          name: NameNode(value: 'items'),
+          alias: null,
+          arguments: [
+            ArgumentNode(
+              name: NameNode(value: 'first'),
+              value: VariableNode(name: NameNode(value: 'first')),
+            ),
+            ArgumentNode(
+              name: NameNode(value: 'offset'),
+              value: VariableNode(name: NameNode(value: 'offset')),
+            ),
+          ],
+          directives: [],
+          selectionSet: SelectionSetNode(selections: [
+            FieldNode(
+              name: NameNode(value: 'items'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: SelectionSetNode(selections: [
+                FragmentSpreadNode(
+                  name: NameNode(value: 'CardItem'),
+                  directives: [],
+                ),
+                FieldNode(
+                  name: NameNode(value: '__typename'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+              ]),
+            ),
+            FieldNode(
+              name: NameNode(value: '__typename'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null,
+            ),
+          ]),
+        ),
+        FieldNode(
+          name: NameNode(value: '__typename'),
+          alias: null,
+          arguments: [],
+          directives: [],
+          selectionSet: null,
+        ),
+      ]),
+    ),
+    InlineFragmentNode(
+      typeCondition: TypeConditionNode(
+          on: NamedTypeNode(
         name: NameNode(value: 'CardSection'),
         isNonNull: false,
       )),
@@ -20928,137 +20995,9 @@ const fragmentDefinitionSection = FragmentDefinitionNode(
               arguments: [],
               directives: [],
               selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                  name: NameNode(value: 'title'),
-                  alias: null,
-                  arguments: [],
+                FragmentSpreadNode(
+                  name: NameNode(value: 'CardItem'),
                   directives: [],
-                  selectionSet: null,
-                ),
-                FieldNode(
-                  name: NameNode(value: 'description'),
-                  alias: null,
-                  arguments: [],
-                  directives: [],
-                  selectionSet: null,
-                ),
-                FieldNode(
-                  name: NameNode(value: 'image'),
-                  alias: null,
-                  arguments: [],
-                  directives: [],
-                  selectionSet: null,
-                ),
-                FieldNode(
-                  name: NameNode(value: 'item'),
-                  alias: null,
-                  arguments: [],
-                  directives: [],
-                  selectionSet: SelectionSetNode(selections: [
-                    InlineFragmentNode(
-                      typeCondition: TypeConditionNode(
-                          on: NamedTypeNode(
-                        name: NameNode(value: 'StudyTopic'),
-                        isNonNull: false,
-                      )),
-                      directives: [],
-                      selectionSet: SelectionSetNode(selections: [
-                        FieldNode(
-                          name: NameNode(value: 'id'),
-                          alias: null,
-                          arguments: [],
-                          directives: [],
-                          selectionSet: null,
-                        ),
-                        FieldNode(
-                          name: NameNode(value: 'title'),
-                          alias: null,
-                          arguments: [],
-                          directives: [],
-                          selectionSet: null,
-                        ),
-                        FieldNode(
-                          name: NameNode(value: 'description'),
-                          alias: null,
-                          arguments: [],
-                          directives: [],
-                          selectionSet: null,
-                        ),
-                        FieldNode(
-                          name: NameNode(value: 'images'),
-                          alias: null,
-                          arguments: [],
-                          directives: [],
-                          selectionSet: SelectionSetNode(selections: [
-                            FieldNode(
-                              name: NameNode(value: 'style'),
-                              alias: null,
-                              arguments: [],
-                              directives: [],
-                              selectionSet: null,
-                            ),
-                            FieldNode(
-                              name: NameNode(value: 'url'),
-                              alias: null,
-                              arguments: [],
-                              directives: [],
-                              selectionSet: null,
-                            ),
-                            FieldNode(
-                              name: NameNode(value: '__typename'),
-                              alias: null,
-                              arguments: [],
-                              directives: [],
-                              selectionSet: null,
-                            ),
-                          ]),
-                        ),
-                        FieldNode(
-                          name: NameNode(value: 'progress'),
-                          alias: NameNode(value: 'lessonsProgress'),
-                          arguments: [],
-                          directives: [],
-                          selectionSet: SelectionSetNode(selections: [
-                            FieldNode(
-                              name: NameNode(value: 'completed'),
-                              alias: null,
-                              arguments: [],
-                              directives: [],
-                              selectionSet: null,
-                            ),
-                            FieldNode(
-                              name: NameNode(value: 'total'),
-                              alias: null,
-                              arguments: [],
-                              directives: [],
-                              selectionSet: null,
-                            ),
-                            FieldNode(
-                              name: NameNode(value: '__typename'),
-                              alias: null,
-                              arguments: [],
-                              directives: [],
-                              selectionSet: null,
-                            ),
-                          ]),
-                        ),
-                        FieldNode(
-                          name: NameNode(value: '__typename'),
-                          alias: null,
-                          arguments: [],
-                          directives: [],
-                          selectionSet: null,
-                        ),
-                      ]),
-                    ),
-                    FieldNode(
-                      name: NameNode(value: '__typename'),
-                      alias: null,
-                      arguments: [],
-                      directives: [],
-                      selectionSet: null,
-                    ),
-                  ]),
                 ),
                 FieldNode(
                   name: NameNode(value: '__typename'),
@@ -21158,6 +21097,7 @@ const documentNodeFragmentSection = DocumentNode(definitions: [
   fragmentDefinitionNavigatableShow,
   fragmentDefinitionGridSection,
   fragmentDefinitionGridSectionItem,
+  fragmentDefinitionCardItem,
 ]);
 
 extension ClientExtension$Fragment$Section on graphql.GraphQLClient {
@@ -33739,7 +33679,7 @@ class _CopyWithStubImpl$Fragment$Section$$CardSection$items<TRes>
 }
 
 class Fragment$Section$$CardSection$items$items
-    implements Fragment$ItemSectionItem {
+    implements Fragment$ItemSectionItem, Fragment$CardItem {
   Fragment$Section$$CardSection$items$items({
     required this.id,
     required this.title,
@@ -33954,7 +33894,7 @@ class _CopyWithStubImpl$Fragment$Section$$CardSection$items$items<TRes>
 }
 
 class Fragment$Section$$CardSection$items$items$item
-    implements Fragment$ItemSectionItem$item {
+    implements Fragment$ItemSectionItem$item, Fragment$CardItem$item {
   Fragment$Section$$CardSection$items$items$item({required this.$__typename});
 
   factory Fragment$Section$$CardSection$items$items$item.fromJson(
@@ -34269,6 +34209,7 @@ class Fragment$Section$$CardSection$items$items$item$$Episode
     implements
         Fragment$ItemSectionItem$item$$Episode,
         Fragment$NavigatableEpisode,
+        Fragment$CardItem$item$$Episode,
         Fragment$Section$$CardSection$items$items$item {
   Fragment$Section$$CardSection$items$items$item$$Episode({
     required this.id,
@@ -34524,7 +34465,9 @@ class _CopyWithStubImpl$Fragment$Section$$CardSection$items$items$item$$Episode<
 }
 
 class Fragment$Section$$CardSection$items$items$item$$Episode$season
-    implements Fragment$ItemSectionItem$item$$Episode$season {
+    implements
+        Fragment$ItemSectionItem$item$$Episode$season,
+        Fragment$CardItem$item$$Episode$season {
   Fragment$Section$$CardSection$items$items$item$$Episode$season({
     required this.$show,
     this.$__typename = 'Season',
@@ -34685,7 +34628,9 @@ class _CopyWithStubImpl$Fragment$Section$$CardSection$items$items$item$$Episode$
 }
 
 class Fragment$Section$$CardSection$items$items$item$$Episode$season$show
-    implements Fragment$ItemSectionItem$item$$Episode$season$show {
+    implements
+        Fragment$ItemSectionItem$item$$Episode$season$show,
+        Fragment$CardItem$item$$Episode$season$show {
   Fragment$Section$$CardSection$items$items$item$$Episode$season$show({
     required this.title,
     this.$__typename = 'Show',
@@ -34833,6 +34778,7 @@ class Fragment$Section$$CardSection$items$items$item$$Show
     implements
         Fragment$ItemSectionItem$item$$Show,
         Fragment$NavigatableShow,
+        Fragment$CardItem$item$$Show,
         Fragment$Section$$CardSection$items$items$item {
   Fragment$Section$$CardSection$items$items$item$$Show({
     required this.id,
@@ -35050,7 +34996,8 @@ class _CopyWithStubImpl$Fragment$Section$$CardSection$items$items$item$$Show<
 class Fragment$Section$$CardSection$items$items$item$$Show$defaultEpisode
     implements
         Fragment$ItemSectionItem$item$$Show$defaultEpisode,
-        Fragment$NavigatableShow$defaultEpisode {
+        Fragment$NavigatableShow$defaultEpisode,
+        Fragment$CardItem$item$$Show$defaultEpisode {
   Fragment$Section$$CardSection$items$items$item$$Show$defaultEpisode({
     required this.id,
     this.$__typename = 'Episode',
@@ -35195,6 +35142,7 @@ class _CopyWithStubImpl$Fragment$Section$$CardSection$items$items$item$$Show$def
 class Fragment$Section$$CardSection$items$items$item$$Season
     implements
         Fragment$ItemSectionItem$item$$Season,
+        Fragment$CardItem$item$$Season,
         Fragment$Section$$CardSection$items$items$item {
   Fragment$Section$$CardSection$items$items$item$$Season(
       {this.$__typename = 'Season'});
@@ -35302,6 +35250,7 @@ class Fragment$Section$$CardSection$items$items$item$$Page
     implements
         Fragment$ItemSectionItem$item$$Page,
         Fragment$NavigatablePage,
+        Fragment$CardItem$item$$Page,
         Fragment$Section$$CardSection$items$items$item {
   Fragment$Section$$CardSection$items$items$item$$Page({
     required this.code,
@@ -35441,6 +35390,7 @@ class Fragment$Section$$CardSection$items$items$item$$Link
     implements
         Fragment$ItemSectionItem$item$$Link,
         Fragment$NavigatableLink,
+        Fragment$CardItem$item$$Link,
         Fragment$Section$$CardSection$items$items$item {
   Fragment$Section$$CardSection$items$items$item$$Link({
     required this.url,
@@ -35577,6 +35527,7 @@ class _CopyWithStubImpl$Fragment$Section$$CardSection$items$items$item$$Link<
 class Fragment$Section$$CardSection$items$items$item$$StudyTopic
     implements
         Fragment$ItemSectionItem$item$$StudyTopic,
+        Fragment$CardItem$item$$StudyTopic,
         Fragment$Section$$CardSection$items$items$item {
   Fragment$Section$$CardSection$items$items$item$$StudyTopic({
     this.$__typename = 'StudyTopic',
@@ -35857,6 +35808,7 @@ class Fragment$Section$$CardSection$items$items$item$$Game
     implements
         Fragment$ItemSectionItem$item$$Game,
         Fragment$NavigatableGame,
+        Fragment$CardItem$item$$Game,
         Fragment$Section$$CardSection$items$items$item {
   Fragment$Section$$CardSection$items$items$item$$Game({
     required this.uuid,
@@ -35996,6 +35948,7 @@ class Fragment$Section$$CardSection$items$items$item$$Playlist
     implements
         Fragment$ItemSectionItem$item$$Playlist,
         Fragment$NavigatablePlaylist,
+        Fragment$CardItem$item$$Playlist,
         Fragment$Section$$CardSection$items$items$item {
   Fragment$Section$$CardSection$items$items$item$$Playlist({
     required this.id,
@@ -36137,6 +36090,7 @@ class Fragment$Section$$CardSection$items$items$item$$Short
     implements
         Fragment$ItemSectionItem$item$$Short,
         Fragment$NavigatableShort,
+        Fragment$CardItem$item$$Short,
         Fragment$Section$$CardSection$items$items$item {
   Fragment$Section$$CardSection$items$items$item$$Short({
     required this.id,
@@ -36274,6 +36228,7 @@ class Fragment$Section$$CardSection$items$items$item$$Person
     implements
         Fragment$ItemSectionItem$item$$Person,
         Fragment$NavigatablePerson,
+        Fragment$CardItem$item$$Person,
         Fragment$Section$$CardSection$items$items$item {
   Fragment$Section$$CardSection$items$items$item$$Person({
     required this.id,
@@ -39792,6 +39747,7 @@ class Fragment$Section$$CardListSection
     this.metadata,
     required this.items,
     this.$__typename = 'CardListSection',
+    required this.cardSize,
     required this.id,
     this.title,
     this.description,
@@ -39802,6 +39758,7 @@ class Fragment$Section$$CardListSection
     final l$metadata = json['metadata'];
     final l$items = json['items'];
     final l$$__typename = json['__typename'];
+    final l$cardSize = json['cardSize'];
     final l$id = json['id'];
     final l$title = json['title'];
     final l$description = json['description'];
@@ -39813,6 +39770,7 @@ class Fragment$Section$$CardListSection
       items: Fragment$Section$$CardListSection$items.fromJson(
           (l$items as Map<String, dynamic>)),
       $__typename: (l$$__typename as String),
+      cardSize: fromJson$Enum$CardSectionSize((l$cardSize as String)),
       id: (l$id as String),
       title: (l$title as String?),
       description: (l$description as String?),
@@ -39824,6 +39782,8 @@ class Fragment$Section$$CardListSection
   final Fragment$Section$$CardListSection$items items;
 
   final String $__typename;
+
+  final Enum$CardSectionSize cardSize;
 
   final String id;
 
@@ -39839,6 +39799,8 @@ class Fragment$Section$$CardListSection
     _resultData['items'] = l$items.toJson();
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
+    final l$cardSize = cardSize;
+    _resultData['cardSize'] = toJson$Enum$CardSectionSize(l$cardSize);
     final l$id = id;
     _resultData['id'] = l$id;
     final l$title = title;
@@ -39853,6 +39815,7 @@ class Fragment$Section$$CardListSection
     final l$metadata = metadata;
     final l$items = items;
     final l$$__typename = $__typename;
+    final l$cardSize = cardSize;
     final l$id = id;
     final l$title = title;
     final l$description = description;
@@ -39860,6 +39823,7 @@ class Fragment$Section$$CardListSection
       l$metadata,
       l$items,
       l$$__typename,
+      l$cardSize,
       l$id,
       l$title,
       l$description,
@@ -39888,6 +39852,11 @@ class Fragment$Section$$CardListSection
     final l$$__typename = $__typename;
     final lOther$$__typename = other.$__typename;
     if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    final l$cardSize = cardSize;
+    final lOther$cardSize = other.cardSize;
+    if (l$cardSize != lOther$cardSize) {
       return false;
     }
     final l$id = id;
@@ -39931,6 +39900,7 @@ abstract class CopyWith$Fragment$Section$$CardListSection<TRes> {
     Fragment$Section$$CardListSection$metadata? metadata,
     Fragment$Section$$CardListSection$items? items,
     String? $__typename,
+    Enum$CardSectionSize? cardSize,
     String? id,
     String? title,
     String? description,
@@ -39956,6 +39926,7 @@ class _CopyWithImpl$Fragment$Section$$CardListSection<TRes>
     Object? metadata = _undefined,
     Object? items = _undefined,
     Object? $__typename = _undefined,
+    Object? cardSize = _undefined,
     Object? id = _undefined,
     Object? title = _undefined,
     Object? description = _undefined,
@@ -39970,6 +39941,9 @@ class _CopyWithImpl$Fragment$Section$$CardListSection<TRes>
         $__typename: $__typename == _undefined || $__typename == null
             ? _instance.$__typename
             : ($__typename as String),
+        cardSize: cardSize == _undefined || cardSize == null
+            ? _instance.cardSize
+            : (cardSize as Enum$CardSectionSize),
         id: id == _undefined || id == null ? _instance.id : (id as String),
         title: title == _undefined ? _instance.title : (title as String?),
         description: description == _undefined
@@ -40003,6 +39977,7 @@ class _CopyWithStubImpl$Fragment$Section$$CardListSection<TRes>
     Fragment$Section$$CardListSection$metadata? metadata,
     Fragment$Section$$CardListSection$items? items,
     String? $__typename,
+    Enum$CardSectionSize? cardSize,
     String? id,
     String? title,
     String? description,
@@ -40449,8 +40424,8 @@ class Fragment$Section$$CardListSection$items
       offset: (l$offset as int),
       first: (l$first as int),
       items: (l$items as List<dynamic>)
-          .map((e) =>
-              Fragment$ItemSectionItem.fromJson((e as Map<String, dynamic>)))
+          .map((e) => Fragment$Section$$CardListSection$items$items.fromJson(
+              (e as Map<String, dynamic>)))
           .toList(),
       $__typename: (l$$__typename as String),
     );
@@ -40460,7 +40435,7 @@ class Fragment$Section$$CardListSection$items
 
   final int first;
 
-  final List<Fragment$ItemSectionItem> items;
+  final List<Fragment$Section$$CardListSection$items$items> items;
 
   final String $__typename;
 
@@ -40553,13 +40528,14 @@ abstract class CopyWith$Fragment$Section$$CardListSection$items<TRes> {
   TRes call({
     int? offset,
     int? first,
-    List<Fragment$ItemSectionItem>? items,
+    List<Fragment$Section$$CardListSection$items$items>? items,
     String? $__typename,
   });
   TRes items(
-      Iterable<Fragment$ItemSectionItem> Function(
+      Iterable<Fragment$Section$$CardListSection$items$items> Function(
               Iterable<
-                  CopyWith$Fragment$ItemSectionItem<Fragment$ItemSectionItem>>)
+                  CopyWith$Fragment$Section$$CardListSection$items$items<
+                      Fragment$Section$$CardListSection$items$items>>)
           _fn);
 }
 
@@ -40591,21 +40567,21 @@ class _CopyWithImpl$Fragment$Section$$CardListSection$items<TRes>
             : (first as int),
         items: items == _undefined || items == null
             ? _instance.items
-            : (items as List<Fragment$ItemSectionItem>),
+            : (items as List<Fragment$Section$$CardListSection$items$items>),
         $__typename: $__typename == _undefined || $__typename == null
             ? _instance.$__typename
             : ($__typename as String),
       ));
 
   TRes items(
-          Iterable<Fragment$ItemSectionItem> Function(
+          Iterable<Fragment$Section$$CardListSection$items$items> Function(
                   Iterable<
-                      CopyWith$Fragment$ItemSectionItem<
-                          Fragment$ItemSectionItem>>)
+                      CopyWith$Fragment$Section$$CardListSection$items$items<
+                          Fragment$Section$$CardListSection$items$items>>)
               _fn) =>
       call(
-          items:
-              _fn(_instance.items.map((e) => CopyWith$Fragment$ItemSectionItem(
+          items: _fn(_instance.items.map(
+              (e) => CopyWith$Fragment$Section$$CardListSection$items$items(
                     e,
                     (i) => i,
                   ))).toList());
@@ -40620,12 +40596,2758 @@ class _CopyWithStubImpl$Fragment$Section$$CardListSection$items<TRes>
   call({
     int? offset,
     int? first,
-    List<Fragment$ItemSectionItem>? items,
+    List<Fragment$Section$$CardListSection$items$items>? items,
     String? $__typename,
   }) =>
       _res;
 
   items(_fn) => _res;
+}
+
+class Fragment$Section$$CardListSection$items$items
+    implements Fragment$ItemSectionItem, Fragment$CardItem {
+  Fragment$Section$$CardListSection$items$items({
+    required this.id,
+    required this.title,
+    this.image,
+    required this.item,
+    this.$__typename = 'SectionItem',
+    required this.description,
+  });
+
+  factory Fragment$Section$$CardListSection$items$items.fromJson(
+      Map<String, dynamic> json) {
+    final l$id = json['id'];
+    final l$title = json['title'];
+    final l$image = json['image'];
+    final l$item = json['item'];
+    final l$$__typename = json['__typename'];
+    final l$description = json['description'];
+    return Fragment$Section$$CardListSection$items$items(
+      id: (l$id as String),
+      title: (l$title as String),
+      image: (l$image as String?),
+      item: Fragment$Section$$CardListSection$items$items$item.fromJson(
+          (l$item as Map<String, dynamic>)),
+      $__typename: (l$$__typename as String),
+      description: (l$description as String),
+    );
+  }
+
+  final String id;
+
+  final String title;
+
+  final String? image;
+
+  final Fragment$Section$$CardListSection$items$items$item item;
+
+  final String $__typename;
+
+  final String description;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$id = id;
+    _resultData['id'] = l$id;
+    final l$title = title;
+    _resultData['title'] = l$title;
+    final l$image = image;
+    _resultData['image'] = l$image;
+    final l$item = item;
+    _resultData['item'] = l$item.toJson();
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    final l$description = description;
+    _resultData['description'] = l$description;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$id = id;
+    final l$title = title;
+    final l$image = image;
+    final l$item = item;
+    final l$$__typename = $__typename;
+    final l$description = description;
+    return Object.hashAll([
+      l$id,
+      l$title,
+      l$image,
+      l$item,
+      l$$__typename,
+      l$description,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Fragment$Section$$CardListSection$items$items) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$id = id;
+    final lOther$id = other.id;
+    if (l$id != lOther$id) {
+      return false;
+    }
+    final l$title = title;
+    final lOther$title = other.title;
+    if (l$title != lOther$title) {
+      return false;
+    }
+    final l$image = image;
+    final lOther$image = other.image;
+    if (l$image != lOther$image) {
+      return false;
+    }
+    final l$item = item;
+    final lOther$item = other.item;
+    if (l$item != lOther$item) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    final l$description = description;
+    final lOther$description = other.description;
+    if (l$description != lOther$description) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$Section$$CardListSection$items$items
+    on Fragment$Section$$CardListSection$items$items {
+  CopyWith$Fragment$Section$$CardListSection$items$items<
+          Fragment$Section$$CardListSection$items$items>
+      get copyWith => CopyWith$Fragment$Section$$CardListSection$items$items(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$Section$$CardListSection$items$items<TRes> {
+  factory CopyWith$Fragment$Section$$CardListSection$items$items(
+    Fragment$Section$$CardListSection$items$items instance,
+    TRes Function(Fragment$Section$$CardListSection$items$items) then,
+  ) = _CopyWithImpl$Fragment$Section$$CardListSection$items$items;
+
+  factory CopyWith$Fragment$Section$$CardListSection$items$items.stub(
+          TRes res) =
+      _CopyWithStubImpl$Fragment$Section$$CardListSection$items$items;
+
+  TRes call({
+    String? id,
+    String? title,
+    String? image,
+    Fragment$Section$$CardListSection$items$items$item? item,
+    String? $__typename,
+    String? description,
+  });
+  CopyWith$Fragment$Section$$CardListSection$items$items$item<TRes> get item;
+}
+
+class _CopyWithImpl$Fragment$Section$$CardListSection$items$items<TRes>
+    implements CopyWith$Fragment$Section$$CardListSection$items$items<TRes> {
+  _CopyWithImpl$Fragment$Section$$CardListSection$items$items(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$Section$$CardListSection$items$items _instance;
+
+  final TRes Function(Fragment$Section$$CardListSection$items$items) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? id = _undefined,
+    Object? title = _undefined,
+    Object? image = _undefined,
+    Object? item = _undefined,
+    Object? $__typename = _undefined,
+    Object? description = _undefined,
+  }) =>
+      _then(Fragment$Section$$CardListSection$items$items(
+        id: id == _undefined || id == null ? _instance.id : (id as String),
+        title: title == _undefined || title == null
+            ? _instance.title
+            : (title as String),
+        image: image == _undefined ? _instance.image : (image as String?),
+        item: item == _undefined || item == null
+            ? _instance.item
+            : (item as Fragment$Section$$CardListSection$items$items$item),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+        description: description == _undefined || description == null
+            ? _instance.description
+            : (description as String),
+      ));
+
+  CopyWith$Fragment$Section$$CardListSection$items$items$item<TRes> get item {
+    final local$item = _instance.item;
+    return CopyWith$Fragment$Section$$CardListSection$items$items$item(
+        local$item, (e) => call(item: e));
+  }
+}
+
+class _CopyWithStubImpl$Fragment$Section$$CardListSection$items$items<TRes>
+    implements CopyWith$Fragment$Section$$CardListSection$items$items<TRes> {
+  _CopyWithStubImpl$Fragment$Section$$CardListSection$items$items(this._res);
+
+  TRes _res;
+
+  call({
+    String? id,
+    String? title,
+    String? image,
+    Fragment$Section$$CardListSection$items$items$item? item,
+    String? $__typename,
+    String? description,
+  }) =>
+      _res;
+
+  CopyWith$Fragment$Section$$CardListSection$items$items$item<TRes> get item =>
+      CopyWith$Fragment$Section$$CardListSection$items$items$item.stub(_res);
+}
+
+class Fragment$Section$$CardListSection$items$items$item
+    implements Fragment$ItemSectionItem$item, Fragment$CardItem$item {
+  Fragment$Section$$CardListSection$items$items$item(
+      {required this.$__typename});
+
+  factory Fragment$Section$$CardListSection$items$items$item.fromJson(
+      Map<String, dynamic> json) {
+    switch (json["__typename"] as String) {
+      case "Episode":
+        return Fragment$Section$$CardListSection$items$items$item$$Episode
+            .fromJson(json);
+
+      case "Show":
+        return Fragment$Section$$CardListSection$items$items$item$$Show
+            .fromJson(json);
+
+      case "Season":
+        return Fragment$Section$$CardListSection$items$items$item$$Season
+            .fromJson(json);
+
+      case "Page":
+        return Fragment$Section$$CardListSection$items$items$item$$Page
+            .fromJson(json);
+
+      case "Link":
+        return Fragment$Section$$CardListSection$items$items$item$$Link
+            .fromJson(json);
+
+      case "StudyTopic":
+        return Fragment$Section$$CardListSection$items$items$item$$StudyTopic
+            .fromJson(json);
+
+      case "Game":
+        return Fragment$Section$$CardListSection$items$items$item$$Game
+            .fromJson(json);
+
+      case "Playlist":
+        return Fragment$Section$$CardListSection$items$items$item$$Playlist
+            .fromJson(json);
+
+      case "Short":
+        return Fragment$Section$$CardListSection$items$items$item$$Short
+            .fromJson(json);
+
+      case "Person":
+        return Fragment$Section$$CardListSection$items$items$item$$Person
+            .fromJson(json);
+
+      default:
+        final l$$__typename = json['__typename'];
+        return Fragment$Section$$CardListSection$items$items$item(
+            $__typename: (l$$__typename as String));
+    }
+  }
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$$__typename = $__typename;
+    return Object.hashAll([l$$__typename]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Fragment$Section$$CardListSection$items$items$item) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$Section$$CardListSection$items$items$item
+    on Fragment$Section$$CardListSection$items$items$item {
+  CopyWith$Fragment$Section$$CardListSection$items$items$item<
+          Fragment$Section$$CardListSection$items$items$item>
+      get copyWith =>
+          CopyWith$Fragment$Section$$CardListSection$items$items$item(
+            this,
+            (i) => i,
+          );
+  _T when<_T>({
+    required _T Function(
+            Fragment$Section$$CardListSection$items$items$item$$Episode)
+        episode,
+    required _T Function(
+            Fragment$Section$$CardListSection$items$items$item$$Show)
+        show,
+    required _T Function(
+            Fragment$Section$$CardListSection$items$items$item$$Season)
+        season,
+    required _T Function(
+            Fragment$Section$$CardListSection$items$items$item$$Page)
+        page,
+    required _T Function(
+            Fragment$Section$$CardListSection$items$items$item$$Link)
+        link,
+    required _T Function(
+            Fragment$Section$$CardListSection$items$items$item$$StudyTopic)
+        studyTopic,
+    required _T Function(
+            Fragment$Section$$CardListSection$items$items$item$$Game)
+        game,
+    required _T Function(
+            Fragment$Section$$CardListSection$items$items$item$$Playlist)
+        playlist,
+    required _T Function(
+            Fragment$Section$$CardListSection$items$items$item$$Short)
+        short,
+    required _T Function(
+            Fragment$Section$$CardListSection$items$items$item$$Person)
+        person,
+    required _T Function() orElse,
+  }) {
+    switch ($__typename) {
+      case "Episode":
+        return episode(this
+            as Fragment$Section$$CardListSection$items$items$item$$Episode);
+
+      case "Show":
+        return show(
+            this as Fragment$Section$$CardListSection$items$items$item$$Show);
+
+      case "Season":
+        return season(
+            this as Fragment$Section$$CardListSection$items$items$item$$Season);
+
+      case "Page":
+        return page(
+            this as Fragment$Section$$CardListSection$items$items$item$$Page);
+
+      case "Link":
+        return link(
+            this as Fragment$Section$$CardListSection$items$items$item$$Link);
+
+      case "StudyTopic":
+        return studyTopic(this
+            as Fragment$Section$$CardListSection$items$items$item$$StudyTopic);
+
+      case "Game":
+        return game(
+            this as Fragment$Section$$CardListSection$items$items$item$$Game);
+
+      case "Playlist":
+        return playlist(this
+            as Fragment$Section$$CardListSection$items$items$item$$Playlist);
+
+      case "Short":
+        return short(
+            this as Fragment$Section$$CardListSection$items$items$item$$Short);
+
+      case "Person":
+        return person(
+            this as Fragment$Section$$CardListSection$items$items$item$$Person);
+
+      default:
+        return orElse();
+    }
+  }
+
+  _T maybeWhen<_T>({
+    _T Function(Fragment$Section$$CardListSection$items$items$item$$Episode)?
+        episode,
+    _T Function(Fragment$Section$$CardListSection$items$items$item$$Show)? show,
+    _T Function(Fragment$Section$$CardListSection$items$items$item$$Season)?
+        season,
+    _T Function(Fragment$Section$$CardListSection$items$items$item$$Page)? page,
+    _T Function(Fragment$Section$$CardListSection$items$items$item$$Link)? link,
+    _T Function(Fragment$Section$$CardListSection$items$items$item$$StudyTopic)?
+        studyTopic,
+    _T Function(Fragment$Section$$CardListSection$items$items$item$$Game)? game,
+    _T Function(Fragment$Section$$CardListSection$items$items$item$$Playlist)?
+        playlist,
+    _T Function(Fragment$Section$$CardListSection$items$items$item$$Short)?
+        short,
+    _T Function(Fragment$Section$$CardListSection$items$items$item$$Person)?
+        person,
+    required _T Function() orElse,
+  }) {
+    switch ($__typename) {
+      case "Episode":
+        if (episode != null) {
+          return episode(this
+              as Fragment$Section$$CardListSection$items$items$item$$Episode);
+        } else {
+          return orElse();
+        }
+
+      case "Show":
+        if (show != null) {
+          return show(
+              this as Fragment$Section$$CardListSection$items$items$item$$Show);
+        } else {
+          return orElse();
+        }
+
+      case "Season":
+        if (season != null) {
+          return season(this
+              as Fragment$Section$$CardListSection$items$items$item$$Season);
+        } else {
+          return orElse();
+        }
+
+      case "Page":
+        if (page != null) {
+          return page(
+              this as Fragment$Section$$CardListSection$items$items$item$$Page);
+        } else {
+          return orElse();
+        }
+
+      case "Link":
+        if (link != null) {
+          return link(
+              this as Fragment$Section$$CardListSection$items$items$item$$Link);
+        } else {
+          return orElse();
+        }
+
+      case "StudyTopic":
+        if (studyTopic != null) {
+          return studyTopic(this
+              as Fragment$Section$$CardListSection$items$items$item$$StudyTopic);
+        } else {
+          return orElse();
+        }
+
+      case "Game":
+        if (game != null) {
+          return game(
+              this as Fragment$Section$$CardListSection$items$items$item$$Game);
+        } else {
+          return orElse();
+        }
+
+      case "Playlist":
+        if (playlist != null) {
+          return playlist(this
+              as Fragment$Section$$CardListSection$items$items$item$$Playlist);
+        } else {
+          return orElse();
+        }
+
+      case "Short":
+        if (short != null) {
+          return short(this
+              as Fragment$Section$$CardListSection$items$items$item$$Short);
+        } else {
+          return orElse();
+        }
+
+      case "Person":
+        if (person != null) {
+          return person(this
+              as Fragment$Section$$CardListSection$items$items$item$$Person);
+        } else {
+          return orElse();
+        }
+
+      default:
+        return orElse();
+    }
+  }
+}
+
+abstract class CopyWith$Fragment$Section$$CardListSection$items$items$item<
+    TRes> {
+  factory CopyWith$Fragment$Section$$CardListSection$items$items$item(
+    Fragment$Section$$CardListSection$items$items$item instance,
+    TRes Function(Fragment$Section$$CardListSection$items$items$item) then,
+  ) = _CopyWithImpl$Fragment$Section$$CardListSection$items$items$item;
+
+  factory CopyWith$Fragment$Section$$CardListSection$items$items$item.stub(
+          TRes res) =
+      _CopyWithStubImpl$Fragment$Section$$CardListSection$items$items$item;
+
+  TRes call({String? $__typename});
+}
+
+class _CopyWithImpl$Fragment$Section$$CardListSection$items$items$item<TRes>
+    implements
+        CopyWith$Fragment$Section$$CardListSection$items$items$item<TRes> {
+  _CopyWithImpl$Fragment$Section$$CardListSection$items$items$item(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$Section$$CardListSection$items$items$item _instance;
+
+  final TRes Function(Fragment$Section$$CardListSection$items$items$item) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({Object? $__typename = _undefined}) =>
+      _then(Fragment$Section$$CardListSection$items$items$item(
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String)));
+}
+
+class _CopyWithStubImpl$Fragment$Section$$CardListSection$items$items$item<TRes>
+    implements
+        CopyWith$Fragment$Section$$CardListSection$items$items$item<TRes> {
+  _CopyWithStubImpl$Fragment$Section$$CardListSection$items$items$item(
+      this._res);
+
+  TRes _res;
+
+  call({String? $__typename}) => _res;
+}
+
+class Fragment$Section$$CardListSection$items$items$item$$Episode
+    implements
+        Fragment$ItemSectionItem$item$$Episode,
+        Fragment$NavigatableEpisode,
+        Fragment$CardItem$item$$Episode,
+        Fragment$Section$$CardListSection$items$items$item {
+  Fragment$Section$$CardListSection$items$items$item$$Episode({
+    required this.id,
+    required this.duration,
+    required this.locked,
+    this.progress,
+    required this.publishDate,
+    this.season,
+    this.$__typename = 'Episode',
+  });
+
+  factory Fragment$Section$$CardListSection$items$items$item$$Episode.fromJson(
+      Map<String, dynamic> json) {
+    final l$id = json['id'];
+    final l$duration = json['duration'];
+    final l$locked = json['locked'];
+    final l$progress = json['progress'];
+    final l$publishDate = json['publishDate'];
+    final l$season = json['season'];
+    final l$$__typename = json['__typename'];
+    return Fragment$Section$$CardListSection$items$items$item$$Episode(
+      id: (l$id as String),
+      duration: (l$duration as int),
+      locked: (l$locked as bool),
+      progress: (l$progress as int?),
+      publishDate: (l$publishDate as String),
+      season: l$season == null
+          ? null
+          : Fragment$Section$$CardListSection$items$items$item$$Episode$season
+              .fromJson((l$season as Map<String, dynamic>)),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String id;
+
+  final int duration;
+
+  final bool locked;
+
+  final int? progress;
+
+  final String publishDate;
+
+  final Fragment$Section$$CardListSection$items$items$item$$Episode$season?
+      season;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$id = id;
+    _resultData['id'] = l$id;
+    final l$duration = duration;
+    _resultData['duration'] = l$duration;
+    final l$locked = locked;
+    _resultData['locked'] = l$locked;
+    final l$progress = progress;
+    _resultData['progress'] = l$progress;
+    final l$publishDate = publishDate;
+    _resultData['publishDate'] = l$publishDate;
+    final l$season = season;
+    _resultData['season'] = l$season?.toJson();
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$id = id;
+    final l$duration = duration;
+    final l$locked = locked;
+    final l$progress = progress;
+    final l$publishDate = publishDate;
+    final l$season = season;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$id,
+      l$duration,
+      l$locked,
+      l$progress,
+      l$publishDate,
+      l$season,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Fragment$Section$$CardListSection$items$items$item$$Episode) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$id = id;
+    final lOther$id = other.id;
+    if (l$id != lOther$id) {
+      return false;
+    }
+    final l$duration = duration;
+    final lOther$duration = other.duration;
+    if (l$duration != lOther$duration) {
+      return false;
+    }
+    final l$locked = locked;
+    final lOther$locked = other.locked;
+    if (l$locked != lOther$locked) {
+      return false;
+    }
+    final l$progress = progress;
+    final lOther$progress = other.progress;
+    if (l$progress != lOther$progress) {
+      return false;
+    }
+    final l$publishDate = publishDate;
+    final lOther$publishDate = other.publishDate;
+    if (l$publishDate != lOther$publishDate) {
+      return false;
+    }
+    final l$season = season;
+    final lOther$season = other.season;
+    if (l$season != lOther$season) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$Section$$CardListSection$items$items$item$$Episode
+    on Fragment$Section$$CardListSection$items$items$item$$Episode {
+  CopyWith$Fragment$Section$$CardListSection$items$items$item$$Episode<
+          Fragment$Section$$CardListSection$items$items$item$$Episode>
+      get copyWith =>
+          CopyWith$Fragment$Section$$CardListSection$items$items$item$$Episode(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$Section$$CardListSection$items$items$item$$Episode<
+    TRes> {
+  factory CopyWith$Fragment$Section$$CardListSection$items$items$item$$Episode(
+    Fragment$Section$$CardListSection$items$items$item$$Episode instance,
+    TRes Function(Fragment$Section$$CardListSection$items$items$item$$Episode)
+        then,
+  ) = _CopyWithImpl$Fragment$Section$$CardListSection$items$items$item$$Episode;
+
+  factory CopyWith$Fragment$Section$$CardListSection$items$items$item$$Episode.stub(
+          TRes res) =
+      _CopyWithStubImpl$Fragment$Section$$CardListSection$items$items$item$$Episode;
+
+  TRes call({
+    String? id,
+    int? duration,
+    bool? locked,
+    int? progress,
+    String? publishDate,
+    Fragment$Section$$CardListSection$items$items$item$$Episode$season? season,
+    String? $__typename,
+  });
+  CopyWith$Fragment$Section$$CardListSection$items$items$item$$Episode$season<
+      TRes> get season;
+}
+
+class _CopyWithImpl$Fragment$Section$$CardListSection$items$items$item$$Episode<
+        TRes>
+    implements
+        CopyWith$Fragment$Section$$CardListSection$items$items$item$$Episode<
+            TRes> {
+  _CopyWithImpl$Fragment$Section$$CardListSection$items$items$item$$Episode(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$Section$$CardListSection$items$items$item$$Episode _instance;
+
+  final TRes Function(
+      Fragment$Section$$CardListSection$items$items$item$$Episode) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? id = _undefined,
+    Object? duration = _undefined,
+    Object? locked = _undefined,
+    Object? progress = _undefined,
+    Object? publishDate = _undefined,
+    Object? season = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Fragment$Section$$CardListSection$items$items$item$$Episode(
+        id: id == _undefined || id == null ? _instance.id : (id as String),
+        duration: duration == _undefined || duration == null
+            ? _instance.duration
+            : (duration as int),
+        locked: locked == _undefined || locked == null
+            ? _instance.locked
+            : (locked as bool),
+        progress:
+            progress == _undefined ? _instance.progress : (progress as int?),
+        publishDate: publishDate == _undefined || publishDate == null
+            ? _instance.publishDate
+            : (publishDate as String),
+        season: season == _undefined
+            ? _instance.season
+            : (season
+                as Fragment$Section$$CardListSection$items$items$item$$Episode$season?),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+
+  CopyWith$Fragment$Section$$CardListSection$items$items$item$$Episode$season<
+      TRes> get season {
+    final local$season = _instance.season;
+    return local$season == null
+        ? CopyWith$Fragment$Section$$CardListSection$items$items$item$$Episode$season
+            .stub(_then(_instance))
+        : CopyWith$Fragment$Section$$CardListSection$items$items$item$$Episode$season(
+            local$season, (e) => call(season: e));
+  }
+}
+
+class _CopyWithStubImpl$Fragment$Section$$CardListSection$items$items$item$$Episode<
+        TRes>
+    implements
+        CopyWith$Fragment$Section$$CardListSection$items$items$item$$Episode<
+            TRes> {
+  _CopyWithStubImpl$Fragment$Section$$CardListSection$items$items$item$$Episode(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? id,
+    int? duration,
+    bool? locked,
+    int? progress,
+    String? publishDate,
+    Fragment$Section$$CardListSection$items$items$item$$Episode$season? season,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Fragment$Section$$CardListSection$items$items$item$$Episode$season<
+          TRes>
+      get season =>
+          CopyWith$Fragment$Section$$CardListSection$items$items$item$$Episode$season
+              .stub(_res);
+}
+
+class Fragment$Section$$CardListSection$items$items$item$$Episode$season
+    implements
+        Fragment$ItemSectionItem$item$$Episode$season,
+        Fragment$CardItem$item$$Episode$season {
+  Fragment$Section$$CardListSection$items$items$item$$Episode$season({
+    required this.$show,
+    this.$__typename = 'Season',
+  });
+
+  factory Fragment$Section$$CardListSection$items$items$item$$Episode$season.fromJson(
+      Map<String, dynamic> json) {
+    final l$$show = json['show'];
+    final l$$__typename = json['__typename'];
+    return Fragment$Section$$CardListSection$items$items$item$$Episode$season(
+      $show:
+          Fragment$Section$$CardListSection$items$items$item$$Episode$season$show
+              .fromJson((l$$show as Map<String, dynamic>)),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final Fragment$Section$$CardListSection$items$items$item$$Episode$season$show
+      $show;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$$show = $show;
+    _resultData['show'] = l$$show.toJson();
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$$show = $show;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$$show,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Fragment$Section$$CardListSection$items$items$item$$Episode$season) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$$show = $show;
+    final lOther$$show = other.$show;
+    if (l$$show != lOther$$show) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$Section$$CardListSection$items$items$item$$Episode$season
+    on Fragment$Section$$CardListSection$items$items$item$$Episode$season {
+  CopyWith$Fragment$Section$$CardListSection$items$items$item$$Episode$season<
+          Fragment$Section$$CardListSection$items$items$item$$Episode$season>
+      get copyWith =>
+          CopyWith$Fragment$Section$$CardListSection$items$items$item$$Episode$season(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$Section$$CardListSection$items$items$item$$Episode$season<
+    TRes> {
+  factory CopyWith$Fragment$Section$$CardListSection$items$items$item$$Episode$season(
+    Fragment$Section$$CardListSection$items$items$item$$Episode$season instance,
+    TRes Function(
+            Fragment$Section$$CardListSection$items$items$item$$Episode$season)
+        then,
+  ) = _CopyWithImpl$Fragment$Section$$CardListSection$items$items$item$$Episode$season;
+
+  factory CopyWith$Fragment$Section$$CardListSection$items$items$item$$Episode$season.stub(
+          TRes res) =
+      _CopyWithStubImpl$Fragment$Section$$CardListSection$items$items$item$$Episode$season;
+
+  TRes call({
+    Fragment$Section$$CardListSection$items$items$item$$Episode$season$show?
+        $show,
+    String? $__typename,
+  });
+  CopyWith$Fragment$Section$$CardListSection$items$items$item$$Episode$season$show<
+      TRes> get $show;
+}
+
+class _CopyWithImpl$Fragment$Section$$CardListSection$items$items$item$$Episode$season<
+        TRes>
+    implements
+        CopyWith$Fragment$Section$$CardListSection$items$items$item$$Episode$season<
+            TRes> {
+  _CopyWithImpl$Fragment$Section$$CardListSection$items$items$item$$Episode$season(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$Section$$CardListSection$items$items$item$$Episode$season
+      _instance;
+
+  final TRes Function(
+      Fragment$Section$$CardListSection$items$items$item$$Episode$season) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? $show = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Fragment$Section$$CardListSection$items$items$item$$Episode$season(
+        $show: $show == _undefined || $show == null
+            ? _instance.$show
+            : ($show
+                as Fragment$Section$$CardListSection$items$items$item$$Episode$season$show),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+
+  CopyWith$Fragment$Section$$CardListSection$items$items$item$$Episode$season$show<
+      TRes> get $show {
+    final local$$show = _instance.$show;
+    return CopyWith$Fragment$Section$$CardListSection$items$items$item$$Episode$season$show(
+        local$$show, (e) => call($show: e));
+  }
+}
+
+class _CopyWithStubImpl$Fragment$Section$$CardListSection$items$items$item$$Episode$season<
+        TRes>
+    implements
+        CopyWith$Fragment$Section$$CardListSection$items$items$item$$Episode$season<
+            TRes> {
+  _CopyWithStubImpl$Fragment$Section$$CardListSection$items$items$item$$Episode$season(
+      this._res);
+
+  TRes _res;
+
+  call({
+    Fragment$Section$$CardListSection$items$items$item$$Episode$season$show?
+        $show,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Fragment$Section$$CardListSection$items$items$item$$Episode$season$show<
+          TRes>
+      get $show =>
+          CopyWith$Fragment$Section$$CardListSection$items$items$item$$Episode$season$show
+              .stub(_res);
+}
+
+class Fragment$Section$$CardListSection$items$items$item$$Episode$season$show
+    implements
+        Fragment$ItemSectionItem$item$$Episode$season$show,
+        Fragment$CardItem$item$$Episode$season$show {
+  Fragment$Section$$CardListSection$items$items$item$$Episode$season$show({
+    required this.title,
+    this.$__typename = 'Show',
+  });
+
+  factory Fragment$Section$$CardListSection$items$items$item$$Episode$season$show.fromJson(
+      Map<String, dynamic> json) {
+    final l$title = json['title'];
+    final l$$__typename = json['__typename'];
+    return Fragment$Section$$CardListSection$items$items$item$$Episode$season$show(
+      title: (l$title as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String title;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$title = title;
+    _resultData['title'] = l$title;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$title = title;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$title,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Fragment$Section$$CardListSection$items$items$item$$Episode$season$show) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$title = title;
+    final lOther$title = other.title;
+    if (l$title != lOther$title) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$Section$$CardListSection$items$items$item$$Episode$season$show
+    on Fragment$Section$$CardListSection$items$items$item$$Episode$season$show {
+  CopyWith$Fragment$Section$$CardListSection$items$items$item$$Episode$season$show<
+          Fragment$Section$$CardListSection$items$items$item$$Episode$season$show>
+      get copyWith =>
+          CopyWith$Fragment$Section$$CardListSection$items$items$item$$Episode$season$show(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$Section$$CardListSection$items$items$item$$Episode$season$show<
+    TRes> {
+  factory CopyWith$Fragment$Section$$CardListSection$items$items$item$$Episode$season$show(
+    Fragment$Section$$CardListSection$items$items$item$$Episode$season$show
+        instance,
+    TRes Function(
+            Fragment$Section$$CardListSection$items$items$item$$Episode$season$show)
+        then,
+  ) = _CopyWithImpl$Fragment$Section$$CardListSection$items$items$item$$Episode$season$show;
+
+  factory CopyWith$Fragment$Section$$CardListSection$items$items$item$$Episode$season$show.stub(
+          TRes res) =
+      _CopyWithStubImpl$Fragment$Section$$CardListSection$items$items$item$$Episode$season$show;
+
+  TRes call({
+    String? title,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Fragment$Section$$CardListSection$items$items$item$$Episode$season$show<
+        TRes>
+    implements
+        CopyWith$Fragment$Section$$CardListSection$items$items$item$$Episode$season$show<
+            TRes> {
+  _CopyWithImpl$Fragment$Section$$CardListSection$items$items$item$$Episode$season$show(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$Section$$CardListSection$items$items$item$$Episode$season$show
+      _instance;
+
+  final TRes Function(
+          Fragment$Section$$CardListSection$items$items$item$$Episode$season$show)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? title = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(
+          Fragment$Section$$CardListSection$items$items$item$$Episode$season$show(
+        title: title == _undefined || title == null
+            ? _instance.title
+            : (title as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Fragment$Section$$CardListSection$items$items$item$$Episode$season$show<
+        TRes>
+    implements
+        CopyWith$Fragment$Section$$CardListSection$items$items$item$$Episode$season$show<
+            TRes> {
+  _CopyWithStubImpl$Fragment$Section$$CardListSection$items$items$item$$Episode$season$show(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? title,
+    String? $__typename,
+  }) =>
+      _res;
+}
+
+class Fragment$Section$$CardListSection$items$items$item$$Show
+    implements
+        Fragment$ItemSectionItem$item$$Show,
+        Fragment$NavigatableShow,
+        Fragment$CardItem$item$$Show,
+        Fragment$Section$$CardListSection$items$items$item {
+  Fragment$Section$$CardListSection$items$items$item$$Show({
+    required this.id,
+    required this.episodeCount,
+    required this.seasonCount,
+    this.$__typename = 'Show',
+    required this.defaultEpisode,
+  });
+
+  factory Fragment$Section$$CardListSection$items$items$item$$Show.fromJson(
+      Map<String, dynamic> json) {
+    final l$id = json['id'];
+    final l$episodeCount = json['episodeCount'];
+    final l$seasonCount = json['seasonCount'];
+    final l$$__typename = json['__typename'];
+    final l$defaultEpisode = json['defaultEpisode'];
+    return Fragment$Section$$CardListSection$items$items$item$$Show(
+      id: (l$id as String),
+      episodeCount: (l$episodeCount as int),
+      seasonCount: (l$seasonCount as int),
+      $__typename: (l$$__typename as String),
+      defaultEpisode:
+          Fragment$Section$$CardListSection$items$items$item$$Show$defaultEpisode
+              .fromJson((l$defaultEpisode as Map<String, dynamic>)),
+    );
+  }
+
+  final String id;
+
+  final int episodeCount;
+
+  final int seasonCount;
+
+  final String $__typename;
+
+  final Fragment$Section$$CardListSection$items$items$item$$Show$defaultEpisode
+      defaultEpisode;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$id = id;
+    _resultData['id'] = l$id;
+    final l$episodeCount = episodeCount;
+    _resultData['episodeCount'] = l$episodeCount;
+    final l$seasonCount = seasonCount;
+    _resultData['seasonCount'] = l$seasonCount;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    final l$defaultEpisode = defaultEpisode;
+    _resultData['defaultEpisode'] = l$defaultEpisode.toJson();
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$id = id;
+    final l$episodeCount = episodeCount;
+    final l$seasonCount = seasonCount;
+    final l$$__typename = $__typename;
+    final l$defaultEpisode = defaultEpisode;
+    return Object.hashAll([
+      l$id,
+      l$episodeCount,
+      l$seasonCount,
+      l$$__typename,
+      l$defaultEpisode,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Fragment$Section$$CardListSection$items$items$item$$Show) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$id = id;
+    final lOther$id = other.id;
+    if (l$id != lOther$id) {
+      return false;
+    }
+    final l$episodeCount = episodeCount;
+    final lOther$episodeCount = other.episodeCount;
+    if (l$episodeCount != lOther$episodeCount) {
+      return false;
+    }
+    final l$seasonCount = seasonCount;
+    final lOther$seasonCount = other.seasonCount;
+    if (l$seasonCount != lOther$seasonCount) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    final l$defaultEpisode = defaultEpisode;
+    final lOther$defaultEpisode = other.defaultEpisode;
+    if (l$defaultEpisode != lOther$defaultEpisode) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$Section$$CardListSection$items$items$item$$Show
+    on Fragment$Section$$CardListSection$items$items$item$$Show {
+  CopyWith$Fragment$Section$$CardListSection$items$items$item$$Show<
+          Fragment$Section$$CardListSection$items$items$item$$Show>
+      get copyWith =>
+          CopyWith$Fragment$Section$$CardListSection$items$items$item$$Show(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$Section$$CardListSection$items$items$item$$Show<
+    TRes> {
+  factory CopyWith$Fragment$Section$$CardListSection$items$items$item$$Show(
+    Fragment$Section$$CardListSection$items$items$item$$Show instance,
+    TRes Function(Fragment$Section$$CardListSection$items$items$item$$Show)
+        then,
+  ) = _CopyWithImpl$Fragment$Section$$CardListSection$items$items$item$$Show;
+
+  factory CopyWith$Fragment$Section$$CardListSection$items$items$item$$Show.stub(
+          TRes res) =
+      _CopyWithStubImpl$Fragment$Section$$CardListSection$items$items$item$$Show;
+
+  TRes call({
+    String? id,
+    int? episodeCount,
+    int? seasonCount,
+    String? $__typename,
+    Fragment$Section$$CardListSection$items$items$item$$Show$defaultEpisode?
+        defaultEpisode,
+  });
+  CopyWith$Fragment$Section$$CardListSection$items$items$item$$Show$defaultEpisode<
+      TRes> get defaultEpisode;
+}
+
+class _CopyWithImpl$Fragment$Section$$CardListSection$items$items$item$$Show<
+        TRes>
+    implements
+        CopyWith$Fragment$Section$$CardListSection$items$items$item$$Show<
+            TRes> {
+  _CopyWithImpl$Fragment$Section$$CardListSection$items$items$item$$Show(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$Section$$CardListSection$items$items$item$$Show _instance;
+
+  final TRes Function(Fragment$Section$$CardListSection$items$items$item$$Show)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? id = _undefined,
+    Object? episodeCount = _undefined,
+    Object? seasonCount = _undefined,
+    Object? $__typename = _undefined,
+    Object? defaultEpisode = _undefined,
+  }) =>
+      _then(Fragment$Section$$CardListSection$items$items$item$$Show(
+        id: id == _undefined || id == null ? _instance.id : (id as String),
+        episodeCount: episodeCount == _undefined || episodeCount == null
+            ? _instance.episodeCount
+            : (episodeCount as int),
+        seasonCount: seasonCount == _undefined || seasonCount == null
+            ? _instance.seasonCount
+            : (seasonCount as int),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+        defaultEpisode: defaultEpisode == _undefined || defaultEpisode == null
+            ? _instance.defaultEpisode
+            : (defaultEpisode
+                as Fragment$Section$$CardListSection$items$items$item$$Show$defaultEpisode),
+      ));
+
+  CopyWith$Fragment$Section$$CardListSection$items$items$item$$Show$defaultEpisode<
+      TRes> get defaultEpisode {
+    final local$defaultEpisode = _instance.defaultEpisode;
+    return CopyWith$Fragment$Section$$CardListSection$items$items$item$$Show$defaultEpisode(
+        local$defaultEpisode, (e) => call(defaultEpisode: e));
+  }
+}
+
+class _CopyWithStubImpl$Fragment$Section$$CardListSection$items$items$item$$Show<
+        TRes>
+    implements
+        CopyWith$Fragment$Section$$CardListSection$items$items$item$$Show<
+            TRes> {
+  _CopyWithStubImpl$Fragment$Section$$CardListSection$items$items$item$$Show(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? id,
+    int? episodeCount,
+    int? seasonCount,
+    String? $__typename,
+    Fragment$Section$$CardListSection$items$items$item$$Show$defaultEpisode?
+        defaultEpisode,
+  }) =>
+      _res;
+
+  CopyWith$Fragment$Section$$CardListSection$items$items$item$$Show$defaultEpisode<
+          TRes>
+      get defaultEpisode =>
+          CopyWith$Fragment$Section$$CardListSection$items$items$item$$Show$defaultEpisode
+              .stub(_res);
+}
+
+class Fragment$Section$$CardListSection$items$items$item$$Show$defaultEpisode
+    implements
+        Fragment$ItemSectionItem$item$$Show$defaultEpisode,
+        Fragment$NavigatableShow$defaultEpisode,
+        Fragment$CardItem$item$$Show$defaultEpisode {
+  Fragment$Section$$CardListSection$items$items$item$$Show$defaultEpisode({
+    required this.id,
+    this.$__typename = 'Episode',
+  });
+
+  factory Fragment$Section$$CardListSection$items$items$item$$Show$defaultEpisode.fromJson(
+      Map<String, dynamic> json) {
+    final l$id = json['id'];
+    final l$$__typename = json['__typename'];
+    return Fragment$Section$$CardListSection$items$items$item$$Show$defaultEpisode(
+      id: (l$id as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String id;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$id = id;
+    _resultData['id'] = l$id;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$id = id;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$id,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Fragment$Section$$CardListSection$items$items$item$$Show$defaultEpisode) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$id = id;
+    final lOther$id = other.id;
+    if (l$id != lOther$id) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$Section$$CardListSection$items$items$item$$Show$defaultEpisode
+    on Fragment$Section$$CardListSection$items$items$item$$Show$defaultEpisode {
+  CopyWith$Fragment$Section$$CardListSection$items$items$item$$Show$defaultEpisode<
+          Fragment$Section$$CardListSection$items$items$item$$Show$defaultEpisode>
+      get copyWith =>
+          CopyWith$Fragment$Section$$CardListSection$items$items$item$$Show$defaultEpisode(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$Section$$CardListSection$items$items$item$$Show$defaultEpisode<
+    TRes> {
+  factory CopyWith$Fragment$Section$$CardListSection$items$items$item$$Show$defaultEpisode(
+    Fragment$Section$$CardListSection$items$items$item$$Show$defaultEpisode
+        instance,
+    TRes Function(
+            Fragment$Section$$CardListSection$items$items$item$$Show$defaultEpisode)
+        then,
+  ) = _CopyWithImpl$Fragment$Section$$CardListSection$items$items$item$$Show$defaultEpisode;
+
+  factory CopyWith$Fragment$Section$$CardListSection$items$items$item$$Show$defaultEpisode.stub(
+          TRes res) =
+      _CopyWithStubImpl$Fragment$Section$$CardListSection$items$items$item$$Show$defaultEpisode;
+
+  TRes call({
+    String? id,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Fragment$Section$$CardListSection$items$items$item$$Show$defaultEpisode<
+        TRes>
+    implements
+        CopyWith$Fragment$Section$$CardListSection$items$items$item$$Show$defaultEpisode<
+            TRes> {
+  _CopyWithImpl$Fragment$Section$$CardListSection$items$items$item$$Show$defaultEpisode(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$Section$$CardListSection$items$items$item$$Show$defaultEpisode
+      _instance;
+
+  final TRes Function(
+          Fragment$Section$$CardListSection$items$items$item$$Show$defaultEpisode)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? id = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(
+          Fragment$Section$$CardListSection$items$items$item$$Show$defaultEpisode(
+        id: id == _undefined || id == null ? _instance.id : (id as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Fragment$Section$$CardListSection$items$items$item$$Show$defaultEpisode<
+        TRes>
+    implements
+        CopyWith$Fragment$Section$$CardListSection$items$items$item$$Show$defaultEpisode<
+            TRes> {
+  _CopyWithStubImpl$Fragment$Section$$CardListSection$items$items$item$$Show$defaultEpisode(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? id,
+    String? $__typename,
+  }) =>
+      _res;
+}
+
+class Fragment$Section$$CardListSection$items$items$item$$Season
+    implements
+        Fragment$ItemSectionItem$item$$Season,
+        Fragment$CardItem$item$$Season,
+        Fragment$Section$$CardListSection$items$items$item {
+  Fragment$Section$$CardListSection$items$items$item$$Season(
+      {this.$__typename = 'Season'});
+
+  factory Fragment$Section$$CardListSection$items$items$item$$Season.fromJson(
+      Map<String, dynamic> json) {
+    final l$$__typename = json['__typename'];
+    return Fragment$Section$$CardListSection$items$items$item$$Season(
+        $__typename: (l$$__typename as String));
+  }
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$$__typename = $__typename;
+    return Object.hashAll([l$$__typename]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Fragment$Section$$CardListSection$items$items$item$$Season) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$Section$$CardListSection$items$items$item$$Season
+    on Fragment$Section$$CardListSection$items$items$item$$Season {
+  CopyWith$Fragment$Section$$CardListSection$items$items$item$$Season<
+          Fragment$Section$$CardListSection$items$items$item$$Season>
+      get copyWith =>
+          CopyWith$Fragment$Section$$CardListSection$items$items$item$$Season(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$Section$$CardListSection$items$items$item$$Season<
+    TRes> {
+  factory CopyWith$Fragment$Section$$CardListSection$items$items$item$$Season(
+    Fragment$Section$$CardListSection$items$items$item$$Season instance,
+    TRes Function(Fragment$Section$$CardListSection$items$items$item$$Season)
+        then,
+  ) = _CopyWithImpl$Fragment$Section$$CardListSection$items$items$item$$Season;
+
+  factory CopyWith$Fragment$Section$$CardListSection$items$items$item$$Season.stub(
+          TRes res) =
+      _CopyWithStubImpl$Fragment$Section$$CardListSection$items$items$item$$Season;
+
+  TRes call({String? $__typename});
+}
+
+class _CopyWithImpl$Fragment$Section$$CardListSection$items$items$item$$Season<
+        TRes>
+    implements
+        CopyWith$Fragment$Section$$CardListSection$items$items$item$$Season<
+            TRes> {
+  _CopyWithImpl$Fragment$Section$$CardListSection$items$items$item$$Season(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$Section$$CardListSection$items$items$item$$Season _instance;
+
+  final TRes Function(
+      Fragment$Section$$CardListSection$items$items$item$$Season) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({Object? $__typename = _undefined}) =>
+      _then(Fragment$Section$$CardListSection$items$items$item$$Season(
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String)));
+}
+
+class _CopyWithStubImpl$Fragment$Section$$CardListSection$items$items$item$$Season<
+        TRes>
+    implements
+        CopyWith$Fragment$Section$$CardListSection$items$items$item$$Season<
+            TRes> {
+  _CopyWithStubImpl$Fragment$Section$$CardListSection$items$items$item$$Season(
+      this._res);
+
+  TRes _res;
+
+  call({String? $__typename}) => _res;
+}
+
+class Fragment$Section$$CardListSection$items$items$item$$Page
+    implements
+        Fragment$ItemSectionItem$item$$Page,
+        Fragment$NavigatablePage,
+        Fragment$CardItem$item$$Page,
+        Fragment$Section$$CardListSection$items$items$item {
+  Fragment$Section$$CardListSection$items$items$item$$Page({
+    required this.code,
+    this.$__typename = 'Page',
+  });
+
+  factory Fragment$Section$$CardListSection$items$items$item$$Page.fromJson(
+      Map<String, dynamic> json) {
+    final l$code = json['code'];
+    final l$$__typename = json['__typename'];
+    return Fragment$Section$$CardListSection$items$items$item$$Page(
+      code: (l$code as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String code;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$code = code;
+    _resultData['code'] = l$code;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$code = code;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$code,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Fragment$Section$$CardListSection$items$items$item$$Page) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$code = code;
+    final lOther$code = other.code;
+    if (l$code != lOther$code) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$Section$$CardListSection$items$items$item$$Page
+    on Fragment$Section$$CardListSection$items$items$item$$Page {
+  CopyWith$Fragment$Section$$CardListSection$items$items$item$$Page<
+          Fragment$Section$$CardListSection$items$items$item$$Page>
+      get copyWith =>
+          CopyWith$Fragment$Section$$CardListSection$items$items$item$$Page(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$Section$$CardListSection$items$items$item$$Page<
+    TRes> {
+  factory CopyWith$Fragment$Section$$CardListSection$items$items$item$$Page(
+    Fragment$Section$$CardListSection$items$items$item$$Page instance,
+    TRes Function(Fragment$Section$$CardListSection$items$items$item$$Page)
+        then,
+  ) = _CopyWithImpl$Fragment$Section$$CardListSection$items$items$item$$Page;
+
+  factory CopyWith$Fragment$Section$$CardListSection$items$items$item$$Page.stub(
+          TRes res) =
+      _CopyWithStubImpl$Fragment$Section$$CardListSection$items$items$item$$Page;
+
+  TRes call({
+    String? code,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Fragment$Section$$CardListSection$items$items$item$$Page<
+        TRes>
+    implements
+        CopyWith$Fragment$Section$$CardListSection$items$items$item$$Page<
+            TRes> {
+  _CopyWithImpl$Fragment$Section$$CardListSection$items$items$item$$Page(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$Section$$CardListSection$items$items$item$$Page _instance;
+
+  final TRes Function(Fragment$Section$$CardListSection$items$items$item$$Page)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? code = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Fragment$Section$$CardListSection$items$items$item$$Page(
+        code: code == _undefined || code == null
+            ? _instance.code
+            : (code as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Fragment$Section$$CardListSection$items$items$item$$Page<
+        TRes>
+    implements
+        CopyWith$Fragment$Section$$CardListSection$items$items$item$$Page<
+            TRes> {
+  _CopyWithStubImpl$Fragment$Section$$CardListSection$items$items$item$$Page(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? code,
+    String? $__typename,
+  }) =>
+      _res;
+}
+
+class Fragment$Section$$CardListSection$items$items$item$$Link
+    implements
+        Fragment$ItemSectionItem$item$$Link,
+        Fragment$NavigatableLink,
+        Fragment$CardItem$item$$Link,
+        Fragment$Section$$CardListSection$items$items$item {
+  Fragment$Section$$CardListSection$items$items$item$$Link({
+    required this.url,
+    this.$__typename = 'Link',
+  });
+
+  factory Fragment$Section$$CardListSection$items$items$item$$Link.fromJson(
+      Map<String, dynamic> json) {
+    final l$url = json['url'];
+    final l$$__typename = json['__typename'];
+    return Fragment$Section$$CardListSection$items$items$item$$Link(
+      url: (l$url as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String url;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$url = url;
+    _resultData['url'] = l$url;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$url = url;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$url,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Fragment$Section$$CardListSection$items$items$item$$Link) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$url = url;
+    final lOther$url = other.url;
+    if (l$url != lOther$url) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$Section$$CardListSection$items$items$item$$Link
+    on Fragment$Section$$CardListSection$items$items$item$$Link {
+  CopyWith$Fragment$Section$$CardListSection$items$items$item$$Link<
+          Fragment$Section$$CardListSection$items$items$item$$Link>
+      get copyWith =>
+          CopyWith$Fragment$Section$$CardListSection$items$items$item$$Link(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$Section$$CardListSection$items$items$item$$Link<
+    TRes> {
+  factory CopyWith$Fragment$Section$$CardListSection$items$items$item$$Link(
+    Fragment$Section$$CardListSection$items$items$item$$Link instance,
+    TRes Function(Fragment$Section$$CardListSection$items$items$item$$Link)
+        then,
+  ) = _CopyWithImpl$Fragment$Section$$CardListSection$items$items$item$$Link;
+
+  factory CopyWith$Fragment$Section$$CardListSection$items$items$item$$Link.stub(
+          TRes res) =
+      _CopyWithStubImpl$Fragment$Section$$CardListSection$items$items$item$$Link;
+
+  TRes call({
+    String? url,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Fragment$Section$$CardListSection$items$items$item$$Link<
+        TRes>
+    implements
+        CopyWith$Fragment$Section$$CardListSection$items$items$item$$Link<
+            TRes> {
+  _CopyWithImpl$Fragment$Section$$CardListSection$items$items$item$$Link(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$Section$$CardListSection$items$items$item$$Link _instance;
+
+  final TRes Function(Fragment$Section$$CardListSection$items$items$item$$Link)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? url = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Fragment$Section$$CardListSection$items$items$item$$Link(
+        url: url == _undefined || url == null ? _instance.url : (url as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Fragment$Section$$CardListSection$items$items$item$$Link<
+        TRes>
+    implements
+        CopyWith$Fragment$Section$$CardListSection$items$items$item$$Link<
+            TRes> {
+  _CopyWithStubImpl$Fragment$Section$$CardListSection$items$items$item$$Link(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? url,
+    String? $__typename,
+  }) =>
+      _res;
+}
+
+class Fragment$Section$$CardListSection$items$items$item$$StudyTopic
+    implements
+        Fragment$ItemSectionItem$item$$StudyTopic,
+        Fragment$CardItem$item$$StudyTopic,
+        Fragment$Section$$CardListSection$items$items$item {
+  Fragment$Section$$CardListSection$items$items$item$$StudyTopic({
+    this.$__typename = 'StudyTopic',
+    required this.id,
+    required this.title,
+    required this.description,
+    required this.images,
+    required this.lessonsProgress,
+  });
+
+  factory Fragment$Section$$CardListSection$items$items$item$$StudyTopic.fromJson(
+      Map<String, dynamic> json) {
+    final l$$__typename = json['__typename'];
+    final l$id = json['id'];
+    final l$title = json['title'];
+    final l$description = json['description'];
+    final l$images = json['images'];
+    final l$lessonsProgress = json['lessonsProgress'];
+    return Fragment$Section$$CardListSection$items$items$item$$StudyTopic(
+      $__typename: (l$$__typename as String),
+      id: (l$id as String),
+      title: (l$title as String),
+      description: (l$description as String),
+      images: (l$images as List<dynamic>)
+          .map((e) =>
+              Fragment$Section$$CardListSection$items$items$item$$StudyTopic$images
+                  .fromJson((e as Map<String, dynamic>)))
+          .toList(),
+      lessonsProgress:
+          Fragment$Section$$CardListSection$items$items$item$$StudyTopic$lessonsProgress
+              .fromJson((l$lessonsProgress as Map<String, dynamic>)),
+    );
+  }
+
+  final String $__typename;
+
+  final String id;
+
+  final String title;
+
+  final String description;
+
+  final List<
+          Fragment$Section$$CardListSection$items$items$item$$StudyTopic$images>
+      images;
+
+  final Fragment$Section$$CardListSection$items$items$item$$StudyTopic$lessonsProgress
+      lessonsProgress;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    final l$id = id;
+    _resultData['id'] = l$id;
+    final l$title = title;
+    _resultData['title'] = l$title;
+    final l$description = description;
+    _resultData['description'] = l$description;
+    final l$images = images;
+    _resultData['images'] = l$images.map((e) => e.toJson()).toList();
+    final l$lessonsProgress = lessonsProgress;
+    _resultData['lessonsProgress'] = l$lessonsProgress.toJson();
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$$__typename = $__typename;
+    final l$id = id;
+    final l$title = title;
+    final l$description = description;
+    final l$images = images;
+    final l$lessonsProgress = lessonsProgress;
+    return Object.hashAll([
+      l$$__typename,
+      l$id,
+      l$title,
+      l$description,
+      Object.hashAll(l$images.map((v) => v)),
+      l$lessonsProgress,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Fragment$Section$$CardListSection$items$items$item$$StudyTopic) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    final l$id = id;
+    final lOther$id = other.id;
+    if (l$id != lOther$id) {
+      return false;
+    }
+    final l$title = title;
+    final lOther$title = other.title;
+    if (l$title != lOther$title) {
+      return false;
+    }
+    final l$description = description;
+    final lOther$description = other.description;
+    if (l$description != lOther$description) {
+      return false;
+    }
+    final l$images = images;
+    final lOther$images = other.images;
+    if (l$images.length != lOther$images.length) {
+      return false;
+    }
+    for (int i = 0; i < l$images.length; i++) {
+      final l$images$entry = l$images[i];
+      final lOther$images$entry = lOther$images[i];
+      if (l$images$entry != lOther$images$entry) {
+        return false;
+      }
+    }
+    final l$lessonsProgress = lessonsProgress;
+    final lOther$lessonsProgress = other.lessonsProgress;
+    if (l$lessonsProgress != lOther$lessonsProgress) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$Section$$CardListSection$items$items$item$$StudyTopic
+    on Fragment$Section$$CardListSection$items$items$item$$StudyTopic {
+  CopyWith$Fragment$Section$$CardListSection$items$items$item$$StudyTopic<
+          Fragment$Section$$CardListSection$items$items$item$$StudyTopic>
+      get copyWith =>
+          CopyWith$Fragment$Section$$CardListSection$items$items$item$$StudyTopic(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$Section$$CardListSection$items$items$item$$StudyTopic<
+    TRes> {
+  factory CopyWith$Fragment$Section$$CardListSection$items$items$item$$StudyTopic(
+    Fragment$Section$$CardListSection$items$items$item$$StudyTopic instance,
+    TRes Function(
+            Fragment$Section$$CardListSection$items$items$item$$StudyTopic)
+        then,
+  ) = _CopyWithImpl$Fragment$Section$$CardListSection$items$items$item$$StudyTopic;
+
+  factory CopyWith$Fragment$Section$$CardListSection$items$items$item$$StudyTopic.stub(
+          TRes res) =
+      _CopyWithStubImpl$Fragment$Section$$CardListSection$items$items$item$$StudyTopic;
+
+  TRes call({
+    String? $__typename,
+    String? id,
+    String? title,
+    String? description,
+    List<Fragment$Section$$CardListSection$items$items$item$$StudyTopic$images>?
+        images,
+    Fragment$Section$$CardListSection$items$items$item$$StudyTopic$lessonsProgress?
+        lessonsProgress,
+  });
+  TRes images(
+      Iterable<Fragment$Section$$CardListSection$items$items$item$$StudyTopic$images> Function(
+              Iterable<
+                  CopyWith$Fragment$Section$$CardListSection$items$items$item$$StudyTopic$images<
+                      Fragment$Section$$CardListSection$items$items$item$$StudyTopic$images>>)
+          _fn);
+  CopyWith$Fragment$Section$$CardListSection$items$items$item$$StudyTopic$lessonsProgress<
+      TRes> get lessonsProgress;
+}
+
+class _CopyWithImpl$Fragment$Section$$CardListSection$items$items$item$$StudyTopic<
+        TRes>
+    implements
+        CopyWith$Fragment$Section$$CardListSection$items$items$item$$StudyTopic<
+            TRes> {
+  _CopyWithImpl$Fragment$Section$$CardListSection$items$items$item$$StudyTopic(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$Section$$CardListSection$items$items$item$$StudyTopic
+      _instance;
+
+  final TRes Function(
+      Fragment$Section$$CardListSection$items$items$item$$StudyTopic) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? $__typename = _undefined,
+    Object? id = _undefined,
+    Object? title = _undefined,
+    Object? description = _undefined,
+    Object? images = _undefined,
+    Object? lessonsProgress = _undefined,
+  }) =>
+      _then(Fragment$Section$$CardListSection$items$items$item$$StudyTopic(
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+        id: id == _undefined || id == null ? _instance.id : (id as String),
+        title: title == _undefined || title == null
+            ? _instance.title
+            : (title as String),
+        description: description == _undefined || description == null
+            ? _instance.description
+            : (description as String),
+        images: images == _undefined || images == null
+            ? _instance.images
+            : (images as List<
+                Fragment$Section$$CardListSection$items$items$item$$StudyTopic$images>),
+        lessonsProgress: lessonsProgress == _undefined ||
+                lessonsProgress == null
+            ? _instance.lessonsProgress
+            : (lessonsProgress
+                as Fragment$Section$$CardListSection$items$items$item$$StudyTopic$lessonsProgress),
+      ));
+
+  TRes images(
+          Iterable<Fragment$Section$$CardListSection$items$items$item$$StudyTopic$images> Function(
+                  Iterable<
+                      CopyWith$Fragment$Section$$CardListSection$items$items$item$$StudyTopic$images<
+                          Fragment$Section$$CardListSection$items$items$item$$StudyTopic$images>>)
+              _fn) =>
+      call(
+          images: _fn(_instance.images.map((e) =>
+              CopyWith$Fragment$Section$$CardListSection$items$items$item$$StudyTopic$images(
+                e,
+                (i) => i,
+              ))).toList());
+
+  CopyWith$Fragment$Section$$CardListSection$items$items$item$$StudyTopic$lessonsProgress<
+      TRes> get lessonsProgress {
+    final local$lessonsProgress = _instance.lessonsProgress;
+    return CopyWith$Fragment$Section$$CardListSection$items$items$item$$StudyTopic$lessonsProgress(
+        local$lessonsProgress, (e) => call(lessonsProgress: e));
+  }
+}
+
+class _CopyWithStubImpl$Fragment$Section$$CardListSection$items$items$item$$StudyTopic<
+        TRes>
+    implements
+        CopyWith$Fragment$Section$$CardListSection$items$items$item$$StudyTopic<
+            TRes> {
+  _CopyWithStubImpl$Fragment$Section$$CardListSection$items$items$item$$StudyTopic(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? $__typename,
+    String? id,
+    String? title,
+    String? description,
+    List<Fragment$Section$$CardListSection$items$items$item$$StudyTopic$images>?
+        images,
+    Fragment$Section$$CardListSection$items$items$item$$StudyTopic$lessonsProgress?
+        lessonsProgress,
+  }) =>
+      _res;
+
+  images(_fn) => _res;
+
+  CopyWith$Fragment$Section$$CardListSection$items$items$item$$StudyTopic$lessonsProgress<
+          TRes>
+      get lessonsProgress =>
+          CopyWith$Fragment$Section$$CardListSection$items$items$item$$StudyTopic$lessonsProgress
+              .stub(_res);
+}
+
+class Fragment$Section$$CardListSection$items$items$item$$Game
+    implements
+        Fragment$ItemSectionItem$item$$Game,
+        Fragment$NavigatableGame,
+        Fragment$CardItem$item$$Game,
+        Fragment$Section$$CardListSection$items$items$item {
+  Fragment$Section$$CardListSection$items$items$item$$Game({
+    required this.uuid,
+    this.$__typename = 'Game',
+  });
+
+  factory Fragment$Section$$CardListSection$items$items$item$$Game.fromJson(
+      Map<String, dynamic> json) {
+    final l$uuid = json['uuid'];
+    final l$$__typename = json['__typename'];
+    return Fragment$Section$$CardListSection$items$items$item$$Game(
+      uuid: (l$uuid as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String uuid;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$uuid = uuid;
+    _resultData['uuid'] = l$uuid;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$uuid = uuid;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$uuid,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Fragment$Section$$CardListSection$items$items$item$$Game) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$uuid = uuid;
+    final lOther$uuid = other.uuid;
+    if (l$uuid != lOther$uuid) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$Section$$CardListSection$items$items$item$$Game
+    on Fragment$Section$$CardListSection$items$items$item$$Game {
+  CopyWith$Fragment$Section$$CardListSection$items$items$item$$Game<
+          Fragment$Section$$CardListSection$items$items$item$$Game>
+      get copyWith =>
+          CopyWith$Fragment$Section$$CardListSection$items$items$item$$Game(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$Section$$CardListSection$items$items$item$$Game<
+    TRes> {
+  factory CopyWith$Fragment$Section$$CardListSection$items$items$item$$Game(
+    Fragment$Section$$CardListSection$items$items$item$$Game instance,
+    TRes Function(Fragment$Section$$CardListSection$items$items$item$$Game)
+        then,
+  ) = _CopyWithImpl$Fragment$Section$$CardListSection$items$items$item$$Game;
+
+  factory CopyWith$Fragment$Section$$CardListSection$items$items$item$$Game.stub(
+          TRes res) =
+      _CopyWithStubImpl$Fragment$Section$$CardListSection$items$items$item$$Game;
+
+  TRes call({
+    String? uuid,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Fragment$Section$$CardListSection$items$items$item$$Game<
+        TRes>
+    implements
+        CopyWith$Fragment$Section$$CardListSection$items$items$item$$Game<
+            TRes> {
+  _CopyWithImpl$Fragment$Section$$CardListSection$items$items$item$$Game(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$Section$$CardListSection$items$items$item$$Game _instance;
+
+  final TRes Function(Fragment$Section$$CardListSection$items$items$item$$Game)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? uuid = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Fragment$Section$$CardListSection$items$items$item$$Game(
+        uuid: uuid == _undefined || uuid == null
+            ? _instance.uuid
+            : (uuid as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Fragment$Section$$CardListSection$items$items$item$$Game<
+        TRes>
+    implements
+        CopyWith$Fragment$Section$$CardListSection$items$items$item$$Game<
+            TRes> {
+  _CopyWithStubImpl$Fragment$Section$$CardListSection$items$items$item$$Game(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? uuid,
+    String? $__typename,
+  }) =>
+      _res;
+}
+
+class Fragment$Section$$CardListSection$items$items$item$$Playlist
+    implements
+        Fragment$ItemSectionItem$item$$Playlist,
+        Fragment$NavigatablePlaylist,
+        Fragment$CardItem$item$$Playlist,
+        Fragment$Section$$CardListSection$items$items$item {
+  Fragment$Section$$CardListSection$items$items$item$$Playlist({
+    required this.id,
+    this.$__typename = 'Playlist',
+  });
+
+  factory Fragment$Section$$CardListSection$items$items$item$$Playlist.fromJson(
+      Map<String, dynamic> json) {
+    final l$id = json['id'];
+    final l$$__typename = json['__typename'];
+    return Fragment$Section$$CardListSection$items$items$item$$Playlist(
+      id: (l$id as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String id;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$id = id;
+    _resultData['id'] = l$id;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$id = id;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$id,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Fragment$Section$$CardListSection$items$items$item$$Playlist) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$id = id;
+    final lOther$id = other.id;
+    if (l$id != lOther$id) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$Section$$CardListSection$items$items$item$$Playlist
+    on Fragment$Section$$CardListSection$items$items$item$$Playlist {
+  CopyWith$Fragment$Section$$CardListSection$items$items$item$$Playlist<
+          Fragment$Section$$CardListSection$items$items$item$$Playlist>
+      get copyWith =>
+          CopyWith$Fragment$Section$$CardListSection$items$items$item$$Playlist(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$Section$$CardListSection$items$items$item$$Playlist<
+    TRes> {
+  factory CopyWith$Fragment$Section$$CardListSection$items$items$item$$Playlist(
+    Fragment$Section$$CardListSection$items$items$item$$Playlist instance,
+    TRes Function(Fragment$Section$$CardListSection$items$items$item$$Playlist)
+        then,
+  ) = _CopyWithImpl$Fragment$Section$$CardListSection$items$items$item$$Playlist;
+
+  factory CopyWith$Fragment$Section$$CardListSection$items$items$item$$Playlist.stub(
+          TRes res) =
+      _CopyWithStubImpl$Fragment$Section$$CardListSection$items$items$item$$Playlist;
+
+  TRes call({
+    String? id,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Fragment$Section$$CardListSection$items$items$item$$Playlist<
+        TRes>
+    implements
+        CopyWith$Fragment$Section$$CardListSection$items$items$item$$Playlist<
+            TRes> {
+  _CopyWithImpl$Fragment$Section$$CardListSection$items$items$item$$Playlist(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$Section$$CardListSection$items$items$item$$Playlist _instance;
+
+  final TRes Function(
+      Fragment$Section$$CardListSection$items$items$item$$Playlist) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? id = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Fragment$Section$$CardListSection$items$items$item$$Playlist(
+        id: id == _undefined || id == null ? _instance.id : (id as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Fragment$Section$$CardListSection$items$items$item$$Playlist<
+        TRes>
+    implements
+        CopyWith$Fragment$Section$$CardListSection$items$items$item$$Playlist<
+            TRes> {
+  _CopyWithStubImpl$Fragment$Section$$CardListSection$items$items$item$$Playlist(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? id,
+    String? $__typename,
+  }) =>
+      _res;
+}
+
+class Fragment$Section$$CardListSection$items$items$item$$Short
+    implements
+        Fragment$ItemSectionItem$item$$Short,
+        Fragment$NavigatableShort,
+        Fragment$CardItem$item$$Short,
+        Fragment$Section$$CardListSection$items$items$item {
+  Fragment$Section$$CardListSection$items$items$item$$Short({
+    required this.id,
+    this.$__typename = 'Short',
+  });
+
+  factory Fragment$Section$$CardListSection$items$items$item$$Short.fromJson(
+      Map<String, dynamic> json) {
+    final l$id = json['id'];
+    final l$$__typename = json['__typename'];
+    return Fragment$Section$$CardListSection$items$items$item$$Short(
+      id: (l$id as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String id;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$id = id;
+    _resultData['id'] = l$id;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$id = id;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$id,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Fragment$Section$$CardListSection$items$items$item$$Short) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$id = id;
+    final lOther$id = other.id;
+    if (l$id != lOther$id) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$Section$$CardListSection$items$items$item$$Short
+    on Fragment$Section$$CardListSection$items$items$item$$Short {
+  CopyWith$Fragment$Section$$CardListSection$items$items$item$$Short<
+          Fragment$Section$$CardListSection$items$items$item$$Short>
+      get copyWith =>
+          CopyWith$Fragment$Section$$CardListSection$items$items$item$$Short(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$Section$$CardListSection$items$items$item$$Short<
+    TRes> {
+  factory CopyWith$Fragment$Section$$CardListSection$items$items$item$$Short(
+    Fragment$Section$$CardListSection$items$items$item$$Short instance,
+    TRes Function(Fragment$Section$$CardListSection$items$items$item$$Short)
+        then,
+  ) = _CopyWithImpl$Fragment$Section$$CardListSection$items$items$item$$Short;
+
+  factory CopyWith$Fragment$Section$$CardListSection$items$items$item$$Short.stub(
+          TRes res) =
+      _CopyWithStubImpl$Fragment$Section$$CardListSection$items$items$item$$Short;
+
+  TRes call({
+    String? id,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Fragment$Section$$CardListSection$items$items$item$$Short<
+        TRes>
+    implements
+        CopyWith$Fragment$Section$$CardListSection$items$items$item$$Short<
+            TRes> {
+  _CopyWithImpl$Fragment$Section$$CardListSection$items$items$item$$Short(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$Section$$CardListSection$items$items$item$$Short _instance;
+
+  final TRes Function(Fragment$Section$$CardListSection$items$items$item$$Short)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? id = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Fragment$Section$$CardListSection$items$items$item$$Short(
+        id: id == _undefined || id == null ? _instance.id : (id as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Fragment$Section$$CardListSection$items$items$item$$Short<
+        TRes>
+    implements
+        CopyWith$Fragment$Section$$CardListSection$items$items$item$$Short<
+            TRes> {
+  _CopyWithStubImpl$Fragment$Section$$CardListSection$items$items$item$$Short(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? id,
+    String? $__typename,
+  }) =>
+      _res;
+}
+
+class Fragment$Section$$CardListSection$items$items$item$$Person
+    implements
+        Fragment$ItemSectionItem$item$$Person,
+        Fragment$NavigatablePerson,
+        Fragment$CardItem$item$$Person,
+        Fragment$Section$$CardListSection$items$items$item {
+  Fragment$Section$$CardListSection$items$items$item$$Person({
+    required this.id,
+    this.$__typename = 'Person',
+  });
+
+  factory Fragment$Section$$CardListSection$items$items$item$$Person.fromJson(
+      Map<String, dynamic> json) {
+    final l$id = json['id'];
+    final l$$__typename = json['__typename'];
+    return Fragment$Section$$CardListSection$items$items$item$$Person(
+      id: (l$id as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String id;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$id = id;
+    _resultData['id'] = l$id;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$id = id;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$id,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Fragment$Section$$CardListSection$items$items$item$$Person) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$id = id;
+    final lOther$id = other.id;
+    if (l$id != lOther$id) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$Section$$CardListSection$items$items$item$$Person
+    on Fragment$Section$$CardListSection$items$items$item$$Person {
+  CopyWith$Fragment$Section$$CardListSection$items$items$item$$Person<
+          Fragment$Section$$CardListSection$items$items$item$$Person>
+      get copyWith =>
+          CopyWith$Fragment$Section$$CardListSection$items$items$item$$Person(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$Section$$CardListSection$items$items$item$$Person<
+    TRes> {
+  factory CopyWith$Fragment$Section$$CardListSection$items$items$item$$Person(
+    Fragment$Section$$CardListSection$items$items$item$$Person instance,
+    TRes Function(Fragment$Section$$CardListSection$items$items$item$$Person)
+        then,
+  ) = _CopyWithImpl$Fragment$Section$$CardListSection$items$items$item$$Person;
+
+  factory CopyWith$Fragment$Section$$CardListSection$items$items$item$$Person.stub(
+          TRes res) =
+      _CopyWithStubImpl$Fragment$Section$$CardListSection$items$items$item$$Person;
+
+  TRes call({
+    String? id,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Fragment$Section$$CardListSection$items$items$item$$Person<
+        TRes>
+    implements
+        CopyWith$Fragment$Section$$CardListSection$items$items$item$$Person<
+            TRes> {
+  _CopyWithImpl$Fragment$Section$$CardListSection$items$items$item$$Person(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$Section$$CardListSection$items$items$item$$Person _instance;
+
+  final TRes Function(
+      Fragment$Section$$CardListSection$items$items$item$$Person) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? id = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Fragment$Section$$CardListSection$items$items$item$$Person(
+        id: id == _undefined || id == null ? _instance.id : (id as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Fragment$Section$$CardListSection$items$items$item$$Person<
+        TRes>
+    implements
+        CopyWith$Fragment$Section$$CardListSection$items$items$item$$Person<
+            TRes> {
+  _CopyWithStubImpl$Fragment$Section$$CardListSection$items$items$item$$Person(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? id,
+    String? $__typename,
+  }) =>
+      _res;
 }
 
 class Fragment$Section$$DefaultGridSection
@@ -54375,7 +57097,338 @@ class _CopyWithStubImpl$Fragment$Section$$MessageSection$messages$style<TRes>
       _res;
 }
 
-class Fragment$Section$$CardSection$items$items$item$$StudyTopic$images {
+class Fragment$Section$$CardListSection$items$items$item$$StudyTopic$images
+    implements Fragment$CardItem$item$$StudyTopic$images {
+  Fragment$Section$$CardListSection$items$items$item$$StudyTopic$images({
+    required this.style,
+    required this.url,
+    this.$__typename = 'Image',
+  });
+
+  factory Fragment$Section$$CardListSection$items$items$item$$StudyTopic$images.fromJson(
+      Map<String, dynamic> json) {
+    final l$style = json['style'];
+    final l$url = json['url'];
+    final l$$__typename = json['__typename'];
+    return Fragment$Section$$CardListSection$items$items$item$$StudyTopic$images(
+      style: (l$style as String),
+      url: (l$url as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String style;
+
+  final String url;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$style = style;
+    _resultData['style'] = l$style;
+    final l$url = url;
+    _resultData['url'] = l$url;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$style = style;
+    final l$url = url;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$style,
+      l$url,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Fragment$Section$$CardListSection$items$items$item$$StudyTopic$images) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$style = style;
+    final lOther$style = other.style;
+    if (l$style != lOther$style) {
+      return false;
+    }
+    final l$url = url;
+    final lOther$url = other.url;
+    if (l$url != lOther$url) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$Section$$CardListSection$items$items$item$$StudyTopic$images
+    on Fragment$Section$$CardListSection$items$items$item$$StudyTopic$images {
+  CopyWith$Fragment$Section$$CardListSection$items$items$item$$StudyTopic$images<
+          Fragment$Section$$CardListSection$items$items$item$$StudyTopic$images>
+      get copyWith =>
+          CopyWith$Fragment$Section$$CardListSection$items$items$item$$StudyTopic$images(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$Section$$CardListSection$items$items$item$$StudyTopic$images<
+    TRes> {
+  factory CopyWith$Fragment$Section$$CardListSection$items$items$item$$StudyTopic$images(
+    Fragment$Section$$CardListSection$items$items$item$$StudyTopic$images
+        instance,
+    TRes Function(
+            Fragment$Section$$CardListSection$items$items$item$$StudyTopic$images)
+        then,
+  ) = _CopyWithImpl$Fragment$Section$$CardListSection$items$items$item$$StudyTopic$images;
+
+  factory CopyWith$Fragment$Section$$CardListSection$items$items$item$$StudyTopic$images.stub(
+          TRes res) =
+      _CopyWithStubImpl$Fragment$Section$$CardListSection$items$items$item$$StudyTopic$images;
+
+  TRes call({
+    String? style,
+    String? url,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Fragment$Section$$CardListSection$items$items$item$$StudyTopic$images<
+        TRes>
+    implements
+        CopyWith$Fragment$Section$$CardListSection$items$items$item$$StudyTopic$images<
+            TRes> {
+  _CopyWithImpl$Fragment$Section$$CardListSection$items$items$item$$StudyTopic$images(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$Section$$CardListSection$items$items$item$$StudyTopic$images
+      _instance;
+
+  final TRes Function(
+          Fragment$Section$$CardListSection$items$items$item$$StudyTopic$images)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? style = _undefined,
+    Object? url = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(
+          Fragment$Section$$CardListSection$items$items$item$$StudyTopic$images(
+        style: style == _undefined || style == null
+            ? _instance.style
+            : (style as String),
+        url: url == _undefined || url == null ? _instance.url : (url as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Fragment$Section$$CardListSection$items$items$item$$StudyTopic$images<
+        TRes>
+    implements
+        CopyWith$Fragment$Section$$CardListSection$items$items$item$$StudyTopic$images<
+            TRes> {
+  _CopyWithStubImpl$Fragment$Section$$CardListSection$items$items$item$$StudyTopic$images(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? style,
+    String? url,
+    String? $__typename,
+  }) =>
+      _res;
+}
+
+class Fragment$Section$$CardListSection$items$items$item$$StudyTopic$lessonsProgress
+    implements Fragment$CardItem$item$$StudyTopic$lessonsProgress {
+  Fragment$Section$$CardListSection$items$items$item$$StudyTopic$lessonsProgress({
+    required this.completed,
+    required this.total,
+    this.$__typename = 'LessonsProgress',
+  });
+
+  factory Fragment$Section$$CardListSection$items$items$item$$StudyTopic$lessonsProgress.fromJson(
+      Map<String, dynamic> json) {
+    final l$completed = json['completed'];
+    final l$total = json['total'];
+    final l$$__typename = json['__typename'];
+    return Fragment$Section$$CardListSection$items$items$item$$StudyTopic$lessonsProgress(
+      completed: (l$completed as int),
+      total: (l$total as int),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final int completed;
+
+  final int total;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$completed = completed;
+    _resultData['completed'] = l$completed;
+    final l$total = total;
+    _resultData['total'] = l$total;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$completed = completed;
+    final l$total = total;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$completed,
+      l$total,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other
+            is Fragment$Section$$CardListSection$items$items$item$$StudyTopic$lessonsProgress) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$completed = completed;
+    final lOther$completed = other.completed;
+    if (l$completed != lOther$completed) {
+      return false;
+    }
+    final l$total = total;
+    final lOther$total = other.total;
+    if (l$total != lOther$total) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$Section$$CardListSection$items$items$item$$StudyTopic$lessonsProgress
+    on Fragment$Section$$CardListSection$items$items$item$$StudyTopic$lessonsProgress {
+  CopyWith$Fragment$Section$$CardListSection$items$items$item$$StudyTopic$lessonsProgress<
+          Fragment$Section$$CardListSection$items$items$item$$StudyTopic$lessonsProgress>
+      get copyWith =>
+          CopyWith$Fragment$Section$$CardListSection$items$items$item$$StudyTopic$lessonsProgress(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$Section$$CardListSection$items$items$item$$StudyTopic$lessonsProgress<
+    TRes> {
+  factory CopyWith$Fragment$Section$$CardListSection$items$items$item$$StudyTopic$lessonsProgress(
+    Fragment$Section$$CardListSection$items$items$item$$StudyTopic$lessonsProgress
+        instance,
+    TRes Function(
+            Fragment$Section$$CardListSection$items$items$item$$StudyTopic$lessonsProgress)
+        then,
+  ) = _CopyWithImpl$Fragment$Section$$CardListSection$items$items$item$$StudyTopic$lessonsProgress;
+
+  factory CopyWith$Fragment$Section$$CardListSection$items$items$item$$StudyTopic$lessonsProgress.stub(
+          TRes res) =
+      _CopyWithStubImpl$Fragment$Section$$CardListSection$items$items$item$$StudyTopic$lessonsProgress;
+
+  TRes call({
+    int? completed,
+    int? total,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Fragment$Section$$CardListSection$items$items$item$$StudyTopic$lessonsProgress<
+        TRes>
+    implements
+        CopyWith$Fragment$Section$$CardListSection$items$items$item$$StudyTopic$lessonsProgress<
+            TRes> {
+  _CopyWithImpl$Fragment$Section$$CardListSection$items$items$item$$StudyTopic$lessonsProgress(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$Section$$CardListSection$items$items$item$$StudyTopic$lessonsProgress
+      _instance;
+
+  final TRes Function(
+          Fragment$Section$$CardListSection$items$items$item$$StudyTopic$lessonsProgress)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? completed = _undefined,
+    Object? total = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(
+          Fragment$Section$$CardListSection$items$items$item$$StudyTopic$lessonsProgress(
+        completed: completed == _undefined || completed == null
+            ? _instance.completed
+            : (completed as int),
+        total: total == _undefined || total == null
+            ? _instance.total
+            : (total as int),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Fragment$Section$$CardListSection$items$items$item$$StudyTopic$lessonsProgress<
+        TRes>
+    implements
+        CopyWith$Fragment$Section$$CardListSection$items$items$item$$StudyTopic$lessonsProgress<
+            TRes> {
+  _CopyWithStubImpl$Fragment$Section$$CardListSection$items$items$item$$StudyTopic$lessonsProgress(
+      this._res);
+
+  TRes _res;
+
+  call({
+    int? completed,
+    int? total,
+    String? $__typename,
+  }) =>
+      _res;
+}
+
+class Fragment$Section$$CardSection$items$items$item$$StudyTopic$images
+    implements Fragment$CardItem$item$$StudyTopic$images {
   Fragment$Section$$CardSection$items$items$item$$StudyTopic$images({
     required this.style,
     required this.url,
@@ -54535,7 +57588,8 @@ class _CopyWithStubImpl$Fragment$Section$$CardSection$items$items$item$$StudyTop
       _res;
 }
 
-class Fragment$Section$$CardSection$items$items$item$$StudyTopic$lessonsProgress {
+class Fragment$Section$$CardSection$items$items$item$$StudyTopic$lessonsProgress
+    implements Fragment$CardItem$item$$StudyTopic$lessonsProgress {
   Fragment$Section$$CardSection$items$items$item$$StudyTopic$lessonsProgress({
     required this.completed,
     required this.total,
@@ -55026,6 +58080,2925 @@ class _CopyWithStubImpl$Fragment$Section$$AchievementSection<TRes>
       _res;
 }
 
+class Fragment$CardItem implements Fragment$ItemSectionItem {
+  Fragment$CardItem({
+    required this.id,
+    required this.title,
+    this.image,
+    required this.item,
+    this.$__typename = 'SectionItem',
+    required this.description,
+  });
+
+  factory Fragment$CardItem.fromJson(Map<String, dynamic> json) {
+    final l$id = json['id'];
+    final l$title = json['title'];
+    final l$image = json['image'];
+    final l$item = json['item'];
+    final l$$__typename = json['__typename'];
+    final l$description = json['description'];
+    return Fragment$CardItem(
+      id: (l$id as String),
+      title: (l$title as String),
+      image: (l$image as String?),
+      item: Fragment$CardItem$item.fromJson((l$item as Map<String, dynamic>)),
+      $__typename: (l$$__typename as String),
+      description: (l$description as String),
+    );
+  }
+
+  final String id;
+
+  final String title;
+
+  final String? image;
+
+  final Fragment$CardItem$item item;
+
+  final String $__typename;
+
+  final String description;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$id = id;
+    _resultData['id'] = l$id;
+    final l$title = title;
+    _resultData['title'] = l$title;
+    final l$image = image;
+    _resultData['image'] = l$image;
+    final l$item = item;
+    _resultData['item'] = l$item.toJson();
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    final l$description = description;
+    _resultData['description'] = l$description;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$id = id;
+    final l$title = title;
+    final l$image = image;
+    final l$item = item;
+    final l$$__typename = $__typename;
+    final l$description = description;
+    return Object.hashAll([
+      l$id,
+      l$title,
+      l$image,
+      l$item,
+      l$$__typename,
+      l$description,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Fragment$CardItem) || runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$id = id;
+    final lOther$id = other.id;
+    if (l$id != lOther$id) {
+      return false;
+    }
+    final l$title = title;
+    final lOther$title = other.title;
+    if (l$title != lOther$title) {
+      return false;
+    }
+    final l$image = image;
+    final lOther$image = other.image;
+    if (l$image != lOther$image) {
+      return false;
+    }
+    final l$item = item;
+    final lOther$item = other.item;
+    if (l$item != lOther$item) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    final l$description = description;
+    final lOther$description = other.description;
+    if (l$description != lOther$description) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$CardItem on Fragment$CardItem {
+  CopyWith$Fragment$CardItem<Fragment$CardItem> get copyWith =>
+      CopyWith$Fragment$CardItem(
+        this,
+        (i) => i,
+      );
+}
+
+abstract class CopyWith$Fragment$CardItem<TRes> {
+  factory CopyWith$Fragment$CardItem(
+    Fragment$CardItem instance,
+    TRes Function(Fragment$CardItem) then,
+  ) = _CopyWithImpl$Fragment$CardItem;
+
+  factory CopyWith$Fragment$CardItem.stub(TRes res) =
+      _CopyWithStubImpl$Fragment$CardItem;
+
+  TRes call({
+    String? id,
+    String? title,
+    String? image,
+    Fragment$CardItem$item? item,
+    String? $__typename,
+    String? description,
+  });
+  CopyWith$Fragment$CardItem$item<TRes> get item;
+}
+
+class _CopyWithImpl$Fragment$CardItem<TRes>
+    implements CopyWith$Fragment$CardItem<TRes> {
+  _CopyWithImpl$Fragment$CardItem(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$CardItem _instance;
+
+  final TRes Function(Fragment$CardItem) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? id = _undefined,
+    Object? title = _undefined,
+    Object? image = _undefined,
+    Object? item = _undefined,
+    Object? $__typename = _undefined,
+    Object? description = _undefined,
+  }) =>
+      _then(Fragment$CardItem(
+        id: id == _undefined || id == null ? _instance.id : (id as String),
+        title: title == _undefined || title == null
+            ? _instance.title
+            : (title as String),
+        image: image == _undefined ? _instance.image : (image as String?),
+        item: item == _undefined || item == null
+            ? _instance.item
+            : (item as Fragment$CardItem$item),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+        description: description == _undefined || description == null
+            ? _instance.description
+            : (description as String),
+      ));
+
+  CopyWith$Fragment$CardItem$item<TRes> get item {
+    final local$item = _instance.item;
+    return CopyWith$Fragment$CardItem$item(local$item, (e) => call(item: e));
+  }
+}
+
+class _CopyWithStubImpl$Fragment$CardItem<TRes>
+    implements CopyWith$Fragment$CardItem<TRes> {
+  _CopyWithStubImpl$Fragment$CardItem(this._res);
+
+  TRes _res;
+
+  call({
+    String? id,
+    String? title,
+    String? image,
+    Fragment$CardItem$item? item,
+    String? $__typename,
+    String? description,
+  }) =>
+      _res;
+
+  CopyWith$Fragment$CardItem$item<TRes> get item =>
+      CopyWith$Fragment$CardItem$item.stub(_res);
+}
+
+const fragmentDefinitionCardItem = FragmentDefinitionNode(
+  name: NameNode(value: 'CardItem'),
+  typeCondition: TypeConditionNode(
+      on: NamedTypeNode(
+    name: NameNode(value: 'SectionItem'),
+    isNonNull: false,
+  )),
+  directives: [],
+  selectionSet: SelectionSetNode(selections: [
+    FragmentSpreadNode(
+      name: NameNode(value: 'ItemSectionItem'),
+      directives: [],
+    ),
+    FieldNode(
+      name: NameNode(value: 'title'),
+      alias: null,
+      arguments: [],
+      directives: [],
+      selectionSet: null,
+    ),
+    FieldNode(
+      name: NameNode(value: 'description'),
+      alias: null,
+      arguments: [],
+      directives: [],
+      selectionSet: null,
+    ),
+    FieldNode(
+      name: NameNode(value: 'image'),
+      alias: null,
+      arguments: [],
+      directives: [],
+      selectionSet: null,
+    ),
+    FieldNode(
+      name: NameNode(value: 'item'),
+      alias: null,
+      arguments: [],
+      directives: [],
+      selectionSet: SelectionSetNode(selections: [
+        InlineFragmentNode(
+          typeCondition: TypeConditionNode(
+              on: NamedTypeNode(
+            name: NameNode(value: 'StudyTopic'),
+            isNonNull: false,
+          )),
+          directives: [],
+          selectionSet: SelectionSetNode(selections: [
+            FieldNode(
+              name: NameNode(value: 'id'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null,
+            ),
+            FieldNode(
+              name: NameNode(value: 'title'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null,
+            ),
+            FieldNode(
+              name: NameNode(value: 'description'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null,
+            ),
+            FieldNode(
+              name: NameNode(value: 'images'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: SelectionSetNode(selections: [
+                FieldNode(
+                  name: NameNode(value: 'style'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'url'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: '__typename'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+              ]),
+            ),
+            FieldNode(
+              name: NameNode(value: 'progress'),
+              alias: NameNode(value: 'lessonsProgress'),
+              arguments: [],
+              directives: [],
+              selectionSet: SelectionSetNode(selections: [
+                FieldNode(
+                  name: NameNode(value: 'completed'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'total'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: '__typename'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+              ]),
+            ),
+            FieldNode(
+              name: NameNode(value: '__typename'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null,
+            ),
+          ]),
+        ),
+        FieldNode(
+          name: NameNode(value: '__typename'),
+          alias: null,
+          arguments: [],
+          directives: [],
+          selectionSet: null,
+        ),
+      ]),
+    ),
+    FieldNode(
+      name: NameNode(value: '__typename'),
+      alias: null,
+      arguments: [],
+      directives: [],
+      selectionSet: null,
+    ),
+  ]),
+);
+const documentNodeFragmentCardItem = DocumentNode(definitions: [
+  fragmentDefinitionCardItem,
+  fragmentDefinitionItemSectionItem,
+  fragmentDefinitionNavigatablePerson,
+  fragmentDefinitionNavigatableGame,
+  fragmentDefinitionNavigatableLink,
+  fragmentDefinitionNavigatablePlaylist,
+  fragmentDefinitionNavigatablePage,
+  fragmentDefinitionNavigatableShort,
+  fragmentDefinitionNavigatableEpisode,
+  fragmentDefinitionNavigatableShow,
+]);
+
+extension ClientExtension$Fragment$CardItem on graphql.GraphQLClient {
+  void writeFragment$CardItem({
+    required Fragment$CardItem data,
+    required Map<String, dynamic> idFields,
+    bool broadcast = true,
+  }) =>
+      this.writeFragment(
+        graphql.FragmentRequest(
+          idFields: idFields,
+          fragment: const graphql.Fragment(
+            fragmentName: 'CardItem',
+            document: documentNodeFragmentCardItem,
+          ),
+        ),
+        data: data.toJson(),
+        broadcast: broadcast,
+      );
+  Fragment$CardItem? readFragment$CardItem({
+    required Map<String, dynamic> idFields,
+    bool optimistic = true,
+  }) {
+    final result = this.readFragment(
+      graphql.FragmentRequest(
+        idFields: idFields,
+        fragment: const graphql.Fragment(
+          fragmentName: 'CardItem',
+          document: documentNodeFragmentCardItem,
+        ),
+      ),
+      optimistic: optimistic,
+    );
+    return result == null ? null : Fragment$CardItem.fromJson(result);
+  }
+}
+
+class Fragment$CardItem$item implements Fragment$ItemSectionItem$item {
+  Fragment$CardItem$item({required this.$__typename});
+
+  factory Fragment$CardItem$item.fromJson(Map<String, dynamic> json) {
+    switch (json["__typename"] as String) {
+      case "Episode":
+        return Fragment$CardItem$item$$Episode.fromJson(json);
+
+      case "Show":
+        return Fragment$CardItem$item$$Show.fromJson(json);
+
+      case "Season":
+        return Fragment$CardItem$item$$Season.fromJson(json);
+
+      case "Page":
+        return Fragment$CardItem$item$$Page.fromJson(json);
+
+      case "Link":
+        return Fragment$CardItem$item$$Link.fromJson(json);
+
+      case "StudyTopic":
+        return Fragment$CardItem$item$$StudyTopic.fromJson(json);
+
+      case "Game":
+        return Fragment$CardItem$item$$Game.fromJson(json);
+
+      case "Playlist":
+        return Fragment$CardItem$item$$Playlist.fromJson(json);
+
+      case "Short":
+        return Fragment$CardItem$item$$Short.fromJson(json);
+
+      case "Person":
+        return Fragment$CardItem$item$$Person.fromJson(json);
+
+      default:
+        final l$$__typename = json['__typename'];
+        return Fragment$CardItem$item($__typename: (l$$__typename as String));
+    }
+  }
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$$__typename = $__typename;
+    return Object.hashAll([l$$__typename]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Fragment$CardItem$item) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$CardItem$item on Fragment$CardItem$item {
+  CopyWith$Fragment$CardItem$item<Fragment$CardItem$item> get copyWith =>
+      CopyWith$Fragment$CardItem$item(
+        this,
+        (i) => i,
+      );
+  _T when<_T>({
+    required _T Function(Fragment$CardItem$item$$Episode) episode,
+    required _T Function(Fragment$CardItem$item$$Show) show,
+    required _T Function(Fragment$CardItem$item$$Season) season,
+    required _T Function(Fragment$CardItem$item$$Page) page,
+    required _T Function(Fragment$CardItem$item$$Link) link,
+    required _T Function(Fragment$CardItem$item$$StudyTopic) studyTopic,
+    required _T Function(Fragment$CardItem$item$$Game) game,
+    required _T Function(Fragment$CardItem$item$$Playlist) playlist,
+    required _T Function(Fragment$CardItem$item$$Short) short,
+    required _T Function(Fragment$CardItem$item$$Person) person,
+    required _T Function() orElse,
+  }) {
+    switch ($__typename) {
+      case "Episode":
+        return episode(this as Fragment$CardItem$item$$Episode);
+
+      case "Show":
+        return show(this as Fragment$CardItem$item$$Show);
+
+      case "Season":
+        return season(this as Fragment$CardItem$item$$Season);
+
+      case "Page":
+        return page(this as Fragment$CardItem$item$$Page);
+
+      case "Link":
+        return link(this as Fragment$CardItem$item$$Link);
+
+      case "StudyTopic":
+        return studyTopic(this as Fragment$CardItem$item$$StudyTopic);
+
+      case "Game":
+        return game(this as Fragment$CardItem$item$$Game);
+
+      case "Playlist":
+        return playlist(this as Fragment$CardItem$item$$Playlist);
+
+      case "Short":
+        return short(this as Fragment$CardItem$item$$Short);
+
+      case "Person":
+        return person(this as Fragment$CardItem$item$$Person);
+
+      default:
+        return orElse();
+    }
+  }
+
+  _T maybeWhen<_T>({
+    _T Function(Fragment$CardItem$item$$Episode)? episode,
+    _T Function(Fragment$CardItem$item$$Show)? show,
+    _T Function(Fragment$CardItem$item$$Season)? season,
+    _T Function(Fragment$CardItem$item$$Page)? page,
+    _T Function(Fragment$CardItem$item$$Link)? link,
+    _T Function(Fragment$CardItem$item$$StudyTopic)? studyTopic,
+    _T Function(Fragment$CardItem$item$$Game)? game,
+    _T Function(Fragment$CardItem$item$$Playlist)? playlist,
+    _T Function(Fragment$CardItem$item$$Short)? short,
+    _T Function(Fragment$CardItem$item$$Person)? person,
+    required _T Function() orElse,
+  }) {
+    switch ($__typename) {
+      case "Episode":
+        if (episode != null) {
+          return episode(this as Fragment$CardItem$item$$Episode);
+        } else {
+          return orElse();
+        }
+
+      case "Show":
+        if (show != null) {
+          return show(this as Fragment$CardItem$item$$Show);
+        } else {
+          return orElse();
+        }
+
+      case "Season":
+        if (season != null) {
+          return season(this as Fragment$CardItem$item$$Season);
+        } else {
+          return orElse();
+        }
+
+      case "Page":
+        if (page != null) {
+          return page(this as Fragment$CardItem$item$$Page);
+        } else {
+          return orElse();
+        }
+
+      case "Link":
+        if (link != null) {
+          return link(this as Fragment$CardItem$item$$Link);
+        } else {
+          return orElse();
+        }
+
+      case "StudyTopic":
+        if (studyTopic != null) {
+          return studyTopic(this as Fragment$CardItem$item$$StudyTopic);
+        } else {
+          return orElse();
+        }
+
+      case "Game":
+        if (game != null) {
+          return game(this as Fragment$CardItem$item$$Game);
+        } else {
+          return orElse();
+        }
+
+      case "Playlist":
+        if (playlist != null) {
+          return playlist(this as Fragment$CardItem$item$$Playlist);
+        } else {
+          return orElse();
+        }
+
+      case "Short":
+        if (short != null) {
+          return short(this as Fragment$CardItem$item$$Short);
+        } else {
+          return orElse();
+        }
+
+      case "Person":
+        if (person != null) {
+          return person(this as Fragment$CardItem$item$$Person);
+        } else {
+          return orElse();
+        }
+
+      default:
+        return orElse();
+    }
+  }
+}
+
+abstract class CopyWith$Fragment$CardItem$item<TRes> {
+  factory CopyWith$Fragment$CardItem$item(
+    Fragment$CardItem$item instance,
+    TRes Function(Fragment$CardItem$item) then,
+  ) = _CopyWithImpl$Fragment$CardItem$item;
+
+  factory CopyWith$Fragment$CardItem$item.stub(TRes res) =
+      _CopyWithStubImpl$Fragment$CardItem$item;
+
+  TRes call({String? $__typename});
+}
+
+class _CopyWithImpl$Fragment$CardItem$item<TRes>
+    implements CopyWith$Fragment$CardItem$item<TRes> {
+  _CopyWithImpl$Fragment$CardItem$item(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$CardItem$item _instance;
+
+  final TRes Function(Fragment$CardItem$item) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({Object? $__typename = _undefined}) => _then(Fragment$CardItem$item(
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String)));
+}
+
+class _CopyWithStubImpl$Fragment$CardItem$item<TRes>
+    implements CopyWith$Fragment$CardItem$item<TRes> {
+  _CopyWithStubImpl$Fragment$CardItem$item(this._res);
+
+  TRes _res;
+
+  call({String? $__typename}) => _res;
+}
+
+class Fragment$CardItem$item$$Episode
+    implements
+        Fragment$ItemSectionItem$item$$Episode,
+        Fragment$NavigatableEpisode,
+        Fragment$CardItem$item {
+  Fragment$CardItem$item$$Episode({
+    required this.id,
+    required this.duration,
+    required this.locked,
+    this.progress,
+    required this.publishDate,
+    this.season,
+    this.$__typename = 'Episode',
+  });
+
+  factory Fragment$CardItem$item$$Episode.fromJson(Map<String, dynamic> json) {
+    final l$id = json['id'];
+    final l$duration = json['duration'];
+    final l$locked = json['locked'];
+    final l$progress = json['progress'];
+    final l$publishDate = json['publishDate'];
+    final l$season = json['season'];
+    final l$$__typename = json['__typename'];
+    return Fragment$CardItem$item$$Episode(
+      id: (l$id as String),
+      duration: (l$duration as int),
+      locked: (l$locked as bool),
+      progress: (l$progress as int?),
+      publishDate: (l$publishDate as String),
+      season: l$season == null
+          ? null
+          : Fragment$CardItem$item$$Episode$season.fromJson(
+              (l$season as Map<String, dynamic>)),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String id;
+
+  final int duration;
+
+  final bool locked;
+
+  final int? progress;
+
+  final String publishDate;
+
+  final Fragment$CardItem$item$$Episode$season? season;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$id = id;
+    _resultData['id'] = l$id;
+    final l$duration = duration;
+    _resultData['duration'] = l$duration;
+    final l$locked = locked;
+    _resultData['locked'] = l$locked;
+    final l$progress = progress;
+    _resultData['progress'] = l$progress;
+    final l$publishDate = publishDate;
+    _resultData['publishDate'] = l$publishDate;
+    final l$season = season;
+    _resultData['season'] = l$season?.toJson();
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$id = id;
+    final l$duration = duration;
+    final l$locked = locked;
+    final l$progress = progress;
+    final l$publishDate = publishDate;
+    final l$season = season;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$id,
+      l$duration,
+      l$locked,
+      l$progress,
+      l$publishDate,
+      l$season,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Fragment$CardItem$item$$Episode) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$id = id;
+    final lOther$id = other.id;
+    if (l$id != lOther$id) {
+      return false;
+    }
+    final l$duration = duration;
+    final lOther$duration = other.duration;
+    if (l$duration != lOther$duration) {
+      return false;
+    }
+    final l$locked = locked;
+    final lOther$locked = other.locked;
+    if (l$locked != lOther$locked) {
+      return false;
+    }
+    final l$progress = progress;
+    final lOther$progress = other.progress;
+    if (l$progress != lOther$progress) {
+      return false;
+    }
+    final l$publishDate = publishDate;
+    final lOther$publishDate = other.publishDate;
+    if (l$publishDate != lOther$publishDate) {
+      return false;
+    }
+    final l$season = season;
+    final lOther$season = other.season;
+    if (l$season != lOther$season) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$CardItem$item$$Episode
+    on Fragment$CardItem$item$$Episode {
+  CopyWith$Fragment$CardItem$item$$Episode<Fragment$CardItem$item$$Episode>
+      get copyWith => CopyWith$Fragment$CardItem$item$$Episode(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$CardItem$item$$Episode<TRes> {
+  factory CopyWith$Fragment$CardItem$item$$Episode(
+    Fragment$CardItem$item$$Episode instance,
+    TRes Function(Fragment$CardItem$item$$Episode) then,
+  ) = _CopyWithImpl$Fragment$CardItem$item$$Episode;
+
+  factory CopyWith$Fragment$CardItem$item$$Episode.stub(TRes res) =
+      _CopyWithStubImpl$Fragment$CardItem$item$$Episode;
+
+  TRes call({
+    String? id,
+    int? duration,
+    bool? locked,
+    int? progress,
+    String? publishDate,
+    Fragment$CardItem$item$$Episode$season? season,
+    String? $__typename,
+  });
+  CopyWith$Fragment$CardItem$item$$Episode$season<TRes> get season;
+}
+
+class _CopyWithImpl$Fragment$CardItem$item$$Episode<TRes>
+    implements CopyWith$Fragment$CardItem$item$$Episode<TRes> {
+  _CopyWithImpl$Fragment$CardItem$item$$Episode(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$CardItem$item$$Episode _instance;
+
+  final TRes Function(Fragment$CardItem$item$$Episode) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? id = _undefined,
+    Object? duration = _undefined,
+    Object? locked = _undefined,
+    Object? progress = _undefined,
+    Object? publishDate = _undefined,
+    Object? season = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Fragment$CardItem$item$$Episode(
+        id: id == _undefined || id == null ? _instance.id : (id as String),
+        duration: duration == _undefined || duration == null
+            ? _instance.duration
+            : (duration as int),
+        locked: locked == _undefined || locked == null
+            ? _instance.locked
+            : (locked as bool),
+        progress:
+            progress == _undefined ? _instance.progress : (progress as int?),
+        publishDate: publishDate == _undefined || publishDate == null
+            ? _instance.publishDate
+            : (publishDate as String),
+        season: season == _undefined
+            ? _instance.season
+            : (season as Fragment$CardItem$item$$Episode$season?),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+
+  CopyWith$Fragment$CardItem$item$$Episode$season<TRes> get season {
+    final local$season = _instance.season;
+    return local$season == null
+        ? CopyWith$Fragment$CardItem$item$$Episode$season.stub(_then(_instance))
+        : CopyWith$Fragment$CardItem$item$$Episode$season(
+            local$season, (e) => call(season: e));
+  }
+}
+
+class _CopyWithStubImpl$Fragment$CardItem$item$$Episode<TRes>
+    implements CopyWith$Fragment$CardItem$item$$Episode<TRes> {
+  _CopyWithStubImpl$Fragment$CardItem$item$$Episode(this._res);
+
+  TRes _res;
+
+  call({
+    String? id,
+    int? duration,
+    bool? locked,
+    int? progress,
+    String? publishDate,
+    Fragment$CardItem$item$$Episode$season? season,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Fragment$CardItem$item$$Episode$season<TRes> get season =>
+      CopyWith$Fragment$CardItem$item$$Episode$season.stub(_res);
+}
+
+class Fragment$CardItem$item$$Episode$season
+    implements Fragment$ItemSectionItem$item$$Episode$season {
+  Fragment$CardItem$item$$Episode$season({
+    required this.$show,
+    this.$__typename = 'Season',
+  });
+
+  factory Fragment$CardItem$item$$Episode$season.fromJson(
+      Map<String, dynamic> json) {
+    final l$$show = json['show'];
+    final l$$__typename = json['__typename'];
+    return Fragment$CardItem$item$$Episode$season(
+      $show: Fragment$CardItem$item$$Episode$season$show.fromJson(
+          (l$$show as Map<String, dynamic>)),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final Fragment$CardItem$item$$Episode$season$show $show;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$$show = $show;
+    _resultData['show'] = l$$show.toJson();
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$$show = $show;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$$show,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Fragment$CardItem$item$$Episode$season) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$$show = $show;
+    final lOther$$show = other.$show;
+    if (l$$show != lOther$$show) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$CardItem$item$$Episode$season
+    on Fragment$CardItem$item$$Episode$season {
+  CopyWith$Fragment$CardItem$item$$Episode$season<
+          Fragment$CardItem$item$$Episode$season>
+      get copyWith => CopyWith$Fragment$CardItem$item$$Episode$season(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$CardItem$item$$Episode$season<TRes> {
+  factory CopyWith$Fragment$CardItem$item$$Episode$season(
+    Fragment$CardItem$item$$Episode$season instance,
+    TRes Function(Fragment$CardItem$item$$Episode$season) then,
+  ) = _CopyWithImpl$Fragment$CardItem$item$$Episode$season;
+
+  factory CopyWith$Fragment$CardItem$item$$Episode$season.stub(TRes res) =
+      _CopyWithStubImpl$Fragment$CardItem$item$$Episode$season;
+
+  TRes call({
+    Fragment$CardItem$item$$Episode$season$show? $show,
+    String? $__typename,
+  });
+  CopyWith$Fragment$CardItem$item$$Episode$season$show<TRes> get $show;
+}
+
+class _CopyWithImpl$Fragment$CardItem$item$$Episode$season<TRes>
+    implements CopyWith$Fragment$CardItem$item$$Episode$season<TRes> {
+  _CopyWithImpl$Fragment$CardItem$item$$Episode$season(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$CardItem$item$$Episode$season _instance;
+
+  final TRes Function(Fragment$CardItem$item$$Episode$season) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? $show = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Fragment$CardItem$item$$Episode$season(
+        $show: $show == _undefined || $show == null
+            ? _instance.$show
+            : ($show as Fragment$CardItem$item$$Episode$season$show),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+
+  CopyWith$Fragment$CardItem$item$$Episode$season$show<TRes> get $show {
+    final local$$show = _instance.$show;
+    return CopyWith$Fragment$CardItem$item$$Episode$season$show(
+        local$$show, (e) => call($show: e));
+  }
+}
+
+class _CopyWithStubImpl$Fragment$CardItem$item$$Episode$season<TRes>
+    implements CopyWith$Fragment$CardItem$item$$Episode$season<TRes> {
+  _CopyWithStubImpl$Fragment$CardItem$item$$Episode$season(this._res);
+
+  TRes _res;
+
+  call({
+    Fragment$CardItem$item$$Episode$season$show? $show,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Fragment$CardItem$item$$Episode$season$show<TRes> get $show =>
+      CopyWith$Fragment$CardItem$item$$Episode$season$show.stub(_res);
+}
+
+class Fragment$CardItem$item$$Episode$season$show
+    implements Fragment$ItemSectionItem$item$$Episode$season$show {
+  Fragment$CardItem$item$$Episode$season$show({
+    required this.title,
+    this.$__typename = 'Show',
+  });
+
+  factory Fragment$CardItem$item$$Episode$season$show.fromJson(
+      Map<String, dynamic> json) {
+    final l$title = json['title'];
+    final l$$__typename = json['__typename'];
+    return Fragment$CardItem$item$$Episode$season$show(
+      title: (l$title as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String title;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$title = title;
+    _resultData['title'] = l$title;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$title = title;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$title,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Fragment$CardItem$item$$Episode$season$show) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$title = title;
+    final lOther$title = other.title;
+    if (l$title != lOther$title) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$CardItem$item$$Episode$season$show
+    on Fragment$CardItem$item$$Episode$season$show {
+  CopyWith$Fragment$CardItem$item$$Episode$season$show<
+          Fragment$CardItem$item$$Episode$season$show>
+      get copyWith => CopyWith$Fragment$CardItem$item$$Episode$season$show(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$CardItem$item$$Episode$season$show<TRes> {
+  factory CopyWith$Fragment$CardItem$item$$Episode$season$show(
+    Fragment$CardItem$item$$Episode$season$show instance,
+    TRes Function(Fragment$CardItem$item$$Episode$season$show) then,
+  ) = _CopyWithImpl$Fragment$CardItem$item$$Episode$season$show;
+
+  factory CopyWith$Fragment$CardItem$item$$Episode$season$show.stub(TRes res) =
+      _CopyWithStubImpl$Fragment$CardItem$item$$Episode$season$show;
+
+  TRes call({
+    String? title,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Fragment$CardItem$item$$Episode$season$show<TRes>
+    implements CopyWith$Fragment$CardItem$item$$Episode$season$show<TRes> {
+  _CopyWithImpl$Fragment$CardItem$item$$Episode$season$show(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$CardItem$item$$Episode$season$show _instance;
+
+  final TRes Function(Fragment$CardItem$item$$Episode$season$show) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? title = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Fragment$CardItem$item$$Episode$season$show(
+        title: title == _undefined || title == null
+            ? _instance.title
+            : (title as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Fragment$CardItem$item$$Episode$season$show<TRes>
+    implements CopyWith$Fragment$CardItem$item$$Episode$season$show<TRes> {
+  _CopyWithStubImpl$Fragment$CardItem$item$$Episode$season$show(this._res);
+
+  TRes _res;
+
+  call({
+    String? title,
+    String? $__typename,
+  }) =>
+      _res;
+}
+
+class Fragment$CardItem$item$$Show
+    implements
+        Fragment$ItemSectionItem$item$$Show,
+        Fragment$NavigatableShow,
+        Fragment$CardItem$item {
+  Fragment$CardItem$item$$Show({
+    required this.id,
+    required this.episodeCount,
+    required this.seasonCount,
+    this.$__typename = 'Show',
+    required this.defaultEpisode,
+  });
+
+  factory Fragment$CardItem$item$$Show.fromJson(Map<String, dynamic> json) {
+    final l$id = json['id'];
+    final l$episodeCount = json['episodeCount'];
+    final l$seasonCount = json['seasonCount'];
+    final l$$__typename = json['__typename'];
+    final l$defaultEpisode = json['defaultEpisode'];
+    return Fragment$CardItem$item$$Show(
+      id: (l$id as String),
+      episodeCount: (l$episodeCount as int),
+      seasonCount: (l$seasonCount as int),
+      $__typename: (l$$__typename as String),
+      defaultEpisode: Fragment$CardItem$item$$Show$defaultEpisode.fromJson(
+          (l$defaultEpisode as Map<String, dynamic>)),
+    );
+  }
+
+  final String id;
+
+  final int episodeCount;
+
+  final int seasonCount;
+
+  final String $__typename;
+
+  final Fragment$CardItem$item$$Show$defaultEpisode defaultEpisode;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$id = id;
+    _resultData['id'] = l$id;
+    final l$episodeCount = episodeCount;
+    _resultData['episodeCount'] = l$episodeCount;
+    final l$seasonCount = seasonCount;
+    _resultData['seasonCount'] = l$seasonCount;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    final l$defaultEpisode = defaultEpisode;
+    _resultData['defaultEpisode'] = l$defaultEpisode.toJson();
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$id = id;
+    final l$episodeCount = episodeCount;
+    final l$seasonCount = seasonCount;
+    final l$$__typename = $__typename;
+    final l$defaultEpisode = defaultEpisode;
+    return Object.hashAll([
+      l$id,
+      l$episodeCount,
+      l$seasonCount,
+      l$$__typename,
+      l$defaultEpisode,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Fragment$CardItem$item$$Show) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$id = id;
+    final lOther$id = other.id;
+    if (l$id != lOther$id) {
+      return false;
+    }
+    final l$episodeCount = episodeCount;
+    final lOther$episodeCount = other.episodeCount;
+    if (l$episodeCount != lOther$episodeCount) {
+      return false;
+    }
+    final l$seasonCount = seasonCount;
+    final lOther$seasonCount = other.seasonCount;
+    if (l$seasonCount != lOther$seasonCount) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    final l$defaultEpisode = defaultEpisode;
+    final lOther$defaultEpisode = other.defaultEpisode;
+    if (l$defaultEpisode != lOther$defaultEpisode) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$CardItem$item$$Show
+    on Fragment$CardItem$item$$Show {
+  CopyWith$Fragment$CardItem$item$$Show<Fragment$CardItem$item$$Show>
+      get copyWith => CopyWith$Fragment$CardItem$item$$Show(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$CardItem$item$$Show<TRes> {
+  factory CopyWith$Fragment$CardItem$item$$Show(
+    Fragment$CardItem$item$$Show instance,
+    TRes Function(Fragment$CardItem$item$$Show) then,
+  ) = _CopyWithImpl$Fragment$CardItem$item$$Show;
+
+  factory CopyWith$Fragment$CardItem$item$$Show.stub(TRes res) =
+      _CopyWithStubImpl$Fragment$CardItem$item$$Show;
+
+  TRes call({
+    String? id,
+    int? episodeCount,
+    int? seasonCount,
+    String? $__typename,
+    Fragment$CardItem$item$$Show$defaultEpisode? defaultEpisode,
+  });
+  CopyWith$Fragment$CardItem$item$$Show$defaultEpisode<TRes> get defaultEpisode;
+}
+
+class _CopyWithImpl$Fragment$CardItem$item$$Show<TRes>
+    implements CopyWith$Fragment$CardItem$item$$Show<TRes> {
+  _CopyWithImpl$Fragment$CardItem$item$$Show(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$CardItem$item$$Show _instance;
+
+  final TRes Function(Fragment$CardItem$item$$Show) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? id = _undefined,
+    Object? episodeCount = _undefined,
+    Object? seasonCount = _undefined,
+    Object? $__typename = _undefined,
+    Object? defaultEpisode = _undefined,
+  }) =>
+      _then(Fragment$CardItem$item$$Show(
+        id: id == _undefined || id == null ? _instance.id : (id as String),
+        episodeCount: episodeCount == _undefined || episodeCount == null
+            ? _instance.episodeCount
+            : (episodeCount as int),
+        seasonCount: seasonCount == _undefined || seasonCount == null
+            ? _instance.seasonCount
+            : (seasonCount as int),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+        defaultEpisode: defaultEpisode == _undefined || defaultEpisode == null
+            ? _instance.defaultEpisode
+            : (defaultEpisode as Fragment$CardItem$item$$Show$defaultEpisode),
+      ));
+
+  CopyWith$Fragment$CardItem$item$$Show$defaultEpisode<TRes>
+      get defaultEpisode {
+    final local$defaultEpisode = _instance.defaultEpisode;
+    return CopyWith$Fragment$CardItem$item$$Show$defaultEpisode(
+        local$defaultEpisode, (e) => call(defaultEpisode: e));
+  }
+}
+
+class _CopyWithStubImpl$Fragment$CardItem$item$$Show<TRes>
+    implements CopyWith$Fragment$CardItem$item$$Show<TRes> {
+  _CopyWithStubImpl$Fragment$CardItem$item$$Show(this._res);
+
+  TRes _res;
+
+  call({
+    String? id,
+    int? episodeCount,
+    int? seasonCount,
+    String? $__typename,
+    Fragment$CardItem$item$$Show$defaultEpisode? defaultEpisode,
+  }) =>
+      _res;
+
+  CopyWith$Fragment$CardItem$item$$Show$defaultEpisode<TRes>
+      get defaultEpisode =>
+          CopyWith$Fragment$CardItem$item$$Show$defaultEpisode.stub(_res);
+}
+
+class Fragment$CardItem$item$$Show$defaultEpisode
+    implements
+        Fragment$ItemSectionItem$item$$Show$defaultEpisode,
+        Fragment$NavigatableShow$defaultEpisode {
+  Fragment$CardItem$item$$Show$defaultEpisode({
+    required this.id,
+    this.$__typename = 'Episode',
+  });
+
+  factory Fragment$CardItem$item$$Show$defaultEpisode.fromJson(
+      Map<String, dynamic> json) {
+    final l$id = json['id'];
+    final l$$__typename = json['__typename'];
+    return Fragment$CardItem$item$$Show$defaultEpisode(
+      id: (l$id as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String id;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$id = id;
+    _resultData['id'] = l$id;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$id = id;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$id,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Fragment$CardItem$item$$Show$defaultEpisode) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$id = id;
+    final lOther$id = other.id;
+    if (l$id != lOther$id) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$CardItem$item$$Show$defaultEpisode
+    on Fragment$CardItem$item$$Show$defaultEpisode {
+  CopyWith$Fragment$CardItem$item$$Show$defaultEpisode<
+          Fragment$CardItem$item$$Show$defaultEpisode>
+      get copyWith => CopyWith$Fragment$CardItem$item$$Show$defaultEpisode(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$CardItem$item$$Show$defaultEpisode<TRes> {
+  factory CopyWith$Fragment$CardItem$item$$Show$defaultEpisode(
+    Fragment$CardItem$item$$Show$defaultEpisode instance,
+    TRes Function(Fragment$CardItem$item$$Show$defaultEpisode) then,
+  ) = _CopyWithImpl$Fragment$CardItem$item$$Show$defaultEpisode;
+
+  factory CopyWith$Fragment$CardItem$item$$Show$defaultEpisode.stub(TRes res) =
+      _CopyWithStubImpl$Fragment$CardItem$item$$Show$defaultEpisode;
+
+  TRes call({
+    String? id,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Fragment$CardItem$item$$Show$defaultEpisode<TRes>
+    implements CopyWith$Fragment$CardItem$item$$Show$defaultEpisode<TRes> {
+  _CopyWithImpl$Fragment$CardItem$item$$Show$defaultEpisode(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$CardItem$item$$Show$defaultEpisode _instance;
+
+  final TRes Function(Fragment$CardItem$item$$Show$defaultEpisode) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? id = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Fragment$CardItem$item$$Show$defaultEpisode(
+        id: id == _undefined || id == null ? _instance.id : (id as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Fragment$CardItem$item$$Show$defaultEpisode<TRes>
+    implements CopyWith$Fragment$CardItem$item$$Show$defaultEpisode<TRes> {
+  _CopyWithStubImpl$Fragment$CardItem$item$$Show$defaultEpisode(this._res);
+
+  TRes _res;
+
+  call({
+    String? id,
+    String? $__typename,
+  }) =>
+      _res;
+}
+
+class Fragment$CardItem$item$$Season
+    implements Fragment$ItemSectionItem$item$$Season, Fragment$CardItem$item {
+  Fragment$CardItem$item$$Season({this.$__typename = 'Season'});
+
+  factory Fragment$CardItem$item$$Season.fromJson(Map<String, dynamic> json) {
+    final l$$__typename = json['__typename'];
+    return Fragment$CardItem$item$$Season(
+        $__typename: (l$$__typename as String));
+  }
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$$__typename = $__typename;
+    return Object.hashAll([l$$__typename]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Fragment$CardItem$item$$Season) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$CardItem$item$$Season
+    on Fragment$CardItem$item$$Season {
+  CopyWith$Fragment$CardItem$item$$Season<Fragment$CardItem$item$$Season>
+      get copyWith => CopyWith$Fragment$CardItem$item$$Season(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$CardItem$item$$Season<TRes> {
+  factory CopyWith$Fragment$CardItem$item$$Season(
+    Fragment$CardItem$item$$Season instance,
+    TRes Function(Fragment$CardItem$item$$Season) then,
+  ) = _CopyWithImpl$Fragment$CardItem$item$$Season;
+
+  factory CopyWith$Fragment$CardItem$item$$Season.stub(TRes res) =
+      _CopyWithStubImpl$Fragment$CardItem$item$$Season;
+
+  TRes call({String? $__typename});
+}
+
+class _CopyWithImpl$Fragment$CardItem$item$$Season<TRes>
+    implements CopyWith$Fragment$CardItem$item$$Season<TRes> {
+  _CopyWithImpl$Fragment$CardItem$item$$Season(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$CardItem$item$$Season _instance;
+
+  final TRes Function(Fragment$CardItem$item$$Season) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({Object? $__typename = _undefined}) =>
+      _then(Fragment$CardItem$item$$Season(
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String)));
+}
+
+class _CopyWithStubImpl$Fragment$CardItem$item$$Season<TRes>
+    implements CopyWith$Fragment$CardItem$item$$Season<TRes> {
+  _CopyWithStubImpl$Fragment$CardItem$item$$Season(this._res);
+
+  TRes _res;
+
+  call({String? $__typename}) => _res;
+}
+
+class Fragment$CardItem$item$$Page
+    implements
+        Fragment$ItemSectionItem$item$$Page,
+        Fragment$NavigatablePage,
+        Fragment$CardItem$item {
+  Fragment$CardItem$item$$Page({
+    required this.code,
+    this.$__typename = 'Page',
+  });
+
+  factory Fragment$CardItem$item$$Page.fromJson(Map<String, dynamic> json) {
+    final l$code = json['code'];
+    final l$$__typename = json['__typename'];
+    return Fragment$CardItem$item$$Page(
+      code: (l$code as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String code;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$code = code;
+    _resultData['code'] = l$code;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$code = code;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$code,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Fragment$CardItem$item$$Page) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$code = code;
+    final lOther$code = other.code;
+    if (l$code != lOther$code) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$CardItem$item$$Page
+    on Fragment$CardItem$item$$Page {
+  CopyWith$Fragment$CardItem$item$$Page<Fragment$CardItem$item$$Page>
+      get copyWith => CopyWith$Fragment$CardItem$item$$Page(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$CardItem$item$$Page<TRes> {
+  factory CopyWith$Fragment$CardItem$item$$Page(
+    Fragment$CardItem$item$$Page instance,
+    TRes Function(Fragment$CardItem$item$$Page) then,
+  ) = _CopyWithImpl$Fragment$CardItem$item$$Page;
+
+  factory CopyWith$Fragment$CardItem$item$$Page.stub(TRes res) =
+      _CopyWithStubImpl$Fragment$CardItem$item$$Page;
+
+  TRes call({
+    String? code,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Fragment$CardItem$item$$Page<TRes>
+    implements CopyWith$Fragment$CardItem$item$$Page<TRes> {
+  _CopyWithImpl$Fragment$CardItem$item$$Page(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$CardItem$item$$Page _instance;
+
+  final TRes Function(Fragment$CardItem$item$$Page) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? code = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Fragment$CardItem$item$$Page(
+        code: code == _undefined || code == null
+            ? _instance.code
+            : (code as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Fragment$CardItem$item$$Page<TRes>
+    implements CopyWith$Fragment$CardItem$item$$Page<TRes> {
+  _CopyWithStubImpl$Fragment$CardItem$item$$Page(this._res);
+
+  TRes _res;
+
+  call({
+    String? code,
+    String? $__typename,
+  }) =>
+      _res;
+}
+
+class Fragment$CardItem$item$$Link
+    implements
+        Fragment$ItemSectionItem$item$$Link,
+        Fragment$NavigatableLink,
+        Fragment$CardItem$item {
+  Fragment$CardItem$item$$Link({
+    required this.url,
+    this.$__typename = 'Link',
+  });
+
+  factory Fragment$CardItem$item$$Link.fromJson(Map<String, dynamic> json) {
+    final l$url = json['url'];
+    final l$$__typename = json['__typename'];
+    return Fragment$CardItem$item$$Link(
+      url: (l$url as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String url;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$url = url;
+    _resultData['url'] = l$url;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$url = url;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$url,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Fragment$CardItem$item$$Link) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$url = url;
+    final lOther$url = other.url;
+    if (l$url != lOther$url) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$CardItem$item$$Link
+    on Fragment$CardItem$item$$Link {
+  CopyWith$Fragment$CardItem$item$$Link<Fragment$CardItem$item$$Link>
+      get copyWith => CopyWith$Fragment$CardItem$item$$Link(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$CardItem$item$$Link<TRes> {
+  factory CopyWith$Fragment$CardItem$item$$Link(
+    Fragment$CardItem$item$$Link instance,
+    TRes Function(Fragment$CardItem$item$$Link) then,
+  ) = _CopyWithImpl$Fragment$CardItem$item$$Link;
+
+  factory CopyWith$Fragment$CardItem$item$$Link.stub(TRes res) =
+      _CopyWithStubImpl$Fragment$CardItem$item$$Link;
+
+  TRes call({
+    String? url,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Fragment$CardItem$item$$Link<TRes>
+    implements CopyWith$Fragment$CardItem$item$$Link<TRes> {
+  _CopyWithImpl$Fragment$CardItem$item$$Link(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$CardItem$item$$Link _instance;
+
+  final TRes Function(Fragment$CardItem$item$$Link) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? url = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Fragment$CardItem$item$$Link(
+        url: url == _undefined || url == null ? _instance.url : (url as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Fragment$CardItem$item$$Link<TRes>
+    implements CopyWith$Fragment$CardItem$item$$Link<TRes> {
+  _CopyWithStubImpl$Fragment$CardItem$item$$Link(this._res);
+
+  TRes _res;
+
+  call({
+    String? url,
+    String? $__typename,
+  }) =>
+      _res;
+}
+
+class Fragment$CardItem$item$$StudyTopic
+    implements
+        Fragment$ItemSectionItem$item$$StudyTopic,
+        Fragment$CardItem$item {
+  Fragment$CardItem$item$$StudyTopic({
+    this.$__typename = 'StudyTopic',
+    required this.id,
+    required this.title,
+    required this.description,
+    required this.images,
+    required this.lessonsProgress,
+  });
+
+  factory Fragment$CardItem$item$$StudyTopic.fromJson(
+      Map<String, dynamic> json) {
+    final l$$__typename = json['__typename'];
+    final l$id = json['id'];
+    final l$title = json['title'];
+    final l$description = json['description'];
+    final l$images = json['images'];
+    final l$lessonsProgress = json['lessonsProgress'];
+    return Fragment$CardItem$item$$StudyTopic(
+      $__typename: (l$$__typename as String),
+      id: (l$id as String),
+      title: (l$title as String),
+      description: (l$description as String),
+      images: (l$images as List<dynamic>)
+          .map((e) => Fragment$CardItem$item$$StudyTopic$images.fromJson(
+              (e as Map<String, dynamic>)))
+          .toList(),
+      lessonsProgress:
+          Fragment$CardItem$item$$StudyTopic$lessonsProgress.fromJson(
+              (l$lessonsProgress as Map<String, dynamic>)),
+    );
+  }
+
+  final String $__typename;
+
+  final String id;
+
+  final String title;
+
+  final String description;
+
+  final List<Fragment$CardItem$item$$StudyTopic$images> images;
+
+  final Fragment$CardItem$item$$StudyTopic$lessonsProgress lessonsProgress;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    final l$id = id;
+    _resultData['id'] = l$id;
+    final l$title = title;
+    _resultData['title'] = l$title;
+    final l$description = description;
+    _resultData['description'] = l$description;
+    final l$images = images;
+    _resultData['images'] = l$images.map((e) => e.toJson()).toList();
+    final l$lessonsProgress = lessonsProgress;
+    _resultData['lessonsProgress'] = l$lessonsProgress.toJson();
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$$__typename = $__typename;
+    final l$id = id;
+    final l$title = title;
+    final l$description = description;
+    final l$images = images;
+    final l$lessonsProgress = lessonsProgress;
+    return Object.hashAll([
+      l$$__typename,
+      l$id,
+      l$title,
+      l$description,
+      Object.hashAll(l$images.map((v) => v)),
+      l$lessonsProgress,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Fragment$CardItem$item$$StudyTopic) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    final l$id = id;
+    final lOther$id = other.id;
+    if (l$id != lOther$id) {
+      return false;
+    }
+    final l$title = title;
+    final lOther$title = other.title;
+    if (l$title != lOther$title) {
+      return false;
+    }
+    final l$description = description;
+    final lOther$description = other.description;
+    if (l$description != lOther$description) {
+      return false;
+    }
+    final l$images = images;
+    final lOther$images = other.images;
+    if (l$images.length != lOther$images.length) {
+      return false;
+    }
+    for (int i = 0; i < l$images.length; i++) {
+      final l$images$entry = l$images[i];
+      final lOther$images$entry = lOther$images[i];
+      if (l$images$entry != lOther$images$entry) {
+        return false;
+      }
+    }
+    final l$lessonsProgress = lessonsProgress;
+    final lOther$lessonsProgress = other.lessonsProgress;
+    if (l$lessonsProgress != lOther$lessonsProgress) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$CardItem$item$$StudyTopic
+    on Fragment$CardItem$item$$StudyTopic {
+  CopyWith$Fragment$CardItem$item$$StudyTopic<
+          Fragment$CardItem$item$$StudyTopic>
+      get copyWith => CopyWith$Fragment$CardItem$item$$StudyTopic(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$CardItem$item$$StudyTopic<TRes> {
+  factory CopyWith$Fragment$CardItem$item$$StudyTopic(
+    Fragment$CardItem$item$$StudyTopic instance,
+    TRes Function(Fragment$CardItem$item$$StudyTopic) then,
+  ) = _CopyWithImpl$Fragment$CardItem$item$$StudyTopic;
+
+  factory CopyWith$Fragment$CardItem$item$$StudyTopic.stub(TRes res) =
+      _CopyWithStubImpl$Fragment$CardItem$item$$StudyTopic;
+
+  TRes call({
+    String? $__typename,
+    String? id,
+    String? title,
+    String? description,
+    List<Fragment$CardItem$item$$StudyTopic$images>? images,
+    Fragment$CardItem$item$$StudyTopic$lessonsProgress? lessonsProgress,
+  });
+  TRes images(
+      Iterable<Fragment$CardItem$item$$StudyTopic$images> Function(
+              Iterable<
+                  CopyWith$Fragment$CardItem$item$$StudyTopic$images<
+                      Fragment$CardItem$item$$StudyTopic$images>>)
+          _fn);
+  CopyWith$Fragment$CardItem$item$$StudyTopic$lessonsProgress<TRes>
+      get lessonsProgress;
+}
+
+class _CopyWithImpl$Fragment$CardItem$item$$StudyTopic<TRes>
+    implements CopyWith$Fragment$CardItem$item$$StudyTopic<TRes> {
+  _CopyWithImpl$Fragment$CardItem$item$$StudyTopic(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$CardItem$item$$StudyTopic _instance;
+
+  final TRes Function(Fragment$CardItem$item$$StudyTopic) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? $__typename = _undefined,
+    Object? id = _undefined,
+    Object? title = _undefined,
+    Object? description = _undefined,
+    Object? images = _undefined,
+    Object? lessonsProgress = _undefined,
+  }) =>
+      _then(Fragment$CardItem$item$$StudyTopic(
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+        id: id == _undefined || id == null ? _instance.id : (id as String),
+        title: title == _undefined || title == null
+            ? _instance.title
+            : (title as String),
+        description: description == _undefined || description == null
+            ? _instance.description
+            : (description as String),
+        images: images == _undefined || images == null
+            ? _instance.images
+            : (images as List<Fragment$CardItem$item$$StudyTopic$images>),
+        lessonsProgress:
+            lessonsProgress == _undefined || lessonsProgress == null
+                ? _instance.lessonsProgress
+                : (lessonsProgress
+                    as Fragment$CardItem$item$$StudyTopic$lessonsProgress),
+      ));
+
+  TRes images(
+          Iterable<Fragment$CardItem$item$$StudyTopic$images> Function(
+                  Iterable<
+                      CopyWith$Fragment$CardItem$item$$StudyTopic$images<
+                          Fragment$CardItem$item$$StudyTopic$images>>)
+              _fn) =>
+      call(
+          images: _fn(_instance.images
+              .map((e) => CopyWith$Fragment$CardItem$item$$StudyTopic$images(
+                    e,
+                    (i) => i,
+                  ))).toList());
+
+  CopyWith$Fragment$CardItem$item$$StudyTopic$lessonsProgress<TRes>
+      get lessonsProgress {
+    final local$lessonsProgress = _instance.lessonsProgress;
+    return CopyWith$Fragment$CardItem$item$$StudyTopic$lessonsProgress(
+        local$lessonsProgress, (e) => call(lessonsProgress: e));
+  }
+}
+
+class _CopyWithStubImpl$Fragment$CardItem$item$$StudyTopic<TRes>
+    implements CopyWith$Fragment$CardItem$item$$StudyTopic<TRes> {
+  _CopyWithStubImpl$Fragment$CardItem$item$$StudyTopic(this._res);
+
+  TRes _res;
+
+  call({
+    String? $__typename,
+    String? id,
+    String? title,
+    String? description,
+    List<Fragment$CardItem$item$$StudyTopic$images>? images,
+    Fragment$CardItem$item$$StudyTopic$lessonsProgress? lessonsProgress,
+  }) =>
+      _res;
+
+  images(_fn) => _res;
+
+  CopyWith$Fragment$CardItem$item$$StudyTopic$lessonsProgress<TRes>
+      get lessonsProgress =>
+          CopyWith$Fragment$CardItem$item$$StudyTopic$lessonsProgress.stub(
+              _res);
+}
+
+class Fragment$CardItem$item$$Game
+    implements
+        Fragment$ItemSectionItem$item$$Game,
+        Fragment$NavigatableGame,
+        Fragment$CardItem$item {
+  Fragment$CardItem$item$$Game({
+    required this.uuid,
+    this.$__typename = 'Game',
+  });
+
+  factory Fragment$CardItem$item$$Game.fromJson(Map<String, dynamic> json) {
+    final l$uuid = json['uuid'];
+    final l$$__typename = json['__typename'];
+    return Fragment$CardItem$item$$Game(
+      uuid: (l$uuid as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String uuid;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$uuid = uuid;
+    _resultData['uuid'] = l$uuid;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$uuid = uuid;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$uuid,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Fragment$CardItem$item$$Game) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$uuid = uuid;
+    final lOther$uuid = other.uuid;
+    if (l$uuid != lOther$uuid) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$CardItem$item$$Game
+    on Fragment$CardItem$item$$Game {
+  CopyWith$Fragment$CardItem$item$$Game<Fragment$CardItem$item$$Game>
+      get copyWith => CopyWith$Fragment$CardItem$item$$Game(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$CardItem$item$$Game<TRes> {
+  factory CopyWith$Fragment$CardItem$item$$Game(
+    Fragment$CardItem$item$$Game instance,
+    TRes Function(Fragment$CardItem$item$$Game) then,
+  ) = _CopyWithImpl$Fragment$CardItem$item$$Game;
+
+  factory CopyWith$Fragment$CardItem$item$$Game.stub(TRes res) =
+      _CopyWithStubImpl$Fragment$CardItem$item$$Game;
+
+  TRes call({
+    String? uuid,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Fragment$CardItem$item$$Game<TRes>
+    implements CopyWith$Fragment$CardItem$item$$Game<TRes> {
+  _CopyWithImpl$Fragment$CardItem$item$$Game(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$CardItem$item$$Game _instance;
+
+  final TRes Function(Fragment$CardItem$item$$Game) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? uuid = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Fragment$CardItem$item$$Game(
+        uuid: uuid == _undefined || uuid == null
+            ? _instance.uuid
+            : (uuid as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Fragment$CardItem$item$$Game<TRes>
+    implements CopyWith$Fragment$CardItem$item$$Game<TRes> {
+  _CopyWithStubImpl$Fragment$CardItem$item$$Game(this._res);
+
+  TRes _res;
+
+  call({
+    String? uuid,
+    String? $__typename,
+  }) =>
+      _res;
+}
+
+class Fragment$CardItem$item$$Playlist
+    implements
+        Fragment$ItemSectionItem$item$$Playlist,
+        Fragment$NavigatablePlaylist,
+        Fragment$CardItem$item {
+  Fragment$CardItem$item$$Playlist({
+    required this.id,
+    this.$__typename = 'Playlist',
+  });
+
+  factory Fragment$CardItem$item$$Playlist.fromJson(Map<String, dynamic> json) {
+    final l$id = json['id'];
+    final l$$__typename = json['__typename'];
+    return Fragment$CardItem$item$$Playlist(
+      id: (l$id as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String id;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$id = id;
+    _resultData['id'] = l$id;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$id = id;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$id,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Fragment$CardItem$item$$Playlist) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$id = id;
+    final lOther$id = other.id;
+    if (l$id != lOther$id) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$CardItem$item$$Playlist
+    on Fragment$CardItem$item$$Playlist {
+  CopyWith$Fragment$CardItem$item$$Playlist<Fragment$CardItem$item$$Playlist>
+      get copyWith => CopyWith$Fragment$CardItem$item$$Playlist(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$CardItem$item$$Playlist<TRes> {
+  factory CopyWith$Fragment$CardItem$item$$Playlist(
+    Fragment$CardItem$item$$Playlist instance,
+    TRes Function(Fragment$CardItem$item$$Playlist) then,
+  ) = _CopyWithImpl$Fragment$CardItem$item$$Playlist;
+
+  factory CopyWith$Fragment$CardItem$item$$Playlist.stub(TRes res) =
+      _CopyWithStubImpl$Fragment$CardItem$item$$Playlist;
+
+  TRes call({
+    String? id,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Fragment$CardItem$item$$Playlist<TRes>
+    implements CopyWith$Fragment$CardItem$item$$Playlist<TRes> {
+  _CopyWithImpl$Fragment$CardItem$item$$Playlist(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$CardItem$item$$Playlist _instance;
+
+  final TRes Function(Fragment$CardItem$item$$Playlist) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? id = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Fragment$CardItem$item$$Playlist(
+        id: id == _undefined || id == null ? _instance.id : (id as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Fragment$CardItem$item$$Playlist<TRes>
+    implements CopyWith$Fragment$CardItem$item$$Playlist<TRes> {
+  _CopyWithStubImpl$Fragment$CardItem$item$$Playlist(this._res);
+
+  TRes _res;
+
+  call({
+    String? id,
+    String? $__typename,
+  }) =>
+      _res;
+}
+
+class Fragment$CardItem$item$$Short
+    implements
+        Fragment$ItemSectionItem$item$$Short,
+        Fragment$NavigatableShort,
+        Fragment$CardItem$item {
+  Fragment$CardItem$item$$Short({
+    required this.id,
+    this.$__typename = 'Short',
+  });
+
+  factory Fragment$CardItem$item$$Short.fromJson(Map<String, dynamic> json) {
+    final l$id = json['id'];
+    final l$$__typename = json['__typename'];
+    return Fragment$CardItem$item$$Short(
+      id: (l$id as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String id;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$id = id;
+    _resultData['id'] = l$id;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$id = id;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$id,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Fragment$CardItem$item$$Short) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$id = id;
+    final lOther$id = other.id;
+    if (l$id != lOther$id) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$CardItem$item$$Short
+    on Fragment$CardItem$item$$Short {
+  CopyWith$Fragment$CardItem$item$$Short<Fragment$CardItem$item$$Short>
+      get copyWith => CopyWith$Fragment$CardItem$item$$Short(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$CardItem$item$$Short<TRes> {
+  factory CopyWith$Fragment$CardItem$item$$Short(
+    Fragment$CardItem$item$$Short instance,
+    TRes Function(Fragment$CardItem$item$$Short) then,
+  ) = _CopyWithImpl$Fragment$CardItem$item$$Short;
+
+  factory CopyWith$Fragment$CardItem$item$$Short.stub(TRes res) =
+      _CopyWithStubImpl$Fragment$CardItem$item$$Short;
+
+  TRes call({
+    String? id,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Fragment$CardItem$item$$Short<TRes>
+    implements CopyWith$Fragment$CardItem$item$$Short<TRes> {
+  _CopyWithImpl$Fragment$CardItem$item$$Short(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$CardItem$item$$Short _instance;
+
+  final TRes Function(Fragment$CardItem$item$$Short) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? id = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Fragment$CardItem$item$$Short(
+        id: id == _undefined || id == null ? _instance.id : (id as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Fragment$CardItem$item$$Short<TRes>
+    implements CopyWith$Fragment$CardItem$item$$Short<TRes> {
+  _CopyWithStubImpl$Fragment$CardItem$item$$Short(this._res);
+
+  TRes _res;
+
+  call({
+    String? id,
+    String? $__typename,
+  }) =>
+      _res;
+}
+
+class Fragment$CardItem$item$$Person
+    implements
+        Fragment$ItemSectionItem$item$$Person,
+        Fragment$NavigatablePerson,
+        Fragment$CardItem$item {
+  Fragment$CardItem$item$$Person({
+    required this.id,
+    this.$__typename = 'Person',
+  });
+
+  factory Fragment$CardItem$item$$Person.fromJson(Map<String, dynamic> json) {
+    final l$id = json['id'];
+    final l$$__typename = json['__typename'];
+    return Fragment$CardItem$item$$Person(
+      id: (l$id as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String id;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$id = id;
+    _resultData['id'] = l$id;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$id = id;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$id,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Fragment$CardItem$item$$Person) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$id = id;
+    final lOther$id = other.id;
+    if (l$id != lOther$id) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$CardItem$item$$Person
+    on Fragment$CardItem$item$$Person {
+  CopyWith$Fragment$CardItem$item$$Person<Fragment$CardItem$item$$Person>
+      get copyWith => CopyWith$Fragment$CardItem$item$$Person(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$CardItem$item$$Person<TRes> {
+  factory CopyWith$Fragment$CardItem$item$$Person(
+    Fragment$CardItem$item$$Person instance,
+    TRes Function(Fragment$CardItem$item$$Person) then,
+  ) = _CopyWithImpl$Fragment$CardItem$item$$Person;
+
+  factory CopyWith$Fragment$CardItem$item$$Person.stub(TRes res) =
+      _CopyWithStubImpl$Fragment$CardItem$item$$Person;
+
+  TRes call({
+    String? id,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Fragment$CardItem$item$$Person<TRes>
+    implements CopyWith$Fragment$CardItem$item$$Person<TRes> {
+  _CopyWithImpl$Fragment$CardItem$item$$Person(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$CardItem$item$$Person _instance;
+
+  final TRes Function(Fragment$CardItem$item$$Person) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? id = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Fragment$CardItem$item$$Person(
+        id: id == _undefined || id == null ? _instance.id : (id as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Fragment$CardItem$item$$Person<TRes>
+    implements CopyWith$Fragment$CardItem$item$$Person<TRes> {
+  _CopyWithStubImpl$Fragment$CardItem$item$$Person(this._res);
+
+  TRes _res;
+
+  call({
+    String? id,
+    String? $__typename,
+  }) =>
+      _res;
+}
+
+class Fragment$CardItem$item$$StudyTopic$images {
+  Fragment$CardItem$item$$StudyTopic$images({
+    required this.style,
+    required this.url,
+    this.$__typename = 'Image',
+  });
+
+  factory Fragment$CardItem$item$$StudyTopic$images.fromJson(
+      Map<String, dynamic> json) {
+    final l$style = json['style'];
+    final l$url = json['url'];
+    final l$$__typename = json['__typename'];
+    return Fragment$CardItem$item$$StudyTopic$images(
+      style: (l$style as String),
+      url: (l$url as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String style;
+
+  final String url;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$style = style;
+    _resultData['style'] = l$style;
+    final l$url = url;
+    _resultData['url'] = l$url;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$style = style;
+    final l$url = url;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$style,
+      l$url,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Fragment$CardItem$item$$StudyTopic$images) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$style = style;
+    final lOther$style = other.style;
+    if (l$style != lOther$style) {
+      return false;
+    }
+    final l$url = url;
+    final lOther$url = other.url;
+    if (l$url != lOther$url) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$CardItem$item$$StudyTopic$images
+    on Fragment$CardItem$item$$StudyTopic$images {
+  CopyWith$Fragment$CardItem$item$$StudyTopic$images<
+          Fragment$CardItem$item$$StudyTopic$images>
+      get copyWith => CopyWith$Fragment$CardItem$item$$StudyTopic$images(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$CardItem$item$$StudyTopic$images<TRes> {
+  factory CopyWith$Fragment$CardItem$item$$StudyTopic$images(
+    Fragment$CardItem$item$$StudyTopic$images instance,
+    TRes Function(Fragment$CardItem$item$$StudyTopic$images) then,
+  ) = _CopyWithImpl$Fragment$CardItem$item$$StudyTopic$images;
+
+  factory CopyWith$Fragment$CardItem$item$$StudyTopic$images.stub(TRes res) =
+      _CopyWithStubImpl$Fragment$CardItem$item$$StudyTopic$images;
+
+  TRes call({
+    String? style,
+    String? url,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Fragment$CardItem$item$$StudyTopic$images<TRes>
+    implements CopyWith$Fragment$CardItem$item$$StudyTopic$images<TRes> {
+  _CopyWithImpl$Fragment$CardItem$item$$StudyTopic$images(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$CardItem$item$$StudyTopic$images _instance;
+
+  final TRes Function(Fragment$CardItem$item$$StudyTopic$images) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? style = _undefined,
+    Object? url = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Fragment$CardItem$item$$StudyTopic$images(
+        style: style == _undefined || style == null
+            ? _instance.style
+            : (style as String),
+        url: url == _undefined || url == null ? _instance.url : (url as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Fragment$CardItem$item$$StudyTopic$images<TRes>
+    implements CopyWith$Fragment$CardItem$item$$StudyTopic$images<TRes> {
+  _CopyWithStubImpl$Fragment$CardItem$item$$StudyTopic$images(this._res);
+
+  TRes _res;
+
+  call({
+    String? style,
+    String? url,
+    String? $__typename,
+  }) =>
+      _res;
+}
+
+class Fragment$CardItem$item$$StudyTopic$lessonsProgress {
+  Fragment$CardItem$item$$StudyTopic$lessonsProgress({
+    required this.completed,
+    required this.total,
+    this.$__typename = 'LessonsProgress',
+  });
+
+  factory Fragment$CardItem$item$$StudyTopic$lessonsProgress.fromJson(
+      Map<String, dynamic> json) {
+    final l$completed = json['completed'];
+    final l$total = json['total'];
+    final l$$__typename = json['__typename'];
+    return Fragment$CardItem$item$$StudyTopic$lessonsProgress(
+      completed: (l$completed as int),
+      total: (l$total as int),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final int completed;
+
+  final int total;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$completed = completed;
+    _resultData['completed'] = l$completed;
+    final l$total = total;
+    _resultData['total'] = l$total;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$completed = completed;
+    final l$total = total;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$completed,
+      l$total,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Fragment$CardItem$item$$StudyTopic$lessonsProgress) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$completed = completed;
+    final lOther$completed = other.completed;
+    if (l$completed != lOther$completed) {
+      return false;
+    }
+    final l$total = total;
+    final lOther$total = other.total;
+    if (l$total != lOther$total) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$CardItem$item$$StudyTopic$lessonsProgress
+    on Fragment$CardItem$item$$StudyTopic$lessonsProgress {
+  CopyWith$Fragment$CardItem$item$$StudyTopic$lessonsProgress<
+          Fragment$CardItem$item$$StudyTopic$lessonsProgress>
+      get copyWith =>
+          CopyWith$Fragment$CardItem$item$$StudyTopic$lessonsProgress(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$CardItem$item$$StudyTopic$lessonsProgress<
+    TRes> {
+  factory CopyWith$Fragment$CardItem$item$$StudyTopic$lessonsProgress(
+    Fragment$CardItem$item$$StudyTopic$lessonsProgress instance,
+    TRes Function(Fragment$CardItem$item$$StudyTopic$lessonsProgress) then,
+  ) = _CopyWithImpl$Fragment$CardItem$item$$StudyTopic$lessonsProgress;
+
+  factory CopyWith$Fragment$CardItem$item$$StudyTopic$lessonsProgress.stub(
+          TRes res) =
+      _CopyWithStubImpl$Fragment$CardItem$item$$StudyTopic$lessonsProgress;
+
+  TRes call({
+    int? completed,
+    int? total,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Fragment$CardItem$item$$StudyTopic$lessonsProgress<TRes>
+    implements
+        CopyWith$Fragment$CardItem$item$$StudyTopic$lessonsProgress<TRes> {
+  _CopyWithImpl$Fragment$CardItem$item$$StudyTopic$lessonsProgress(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$CardItem$item$$StudyTopic$lessonsProgress _instance;
+
+  final TRes Function(Fragment$CardItem$item$$StudyTopic$lessonsProgress) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? completed = _undefined,
+    Object? total = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Fragment$CardItem$item$$StudyTopic$lessonsProgress(
+        completed: completed == _undefined || completed == null
+            ? _instance.completed
+            : (completed as int),
+        total: total == _undefined || total == null
+            ? _instance.total
+            : (total as int),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Fragment$CardItem$item$$StudyTopic$lessonsProgress<TRes>
+    implements
+        CopyWith$Fragment$CardItem$item$$StudyTopic$lessonsProgress<TRes> {
+  _CopyWithStubImpl$Fragment$CardItem$item$$StudyTopic$lessonsProgress(
+      this._res);
+
+  TRes _res;
+
+  call({
+    int? completed,
+    int? total,
+    String? $__typename,
+  }) =>
+      _res;
+}
+
 class Variables$Query$Page {
   factory Variables$Query$Page({
     required String code,
@@ -55443,6 +61416,7 @@ const documentNodeQueryPage = DocumentNode(definitions: [
   fragmentDefinitionNavigatableShow,
   fragmentDefinitionGridSection,
   fragmentDefinitionGridSectionItem,
+  fragmentDefinitionCardItem,
 ]);
 Query$Page _parserFn$Query$Page(Map<String, dynamic> data) =>
     Query$Page.fromJson(data);

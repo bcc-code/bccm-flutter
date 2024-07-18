@@ -213,28 +213,19 @@ fragment Section on Section {
       }
     }
   }
+  ... on CardListSection {
+    cardSize: size
+    items(first: $first, offset: $offset) {
+      items {
+        ...CardItem
+      }
+    }
+  }
   ... on CardSection {
     cardSize: size
     items(first: $first, offset: $offset) {
       items {
-        title
-        description
-        image
-        item {
-          ... on StudyTopic {
-            id
-            title
-            description
-            images {
-              style
-              url
-            }
-            lessonsProgress: progress {
-              completed
-              total
-            }
-          }
-        }
+        ...CardItem
       }
     }
   }
@@ -246,6 +237,28 @@ fragment Section on Section {
     __typename
   }
   __typename
+}
+
+fragment CardItem on SectionItem {
+  ...ItemSectionItem
+  title
+  description
+  image
+  item {
+    ... on StudyTopic {
+      id
+      title
+      description
+      images {
+        style
+        url
+      }
+      lessonsProgress: progress {
+        completed
+        total
+      }
+    }
+  }
 }
 
 query Page($code: String!, $first: Int, $offset: Int) {
