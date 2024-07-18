@@ -67,6 +67,9 @@ fragment Contribution on Contribution {
       duration
       episode {
         ...EpisodeListEpisode
+        season {
+          title
+        }
       }
     }
     ... on Episode {

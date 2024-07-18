@@ -305,6 +305,28 @@ const fragmentDefinitionContribution = FragmentDefinitionNode(
                   directives: [],
                 ),
                 FieldNode(
+                  name: NameNode(value: 'season'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: SelectionSetNode(selections: [
+                    FieldNode(
+                      name: NameNode(value: 'title'),
+                      alias: null,
+                      arguments: [],
+                      directives: [],
+                      selectionSet: null,
+                    ),
+                    FieldNode(
+                      name: NameNode(value: '__typename'),
+                      alias: null,
+                      arguments: [],
+                      directives: [],
+                      selectionSet: null,
+                    ),
+                  ]),
+                ),
+                FieldNode(
                   name: NameNode(value: '__typename'),
                   alias: null,
                   arguments: [],
@@ -1768,16 +1790,19 @@ class Fragment$Contribution$item$$Chapter$episode$season
   Fragment$Contribution$item$$Chapter$episode$season({
     required this.$show,
     this.$__typename = 'Season',
+    required this.title,
   });
 
   factory Fragment$Contribution$item$$Chapter$episode$season.fromJson(
       Map<String, dynamic> json) {
     final l$$show = json['show'];
     final l$$__typename = json['__typename'];
+    final l$title = json['title'];
     return Fragment$Contribution$item$$Chapter$episode$season(
       $show: Fragment$Contribution$item$$Chapter$episode$season$show.fromJson(
           (l$$show as Map<String, dynamic>)),
       $__typename: (l$$__typename as String),
+      title: (l$title as String),
     );
   }
 
@@ -1785,12 +1810,16 @@ class Fragment$Contribution$item$$Chapter$episode$season
 
   final String $__typename;
 
+  final String title;
+
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
     final l$$show = $show;
     _resultData['show'] = l$$show.toJson();
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
+    final l$title = title;
+    _resultData['title'] = l$title;
     return _resultData;
   }
 
@@ -1798,9 +1827,11 @@ class Fragment$Contribution$item$$Chapter$episode$season
   int get hashCode {
     final l$$show = $show;
     final l$$__typename = $__typename;
+    final l$title = title;
     return Object.hashAll([
       l$$show,
       l$$__typename,
+      l$title,
     ]);
   }
 
@@ -1821,6 +1852,11 @@ class Fragment$Contribution$item$$Chapter$episode$season
     final l$$__typename = $__typename;
     final lOther$$__typename = other.$__typename;
     if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    final l$title = title;
+    final lOther$title = other.title;
+    if (l$title != lOther$title) {
       return false;
     }
     return true;
@@ -1852,6 +1888,7 @@ abstract class CopyWith$Fragment$Contribution$item$$Chapter$episode$season<
   TRes call({
     Fragment$Contribution$item$$Chapter$episode$season$show? $show,
     String? $__typename,
+    String? title,
   });
   CopyWith$Fragment$Contribution$item$$Chapter$episode$season$show<TRes>
       get $show;
@@ -1874,6 +1911,7 @@ class _CopyWithImpl$Fragment$Contribution$item$$Chapter$episode$season<TRes>
   TRes call({
     Object? $show = _undefined,
     Object? $__typename = _undefined,
+    Object? title = _undefined,
   }) =>
       _then(Fragment$Contribution$item$$Chapter$episode$season(
         $show: $show == _undefined || $show == null
@@ -1883,6 +1921,9 @@ class _CopyWithImpl$Fragment$Contribution$item$$Chapter$episode$season<TRes>
         $__typename: $__typename == _undefined || $__typename == null
             ? _instance.$__typename
             : ($__typename as String),
+        title: title == _undefined || title == null
+            ? _instance.title
+            : (title as String),
       ));
 
   CopyWith$Fragment$Contribution$item$$Chapter$episode$season$show<TRes>
@@ -1904,6 +1945,7 @@ class _CopyWithStubImpl$Fragment$Contribution$item$$Chapter$episode$season<TRes>
   call({
     Fragment$Contribution$item$$Chapter$episode$season$show? $show,
     String? $__typename,
+    String? title,
   }) =>
       _res;
 
