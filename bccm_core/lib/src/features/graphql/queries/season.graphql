@@ -1,8 +1,8 @@
-query GetSeasonEpisodes($id: ID!) {
+query GetSeasonEpisodes($id: ID!, $dir: String) {
   season(id: $id) {
     id
     number
-    episodes {
+    episodes(dir: $dir) {
       items {
         ...SeasonListEpisode
       }

@@ -453,6 +453,7 @@ const documentNodeQueryFetchMoreItemsForItemSection =
   fragmentDefinitionNavigatableShort,
   fragmentDefinitionNavigatableEpisode,
   fragmentDefinitionNavigatableShow,
+  fragmentDefinitionEpisodeThumbnail,
   fragmentDefinitionGridSection,
   fragmentDefinitionGridSectionItem,
   fragmentDefinitionCardItem,
@@ -2687,14 +2688,18 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item
     implements
         Fragment$Section$$PosterSection$items$items$item$$Episode,
         Fragment$ItemSectionItem$item$$Episode,
+        Fragment$EpisodeThumbnail,
         Fragment$NavigatableEpisode,
         Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item {
   Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Episode({
     required this.id,
+    required this.title,
     required this.duration,
     required this.locked,
     this.progress,
+    this.image,
     required this.publishDate,
+    this.number,
     this.season,
     this.$__typename = 'Episode',
     required this.productionDate,
@@ -2703,19 +2708,25 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item
   factory Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Episode.fromJson(
       Map<String, dynamic> json) {
     final l$id = json['id'];
+    final l$title = json['title'];
     final l$duration = json['duration'];
     final l$locked = json['locked'];
     final l$progress = json['progress'];
+    final l$image = json['image'];
     final l$publishDate = json['publishDate'];
+    final l$number = json['number'];
     final l$season = json['season'];
     final l$$__typename = json['__typename'];
     final l$productionDate = json['productionDate'];
     return Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Episode(
       id: (l$id as String),
+      title: (l$title as String),
       duration: (l$duration as int),
       locked: (l$locked as bool),
       progress: (l$progress as int?),
+      image: (l$image as String?),
       publishDate: (l$publishDate as String),
+      number: (l$number as int?),
       season: l$season == null
           ? null
           : Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Episode$season
@@ -2727,13 +2738,19 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item
 
   final String id;
 
+  final String title;
+
   final int duration;
 
   final bool locked;
 
   final int? progress;
 
+  final String? image;
+
   final String publishDate;
+
+  final int? number;
 
   final Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Episode$season?
       season;
@@ -2746,14 +2763,20 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item
     final _resultData = <String, dynamic>{};
     final l$id = id;
     _resultData['id'] = l$id;
+    final l$title = title;
+    _resultData['title'] = l$title;
     final l$duration = duration;
     _resultData['duration'] = l$duration;
     final l$locked = locked;
     _resultData['locked'] = l$locked;
     final l$progress = progress;
     _resultData['progress'] = l$progress;
+    final l$image = image;
+    _resultData['image'] = l$image;
     final l$publishDate = publishDate;
     _resultData['publishDate'] = l$publishDate;
+    final l$number = number;
+    _resultData['number'] = l$number;
     final l$season = season;
     _resultData['season'] = l$season?.toJson();
     final l$$__typename = $__typename;
@@ -2766,19 +2789,25 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item
   @override
   int get hashCode {
     final l$id = id;
+    final l$title = title;
     final l$duration = duration;
     final l$locked = locked;
     final l$progress = progress;
+    final l$image = image;
     final l$publishDate = publishDate;
+    final l$number = number;
     final l$season = season;
     final l$$__typename = $__typename;
     final l$productionDate = productionDate;
     return Object.hashAll([
       l$id,
+      l$title,
       l$duration,
       l$locked,
       l$progress,
+      l$image,
       l$publishDate,
+      l$number,
       l$season,
       l$$__typename,
       l$productionDate,
@@ -2800,6 +2829,11 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item
     if (l$id != lOther$id) {
       return false;
     }
+    final l$title = title;
+    final lOther$title = other.title;
+    if (l$title != lOther$title) {
+      return false;
+    }
     final l$duration = duration;
     final lOther$duration = other.duration;
     if (l$duration != lOther$duration) {
@@ -2815,9 +2849,19 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item
     if (l$progress != lOther$progress) {
       return false;
     }
+    final l$image = image;
+    final lOther$image = other.image;
+    if (l$image != lOther$image) {
+      return false;
+    }
     final l$publishDate = publishDate;
     final lOther$publishDate = other.publishDate;
     if (l$publishDate != lOther$publishDate) {
+      return false;
+    }
+    final l$number = number;
+    final lOther$number = other.number;
+    if (l$number != lOther$number) {
       return false;
     }
     final l$season = season;
@@ -2866,10 +2910,13 @@ abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterSectio
 
   TRes call({
     String? id,
+    String? title,
     int? duration,
     bool? locked,
     int? progress,
+    String? image,
     String? publishDate,
+    int? number,
     Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Episode$season?
         season,
     String? $__typename,
@@ -2900,10 +2947,13 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$PosterSection$it
 
   TRes call({
     Object? id = _undefined,
+    Object? title = _undefined,
     Object? duration = _undefined,
     Object? locked = _undefined,
     Object? progress = _undefined,
+    Object? image = _undefined,
     Object? publishDate = _undefined,
+    Object? number = _undefined,
     Object? season = _undefined,
     Object? $__typename = _undefined,
     Object? productionDate = _undefined,
@@ -2911,6 +2961,9 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$PosterSection$it
       _then(
           Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Episode(
         id: id == _undefined || id == null ? _instance.id : (id as String),
+        title: title == _undefined || title == null
+            ? _instance.title
+            : (title as String),
         duration: duration == _undefined || duration == null
             ? _instance.duration
             : (duration as int),
@@ -2919,9 +2972,11 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$PosterSection$it
             : (locked as bool),
         progress:
             progress == _undefined ? _instance.progress : (progress as int?),
+        image: image == _undefined ? _instance.image : (image as String?),
         publishDate: publishDate == _undefined || publishDate == null
             ? _instance.publishDate
             : (publishDate as String),
+        number: number == _undefined ? _instance.number : (number as int?),
         season: season == _undefined
             ? _instance.season
             : (season
@@ -2957,10 +3012,13 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$PosterSectio
 
   call({
     String? id,
+    String? title,
     int? duration,
     bool? locked,
     int? progress,
+    String? image,
     String? publishDate,
+    int? number,
     Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Episode$season?
         season,
     String? $__typename,
@@ -2978,23 +3036,29 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$PosterSectio
 class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Episode$season
     implements
         Fragment$Section$$PosterSection$items$items$item$$Episode$season,
-        Fragment$ItemSectionItem$item$$Episode$season {
+        Fragment$ItemSectionItem$item$$Episode$season,
+        Fragment$EpisodeThumbnail$season {
   Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Episode$season({
+    required this.number,
     required this.$show,
     this.$__typename = 'Season',
   });
 
   factory Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Episode$season.fromJson(
       Map<String, dynamic> json) {
+    final l$number = json['number'];
     final l$$show = json['show'];
     final l$$__typename = json['__typename'];
     return Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Episode$season(
+      number: (l$number as int),
       $show:
           Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Episode$season$show
               .fromJson((l$$show as Map<String, dynamic>)),
       $__typename: (l$$__typename as String),
     );
   }
+
+  final int number;
 
   final Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Episode$season$show
       $show;
@@ -3003,6 +3067,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item
 
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
+    final l$number = number;
+    _resultData['number'] = l$number;
     final l$$show = $show;
     _resultData['show'] = l$$show.toJson();
     final l$$__typename = $__typename;
@@ -3012,9 +3078,11 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item
 
   @override
   int get hashCode {
+    final l$number = number;
     final l$$show = $show;
     final l$$__typename = $__typename;
     return Object.hashAll([
+      l$number,
       l$$show,
       l$$__typename,
     ]);
@@ -3028,6 +3096,11 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item
     if (!(other
             is Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Episode$season) ||
         runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$number = number;
+    final lOther$number = other.number;
+    if (l$number != lOther$number) {
       return false;
     }
     final l$$show = $show;
@@ -3070,6 +3143,7 @@ abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterSectio
       _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Episode$season;
 
   TRes call({
+    int? number,
     Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Episode$season$show?
         $show,
     String? $__typename,
@@ -3098,11 +3172,15 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$PosterSection$it
   static const _undefined = <dynamic, dynamic>{};
 
   TRes call({
+    Object? number = _undefined,
     Object? $show = _undefined,
     Object? $__typename = _undefined,
   }) =>
       _then(
           Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Episode$season(
+        number: number == _undefined || number == null
+            ? _instance.number
+            : (number as int),
         $show: $show == _undefined || $show == null
             ? _instance.$show
             : ($show
@@ -3131,6 +3209,7 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$PosterSectio
   TRes _res;
 
   call({
+    int? number,
     Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Episode$season$show?
         $show,
     String? $__typename,
@@ -3147,7 +3226,8 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$PosterSectio
 class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Episode$season$show
     implements
         Fragment$Section$$PosterSection$items$items$item$$Episode$season$show,
-        Fragment$ItemSectionItem$item$$Episode$season$show {
+        Fragment$ItemSectionItem$item$$Episode$season$show,
+        Fragment$EpisodeThumbnail$season$show {
   Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Episode$season$show({
     required this.title,
     this.$__typename = 'Show',
@@ -7849,14 +7929,18 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$it
     implements
         Fragment$Section$$FeaturedSection$items$items$item$$Episode,
         Fragment$ItemSectionItem$item$$Episode,
+        Fragment$EpisodeThumbnail,
         Fragment$NavigatableEpisode,
         Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item {
   Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Episode({
     required this.id,
+    required this.title,
     required this.duration,
     required this.locked,
     this.progress,
+    this.image,
     required this.publishDate,
+    this.number,
     this.season,
     this.$__typename = 'Episode',
   });
@@ -7864,18 +7948,24 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$it
   factory Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Episode.fromJson(
       Map<String, dynamic> json) {
     final l$id = json['id'];
+    final l$title = json['title'];
     final l$duration = json['duration'];
     final l$locked = json['locked'];
     final l$progress = json['progress'];
+    final l$image = json['image'];
     final l$publishDate = json['publishDate'];
+    final l$number = json['number'];
     final l$season = json['season'];
     final l$$__typename = json['__typename'];
     return Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Episode(
       id: (l$id as String),
+      title: (l$title as String),
       duration: (l$duration as int),
       locked: (l$locked as bool),
       progress: (l$progress as int?),
+      image: (l$image as String?),
       publishDate: (l$publishDate as String),
+      number: (l$number as int?),
       season: l$season == null
           ? null
           : Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Episode$season
@@ -7886,13 +7976,19 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$it
 
   final String id;
 
+  final String title;
+
   final int duration;
 
   final bool locked;
 
   final int? progress;
 
+  final String? image;
+
   final String publishDate;
+
+  final int? number;
 
   final Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Episode$season?
       season;
@@ -7903,14 +7999,20 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$it
     final _resultData = <String, dynamic>{};
     final l$id = id;
     _resultData['id'] = l$id;
+    final l$title = title;
+    _resultData['title'] = l$title;
     final l$duration = duration;
     _resultData['duration'] = l$duration;
     final l$locked = locked;
     _resultData['locked'] = l$locked;
     final l$progress = progress;
     _resultData['progress'] = l$progress;
+    final l$image = image;
+    _resultData['image'] = l$image;
     final l$publishDate = publishDate;
     _resultData['publishDate'] = l$publishDate;
+    final l$number = number;
+    _resultData['number'] = l$number;
     final l$season = season;
     _resultData['season'] = l$season?.toJson();
     final l$$__typename = $__typename;
@@ -7921,18 +8023,24 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$it
   @override
   int get hashCode {
     final l$id = id;
+    final l$title = title;
     final l$duration = duration;
     final l$locked = locked;
     final l$progress = progress;
+    final l$image = image;
     final l$publishDate = publishDate;
+    final l$number = number;
     final l$season = season;
     final l$$__typename = $__typename;
     return Object.hashAll([
       l$id,
+      l$title,
       l$duration,
       l$locked,
       l$progress,
+      l$image,
       l$publishDate,
+      l$number,
       l$season,
       l$$__typename,
     ]);
@@ -7953,6 +8061,11 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$it
     if (l$id != lOther$id) {
       return false;
     }
+    final l$title = title;
+    final lOther$title = other.title;
+    if (l$title != lOther$title) {
+      return false;
+    }
     final l$duration = duration;
     final lOther$duration = other.duration;
     if (l$duration != lOther$duration) {
@@ -7968,9 +8081,19 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$it
     if (l$progress != lOther$progress) {
       return false;
     }
+    final l$image = image;
+    final lOther$image = other.image;
+    if (l$image != lOther$image) {
+      return false;
+    }
     final l$publishDate = publishDate;
     final lOther$publishDate = other.publishDate;
     if (l$publishDate != lOther$publishDate) {
+      return false;
+    }
+    final l$number = number;
+    final lOther$number = other.number;
+    if (l$number != lOther$number) {
       return false;
     }
     final l$season = season;
@@ -8014,10 +8137,13 @@ abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$FeaturedSect
 
   TRes call({
     String? id,
+    String? title,
     int? duration,
     bool? locked,
     int? progress,
+    String? image,
     String? publishDate,
+    int? number,
     Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Episode$season?
         season,
     String? $__typename,
@@ -8047,16 +8173,22 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$
 
   TRes call({
     Object? id = _undefined,
+    Object? title = _undefined,
     Object? duration = _undefined,
     Object? locked = _undefined,
     Object? progress = _undefined,
+    Object? image = _undefined,
     Object? publishDate = _undefined,
+    Object? number = _undefined,
     Object? season = _undefined,
     Object? $__typename = _undefined,
   }) =>
       _then(
           Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Episode(
         id: id == _undefined || id == null ? _instance.id : (id as String),
+        title: title == _undefined || title == null
+            ? _instance.title
+            : (title as String),
         duration: duration == _undefined || duration == null
             ? _instance.duration
             : (duration as int),
@@ -8065,9 +8197,11 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$
             : (locked as bool),
         progress:
             progress == _undefined ? _instance.progress : (progress as int?),
+        image: image == _undefined ? _instance.image : (image as String?),
         publishDate: publishDate == _undefined || publishDate == null
             ? _instance.publishDate
             : (publishDate as String),
+        number: number == _undefined ? _instance.number : (number as int?),
         season: season == _undefined
             ? _instance.season
             : (season
@@ -8100,10 +8234,13 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$FeaturedSect
 
   call({
     String? id,
+    String? title,
     int? duration,
     bool? locked,
     int? progress,
+    String? image,
     String? publishDate,
+    int? number,
     Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Episode$season?
         season,
     String? $__typename,
@@ -8120,23 +8257,29 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$FeaturedSect
 class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Episode$season
     implements
         Fragment$Section$$FeaturedSection$items$items$item$$Episode$season,
-        Fragment$ItemSectionItem$item$$Episode$season {
+        Fragment$ItemSectionItem$item$$Episode$season,
+        Fragment$EpisodeThumbnail$season {
   Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Episode$season({
+    required this.number,
     required this.$show,
     this.$__typename = 'Season',
   });
 
   factory Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Episode$season.fromJson(
       Map<String, dynamic> json) {
+    final l$number = json['number'];
     final l$$show = json['show'];
     final l$$__typename = json['__typename'];
     return Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Episode$season(
+      number: (l$number as int),
       $show:
           Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Episode$season$show
               .fromJson((l$$show as Map<String, dynamic>)),
       $__typename: (l$$__typename as String),
     );
   }
+
+  final int number;
 
   final Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Episode$season$show
       $show;
@@ -8145,6 +8288,8 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$it
 
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
+    final l$number = number;
+    _resultData['number'] = l$number;
     final l$$show = $show;
     _resultData['show'] = l$$show.toJson();
     final l$$__typename = $__typename;
@@ -8154,9 +8299,11 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$it
 
   @override
   int get hashCode {
+    final l$number = number;
     final l$$show = $show;
     final l$$__typename = $__typename;
     return Object.hashAll([
+      l$number,
       l$$show,
       l$$__typename,
     ]);
@@ -8170,6 +8317,11 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$it
     if (!(other
             is Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Episode$season) ||
         runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$number = number;
+    final lOther$number = other.number;
+    if (l$number != lOther$number) {
       return false;
     }
     final l$$show = $show;
@@ -8212,6 +8364,7 @@ abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$FeaturedSect
       _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Episode$season;
 
   TRes call({
+    int? number,
     Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Episode$season$show?
         $show,
     String? $__typename,
@@ -8240,11 +8393,15 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$
   static const _undefined = <dynamic, dynamic>{};
 
   TRes call({
+    Object? number = _undefined,
     Object? $show = _undefined,
     Object? $__typename = _undefined,
   }) =>
       _then(
           Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Episode$season(
+        number: number == _undefined || number == null
+            ? _instance.number
+            : (number as int),
         $show: $show == _undefined || $show == null
             ? _instance.$show
             : ($show
@@ -8273,6 +8430,7 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$FeaturedSect
   TRes _res;
 
   call({
+    int? number,
     Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Episode$season$show?
         $show,
     String? $__typename,
@@ -8289,7 +8447,8 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$FeaturedSect
 class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Episode$season$show
     implements
         Fragment$Section$$FeaturedSection$items$items$item$$Episode$season$show,
-        Fragment$ItemSectionItem$item$$Episode$season$show {
+        Fragment$ItemSectionItem$item$$Episode$season$show,
+        Fragment$EpisodeThumbnail$season$show {
   Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Episode$season$show({
     required this.title,
     this.$__typename = 'Show',
@@ -11483,14 +11642,18 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$ite
     implements
         Fragment$Section$$DefaultSection$items$items$item$$Episode,
         Fragment$ItemSectionItem$item$$Episode,
+        Fragment$EpisodeThumbnail,
         Fragment$NavigatableEpisode,
         Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item {
   Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Episode({
     required this.id,
+    required this.title,
     required this.duration,
     required this.locked,
     this.progress,
+    this.image,
     required this.publishDate,
+    this.number,
     this.season,
     this.$__typename = 'Episode',
     required this.productionDate,
@@ -11499,19 +11662,25 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$ite
   factory Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Episode.fromJson(
       Map<String, dynamic> json) {
     final l$id = json['id'];
+    final l$title = json['title'];
     final l$duration = json['duration'];
     final l$locked = json['locked'];
     final l$progress = json['progress'];
+    final l$image = json['image'];
     final l$publishDate = json['publishDate'];
+    final l$number = json['number'];
     final l$season = json['season'];
     final l$$__typename = json['__typename'];
     final l$productionDate = json['productionDate'];
     return Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Episode(
       id: (l$id as String),
+      title: (l$title as String),
       duration: (l$duration as int),
       locked: (l$locked as bool),
       progress: (l$progress as int?),
+      image: (l$image as String?),
       publishDate: (l$publishDate as String),
+      number: (l$number as int?),
       season: l$season == null
           ? null
           : Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Episode$season
@@ -11523,13 +11692,19 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$ite
 
   final String id;
 
+  final String title;
+
   final int duration;
 
   final bool locked;
 
   final int? progress;
 
+  final String? image;
+
   final String publishDate;
+
+  final int? number;
 
   final Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Episode$season?
       season;
@@ -11542,14 +11717,20 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$ite
     final _resultData = <String, dynamic>{};
     final l$id = id;
     _resultData['id'] = l$id;
+    final l$title = title;
+    _resultData['title'] = l$title;
     final l$duration = duration;
     _resultData['duration'] = l$duration;
     final l$locked = locked;
     _resultData['locked'] = l$locked;
     final l$progress = progress;
     _resultData['progress'] = l$progress;
+    final l$image = image;
+    _resultData['image'] = l$image;
     final l$publishDate = publishDate;
     _resultData['publishDate'] = l$publishDate;
+    final l$number = number;
+    _resultData['number'] = l$number;
     final l$season = season;
     _resultData['season'] = l$season?.toJson();
     final l$$__typename = $__typename;
@@ -11562,19 +11743,25 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$ite
   @override
   int get hashCode {
     final l$id = id;
+    final l$title = title;
     final l$duration = duration;
     final l$locked = locked;
     final l$progress = progress;
+    final l$image = image;
     final l$publishDate = publishDate;
+    final l$number = number;
     final l$season = season;
     final l$$__typename = $__typename;
     final l$productionDate = productionDate;
     return Object.hashAll([
       l$id,
+      l$title,
       l$duration,
       l$locked,
       l$progress,
+      l$image,
       l$publishDate,
+      l$number,
       l$season,
       l$$__typename,
       l$productionDate,
@@ -11596,6 +11783,11 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$ite
     if (l$id != lOther$id) {
       return false;
     }
+    final l$title = title;
+    final lOther$title = other.title;
+    if (l$title != lOther$title) {
+      return false;
+    }
     final l$duration = duration;
     final lOther$duration = other.duration;
     if (l$duration != lOther$duration) {
@@ -11611,9 +11803,19 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$ite
     if (l$progress != lOther$progress) {
       return false;
     }
+    final l$image = image;
+    final lOther$image = other.image;
+    if (l$image != lOther$image) {
+      return false;
+    }
     final l$publishDate = publishDate;
     final lOther$publishDate = other.publishDate;
     if (l$publishDate != lOther$publishDate) {
+      return false;
+    }
+    final l$number = number;
+    final lOther$number = other.number;
+    if (l$number != lOther$number) {
       return false;
     }
     final l$season = season;
@@ -11662,10 +11864,13 @@ abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultSecti
 
   TRes call({
     String? id,
+    String? title,
     int? duration,
     bool? locked,
     int? progress,
+    String? image,
     String? publishDate,
+    int? number,
     Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Episode$season?
         season,
     String? $__typename,
@@ -11696,10 +11901,13 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$DefaultSection$i
 
   TRes call({
     Object? id = _undefined,
+    Object? title = _undefined,
     Object? duration = _undefined,
     Object? locked = _undefined,
     Object? progress = _undefined,
+    Object? image = _undefined,
     Object? publishDate = _undefined,
+    Object? number = _undefined,
     Object? season = _undefined,
     Object? $__typename = _undefined,
     Object? productionDate = _undefined,
@@ -11707,6 +11915,9 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$DefaultSection$i
       _then(
           Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Episode(
         id: id == _undefined || id == null ? _instance.id : (id as String),
+        title: title == _undefined || title == null
+            ? _instance.title
+            : (title as String),
         duration: duration == _undefined || duration == null
             ? _instance.duration
             : (duration as int),
@@ -11715,9 +11926,11 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$DefaultSection$i
             : (locked as bool),
         progress:
             progress == _undefined ? _instance.progress : (progress as int?),
+        image: image == _undefined ? _instance.image : (image as String?),
         publishDate: publishDate == _undefined || publishDate == null
             ? _instance.publishDate
             : (publishDate as String),
+        number: number == _undefined ? _instance.number : (number as int?),
         season: season == _undefined
             ? _instance.season
             : (season
@@ -11753,10 +11966,13 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$DefaultSecti
 
   call({
     String? id,
+    String? title,
     int? duration,
     bool? locked,
     int? progress,
+    String? image,
     String? publishDate,
+    int? number,
     Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Episode$season?
         season,
     String? $__typename,
@@ -11774,23 +11990,29 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$DefaultSecti
 class Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Episode$season
     implements
         Fragment$Section$$DefaultSection$items$items$item$$Episode$season,
-        Fragment$ItemSectionItem$item$$Episode$season {
+        Fragment$ItemSectionItem$item$$Episode$season,
+        Fragment$EpisodeThumbnail$season {
   Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Episode$season({
+    required this.number,
     required this.$show,
     this.$__typename = 'Season',
   });
 
   factory Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Episode$season.fromJson(
       Map<String, dynamic> json) {
+    final l$number = json['number'];
     final l$$show = json['show'];
     final l$$__typename = json['__typename'];
     return Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Episode$season(
+      number: (l$number as int),
       $show:
           Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Episode$season$show
               .fromJson((l$$show as Map<String, dynamic>)),
       $__typename: (l$$__typename as String),
     );
   }
+
+  final int number;
 
   final Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Episode$season$show
       $show;
@@ -11799,6 +12021,8 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$ite
 
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
+    final l$number = number;
+    _resultData['number'] = l$number;
     final l$$show = $show;
     _resultData['show'] = l$$show.toJson();
     final l$$__typename = $__typename;
@@ -11808,9 +12032,11 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$ite
 
   @override
   int get hashCode {
+    final l$number = number;
     final l$$show = $show;
     final l$$__typename = $__typename;
     return Object.hashAll([
+      l$number,
       l$$show,
       l$$__typename,
     ]);
@@ -11824,6 +12050,11 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$ite
     if (!(other
             is Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Episode$season) ||
         runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$number = number;
+    final lOther$number = other.number;
+    if (l$number != lOther$number) {
       return false;
     }
     final l$$show = $show;
@@ -11866,6 +12097,7 @@ abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultSecti
       _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Episode$season;
 
   TRes call({
+    int? number,
     Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Episode$season$show?
         $show,
     String? $__typename,
@@ -11894,11 +12126,15 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$DefaultSection$i
   static const _undefined = <dynamic, dynamic>{};
 
   TRes call({
+    Object? number = _undefined,
     Object? $show = _undefined,
     Object? $__typename = _undefined,
   }) =>
       _then(
           Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Episode$season(
+        number: number == _undefined || number == null
+            ? _instance.number
+            : (number as int),
         $show: $show == _undefined || $show == null
             ? _instance.$show
             : ($show
@@ -11927,6 +12163,7 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$DefaultSecti
   TRes _res;
 
   call({
+    int? number,
     Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Episode$season$show?
         $show,
     String? $__typename,
@@ -11943,7 +12180,8 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$DefaultSecti
 class Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Episode$season$show
     implements
         Fragment$Section$$DefaultSection$items$items$item$$Episode$season$show,
-        Fragment$ItemSectionItem$item$$Episode$season$show {
+        Fragment$ItemSectionItem$item$$Episode$season$show,
+        Fragment$EpisodeThumbnail$season$show {
   Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Episode$season$show({
     required this.title,
     this.$__typename = 'Show',
@@ -15145,15 +15383,19 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$
     implements
         Fragment$Section$$CardSection$items$items$item$$Episode,
         Fragment$ItemSectionItem$item$$Episode,
+        Fragment$EpisodeThumbnail,
         Fragment$NavigatableEpisode,
         Fragment$CardItem$item$$Episode,
         Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item {
   Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Episode({
     required this.id,
+    required this.title,
     required this.duration,
     required this.locked,
     this.progress,
+    this.image,
     required this.publishDate,
+    this.number,
     this.season,
     this.$__typename = 'Episode',
   });
@@ -15161,18 +15403,24 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$
   factory Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Episode.fromJson(
       Map<String, dynamic> json) {
     final l$id = json['id'];
+    final l$title = json['title'];
     final l$duration = json['duration'];
     final l$locked = json['locked'];
     final l$progress = json['progress'];
+    final l$image = json['image'];
     final l$publishDate = json['publishDate'];
+    final l$number = json['number'];
     final l$season = json['season'];
     final l$$__typename = json['__typename'];
     return Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Episode(
       id: (l$id as String),
+      title: (l$title as String),
       duration: (l$duration as int),
       locked: (l$locked as bool),
       progress: (l$progress as int?),
+      image: (l$image as String?),
       publishDate: (l$publishDate as String),
+      number: (l$number as int?),
       season: l$season == null
           ? null
           : Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Episode$season
@@ -15183,13 +15431,19 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$
 
   final String id;
 
+  final String title;
+
   final int duration;
 
   final bool locked;
 
   final int? progress;
 
+  final String? image;
+
   final String publishDate;
+
+  final int? number;
 
   final Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Episode$season?
       season;
@@ -15200,14 +15454,20 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$
     final _resultData = <String, dynamic>{};
     final l$id = id;
     _resultData['id'] = l$id;
+    final l$title = title;
+    _resultData['title'] = l$title;
     final l$duration = duration;
     _resultData['duration'] = l$duration;
     final l$locked = locked;
     _resultData['locked'] = l$locked;
     final l$progress = progress;
     _resultData['progress'] = l$progress;
+    final l$image = image;
+    _resultData['image'] = l$image;
     final l$publishDate = publishDate;
     _resultData['publishDate'] = l$publishDate;
+    final l$number = number;
+    _resultData['number'] = l$number;
     final l$season = season;
     _resultData['season'] = l$season?.toJson();
     final l$$__typename = $__typename;
@@ -15218,18 +15478,24 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$
   @override
   int get hashCode {
     final l$id = id;
+    final l$title = title;
     final l$duration = duration;
     final l$locked = locked;
     final l$progress = progress;
+    final l$image = image;
     final l$publishDate = publishDate;
+    final l$number = number;
     final l$season = season;
     final l$$__typename = $__typename;
     return Object.hashAll([
       l$id,
+      l$title,
       l$duration,
       l$locked,
       l$progress,
+      l$image,
       l$publishDate,
+      l$number,
       l$season,
       l$$__typename,
     ]);
@@ -15250,6 +15516,11 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$
     if (l$id != lOther$id) {
       return false;
     }
+    final l$title = title;
+    final lOther$title = other.title;
+    if (l$title != lOther$title) {
+      return false;
+    }
     final l$duration = duration;
     final lOther$duration = other.duration;
     if (l$duration != lOther$duration) {
@@ -15265,9 +15536,19 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$
     if (l$progress != lOther$progress) {
       return false;
     }
+    final l$image = image;
+    final lOther$image = other.image;
+    if (l$image != lOther$image) {
+      return false;
+    }
     final l$publishDate = publishDate;
     final lOther$publishDate = other.publishDate;
     if (l$publishDate != lOther$publishDate) {
+      return false;
+    }
+    final l$number = number;
+    final lOther$number = other.number;
+    if (l$number != lOther$number) {
       return false;
     }
     final l$season = season;
@@ -15311,10 +15592,13 @@ abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$CardSection$
 
   TRes call({
     String? id,
+    String? title,
     int? duration,
     bool? locked,
     int? progress,
+    String? image,
     String? publishDate,
+    int? number,
     Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Episode$season?
         season,
     String? $__typename,
@@ -15344,16 +15628,22 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$CardSection$item
 
   TRes call({
     Object? id = _undefined,
+    Object? title = _undefined,
     Object? duration = _undefined,
     Object? locked = _undefined,
     Object? progress = _undefined,
+    Object? image = _undefined,
     Object? publishDate = _undefined,
+    Object? number = _undefined,
     Object? season = _undefined,
     Object? $__typename = _undefined,
   }) =>
       _then(
           Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Episode(
         id: id == _undefined || id == null ? _instance.id : (id as String),
+        title: title == _undefined || title == null
+            ? _instance.title
+            : (title as String),
         duration: duration == _undefined || duration == null
             ? _instance.duration
             : (duration as int),
@@ -15362,9 +15652,11 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$CardSection$item
             : (locked as bool),
         progress:
             progress == _undefined ? _instance.progress : (progress as int?),
+        image: image == _undefined ? _instance.image : (image as String?),
         publishDate: publishDate == _undefined || publishDate == null
             ? _instance.publishDate
             : (publishDate as String),
+        number: number == _undefined ? _instance.number : (number as int?),
         season: season == _undefined
             ? _instance.season
             : (season
@@ -15397,10 +15689,13 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$CardSection$
 
   call({
     String? id,
+    String? title,
     int? duration,
     bool? locked,
     int? progress,
+    String? image,
     String? publishDate,
+    int? number,
     Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Episode$season?
         season,
     String? $__typename,
@@ -15418,23 +15713,29 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$
     implements
         Fragment$Section$$CardSection$items$items$item$$Episode$season,
         Fragment$ItemSectionItem$item$$Episode$season,
+        Fragment$EpisodeThumbnail$season,
         Fragment$CardItem$item$$Episode$season {
   Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Episode$season({
+    required this.number,
     required this.$show,
     this.$__typename = 'Season',
   });
 
   factory Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Episode$season.fromJson(
       Map<String, dynamic> json) {
+    final l$number = json['number'];
     final l$$show = json['show'];
     final l$$__typename = json['__typename'];
     return Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Episode$season(
+      number: (l$number as int),
       $show:
           Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Episode$season$show
               .fromJson((l$$show as Map<String, dynamic>)),
       $__typename: (l$$__typename as String),
     );
   }
+
+  final int number;
 
   final Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Episode$season$show
       $show;
@@ -15443,6 +15744,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$
 
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
+    final l$number = number;
+    _resultData['number'] = l$number;
     final l$$show = $show;
     _resultData['show'] = l$$show.toJson();
     final l$$__typename = $__typename;
@@ -15452,9 +15755,11 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$
 
   @override
   int get hashCode {
+    final l$number = number;
     final l$$show = $show;
     final l$$__typename = $__typename;
     return Object.hashAll([
+      l$number,
       l$$show,
       l$$__typename,
     ]);
@@ -15468,6 +15773,11 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$
     if (!(other
             is Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Episode$season) ||
         runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$number = number;
+    final lOther$number = other.number;
+    if (l$number != lOther$number) {
       return false;
     }
     final l$$show = $show;
@@ -15510,6 +15820,7 @@ abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$CardSection$
       _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Episode$season;
 
   TRes call({
+    int? number,
     Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Episode$season$show?
         $show,
     String? $__typename,
@@ -15538,11 +15849,15 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$CardSection$item
   static const _undefined = <dynamic, dynamic>{};
 
   TRes call({
+    Object? number = _undefined,
     Object? $show = _undefined,
     Object? $__typename = _undefined,
   }) =>
       _then(
           Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Episode$season(
+        number: number == _undefined || number == null
+            ? _instance.number
+            : (number as int),
         $show: $show == _undefined || $show == null
             ? _instance.$show
             : ($show
@@ -15571,6 +15886,7 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$CardSection$
   TRes _res;
 
   call({
+    int? number,
     Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Episode$season$show?
         $show,
     String? $__typename,
@@ -15588,6 +15904,7 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$
     implements
         Fragment$Section$$CardSection$items$items$item$$Episode$season$show,
         Fragment$ItemSectionItem$item$$Episode$season$show,
+        Fragment$EpisodeThumbnail$season$show,
         Fragment$CardItem$item$$Episode$season$show {
   Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Episode$season$show({
     required this.title,
@@ -18928,51 +19245,57 @@ class Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$
     implements
         Fragment$Section$$ListSection$items$items$item$$Episode,
         Fragment$ItemSectionItem$item$$Episode,
+        Fragment$EpisodeThumbnail,
         Fragment$NavigatableEpisode,
         Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item {
   Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Episode({
     required this.id,
+    required this.title,
     required this.duration,
     required this.locked,
     this.progress,
+    this.image,
     required this.publishDate,
+    this.number,
     this.season,
     this.$__typename = 'Episode',
-    required this.title,
     required this.ageRating,
-    this.image,
   });
 
   factory Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Episode.fromJson(
       Map<String, dynamic> json) {
     final l$id = json['id'];
+    final l$title = json['title'];
     final l$duration = json['duration'];
     final l$locked = json['locked'];
     final l$progress = json['progress'];
+    final l$image = json['image'];
     final l$publishDate = json['publishDate'];
+    final l$number = json['number'];
     final l$season = json['season'];
     final l$$__typename = json['__typename'];
-    final l$title = json['title'];
     final l$ageRating = json['ageRating'];
-    final l$image = json['image'];
     return Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Episode(
       id: (l$id as String),
+      title: (l$title as String),
       duration: (l$duration as int),
       locked: (l$locked as bool),
       progress: (l$progress as int?),
+      image: (l$image as String?),
       publishDate: (l$publishDate as String),
+      number: (l$number as int?),
       season: l$season == null
           ? null
           : Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Episode$season
               .fromJson((l$season as Map<String, dynamic>)),
       $__typename: (l$$__typename as String),
-      title: (l$title as String),
       ageRating: (l$ageRating as String),
-      image: (l$image as String?),
     );
   }
 
   final String id;
+
+  final String title;
 
   final int duration;
 
@@ -18980,67 +19303,71 @@ class Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$
 
   final int? progress;
 
+  final String? image;
+
   final String publishDate;
+
+  final int? number;
 
   final Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Episode$season?
       season;
 
   final String $__typename;
 
-  final String title;
-
   final String ageRating;
-
-  final String? image;
 
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
     final l$id = id;
     _resultData['id'] = l$id;
+    final l$title = title;
+    _resultData['title'] = l$title;
     final l$duration = duration;
     _resultData['duration'] = l$duration;
     final l$locked = locked;
     _resultData['locked'] = l$locked;
     final l$progress = progress;
     _resultData['progress'] = l$progress;
+    final l$image = image;
+    _resultData['image'] = l$image;
     final l$publishDate = publishDate;
     _resultData['publishDate'] = l$publishDate;
+    final l$number = number;
+    _resultData['number'] = l$number;
     final l$season = season;
     _resultData['season'] = l$season?.toJson();
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
-    final l$title = title;
-    _resultData['title'] = l$title;
     final l$ageRating = ageRating;
     _resultData['ageRating'] = l$ageRating;
-    final l$image = image;
-    _resultData['image'] = l$image;
     return _resultData;
   }
 
   @override
   int get hashCode {
     final l$id = id;
+    final l$title = title;
     final l$duration = duration;
     final l$locked = locked;
     final l$progress = progress;
+    final l$image = image;
     final l$publishDate = publishDate;
+    final l$number = number;
     final l$season = season;
     final l$$__typename = $__typename;
-    final l$title = title;
     final l$ageRating = ageRating;
-    final l$image = image;
     return Object.hashAll([
       l$id,
+      l$title,
       l$duration,
       l$locked,
       l$progress,
+      l$image,
       l$publishDate,
+      l$number,
       l$season,
       l$$__typename,
-      l$title,
       l$ageRating,
-      l$image,
     ]);
   }
 
@@ -19059,6 +19386,11 @@ class Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$
     if (l$id != lOther$id) {
       return false;
     }
+    final l$title = title;
+    final lOther$title = other.title;
+    if (l$title != lOther$title) {
+      return false;
+    }
     final l$duration = duration;
     final lOther$duration = other.duration;
     if (l$duration != lOther$duration) {
@@ -19074,9 +19406,19 @@ class Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$
     if (l$progress != lOther$progress) {
       return false;
     }
+    final l$image = image;
+    final lOther$image = other.image;
+    if (l$image != lOther$image) {
+      return false;
+    }
     final l$publishDate = publishDate;
     final lOther$publishDate = other.publishDate;
     if (l$publishDate != lOther$publishDate) {
+      return false;
+    }
+    final l$number = number;
+    final lOther$number = other.number;
+    if (l$number != lOther$number) {
       return false;
     }
     final l$season = season;
@@ -19089,19 +19431,9 @@ class Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$
     if (l$$__typename != lOther$$__typename) {
       return false;
     }
-    final l$title = title;
-    final lOther$title = other.title;
-    if (l$title != lOther$title) {
-      return false;
-    }
     final l$ageRating = ageRating;
     final lOther$ageRating = other.ageRating;
     if (l$ageRating != lOther$ageRating) {
-      return false;
-    }
-    final l$image = image;
-    final lOther$image = other.image;
-    if (l$image != lOther$image) {
       return false;
     }
     return true;
@@ -19135,16 +19467,17 @@ abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$ListSection$
 
   TRes call({
     String? id,
+    String? title,
     int? duration,
     bool? locked,
     int? progress,
+    String? image,
     String? publishDate,
+    int? number,
     Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Episode$season?
         season,
     String? $__typename,
-    String? title,
     String? ageRating,
-    String? image,
   });
   CopyWith$Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Episode$season<
       TRes> get season;
@@ -19171,19 +19504,23 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$ListSection$item
 
   TRes call({
     Object? id = _undefined,
+    Object? title = _undefined,
     Object? duration = _undefined,
     Object? locked = _undefined,
     Object? progress = _undefined,
+    Object? image = _undefined,
     Object? publishDate = _undefined,
+    Object? number = _undefined,
     Object? season = _undefined,
     Object? $__typename = _undefined,
-    Object? title = _undefined,
     Object? ageRating = _undefined,
-    Object? image = _undefined,
   }) =>
       _then(
           Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Episode(
         id: id == _undefined || id == null ? _instance.id : (id as String),
+        title: title == _undefined || title == null
+            ? _instance.title
+            : (title as String),
         duration: duration == _undefined || duration == null
             ? _instance.duration
             : (duration as int),
@@ -19192,9 +19529,11 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$ListSection$item
             : (locked as bool),
         progress:
             progress == _undefined ? _instance.progress : (progress as int?),
+        image: image == _undefined ? _instance.image : (image as String?),
         publishDate: publishDate == _undefined || publishDate == null
             ? _instance.publishDate
             : (publishDate as String),
+        number: number == _undefined ? _instance.number : (number as int?),
         season: season == _undefined
             ? _instance.season
             : (season
@@ -19202,13 +19541,9 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$ListSection$item
         $__typename: $__typename == _undefined || $__typename == null
             ? _instance.$__typename
             : ($__typename as String),
-        title: title == _undefined || title == null
-            ? _instance.title
-            : (title as String),
         ageRating: ageRating == _undefined || ageRating == null
             ? _instance.ageRating
             : (ageRating as String),
-        image: image == _undefined ? _instance.image : (image as String?),
       ));
 
   CopyWith$Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Episode$season<
@@ -19234,16 +19569,17 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$ListSection$
 
   call({
     String? id,
+    String? title,
     int? duration,
     bool? locked,
     int? progress,
+    String? image,
     String? publishDate,
+    int? number,
     Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Episode$season?
         season,
     String? $__typename,
-    String? title,
     String? ageRating,
-    String? image,
   }) =>
       _res;
 
@@ -19257,23 +19593,29 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$ListSection$
 class Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Episode$season
     implements
         Fragment$Section$$ListSection$items$items$item$$Episode$season,
-        Fragment$ItemSectionItem$item$$Episode$season {
+        Fragment$ItemSectionItem$item$$Episode$season,
+        Fragment$EpisodeThumbnail$season {
   Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Episode$season({
+    required this.number,
     required this.$show,
     this.$__typename = 'Season',
   });
 
   factory Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Episode$season.fromJson(
       Map<String, dynamic> json) {
+    final l$number = json['number'];
     final l$$show = json['show'];
     final l$$__typename = json['__typename'];
     return Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Episode$season(
+      number: (l$number as int),
       $show:
           Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Episode$season$show
               .fromJson((l$$show as Map<String, dynamic>)),
       $__typename: (l$$__typename as String),
     );
   }
+
+  final int number;
 
   final Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Episode$season$show
       $show;
@@ -19282,6 +19624,8 @@ class Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$
 
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
+    final l$number = number;
+    _resultData['number'] = l$number;
     final l$$show = $show;
     _resultData['show'] = l$$show.toJson();
     final l$$__typename = $__typename;
@@ -19291,9 +19635,11 @@ class Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$
 
   @override
   int get hashCode {
+    final l$number = number;
     final l$$show = $show;
     final l$$__typename = $__typename;
     return Object.hashAll([
+      l$number,
       l$$show,
       l$$__typename,
     ]);
@@ -19307,6 +19653,11 @@ class Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$
     if (!(other
             is Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Episode$season) ||
         runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$number = number;
+    final lOther$number = other.number;
+    if (l$number != lOther$number) {
       return false;
     }
     final l$$show = $show;
@@ -19349,6 +19700,7 @@ abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$ListSection$
       _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Episode$season;
 
   TRes call({
+    int? number,
     Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Episode$season$show?
         $show,
     String? $__typename,
@@ -19377,11 +19729,15 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$ListSection$item
   static const _undefined = <dynamic, dynamic>{};
 
   TRes call({
+    Object? number = _undefined,
     Object? $show = _undefined,
     Object? $__typename = _undefined,
   }) =>
       _then(
           Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Episode$season(
+        number: number == _undefined || number == null
+            ? _instance.number
+            : (number as int),
         $show: $show == _undefined || $show == null
             ? _instance.$show
             : ($show
@@ -19410,6 +19766,7 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$ListSection$
   TRes _res;
 
   call({
+    int? number,
     Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Episode$season$show?
         $show,
     String? $__typename,
@@ -19426,7 +19783,8 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$ListSection$
 class Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Episode$season$show
     implements
         Fragment$Section$$ListSection$items$items$item$$Episode$season$show,
-        Fragment$ItemSectionItem$item$$Episode$season$show {
+        Fragment$ItemSectionItem$item$$Episode$season$show,
+        Fragment$EpisodeThumbnail$season$show {
   Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Episode$season$show({
     required this.title,
     this.$__typename = 'Show',
@@ -22643,15 +23001,19 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$it
     implements
         Fragment$Section$$CardListSection$items$items$item$$Episode,
         Fragment$ItemSectionItem$item$$Episode,
+        Fragment$EpisodeThumbnail,
         Fragment$NavigatableEpisode,
         Fragment$CardItem$item$$Episode,
         Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item {
   Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Episode({
     required this.id,
+    required this.title,
     required this.duration,
     required this.locked,
     this.progress,
+    this.image,
     required this.publishDate,
+    this.number,
     this.season,
     this.$__typename = 'Episode',
   });
@@ -22659,18 +23021,24 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$it
   factory Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Episode.fromJson(
       Map<String, dynamic> json) {
     final l$id = json['id'];
+    final l$title = json['title'];
     final l$duration = json['duration'];
     final l$locked = json['locked'];
     final l$progress = json['progress'];
+    final l$image = json['image'];
     final l$publishDate = json['publishDate'];
+    final l$number = json['number'];
     final l$season = json['season'];
     final l$$__typename = json['__typename'];
     return Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Episode(
       id: (l$id as String),
+      title: (l$title as String),
       duration: (l$duration as int),
       locked: (l$locked as bool),
       progress: (l$progress as int?),
+      image: (l$image as String?),
       publishDate: (l$publishDate as String),
+      number: (l$number as int?),
       season: l$season == null
           ? null
           : Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Episode$season
@@ -22681,13 +23049,19 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$it
 
   final String id;
 
+  final String title;
+
   final int duration;
 
   final bool locked;
 
   final int? progress;
 
+  final String? image;
+
   final String publishDate;
+
+  final int? number;
 
   final Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Episode$season?
       season;
@@ -22698,14 +23072,20 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$it
     final _resultData = <String, dynamic>{};
     final l$id = id;
     _resultData['id'] = l$id;
+    final l$title = title;
+    _resultData['title'] = l$title;
     final l$duration = duration;
     _resultData['duration'] = l$duration;
     final l$locked = locked;
     _resultData['locked'] = l$locked;
     final l$progress = progress;
     _resultData['progress'] = l$progress;
+    final l$image = image;
+    _resultData['image'] = l$image;
     final l$publishDate = publishDate;
     _resultData['publishDate'] = l$publishDate;
+    final l$number = number;
+    _resultData['number'] = l$number;
     final l$season = season;
     _resultData['season'] = l$season?.toJson();
     final l$$__typename = $__typename;
@@ -22716,18 +23096,24 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$it
   @override
   int get hashCode {
     final l$id = id;
+    final l$title = title;
     final l$duration = duration;
     final l$locked = locked;
     final l$progress = progress;
+    final l$image = image;
     final l$publishDate = publishDate;
+    final l$number = number;
     final l$season = season;
     final l$$__typename = $__typename;
     return Object.hashAll([
       l$id,
+      l$title,
       l$duration,
       l$locked,
       l$progress,
+      l$image,
       l$publishDate,
+      l$number,
       l$season,
       l$$__typename,
     ]);
@@ -22748,6 +23134,11 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$it
     if (l$id != lOther$id) {
       return false;
     }
+    final l$title = title;
+    final lOther$title = other.title;
+    if (l$title != lOther$title) {
+      return false;
+    }
     final l$duration = duration;
     final lOther$duration = other.duration;
     if (l$duration != lOther$duration) {
@@ -22763,9 +23154,19 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$it
     if (l$progress != lOther$progress) {
       return false;
     }
+    final l$image = image;
+    final lOther$image = other.image;
+    if (l$image != lOther$image) {
+      return false;
+    }
     final l$publishDate = publishDate;
     final lOther$publishDate = other.publishDate;
     if (l$publishDate != lOther$publishDate) {
+      return false;
+    }
+    final l$number = number;
+    final lOther$number = other.number;
+    if (l$number != lOther$number) {
       return false;
     }
     final l$season = season;
@@ -22809,10 +23210,13 @@ abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$CardListSect
 
   TRes call({
     String? id,
+    String? title,
     int? duration,
     bool? locked,
     int? progress,
+    String? image,
     String? publishDate,
+    int? number,
     Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Episode$season?
         season,
     String? $__typename,
@@ -22842,16 +23246,22 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$CardListSection$
 
   TRes call({
     Object? id = _undefined,
+    Object? title = _undefined,
     Object? duration = _undefined,
     Object? locked = _undefined,
     Object? progress = _undefined,
+    Object? image = _undefined,
     Object? publishDate = _undefined,
+    Object? number = _undefined,
     Object? season = _undefined,
     Object? $__typename = _undefined,
   }) =>
       _then(
           Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Episode(
         id: id == _undefined || id == null ? _instance.id : (id as String),
+        title: title == _undefined || title == null
+            ? _instance.title
+            : (title as String),
         duration: duration == _undefined || duration == null
             ? _instance.duration
             : (duration as int),
@@ -22860,9 +23270,11 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$CardListSection$
             : (locked as bool),
         progress:
             progress == _undefined ? _instance.progress : (progress as int?),
+        image: image == _undefined ? _instance.image : (image as String?),
         publishDate: publishDate == _undefined || publishDate == null
             ? _instance.publishDate
             : (publishDate as String),
+        number: number == _undefined ? _instance.number : (number as int?),
         season: season == _undefined
             ? _instance.season
             : (season
@@ -22895,10 +23307,13 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$CardListSect
 
   call({
     String? id,
+    String? title,
     int? duration,
     bool? locked,
     int? progress,
+    String? image,
     String? publishDate,
+    int? number,
     Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Episode$season?
         season,
     String? $__typename,
@@ -22916,23 +23331,29 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$it
     implements
         Fragment$Section$$CardListSection$items$items$item$$Episode$season,
         Fragment$ItemSectionItem$item$$Episode$season,
+        Fragment$EpisodeThumbnail$season,
         Fragment$CardItem$item$$Episode$season {
   Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Episode$season({
+    required this.number,
     required this.$show,
     this.$__typename = 'Season',
   });
 
   factory Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Episode$season.fromJson(
       Map<String, dynamic> json) {
+    final l$number = json['number'];
     final l$$show = json['show'];
     final l$$__typename = json['__typename'];
     return Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Episode$season(
+      number: (l$number as int),
       $show:
           Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Episode$season$show
               .fromJson((l$$show as Map<String, dynamic>)),
       $__typename: (l$$__typename as String),
     );
   }
+
+  final int number;
 
   final Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Episode$season$show
       $show;
@@ -22941,6 +23362,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$it
 
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
+    final l$number = number;
+    _resultData['number'] = l$number;
     final l$$show = $show;
     _resultData['show'] = l$$show.toJson();
     final l$$__typename = $__typename;
@@ -22950,9 +23373,11 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$it
 
   @override
   int get hashCode {
+    final l$number = number;
     final l$$show = $show;
     final l$$__typename = $__typename;
     return Object.hashAll([
+      l$number,
       l$$show,
       l$$__typename,
     ]);
@@ -22966,6 +23391,11 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$it
     if (!(other
             is Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Episode$season) ||
         runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$number = number;
+    final lOther$number = other.number;
+    if (l$number != lOther$number) {
       return false;
     }
     final l$$show = $show;
@@ -23008,6 +23438,7 @@ abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$CardListSect
       _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Episode$season;
 
   TRes call({
+    int? number,
     Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Episode$season$show?
         $show,
     String? $__typename,
@@ -23036,11 +23467,15 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$CardListSection$
   static const _undefined = <dynamic, dynamic>{};
 
   TRes call({
+    Object? number = _undefined,
     Object? $show = _undefined,
     Object? $__typename = _undefined,
   }) =>
       _then(
           Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Episode$season(
+        number: number == _undefined || number == null
+            ? _instance.number
+            : (number as int),
         $show: $show == _undefined || $show == null
             ? _instance.$show
             : ($show
@@ -23069,6 +23504,7 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$CardListSect
   TRes _res;
 
   call({
+    int? number,
     Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Episode$season$show?
         $show,
     String? $__typename,
@@ -23086,6 +23522,7 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$it
     implements
         Fragment$Section$$CardListSection$items$items$item$$Episode$season$show,
         Fragment$ItemSectionItem$item$$Episode$season$show,
+        Fragment$EpisodeThumbnail$season$show,
         Fragment$CardItem$item$$Episode$season$show {
   Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Episode$season$show({
     required this.title,
@@ -26472,46 +26909,55 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items
     implements
         Fragment$Section$$DefaultGridSection$items$items$item$$Episode,
         Fragment$ItemSectionItem$item$$Episode,
+        Fragment$EpisodeThumbnail,
         Fragment$NavigatableEpisode,
         Fragment$GridSectionItem$item$$Episode,
         Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item {
   Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Episode({
     required this.id,
+    required this.title,
     required this.duration,
     required this.locked,
     this.progress,
+    this.image,
     required this.publishDate,
+    this.number,
     this.season,
     this.$__typename = 'Episode',
-    this.number,
   });
 
   factory Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Episode.fromJson(
       Map<String, dynamic> json) {
     final l$id = json['id'];
+    final l$title = json['title'];
     final l$duration = json['duration'];
     final l$locked = json['locked'];
     final l$progress = json['progress'];
+    final l$image = json['image'];
     final l$publishDate = json['publishDate'];
+    final l$number = json['number'];
     final l$season = json['season'];
     final l$$__typename = json['__typename'];
-    final l$number = json['number'];
     return Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Episode(
       id: (l$id as String),
+      title: (l$title as String),
       duration: (l$duration as int),
       locked: (l$locked as bool),
       progress: (l$progress as int?),
+      image: (l$image as String?),
       publishDate: (l$publishDate as String),
+      number: (l$number as int?),
       season: l$season == null
           ? null
           : Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Episode$season
               .fromJson((l$season as Map<String, dynamic>)),
       $__typename: (l$$__typename as String),
-      number: (l$number as int?),
     );
   }
 
   final String id;
+
+  final String title;
 
   final int duration;
 
@@ -26519,55 +26965,65 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items
 
   final int? progress;
 
+  final String? image;
+
   final String publishDate;
+
+  final int? number;
 
   final Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Episode$season?
       season;
 
   final String $__typename;
 
-  final int? number;
-
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
     final l$id = id;
     _resultData['id'] = l$id;
+    final l$title = title;
+    _resultData['title'] = l$title;
     final l$duration = duration;
     _resultData['duration'] = l$duration;
     final l$locked = locked;
     _resultData['locked'] = l$locked;
     final l$progress = progress;
     _resultData['progress'] = l$progress;
+    final l$image = image;
+    _resultData['image'] = l$image;
     final l$publishDate = publishDate;
     _resultData['publishDate'] = l$publishDate;
+    final l$number = number;
+    _resultData['number'] = l$number;
     final l$season = season;
     _resultData['season'] = l$season?.toJson();
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
-    final l$number = number;
-    _resultData['number'] = l$number;
     return _resultData;
   }
 
   @override
   int get hashCode {
     final l$id = id;
+    final l$title = title;
     final l$duration = duration;
     final l$locked = locked;
     final l$progress = progress;
+    final l$image = image;
     final l$publishDate = publishDate;
+    final l$number = number;
     final l$season = season;
     final l$$__typename = $__typename;
-    final l$number = number;
     return Object.hashAll([
       l$id,
+      l$title,
       l$duration,
       l$locked,
       l$progress,
+      l$image,
       l$publishDate,
+      l$number,
       l$season,
       l$$__typename,
-      l$number,
     ]);
   }
 
@@ -26586,6 +27042,11 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items
     if (l$id != lOther$id) {
       return false;
     }
+    final l$title = title;
+    final lOther$title = other.title;
+    if (l$title != lOther$title) {
+      return false;
+    }
     final l$duration = duration;
     final lOther$duration = other.duration;
     if (l$duration != lOther$duration) {
@@ -26601,9 +27062,19 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items
     if (l$progress != lOther$progress) {
       return false;
     }
+    final l$image = image;
+    final lOther$image = other.image;
+    if (l$image != lOther$image) {
+      return false;
+    }
     final l$publishDate = publishDate;
     final lOther$publishDate = other.publishDate;
     if (l$publishDate != lOther$publishDate) {
+      return false;
+    }
+    final l$number = number;
+    final lOther$number = other.number;
+    if (l$number != lOther$number) {
       return false;
     }
     final l$season = season;
@@ -26614,11 +27085,6 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items
     final l$$__typename = $__typename;
     final lOther$$__typename = other.$__typename;
     if (l$$__typename != lOther$$__typename) {
-      return false;
-    }
-    final l$number = number;
-    final lOther$number = other.number;
-    if (l$number != lOther$number) {
       return false;
     }
     return true;
@@ -26652,14 +27118,16 @@ abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultGridS
 
   TRes call({
     String? id,
+    String? title,
     int? duration,
     bool? locked,
     int? progress,
+    String? image,
     String? publishDate,
+    int? number,
     Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Episode$season?
         season,
     String? $__typename,
-    int? number,
   });
   CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Episode$season<
       TRes> get season;
@@ -26686,17 +27154,22 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$DefaultGridSecti
 
   TRes call({
     Object? id = _undefined,
+    Object? title = _undefined,
     Object? duration = _undefined,
     Object? locked = _undefined,
     Object? progress = _undefined,
+    Object? image = _undefined,
     Object? publishDate = _undefined,
+    Object? number = _undefined,
     Object? season = _undefined,
     Object? $__typename = _undefined,
-    Object? number = _undefined,
   }) =>
       _then(
           Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Episode(
         id: id == _undefined || id == null ? _instance.id : (id as String),
+        title: title == _undefined || title == null
+            ? _instance.title
+            : (title as String),
         duration: duration == _undefined || duration == null
             ? _instance.duration
             : (duration as int),
@@ -26705,9 +27178,11 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$DefaultGridSecti
             : (locked as bool),
         progress:
             progress == _undefined ? _instance.progress : (progress as int?),
+        image: image == _undefined ? _instance.image : (image as String?),
         publishDate: publishDate == _undefined || publishDate == null
             ? _instance.publishDate
             : (publishDate as String),
+        number: number == _undefined ? _instance.number : (number as int?),
         season: season == _undefined
             ? _instance.season
             : (season
@@ -26715,7 +27190,6 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$DefaultGridSecti
         $__typename: $__typename == _undefined || $__typename == null
             ? _instance.$__typename
             : ($__typename as String),
-        number: number == _undefined ? _instance.number : (number as int?),
       ));
 
   CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Episode$season<
@@ -26741,14 +27215,16 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$DefaultGridS
 
   call({
     String? id,
+    String? title,
     int? duration,
     bool? locked,
     int? progress,
+    String? image,
     String? publishDate,
+    int? number,
     Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Episode$season?
         season,
     String? $__typename,
-    int? number,
   }) =>
       _res;
 
@@ -26763,54 +27239,55 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items
     implements
         Fragment$Section$$DefaultGridSection$items$items$item$$Episode$season,
         Fragment$ItemSectionItem$item$$Episode$season,
+        Fragment$EpisodeThumbnail$season,
         Fragment$GridSectionItem$item$$Episode$season {
   Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Episode$season({
+    required this.number,
     required this.$show,
     this.$__typename = 'Season',
-    required this.number,
   });
 
   factory Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Episode$season.fromJson(
       Map<String, dynamic> json) {
+    final l$number = json['number'];
     final l$$show = json['show'];
     final l$$__typename = json['__typename'];
-    final l$number = json['number'];
     return Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Episode$season(
+      number: (l$number as int),
       $show:
           Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Episode$season$show
               .fromJson((l$$show as Map<String, dynamic>)),
       $__typename: (l$$__typename as String),
-      number: (l$number as int),
     );
   }
+
+  final int number;
 
   final Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Episode$season$show
       $show;
 
   final String $__typename;
 
-  final int number;
-
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
+    final l$number = number;
+    _resultData['number'] = l$number;
     final l$$show = $show;
     _resultData['show'] = l$$show.toJson();
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
-    final l$number = number;
-    _resultData['number'] = l$number;
     return _resultData;
   }
 
   @override
   int get hashCode {
+    final l$number = number;
     final l$$show = $show;
     final l$$__typename = $__typename;
-    final l$number = number;
     return Object.hashAll([
+      l$number,
       l$$show,
       l$$__typename,
-      l$number,
     ]);
   }
 
@@ -26824,6 +27301,11 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items
         runtimeType != other.runtimeType) {
       return false;
     }
+    final l$number = number;
+    final lOther$number = other.number;
+    if (l$number != lOther$number) {
+      return false;
+    }
     final l$$show = $show;
     final lOther$$show = other.$show;
     if (l$$show != lOther$$show) {
@@ -26832,11 +27314,6 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items
     final l$$__typename = $__typename;
     final lOther$$__typename = other.$__typename;
     if (l$$__typename != lOther$$__typename) {
-      return false;
-    }
-    final l$number = number;
-    final lOther$number = other.number;
-    if (l$number != lOther$number) {
       return false;
     }
     return true;
@@ -26869,10 +27346,10 @@ abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultGridS
       _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Episode$season;
 
   TRes call({
+    int? number,
     Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Episode$season$show?
         $show,
     String? $__typename,
-    int? number,
   });
   CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Episode$season$show<
       TRes> get $show;
@@ -26898,12 +27375,15 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$DefaultGridSecti
   static const _undefined = <dynamic, dynamic>{};
 
   TRes call({
+    Object? number = _undefined,
     Object? $show = _undefined,
     Object? $__typename = _undefined,
-    Object? number = _undefined,
   }) =>
       _then(
           Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Episode$season(
+        number: number == _undefined || number == null
+            ? _instance.number
+            : (number as int),
         $show: $show == _undefined || $show == null
             ? _instance.$show
             : ($show
@@ -26911,9 +27391,6 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$DefaultGridSecti
         $__typename: $__typename == _undefined || $__typename == null
             ? _instance.$__typename
             : ($__typename as String),
-        number: number == _undefined || number == null
-            ? _instance.number
-            : (number as int),
       ));
 
   CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Episode$season$show<
@@ -26935,10 +27412,10 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$DefaultGridS
   TRes _res;
 
   call({
+    int? number,
     Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Episode$season$show?
         $show,
     String? $__typename,
-    int? number,
   }) =>
       _res;
 
@@ -26953,6 +27430,7 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items
     implements
         Fragment$Section$$DefaultGridSection$items$items$item$$Episode$season$show,
         Fragment$ItemSectionItem$item$$Episode$season$show,
+        Fragment$EpisodeThumbnail$season$show,
         Fragment$GridSectionItem$item$$Episode$season$show {
   Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Episode$season$show({
     required this.title,
@@ -30165,46 +30643,55 @@ class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$
     implements
         Fragment$Section$$PosterGridSection$items$items$item$$Episode,
         Fragment$ItemSectionItem$item$$Episode,
+        Fragment$EpisodeThumbnail,
         Fragment$NavigatableEpisode,
         Fragment$GridSectionItem$item$$Episode,
         Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item {
   Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Episode({
     required this.id,
+    required this.title,
     required this.duration,
     required this.locked,
     this.progress,
+    this.image,
     required this.publishDate,
+    this.number,
     this.season,
     this.$__typename = 'Episode',
-    this.number,
   });
 
   factory Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Episode.fromJson(
       Map<String, dynamic> json) {
     final l$id = json['id'];
+    final l$title = json['title'];
     final l$duration = json['duration'];
     final l$locked = json['locked'];
     final l$progress = json['progress'];
+    final l$image = json['image'];
     final l$publishDate = json['publishDate'];
+    final l$number = json['number'];
     final l$season = json['season'];
     final l$$__typename = json['__typename'];
-    final l$number = json['number'];
     return Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Episode(
       id: (l$id as String),
+      title: (l$title as String),
       duration: (l$duration as int),
       locked: (l$locked as bool),
       progress: (l$progress as int?),
+      image: (l$image as String?),
       publishDate: (l$publishDate as String),
+      number: (l$number as int?),
       season: l$season == null
           ? null
           : Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Episode$season
               .fromJson((l$season as Map<String, dynamic>)),
       $__typename: (l$$__typename as String),
-      number: (l$number as int?),
     );
   }
 
   final String id;
+
+  final String title;
 
   final int duration;
 
@@ -30212,55 +30699,65 @@ class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$
 
   final int? progress;
 
+  final String? image;
+
   final String publishDate;
+
+  final int? number;
 
   final Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Episode$season?
       season;
 
   final String $__typename;
 
-  final int? number;
-
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
     final l$id = id;
     _resultData['id'] = l$id;
+    final l$title = title;
+    _resultData['title'] = l$title;
     final l$duration = duration;
     _resultData['duration'] = l$duration;
     final l$locked = locked;
     _resultData['locked'] = l$locked;
     final l$progress = progress;
     _resultData['progress'] = l$progress;
+    final l$image = image;
+    _resultData['image'] = l$image;
     final l$publishDate = publishDate;
     _resultData['publishDate'] = l$publishDate;
+    final l$number = number;
+    _resultData['number'] = l$number;
     final l$season = season;
     _resultData['season'] = l$season?.toJson();
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
-    final l$number = number;
-    _resultData['number'] = l$number;
     return _resultData;
   }
 
   @override
   int get hashCode {
     final l$id = id;
+    final l$title = title;
     final l$duration = duration;
     final l$locked = locked;
     final l$progress = progress;
+    final l$image = image;
     final l$publishDate = publishDate;
+    final l$number = number;
     final l$season = season;
     final l$$__typename = $__typename;
-    final l$number = number;
     return Object.hashAll([
       l$id,
+      l$title,
       l$duration,
       l$locked,
       l$progress,
+      l$image,
       l$publishDate,
+      l$number,
       l$season,
       l$$__typename,
-      l$number,
     ]);
   }
 
@@ -30279,6 +30776,11 @@ class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$
     if (l$id != lOther$id) {
       return false;
     }
+    final l$title = title;
+    final lOther$title = other.title;
+    if (l$title != lOther$title) {
+      return false;
+    }
     final l$duration = duration;
     final lOther$duration = other.duration;
     if (l$duration != lOther$duration) {
@@ -30294,9 +30796,19 @@ class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$
     if (l$progress != lOther$progress) {
       return false;
     }
+    final l$image = image;
+    final lOther$image = other.image;
+    if (l$image != lOther$image) {
+      return false;
+    }
     final l$publishDate = publishDate;
     final lOther$publishDate = other.publishDate;
     if (l$publishDate != lOther$publishDate) {
+      return false;
+    }
+    final l$number = number;
+    final lOther$number = other.number;
+    if (l$number != lOther$number) {
       return false;
     }
     final l$season = season;
@@ -30307,11 +30819,6 @@ class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$
     final l$$__typename = $__typename;
     final lOther$$__typename = other.$__typename;
     if (l$$__typename != lOther$$__typename) {
-      return false;
-    }
-    final l$number = number;
-    final lOther$number = other.number;
-    if (l$number != lOther$number) {
       return false;
     }
     return true;
@@ -30345,14 +30852,16 @@ abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterGridSe
 
   TRes call({
     String? id,
+    String? title,
     int? duration,
     bool? locked,
     int? progress,
+    String? image,
     String? publishDate,
+    int? number,
     Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Episode$season?
         season,
     String? $__typename,
-    int? number,
   });
   CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Episode$season<
       TRes> get season;
@@ -30379,17 +30888,22 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$PosterGridSectio
 
   TRes call({
     Object? id = _undefined,
+    Object? title = _undefined,
     Object? duration = _undefined,
     Object? locked = _undefined,
     Object? progress = _undefined,
+    Object? image = _undefined,
     Object? publishDate = _undefined,
+    Object? number = _undefined,
     Object? season = _undefined,
     Object? $__typename = _undefined,
-    Object? number = _undefined,
   }) =>
       _then(
           Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Episode(
         id: id == _undefined || id == null ? _instance.id : (id as String),
+        title: title == _undefined || title == null
+            ? _instance.title
+            : (title as String),
         duration: duration == _undefined || duration == null
             ? _instance.duration
             : (duration as int),
@@ -30398,9 +30912,11 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$PosterGridSectio
             : (locked as bool),
         progress:
             progress == _undefined ? _instance.progress : (progress as int?),
+        image: image == _undefined ? _instance.image : (image as String?),
         publishDate: publishDate == _undefined || publishDate == null
             ? _instance.publishDate
             : (publishDate as String),
+        number: number == _undefined ? _instance.number : (number as int?),
         season: season == _undefined
             ? _instance.season
             : (season
@@ -30408,7 +30924,6 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$PosterGridSectio
         $__typename: $__typename == _undefined || $__typename == null
             ? _instance.$__typename
             : ($__typename as String),
-        number: number == _undefined ? _instance.number : (number as int?),
       ));
 
   CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Episode$season<
@@ -30434,14 +30949,16 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$PosterGridSe
 
   call({
     String? id,
+    String? title,
     int? duration,
     bool? locked,
     int? progress,
+    String? image,
     String? publishDate,
+    int? number,
     Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Episode$season?
         season,
     String? $__typename,
-    int? number,
   }) =>
       _res;
 
@@ -30456,54 +30973,55 @@ class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$
     implements
         Fragment$Section$$PosterGridSection$items$items$item$$Episode$season,
         Fragment$ItemSectionItem$item$$Episode$season,
+        Fragment$EpisodeThumbnail$season,
         Fragment$GridSectionItem$item$$Episode$season {
   Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Episode$season({
+    required this.number,
     required this.$show,
     this.$__typename = 'Season',
-    required this.number,
   });
 
   factory Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Episode$season.fromJson(
       Map<String, dynamic> json) {
+    final l$number = json['number'];
     final l$$show = json['show'];
     final l$$__typename = json['__typename'];
-    final l$number = json['number'];
     return Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Episode$season(
+      number: (l$number as int),
       $show:
           Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Episode$season$show
               .fromJson((l$$show as Map<String, dynamic>)),
       $__typename: (l$$__typename as String),
-      number: (l$number as int),
     );
   }
+
+  final int number;
 
   final Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Episode$season$show
       $show;
 
   final String $__typename;
 
-  final int number;
-
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
+    final l$number = number;
+    _resultData['number'] = l$number;
     final l$$show = $show;
     _resultData['show'] = l$$show.toJson();
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
-    final l$number = number;
-    _resultData['number'] = l$number;
     return _resultData;
   }
 
   @override
   int get hashCode {
+    final l$number = number;
     final l$$show = $show;
     final l$$__typename = $__typename;
-    final l$number = number;
     return Object.hashAll([
+      l$number,
       l$$show,
       l$$__typename,
-      l$number,
     ]);
   }
 
@@ -30517,6 +31035,11 @@ class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$
         runtimeType != other.runtimeType) {
       return false;
     }
+    final l$number = number;
+    final lOther$number = other.number;
+    if (l$number != lOther$number) {
+      return false;
+    }
     final l$$show = $show;
     final lOther$$show = other.$show;
     if (l$$show != lOther$$show) {
@@ -30525,11 +31048,6 @@ class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$
     final l$$__typename = $__typename;
     final lOther$$__typename = other.$__typename;
     if (l$$__typename != lOther$$__typename) {
-      return false;
-    }
-    final l$number = number;
-    final lOther$number = other.number;
-    if (l$number != lOther$number) {
       return false;
     }
     return true;
@@ -30562,10 +31080,10 @@ abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterGridSe
       _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Episode$season;
 
   TRes call({
+    int? number,
     Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Episode$season$show?
         $show,
     String? $__typename,
-    int? number,
   });
   CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Episode$season$show<
       TRes> get $show;
@@ -30591,12 +31109,15 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$PosterGridSectio
   static const _undefined = <dynamic, dynamic>{};
 
   TRes call({
+    Object? number = _undefined,
     Object? $show = _undefined,
     Object? $__typename = _undefined,
-    Object? number = _undefined,
   }) =>
       _then(
           Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Episode$season(
+        number: number == _undefined || number == null
+            ? _instance.number
+            : (number as int),
         $show: $show == _undefined || $show == null
             ? _instance.$show
             : ($show
@@ -30604,9 +31125,6 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$PosterGridSectio
         $__typename: $__typename == _undefined || $__typename == null
             ? _instance.$__typename
             : ($__typename as String),
-        number: number == _undefined || number == null
-            ? _instance.number
-            : (number as int),
       ));
 
   CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Episode$season$show<
@@ -30628,10 +31146,10 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$PosterGridSe
   TRes _res;
 
   call({
+    int? number,
     Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Episode$season$show?
         $show,
     String? $__typename,
-    int? number,
   }) =>
       _res;
 
@@ -30646,6 +31164,7 @@ class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$
     implements
         Fragment$Section$$PosterGridSection$items$items$item$$Episode$season$show,
         Fragment$ItemSectionItem$item$$Episode$season$show,
+        Fragment$EpisodeThumbnail$season$show,
         Fragment$GridSectionItem$item$$Episode$season$show {
   Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Episode$season$show({
     required this.title,
@@ -33855,46 +34374,55 @@ class Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$it
     implements
         Fragment$Section$$IconGridSection$items$items$item$$Episode,
         Fragment$ItemSectionItem$item$$Episode,
+        Fragment$EpisodeThumbnail,
         Fragment$NavigatableEpisode,
         Fragment$GridSectionItem$item$$Episode,
         Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item {
   Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Episode({
     required this.id,
+    required this.title,
     required this.duration,
     required this.locked,
     this.progress,
+    this.image,
     required this.publishDate,
+    this.number,
     this.season,
     this.$__typename = 'Episode',
-    this.number,
   });
 
   factory Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Episode.fromJson(
       Map<String, dynamic> json) {
     final l$id = json['id'];
+    final l$title = json['title'];
     final l$duration = json['duration'];
     final l$locked = json['locked'];
     final l$progress = json['progress'];
+    final l$image = json['image'];
     final l$publishDate = json['publishDate'];
+    final l$number = json['number'];
     final l$season = json['season'];
     final l$$__typename = json['__typename'];
-    final l$number = json['number'];
     return Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Episode(
       id: (l$id as String),
+      title: (l$title as String),
       duration: (l$duration as int),
       locked: (l$locked as bool),
       progress: (l$progress as int?),
+      image: (l$image as String?),
       publishDate: (l$publishDate as String),
+      number: (l$number as int?),
       season: l$season == null
           ? null
           : Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Episode$season
               .fromJson((l$season as Map<String, dynamic>)),
       $__typename: (l$$__typename as String),
-      number: (l$number as int?),
     );
   }
 
   final String id;
+
+  final String title;
 
   final int duration;
 
@@ -33902,55 +34430,65 @@ class Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$it
 
   final int? progress;
 
+  final String? image;
+
   final String publishDate;
+
+  final int? number;
 
   final Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Episode$season?
       season;
 
   final String $__typename;
 
-  final int? number;
-
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
     final l$id = id;
     _resultData['id'] = l$id;
+    final l$title = title;
+    _resultData['title'] = l$title;
     final l$duration = duration;
     _resultData['duration'] = l$duration;
     final l$locked = locked;
     _resultData['locked'] = l$locked;
     final l$progress = progress;
     _resultData['progress'] = l$progress;
+    final l$image = image;
+    _resultData['image'] = l$image;
     final l$publishDate = publishDate;
     _resultData['publishDate'] = l$publishDate;
+    final l$number = number;
+    _resultData['number'] = l$number;
     final l$season = season;
     _resultData['season'] = l$season?.toJson();
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
-    final l$number = number;
-    _resultData['number'] = l$number;
     return _resultData;
   }
 
   @override
   int get hashCode {
     final l$id = id;
+    final l$title = title;
     final l$duration = duration;
     final l$locked = locked;
     final l$progress = progress;
+    final l$image = image;
     final l$publishDate = publishDate;
+    final l$number = number;
     final l$season = season;
     final l$$__typename = $__typename;
-    final l$number = number;
     return Object.hashAll([
       l$id,
+      l$title,
       l$duration,
       l$locked,
       l$progress,
+      l$image,
       l$publishDate,
+      l$number,
       l$season,
       l$$__typename,
-      l$number,
     ]);
   }
 
@@ -33969,6 +34507,11 @@ class Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$it
     if (l$id != lOther$id) {
       return false;
     }
+    final l$title = title;
+    final lOther$title = other.title;
+    if (l$title != lOther$title) {
+      return false;
+    }
     final l$duration = duration;
     final lOther$duration = other.duration;
     if (l$duration != lOther$duration) {
@@ -33984,9 +34527,19 @@ class Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$it
     if (l$progress != lOther$progress) {
       return false;
     }
+    final l$image = image;
+    final lOther$image = other.image;
+    if (l$image != lOther$image) {
+      return false;
+    }
     final l$publishDate = publishDate;
     final lOther$publishDate = other.publishDate;
     if (l$publishDate != lOther$publishDate) {
+      return false;
+    }
+    final l$number = number;
+    final lOther$number = other.number;
+    if (l$number != lOther$number) {
       return false;
     }
     final l$season = season;
@@ -33997,11 +34550,6 @@ class Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$it
     final l$$__typename = $__typename;
     final lOther$$__typename = other.$__typename;
     if (l$$__typename != lOther$$__typename) {
-      return false;
-    }
-    final l$number = number;
-    final lOther$number = other.number;
-    if (l$number != lOther$number) {
       return false;
     }
     return true;
@@ -34035,14 +34583,16 @@ abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$IconGridSect
 
   TRes call({
     String? id,
+    String? title,
     int? duration,
     bool? locked,
     int? progress,
+    String? image,
     String? publishDate,
+    int? number,
     Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Episode$season?
         season,
     String? $__typename,
-    int? number,
   });
   CopyWith$Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Episode$season<
       TRes> get season;
@@ -34069,17 +34619,22 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$IconGridSection$
 
   TRes call({
     Object? id = _undefined,
+    Object? title = _undefined,
     Object? duration = _undefined,
     Object? locked = _undefined,
     Object? progress = _undefined,
+    Object? image = _undefined,
     Object? publishDate = _undefined,
+    Object? number = _undefined,
     Object? season = _undefined,
     Object? $__typename = _undefined,
-    Object? number = _undefined,
   }) =>
       _then(
           Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Episode(
         id: id == _undefined || id == null ? _instance.id : (id as String),
+        title: title == _undefined || title == null
+            ? _instance.title
+            : (title as String),
         duration: duration == _undefined || duration == null
             ? _instance.duration
             : (duration as int),
@@ -34088,9 +34643,11 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$IconGridSection$
             : (locked as bool),
         progress:
             progress == _undefined ? _instance.progress : (progress as int?),
+        image: image == _undefined ? _instance.image : (image as String?),
         publishDate: publishDate == _undefined || publishDate == null
             ? _instance.publishDate
             : (publishDate as String),
+        number: number == _undefined ? _instance.number : (number as int?),
         season: season == _undefined
             ? _instance.season
             : (season
@@ -34098,7 +34655,6 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$IconGridSection$
         $__typename: $__typename == _undefined || $__typename == null
             ? _instance.$__typename
             : ($__typename as String),
-        number: number == _undefined ? _instance.number : (number as int?),
       ));
 
   CopyWith$Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Episode$season<
@@ -34124,14 +34680,16 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$IconGridSect
 
   call({
     String? id,
+    String? title,
     int? duration,
     bool? locked,
     int? progress,
+    String? image,
     String? publishDate,
+    int? number,
     Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Episode$season?
         season,
     String? $__typename,
-    int? number,
   }) =>
       _res;
 
@@ -34146,54 +34704,55 @@ class Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$it
     implements
         Fragment$Section$$IconGridSection$items$items$item$$Episode$season,
         Fragment$ItemSectionItem$item$$Episode$season,
+        Fragment$EpisodeThumbnail$season,
         Fragment$GridSectionItem$item$$Episode$season {
   Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Episode$season({
+    required this.number,
     required this.$show,
     this.$__typename = 'Season',
-    required this.number,
   });
 
   factory Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Episode$season.fromJson(
       Map<String, dynamic> json) {
+    final l$number = json['number'];
     final l$$show = json['show'];
     final l$$__typename = json['__typename'];
-    final l$number = json['number'];
     return Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Episode$season(
+      number: (l$number as int),
       $show:
           Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Episode$season$show
               .fromJson((l$$show as Map<String, dynamic>)),
       $__typename: (l$$__typename as String),
-      number: (l$number as int),
     );
   }
+
+  final int number;
 
   final Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Episode$season$show
       $show;
 
   final String $__typename;
 
-  final int number;
-
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
+    final l$number = number;
+    _resultData['number'] = l$number;
     final l$$show = $show;
     _resultData['show'] = l$$show.toJson();
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
-    final l$number = number;
-    _resultData['number'] = l$number;
     return _resultData;
   }
 
   @override
   int get hashCode {
+    final l$number = number;
     final l$$show = $show;
     final l$$__typename = $__typename;
-    final l$number = number;
     return Object.hashAll([
+      l$number,
       l$$show,
       l$$__typename,
-      l$number,
     ]);
   }
 
@@ -34207,6 +34766,11 @@ class Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$it
         runtimeType != other.runtimeType) {
       return false;
     }
+    final l$number = number;
+    final lOther$number = other.number;
+    if (l$number != lOther$number) {
+      return false;
+    }
     final l$$show = $show;
     final lOther$$show = other.$show;
     if (l$$show != lOther$$show) {
@@ -34215,11 +34779,6 @@ class Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$it
     final l$$__typename = $__typename;
     final lOther$$__typename = other.$__typename;
     if (l$$__typename != lOther$$__typename) {
-      return false;
-    }
-    final l$number = number;
-    final lOther$number = other.number;
-    if (l$number != lOther$number) {
       return false;
     }
     return true;
@@ -34252,10 +34811,10 @@ abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$IconGridSect
       _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Episode$season;
 
   TRes call({
+    int? number,
     Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Episode$season$show?
         $show,
     String? $__typename,
-    int? number,
   });
   CopyWith$Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Episode$season$show<
       TRes> get $show;
@@ -34281,12 +34840,15 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$IconGridSection$
   static const _undefined = <dynamic, dynamic>{};
 
   TRes call({
+    Object? number = _undefined,
     Object? $show = _undefined,
     Object? $__typename = _undefined,
-    Object? number = _undefined,
   }) =>
       _then(
           Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Episode$season(
+        number: number == _undefined || number == null
+            ? _instance.number
+            : (number as int),
         $show: $show == _undefined || $show == null
             ? _instance.$show
             : ($show
@@ -34294,9 +34856,6 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$IconGridSection$
         $__typename: $__typename == _undefined || $__typename == null
             ? _instance.$__typename
             : ($__typename as String),
-        number: number == _undefined || number == null
-            ? _instance.number
-            : (number as int),
       ));
 
   CopyWith$Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Episode$season$show<
@@ -34318,10 +34877,10 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$IconGridSect
   TRes _res;
 
   call({
+    int? number,
     Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Episode$season$show?
         $show,
     String? $__typename,
-    int? number,
   }) =>
       _res;
 
@@ -34336,6 +34895,7 @@ class Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$it
     implements
         Fragment$Section$$IconGridSection$items$items$item$$Episode$season$show,
         Fragment$ItemSectionItem$item$$Episode$season$show,
+        Fragment$EpisodeThumbnail$season$show,
         Fragment$GridSectionItem$item$$Episode$season$show {
   Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Episode$season$show({
     required this.title,
@@ -41087,6 +41647,7 @@ const documentNodeQueryGetSection = DocumentNode(definitions: [
   fragmentDefinitionNavigatableShort,
   fragmentDefinitionNavigatableEpisode,
   fragmentDefinitionNavigatableShow,
+  fragmentDefinitionEpisodeThumbnail,
   fragmentDefinitionGridSection,
   fragmentDefinitionGridSectionItem,
   fragmentDefinitionCardItem,
@@ -43137,14 +43698,18 @@ class Query$GetSection$section$$PosterSection$items$items$item$$Episode
     implements
         Fragment$Section$$PosterSection$items$items$item$$Episode,
         Fragment$ItemSectionItem$item$$Episode,
+        Fragment$EpisodeThumbnail,
         Fragment$NavigatableEpisode,
         Query$GetSection$section$$PosterSection$items$items$item {
   Query$GetSection$section$$PosterSection$items$items$item$$Episode({
     required this.id,
+    required this.title,
     required this.duration,
     required this.locked,
     this.progress,
+    this.image,
     required this.publishDate,
+    this.number,
     this.season,
     this.$__typename = 'Episode',
     required this.productionDate,
@@ -43153,19 +43718,25 @@ class Query$GetSection$section$$PosterSection$items$items$item$$Episode
   factory Query$GetSection$section$$PosterSection$items$items$item$$Episode.fromJson(
       Map<String, dynamic> json) {
     final l$id = json['id'];
+    final l$title = json['title'];
     final l$duration = json['duration'];
     final l$locked = json['locked'];
     final l$progress = json['progress'];
+    final l$image = json['image'];
     final l$publishDate = json['publishDate'];
+    final l$number = json['number'];
     final l$season = json['season'];
     final l$$__typename = json['__typename'];
     final l$productionDate = json['productionDate'];
     return Query$GetSection$section$$PosterSection$items$items$item$$Episode(
       id: (l$id as String),
+      title: (l$title as String),
       duration: (l$duration as int),
       locked: (l$locked as bool),
       progress: (l$progress as int?),
+      image: (l$image as String?),
       publishDate: (l$publishDate as String),
+      number: (l$number as int?),
       season: l$season == null
           ? null
           : Query$GetSection$section$$PosterSection$items$items$item$$Episode$season
@@ -43177,13 +43748,19 @@ class Query$GetSection$section$$PosterSection$items$items$item$$Episode
 
   final String id;
 
+  final String title;
+
   final int duration;
 
   final bool locked;
 
   final int? progress;
 
+  final String? image;
+
   final String publishDate;
+
+  final int? number;
 
   final Query$GetSection$section$$PosterSection$items$items$item$$Episode$season?
       season;
@@ -43196,14 +43773,20 @@ class Query$GetSection$section$$PosterSection$items$items$item$$Episode
     final _resultData = <String, dynamic>{};
     final l$id = id;
     _resultData['id'] = l$id;
+    final l$title = title;
+    _resultData['title'] = l$title;
     final l$duration = duration;
     _resultData['duration'] = l$duration;
     final l$locked = locked;
     _resultData['locked'] = l$locked;
     final l$progress = progress;
     _resultData['progress'] = l$progress;
+    final l$image = image;
+    _resultData['image'] = l$image;
     final l$publishDate = publishDate;
     _resultData['publishDate'] = l$publishDate;
+    final l$number = number;
+    _resultData['number'] = l$number;
     final l$season = season;
     _resultData['season'] = l$season?.toJson();
     final l$$__typename = $__typename;
@@ -43216,19 +43799,25 @@ class Query$GetSection$section$$PosterSection$items$items$item$$Episode
   @override
   int get hashCode {
     final l$id = id;
+    final l$title = title;
     final l$duration = duration;
     final l$locked = locked;
     final l$progress = progress;
+    final l$image = image;
     final l$publishDate = publishDate;
+    final l$number = number;
     final l$season = season;
     final l$$__typename = $__typename;
     final l$productionDate = productionDate;
     return Object.hashAll([
       l$id,
+      l$title,
       l$duration,
       l$locked,
       l$progress,
+      l$image,
       l$publishDate,
+      l$number,
       l$season,
       l$$__typename,
       l$productionDate,
@@ -43250,6 +43839,11 @@ class Query$GetSection$section$$PosterSection$items$items$item$$Episode
     if (l$id != lOther$id) {
       return false;
     }
+    final l$title = title;
+    final lOther$title = other.title;
+    if (l$title != lOther$title) {
+      return false;
+    }
     final l$duration = duration;
     final lOther$duration = other.duration;
     if (l$duration != lOther$duration) {
@@ -43265,9 +43859,19 @@ class Query$GetSection$section$$PosterSection$items$items$item$$Episode
     if (l$progress != lOther$progress) {
       return false;
     }
+    final l$image = image;
+    final lOther$image = other.image;
+    if (l$image != lOther$image) {
+      return false;
+    }
     final l$publishDate = publishDate;
     final lOther$publishDate = other.publishDate;
     if (l$publishDate != lOther$publishDate) {
+      return false;
+    }
+    final l$number = number;
+    final lOther$number = other.number;
+    if (l$number != lOther$number) {
       return false;
     }
     final l$season = season;
@@ -43315,10 +43919,13 @@ abstract class CopyWith$Query$GetSection$section$$PosterSection$items$items$item
 
   TRes call({
     String? id,
+    String? title,
     int? duration,
     bool? locked,
     int? progress,
+    String? image,
     String? publishDate,
+    int? number,
     Query$GetSection$section$$PosterSection$items$items$item$$Episode$season?
         season,
     String? $__typename,
@@ -43348,16 +43955,22 @@ class _CopyWithImpl$Query$GetSection$section$$PosterSection$items$items$item$$Ep
 
   TRes call({
     Object? id = _undefined,
+    Object? title = _undefined,
     Object? duration = _undefined,
     Object? locked = _undefined,
     Object? progress = _undefined,
+    Object? image = _undefined,
     Object? publishDate = _undefined,
+    Object? number = _undefined,
     Object? season = _undefined,
     Object? $__typename = _undefined,
     Object? productionDate = _undefined,
   }) =>
       _then(Query$GetSection$section$$PosterSection$items$items$item$$Episode(
         id: id == _undefined || id == null ? _instance.id : (id as String),
+        title: title == _undefined || title == null
+            ? _instance.title
+            : (title as String),
         duration: duration == _undefined || duration == null
             ? _instance.duration
             : (duration as int),
@@ -43366,9 +43979,11 @@ class _CopyWithImpl$Query$GetSection$section$$PosterSection$items$items$item$$Ep
             : (locked as bool),
         progress:
             progress == _undefined ? _instance.progress : (progress as int?),
+        image: image == _undefined ? _instance.image : (image as String?),
         publishDate: publishDate == _undefined || publishDate == null
             ? _instance.publishDate
             : (publishDate as String),
+        number: number == _undefined ? _instance.number : (number as int?),
         season: season == _undefined
             ? _instance.season
             : (season
@@ -43404,10 +44019,13 @@ class _CopyWithStubImpl$Query$GetSection$section$$PosterSection$items$items$item
 
   call({
     String? id,
+    String? title,
     int? duration,
     bool? locked,
     int? progress,
+    String? image,
     String? publishDate,
+    int? number,
     Query$GetSection$section$$PosterSection$items$items$item$$Episode$season?
         season,
     String? $__typename,
@@ -43425,23 +44043,29 @@ class _CopyWithStubImpl$Query$GetSection$section$$PosterSection$items$items$item
 class Query$GetSection$section$$PosterSection$items$items$item$$Episode$season
     implements
         Fragment$Section$$PosterSection$items$items$item$$Episode$season,
-        Fragment$ItemSectionItem$item$$Episode$season {
+        Fragment$ItemSectionItem$item$$Episode$season,
+        Fragment$EpisodeThumbnail$season {
   Query$GetSection$section$$PosterSection$items$items$item$$Episode$season({
+    required this.number,
     required this.$show,
     this.$__typename = 'Season',
   });
 
   factory Query$GetSection$section$$PosterSection$items$items$item$$Episode$season.fromJson(
       Map<String, dynamic> json) {
+    final l$number = json['number'];
     final l$$show = json['show'];
     final l$$__typename = json['__typename'];
     return Query$GetSection$section$$PosterSection$items$items$item$$Episode$season(
+      number: (l$number as int),
       $show:
           Query$GetSection$section$$PosterSection$items$items$item$$Episode$season$show
               .fromJson((l$$show as Map<String, dynamic>)),
       $__typename: (l$$__typename as String),
     );
   }
+
+  final int number;
 
   final Query$GetSection$section$$PosterSection$items$items$item$$Episode$season$show
       $show;
@@ -43450,6 +44074,8 @@ class Query$GetSection$section$$PosterSection$items$items$item$$Episode$season
 
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
+    final l$number = number;
+    _resultData['number'] = l$number;
     final l$$show = $show;
     _resultData['show'] = l$$show.toJson();
     final l$$__typename = $__typename;
@@ -43459,9 +44085,11 @@ class Query$GetSection$section$$PosterSection$items$items$item$$Episode$season
 
   @override
   int get hashCode {
+    final l$number = number;
     final l$$show = $show;
     final l$$__typename = $__typename;
     return Object.hashAll([
+      l$number,
       l$$show,
       l$$__typename,
     ]);
@@ -43475,6 +44103,11 @@ class Query$GetSection$section$$PosterSection$items$items$item$$Episode$season
     if (!(other
             is Query$GetSection$section$$PosterSection$items$items$item$$Episode$season) ||
         runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$number = number;
+    final lOther$number = other.number;
+    if (l$number != lOther$number) {
       return false;
     }
     final l$$show = $show;
@@ -43517,6 +44150,7 @@ abstract class CopyWith$Query$GetSection$section$$PosterSection$items$items$item
       _CopyWithStubImpl$Query$GetSection$section$$PosterSection$items$items$item$$Episode$season;
 
   TRes call({
+    int? number,
     Query$GetSection$section$$PosterSection$items$items$item$$Episode$season$show?
         $show,
     String? $__typename,
@@ -43545,11 +44179,15 @@ class _CopyWithImpl$Query$GetSection$section$$PosterSection$items$items$item$$Ep
   static const _undefined = <dynamic, dynamic>{};
 
   TRes call({
+    Object? number = _undefined,
     Object? $show = _undefined,
     Object? $__typename = _undefined,
   }) =>
       _then(
           Query$GetSection$section$$PosterSection$items$items$item$$Episode$season(
+        number: number == _undefined || number == null
+            ? _instance.number
+            : (number as int),
         $show: $show == _undefined || $show == null
             ? _instance.$show
             : ($show
@@ -43578,6 +44216,7 @@ class _CopyWithStubImpl$Query$GetSection$section$$PosterSection$items$items$item
   TRes _res;
 
   call({
+    int? number,
     Query$GetSection$section$$PosterSection$items$items$item$$Episode$season$show?
         $show,
     String? $__typename,
@@ -43594,7 +44233,8 @@ class _CopyWithStubImpl$Query$GetSection$section$$PosterSection$items$items$item
 class Query$GetSection$section$$PosterSection$items$items$item$$Episode$season$show
     implements
         Fragment$Section$$PosterSection$items$items$item$$Episode$season$show,
-        Fragment$ItemSectionItem$item$$Episode$season$show {
+        Fragment$ItemSectionItem$item$$Episode$season$show,
+        Fragment$EpisodeThumbnail$season$show {
   Query$GetSection$section$$PosterSection$items$items$item$$Episode$season$show({
     required this.title,
     this.$__typename = 'Show',
@@ -48187,14 +48827,18 @@ class Query$GetSection$section$$FeaturedSection$items$items$item$$Episode
     implements
         Fragment$Section$$FeaturedSection$items$items$item$$Episode,
         Fragment$ItemSectionItem$item$$Episode,
+        Fragment$EpisodeThumbnail,
         Fragment$NavigatableEpisode,
         Query$GetSection$section$$FeaturedSection$items$items$item {
   Query$GetSection$section$$FeaturedSection$items$items$item$$Episode({
     required this.id,
+    required this.title,
     required this.duration,
     required this.locked,
     this.progress,
+    this.image,
     required this.publishDate,
+    this.number,
     this.season,
     this.$__typename = 'Episode',
   });
@@ -48202,18 +48846,24 @@ class Query$GetSection$section$$FeaturedSection$items$items$item$$Episode
   factory Query$GetSection$section$$FeaturedSection$items$items$item$$Episode.fromJson(
       Map<String, dynamic> json) {
     final l$id = json['id'];
+    final l$title = json['title'];
     final l$duration = json['duration'];
     final l$locked = json['locked'];
     final l$progress = json['progress'];
+    final l$image = json['image'];
     final l$publishDate = json['publishDate'];
+    final l$number = json['number'];
     final l$season = json['season'];
     final l$$__typename = json['__typename'];
     return Query$GetSection$section$$FeaturedSection$items$items$item$$Episode(
       id: (l$id as String),
+      title: (l$title as String),
       duration: (l$duration as int),
       locked: (l$locked as bool),
       progress: (l$progress as int?),
+      image: (l$image as String?),
       publishDate: (l$publishDate as String),
+      number: (l$number as int?),
       season: l$season == null
           ? null
           : Query$GetSection$section$$FeaturedSection$items$items$item$$Episode$season
@@ -48224,13 +48874,19 @@ class Query$GetSection$section$$FeaturedSection$items$items$item$$Episode
 
   final String id;
 
+  final String title;
+
   final int duration;
 
   final bool locked;
 
   final int? progress;
 
+  final String? image;
+
   final String publishDate;
+
+  final int? number;
 
   final Query$GetSection$section$$FeaturedSection$items$items$item$$Episode$season?
       season;
@@ -48241,14 +48897,20 @@ class Query$GetSection$section$$FeaturedSection$items$items$item$$Episode
     final _resultData = <String, dynamic>{};
     final l$id = id;
     _resultData['id'] = l$id;
+    final l$title = title;
+    _resultData['title'] = l$title;
     final l$duration = duration;
     _resultData['duration'] = l$duration;
     final l$locked = locked;
     _resultData['locked'] = l$locked;
     final l$progress = progress;
     _resultData['progress'] = l$progress;
+    final l$image = image;
+    _resultData['image'] = l$image;
     final l$publishDate = publishDate;
     _resultData['publishDate'] = l$publishDate;
+    final l$number = number;
+    _resultData['number'] = l$number;
     final l$season = season;
     _resultData['season'] = l$season?.toJson();
     final l$$__typename = $__typename;
@@ -48259,18 +48921,24 @@ class Query$GetSection$section$$FeaturedSection$items$items$item$$Episode
   @override
   int get hashCode {
     final l$id = id;
+    final l$title = title;
     final l$duration = duration;
     final l$locked = locked;
     final l$progress = progress;
+    final l$image = image;
     final l$publishDate = publishDate;
+    final l$number = number;
     final l$season = season;
     final l$$__typename = $__typename;
     return Object.hashAll([
       l$id,
+      l$title,
       l$duration,
       l$locked,
       l$progress,
+      l$image,
       l$publishDate,
+      l$number,
       l$season,
       l$$__typename,
     ]);
@@ -48291,6 +48959,11 @@ class Query$GetSection$section$$FeaturedSection$items$items$item$$Episode
     if (l$id != lOther$id) {
       return false;
     }
+    final l$title = title;
+    final lOther$title = other.title;
+    if (l$title != lOther$title) {
+      return false;
+    }
     final l$duration = duration;
     final lOther$duration = other.duration;
     if (l$duration != lOther$duration) {
@@ -48306,9 +48979,19 @@ class Query$GetSection$section$$FeaturedSection$items$items$item$$Episode
     if (l$progress != lOther$progress) {
       return false;
     }
+    final l$image = image;
+    final lOther$image = other.image;
+    if (l$image != lOther$image) {
+      return false;
+    }
     final l$publishDate = publishDate;
     final lOther$publishDate = other.publishDate;
     if (l$publishDate != lOther$publishDate) {
+      return false;
+    }
+    final l$number = number;
+    final lOther$number = other.number;
+    if (l$number != lOther$number) {
       return false;
     }
     final l$season = season;
@@ -48352,10 +49035,13 @@ abstract class CopyWith$Query$GetSection$section$$FeaturedSection$items$items$it
 
   TRes call({
     String? id,
+    String? title,
     int? duration,
     bool? locked,
     int? progress,
+    String? image,
     String? publishDate,
+    int? number,
     Query$GetSection$section$$FeaturedSection$items$items$item$$Episode$season?
         season,
     String? $__typename,
@@ -48385,15 +49071,21 @@ class _CopyWithImpl$Query$GetSection$section$$FeaturedSection$items$items$item$$
 
   TRes call({
     Object? id = _undefined,
+    Object? title = _undefined,
     Object? duration = _undefined,
     Object? locked = _undefined,
     Object? progress = _undefined,
+    Object? image = _undefined,
     Object? publishDate = _undefined,
+    Object? number = _undefined,
     Object? season = _undefined,
     Object? $__typename = _undefined,
   }) =>
       _then(Query$GetSection$section$$FeaturedSection$items$items$item$$Episode(
         id: id == _undefined || id == null ? _instance.id : (id as String),
+        title: title == _undefined || title == null
+            ? _instance.title
+            : (title as String),
         duration: duration == _undefined || duration == null
             ? _instance.duration
             : (duration as int),
@@ -48402,9 +49094,11 @@ class _CopyWithImpl$Query$GetSection$section$$FeaturedSection$items$items$item$$
             : (locked as bool),
         progress:
             progress == _undefined ? _instance.progress : (progress as int?),
+        image: image == _undefined ? _instance.image : (image as String?),
         publishDate: publishDate == _undefined || publishDate == null
             ? _instance.publishDate
             : (publishDate as String),
+        number: number == _undefined ? _instance.number : (number as int?),
         season: season == _undefined
             ? _instance.season
             : (season
@@ -48437,10 +49131,13 @@ class _CopyWithStubImpl$Query$GetSection$section$$FeaturedSection$items$items$it
 
   call({
     String? id,
+    String? title,
     int? duration,
     bool? locked,
     int? progress,
+    String? image,
     String? publishDate,
+    int? number,
     Query$GetSection$section$$FeaturedSection$items$items$item$$Episode$season?
         season,
     String? $__typename,
@@ -48457,23 +49154,29 @@ class _CopyWithStubImpl$Query$GetSection$section$$FeaturedSection$items$items$it
 class Query$GetSection$section$$FeaturedSection$items$items$item$$Episode$season
     implements
         Fragment$Section$$FeaturedSection$items$items$item$$Episode$season,
-        Fragment$ItemSectionItem$item$$Episode$season {
+        Fragment$ItemSectionItem$item$$Episode$season,
+        Fragment$EpisodeThumbnail$season {
   Query$GetSection$section$$FeaturedSection$items$items$item$$Episode$season({
+    required this.number,
     required this.$show,
     this.$__typename = 'Season',
   });
 
   factory Query$GetSection$section$$FeaturedSection$items$items$item$$Episode$season.fromJson(
       Map<String, dynamic> json) {
+    final l$number = json['number'];
     final l$$show = json['show'];
     final l$$__typename = json['__typename'];
     return Query$GetSection$section$$FeaturedSection$items$items$item$$Episode$season(
+      number: (l$number as int),
       $show:
           Query$GetSection$section$$FeaturedSection$items$items$item$$Episode$season$show
               .fromJson((l$$show as Map<String, dynamic>)),
       $__typename: (l$$__typename as String),
     );
   }
+
+  final int number;
 
   final Query$GetSection$section$$FeaturedSection$items$items$item$$Episode$season$show
       $show;
@@ -48482,6 +49185,8 @@ class Query$GetSection$section$$FeaturedSection$items$items$item$$Episode$season
 
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
+    final l$number = number;
+    _resultData['number'] = l$number;
     final l$$show = $show;
     _resultData['show'] = l$$show.toJson();
     final l$$__typename = $__typename;
@@ -48491,9 +49196,11 @@ class Query$GetSection$section$$FeaturedSection$items$items$item$$Episode$season
 
   @override
   int get hashCode {
+    final l$number = number;
     final l$$show = $show;
     final l$$__typename = $__typename;
     return Object.hashAll([
+      l$number,
       l$$show,
       l$$__typename,
     ]);
@@ -48507,6 +49214,11 @@ class Query$GetSection$section$$FeaturedSection$items$items$item$$Episode$season
     if (!(other
             is Query$GetSection$section$$FeaturedSection$items$items$item$$Episode$season) ||
         runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$number = number;
+    final lOther$number = other.number;
+    if (l$number != lOther$number) {
       return false;
     }
     final l$$show = $show;
@@ -48549,6 +49261,7 @@ abstract class CopyWith$Query$GetSection$section$$FeaturedSection$items$items$it
       _CopyWithStubImpl$Query$GetSection$section$$FeaturedSection$items$items$item$$Episode$season;
 
   TRes call({
+    int? number,
     Query$GetSection$section$$FeaturedSection$items$items$item$$Episode$season$show?
         $show,
     String? $__typename,
@@ -48577,11 +49290,15 @@ class _CopyWithImpl$Query$GetSection$section$$FeaturedSection$items$items$item$$
   static const _undefined = <dynamic, dynamic>{};
 
   TRes call({
+    Object? number = _undefined,
     Object? $show = _undefined,
     Object? $__typename = _undefined,
   }) =>
       _then(
           Query$GetSection$section$$FeaturedSection$items$items$item$$Episode$season(
+        number: number == _undefined || number == null
+            ? _instance.number
+            : (number as int),
         $show: $show == _undefined || $show == null
             ? _instance.$show
             : ($show
@@ -48610,6 +49327,7 @@ class _CopyWithStubImpl$Query$GetSection$section$$FeaturedSection$items$items$it
   TRes _res;
 
   call({
+    int? number,
     Query$GetSection$section$$FeaturedSection$items$items$item$$Episode$season$show?
         $show,
     String? $__typename,
@@ -48626,7 +49344,8 @@ class _CopyWithStubImpl$Query$GetSection$section$$FeaturedSection$items$items$it
 class Query$GetSection$section$$FeaturedSection$items$items$item$$Episode$season$show
     implements
         Fragment$Section$$FeaturedSection$items$items$item$$Episode$season$show,
-        Fragment$ItemSectionItem$item$$Episode$season$show {
+        Fragment$ItemSectionItem$item$$Episode$season$show,
+        Fragment$EpisodeThumbnail$season$show {
   Query$GetSection$section$$FeaturedSection$items$items$item$$Episode$season$show({
     required this.title,
     this.$__typename = 'Show',
@@ -51710,14 +52429,18 @@ class Query$GetSection$section$$DefaultSection$items$items$item$$Episode
     implements
         Fragment$Section$$DefaultSection$items$items$item$$Episode,
         Fragment$ItemSectionItem$item$$Episode,
+        Fragment$EpisodeThumbnail,
         Fragment$NavigatableEpisode,
         Query$GetSection$section$$DefaultSection$items$items$item {
   Query$GetSection$section$$DefaultSection$items$items$item$$Episode({
     required this.id,
+    required this.title,
     required this.duration,
     required this.locked,
     this.progress,
+    this.image,
     required this.publishDate,
+    this.number,
     this.season,
     this.$__typename = 'Episode',
     required this.productionDate,
@@ -51726,19 +52449,25 @@ class Query$GetSection$section$$DefaultSection$items$items$item$$Episode
   factory Query$GetSection$section$$DefaultSection$items$items$item$$Episode.fromJson(
       Map<String, dynamic> json) {
     final l$id = json['id'];
+    final l$title = json['title'];
     final l$duration = json['duration'];
     final l$locked = json['locked'];
     final l$progress = json['progress'];
+    final l$image = json['image'];
     final l$publishDate = json['publishDate'];
+    final l$number = json['number'];
     final l$season = json['season'];
     final l$$__typename = json['__typename'];
     final l$productionDate = json['productionDate'];
     return Query$GetSection$section$$DefaultSection$items$items$item$$Episode(
       id: (l$id as String),
+      title: (l$title as String),
       duration: (l$duration as int),
       locked: (l$locked as bool),
       progress: (l$progress as int?),
+      image: (l$image as String?),
       publishDate: (l$publishDate as String),
+      number: (l$number as int?),
       season: l$season == null
           ? null
           : Query$GetSection$section$$DefaultSection$items$items$item$$Episode$season
@@ -51750,13 +52479,19 @@ class Query$GetSection$section$$DefaultSection$items$items$item$$Episode
 
   final String id;
 
+  final String title;
+
   final int duration;
 
   final bool locked;
 
   final int? progress;
 
+  final String? image;
+
   final String publishDate;
+
+  final int? number;
 
   final Query$GetSection$section$$DefaultSection$items$items$item$$Episode$season?
       season;
@@ -51769,14 +52504,20 @@ class Query$GetSection$section$$DefaultSection$items$items$item$$Episode
     final _resultData = <String, dynamic>{};
     final l$id = id;
     _resultData['id'] = l$id;
+    final l$title = title;
+    _resultData['title'] = l$title;
     final l$duration = duration;
     _resultData['duration'] = l$duration;
     final l$locked = locked;
     _resultData['locked'] = l$locked;
     final l$progress = progress;
     _resultData['progress'] = l$progress;
+    final l$image = image;
+    _resultData['image'] = l$image;
     final l$publishDate = publishDate;
     _resultData['publishDate'] = l$publishDate;
+    final l$number = number;
+    _resultData['number'] = l$number;
     final l$season = season;
     _resultData['season'] = l$season?.toJson();
     final l$$__typename = $__typename;
@@ -51789,19 +52530,25 @@ class Query$GetSection$section$$DefaultSection$items$items$item$$Episode
   @override
   int get hashCode {
     final l$id = id;
+    final l$title = title;
     final l$duration = duration;
     final l$locked = locked;
     final l$progress = progress;
+    final l$image = image;
     final l$publishDate = publishDate;
+    final l$number = number;
     final l$season = season;
     final l$$__typename = $__typename;
     final l$productionDate = productionDate;
     return Object.hashAll([
       l$id,
+      l$title,
       l$duration,
       l$locked,
       l$progress,
+      l$image,
       l$publishDate,
+      l$number,
       l$season,
       l$$__typename,
       l$productionDate,
@@ -51823,6 +52570,11 @@ class Query$GetSection$section$$DefaultSection$items$items$item$$Episode
     if (l$id != lOther$id) {
       return false;
     }
+    final l$title = title;
+    final lOther$title = other.title;
+    if (l$title != lOther$title) {
+      return false;
+    }
     final l$duration = duration;
     final lOther$duration = other.duration;
     if (l$duration != lOther$duration) {
@@ -51838,9 +52590,19 @@ class Query$GetSection$section$$DefaultSection$items$items$item$$Episode
     if (l$progress != lOther$progress) {
       return false;
     }
+    final l$image = image;
+    final lOther$image = other.image;
+    if (l$image != lOther$image) {
+      return false;
+    }
     final l$publishDate = publishDate;
     final lOther$publishDate = other.publishDate;
     if (l$publishDate != lOther$publishDate) {
+      return false;
+    }
+    final l$number = number;
+    final lOther$number = other.number;
+    if (l$number != lOther$number) {
       return false;
     }
     final l$season = season;
@@ -51888,10 +52650,13 @@ abstract class CopyWith$Query$GetSection$section$$DefaultSection$items$items$ite
 
   TRes call({
     String? id,
+    String? title,
     int? duration,
     bool? locked,
     int? progress,
+    String? image,
     String? publishDate,
+    int? number,
     Query$GetSection$section$$DefaultSection$items$items$item$$Episode$season?
         season,
     String? $__typename,
@@ -51921,16 +52686,22 @@ class _CopyWithImpl$Query$GetSection$section$$DefaultSection$items$items$item$$E
 
   TRes call({
     Object? id = _undefined,
+    Object? title = _undefined,
     Object? duration = _undefined,
     Object? locked = _undefined,
     Object? progress = _undefined,
+    Object? image = _undefined,
     Object? publishDate = _undefined,
+    Object? number = _undefined,
     Object? season = _undefined,
     Object? $__typename = _undefined,
     Object? productionDate = _undefined,
   }) =>
       _then(Query$GetSection$section$$DefaultSection$items$items$item$$Episode(
         id: id == _undefined || id == null ? _instance.id : (id as String),
+        title: title == _undefined || title == null
+            ? _instance.title
+            : (title as String),
         duration: duration == _undefined || duration == null
             ? _instance.duration
             : (duration as int),
@@ -51939,9 +52710,11 @@ class _CopyWithImpl$Query$GetSection$section$$DefaultSection$items$items$item$$E
             : (locked as bool),
         progress:
             progress == _undefined ? _instance.progress : (progress as int?),
+        image: image == _undefined ? _instance.image : (image as String?),
         publishDate: publishDate == _undefined || publishDate == null
             ? _instance.publishDate
             : (publishDate as String),
+        number: number == _undefined ? _instance.number : (number as int?),
         season: season == _undefined
             ? _instance.season
             : (season
@@ -51977,10 +52750,13 @@ class _CopyWithStubImpl$Query$GetSection$section$$DefaultSection$items$items$ite
 
   call({
     String? id,
+    String? title,
     int? duration,
     bool? locked,
     int? progress,
+    String? image,
     String? publishDate,
+    int? number,
     Query$GetSection$section$$DefaultSection$items$items$item$$Episode$season?
         season,
     String? $__typename,
@@ -51998,23 +52774,29 @@ class _CopyWithStubImpl$Query$GetSection$section$$DefaultSection$items$items$ite
 class Query$GetSection$section$$DefaultSection$items$items$item$$Episode$season
     implements
         Fragment$Section$$DefaultSection$items$items$item$$Episode$season,
-        Fragment$ItemSectionItem$item$$Episode$season {
+        Fragment$ItemSectionItem$item$$Episode$season,
+        Fragment$EpisodeThumbnail$season {
   Query$GetSection$section$$DefaultSection$items$items$item$$Episode$season({
+    required this.number,
     required this.$show,
     this.$__typename = 'Season',
   });
 
   factory Query$GetSection$section$$DefaultSection$items$items$item$$Episode$season.fromJson(
       Map<String, dynamic> json) {
+    final l$number = json['number'];
     final l$$show = json['show'];
     final l$$__typename = json['__typename'];
     return Query$GetSection$section$$DefaultSection$items$items$item$$Episode$season(
+      number: (l$number as int),
       $show:
           Query$GetSection$section$$DefaultSection$items$items$item$$Episode$season$show
               .fromJson((l$$show as Map<String, dynamic>)),
       $__typename: (l$$__typename as String),
     );
   }
+
+  final int number;
 
   final Query$GetSection$section$$DefaultSection$items$items$item$$Episode$season$show
       $show;
@@ -52023,6 +52805,8 @@ class Query$GetSection$section$$DefaultSection$items$items$item$$Episode$season
 
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
+    final l$number = number;
+    _resultData['number'] = l$number;
     final l$$show = $show;
     _resultData['show'] = l$$show.toJson();
     final l$$__typename = $__typename;
@@ -52032,9 +52816,11 @@ class Query$GetSection$section$$DefaultSection$items$items$item$$Episode$season
 
   @override
   int get hashCode {
+    final l$number = number;
     final l$$show = $show;
     final l$$__typename = $__typename;
     return Object.hashAll([
+      l$number,
       l$$show,
       l$$__typename,
     ]);
@@ -52048,6 +52834,11 @@ class Query$GetSection$section$$DefaultSection$items$items$item$$Episode$season
     if (!(other
             is Query$GetSection$section$$DefaultSection$items$items$item$$Episode$season) ||
         runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$number = number;
+    final lOther$number = other.number;
+    if (l$number != lOther$number) {
       return false;
     }
     final l$$show = $show;
@@ -52090,6 +52881,7 @@ abstract class CopyWith$Query$GetSection$section$$DefaultSection$items$items$ite
       _CopyWithStubImpl$Query$GetSection$section$$DefaultSection$items$items$item$$Episode$season;
 
   TRes call({
+    int? number,
     Query$GetSection$section$$DefaultSection$items$items$item$$Episode$season$show?
         $show,
     String? $__typename,
@@ -52118,11 +52910,15 @@ class _CopyWithImpl$Query$GetSection$section$$DefaultSection$items$items$item$$E
   static const _undefined = <dynamic, dynamic>{};
 
   TRes call({
+    Object? number = _undefined,
     Object? $show = _undefined,
     Object? $__typename = _undefined,
   }) =>
       _then(
           Query$GetSection$section$$DefaultSection$items$items$item$$Episode$season(
+        number: number == _undefined || number == null
+            ? _instance.number
+            : (number as int),
         $show: $show == _undefined || $show == null
             ? _instance.$show
             : ($show
@@ -52151,6 +52947,7 @@ class _CopyWithStubImpl$Query$GetSection$section$$DefaultSection$items$items$ite
   TRes _res;
 
   call({
+    int? number,
     Query$GetSection$section$$DefaultSection$items$items$item$$Episode$season$show?
         $show,
     String? $__typename,
@@ -52167,7 +52964,8 @@ class _CopyWithStubImpl$Query$GetSection$section$$DefaultSection$items$items$ite
 class Query$GetSection$section$$DefaultSection$items$items$item$$Episode$season$show
     implements
         Fragment$Section$$DefaultSection$items$items$item$$Episode$season$show,
-        Fragment$ItemSectionItem$item$$Episode$season$show {
+        Fragment$ItemSectionItem$item$$Episode$season$show,
+        Fragment$EpisodeThumbnail$season$show {
   Query$GetSection$section$$DefaultSection$items$items$item$$Episode$season$show({
     required this.title,
     this.$__typename = 'Show',
@@ -55246,15 +56044,19 @@ class Query$GetSection$section$$CardSection$items$items$item$$Episode
     implements
         Fragment$Section$$CardSection$items$items$item$$Episode,
         Fragment$ItemSectionItem$item$$Episode,
+        Fragment$EpisodeThumbnail,
         Fragment$NavigatableEpisode,
         Fragment$CardItem$item$$Episode,
         Query$GetSection$section$$CardSection$items$items$item {
   Query$GetSection$section$$CardSection$items$items$item$$Episode({
     required this.id,
+    required this.title,
     required this.duration,
     required this.locked,
     this.progress,
+    this.image,
     required this.publishDate,
+    this.number,
     this.season,
     this.$__typename = 'Episode',
   });
@@ -55262,18 +56064,24 @@ class Query$GetSection$section$$CardSection$items$items$item$$Episode
   factory Query$GetSection$section$$CardSection$items$items$item$$Episode.fromJson(
       Map<String, dynamic> json) {
     final l$id = json['id'];
+    final l$title = json['title'];
     final l$duration = json['duration'];
     final l$locked = json['locked'];
     final l$progress = json['progress'];
+    final l$image = json['image'];
     final l$publishDate = json['publishDate'];
+    final l$number = json['number'];
     final l$season = json['season'];
     final l$$__typename = json['__typename'];
     return Query$GetSection$section$$CardSection$items$items$item$$Episode(
       id: (l$id as String),
+      title: (l$title as String),
       duration: (l$duration as int),
       locked: (l$locked as bool),
       progress: (l$progress as int?),
+      image: (l$image as String?),
       publishDate: (l$publishDate as String),
+      number: (l$number as int?),
       season: l$season == null
           ? null
           : Query$GetSection$section$$CardSection$items$items$item$$Episode$season
@@ -55284,13 +56092,19 @@ class Query$GetSection$section$$CardSection$items$items$item$$Episode
 
   final String id;
 
+  final String title;
+
   final int duration;
 
   final bool locked;
 
   final int? progress;
 
+  final String? image;
+
   final String publishDate;
+
+  final int? number;
 
   final Query$GetSection$section$$CardSection$items$items$item$$Episode$season?
       season;
@@ -55301,14 +56115,20 @@ class Query$GetSection$section$$CardSection$items$items$item$$Episode
     final _resultData = <String, dynamic>{};
     final l$id = id;
     _resultData['id'] = l$id;
+    final l$title = title;
+    _resultData['title'] = l$title;
     final l$duration = duration;
     _resultData['duration'] = l$duration;
     final l$locked = locked;
     _resultData['locked'] = l$locked;
     final l$progress = progress;
     _resultData['progress'] = l$progress;
+    final l$image = image;
+    _resultData['image'] = l$image;
     final l$publishDate = publishDate;
     _resultData['publishDate'] = l$publishDate;
+    final l$number = number;
+    _resultData['number'] = l$number;
     final l$season = season;
     _resultData['season'] = l$season?.toJson();
     final l$$__typename = $__typename;
@@ -55319,18 +56139,24 @@ class Query$GetSection$section$$CardSection$items$items$item$$Episode
   @override
   int get hashCode {
     final l$id = id;
+    final l$title = title;
     final l$duration = duration;
     final l$locked = locked;
     final l$progress = progress;
+    final l$image = image;
     final l$publishDate = publishDate;
+    final l$number = number;
     final l$season = season;
     final l$$__typename = $__typename;
     return Object.hashAll([
       l$id,
+      l$title,
       l$duration,
       l$locked,
       l$progress,
+      l$image,
       l$publishDate,
+      l$number,
       l$season,
       l$$__typename,
     ]);
@@ -55351,6 +56177,11 @@ class Query$GetSection$section$$CardSection$items$items$item$$Episode
     if (l$id != lOther$id) {
       return false;
     }
+    final l$title = title;
+    final lOther$title = other.title;
+    if (l$title != lOther$title) {
+      return false;
+    }
     final l$duration = duration;
     final lOther$duration = other.duration;
     if (l$duration != lOther$duration) {
@@ -55366,9 +56197,19 @@ class Query$GetSection$section$$CardSection$items$items$item$$Episode
     if (l$progress != lOther$progress) {
       return false;
     }
+    final l$image = image;
+    final lOther$image = other.image;
+    if (l$image != lOther$image) {
+      return false;
+    }
     final l$publishDate = publishDate;
     final lOther$publishDate = other.publishDate;
     if (l$publishDate != lOther$publishDate) {
+      return false;
+    }
+    final l$number = number;
+    final lOther$number = other.number;
+    if (l$number != lOther$number) {
       return false;
     }
     final l$season = season;
@@ -55411,10 +56252,13 @@ abstract class CopyWith$Query$GetSection$section$$CardSection$items$items$item$$
 
   TRes call({
     String? id,
+    String? title,
     int? duration,
     bool? locked,
     int? progress,
+    String? image,
     String? publishDate,
+    int? number,
     Query$GetSection$section$$CardSection$items$items$item$$Episode$season?
         season,
     String? $__typename,
@@ -55443,15 +56287,21 @@ class _CopyWithImpl$Query$GetSection$section$$CardSection$items$items$item$$Epis
 
   TRes call({
     Object? id = _undefined,
+    Object? title = _undefined,
     Object? duration = _undefined,
     Object? locked = _undefined,
     Object? progress = _undefined,
+    Object? image = _undefined,
     Object? publishDate = _undefined,
+    Object? number = _undefined,
     Object? season = _undefined,
     Object? $__typename = _undefined,
   }) =>
       _then(Query$GetSection$section$$CardSection$items$items$item$$Episode(
         id: id == _undefined || id == null ? _instance.id : (id as String),
+        title: title == _undefined || title == null
+            ? _instance.title
+            : (title as String),
         duration: duration == _undefined || duration == null
             ? _instance.duration
             : (duration as int),
@@ -55460,9 +56310,11 @@ class _CopyWithImpl$Query$GetSection$section$$CardSection$items$items$item$$Epis
             : (locked as bool),
         progress:
             progress == _undefined ? _instance.progress : (progress as int?),
+        image: image == _undefined ? _instance.image : (image as String?),
         publishDate: publishDate == _undefined || publishDate == null
             ? _instance.publishDate
             : (publishDate as String),
+        number: number == _undefined ? _instance.number : (number as int?),
         season: season == _undefined
             ? _instance.season
             : (season
@@ -55495,10 +56347,13 @@ class _CopyWithStubImpl$Query$GetSection$section$$CardSection$items$items$item$$
 
   call({
     String? id,
+    String? title,
     int? duration,
     bool? locked,
     int? progress,
+    String? image,
     String? publishDate,
+    int? number,
     Query$GetSection$section$$CardSection$items$items$item$$Episode$season?
         season,
     String? $__typename,
@@ -55516,23 +56371,29 @@ class Query$GetSection$section$$CardSection$items$items$item$$Episode$season
     implements
         Fragment$Section$$CardSection$items$items$item$$Episode$season,
         Fragment$ItemSectionItem$item$$Episode$season,
+        Fragment$EpisodeThumbnail$season,
         Fragment$CardItem$item$$Episode$season {
   Query$GetSection$section$$CardSection$items$items$item$$Episode$season({
+    required this.number,
     required this.$show,
     this.$__typename = 'Season',
   });
 
   factory Query$GetSection$section$$CardSection$items$items$item$$Episode$season.fromJson(
       Map<String, dynamic> json) {
+    final l$number = json['number'];
     final l$$show = json['show'];
     final l$$__typename = json['__typename'];
     return Query$GetSection$section$$CardSection$items$items$item$$Episode$season(
+      number: (l$number as int),
       $show:
           Query$GetSection$section$$CardSection$items$items$item$$Episode$season$show
               .fromJson((l$$show as Map<String, dynamic>)),
       $__typename: (l$$__typename as String),
     );
   }
+
+  final int number;
 
   final Query$GetSection$section$$CardSection$items$items$item$$Episode$season$show
       $show;
@@ -55541,6 +56402,8 @@ class Query$GetSection$section$$CardSection$items$items$item$$Episode$season
 
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
+    final l$number = number;
+    _resultData['number'] = l$number;
     final l$$show = $show;
     _resultData['show'] = l$$show.toJson();
     final l$$__typename = $__typename;
@@ -55550,9 +56413,11 @@ class Query$GetSection$section$$CardSection$items$items$item$$Episode$season
 
   @override
   int get hashCode {
+    final l$number = number;
     final l$$show = $show;
     final l$$__typename = $__typename;
     return Object.hashAll([
+      l$number,
       l$$show,
       l$$__typename,
     ]);
@@ -55566,6 +56431,11 @@ class Query$GetSection$section$$CardSection$items$items$item$$Episode$season
     if (!(other
             is Query$GetSection$section$$CardSection$items$items$item$$Episode$season) ||
         runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$number = number;
+    final lOther$number = other.number;
+    if (l$number != lOther$number) {
       return false;
     }
     final l$$show = $show;
@@ -55608,6 +56478,7 @@ abstract class CopyWith$Query$GetSection$section$$CardSection$items$items$item$$
       _CopyWithStubImpl$Query$GetSection$section$$CardSection$items$items$item$$Episode$season;
 
   TRes call({
+    int? number,
     Query$GetSection$section$$CardSection$items$items$item$$Episode$season$show?
         $show,
     String? $__typename,
@@ -55636,11 +56507,15 @@ class _CopyWithImpl$Query$GetSection$section$$CardSection$items$items$item$$Epis
   static const _undefined = <dynamic, dynamic>{};
 
   TRes call({
+    Object? number = _undefined,
     Object? $show = _undefined,
     Object? $__typename = _undefined,
   }) =>
       _then(
           Query$GetSection$section$$CardSection$items$items$item$$Episode$season(
+        number: number == _undefined || number == null
+            ? _instance.number
+            : (number as int),
         $show: $show == _undefined || $show == null
             ? _instance.$show
             : ($show
@@ -55669,6 +56544,7 @@ class _CopyWithStubImpl$Query$GetSection$section$$CardSection$items$items$item$$
   TRes _res;
 
   call({
+    int? number,
     Query$GetSection$section$$CardSection$items$items$item$$Episode$season$show?
         $show,
     String? $__typename,
@@ -55686,6 +56562,7 @@ class Query$GetSection$section$$CardSection$items$items$item$$Episode$season$sho
     implements
         Fragment$Section$$CardSection$items$items$item$$Episode$season$show,
         Fragment$ItemSectionItem$item$$Episode$season$show,
+        Fragment$EpisodeThumbnail$season$show,
         Fragment$CardItem$item$$Episode$season$show {
   Query$GetSection$section$$CardSection$items$items$item$$Episode$season$show({
     required this.title,
@@ -58888,51 +59765,57 @@ class Query$GetSection$section$$ListSection$items$items$item$$Episode
     implements
         Fragment$Section$$ListSection$items$items$item$$Episode,
         Fragment$ItemSectionItem$item$$Episode,
+        Fragment$EpisodeThumbnail,
         Fragment$NavigatableEpisode,
         Query$GetSection$section$$ListSection$items$items$item {
   Query$GetSection$section$$ListSection$items$items$item$$Episode({
     required this.id,
+    required this.title,
     required this.duration,
     required this.locked,
     this.progress,
+    this.image,
     required this.publishDate,
+    this.number,
     this.season,
     this.$__typename = 'Episode',
-    required this.title,
     required this.ageRating,
-    this.image,
   });
 
   factory Query$GetSection$section$$ListSection$items$items$item$$Episode.fromJson(
       Map<String, dynamic> json) {
     final l$id = json['id'];
+    final l$title = json['title'];
     final l$duration = json['duration'];
     final l$locked = json['locked'];
     final l$progress = json['progress'];
+    final l$image = json['image'];
     final l$publishDate = json['publishDate'];
+    final l$number = json['number'];
     final l$season = json['season'];
     final l$$__typename = json['__typename'];
-    final l$title = json['title'];
     final l$ageRating = json['ageRating'];
-    final l$image = json['image'];
     return Query$GetSection$section$$ListSection$items$items$item$$Episode(
       id: (l$id as String),
+      title: (l$title as String),
       duration: (l$duration as int),
       locked: (l$locked as bool),
       progress: (l$progress as int?),
+      image: (l$image as String?),
       publishDate: (l$publishDate as String),
+      number: (l$number as int?),
       season: l$season == null
           ? null
           : Query$GetSection$section$$ListSection$items$items$item$$Episode$season
               .fromJson((l$season as Map<String, dynamic>)),
       $__typename: (l$$__typename as String),
-      title: (l$title as String),
       ageRating: (l$ageRating as String),
-      image: (l$image as String?),
     );
   }
 
   final String id;
+
+  final String title;
 
   final int duration;
 
@@ -58940,67 +59823,71 @@ class Query$GetSection$section$$ListSection$items$items$item$$Episode
 
   final int? progress;
 
+  final String? image;
+
   final String publishDate;
+
+  final int? number;
 
   final Query$GetSection$section$$ListSection$items$items$item$$Episode$season?
       season;
 
   final String $__typename;
 
-  final String title;
-
   final String ageRating;
-
-  final String? image;
 
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
     final l$id = id;
     _resultData['id'] = l$id;
+    final l$title = title;
+    _resultData['title'] = l$title;
     final l$duration = duration;
     _resultData['duration'] = l$duration;
     final l$locked = locked;
     _resultData['locked'] = l$locked;
     final l$progress = progress;
     _resultData['progress'] = l$progress;
+    final l$image = image;
+    _resultData['image'] = l$image;
     final l$publishDate = publishDate;
     _resultData['publishDate'] = l$publishDate;
+    final l$number = number;
+    _resultData['number'] = l$number;
     final l$season = season;
     _resultData['season'] = l$season?.toJson();
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
-    final l$title = title;
-    _resultData['title'] = l$title;
     final l$ageRating = ageRating;
     _resultData['ageRating'] = l$ageRating;
-    final l$image = image;
-    _resultData['image'] = l$image;
     return _resultData;
   }
 
   @override
   int get hashCode {
     final l$id = id;
+    final l$title = title;
     final l$duration = duration;
     final l$locked = locked;
     final l$progress = progress;
+    final l$image = image;
     final l$publishDate = publishDate;
+    final l$number = number;
     final l$season = season;
     final l$$__typename = $__typename;
-    final l$title = title;
     final l$ageRating = ageRating;
-    final l$image = image;
     return Object.hashAll([
       l$id,
+      l$title,
       l$duration,
       l$locked,
       l$progress,
+      l$image,
       l$publishDate,
+      l$number,
       l$season,
       l$$__typename,
-      l$title,
       l$ageRating,
-      l$image,
     ]);
   }
 
@@ -59019,6 +59906,11 @@ class Query$GetSection$section$$ListSection$items$items$item$$Episode
     if (l$id != lOther$id) {
       return false;
     }
+    final l$title = title;
+    final lOther$title = other.title;
+    if (l$title != lOther$title) {
+      return false;
+    }
     final l$duration = duration;
     final lOther$duration = other.duration;
     if (l$duration != lOther$duration) {
@@ -59034,9 +59926,19 @@ class Query$GetSection$section$$ListSection$items$items$item$$Episode
     if (l$progress != lOther$progress) {
       return false;
     }
+    final l$image = image;
+    final lOther$image = other.image;
+    if (l$image != lOther$image) {
+      return false;
+    }
     final l$publishDate = publishDate;
     final lOther$publishDate = other.publishDate;
     if (l$publishDate != lOther$publishDate) {
+      return false;
+    }
+    final l$number = number;
+    final lOther$number = other.number;
+    if (l$number != lOther$number) {
       return false;
     }
     final l$season = season;
@@ -59049,19 +59951,9 @@ class Query$GetSection$section$$ListSection$items$items$item$$Episode
     if (l$$__typename != lOther$$__typename) {
       return false;
     }
-    final l$title = title;
-    final lOther$title = other.title;
-    if (l$title != lOther$title) {
-      return false;
-    }
     final l$ageRating = ageRating;
     final lOther$ageRating = other.ageRating;
     if (l$ageRating != lOther$ageRating) {
-      return false;
-    }
-    final l$image = image;
-    final lOther$image = other.image;
-    if (l$image != lOther$image) {
       return false;
     }
     return true;
@@ -59094,16 +59986,17 @@ abstract class CopyWith$Query$GetSection$section$$ListSection$items$items$item$$
 
   TRes call({
     String? id,
+    String? title,
     int? duration,
     bool? locked,
     int? progress,
+    String? image,
     String? publishDate,
+    int? number,
     Query$GetSection$section$$ListSection$items$items$item$$Episode$season?
         season,
     String? $__typename,
-    String? title,
     String? ageRating,
-    String? image,
   });
   CopyWith$Query$GetSection$section$$ListSection$items$items$item$$Episode$season<
       TRes> get season;
@@ -59129,18 +60022,22 @@ class _CopyWithImpl$Query$GetSection$section$$ListSection$items$items$item$$Epis
 
   TRes call({
     Object? id = _undefined,
+    Object? title = _undefined,
     Object? duration = _undefined,
     Object? locked = _undefined,
     Object? progress = _undefined,
+    Object? image = _undefined,
     Object? publishDate = _undefined,
+    Object? number = _undefined,
     Object? season = _undefined,
     Object? $__typename = _undefined,
-    Object? title = _undefined,
     Object? ageRating = _undefined,
-    Object? image = _undefined,
   }) =>
       _then(Query$GetSection$section$$ListSection$items$items$item$$Episode(
         id: id == _undefined || id == null ? _instance.id : (id as String),
+        title: title == _undefined || title == null
+            ? _instance.title
+            : (title as String),
         duration: duration == _undefined || duration == null
             ? _instance.duration
             : (duration as int),
@@ -59149,9 +60046,11 @@ class _CopyWithImpl$Query$GetSection$section$$ListSection$items$items$item$$Epis
             : (locked as bool),
         progress:
             progress == _undefined ? _instance.progress : (progress as int?),
+        image: image == _undefined ? _instance.image : (image as String?),
         publishDate: publishDate == _undefined || publishDate == null
             ? _instance.publishDate
             : (publishDate as String),
+        number: number == _undefined ? _instance.number : (number as int?),
         season: season == _undefined
             ? _instance.season
             : (season
@@ -59159,13 +60058,9 @@ class _CopyWithImpl$Query$GetSection$section$$ListSection$items$items$item$$Epis
         $__typename: $__typename == _undefined || $__typename == null
             ? _instance.$__typename
             : ($__typename as String),
-        title: title == _undefined || title == null
-            ? _instance.title
-            : (title as String),
         ageRating: ageRating == _undefined || ageRating == null
             ? _instance.ageRating
             : (ageRating as String),
-        image: image == _undefined ? _instance.image : (image as String?),
       ));
 
   CopyWith$Query$GetSection$section$$ListSection$items$items$item$$Episode$season<
@@ -59191,16 +60086,17 @@ class _CopyWithStubImpl$Query$GetSection$section$$ListSection$items$items$item$$
 
   call({
     String? id,
+    String? title,
     int? duration,
     bool? locked,
     int? progress,
+    String? image,
     String? publishDate,
+    int? number,
     Query$GetSection$section$$ListSection$items$items$item$$Episode$season?
         season,
     String? $__typename,
-    String? title,
     String? ageRating,
-    String? image,
   }) =>
       _res;
 
@@ -59214,23 +60110,29 @@ class _CopyWithStubImpl$Query$GetSection$section$$ListSection$items$items$item$$
 class Query$GetSection$section$$ListSection$items$items$item$$Episode$season
     implements
         Fragment$Section$$ListSection$items$items$item$$Episode$season,
-        Fragment$ItemSectionItem$item$$Episode$season {
+        Fragment$ItemSectionItem$item$$Episode$season,
+        Fragment$EpisodeThumbnail$season {
   Query$GetSection$section$$ListSection$items$items$item$$Episode$season({
+    required this.number,
     required this.$show,
     this.$__typename = 'Season',
   });
 
   factory Query$GetSection$section$$ListSection$items$items$item$$Episode$season.fromJson(
       Map<String, dynamic> json) {
+    final l$number = json['number'];
     final l$$show = json['show'];
     final l$$__typename = json['__typename'];
     return Query$GetSection$section$$ListSection$items$items$item$$Episode$season(
+      number: (l$number as int),
       $show:
           Query$GetSection$section$$ListSection$items$items$item$$Episode$season$show
               .fromJson((l$$show as Map<String, dynamic>)),
       $__typename: (l$$__typename as String),
     );
   }
+
+  final int number;
 
   final Query$GetSection$section$$ListSection$items$items$item$$Episode$season$show
       $show;
@@ -59239,6 +60141,8 @@ class Query$GetSection$section$$ListSection$items$items$item$$Episode$season
 
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
+    final l$number = number;
+    _resultData['number'] = l$number;
     final l$$show = $show;
     _resultData['show'] = l$$show.toJson();
     final l$$__typename = $__typename;
@@ -59248,9 +60152,11 @@ class Query$GetSection$section$$ListSection$items$items$item$$Episode$season
 
   @override
   int get hashCode {
+    final l$number = number;
     final l$$show = $show;
     final l$$__typename = $__typename;
     return Object.hashAll([
+      l$number,
       l$$show,
       l$$__typename,
     ]);
@@ -59264,6 +60170,11 @@ class Query$GetSection$section$$ListSection$items$items$item$$Episode$season
     if (!(other
             is Query$GetSection$section$$ListSection$items$items$item$$Episode$season) ||
         runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$number = number;
+    final lOther$number = other.number;
+    if (l$number != lOther$number) {
       return false;
     }
     final l$$show = $show;
@@ -59306,6 +60217,7 @@ abstract class CopyWith$Query$GetSection$section$$ListSection$items$items$item$$
       _CopyWithStubImpl$Query$GetSection$section$$ListSection$items$items$item$$Episode$season;
 
   TRes call({
+    int? number,
     Query$GetSection$section$$ListSection$items$items$item$$Episode$season$show?
         $show,
     String? $__typename,
@@ -59334,11 +60246,15 @@ class _CopyWithImpl$Query$GetSection$section$$ListSection$items$items$item$$Epis
   static const _undefined = <dynamic, dynamic>{};
 
   TRes call({
+    Object? number = _undefined,
     Object? $show = _undefined,
     Object? $__typename = _undefined,
   }) =>
       _then(
           Query$GetSection$section$$ListSection$items$items$item$$Episode$season(
+        number: number == _undefined || number == null
+            ? _instance.number
+            : (number as int),
         $show: $show == _undefined || $show == null
             ? _instance.$show
             : ($show
@@ -59367,6 +60283,7 @@ class _CopyWithStubImpl$Query$GetSection$section$$ListSection$items$items$item$$
   TRes _res;
 
   call({
+    int? number,
     Query$GetSection$section$$ListSection$items$items$item$$Episode$season$show?
         $show,
     String? $__typename,
@@ -59383,7 +60300,8 @@ class _CopyWithStubImpl$Query$GetSection$section$$ListSection$items$items$item$$
 class Query$GetSection$section$$ListSection$items$items$item$$Episode$season$show
     implements
         Fragment$Section$$ListSection$items$items$item$$Episode$season$show,
-        Fragment$ItemSectionItem$item$$Episode$season$show {
+        Fragment$ItemSectionItem$item$$Episode$season$show,
+        Fragment$EpisodeThumbnail$season$show {
   Query$GetSection$section$$ListSection$items$items$item$$Episode$season$show({
     required this.title,
     this.$__typename = 'Show',
@@ -62479,15 +63397,19 @@ class Query$GetSection$section$$CardListSection$items$items$item$$Episode
     implements
         Fragment$Section$$CardListSection$items$items$item$$Episode,
         Fragment$ItemSectionItem$item$$Episode,
+        Fragment$EpisodeThumbnail,
         Fragment$NavigatableEpisode,
         Fragment$CardItem$item$$Episode,
         Query$GetSection$section$$CardListSection$items$items$item {
   Query$GetSection$section$$CardListSection$items$items$item$$Episode({
     required this.id,
+    required this.title,
     required this.duration,
     required this.locked,
     this.progress,
+    this.image,
     required this.publishDate,
+    this.number,
     this.season,
     this.$__typename = 'Episode',
   });
@@ -62495,18 +63417,24 @@ class Query$GetSection$section$$CardListSection$items$items$item$$Episode
   factory Query$GetSection$section$$CardListSection$items$items$item$$Episode.fromJson(
       Map<String, dynamic> json) {
     final l$id = json['id'];
+    final l$title = json['title'];
     final l$duration = json['duration'];
     final l$locked = json['locked'];
     final l$progress = json['progress'];
+    final l$image = json['image'];
     final l$publishDate = json['publishDate'];
+    final l$number = json['number'];
     final l$season = json['season'];
     final l$$__typename = json['__typename'];
     return Query$GetSection$section$$CardListSection$items$items$item$$Episode(
       id: (l$id as String),
+      title: (l$title as String),
       duration: (l$duration as int),
       locked: (l$locked as bool),
       progress: (l$progress as int?),
+      image: (l$image as String?),
       publishDate: (l$publishDate as String),
+      number: (l$number as int?),
       season: l$season == null
           ? null
           : Query$GetSection$section$$CardListSection$items$items$item$$Episode$season
@@ -62517,13 +63445,19 @@ class Query$GetSection$section$$CardListSection$items$items$item$$Episode
 
   final String id;
 
+  final String title;
+
   final int duration;
 
   final bool locked;
 
   final int? progress;
 
+  final String? image;
+
   final String publishDate;
+
+  final int? number;
 
   final Query$GetSection$section$$CardListSection$items$items$item$$Episode$season?
       season;
@@ -62534,14 +63468,20 @@ class Query$GetSection$section$$CardListSection$items$items$item$$Episode
     final _resultData = <String, dynamic>{};
     final l$id = id;
     _resultData['id'] = l$id;
+    final l$title = title;
+    _resultData['title'] = l$title;
     final l$duration = duration;
     _resultData['duration'] = l$duration;
     final l$locked = locked;
     _resultData['locked'] = l$locked;
     final l$progress = progress;
     _resultData['progress'] = l$progress;
+    final l$image = image;
+    _resultData['image'] = l$image;
     final l$publishDate = publishDate;
     _resultData['publishDate'] = l$publishDate;
+    final l$number = number;
+    _resultData['number'] = l$number;
     final l$season = season;
     _resultData['season'] = l$season?.toJson();
     final l$$__typename = $__typename;
@@ -62552,18 +63492,24 @@ class Query$GetSection$section$$CardListSection$items$items$item$$Episode
   @override
   int get hashCode {
     final l$id = id;
+    final l$title = title;
     final l$duration = duration;
     final l$locked = locked;
     final l$progress = progress;
+    final l$image = image;
     final l$publishDate = publishDate;
+    final l$number = number;
     final l$season = season;
     final l$$__typename = $__typename;
     return Object.hashAll([
       l$id,
+      l$title,
       l$duration,
       l$locked,
       l$progress,
+      l$image,
       l$publishDate,
+      l$number,
       l$season,
       l$$__typename,
     ]);
@@ -62584,6 +63530,11 @@ class Query$GetSection$section$$CardListSection$items$items$item$$Episode
     if (l$id != lOther$id) {
       return false;
     }
+    final l$title = title;
+    final lOther$title = other.title;
+    if (l$title != lOther$title) {
+      return false;
+    }
     final l$duration = duration;
     final lOther$duration = other.duration;
     if (l$duration != lOther$duration) {
@@ -62599,9 +63550,19 @@ class Query$GetSection$section$$CardListSection$items$items$item$$Episode
     if (l$progress != lOther$progress) {
       return false;
     }
+    final l$image = image;
+    final lOther$image = other.image;
+    if (l$image != lOther$image) {
+      return false;
+    }
     final l$publishDate = publishDate;
     final lOther$publishDate = other.publishDate;
     if (l$publishDate != lOther$publishDate) {
+      return false;
+    }
+    final l$number = number;
+    final lOther$number = other.number;
+    if (l$number != lOther$number) {
       return false;
     }
     final l$season = season;
@@ -62645,10 +63606,13 @@ abstract class CopyWith$Query$GetSection$section$$CardListSection$items$items$it
 
   TRes call({
     String? id,
+    String? title,
     int? duration,
     bool? locked,
     int? progress,
+    String? image,
     String? publishDate,
+    int? number,
     Query$GetSection$section$$CardListSection$items$items$item$$Episode$season?
         season,
     String? $__typename,
@@ -62678,15 +63642,21 @@ class _CopyWithImpl$Query$GetSection$section$$CardListSection$items$items$item$$
 
   TRes call({
     Object? id = _undefined,
+    Object? title = _undefined,
     Object? duration = _undefined,
     Object? locked = _undefined,
     Object? progress = _undefined,
+    Object? image = _undefined,
     Object? publishDate = _undefined,
+    Object? number = _undefined,
     Object? season = _undefined,
     Object? $__typename = _undefined,
   }) =>
       _then(Query$GetSection$section$$CardListSection$items$items$item$$Episode(
         id: id == _undefined || id == null ? _instance.id : (id as String),
+        title: title == _undefined || title == null
+            ? _instance.title
+            : (title as String),
         duration: duration == _undefined || duration == null
             ? _instance.duration
             : (duration as int),
@@ -62695,9 +63665,11 @@ class _CopyWithImpl$Query$GetSection$section$$CardListSection$items$items$item$$
             : (locked as bool),
         progress:
             progress == _undefined ? _instance.progress : (progress as int?),
+        image: image == _undefined ? _instance.image : (image as String?),
         publishDate: publishDate == _undefined || publishDate == null
             ? _instance.publishDate
             : (publishDate as String),
+        number: number == _undefined ? _instance.number : (number as int?),
         season: season == _undefined
             ? _instance.season
             : (season
@@ -62730,10 +63702,13 @@ class _CopyWithStubImpl$Query$GetSection$section$$CardListSection$items$items$it
 
   call({
     String? id,
+    String? title,
     int? duration,
     bool? locked,
     int? progress,
+    String? image,
     String? publishDate,
+    int? number,
     Query$GetSection$section$$CardListSection$items$items$item$$Episode$season?
         season,
     String? $__typename,
@@ -62751,23 +63726,29 @@ class Query$GetSection$section$$CardListSection$items$items$item$$Episode$season
     implements
         Fragment$Section$$CardListSection$items$items$item$$Episode$season,
         Fragment$ItemSectionItem$item$$Episode$season,
+        Fragment$EpisodeThumbnail$season,
         Fragment$CardItem$item$$Episode$season {
   Query$GetSection$section$$CardListSection$items$items$item$$Episode$season({
+    required this.number,
     required this.$show,
     this.$__typename = 'Season',
   });
 
   factory Query$GetSection$section$$CardListSection$items$items$item$$Episode$season.fromJson(
       Map<String, dynamic> json) {
+    final l$number = json['number'];
     final l$$show = json['show'];
     final l$$__typename = json['__typename'];
     return Query$GetSection$section$$CardListSection$items$items$item$$Episode$season(
+      number: (l$number as int),
       $show:
           Query$GetSection$section$$CardListSection$items$items$item$$Episode$season$show
               .fromJson((l$$show as Map<String, dynamic>)),
       $__typename: (l$$__typename as String),
     );
   }
+
+  final int number;
 
   final Query$GetSection$section$$CardListSection$items$items$item$$Episode$season$show
       $show;
@@ -62776,6 +63757,8 @@ class Query$GetSection$section$$CardListSection$items$items$item$$Episode$season
 
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
+    final l$number = number;
+    _resultData['number'] = l$number;
     final l$$show = $show;
     _resultData['show'] = l$$show.toJson();
     final l$$__typename = $__typename;
@@ -62785,9 +63768,11 @@ class Query$GetSection$section$$CardListSection$items$items$item$$Episode$season
 
   @override
   int get hashCode {
+    final l$number = number;
     final l$$show = $show;
     final l$$__typename = $__typename;
     return Object.hashAll([
+      l$number,
       l$$show,
       l$$__typename,
     ]);
@@ -62801,6 +63786,11 @@ class Query$GetSection$section$$CardListSection$items$items$item$$Episode$season
     if (!(other
             is Query$GetSection$section$$CardListSection$items$items$item$$Episode$season) ||
         runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$number = number;
+    final lOther$number = other.number;
+    if (l$number != lOther$number) {
       return false;
     }
     final l$$show = $show;
@@ -62843,6 +63833,7 @@ abstract class CopyWith$Query$GetSection$section$$CardListSection$items$items$it
       _CopyWithStubImpl$Query$GetSection$section$$CardListSection$items$items$item$$Episode$season;
 
   TRes call({
+    int? number,
     Query$GetSection$section$$CardListSection$items$items$item$$Episode$season$show?
         $show,
     String? $__typename,
@@ -62871,11 +63862,15 @@ class _CopyWithImpl$Query$GetSection$section$$CardListSection$items$items$item$$
   static const _undefined = <dynamic, dynamic>{};
 
   TRes call({
+    Object? number = _undefined,
     Object? $show = _undefined,
     Object? $__typename = _undefined,
   }) =>
       _then(
           Query$GetSection$section$$CardListSection$items$items$item$$Episode$season(
+        number: number == _undefined || number == null
+            ? _instance.number
+            : (number as int),
         $show: $show == _undefined || $show == null
             ? _instance.$show
             : ($show
@@ -62904,6 +63899,7 @@ class _CopyWithStubImpl$Query$GetSection$section$$CardListSection$items$items$it
   TRes _res;
 
   call({
+    int? number,
     Query$GetSection$section$$CardListSection$items$items$item$$Episode$season$show?
         $show,
     String? $__typename,
@@ -62921,6 +63917,7 @@ class Query$GetSection$section$$CardListSection$items$items$item$$Episode$season
     implements
         Fragment$Section$$CardListSection$items$items$item$$Episode$season$show,
         Fragment$ItemSectionItem$item$$Episode$season$show,
+        Fragment$EpisodeThumbnail$season$show,
         Fragment$CardItem$item$$Episode$season$show {
   Query$GetSection$section$$CardListSection$items$items$item$$Episode$season$show({
     required this.title,
@@ -66210,46 +67207,55 @@ class Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode
     implements
         Fragment$Section$$DefaultGridSection$items$items$item$$Episode,
         Fragment$ItemSectionItem$item$$Episode,
+        Fragment$EpisodeThumbnail,
         Fragment$NavigatableEpisode,
         Fragment$GridSectionItem$item$$Episode,
         Query$GetSection$section$$DefaultGridSection$items$items$item {
   Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode({
     required this.id,
+    required this.title,
     required this.duration,
     required this.locked,
     this.progress,
+    this.image,
     required this.publishDate,
+    this.number,
     this.season,
     this.$__typename = 'Episode',
-    this.number,
   });
 
   factory Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode.fromJson(
       Map<String, dynamic> json) {
     final l$id = json['id'];
+    final l$title = json['title'];
     final l$duration = json['duration'];
     final l$locked = json['locked'];
     final l$progress = json['progress'];
+    final l$image = json['image'];
     final l$publishDate = json['publishDate'];
+    final l$number = json['number'];
     final l$season = json['season'];
     final l$$__typename = json['__typename'];
-    final l$number = json['number'];
     return Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode(
       id: (l$id as String),
+      title: (l$title as String),
       duration: (l$duration as int),
       locked: (l$locked as bool),
       progress: (l$progress as int?),
+      image: (l$image as String?),
       publishDate: (l$publishDate as String),
+      number: (l$number as int?),
       season: l$season == null
           ? null
           : Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode$season
               .fromJson((l$season as Map<String, dynamic>)),
       $__typename: (l$$__typename as String),
-      number: (l$number as int?),
     );
   }
 
   final String id;
+
+  final String title;
 
   final int duration;
 
@@ -66257,55 +67263,65 @@ class Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode
 
   final int? progress;
 
+  final String? image;
+
   final String publishDate;
+
+  final int? number;
 
   final Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode$season?
       season;
 
   final String $__typename;
 
-  final int? number;
-
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
     final l$id = id;
     _resultData['id'] = l$id;
+    final l$title = title;
+    _resultData['title'] = l$title;
     final l$duration = duration;
     _resultData['duration'] = l$duration;
     final l$locked = locked;
     _resultData['locked'] = l$locked;
     final l$progress = progress;
     _resultData['progress'] = l$progress;
+    final l$image = image;
+    _resultData['image'] = l$image;
     final l$publishDate = publishDate;
     _resultData['publishDate'] = l$publishDate;
+    final l$number = number;
+    _resultData['number'] = l$number;
     final l$season = season;
     _resultData['season'] = l$season?.toJson();
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
-    final l$number = number;
-    _resultData['number'] = l$number;
     return _resultData;
   }
 
   @override
   int get hashCode {
     final l$id = id;
+    final l$title = title;
     final l$duration = duration;
     final l$locked = locked;
     final l$progress = progress;
+    final l$image = image;
     final l$publishDate = publishDate;
+    final l$number = number;
     final l$season = season;
     final l$$__typename = $__typename;
-    final l$number = number;
     return Object.hashAll([
       l$id,
+      l$title,
       l$duration,
       l$locked,
       l$progress,
+      l$image,
       l$publishDate,
+      l$number,
       l$season,
       l$$__typename,
-      l$number,
     ]);
   }
 
@@ -66324,6 +67340,11 @@ class Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode
     if (l$id != lOther$id) {
       return false;
     }
+    final l$title = title;
+    final lOther$title = other.title;
+    if (l$title != lOther$title) {
+      return false;
+    }
     final l$duration = duration;
     final lOther$duration = other.duration;
     if (l$duration != lOther$duration) {
@@ -66339,9 +67360,19 @@ class Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode
     if (l$progress != lOther$progress) {
       return false;
     }
+    final l$image = image;
+    final lOther$image = other.image;
+    if (l$image != lOther$image) {
+      return false;
+    }
     final l$publishDate = publishDate;
     final lOther$publishDate = other.publishDate;
     if (l$publishDate != lOther$publishDate) {
+      return false;
+    }
+    final l$number = number;
+    final lOther$number = other.number;
+    if (l$number != lOther$number) {
       return false;
     }
     final l$season = season;
@@ -66352,11 +67383,6 @@ class Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode
     final l$$__typename = $__typename;
     final lOther$$__typename = other.$__typename;
     if (l$$__typename != lOther$$__typename) {
-      return false;
-    }
-    final l$number = number;
-    final lOther$number = other.number;
-    if (l$number != lOther$number) {
       return false;
     }
     return true;
@@ -66390,14 +67416,16 @@ abstract class CopyWith$Query$GetSection$section$$DefaultGridSection$items$items
 
   TRes call({
     String? id,
+    String? title,
     int? duration,
     bool? locked,
     int? progress,
+    String? image,
     String? publishDate,
+    int? number,
     Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode$season?
         season,
     String? $__typename,
-    int? number,
   });
   CopyWith$Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode$season<
       TRes> get season;
@@ -66424,17 +67452,22 @@ class _CopyWithImpl$Query$GetSection$section$$DefaultGridSection$items$items$ite
 
   TRes call({
     Object? id = _undefined,
+    Object? title = _undefined,
     Object? duration = _undefined,
     Object? locked = _undefined,
     Object? progress = _undefined,
+    Object? image = _undefined,
     Object? publishDate = _undefined,
+    Object? number = _undefined,
     Object? season = _undefined,
     Object? $__typename = _undefined,
-    Object? number = _undefined,
   }) =>
       _then(
           Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode(
         id: id == _undefined || id == null ? _instance.id : (id as String),
+        title: title == _undefined || title == null
+            ? _instance.title
+            : (title as String),
         duration: duration == _undefined || duration == null
             ? _instance.duration
             : (duration as int),
@@ -66443,9 +67476,11 @@ class _CopyWithImpl$Query$GetSection$section$$DefaultGridSection$items$items$ite
             : (locked as bool),
         progress:
             progress == _undefined ? _instance.progress : (progress as int?),
+        image: image == _undefined ? _instance.image : (image as String?),
         publishDate: publishDate == _undefined || publishDate == null
             ? _instance.publishDate
             : (publishDate as String),
+        number: number == _undefined ? _instance.number : (number as int?),
         season: season == _undefined
             ? _instance.season
             : (season
@@ -66453,7 +67488,6 @@ class _CopyWithImpl$Query$GetSection$section$$DefaultGridSection$items$items$ite
         $__typename: $__typename == _undefined || $__typename == null
             ? _instance.$__typename
             : ($__typename as String),
-        number: number == _undefined ? _instance.number : (number as int?),
       ));
 
   CopyWith$Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode$season<
@@ -66479,14 +67513,16 @@ class _CopyWithStubImpl$Query$GetSection$section$$DefaultGridSection$items$items
 
   call({
     String? id,
+    String? title,
     int? duration,
     bool? locked,
     int? progress,
+    String? image,
     String? publishDate,
+    int? number,
     Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode$season?
         season,
     String? $__typename,
-    int? number,
   }) =>
       _res;
 
@@ -66501,54 +67537,55 @@ class Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode$sea
     implements
         Fragment$Section$$DefaultGridSection$items$items$item$$Episode$season,
         Fragment$ItemSectionItem$item$$Episode$season,
+        Fragment$EpisodeThumbnail$season,
         Fragment$GridSectionItem$item$$Episode$season {
   Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode$season({
+    required this.number,
     required this.$show,
     this.$__typename = 'Season',
-    required this.number,
   });
 
   factory Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode$season.fromJson(
       Map<String, dynamic> json) {
+    final l$number = json['number'];
     final l$$show = json['show'];
     final l$$__typename = json['__typename'];
-    final l$number = json['number'];
     return Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode$season(
+      number: (l$number as int),
       $show:
           Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode$season$show
               .fromJson((l$$show as Map<String, dynamic>)),
       $__typename: (l$$__typename as String),
-      number: (l$number as int),
     );
   }
+
+  final int number;
 
   final Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode$season$show
       $show;
 
   final String $__typename;
 
-  final int number;
-
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
+    final l$number = number;
+    _resultData['number'] = l$number;
     final l$$show = $show;
     _resultData['show'] = l$$show.toJson();
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
-    final l$number = number;
-    _resultData['number'] = l$number;
     return _resultData;
   }
 
   @override
   int get hashCode {
+    final l$number = number;
     final l$$show = $show;
     final l$$__typename = $__typename;
-    final l$number = number;
     return Object.hashAll([
+      l$number,
       l$$show,
       l$$__typename,
-      l$number,
     ]);
   }
 
@@ -66562,6 +67599,11 @@ class Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode$sea
         runtimeType != other.runtimeType) {
       return false;
     }
+    final l$number = number;
+    final lOther$number = other.number;
+    if (l$number != lOther$number) {
+      return false;
+    }
     final l$$show = $show;
     final lOther$$show = other.$show;
     if (l$$show != lOther$$show) {
@@ -66570,11 +67612,6 @@ class Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode$sea
     final l$$__typename = $__typename;
     final lOther$$__typename = other.$__typename;
     if (l$$__typename != lOther$$__typename) {
-      return false;
-    }
-    final l$number = number;
-    final lOther$number = other.number;
-    if (l$number != lOther$number) {
       return false;
     }
     return true;
@@ -66607,10 +67644,10 @@ abstract class CopyWith$Query$GetSection$section$$DefaultGridSection$items$items
       _CopyWithStubImpl$Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode$season;
 
   TRes call({
+    int? number,
     Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode$season$show?
         $show,
     String? $__typename,
-    int? number,
   });
   CopyWith$Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode$season$show<
       TRes> get $show;
@@ -66636,12 +67673,15 @@ class _CopyWithImpl$Query$GetSection$section$$DefaultGridSection$items$items$ite
   static const _undefined = <dynamic, dynamic>{};
 
   TRes call({
+    Object? number = _undefined,
     Object? $show = _undefined,
     Object? $__typename = _undefined,
-    Object? number = _undefined,
   }) =>
       _then(
           Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode$season(
+        number: number == _undefined || number == null
+            ? _instance.number
+            : (number as int),
         $show: $show == _undefined || $show == null
             ? _instance.$show
             : ($show
@@ -66649,9 +67689,6 @@ class _CopyWithImpl$Query$GetSection$section$$DefaultGridSection$items$items$ite
         $__typename: $__typename == _undefined || $__typename == null
             ? _instance.$__typename
             : ($__typename as String),
-        number: number == _undefined || number == null
-            ? _instance.number
-            : (number as int),
       ));
 
   CopyWith$Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode$season$show<
@@ -66673,10 +67710,10 @@ class _CopyWithStubImpl$Query$GetSection$section$$DefaultGridSection$items$items
   TRes _res;
 
   call({
+    int? number,
     Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode$season$show?
         $show,
     String? $__typename,
-    int? number,
   }) =>
       _res;
 
@@ -66691,6 +67728,7 @@ class Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode$sea
     implements
         Fragment$Section$$DefaultGridSection$items$items$item$$Episode$season$show,
         Fragment$ItemSectionItem$item$$Episode$season$show,
+        Fragment$EpisodeThumbnail$season$show,
         Fragment$GridSectionItem$item$$Episode$season$show {
   Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode$season$show({
     required this.title,
@@ -69823,46 +70861,55 @@ class Query$GetSection$section$$PosterGridSection$items$items$item$$Episode
     implements
         Fragment$Section$$PosterGridSection$items$items$item$$Episode,
         Fragment$ItemSectionItem$item$$Episode,
+        Fragment$EpisodeThumbnail,
         Fragment$NavigatableEpisode,
         Fragment$GridSectionItem$item$$Episode,
         Query$GetSection$section$$PosterGridSection$items$items$item {
   Query$GetSection$section$$PosterGridSection$items$items$item$$Episode({
     required this.id,
+    required this.title,
     required this.duration,
     required this.locked,
     this.progress,
+    this.image,
     required this.publishDate,
+    this.number,
     this.season,
     this.$__typename = 'Episode',
-    this.number,
   });
 
   factory Query$GetSection$section$$PosterGridSection$items$items$item$$Episode.fromJson(
       Map<String, dynamic> json) {
     final l$id = json['id'];
+    final l$title = json['title'];
     final l$duration = json['duration'];
     final l$locked = json['locked'];
     final l$progress = json['progress'];
+    final l$image = json['image'];
     final l$publishDate = json['publishDate'];
+    final l$number = json['number'];
     final l$season = json['season'];
     final l$$__typename = json['__typename'];
-    final l$number = json['number'];
     return Query$GetSection$section$$PosterGridSection$items$items$item$$Episode(
       id: (l$id as String),
+      title: (l$title as String),
       duration: (l$duration as int),
       locked: (l$locked as bool),
       progress: (l$progress as int?),
+      image: (l$image as String?),
       publishDate: (l$publishDate as String),
+      number: (l$number as int?),
       season: l$season == null
           ? null
           : Query$GetSection$section$$PosterGridSection$items$items$item$$Episode$season
               .fromJson((l$season as Map<String, dynamic>)),
       $__typename: (l$$__typename as String),
-      number: (l$number as int?),
     );
   }
 
   final String id;
+
+  final String title;
 
   final int duration;
 
@@ -69870,55 +70917,65 @@ class Query$GetSection$section$$PosterGridSection$items$items$item$$Episode
 
   final int? progress;
 
+  final String? image;
+
   final String publishDate;
+
+  final int? number;
 
   final Query$GetSection$section$$PosterGridSection$items$items$item$$Episode$season?
       season;
 
   final String $__typename;
 
-  final int? number;
-
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
     final l$id = id;
     _resultData['id'] = l$id;
+    final l$title = title;
+    _resultData['title'] = l$title;
     final l$duration = duration;
     _resultData['duration'] = l$duration;
     final l$locked = locked;
     _resultData['locked'] = l$locked;
     final l$progress = progress;
     _resultData['progress'] = l$progress;
+    final l$image = image;
+    _resultData['image'] = l$image;
     final l$publishDate = publishDate;
     _resultData['publishDate'] = l$publishDate;
+    final l$number = number;
+    _resultData['number'] = l$number;
     final l$season = season;
     _resultData['season'] = l$season?.toJson();
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
-    final l$number = number;
-    _resultData['number'] = l$number;
     return _resultData;
   }
 
   @override
   int get hashCode {
     final l$id = id;
+    final l$title = title;
     final l$duration = duration;
     final l$locked = locked;
     final l$progress = progress;
+    final l$image = image;
     final l$publishDate = publishDate;
+    final l$number = number;
     final l$season = season;
     final l$$__typename = $__typename;
-    final l$number = number;
     return Object.hashAll([
       l$id,
+      l$title,
       l$duration,
       l$locked,
       l$progress,
+      l$image,
       l$publishDate,
+      l$number,
       l$season,
       l$$__typename,
-      l$number,
     ]);
   }
 
@@ -69937,6 +70994,11 @@ class Query$GetSection$section$$PosterGridSection$items$items$item$$Episode
     if (l$id != lOther$id) {
       return false;
     }
+    final l$title = title;
+    final lOther$title = other.title;
+    if (l$title != lOther$title) {
+      return false;
+    }
     final l$duration = duration;
     final lOther$duration = other.duration;
     if (l$duration != lOther$duration) {
@@ -69952,9 +71014,19 @@ class Query$GetSection$section$$PosterGridSection$items$items$item$$Episode
     if (l$progress != lOther$progress) {
       return false;
     }
+    final l$image = image;
+    final lOther$image = other.image;
+    if (l$image != lOther$image) {
+      return false;
+    }
     final l$publishDate = publishDate;
     final lOther$publishDate = other.publishDate;
     if (l$publishDate != lOther$publishDate) {
+      return false;
+    }
+    final l$number = number;
+    final lOther$number = other.number;
+    if (l$number != lOther$number) {
       return false;
     }
     final l$season = season;
@@ -69965,11 +71037,6 @@ class Query$GetSection$section$$PosterGridSection$items$items$item$$Episode
     final l$$__typename = $__typename;
     final lOther$$__typename = other.$__typename;
     if (l$$__typename != lOther$$__typename) {
-      return false;
-    }
-    final l$number = number;
-    final lOther$number = other.number;
-    if (l$number != lOther$number) {
       return false;
     }
     return true;
@@ -70003,14 +71070,16 @@ abstract class CopyWith$Query$GetSection$section$$PosterGridSection$items$items$
 
   TRes call({
     String? id,
+    String? title,
     int? duration,
     bool? locked,
     int? progress,
+    String? image,
     String? publishDate,
+    int? number,
     Query$GetSection$section$$PosterGridSection$items$items$item$$Episode$season?
         season,
     String? $__typename,
-    int? number,
   });
   CopyWith$Query$GetSection$section$$PosterGridSection$items$items$item$$Episode$season<
       TRes> get season;
@@ -70037,17 +71106,22 @@ class _CopyWithImpl$Query$GetSection$section$$PosterGridSection$items$items$item
 
   TRes call({
     Object? id = _undefined,
+    Object? title = _undefined,
     Object? duration = _undefined,
     Object? locked = _undefined,
     Object? progress = _undefined,
+    Object? image = _undefined,
     Object? publishDate = _undefined,
+    Object? number = _undefined,
     Object? season = _undefined,
     Object? $__typename = _undefined,
-    Object? number = _undefined,
   }) =>
       _then(
           Query$GetSection$section$$PosterGridSection$items$items$item$$Episode(
         id: id == _undefined || id == null ? _instance.id : (id as String),
+        title: title == _undefined || title == null
+            ? _instance.title
+            : (title as String),
         duration: duration == _undefined || duration == null
             ? _instance.duration
             : (duration as int),
@@ -70056,9 +71130,11 @@ class _CopyWithImpl$Query$GetSection$section$$PosterGridSection$items$items$item
             : (locked as bool),
         progress:
             progress == _undefined ? _instance.progress : (progress as int?),
+        image: image == _undefined ? _instance.image : (image as String?),
         publishDate: publishDate == _undefined || publishDate == null
             ? _instance.publishDate
             : (publishDate as String),
+        number: number == _undefined ? _instance.number : (number as int?),
         season: season == _undefined
             ? _instance.season
             : (season
@@ -70066,7 +71142,6 @@ class _CopyWithImpl$Query$GetSection$section$$PosterGridSection$items$items$item
         $__typename: $__typename == _undefined || $__typename == null
             ? _instance.$__typename
             : ($__typename as String),
-        number: number == _undefined ? _instance.number : (number as int?),
       ));
 
   CopyWith$Query$GetSection$section$$PosterGridSection$items$items$item$$Episode$season<
@@ -70092,14 +71167,16 @@ class _CopyWithStubImpl$Query$GetSection$section$$PosterGridSection$items$items$
 
   call({
     String? id,
+    String? title,
     int? duration,
     bool? locked,
     int? progress,
+    String? image,
     String? publishDate,
+    int? number,
     Query$GetSection$section$$PosterGridSection$items$items$item$$Episode$season?
         season,
     String? $__typename,
-    int? number,
   }) =>
       _res;
 
@@ -70114,54 +71191,55 @@ class Query$GetSection$section$$PosterGridSection$items$items$item$$Episode$seas
     implements
         Fragment$Section$$PosterGridSection$items$items$item$$Episode$season,
         Fragment$ItemSectionItem$item$$Episode$season,
+        Fragment$EpisodeThumbnail$season,
         Fragment$GridSectionItem$item$$Episode$season {
   Query$GetSection$section$$PosterGridSection$items$items$item$$Episode$season({
+    required this.number,
     required this.$show,
     this.$__typename = 'Season',
-    required this.number,
   });
 
   factory Query$GetSection$section$$PosterGridSection$items$items$item$$Episode$season.fromJson(
       Map<String, dynamic> json) {
+    final l$number = json['number'];
     final l$$show = json['show'];
     final l$$__typename = json['__typename'];
-    final l$number = json['number'];
     return Query$GetSection$section$$PosterGridSection$items$items$item$$Episode$season(
+      number: (l$number as int),
       $show:
           Query$GetSection$section$$PosterGridSection$items$items$item$$Episode$season$show
               .fromJson((l$$show as Map<String, dynamic>)),
       $__typename: (l$$__typename as String),
-      number: (l$number as int),
     );
   }
+
+  final int number;
 
   final Query$GetSection$section$$PosterGridSection$items$items$item$$Episode$season$show
       $show;
 
   final String $__typename;
 
-  final int number;
-
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
+    final l$number = number;
+    _resultData['number'] = l$number;
     final l$$show = $show;
     _resultData['show'] = l$$show.toJson();
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
-    final l$number = number;
-    _resultData['number'] = l$number;
     return _resultData;
   }
 
   @override
   int get hashCode {
+    final l$number = number;
     final l$$show = $show;
     final l$$__typename = $__typename;
-    final l$number = number;
     return Object.hashAll([
+      l$number,
       l$$show,
       l$$__typename,
-      l$number,
     ]);
   }
 
@@ -70175,6 +71253,11 @@ class Query$GetSection$section$$PosterGridSection$items$items$item$$Episode$seas
         runtimeType != other.runtimeType) {
       return false;
     }
+    final l$number = number;
+    final lOther$number = other.number;
+    if (l$number != lOther$number) {
+      return false;
+    }
     final l$$show = $show;
     final lOther$$show = other.$show;
     if (l$$show != lOther$$show) {
@@ -70183,11 +71266,6 @@ class Query$GetSection$section$$PosterGridSection$items$items$item$$Episode$seas
     final l$$__typename = $__typename;
     final lOther$$__typename = other.$__typename;
     if (l$$__typename != lOther$$__typename) {
-      return false;
-    }
-    final l$number = number;
-    final lOther$number = other.number;
-    if (l$number != lOther$number) {
       return false;
     }
     return true;
@@ -70220,10 +71298,10 @@ abstract class CopyWith$Query$GetSection$section$$PosterGridSection$items$items$
       _CopyWithStubImpl$Query$GetSection$section$$PosterGridSection$items$items$item$$Episode$season;
 
   TRes call({
+    int? number,
     Query$GetSection$section$$PosterGridSection$items$items$item$$Episode$season$show?
         $show,
     String? $__typename,
-    int? number,
   });
   CopyWith$Query$GetSection$section$$PosterGridSection$items$items$item$$Episode$season$show<
       TRes> get $show;
@@ -70249,12 +71327,15 @@ class _CopyWithImpl$Query$GetSection$section$$PosterGridSection$items$items$item
   static const _undefined = <dynamic, dynamic>{};
 
   TRes call({
+    Object? number = _undefined,
     Object? $show = _undefined,
     Object? $__typename = _undefined,
-    Object? number = _undefined,
   }) =>
       _then(
           Query$GetSection$section$$PosterGridSection$items$items$item$$Episode$season(
+        number: number == _undefined || number == null
+            ? _instance.number
+            : (number as int),
         $show: $show == _undefined || $show == null
             ? _instance.$show
             : ($show
@@ -70262,9 +71343,6 @@ class _CopyWithImpl$Query$GetSection$section$$PosterGridSection$items$items$item
         $__typename: $__typename == _undefined || $__typename == null
             ? _instance.$__typename
             : ($__typename as String),
-        number: number == _undefined || number == null
-            ? _instance.number
-            : (number as int),
       ));
 
   CopyWith$Query$GetSection$section$$PosterGridSection$items$items$item$$Episode$season$show<
@@ -70286,10 +71364,10 @@ class _CopyWithStubImpl$Query$GetSection$section$$PosterGridSection$items$items$
   TRes _res;
 
   call({
+    int? number,
     Query$GetSection$section$$PosterGridSection$items$items$item$$Episode$season$show?
         $show,
     String? $__typename,
-    int? number,
   }) =>
       _res;
 
@@ -70304,6 +71382,7 @@ class Query$GetSection$section$$PosterGridSection$items$items$item$$Episode$seas
     implements
         Fragment$Section$$PosterGridSection$items$items$item$$Episode$season$show,
         Fragment$ItemSectionItem$item$$Episode$season$show,
+        Fragment$EpisodeThumbnail$season$show,
         Fragment$GridSectionItem$item$$Episode$season$show {
   Query$GetSection$section$$PosterGridSection$items$items$item$$Episode$season$show({
     required this.title,
@@ -73414,46 +74493,55 @@ class Query$GetSection$section$$IconGridSection$items$items$item$$Episode
     implements
         Fragment$Section$$IconGridSection$items$items$item$$Episode,
         Fragment$ItemSectionItem$item$$Episode,
+        Fragment$EpisodeThumbnail,
         Fragment$NavigatableEpisode,
         Fragment$GridSectionItem$item$$Episode,
         Query$GetSection$section$$IconGridSection$items$items$item {
   Query$GetSection$section$$IconGridSection$items$items$item$$Episode({
     required this.id,
+    required this.title,
     required this.duration,
     required this.locked,
     this.progress,
+    this.image,
     required this.publishDate,
+    this.number,
     this.season,
     this.$__typename = 'Episode',
-    this.number,
   });
 
   factory Query$GetSection$section$$IconGridSection$items$items$item$$Episode.fromJson(
       Map<String, dynamic> json) {
     final l$id = json['id'];
+    final l$title = json['title'];
     final l$duration = json['duration'];
     final l$locked = json['locked'];
     final l$progress = json['progress'];
+    final l$image = json['image'];
     final l$publishDate = json['publishDate'];
+    final l$number = json['number'];
     final l$season = json['season'];
     final l$$__typename = json['__typename'];
-    final l$number = json['number'];
     return Query$GetSection$section$$IconGridSection$items$items$item$$Episode(
       id: (l$id as String),
+      title: (l$title as String),
       duration: (l$duration as int),
       locked: (l$locked as bool),
       progress: (l$progress as int?),
+      image: (l$image as String?),
       publishDate: (l$publishDate as String),
+      number: (l$number as int?),
       season: l$season == null
           ? null
           : Query$GetSection$section$$IconGridSection$items$items$item$$Episode$season
               .fromJson((l$season as Map<String, dynamic>)),
       $__typename: (l$$__typename as String),
-      number: (l$number as int?),
     );
   }
 
   final String id;
+
+  final String title;
 
   final int duration;
 
@@ -73461,55 +74549,65 @@ class Query$GetSection$section$$IconGridSection$items$items$item$$Episode
 
   final int? progress;
 
+  final String? image;
+
   final String publishDate;
+
+  final int? number;
 
   final Query$GetSection$section$$IconGridSection$items$items$item$$Episode$season?
       season;
 
   final String $__typename;
 
-  final int? number;
-
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
     final l$id = id;
     _resultData['id'] = l$id;
+    final l$title = title;
+    _resultData['title'] = l$title;
     final l$duration = duration;
     _resultData['duration'] = l$duration;
     final l$locked = locked;
     _resultData['locked'] = l$locked;
     final l$progress = progress;
     _resultData['progress'] = l$progress;
+    final l$image = image;
+    _resultData['image'] = l$image;
     final l$publishDate = publishDate;
     _resultData['publishDate'] = l$publishDate;
+    final l$number = number;
+    _resultData['number'] = l$number;
     final l$season = season;
     _resultData['season'] = l$season?.toJson();
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
-    final l$number = number;
-    _resultData['number'] = l$number;
     return _resultData;
   }
 
   @override
   int get hashCode {
     final l$id = id;
+    final l$title = title;
     final l$duration = duration;
     final l$locked = locked;
     final l$progress = progress;
+    final l$image = image;
     final l$publishDate = publishDate;
+    final l$number = number;
     final l$season = season;
     final l$$__typename = $__typename;
-    final l$number = number;
     return Object.hashAll([
       l$id,
+      l$title,
       l$duration,
       l$locked,
       l$progress,
+      l$image,
       l$publishDate,
+      l$number,
       l$season,
       l$$__typename,
-      l$number,
     ]);
   }
 
@@ -73528,6 +74626,11 @@ class Query$GetSection$section$$IconGridSection$items$items$item$$Episode
     if (l$id != lOther$id) {
       return false;
     }
+    final l$title = title;
+    final lOther$title = other.title;
+    if (l$title != lOther$title) {
+      return false;
+    }
     final l$duration = duration;
     final lOther$duration = other.duration;
     if (l$duration != lOther$duration) {
@@ -73543,9 +74646,19 @@ class Query$GetSection$section$$IconGridSection$items$items$item$$Episode
     if (l$progress != lOther$progress) {
       return false;
     }
+    final l$image = image;
+    final lOther$image = other.image;
+    if (l$image != lOther$image) {
+      return false;
+    }
     final l$publishDate = publishDate;
     final lOther$publishDate = other.publishDate;
     if (l$publishDate != lOther$publishDate) {
+      return false;
+    }
+    final l$number = number;
+    final lOther$number = other.number;
+    if (l$number != lOther$number) {
       return false;
     }
     final l$season = season;
@@ -73556,11 +74669,6 @@ class Query$GetSection$section$$IconGridSection$items$items$item$$Episode
     final l$$__typename = $__typename;
     final lOther$$__typename = other.$__typename;
     if (l$$__typename != lOther$$__typename) {
-      return false;
-    }
-    final l$number = number;
-    final lOther$number = other.number;
-    if (l$number != lOther$number) {
       return false;
     }
     return true;
@@ -73594,14 +74702,16 @@ abstract class CopyWith$Query$GetSection$section$$IconGridSection$items$items$it
 
   TRes call({
     String? id,
+    String? title,
     int? duration,
     bool? locked,
     int? progress,
+    String? image,
     String? publishDate,
+    int? number,
     Query$GetSection$section$$IconGridSection$items$items$item$$Episode$season?
         season,
     String? $__typename,
-    int? number,
   });
   CopyWith$Query$GetSection$section$$IconGridSection$items$items$item$$Episode$season<
       TRes> get season;
@@ -73628,16 +74738,21 @@ class _CopyWithImpl$Query$GetSection$section$$IconGridSection$items$items$item$$
 
   TRes call({
     Object? id = _undefined,
+    Object? title = _undefined,
     Object? duration = _undefined,
     Object? locked = _undefined,
     Object? progress = _undefined,
+    Object? image = _undefined,
     Object? publishDate = _undefined,
+    Object? number = _undefined,
     Object? season = _undefined,
     Object? $__typename = _undefined,
-    Object? number = _undefined,
   }) =>
       _then(Query$GetSection$section$$IconGridSection$items$items$item$$Episode(
         id: id == _undefined || id == null ? _instance.id : (id as String),
+        title: title == _undefined || title == null
+            ? _instance.title
+            : (title as String),
         duration: duration == _undefined || duration == null
             ? _instance.duration
             : (duration as int),
@@ -73646,9 +74761,11 @@ class _CopyWithImpl$Query$GetSection$section$$IconGridSection$items$items$item$$
             : (locked as bool),
         progress:
             progress == _undefined ? _instance.progress : (progress as int?),
+        image: image == _undefined ? _instance.image : (image as String?),
         publishDate: publishDate == _undefined || publishDate == null
             ? _instance.publishDate
             : (publishDate as String),
+        number: number == _undefined ? _instance.number : (number as int?),
         season: season == _undefined
             ? _instance.season
             : (season
@@ -73656,7 +74773,6 @@ class _CopyWithImpl$Query$GetSection$section$$IconGridSection$items$items$item$$
         $__typename: $__typename == _undefined || $__typename == null
             ? _instance.$__typename
             : ($__typename as String),
-        number: number == _undefined ? _instance.number : (number as int?),
       ));
 
   CopyWith$Query$GetSection$section$$IconGridSection$items$items$item$$Episode$season<
@@ -73682,14 +74798,16 @@ class _CopyWithStubImpl$Query$GetSection$section$$IconGridSection$items$items$it
 
   call({
     String? id,
+    String? title,
     int? duration,
     bool? locked,
     int? progress,
+    String? image,
     String? publishDate,
+    int? number,
     Query$GetSection$section$$IconGridSection$items$items$item$$Episode$season?
         season,
     String? $__typename,
-    int? number,
   }) =>
       _res;
 
@@ -73704,54 +74822,55 @@ class Query$GetSection$section$$IconGridSection$items$items$item$$Episode$season
     implements
         Fragment$Section$$IconGridSection$items$items$item$$Episode$season,
         Fragment$ItemSectionItem$item$$Episode$season,
+        Fragment$EpisodeThumbnail$season,
         Fragment$GridSectionItem$item$$Episode$season {
   Query$GetSection$section$$IconGridSection$items$items$item$$Episode$season({
+    required this.number,
     required this.$show,
     this.$__typename = 'Season',
-    required this.number,
   });
 
   factory Query$GetSection$section$$IconGridSection$items$items$item$$Episode$season.fromJson(
       Map<String, dynamic> json) {
+    final l$number = json['number'];
     final l$$show = json['show'];
     final l$$__typename = json['__typename'];
-    final l$number = json['number'];
     return Query$GetSection$section$$IconGridSection$items$items$item$$Episode$season(
+      number: (l$number as int),
       $show:
           Query$GetSection$section$$IconGridSection$items$items$item$$Episode$season$show
               .fromJson((l$$show as Map<String, dynamic>)),
       $__typename: (l$$__typename as String),
-      number: (l$number as int),
     );
   }
+
+  final int number;
 
   final Query$GetSection$section$$IconGridSection$items$items$item$$Episode$season$show
       $show;
 
   final String $__typename;
 
-  final int number;
-
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
+    final l$number = number;
+    _resultData['number'] = l$number;
     final l$$show = $show;
     _resultData['show'] = l$$show.toJson();
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
-    final l$number = number;
-    _resultData['number'] = l$number;
     return _resultData;
   }
 
   @override
   int get hashCode {
+    final l$number = number;
     final l$$show = $show;
     final l$$__typename = $__typename;
-    final l$number = number;
     return Object.hashAll([
+      l$number,
       l$$show,
       l$$__typename,
-      l$number,
     ]);
   }
 
@@ -73765,6 +74884,11 @@ class Query$GetSection$section$$IconGridSection$items$items$item$$Episode$season
         runtimeType != other.runtimeType) {
       return false;
     }
+    final l$number = number;
+    final lOther$number = other.number;
+    if (l$number != lOther$number) {
+      return false;
+    }
     final l$$show = $show;
     final lOther$$show = other.$show;
     if (l$$show != lOther$$show) {
@@ -73773,11 +74897,6 @@ class Query$GetSection$section$$IconGridSection$items$items$item$$Episode$season
     final l$$__typename = $__typename;
     final lOther$$__typename = other.$__typename;
     if (l$$__typename != lOther$$__typename) {
-      return false;
-    }
-    final l$number = number;
-    final lOther$number = other.number;
-    if (l$number != lOther$number) {
       return false;
     }
     return true;
@@ -73810,10 +74929,10 @@ abstract class CopyWith$Query$GetSection$section$$IconGridSection$items$items$it
       _CopyWithStubImpl$Query$GetSection$section$$IconGridSection$items$items$item$$Episode$season;
 
   TRes call({
+    int? number,
     Query$GetSection$section$$IconGridSection$items$items$item$$Episode$season$show?
         $show,
     String? $__typename,
-    int? number,
   });
   CopyWith$Query$GetSection$section$$IconGridSection$items$items$item$$Episode$season$show<
       TRes> get $show;
@@ -73839,12 +74958,15 @@ class _CopyWithImpl$Query$GetSection$section$$IconGridSection$items$items$item$$
   static const _undefined = <dynamic, dynamic>{};
 
   TRes call({
+    Object? number = _undefined,
     Object? $show = _undefined,
     Object? $__typename = _undefined,
-    Object? number = _undefined,
   }) =>
       _then(
           Query$GetSection$section$$IconGridSection$items$items$item$$Episode$season(
+        number: number == _undefined || number == null
+            ? _instance.number
+            : (number as int),
         $show: $show == _undefined || $show == null
             ? _instance.$show
             : ($show
@@ -73852,9 +74974,6 @@ class _CopyWithImpl$Query$GetSection$section$$IconGridSection$items$items$item$$
         $__typename: $__typename == _undefined || $__typename == null
             ? _instance.$__typename
             : ($__typename as String),
-        number: number == _undefined || number == null
-            ? _instance.number
-            : (number as int),
       ));
 
   CopyWith$Query$GetSection$section$$IconGridSection$items$items$item$$Episode$season$show<
@@ -73876,10 +74995,10 @@ class _CopyWithStubImpl$Query$GetSection$section$$IconGridSection$items$items$it
   TRes _res;
 
   call({
+    int? number,
     Query$GetSection$section$$IconGridSection$items$items$item$$Episode$season$show?
         $show,
     String? $__typename,
-    int? number,
   }) =>
       _res;
 
@@ -73894,6 +75013,7 @@ class Query$GetSection$section$$IconGridSection$items$items$item$$Episode$season
     implements
         Fragment$Section$$IconGridSection$items$items$item$$Episode$season$show,
         Fragment$ItemSectionItem$item$$Episode$season$show,
+        Fragment$EpisodeThumbnail$season$show,
         Fragment$GridSectionItem$item$$Episode$season$show {
   Query$GetSection$section$$IconGridSection$items$items$item$$Episode$season$show({
     required this.title,

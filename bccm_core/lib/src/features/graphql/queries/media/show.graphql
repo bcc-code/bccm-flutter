@@ -1,0 +1,22 @@
+query GetShow($id: ID!) {
+  show(id: $id) {
+    id
+    title
+    description
+    image
+    seasons(dir: "desc") {
+      items {
+        id
+        title
+        number
+        episodes {
+          items {
+            ... on Episode {
+              ...SeasonListEpisode
+            }
+          }
+        }
+      }
+    }
+  }
+}

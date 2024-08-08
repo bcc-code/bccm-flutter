@@ -118,6 +118,7 @@ fragment SeasonListEpisode on Episode {
   lessons {
     total
   }
+  ...EpisodeThumbnail
 }
 
 query legacyIDLookup($episodeId: Int, $programId: Int) {

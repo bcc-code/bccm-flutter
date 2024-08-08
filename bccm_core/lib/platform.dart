@@ -26,6 +26,7 @@ export 'package:bccm_core/src/features/graphql/queries/studies.graphql.dart';
 export 'package:bccm_core/src/features/graphql/queries/live/events.graphql.dart';
 export 'package:bccm_core/src/features/graphql/queries/live/calendar_days.graphql.dart';
 export 'package:bccm_core/src/features/graphql/queries/persons.graphql.dart';
+export 'package:bccm_core/src/features/graphql/queries/media/show.graphql.dart';
 
 export 'package:bccm_core/src/features/graphql/schema/achievements.graphql.dart';
 export 'package:bccm_core/src/features/graphql/schema/analytics.graphql.dart';

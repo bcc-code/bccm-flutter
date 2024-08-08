@@ -1,6 +1,7 @@
 import '../../schema/schema.graphql.dart';
 import '../../schema/shows.graphql.dart';
 import '../episode.graphql.dart';
+import '../page.graphql.dart';
 import 'dart:async';
 import 'package:flutter/widgets.dart' as widgets;
 import 'package:gql/ast.dart';
@@ -3479,6 +3480,7 @@ const documentNodeQueryKidsFetchEpisode = DocumentNode(definitions: [
   fragmentDefinitionBasicStream,
   fragmentDefinitionEpisodeContext,
   fragmentDefinitionSeasonListEpisode,
+  fragmentDefinitionEpisodeThumbnail,
   fragmentDefinitionKidsEpisodeThumbnail,
 ]);
 Query$KidsFetchEpisode _parserFn$Query$KidsFetchEpisode(
@@ -5878,6 +5880,7 @@ class _CopyWithStubImpl$Query$KidsFetchEpisode$episode$context$$ContextCollectio
 class Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item$$Episode
     implements
         Fragment$SeasonListEpisode,
+        Fragment$EpisodeThumbnail,
         Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item {
   Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item$$Episode({
     required this.id,
@@ -5889,6 +5892,8 @@ class Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item
     required this.duration,
     required this.locked,
     required this.lessons,
+    this.progress,
+    this.season,
     this.$__typename = 'Episode',
   });
 
@@ -5903,6 +5908,8 @@ class Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item
     final l$duration = json['duration'];
     final l$locked = json['locked'];
     final l$lessons = json['lessons'];
+    final l$progress = json['progress'];
+    final l$season = json['season'];
     final l$$__typename = json['__typename'];
     return Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item$$Episode(
       id: (l$id as String),
@@ -5915,6 +5922,11 @@ class Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item
       locked: (l$locked as bool),
       lessons: Fragment$SeasonListEpisode$lessons.fromJson(
           (l$lessons as Map<String, dynamic>)),
+      progress: (l$progress as int?),
+      season: l$season == null
+          ? null
+          : Fragment$SeasonListEpisode$season.fromJson(
+              (l$season as Map<String, dynamic>)),
       $__typename: (l$$__typename as String),
     );
   }
@@ -5936,6 +5948,10 @@ class Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item
   final bool locked;
 
   final Fragment$SeasonListEpisode$lessons lessons;
+
+  final int? progress;
+
+  final Fragment$SeasonListEpisode$season? season;
 
   final String $__typename;
 
@@ -5959,6 +5975,10 @@ class Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item
     _resultData['locked'] = l$locked;
     final l$lessons = lessons;
     _resultData['lessons'] = l$lessons.toJson();
+    final l$progress = progress;
+    _resultData['progress'] = l$progress;
+    final l$season = season;
+    _resultData['season'] = l$season?.toJson();
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
     return _resultData;
@@ -5975,6 +5995,8 @@ class Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item
     final l$duration = duration;
     final l$locked = locked;
     final l$lessons = lessons;
+    final l$progress = progress;
+    final l$season = season;
     final l$$__typename = $__typename;
     return Object.hashAll([
       l$id,
@@ -5986,6 +6008,8 @@ class Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item
       l$duration,
       l$locked,
       l$lessons,
+      l$progress,
+      l$season,
       l$$__typename,
     ]);
   }
@@ -6045,6 +6069,16 @@ class Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item
     if (l$lessons != lOther$lessons) {
       return false;
     }
+    final l$progress = progress;
+    final lOther$progress = other.progress;
+    if (l$progress != lOther$progress) {
+      return false;
+    }
+    final l$season = season;
+    final lOther$season = other.season;
+    if (l$season != lOther$season) {
+      return false;
+    }
     final l$$__typename = $__typename;
     final lOther$$__typename = other.$__typename;
     if (l$$__typename != lOther$$__typename) {
@@ -6089,9 +6123,12 @@ abstract class CopyWith$Query$KidsFetchEpisode$episode$context$$ContextCollectio
     int? duration,
     bool? locked,
     Fragment$SeasonListEpisode$lessons? lessons,
+    int? progress,
+    Fragment$SeasonListEpisode$season? season,
     String? $__typename,
   });
   CopyWith$Fragment$SeasonListEpisode$lessons<TRes> get lessons;
+  CopyWith$Fragment$SeasonListEpisode$season<TRes> get season;
 }
 
 class _CopyWithImpl$Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item$$Episode<
@@ -6123,6 +6160,8 @@ class _CopyWithImpl$Query$KidsFetchEpisode$episode$context$$ContextCollection$it
     Object? duration = _undefined,
     Object? locked = _undefined,
     Object? lessons = _undefined,
+    Object? progress = _undefined,
+    Object? season = _undefined,
     Object? $__typename = _undefined,
   }) =>
       _then(
@@ -6148,6 +6187,11 @@ class _CopyWithImpl$Query$KidsFetchEpisode$episode$context$$ContextCollection$it
         lessons: lessons == _undefined || lessons == null
             ? _instance.lessons
             : (lessons as Fragment$SeasonListEpisode$lessons),
+        progress:
+            progress == _undefined ? _instance.progress : (progress as int?),
+        season: season == _undefined
+            ? _instance.season
+            : (season as Fragment$SeasonListEpisode$season?),
         $__typename: $__typename == _undefined || $__typename == null
             ? _instance.$__typename
             : ($__typename as String),
@@ -6157,6 +6201,14 @@ class _CopyWithImpl$Query$KidsFetchEpisode$episode$context$$ContextCollection$it
     final local$lessons = _instance.lessons;
     return CopyWith$Fragment$SeasonListEpisode$lessons(
         local$lessons, (e) => call(lessons: e));
+  }
+
+  CopyWith$Fragment$SeasonListEpisode$season<TRes> get season {
+    final local$season = _instance.season;
+    return local$season == null
+        ? CopyWith$Fragment$SeasonListEpisode$season.stub(_then(_instance))
+        : CopyWith$Fragment$SeasonListEpisode$season(
+            local$season, (e) => call(season: e));
   }
 }
 
@@ -6180,12 +6232,17 @@ class _CopyWithStubImpl$Query$KidsFetchEpisode$episode$context$$ContextCollectio
     int? duration,
     bool? locked,
     Fragment$SeasonListEpisode$lessons? lessons,
+    int? progress,
+    Fragment$SeasonListEpisode$season? season,
     String? $__typename,
   }) =>
       _res;
 
   CopyWith$Fragment$SeasonListEpisode$lessons<TRes> get lessons =>
       CopyWith$Fragment$SeasonListEpisode$lessons.stub(_res);
+
+  CopyWith$Fragment$SeasonListEpisode$season<TRes> get season =>
+      CopyWith$Fragment$SeasonListEpisode$season.stub(_res);
 }
 
 class Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item$$Page

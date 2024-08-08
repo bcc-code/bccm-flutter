@@ -32,16 +32,7 @@ fragment ItemSectionItem on SectionItem {
     ...NavigatableEpisode
     ...NavigatableShow
     ... on Episode {
-      id
-      duration
-      locked
-      progress
-      publishDate
-      season {
-        show {
-          title
-        }
-      }
+      ...EpisodeThumbnail
     }
     ... on Show {
       id
@@ -49,6 +40,23 @@ fragment ItemSectionItem on SectionItem {
       seasonCount
     }
     __typename
+  }
+}
+
+fragment EpisodeThumbnail on Episode {
+  id
+  title
+  duration
+  locked
+  progress
+  image
+  publishDate
+  number
+  season {
+    number
+    show {
+      title
+    }
   }
 }
 

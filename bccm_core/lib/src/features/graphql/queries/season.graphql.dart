@@ -4,11 +4,16 @@ import 'package:flutter/widgets.dart' as widgets;
 import 'package:gql/ast.dart';
 import 'package:graphql/client.dart' as graphql;
 import 'package:graphql_flutter/graphql_flutter.dart' as graphql_flutter;
+import 'page.graphql.dart';
 
 class Variables$Query$GetSeasonEpisodes {
-  factory Variables$Query$GetSeasonEpisodes({required String id}) =>
+  factory Variables$Query$GetSeasonEpisodes({
+    required String id,
+    String? dir,
+  }) =>
       Variables$Query$GetSeasonEpisodes._({
         r'id': id,
+        if (dir != null) r'dir': dir,
       });
 
   Variables$Query$GetSeasonEpisodes._(this._$data);
@@ -18,6 +23,10 @@ class Variables$Query$GetSeasonEpisodes {
     final result$data = <String, dynamic>{};
     final l$id = data['id'];
     result$data['id'] = (l$id as String);
+    if (data.containsKey('dir')) {
+      final l$dir = data['dir'];
+      result$data['dir'] = (l$dir as String?);
+    }
     return Variables$Query$GetSeasonEpisodes._(result$data);
   }
 
@@ -25,10 +34,16 @@ class Variables$Query$GetSeasonEpisodes {
 
   String get id => (_$data['id'] as String);
 
+  String? get dir => (_$data['dir'] as String?);
+
   Map<String, dynamic> toJson() {
     final result$data = <String, dynamic>{};
     final l$id = id;
     result$data['id'] = l$id;
+    if (_$data.containsKey('dir')) {
+      final l$dir = dir;
+      result$data['dir'] = l$dir;
+    }
     return result$data;
   }
 
@@ -52,13 +67,25 @@ class Variables$Query$GetSeasonEpisodes {
     if (l$id != lOther$id) {
       return false;
     }
+    final l$dir = dir;
+    final lOther$dir = other.dir;
+    if (_$data.containsKey('dir') != other._$data.containsKey('dir')) {
+      return false;
+    }
+    if (l$dir != lOther$dir) {
+      return false;
+    }
     return true;
   }
 
   @override
   int get hashCode {
     final l$id = id;
-    return Object.hashAll([l$id]);
+    final l$dir = dir;
+    return Object.hashAll([
+      l$id,
+      _$data.containsKey('dir') ? l$dir : const {},
+    ]);
   }
 }
 
@@ -71,7 +98,10 @@ abstract class CopyWith$Variables$Query$GetSeasonEpisodes<TRes> {
   factory CopyWith$Variables$Query$GetSeasonEpisodes.stub(TRes res) =
       _CopyWithStubImpl$Variables$Query$GetSeasonEpisodes;
 
-  TRes call({String? id});
+  TRes call({
+    String? id,
+    String? dir,
+  });
 }
 
 class _CopyWithImpl$Variables$Query$GetSeasonEpisodes<TRes>
@@ -87,10 +117,14 @@ class _CopyWithImpl$Variables$Query$GetSeasonEpisodes<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({Object? id = _undefined}) =>
+  TRes call({
+    Object? id = _undefined,
+    Object? dir = _undefined,
+  }) =>
       _then(Variables$Query$GetSeasonEpisodes._({
         ..._instance._$data,
         if (id != _undefined && id != null) 'id': (id as String),
+        if (dir != _undefined) 'dir': (dir as String?),
       }));
 }
 
@@ -100,7 +134,11 @@ class _CopyWithStubImpl$Variables$Query$GetSeasonEpisodes<TRes>
 
   TRes _res;
 
-  call({String? id}) => _res;
+  call({
+    String? id,
+    String? dir,
+  }) =>
+      _res;
 }
 
 class Query$GetSeasonEpisodes {
@@ -251,7 +289,16 @@ const documentNodeQueryGetSeasonEpisodes = DocumentNode(definitions: [
         ),
         defaultValue: DefaultValueNode(value: null),
         directives: [],
-      )
+      ),
+      VariableDefinitionNode(
+        variable: VariableNode(name: NameNode(value: 'dir')),
+        type: NamedTypeNode(
+          name: NameNode(value: 'String'),
+          isNonNull: false,
+        ),
+        defaultValue: DefaultValueNode(value: null),
+        directives: [],
+      ),
     ],
     directives: [],
     selectionSet: SelectionSetNode(selections: [
@@ -283,7 +330,12 @@ const documentNodeQueryGetSeasonEpisodes = DocumentNode(definitions: [
           FieldNode(
             name: NameNode(value: 'episodes'),
             alias: null,
-            arguments: [],
+            arguments: [
+              ArgumentNode(
+                name: NameNode(value: 'dir'),
+                value: VariableNode(name: NameNode(value: 'dir')),
+              )
+            ],
             directives: [],
             selectionSet: SelectionSetNode(selections: [
               FieldNode(
@@ -333,6 +385,7 @@ const documentNodeQueryGetSeasonEpisodes = DocumentNode(definitions: [
     ]),
   ),
   fragmentDefinitionSeasonListEpisode,
+  fragmentDefinitionEpisodeThumbnail,
 ]);
 Query$GetSeasonEpisodes _parserFn$Query$GetSeasonEpisodes(
         Map<String, dynamic> data) =>
