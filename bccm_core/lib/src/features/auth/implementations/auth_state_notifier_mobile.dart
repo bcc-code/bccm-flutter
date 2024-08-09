@@ -92,7 +92,9 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
       ));
       rethrow;
     } finally {
-      initializeCompleter.complete();
+      if (!initializeCompleter.isCompleted) {
+        initializeCompleter.complete();
+      }
     }
   }
 
