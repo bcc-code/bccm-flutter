@@ -4,6 +4,7 @@ import 'dart:io';
 import 'package:auto_route/auto_route.dart';
 import 'package:bccm_core/bccm_core.dart';
 import 'package:bccm_core/platform.dart';
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
@@ -98,11 +99,15 @@ class FcmNotificationService implements NotificationService {
     FirebaseMessaging.instance.setForegroundNotificationPresentationOptions(alert: true, badge: false, sound: false);
     _setupLocalNotifications();
 
-    final token = await FirebaseMessaging.instance.getToken();
-    if (token != null) {
-      _onTokenChanged(token);
-    } else {
-      debugPrint('FirebaseMessaging.instance.getToken() returned null');
+    try {
+      final token = await FirebaseMessaging.instance.getToken();
+      if (token != null) {
+        _onTokenChanged(token);
+      } else {
+        debugPrint('FirebaseMessaging.instance.getToken() returned null');
+      }
+    } catch(e) {
+      FirebaseCrashlytics.instance.recordError(e, StackTrace.current);
     }
     _setupTokenListeners();
   }
