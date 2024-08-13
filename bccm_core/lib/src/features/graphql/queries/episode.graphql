@@ -18,6 +18,8 @@ query FetchEpisode(
     shareRestriction
     ageRating
     availableTo
+    publishDate
+    locked
     chapters {
       ...EpisodeChapter
     }

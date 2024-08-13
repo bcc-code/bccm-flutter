@@ -9088,6 +9088,20 @@ const documentNodeQueryFetchEpisode = DocumentNode(definitions: [
             selectionSet: null,
           ),
           FieldNode(
+            name: NameNode(value: 'publishDate'),
+            alias: null,
+            arguments: [],
+            directives: [],
+            selectionSet: null,
+          ),
+          FieldNode(
+            name: NameNode(value: 'locked'),
+            alias: null,
+            arguments: [],
+            directives: [],
+            selectionSet: null,
+          ),
+          FieldNode(
             name: NameNode(value: 'chapters'),
             alias: null,
             arguments: [],
@@ -9524,6 +9538,8 @@ class Query$FetchEpisode$episode
     required this.shareRestriction,
     required this.ageRating,
     required this.availableTo,
+    required this.publishDate,
+    required this.locked,
     required this.chapters,
     this.skipToChapter,
     this.relatedItems,
@@ -9551,6 +9567,8 @@ class Query$FetchEpisode$episode
     final l$shareRestriction = json['shareRestriction'];
     final l$ageRating = json['ageRating'];
     final l$availableTo = json['availableTo'];
+    final l$publishDate = json['publishDate'];
+    final l$locked = json['locked'];
     final l$chapters = json['chapters'];
     final l$skipToChapter = json['skipToChapter'];
     final l$relatedItems = json['relatedItems'];
@@ -9586,6 +9604,8 @@ class Query$FetchEpisode$episode
           fromJson$Enum$ShareRestriction((l$shareRestriction as String)),
       ageRating: (l$ageRating as String),
       availableTo: (l$availableTo as String),
+      publishDate: (l$publishDate as String),
+      locked: (l$locked as bool),
       chapters: (l$chapters as List<dynamic>)
           .map((e) =>
               Fragment$EpisodeChapter.fromJson((e as Map<String, dynamic>)))
@@ -9642,6 +9662,10 @@ class Query$FetchEpisode$episode
 
   final String availableTo;
 
+  final String publishDate;
+
+  final bool locked;
+
   final List<Fragment$EpisodeChapter> chapters;
 
   final Fragment$EpisodeChapter? skipToChapter;
@@ -9693,6 +9717,10 @@ class Query$FetchEpisode$episode
     _resultData['ageRating'] = l$ageRating;
     final l$availableTo = availableTo;
     _resultData['availableTo'] = l$availableTo;
+    final l$publishDate = publishDate;
+    _resultData['publishDate'] = l$publishDate;
+    final l$locked = locked;
+    _resultData['locked'] = l$locked;
     final l$chapters = chapters;
     _resultData['chapters'] = l$chapters.map((e) => e.toJson()).toList();
     final l$skipToChapter = skipToChapter;
@@ -9727,6 +9755,8 @@ class Query$FetchEpisode$episode
     final l$shareRestriction = shareRestriction;
     final l$ageRating = ageRating;
     final l$availableTo = availableTo;
+    final l$publishDate = publishDate;
+    final l$locked = locked;
     final l$chapters = chapters;
     final l$skipToChapter = skipToChapter;
     final l$relatedItems = relatedItems;
@@ -9752,6 +9782,8 @@ class Query$FetchEpisode$episode
       l$shareRestriction,
       l$ageRating,
       l$availableTo,
+      l$publishDate,
+      l$locked,
       Object.hashAll(l$chapters.map((v) => v)),
       l$skipToChapter,
       l$relatedItems,
@@ -9871,6 +9903,16 @@ class Query$FetchEpisode$episode
     if (l$availableTo != lOther$availableTo) {
       return false;
     }
+    final l$publishDate = publishDate;
+    final lOther$publishDate = other.publishDate;
+    if (l$publishDate != lOther$publishDate) {
+      return false;
+    }
+    final l$locked = locked;
+    final lOther$locked = other.locked;
+    if (l$locked != lOther$locked) {
+      return false;
+    }
     final l$chapters = chapters;
     final lOther$chapters = other.chapters;
     if (l$chapters.length != lOther$chapters.length) {
@@ -9945,6 +9987,8 @@ abstract class CopyWith$Query$FetchEpisode$episode<TRes> {
     Enum$ShareRestriction? shareRestriction,
     String? ageRating,
     String? availableTo,
+    String? publishDate,
+    bool? locked,
     List<Fragment$EpisodeChapter>? chapters,
     Fragment$EpisodeChapter? skipToChapter,
     Query$FetchEpisode$episode$relatedItems? relatedItems,
@@ -10000,6 +10044,8 @@ class _CopyWithImpl$Query$FetchEpisode$episode<TRes>
     Object? shareRestriction = _undefined,
     Object? ageRating = _undefined,
     Object? availableTo = _undefined,
+    Object? publishDate = _undefined,
+    Object? locked = _undefined,
     Object? chapters = _undefined,
     Object? skipToChapter = _undefined,
     Object? relatedItems = _undefined,
@@ -10058,6 +10104,12 @@ class _CopyWithImpl$Query$FetchEpisode$episode<TRes>
         availableTo: availableTo == _undefined || availableTo == null
             ? _instance.availableTo
             : (availableTo as String),
+        publishDate: publishDate == _undefined || publishDate == null
+            ? _instance.publishDate
+            : (publishDate as String),
+        locked: locked == _undefined || locked == null
+            ? _instance.locked
+            : (locked as bool),
         chapters: chapters == _undefined || chapters == null
             ? _instance.chapters
             : (chapters as List<Fragment$EpisodeChapter>),
@@ -10164,6 +10216,8 @@ class _CopyWithStubImpl$Query$FetchEpisode$episode<TRes>
     Enum$ShareRestriction? shareRestriction,
     String? ageRating,
     String? availableTo,
+    String? publishDate,
+    bool? locked,
     List<Fragment$EpisodeChapter>? chapters,
     Fragment$EpisodeChapter? skipToChapter,
     Query$FetchEpisode$episode$relatedItems? relatedItems,
