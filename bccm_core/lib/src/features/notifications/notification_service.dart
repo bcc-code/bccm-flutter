@@ -4,7 +4,6 @@ import 'dart:io';
 import 'package:auto_route/auto_route.dart';
 import 'package:bccm_core/bccm_core.dart';
 import 'package:bccm_core/platform.dart';
-import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
@@ -106,8 +105,13 @@ class FcmNotificationService implements NotificationService {
       } else {
         debugPrint('FirebaseMessaging.instance.getToken() returned null');
       }
-    } catch(e) {
-      FirebaseCrashlytics.instance.recordError(e, StackTrace.current);
+    } catch (e, st) {
+      FlutterError.reportError(FlutterErrorDetails(
+        exception: e,
+        stack: st,
+        library: 'bccm_core',
+        context: ErrorDescription('Error getting FCM token'),
+      ));
     }
     _setupTokenListeners();
   }
