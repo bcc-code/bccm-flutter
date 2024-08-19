@@ -383,7 +383,7 @@ class RudderAnalytics extends Analytics {
 
   @override
   void reset() {
-    RudderController.instance.reset();
+    RudderController.instance.reset(clearAnonymousId: true);
   }
 }
 
