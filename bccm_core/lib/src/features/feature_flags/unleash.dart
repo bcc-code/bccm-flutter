@@ -1,6 +1,7 @@
 import 'package:bccm_core/bccm_core.dart';
 import 'package:bccm_core/platform.dart';
 import 'package:riverpod/riverpod.dart';
+import 'package:universal_io/io.dart';
 import 'package:unleash_proxy_client_flutter/unleash_context.dart';
 
 /// Override with [getStandardUnleashContext] to enable feature flags.
@@ -13,6 +14,8 @@ UnleashContext getStandardUnleashContext({
   String? gender,
   String? birthDate,
   bool? isBetaTester,
+  String? appVersion,
+  String? appBuildNumber,
   bool? androidTv,
 }) {
   final birthDateTime = birthDate == null ? null : DateTime.parse(birthDate);
@@ -24,6 +27,10 @@ UnleashContext getStandardUnleashContext({
     if (ageGroup != null) 'ageGroup': ageGroup.name,
     if (gender != null) 'gender': gender,
     if (isBetaTester != null) 'isBetaTester': isBetaTester.toString(),
+    if (appVersion != null) 'appVersion': appVersion,
+    if (appBuildNumber != null) 'appBuildNumber': appBuildNumber,
+    'os': Platform.operatingSystem,
+    'osVersion': Platform.operatingSystemVersion,
     'isAndroidTv': isAndroidTv.toString(),
   });
 }
