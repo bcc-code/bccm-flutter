@@ -1,45 +1,49 @@
 {
-    "metadata": {
-        "continueWatching": false,
-        "myList": false,
-        "secondaryTitles": true,
-        "collectionId": "211",
-        "useContext": false,
-        "prependLiveElement": false,
-        "__typename": "ItemSectionMetadata"
-    },
-    "items": {
-        "offset": 0,
-        "first": 20,
-        "items": [
-            {
-                "id": "1512",
-                "title": "Are you awake? Are you ready?",
-                "image": "",
-                "item": {
-                    "id": "1512",
-                    "duration": 386,
-                    "locked": false,
-                    "progress": null,
-                    "publishDate": "2022-02-10T21:49:00Z",
-                    "season": {
-                        "show": {
-                            "title": "Keep your power in everyday life",
-                            "__typename": "Show"
-                        },
-                        "__typename": "Season"
-                    },
-                    "__typename": "Episode"
-                },
-                "__typename": "SectionItem",
-                "description": "Look back over an unforgettable summer camp with excerpts of the theme evening about \"The Spirit of Expectation\", from the revival meeting and from a message from Aksel J. Smith about waking up to seriousness in the short time we have to live. "
-            }
-        ],
-        "__typename": "SectionItemPagination"
-    },
-    "__typename": "FeaturedSection",
-    "size": "medium",
-    "id": "307",
-    "title": "Choice of the week",
-    "description": null
+  "metadata": {
+    "continueWatching": false,
+    "myList": false,
+    "secondaryTitles": true,
+    "collectionId": "211",
+    "useContext": false,
+    "prependLiveElement": false,
+    "__typename": "ItemSectionMetadata"
+  },
+  "items": {
+    "offset": 0,
+    "first": 20,
+    "items": [
+      {
+        "id": "1512",
+        "title": "Are you awake? Are you ready?",
+        "image": "",
+        "item": {
+          "id": "1512",
+          "title": "Are you awake? Are you ready?",
+          "duration": 386,
+          "locked": false,
+          "progress": null,
+          "image": "",
+          "publishDate": "2022-02-10T21:49:00Z",
+          "number": null,
+          "season": {
+            "number": 2,
+            "show": {
+              "title": "Keep your power in everyday life",
+              "__typename": "Show"
+            },
+            "__typename": "Season"
+          },
+          "__typename": "Episode"
+        },
+        "__typename": "SectionItem",
+        "description": "Look back over an unforgettable summer camp with excerpts of the theme evening about \"The Spirit of Expectation\", from the revival meeting and from a message from Aksel J. Smith about waking up to seriousness in the short time we have to live. "
+      }
+    ],
+    "__typename": "SectionItemPagination"
+  },
+  "__typename": "FeaturedSection",
+  "size": "medium",
+  "id": "307",
+  "title": "Choice of the week",
+  "description": null
 }

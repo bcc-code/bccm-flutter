@@ -13,6 +13,7 @@ import 'package:bccm_core/bccm_core.dart';
 import 'package:bccm_core/src/features/auth/implementations/auth_state_notifier_mobile.dart';
 import 'package:bccm_core/src/utils/constants.dart';
 import 'package:flutter_appauth/flutter_appauth.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
@@ -46,6 +47,8 @@ TokenResponse mockTokenResponse({required DateTime expiresAt}) {
   );
 }
 
+class MockRef extends Mock implements Ref {}
+
 void main() {
   group('Mobile authentication (AuthStateNotifierMobile)', () {
     test('Dont refresh when not old', () async {
@@ -54,6 +57,7 @@ void main() {
       when(secureStorage.read(key: SecureStorageKeys.refreshToken)).thenAnswer((_) async => 'refresh token');
 
       final mockAppAuth = MockFlutterAppAuth();
+      final mockRef = MockRef();
 
       final auth = AuthStateNotifierMobile(
         appAuth: MockFlutterAppAuth(),
@@ -65,6 +69,7 @@ void main() {
           scopes: ['scope'],
           isTv: false,
         ),
+        ref: mockRef,
       );
       auth.state = AuthState(
         auth0AccessToken: 'something',
@@ -82,6 +87,7 @@ void main() {
 
       final mockAppAuth = MockFlutterAppAuth();
       when(mockAppAuth.token(any)).thenAnswer((_) async => mockTokenResponse(expiresAt: DateTime.now().add(const Duration(days: 1))));
+      final mockRef = MockRef();
 
       final auth = AuthStateNotifierMobile(
         appAuth: mockAppAuth,
@@ -93,6 +99,7 @@ void main() {
           scopes: ['scope'],
           isTv: false,
         ),
+        ref: mockRef,
       );
       auth.state = AuthState(
         auth0AccessToken: 'something',
