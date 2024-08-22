@@ -250,6 +250,7 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
       );
 
       await _setStateBasedOnResponse(result!, isLogin: true);
+      config.onSignIn?.call();
     } catch (e, st) {
       logout(manual: false);
       debugPrint(e.toString());

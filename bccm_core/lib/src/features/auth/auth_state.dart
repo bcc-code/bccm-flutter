@@ -14,6 +14,7 @@ class AuthConfig {
   List<String> scopes;
   bool isTv;
   VoidCallback? onSignout;
+  VoidCallback? onSignIn;
 
   AuthConfig({
     required this.auth0ClientId,
@@ -22,6 +23,7 @@ class AuthConfig {
     required this.scopes,
     required this.isTv,
     this.onSignout,
+    this.onSignIn,
   });
 }
 
