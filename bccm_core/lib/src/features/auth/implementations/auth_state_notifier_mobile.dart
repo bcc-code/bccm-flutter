@@ -19,7 +19,7 @@ import '../../../utils/constants.dart';
 // Careful. The function naming here is very important,
 // but because it's conditionally imported (see auth_state_notifier_interface.dart)
 // IDEs don't show any errors when you remove/change it..
-AuthStateNotifier getPlatformSpecificAuthStateNotifier(AuthConfig config) {
+AuthStateNotifier getPlatformSpecificAuthStateNotifier(AuthConfig config, Ref ref) {
   return AuthStateNotifierMobile(
     appAuth: const FlutterAppAuth(),
     secureStorage: const FlutterSecureStorage(
@@ -29,6 +29,7 @@ AuthStateNotifier getPlatformSpecificAuthStateNotifier(AuthConfig config) {
       ),
     ),
     config: config,
+    ref: ref,
   );
 }
 
@@ -39,6 +40,7 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
     required FlutterAppAuth appAuth,
     required FlutterSecureStorage secureStorage,
     required this.config,
+    required this.ref,
   })  : _appAuth = appAuth,
         _secureStorage = secureStorage,
         _auth0Api = Auth0Api(
@@ -53,6 +55,7 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
   final FlutterSecureStorage _secureStorage;
   final AuthConfig config;
   final Auth0Api _auth0Api;
+  final Ref ref;
 
   @override
   Completer<void> initializeCompleter = Completer<void>();
@@ -160,6 +163,13 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
       if (kDebugMode) {
         print('bccm: auth refresh token: $refreshToken');
       }
+
+      if (ref.read(isOfflineProvider)) {
+        return false;
+      } else {
+        await _clearCredentials();
+      }
+
       // logOut() possibly
       return false;
     }

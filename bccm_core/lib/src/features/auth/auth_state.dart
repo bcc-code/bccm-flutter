@@ -33,7 +33,7 @@ abstract class AuthStateNotifier implements StateNotifier<AuthState> {
   Future logout({bool manual = true});
   Future<bool> login({String? connection});
   Future<void> loginViaDeviceCode(DeviceTokenRequestResponse deviceToken);
-  factory AuthStateNotifier(AuthConfig config) => getPlatformSpecificAuthStateNotifier(config);
+  factory AuthStateNotifier(AuthConfig config, Ref ref) => getPlatformSpecificAuthStateNotifier(config, ref);
 }
 
 final authStateProvider = StateNotifierProvider<AuthStateNotifier, AuthState>((ref) {
