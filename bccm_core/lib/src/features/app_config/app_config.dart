@@ -1,7 +1,6 @@
 import 'package:bccm_core/bccm_core.dart';
+import 'package:bccm_core/firebase.dart';
 import 'package:bccm_core/platform.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -11,6 +10,7 @@ bool isOldAppVersion({required String current, required String minimum}) {
 
 RealtimeUpdate? _lastUpdate;
 final appConfigFutureProvider = StateProvider<Future<Query$Application>>((ref) async {
+  ref.watch(authStateProvider.select((a) => a.isLoggedIn));
   final gql = ref.watch(bccmGraphQLProvider);
   final result = await gql.query$Application(Options$Query$Application(variables: Variables$Query$Application(timestamp: _lastUpdate?.updatedAt)));
   if (result.exception != null) throw result.exception!;
@@ -45,7 +45,7 @@ final appConfigProvider = Provider<Query$Application?>((ref) {
 
 /// Listen to firebase updates
 final applicationUpdatesProvider = StreamProvider.family<RealtimeUpdate, String>((ref, String appCode) {
-  return FirebaseFirestore.instanceFor(app: Firebase.app('bccm')).collection('updates:applications').doc(appCode).snapshots().map((event) {
+  return ref.watch(bccmFirestoreProvider).collection('updates:applications').doc(appCode).snapshots().map((event) {
     final updatedAt = event.data()?['Updated'];
     if (updatedAt == null) {
       throw ErrorDescription('Realtime update data is null.');

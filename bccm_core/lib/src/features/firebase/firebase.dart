@@ -1,6 +1,8 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 Future initFirebase(
   FirebaseOptions firebaseOptions, {
@@ -33,3 +35,5 @@ Future initFirebase(
     FirebaseMessaging.onBackgroundMessage(onFirebaseBackgroundMessage);
   }
 }
+
+final bccmFirestoreProvider = Provider((ref) => FirebaseFirestore.instanceFor(app: Firebase.app('bccm')));

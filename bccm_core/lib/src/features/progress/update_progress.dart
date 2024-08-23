@@ -1,6 +1,8 @@
+import 'package:bccm_core/bccm_core.dart';
 import 'package:bccm_core/src/features/graphql/queries/page.graphql.dart';
 import 'package:bccm_core/src/utils/primitive_extensions.dart';
 import 'package:flutter/widgets.dart';
+import 'package:riverpod/riverpod.dart';
 
 // same for sections
 Fragment$Section updateProgressForItemsInSection(Fragment$Section section, String id, int? newProgress) {
@@ -26,4 +28,16 @@ void _updateProgressInSectionItems(List<dynamic> items, String id, int? newProgr
       item['item']['progress'] = newProgress;
     }
   }
+}
+
+final watchProgressUpdatedProvider = StreamProvider<WatchProgressUpdatedEvent>((ref) => globalEventBus.on<WatchProgressUpdatedEvent>());
+
+class WatchProgressUpdatedEvent {
+  String episodeId;
+  int? progress;
+
+  WatchProgressUpdatedEvent({
+    required this.episodeId,
+    required this.progress,
+  });
 }

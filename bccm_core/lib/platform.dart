@@ -10,7 +10,6 @@ export 'package:bccm_core/src/features/graphql/queries/devices.graphql.dart';
 export 'package:bccm_core/src/features/graphql/queries/episode.graphql.dart';
 export 'package:bccm_core/src/features/graphql/queries/faq.graphql.dart';
 export 'package:bccm_core/src/features/graphql/queries/games.graphql.dart';
-export 'package:bccm_core/src/features/graphql/queries/kids.graphql.dart';
 export 'package:bccm_core/src/features/graphql/queries/me.graphql.dart';
 export 'package:bccm_core/src/features/graphql/queries/my_list.graphql.dart';
 export 'package:bccm_core/src/features/graphql/queries/page.graphql.dart';
@@ -69,6 +68,8 @@ export 'package:bccm_core/src/features/analytics/time_measurements.dart';
 export 'package:bccm_core/src/features/redirect/redirect.dart';
 export 'package:bccm_core/src/features/progress/update_progress.dart';
 export 'package:bccm_core/src/features/webview/webview.dart';
+export 'package:bccm_core/src/features/pages/section_updates.dart';
+export 'package:bccm_core/src/features/my_list/events.dart';
 
 export 'package:bccm_core/src/models/analytics/achievement_clicked.dart';
 export 'package:bccm_core/src/models/analytics/achievement_shared.dart';
