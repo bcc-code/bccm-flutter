@@ -30,7 +30,6 @@ UnleashContext getStandardUnleashContext({
     if (appVersion != null) 'appVersion': appVersion,
     if (appBuildNumber != null) 'appBuildNumber': appBuildNumber,
     'os': Platform.operatingSystem,
-    'osVersion': Platform.operatingSystemVersion,
     'isAndroidTv': isAndroidTv.toString(),
   });
 }
