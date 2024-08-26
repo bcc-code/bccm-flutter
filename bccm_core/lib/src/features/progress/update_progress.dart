@@ -1,6 +1,5 @@
 import 'package:bccm_core/bccm_core.dart';
 import 'package:bccm_core/src/features/graphql/queries/page.graphql.dart';
-import 'package:bccm_core/src/utils/primitive_extensions.dart';
 import 'package:flutter/widgets.dart';
 import 'package:riverpod/riverpod.dart';
 
