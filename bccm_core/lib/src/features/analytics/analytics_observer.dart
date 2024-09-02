@@ -14,7 +14,7 @@ final analyticsMetaEnricherProvider = Provider<AnalyticsMetaEnricher>((ref) {
 });
 
 abstract class AnalyticsMetaEnricher {
-  Ref ref;
+  Ref? ref;
   AnalyticsMetaEnricher(this.ref);
 
   /// Used for the `screen` event, to override the screen name.
