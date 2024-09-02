@@ -14,6 +14,9 @@ final analyticsMetaEnricherProvider = Provider<AnalyticsMetaEnricher>((ref) {
 });
 
 abstract class AnalyticsMetaEnricher {
+  Ref? ref;
+  AnalyticsMetaEnricher(this.ref);
+
   /// Used for the `screen` event, to override the screen name.
   /// If null is returned, we use a default value e.g. the route path.
   String? getScreenName(Route<dynamic> route);
