@@ -5,7 +5,7 @@ import 'package:universal_io/io.dart';
 import 'package:unleash_proxy_client_flutter/unleash_context.dart';
 
 /// Override with [getStandardUnleashContext] to enable feature flags.
-final unleashContextProvider = Provider<UnleashContext>((ref) {
+final unleashContextProvider = Provider<Future<UnleashContext>>((ref) {
   throw UnimplementedError('unleashContextProvider was not overriden. Override it to enable feature flags.');
 });
 
