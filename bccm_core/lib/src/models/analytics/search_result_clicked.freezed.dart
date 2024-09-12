@@ -27,8 +27,12 @@ mixin _$SearchResultClickedEvent {
   String get elementId => throw _privateConstructorUsedError;
   String get group => throw _privateConstructorUsedError;
 
+  /// Serializes this SearchResultClickedEvent to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SearchResultClickedEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SearchResultClickedEventCopyWith<SearchResultClickedEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -58,6 +62,8 @@ class _$SearchResultClickedEventCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SearchResultClickedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -117,6 +123,8 @@ class __$$SectionClickedEventImplCopyWithImpl<$Res>
       $Res Function(_$SectionClickedEventImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SearchResultClickedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -196,12 +204,14 @@ class _$SectionClickedEventImpl implements _SectionClickedEvent {
             (identical(other.group, group) || other.group == group));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, searchText, elementPosition, elementType, elementId, group);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SearchResultClickedEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SectionClickedEventImplCopyWith<_$SectionClickedEventImpl> get copyWith =>
@@ -237,8 +247,11 @@ abstract class _SectionClickedEvent implements SearchResultClickedEvent {
   String get elementId;
   @override
   String get group;
+
+  /// Create a copy of SearchResultClickedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SectionClickedEventImplCopyWith<_$SectionClickedEventImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -247,7 +260,9 @@ abstract class _SectionClickedEvent implements SearchResultClickedEvent {
 mixin _$SearchAnalytics {
   String get searchText => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SearchAnalytics
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SearchAnalyticsCopyWith<SearchAnalytics> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -271,6 +286,8 @@ class _$SearchAnalyticsCopyWithImpl<$Res, $Val extends SearchAnalytics>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SearchAnalytics
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -304,6 +321,8 @@ class __$$SearchAnalyticsImplCopyWithImpl<$Res>
       _$SearchAnalyticsImpl _value, $Res Function(_$SearchAnalyticsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SearchAnalytics
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -343,7 +362,9 @@ class _$SearchAnalyticsImpl implements _SearchAnalytics {
   @override
   int get hashCode => Object.hash(runtimeType, searchText);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SearchAnalytics
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SearchAnalyticsImplCopyWith<_$SearchAnalyticsImpl> get copyWith =>
@@ -357,8 +378,11 @@ abstract class _SearchAnalytics implements SearchAnalytics {
 
   @override
   String get searchText;
+
+  /// Create a copy of SearchAnalytics
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SearchAnalyticsImplCopyWith<_$SearchAnalyticsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -370,7 +394,9 @@ mixin _$SearchItemAnalytics {
   String get id => throw _privateConstructorUsedError;
   String get group => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SearchItemAnalytics
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SearchItemAnalyticsCopyWith<SearchItemAnalytics> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -394,6 +420,8 @@ class _$SearchItemAnalyticsCopyWithImpl<$Res, $Val extends SearchItemAnalytics>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SearchItemAnalytics
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -442,6 +470,8 @@ class __$$SearchItemAnalyticsImplCopyWithImpl<$Res>
       $Res Function(_$SearchItemAnalyticsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SearchItemAnalytics
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -509,7 +539,9 @@ class _$SearchItemAnalyticsImpl implements _SearchItemAnalytics {
   @override
   int get hashCode => Object.hash(runtimeType, position, type, id, group);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SearchItemAnalytics
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SearchItemAnalyticsImplCopyWith<_$SearchItemAnalyticsImpl> get copyWith =>
@@ -532,8 +564,11 @@ abstract class _SearchItemAnalytics implements SearchItemAnalytics {
   String get id;
   @override
   String get group;
+
+  /// Create a copy of SearchItemAnalytics
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SearchItemAnalyticsImplCopyWith<_$SearchItemAnalyticsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

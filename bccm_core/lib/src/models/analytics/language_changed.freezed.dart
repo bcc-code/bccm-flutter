@@ -24,8 +24,12 @@ mixin _$LanguageChangedEvent {
   String get languageTo => throw _privateConstructorUsedError;
   String get languageChangeType => throw _privateConstructorUsedError;
 
+  /// Serializes this LanguageChangedEvent to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of LanguageChangedEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $LanguageChangedEventCopyWith<LanguageChangedEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$LanguageChangedEventCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of LanguageChangedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -95,6 +101,8 @@ class __$$LanguageChangedEventImplCopyWithImpl<$Res>
       $Res Function(_$LanguageChangedEventImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of LanguageChangedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -155,12 +163,14 @@ class _$LanguageChangedEventImpl implements _LanguageChangedEvent {
                 other.languageChangeType == languageChangeType));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, languageFrom, languageTo, languageChangeType);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of LanguageChangedEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LanguageChangedEventImplCopyWith<_$LanguageChangedEventImpl>
@@ -191,8 +201,11 @@ abstract class _LanguageChangedEvent implements LanguageChangedEvent {
   String get languageTo;
   @override
   String get languageChangeType;
+
+  /// Create a copy of LanguageChangedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LanguageChangedEventImplCopyWith<_$LanguageChangedEventImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

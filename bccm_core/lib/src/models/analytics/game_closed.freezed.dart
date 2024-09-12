@@ -24,8 +24,12 @@ mixin _$GameClosedEvent {
   int get timeSpent => throw _privateConstructorUsedError;
   int? get position => throw _privateConstructorUsedError;
 
+  /// Serializes this GameClosedEvent to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GameClosedEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GameClosedEventCopyWith<GameClosedEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -49,6 +53,8 @@ class _$GameClosedEventCopyWithImpl<$Res, $Val extends GameClosedEvent>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GameClosedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -92,6 +98,8 @@ class __$$GameClosedEventImplCopyWithImpl<$Res>
       _$GameClosedEventImpl _value, $Res Function(_$GameClosedEventImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GameClosedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -149,11 +157,13 @@ class _$GameClosedEventImpl implements _GameClosedEvent {
                 other.position == position));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, gameId, timeSpent, position);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GameClosedEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GameClosedEventImplCopyWith<_$GameClosedEventImpl> get copyWith =>
@@ -183,8 +193,11 @@ abstract class _GameClosedEvent implements GameClosedEvent {
   int get timeSpent;
   @override
   int? get position;
+
+  /// Create a copy of GameClosedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GameClosedEventImplCopyWith<_$GameClosedEventImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

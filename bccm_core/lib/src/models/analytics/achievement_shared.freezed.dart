@@ -23,8 +23,12 @@ AchievementSharedEvent _$AchievementSharedEventFromJson(
 mixin _$AchievementSharedEvent {
   String get elementTitle => throw _privateConstructorUsedError;
 
+  /// Serializes this AchievementSharedEvent to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AchievementSharedEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AchievementSharedEventCopyWith<AchievementSharedEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -49,6 +53,8 @@ class _$AchievementSharedEventCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AchievementSharedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -85,6 +91,8 @@ class __$$AchievementSharedEventImplCopyWithImpl<$Res>
       $Res Function(_$AchievementSharedEventImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AchievementSharedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -124,11 +132,13 @@ class _$AchievementSharedEventImpl implements _AchievementSharedEvent {
                 other.elementTitle == elementTitle));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, elementTitle);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AchievementSharedEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AchievementSharedEventImplCopyWith<_$AchievementSharedEventImpl>
@@ -152,8 +162,11 @@ abstract class _AchievementSharedEvent implements AchievementSharedEvent {
 
   @override
   String get elementTitle;
+
+  /// Create a copy of AchievementSharedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AchievementSharedEventImplCopyWith<_$AchievementSharedEventImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

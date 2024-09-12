@@ -25,8 +25,12 @@ mixin _$CalendarDayClickedEvent {
   String get calendarView => throw _privateConstructorUsedError;
   String get calendarDate => throw _privateConstructorUsedError;
 
+  /// Serializes this CalendarDayClickedEvent to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CalendarDayClickedEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CalendarDayClickedEventCopyWith<CalendarDayClickedEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$CalendarDayClickedEventCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CalendarDayClickedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -97,6 +103,8 @@ class __$$CalendarDayClickedEventImplCopyWithImpl<$Res>
       $Res Function(_$CalendarDayClickedEventImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CalendarDayClickedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -157,12 +165,14 @@ class _$CalendarDayClickedEventImpl implements _CalendarDayClickedEvent {
                 other.calendarDate == calendarDate));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, pageCode, calendarView, calendarDate);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CalendarDayClickedEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CalendarDayClickedEventImplCopyWith<_$CalendarDayClickedEventImpl>
@@ -192,8 +202,11 @@ abstract class _CalendarDayClickedEvent implements CalendarDayClickedEvent {
   String get calendarView;
   @override
   String get calendarDate;
+
+  /// Create a copy of CalendarDayClickedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CalendarDayClickedEventImplCopyWith<_$CalendarDayClickedEventImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

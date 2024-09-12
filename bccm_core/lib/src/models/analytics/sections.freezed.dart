@@ -31,8 +31,12 @@ mixin _$SectionClickedEvent {
   String? get pageCode => throw _privateConstructorUsedError;
   Map<String, dynamic>? get meta => throw _privateConstructorUsedError;
 
+  /// Serializes this SectionClickedEvent to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SectionClickedEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SectionClickedEventCopyWith<SectionClickedEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -66,6 +70,8 @@ class _$SectionClickedEventCopyWithImpl<$Res, $Val extends SectionClickedEvent>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SectionClickedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -154,6 +160,8 @@ class __$$SectionClickedEventImplCopyWithImpl<$Res>
       $Res Function(_$SectionClickedEventImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SectionClickedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -291,7 +299,7 @@ class _$SectionClickedEventImpl implements _SectionClickedEvent {
             const DeepCollectionEquality().equals(other._meta, _meta));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -306,7 +314,9 @@ class _$SectionClickedEventImpl implements _SectionClickedEvent {
       pageCode,
       const DeepCollectionEquality().hash(_meta));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SectionClickedEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SectionClickedEventImplCopyWith<_$SectionClickedEventImpl> get copyWith =>
@@ -357,8 +367,11 @@ abstract class _SectionClickedEvent implements SectionClickedEvent {
   String? get pageCode;
   @override
   Map<String, dynamic>? get meta;
+
+  /// Create a copy of SectionClickedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SectionClickedEventImplCopyWith<_$SectionClickedEventImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -372,7 +385,9 @@ mixin _$SectionAnalyticsData {
   String get type => throw _privateConstructorUsedError;
   Map<String, dynamic>? get meta => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SectionAnalyticsData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SectionAnalyticsDataCopyWith<SectionAnalyticsData> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -403,6 +418,8 @@ class _$SectionAnalyticsDataCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SectionAnalyticsData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -467,6 +484,8 @@ class __$$SectionAnalyticsDataImplCopyWithImpl<$Res>
       $Res Function(_$SectionAnalyticsDataImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SectionAnalyticsData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -562,7 +581,9 @@ class _$SectionAnalyticsDataImpl implements _SectionAnalyticsData {
   int get hashCode => Object.hash(runtimeType, pageCode, id, name, position,
       type, const DeepCollectionEquality().hash(_meta));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SectionAnalyticsData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SectionAnalyticsDataImplCopyWith<_$SectionAnalyticsDataImpl>
@@ -592,8 +613,11 @@ abstract class _SectionAnalyticsData implements SectionAnalyticsData {
   String get type;
   @override
   Map<String, dynamic>? get meta;
+
+  /// Create a copy of SectionAnalyticsData
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SectionAnalyticsDataImplCopyWith<_$SectionAnalyticsDataImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -606,7 +630,9 @@ mixin _$SectionItemAnalyticsData {
   String? get name => throw _privateConstructorUsedError;
   Map<String, dynamic>? get meta => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SectionItemAnalyticsData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SectionItemAnalyticsDataCopyWith<SectionItemAnalyticsData> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -636,6 +662,8 @@ class _$SectionItemAnalyticsDataCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SectionItemAnalyticsData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -697,6 +725,8 @@ class __$$SectionItemAnalyticsDataImplCopyWithImpl<$Res>
       $Res Function(_$SectionItemAnalyticsDataImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SectionItemAnalyticsData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -782,7 +812,9 @@ class _$SectionItemAnalyticsDataImpl implements _SectionItemAnalyticsData {
   int get hashCode => Object.hash(runtimeType, position, type, id, name,
       const DeepCollectionEquality().hash(_meta));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SectionItemAnalyticsData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SectionItemAnalyticsDataImplCopyWith<_$SectionItemAnalyticsDataImpl>
@@ -808,8 +840,11 @@ abstract class _SectionItemAnalyticsData implements SectionItemAnalyticsData {
   String? get name;
   @override
   Map<String, dynamic>? get meta;
+
+  /// Create a copy of SectionItemAnalyticsData
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SectionItemAnalyticsDataImplCopyWith<_$SectionItemAnalyticsDataImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

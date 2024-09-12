@@ -26,8 +26,12 @@ mixin _$VideoDownloadStartedEvent {
   String? get quality => throw _privateConstructorUsedError;
   String? get audioLanguage => throw _privateConstructorUsedError;
 
+  /// Serializes this VideoDownloadStartedEvent to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of VideoDownloadStartedEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $VideoDownloadStartedEventCopyWith<VideoDownloadStartedEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -56,6 +60,8 @@ class _$VideoDownloadStartedEventCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of VideoDownloadStartedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -111,6 +117,8 @@ class __$$VideoDownloadStartedEventImplCopyWithImpl<$Res>
       $Res Function(_$VideoDownloadStartedEventImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of VideoDownloadStartedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -180,12 +188,14 @@ class _$VideoDownloadStartedEventImpl implements _VideoDownloadStartedEvent {
                 other.audioLanguage == audioLanguage));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, downloadId, episodeId, quality, audioLanguage);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of VideoDownloadStartedEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$VideoDownloadStartedEventImplCopyWith<_$VideoDownloadStartedEventImpl>
@@ -218,8 +228,11 @@ abstract class _VideoDownloadStartedEvent implements VideoDownloadStartedEvent {
   String? get quality;
   @override
   String? get audioLanguage;
+
+  /// Create a copy of VideoDownloadStartedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$VideoDownloadStartedEventImplCopyWith<_$VideoDownloadStartedEventImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -234,8 +247,12 @@ mixin _$VideoDownloadRemovedEvent {
   String get downloadId => throw _privateConstructorUsedError;
   String? get episodeId => throw _privateConstructorUsedError;
 
+  /// Serializes this VideoDownloadRemovedEvent to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of VideoDownloadRemovedEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $VideoDownloadRemovedEventCopyWith<VideoDownloadRemovedEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -260,6 +277,8 @@ class _$VideoDownloadRemovedEventCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of VideoDownloadRemovedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -301,6 +320,8 @@ class __$$VideoDownloadRemovedEventImplCopyWithImpl<$Res>
       $Res Function(_$VideoDownloadRemovedEventImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of VideoDownloadRemovedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -350,11 +371,13 @@ class _$VideoDownloadRemovedEventImpl implements _VideoDownloadRemovedEvent {
                 other.episodeId == episodeId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, downloadId, episodeId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of VideoDownloadRemovedEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$VideoDownloadRemovedEventImplCopyWith<_$VideoDownloadRemovedEventImpl>
@@ -381,8 +404,11 @@ abstract class _VideoDownloadRemovedEvent implements VideoDownloadRemovedEvent {
   String get downloadId;
   @override
   String? get episodeId;
+
+  /// Create a copy of VideoDownloadRemovedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$VideoDownloadRemovedEventImplCopyWith<_$VideoDownloadRemovedEventImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -397,8 +423,12 @@ mixin _$VideoDownloadPlayedEvent {
   String get downloadId => throw _privateConstructorUsedError;
   String? get episodeId => throw _privateConstructorUsedError;
 
+  /// Serializes this VideoDownloadPlayedEvent to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of VideoDownloadPlayedEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $VideoDownloadPlayedEventCopyWith<VideoDownloadPlayedEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -423,6 +453,8 @@ class _$VideoDownloadPlayedEventCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of VideoDownloadPlayedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -464,6 +496,8 @@ class __$$VideoDownloadPlayedEventImplCopyWithImpl<$Res>
       $Res Function(_$VideoDownloadPlayedEventImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of VideoDownloadPlayedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -513,11 +547,13 @@ class _$VideoDownloadPlayedEventImpl implements _VideoDownloadPlayedEvent {
                 other.episodeId == episodeId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, downloadId, episodeId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of VideoDownloadPlayedEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$VideoDownloadPlayedEventImplCopyWith<_$VideoDownloadPlayedEventImpl>
@@ -544,8 +580,11 @@ abstract class _VideoDownloadPlayedEvent implements VideoDownloadPlayedEvent {
   String get downloadId;
   @override
   String? get episodeId;
+
+  /// Create a copy of VideoDownloadPlayedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$VideoDownloadPlayedEventImplCopyWith<_$VideoDownloadPlayedEventImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

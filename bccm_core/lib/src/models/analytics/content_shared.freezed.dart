@@ -25,8 +25,12 @@ mixin _$ContentSharedEvent {
   String get elementId => throw _privateConstructorUsedError;
   int? get position => throw _privateConstructorUsedError;
 
+  /// Serializes this ContentSharedEvent to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ContentSharedEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ContentSharedEventCopyWith<ContentSharedEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$ContentSharedEventCopyWithImpl<$Res, $Val extends ContentSharedEvent>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ContentSharedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -100,6 +106,8 @@ class __$$ContentSharedEventImplCopyWithImpl<$Res>
       $Res Function(_$ContentSharedEventImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ContentSharedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -170,12 +178,14 @@ class _$ContentSharedEventImpl implements _ContentSharedEvent {
                 other.position == position));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, pageCode, elementType, elementId, position);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ContentSharedEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ContentSharedEventImplCopyWith<_$ContentSharedEventImpl> get copyWith =>
@@ -208,8 +218,11 @@ abstract class _ContentSharedEvent implements ContentSharedEvent {
   String get elementId;
   @override
   int? get position;
+
+  /// Create a copy of ContentSharedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ContentSharedEventImplCopyWith<_$ContentSharedEventImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
