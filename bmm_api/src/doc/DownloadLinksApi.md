@@ -1,8 +1,8 @@
-# openapi.api.DownloadLinksApi
+# bmm_api.api.DownloadLinksApi
 
 ## Load the API package
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 ```
 
 All URIs are relative to *http://localhost*
@@ -20,9 +20,9 @@ Method | HTTP request | Description
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getDownloadLinksApi();
+final api = BmmApi().getDownloadLinksApi();
 
 try {
     final response = api.downloadLinksGet();
@@ -57,9 +57,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getDownloadLinksApi();
+final api = BmmApi().getDownloadLinksApi();
 
 try {
     api.downloadLinksWindowsGet();

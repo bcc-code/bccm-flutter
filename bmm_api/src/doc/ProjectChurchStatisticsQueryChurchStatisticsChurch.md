@@ -1,8 +1,8 @@
-# openapi.model.ProjectChurchStatisticsQueryChurchStatisticsChurch
+# bmm_api.model.ProjectChurchStatisticsQueryChurchStatisticsChurch
 
 ## Load the model package
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 ```
 
 ## Properties

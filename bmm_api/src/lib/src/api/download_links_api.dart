@@ -8,7 +8,7 @@ import 'package:built_value/json_object.dart';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
-import 'package:openapi/src/model/app_download_links_query_download_links.dart';
+import 'package:bmm_api/src/model/app_download_links_query_download_links.dart';
 
 class DownloadLinksApi {
 

@@ -1,8 +1,8 @@
-# openapi.api.SharedPlaylistApi
+# bmm_api.api.SharedPlaylistApi
 
 ## Load the API package
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 ```
 
 All URIs are relative to *http://localhost*
@@ -20,9 +20,9 @@ Method | HTTP request | Description
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getSharedPlaylistApi();
+final api = BmmApi().getSharedPlaylistApi();
 final String sharingSecret = sharingSecret_example; // String | 
 
 try {
@@ -60,9 +60,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getSharedPlaylistApi();
+final api = BmmApi().getSharedPlaylistApi();
 final String sharingSecret = sharingSecret_example; // String | 
 
 try {

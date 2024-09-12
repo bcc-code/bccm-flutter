@@ -1,8 +1,8 @@
-# openapi.model.DayOfWeek
+# bmm_api.model.DayOfWeek
 
 ## Load the model package
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 ```
 
 ## Properties

@@ -1,8 +1,8 @@
-# openapi.model.PublishedFilter
+# bmm_api.model.PublishedFilter
 
 ## Load the model package
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 ```
 
 ## Properties

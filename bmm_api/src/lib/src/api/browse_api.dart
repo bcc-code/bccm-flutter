@@ -8,12 +8,12 @@ import 'package:built_value/json_object.dart';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
+import 'package:bmm_api/src/api_util.dart';
+import 'package:bmm_api/src/model/document_list_i_album_or_chapter_header.dart';
+import 'package:bmm_api/src/model/document_list_i_album_playlist_or_chapter_header.dart';
+import 'package:bmm_api/src/model/document_list_podcast_model.dart';
+import 'package:bmm_api/src/model/i_album_podcast_playlist_or_section_header.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:openapi/src/api_util.dart';
-import 'package:openapi/src/model/document_list_i_album_or_chapter_header.dart';
-import 'package:openapi/src/model/document_list_i_album_playlist_or_chapter_header.dart';
-import 'package:openapi/src/model/document_list_podcast_model.dart';
-import 'package:openapi/src/model/i_album_podcast_playlist_or_section_header.dart';
 
 class BrowseApi {
 

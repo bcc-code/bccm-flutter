@@ -1,8 +1,8 @@
-# openapi.api.SubscriptionApi
+# bmm_api.api.SubscriptionApi
 
 ## Load the API package
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 ```
 
 All URIs are relative to *http://localhost*
@@ -22,9 +22,9 @@ Method | HTTP request | Description
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getSubscriptionApi();
+final api = BmmApi().getSubscriptionApi();
 final String deviceId = deviceId_example; // String | 
 
 try {
@@ -62,9 +62,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getSubscriptionApi();
+final api = BmmApi().getSubscriptionApi();
 final String deviceId = deviceId_example; // String | 
 final SubscriptionModel subscriptionModel = ; // SubscriptionModel | 
 
@@ -104,9 +104,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getSubscriptionApi();
+final api = BmmApi().getSubscriptionApi();
 final String deviceId = deviceId_example; // String | 
 
 try {
@@ -144,9 +144,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getSubscriptionApi();
+final api = BmmApi().getSubscriptionApi();
 final String deviceId = deviceId_example; // String | 
 final SubscriptionModel subscriptionModel = ; // SubscriptionModel | 
 

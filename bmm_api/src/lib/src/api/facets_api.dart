@@ -8,10 +8,10 @@ import 'package:built_value/json_object.dart';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
+import 'package:bmm_api/src/api_util.dart';
+import 'package:bmm_api/src/model/album_year_facets_query_result.dart';
+import 'package:bmm_api/src/model/published_filter.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:openapi/src/api_util.dart';
-import 'package:openapi/src/model/album_year_facets_query_result.dart';
-import 'package:openapi/src/model/published_filter.dart';
 
 class FacetsApi {
 

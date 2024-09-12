@@ -1,8 +1,8 @@
-# openapi.model.Highlighting
+# bmm_api.model.Highlighting
 
 ## Load the model package
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 ```
 
 ## Properties

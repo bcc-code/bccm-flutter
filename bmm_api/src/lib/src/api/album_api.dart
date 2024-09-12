@@ -8,11 +8,11 @@ import 'package:built_value/json_object.dart';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
+import 'package:bmm_api/src/api_util.dart';
+import 'package:bmm_api/src/model/album_model.dart';
+import 'package:bmm_api/src/model/published_filter.dart';
+import 'package:bmm_api/src/model/track_subtype.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:openapi/src/api_util.dart';
-import 'package:openapi/src/model/album_model.dart';
-import 'package:openapi/src/model/published_filter.dart';
-import 'package:openapi/src/model/track_subtype.dart';
 
 class AlbumApi {
 

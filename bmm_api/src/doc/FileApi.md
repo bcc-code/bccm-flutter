@@ -1,8 +1,8 @@
-# openapi.api.FileApi
+# bmm_api.api.FileApi
 
 ## Load the API package
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 ```
 
 All URIs are relative to *http://localhost*
@@ -21,9 +21,9 @@ Method | HTTP request | Description
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getFileApi();
+final api = BmmApi().getFileApi();
 
 try {
     api.fileApkGet();
@@ -57,9 +57,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getFileApi();
+final api = BmmApi().getFileApi();
 final int id = 56; // int | 
 final String name = name_example; // String | 
 final int lastChanged = 789; // int | 
@@ -103,9 +103,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getFileApi();
+final api = BmmApi().getFileApi();
 final String type = type_example; // String | 
 final int id = 56; // int | 
 final String name = name_example; // String | 

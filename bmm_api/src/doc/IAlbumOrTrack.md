@@ -1,8 +1,8 @@
-# openapi.model.IAlbumOrTrack
+# bmm_api.model.IAlbumOrTrack
 
 ## Load the model package
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 ```
 
 ## Properties

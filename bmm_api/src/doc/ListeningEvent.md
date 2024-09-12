@@ -1,8 +1,8 @@
-# openapi.model.ListeningEvent
+# bmm_api.model.ListeningEvent
 
 ## Load the model package
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 ```
 
 ## Properties

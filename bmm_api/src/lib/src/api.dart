@@ -4,41 +4,41 @@
 
 import 'package:dio/dio.dart';
 import 'package:built_value/serializer.dart';
-import 'package:openapi/src/serializers.dart';
-import 'package:openapi/src/auth/api_key_auth.dart';
-import 'package:openapi/src/auth/basic_auth.dart';
-import 'package:openapi/src/auth/bearer_auth.dart';
-import 'package:openapi/src/auth/oauth.dart';
-import 'package:openapi/src/api/album_api.dart';
-import 'package:openapi/src/api/browse_api.dart';
-import 'package:openapi/src/api/contributor_api.dart';
-import 'package:openapi/src/api/current_user_api.dart';
-import 'package:openapi/src/api/default_api.dart';
-import 'package:openapi/src/api/discover_api.dart';
-import 'package:openapi/src/api/download_links_api.dart';
-import 'package:openapi/src/api/events_api.dart';
-import 'package:openapi/src/api/facets_api.dart';
-import 'package:openapi/src/api/file_api.dart';
-import 'package:openapi/src/api/link_metadata_api.dart';
-import 'package:openapi/src/api/playlist_api.dart';
-import 'package:openapi/src/api/podcast_api.dart';
-import 'package:openapi/src/api/search_api.dart';
-import 'package:openapi/src/api/shared_playlist_api.dart';
-import 'package:openapi/src/api/statistics_api.dart';
-import 'package:openapi/src/api/subscription_api.dart';
-import 'package:openapi/src/api/suggest_api.dart';
-import 'package:openapi/src/api/topbar_search_api.dart';
-import 'package:openapi/src/api/track_api.dart';
-import 'package:openapi/src/api/track_collection_api.dart';
-import 'package:openapi/src/api/transcription_api.dart';
+import 'package:bmm_api/src/serializers.dart';
+import 'package:bmm_api/src/auth/api_key_auth.dart';
+import 'package:bmm_api/src/auth/basic_auth.dart';
+import 'package:bmm_api/src/auth/bearer_auth.dart';
+import 'package:bmm_api/src/auth/oauth.dart';
+import 'package:bmm_api/src/api/album_api.dart';
+import 'package:bmm_api/src/api/browse_api.dart';
+import 'package:bmm_api/src/api/contributor_api.dart';
+import 'package:bmm_api/src/api/current_user_api.dart';
+import 'package:bmm_api/src/api/default_api.dart';
+import 'package:bmm_api/src/api/discover_api.dart';
+import 'package:bmm_api/src/api/download_links_api.dart';
+import 'package:bmm_api/src/api/events_api.dart';
+import 'package:bmm_api/src/api/facets_api.dart';
+import 'package:bmm_api/src/api/file_api.dart';
+import 'package:bmm_api/src/api/link_metadata_api.dart';
+import 'package:bmm_api/src/api/playlist_api.dart';
+import 'package:bmm_api/src/api/podcast_api.dart';
+import 'package:bmm_api/src/api/search_api.dart';
+import 'package:bmm_api/src/api/shared_playlist_api.dart';
+import 'package:bmm_api/src/api/statistics_api.dart';
+import 'package:bmm_api/src/api/subscription_api.dart';
+import 'package:bmm_api/src/api/suggest_api.dart';
+import 'package:bmm_api/src/api/topbar_search_api.dart';
+import 'package:bmm_api/src/api/track_api.dart';
+import 'package:bmm_api/src/api/track_collection_api.dart';
+import 'package:bmm_api/src/api/transcription_api.dart';
 
-class Openapi {
+class BmmApi {
   static const String basePath = r'http://localhost';
 
   final Dio dio;
   final Serializers serializers;
 
-  Openapi({
+  BmmApi({
     Dio? dio,
     Serializers? serializers,
     String? basePathOverride,

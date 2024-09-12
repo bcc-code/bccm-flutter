@@ -1,8 +1,8 @@
-# openapi.api.SearchApi
+# bmm_api.api.SearchApi
 
 ## Load the API package
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 ```
 
 All URIs are relative to *http://localhost*
@@ -22,9 +22,9 @@ Method | HTTP request | Description
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getSearchApi();
+final api = BmmApi().getSearchApi();
 final String term = term_example; // String | 
 final BuiltList<ResourceType> resourceType = ; // BuiltList<ResourceType> | 
 final PublishedFilter publishedFilter = ; // PublishedFilter | 
@@ -71,9 +71,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getSearchApi();
+final api = BmmApi().getSearchApi();
 final String term = term_example; // String | 
 final SearchFilter filter = ; // SearchFilter | 
 final PublishedFilter publishedFilter = ; // PublishedFilter | 
@@ -120,9 +120,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getSearchApi();
+final api = BmmApi().getSearchApi();
 final String term = term_example; // String | 
 final BuiltList<ResourceType> resourceType = ; // BuiltList<ResourceType> | 
 final PublishedFilter publishedFilter = ; // PublishedFilter | 
@@ -169,9 +169,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getSearchApi();
+final api = BmmApi().getSearchApi();
 final String term = term_example; // String | 
 final SearchFilter filter = ; // SearchFilter | 
 final PublishedFilter publishedFilter = ; // PublishedFilter | 

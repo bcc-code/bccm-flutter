@@ -8,8 +8,8 @@ import 'package:built_value/json_object.dart';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
-import 'package:openapi/src/api_util.dart';
-import 'package:openapi/src/model/get_track_collection_model.dart';
+import 'package:bmm_api/src/api_util.dart';
+import 'package:bmm_api/src/model/get_track_collection_model.dart';
 
 class SharedPlaylistApi {
 

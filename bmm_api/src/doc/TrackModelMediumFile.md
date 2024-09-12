@@ -1,8 +1,8 @@
-# openapi.model.TrackModelMediumFile
+# bmm_api.model.TrackModelMediumFile
 
 ## Load the model package
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 ```
 
 ## Properties

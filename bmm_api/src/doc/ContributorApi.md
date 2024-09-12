@@ -1,8 +1,8 @@
-# openapi.api.ContributorApi
+# bmm_api.api.ContributorApi
 
 ## Load the API package
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 ```
 
 All URIs are relative to *http://localhost*
@@ -25,9 +25,9 @@ Method | HTTP request | Description
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getContributorApi();
+final api = BmmApi().getContributorApi();
 
 try {
     final response = api.contributorGet();
@@ -62,9 +62,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getContributorApi();
+final api = BmmApi().getContributorApi();
 final int id = 56; // int | 
 
 try {
@@ -102,9 +102,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getContributorApi();
+final api = BmmApi().getContributorApi();
 final int id = 56; // int | 
 final PublishedFilter unpublished = ; // PublishedFilter | 
 
@@ -145,9 +145,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getContributorApi();
+final api = BmmApi().getContributorApi();
 final int id = 56; // int | 
 final int size = 56; // int | 
 
@@ -188,9 +188,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getContributorApi();
+final api = BmmApi().getContributorApi();
 final int id = 56; // int | 
 final PublishedFilter unpublished = ; // PublishedFilter | 
 final int from = 56; // int | 
@@ -235,9 +235,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getContributorApi();
+final api = BmmApi().getContributorApi();
 final String term = term_example; // String | 
 final int size = 56; // int | 
 
@@ -278,9 +278,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getContributorApi();
+final api = BmmApi().getContributorApi();
 final String term = term_example; // String | 
 final int size = 56; // int | 
 

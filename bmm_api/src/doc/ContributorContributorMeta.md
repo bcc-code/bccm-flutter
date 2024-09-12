@@ -1,8 +1,8 @@
-# openapi.model.ContributorContributorMeta
+# bmm_api.model.ContributorContributorMeta
 
 ## Load the model package
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 ```
 
 ## Properties

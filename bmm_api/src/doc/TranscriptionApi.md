@@ -1,8 +1,8 @@
-# openapi.api.TranscriptionApi
+# bmm_api.api.TranscriptionApi
 
 ## Load the API package
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 ```
 
 All URIs are relative to *http://localhost*
@@ -20,9 +20,9 @@ Method | HTTP request | Description
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getTranscriptionApi();
+final api = BmmApi().getTranscriptionApi();
 final int trackId = 56; // int | 
 final LanguageEnum language = ; // LanguageEnum | 
 final int first = 56; // int | 
@@ -67,9 +67,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getTranscriptionApi();
+final api = BmmApi().getTranscriptionApi();
 final int trackId = 56; // int | 
 final LanguageEnum language = ; // LanguageEnum | 
 final BuiltList<StoreTranscriptionEditSuggestionsSuggestion> storeTranscriptionEditSuggestionsSuggestion = ; // BuiltList<StoreTranscriptionEditSuggestionsSuggestion> | 

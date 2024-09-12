@@ -1,8 +1,8 @@
-# openapi.api.StatisticsApi
+# bmm_api.api.StatisticsApi
 
 ## Load the API package
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 ```
 
 All URIs are relative to *http://localhost*
@@ -33,9 +33,9 @@ Method | HTTP request | Description
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getStatisticsApi();
+final api = BmmApi().getStatisticsApi();
 
 try {
     api.statisticsAchievementDelete();
@@ -69,9 +69,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getStatisticsApi();
+final api = BmmApi().getStatisticsApi();
 final String name = name_example; // String | 
 
 try {
@@ -109,9 +109,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getStatisticsApi();
+final api = BmmApi().getStatisticsApi();
 final LanguageEnum lang = ; // LanguageEnum | 
 final String theme = theme_example; // String | 
 
@@ -152,9 +152,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getStatisticsApi();
+final api = BmmApi().getStatisticsApi();
 final LanguageEnum lang = ; // LanguageEnum | 
 final String theme = theme_example; // String | 
 
@@ -195,9 +195,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getStatisticsApi();
+final api = BmmApi().getStatisticsApi();
 final BuiltList<ListeningEvent> listeningEvent = ; // BuiltList<ListeningEvent> | 
 
 try {
@@ -235,9 +235,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getStatisticsApi();
+final api = BmmApi().getStatisticsApi();
 
 try {
     final response = api.statisticsProjectChurchGet();
@@ -272,9 +272,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getStatisticsApi();
+final api = BmmApi().getStatisticsApi();
 final LanguageEnum lang = ; // LanguageEnum | 
 final String os = os_example; // String | 
 final String theme = theme_example; // String | 
@@ -317,9 +317,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getStatisticsApi();
+final api = BmmApi().getStatisticsApi();
 final int projectId = 56; // int | 
 final LanguageEnum lang = ; // LanguageEnum | 
 
@@ -360,9 +360,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getStatisticsApi();
+final api = BmmApi().getStatisticsApi();
 final LanguageEnum lang = ; // LanguageEnum | 
 final int projectId = 56; // int | 
 
@@ -403,9 +403,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getStatisticsApi();
+final api = BmmApi().getStatisticsApi();
 final BuiltList<StreakPoint> streakPoint = ; // BuiltList<StreakPoint> | 
 
 try {
@@ -443,9 +443,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getStatisticsApi();
+final api = BmmApi().getStatisticsApi();
 final BuiltList<CreateTrackPlayedEventsCommandEvent> createTrackPlayedEventsCommandEvent = ; // BuiltList<CreateTrackPlayedEventsCommandEvent> | 
 
 try {
@@ -483,9 +483,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getStatisticsApi();
+final api = BmmApi().getStatisticsApi();
 
 try {
     api.statisticsYearInReviewFkGet();
@@ -519,9 +519,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getStatisticsApi();
+final api = BmmApi().getStatisticsApi();
 
 try {
     api.statisticsYearInReviewHoursGet();
@@ -555,9 +555,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getStatisticsApi();
+final api = BmmApi().getStatisticsApi();
 
 try {
     final response = api.statisticsYearInReviewOverviewGet();
@@ -592,9 +592,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getStatisticsApi();
+final api = BmmApi().getStatisticsApi();
 
 try {
     api.statisticsYearInReviewSongsGet();

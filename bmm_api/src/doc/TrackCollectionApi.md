@@ -1,8 +1,8 @@
-# openapi.api.TrackCollectionApi
+# bmm_api.api.TrackCollectionApi
 
 ## Load the API package
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 ```
 
 All URIs are relative to *http://localhost*
@@ -31,9 +31,9 @@ Get a list of track collections for the current user.
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getTrackCollectionApi();
+final api = BmmApi().getTrackCollectionApi();
 
 try {
     final response = api.trackCollectionGet();
@@ -68,9 +68,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getTrackCollectionApi();
+final api = BmmApi().getTrackCollectionApi();
 final int id = 56; // int | 
 final int albumId = 56; // int | 
 
@@ -110,9 +110,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getTrackCollectionApi();
+final api = BmmApi().getTrackCollectionApi();
 final int id = 56; // int | 
 
 try {
@@ -150,9 +150,9 @@ Get a single track collection. All hidden or deleted tracks will not show up in 
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getTrackCollectionApi();
+final api = BmmApi().getTrackCollectionApi();
 final int id = 56; // int | 
 
 try {
@@ -191,9 +191,9 @@ Add tracks to existing track collection without changing anything else
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getTrackCollectionApi();
+final api = BmmApi().getTrackCollectionApi();
 final int id = 56; // int | 
 final BuiltList<String> link = ; // BuiltList<String> | 
 
@@ -233,9 +233,9 @@ Edit an existing track collection
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getTrackCollectionApi();
+final api = BmmApi().getTrackCollectionApi();
 final int id = 56; // int | 
 final UpdateTrackCollectionCommand updateTrackCollectionCommand = ; // UpdateTrackCollectionCommand | 
 
@@ -275,9 +275,9 @@ Resets the sharing link and removes all followers of the track collection
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getTrackCollectionApi();
+final api = BmmApi().getTrackCollectionApi();
 final int id = 56; // int | 
 
 try {
@@ -315,9 +315,9 @@ Unfollows a track collection
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getTrackCollectionApi();
+final api = BmmApi().getTrackCollectionApi();
 final int id = 56; // int | 
 
 try {
@@ -355,9 +355,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getTrackCollectionApi();
+final api = BmmApi().getTrackCollectionApi();
 final BuiltList<String> link = ; // BuiltList<String> | 
 
 try {
@@ -395,9 +395,9 @@ Create a track collection
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getTrackCollectionApi();
+final api = BmmApi().getTrackCollectionApi();
 final CreateTrackCollectionCommand createTrackCollectionCommand = ; // CreateTrackCollectionCommand | 
 
 try {
@@ -435,9 +435,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getTrackCollectionApi();
+final api = BmmApi().getTrackCollectionApi();
 
 try {
     final response = api.trackCollectionTopSongsGet();
@@ -472,9 +472,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getTrackCollectionApi();
+final api = BmmApi().getTrackCollectionApi();
 
 try {
     api.trackCollectionTopSongsPost();
@@ -508,9 +508,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getTrackCollectionApi();
+final api = BmmApi().getTrackCollectionApi();
 final BuiltList<String> link = ; // BuiltList<String> | 
 
 try {

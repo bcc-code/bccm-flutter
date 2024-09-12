@@ -1,8 +1,8 @@
-# openapi.api.PlaylistApi
+# bmm_api.api.PlaylistApi
 
 ## Load the API package
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 ```
 
 All URIs are relative to *http://localhost*
@@ -23,9 +23,9 @@ Method | HTTP request | Description
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getPlaylistApi();
+final api = BmmApi().getPlaylistApi();
 final LanguageEnum lang = ; // LanguageEnum | 
 final int age = 56; // int | 
 
@@ -66,9 +66,9 @@ List of playlists.  The apps use this endpoint to load single playlists as well 
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getPlaylistApi();
+final api = BmmApi().getPlaylistApi();
 
 try {
     final response = api.playlistGet();
@@ -103,9 +103,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getPlaylistApi();
+final api = BmmApi().getPlaylistApi();
 final int id = 56; // int | 
 
 try {
@@ -143,9 +143,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getPlaylistApi();
+final api = BmmApi().getPlaylistApi();
 final int id = 56; // int | 
 
 try {
@@ -184,9 +184,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getPlaylistApi();
+final api = BmmApi().getPlaylistApi();
 final int id = 56; // int | 
 final PublishedFilter unpublished = ; // PublishedFilter | 
 

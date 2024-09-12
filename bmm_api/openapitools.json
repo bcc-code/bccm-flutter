@@ -8,7 +8,11 @@
         "generatorName": "dart-dio",
         "inputSpec": "https://int-bmm-api.brunstad.org/swagger/v1/swagger.json",
         "output": "./src",
-        "packageName": "bmm_api"
+        "packageName": "bmm_api",
+        "additionalProperties": {
+          "pubName": "bmm_api",
+          "pubLibrary": "bmm_api.api"
+        }
       }
     }
   }

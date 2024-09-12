@@ -1,8 +1,8 @@
-# openapi.model.DocumentListIAllDocumentModels
+# bmm_api.model.DocumentListIAllDocumentModels
 
 ## Load the model package
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 ```
 
 ## Properties

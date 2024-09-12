@@ -1,8 +1,8 @@
-# openapi.model.LanguageEnum
+# bmm_api.model.LanguageEnum
 
 ## Load the model package
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 ```
 
 ## Properties

@@ -1,8 +1,8 @@
-# openapi.api.PodcastApi
+# bmm_api.api.PodcastApi
 
 ## Load the API package
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 ```
 
 All URIs are relative to *http://localhost*
@@ -24,9 +24,9 @@ Method | HTTP request | Description
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getPodcastApi();
+final api = BmmApi().getPodcastApi();
 
 try {
     final response = api.podcastGet();
@@ -61,9 +61,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getPodcastApi();
+final api = BmmApi().getPodcastApi();
 final int id = 56; // int | 
 
 try {
@@ -101,9 +101,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getPodcastApi();
+final api = BmmApi().getPodcastApi();
 final int id = 56; // int | 
 
 try {
@@ -142,9 +142,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getPodcastApi();
+final api = BmmApi().getPodcastApi();
 final int id = 56; // int | 
 
 try {
@@ -183,9 +183,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getPodcastApi();
+final api = BmmApi().getPodcastApi();
 final int id = 56; // int | 
 final int size = 56; // int | 
 
@@ -226,9 +226,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getPodcastApi();
+final api = BmmApi().getPodcastApi();
 final int id = 56; // int | 
 final PublishedFilter unpublished = ; // PublishedFilter | 
 final int size = 56; // int | 

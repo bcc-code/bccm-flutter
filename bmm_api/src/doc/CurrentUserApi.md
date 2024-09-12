@@ -1,8 +1,8 @@
-# openapi.api.CurrentUserApi
+# bmm_api.api.CurrentUserApi
 
 ## Load the API package
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 ```
 
 All URIs are relative to *http://localhost*
@@ -19,9 +19,9 @@ Method | HTTP request | Description
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getCurrentUserApi();
+final api = BmmApi().getCurrentUserApi();
 
 try {
     final response = api.currentUserGet();

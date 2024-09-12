@@ -8,8 +8,8 @@ import 'package:built_value/json_object.dart';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
-import 'package:openapi/src/model/api_overview_model.dart';
-import 'package:openapi/src/model/store_project_question_question_holder.dart';
+import 'package:bmm_api/src/model/api_overview_model.dart';
+import 'package:bmm_api/src/model/store_project_question_question_holder.dart';
 
 class DefaultApi {
 

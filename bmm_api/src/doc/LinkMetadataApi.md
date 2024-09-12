@@ -1,8 +1,8 @@
-# openapi.api.LinkMetadataApi
+# bmm_api.api.LinkMetadataApi
 
 ## Load the API package
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 ```
 
 All URIs are relative to *http://localhost*
@@ -20,9 +20,9 @@ Method | HTTP request | Description
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getLinkMetadataApi();
+final api = BmmApi().getLinkMetadataApi();
 final int id = 56; // int | 
 
 try {
@@ -61,9 +61,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getLinkMetadataApi();
+final api = BmmApi().getLinkMetadataApi();
 final int id = 56; // int | 
 final LanguageEnum language = ; // LanguageEnum | 
 

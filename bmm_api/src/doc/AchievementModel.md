@@ -1,8 +1,8 @@
-# openapi.model.AchievementModel
+# bmm_api.model.AchievementModel
 
 ## Load the model package
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 ```
 
 ## Properties

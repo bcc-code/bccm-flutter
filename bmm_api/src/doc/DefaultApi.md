@@ -1,8 +1,8 @@
-# openapi.api.DefaultApi
+# bmm_api.api.DefaultApi
 
 ## Load the API package
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 ```
 
 All URIs are relative to *http://localhost*
@@ -22,9 +22,9 @@ Method | HTTP request | Description
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getDefaultApi();
+final api = BmmApi().getDefaultApi();
 
 try {
     api.loaderio2a7384d72124b249603cbda2fc74a801Get();
@@ -58,9 +58,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getDefaultApi();
+final api = BmmApi().getDefaultApi();
 final StoreProjectQuestionQuestionHolder storeProjectQuestionQuestionHolder = ; // StoreProjectQuestionQuestionHolder | 
 
 try {
@@ -98,9 +98,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getDefaultApi();
+final api = BmmApi().getDefaultApi();
 
 try {
     final response = api.rootGet();
@@ -135,9 +135,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getDefaultApi();
+final api = BmmApi().getDefaultApi();
 
 try {
     final response = api.rootHead();

@@ -1,8 +1,8 @@
-# openapi.model.InfoMessageModel
+# bmm_api.model.InfoMessageModel
 
 ## Load the model package
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 ```
 
 ## Properties

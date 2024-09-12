@@ -3,16 +3,16 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:openapi/src/model/track_model_medium.dart';
+import 'package:bmm_api/src/model/track_model_bible_relation.dart';
+import 'package:bmm_api/src/model/track_subtype.dart';
+import 'package:bmm_api/src/model/track_model_relation.dart';
+import 'package:bmm_api/src/model/track_model_songbook_relation.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:openapi/src/model/language_enum.dart';
-import 'package:openapi/src/model/track_model_relation.dart';
-import 'package:openapi/src/model/track_model_contributor_relation.dart';
-import 'package:openapi/src/model/track_model_songbook_relation.dart';
-import 'package:openapi/src/model/track_model_track_meta.dart';
-import 'package:openapi/src/model/track_subtype.dart';
-import 'package:openapi/src/model/track_model_bible_relation.dart';
-import 'package:openapi/src/model/track_model_external_relation.dart';
+import 'package:bmm_api/src/model/track_model_medium.dart';
+import 'package:bmm_api/src/model/language_enum.dart';
+import 'package:bmm_api/src/model/track_model_contributor_relation.dart';
+import 'package:bmm_api/src/model/track_model_track_meta.dart';
+import 'package:bmm_api/src/model/track_model_external_relation.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 

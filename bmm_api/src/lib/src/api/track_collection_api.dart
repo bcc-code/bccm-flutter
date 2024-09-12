@@ -8,14 +8,14 @@ import 'package:built_value/json_object.dart';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
+import 'package:bmm_api/src/api_util.dart';
+import 'package:bmm_api/src/model/create_track_collection_command.dart';
+import 'package:bmm_api/src/model/get_top_songs_collection_model.dart';
+import 'package:bmm_api/src/model/get_track_collection_model.dart';
+import 'package:bmm_api/src/model/problem_details.dart';
+import 'package:bmm_api/src/model/track_collection_details.dart';
+import 'package:bmm_api/src/model/update_track_collection_command.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:openapi/src/api_util.dart';
-import 'package:openapi/src/model/create_track_collection_command.dart';
-import 'package:openapi/src/model/get_top_songs_collection_model.dart';
-import 'package:openapi/src/model/get_track_collection_model.dart';
-import 'package:openapi/src/model/problem_details.dart';
-import 'package:openapi/src/model/track_collection_details.dart';
-import 'package:openapi/src/model/update_track_collection_command.dart';
 
 class TrackCollectionApi {
 

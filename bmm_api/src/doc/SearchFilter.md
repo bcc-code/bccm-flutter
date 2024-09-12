@@ -1,8 +1,8 @@
-# openapi.model.SearchFilter
+# bmm_api.model.SearchFilter
 
 ## Load the model package
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 ```
 
 ## Properties

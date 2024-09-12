@@ -1,8 +1,8 @@
-# openapi.api.AlbumApi
+# bmm_api.api.AlbumApi
 
 ## Load the API package
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 ```
 
 All URIs are relative to *http://localhost*
@@ -22,9 +22,9 @@ Method | HTTP request | Description
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getAlbumApi();
+final api = BmmApi().getAlbumApi();
 final PublishedFilter publishedFilter = ; // PublishedFilter | 
 final String policy = policy_example; // String | 
 final int from = 56; // int | 
@@ -81,9 +81,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getAlbumApi();
+final api = BmmApi().getAlbumApi();
 final int id = 56; // int | 
 
 try {
@@ -121,9 +121,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getAlbumApi();
+final api = BmmApi().getAlbumApi();
 final int id = 56; // int | 
 final PublishedFilter unpublished = ; // PublishedFilter | 
 
@@ -164,9 +164,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getAlbumApi();
+final api = BmmApi().getAlbumApi();
 final int year = 56; // int | 
 final PublishedFilter unpublished = ; // PublishedFilter | 
 

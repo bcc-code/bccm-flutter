@@ -1,8 +1,8 @@
-# openapi.model.TrackTranslationTranscriptionSegment
+# bmm_api.model.TrackTranslationTranscriptionSegment
 
 ## Load the model package
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 ```
 
 ## Properties

@@ -3,10 +3,10 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:openapi/src/model/resource_availability.dart';
+import 'package:bmm_api/src/model/track_subtype.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:openapi/src/model/track_subtype.dart';
-import 'package:openapi/src/model/listened_status.dart';
+import 'package:bmm_api/src/model/resource_availability.dart';
+import 'package:bmm_api/src/model/listened_status.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 

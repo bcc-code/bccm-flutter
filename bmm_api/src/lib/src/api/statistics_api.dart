@@ -8,18 +8,18 @@ import 'package:built_value/json_object.dart';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
+import 'package:bmm_api/src/api_util.dart';
+import 'package:bmm_api/src/model/achievement_model.dart';
+import 'package:bmm_api/src/model/create_track_played_events_command_event.dart';
+import 'package:bmm_api/src/model/document_list_i_achievement_collection_or_chapter_header.dart';
+import 'package:bmm_api/src/model/forbilde_points.dart';
+import 'package:bmm_api/src/model/get_year_in_review_overview_slide.dart';
+import 'package:bmm_api/src/model/language_enum.dart';
+import 'package:bmm_api/src/model/listening_event.dart';
+import 'package:bmm_api/src/model/project_church_statistics_query_church_statistics.dart';
+import 'package:bmm_api/src/model/project_rules_query_rules.dart';
+import 'package:bmm_api/src/model/streak_point.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:openapi/src/api_util.dart';
-import 'package:openapi/src/model/achievement_model.dart';
-import 'package:openapi/src/model/create_track_played_events_command_event.dart';
-import 'package:openapi/src/model/document_list_i_achievement_collection_or_chapter_header.dart';
-import 'package:openapi/src/model/forbilde_points.dart';
-import 'package:openapi/src/model/get_year_in_review_overview_slide.dart';
-import 'package:openapi/src/model/language_enum.dart';
-import 'package:openapi/src/model/listening_event.dart';
-import 'package:openapi/src/model/project_church_statistics_query_church_statistics.dart';
-import 'package:openapi/src/model/project_rules_query_rules.dart';
-import 'package:openapi/src/model/streak_point.dart';
 
 class StatisticsApi {
 

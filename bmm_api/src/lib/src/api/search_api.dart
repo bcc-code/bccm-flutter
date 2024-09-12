@@ -8,13 +8,13 @@ import 'package:built_value/json_object.dart';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
+import 'package:bmm_api/src/api_util.dart';
+import 'package:bmm_api/src/model/i_album_contributor_podcast_playlist_or_track.dart';
+import 'package:bmm_api/src/model/published_filter.dart';
+import 'package:bmm_api/src/model/resource_type.dart';
+import 'package:bmm_api/src/model/search_filter.dart';
+import 'package:bmm_api/src/model/search_results.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:openapi/src/api_util.dart';
-import 'package:openapi/src/model/i_album_contributor_podcast_playlist_or_track.dart';
-import 'package:openapi/src/model/published_filter.dart';
-import 'package:openapi/src/model/resource_type.dart';
-import 'package:openapi/src/model/search_filter.dart';
-import 'package:openapi/src/model/search_results.dart';
 
 class SearchApi {
 

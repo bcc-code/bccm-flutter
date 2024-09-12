@@ -1,8 +1,8 @@
-# openapi.model.ProjectRulesQueryRules
+# bmm_api.model.ProjectRulesQueryRules
 
 ## Load the model package
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 ```
 
 ## Properties

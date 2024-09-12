@@ -1,8 +1,8 @@
-# openapi.api.TrackApi
+# bmm_api.api.TrackApi
 
 ## Load the API package
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 ```
 
 All URIs are relative to *http://localhost*
@@ -23,9 +23,9 @@ Method | HTTP request | Description
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getTrackApi();
+final api = BmmApi().getTrackApi();
 final int size = 56; // int | 
 final int from = 56; // int | 
 final BuiltList<TrackSubtype> contentType = ; // BuiltList<TrackSubtype> | 
@@ -84,9 +84,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getTrackApi();
+final api = BmmApi().getTrackApi();
 final int id = 56; // int | 
 final PublishedFilter unpublished = ; // PublishedFilter | 
 
@@ -127,9 +127,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getTrackApi();
+final api = BmmApi().getTrackApi();
 final int id = 56; // int | 
 final PublishedFilter unpublished = ; // PublishedFilter | 
 
@@ -170,9 +170,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getTrackApi();
+final api = BmmApi().getTrackApi();
 final int id = 56; // int | 
 final LanguageEnum language = ; // LanguageEnum | 
 final PublishedFilter unpublished = ; // PublishedFilter | 
@@ -215,9 +215,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getTrackApi();
+final api = BmmApi().getTrackApi();
 
 try {
     final response = api.trackRecommendationGet();

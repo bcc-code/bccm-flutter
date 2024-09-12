@@ -1,8 +1,8 @@
-# openapi.model.TrackModelTrackContributorType
+# bmm_api.model.TrackModelTrackContributorType
 
 ## Load the model package
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 ```
 
 ## Properties

@@ -1,8 +1,8 @@
-# openapi.model.TrackModelExternalRelation
+# bmm_api.model.TrackModelExternalRelation
 
 ## Load the model package
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 ```
 
 ## Properties

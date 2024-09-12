@@ -1,8 +1,8 @@
-# openapi.api.TopbarSearchApi
+# bmm_api.api.TopbarSearchApi
 
 ## Load the API package
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 ```
 
 All URIs are relative to *http://localhost*
@@ -19,9 +19,9 @@ Method | HTTP request | Description
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getTopbarSearchApi();
+final api = BmmApi().getTopbarSearchApi();
 final String term = term_example; // String | 
 final int size = 56; // int | 
 

@@ -1,8 +1,8 @@
-# openapi.api.BrowseApi
+# bmm_api.api.BrowseApi
 
 ## Load the API package
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 ```
 
 All URIs are relative to *http://localhost*
@@ -23,9 +23,9 @@ Method | HTTP request | Description
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getBrowseApi();
+final api = BmmApi().getBrowseApi();
 final int skip = 56; // int | 
 final int take = 56; // int | 
 
@@ -66,9 +66,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getBrowseApi();
+final api = BmmApi().getBrowseApi();
 final int skip = 56; // int | 
 final int take = 56; // int | 
 
@@ -109,9 +109,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getBrowseApi();
+final api = BmmApi().getBrowseApi();
 
 try {
     final response = api.browseGet();
@@ -146,9 +146,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getBrowseApi();
+final api = BmmApi().getBrowseApi();
 
 try {
     final response = api.browseMusicGet();
@@ -183,9 +183,9 @@ No authorization required
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getBrowseApi();
+final api = BmmApi().getBrowseApi();
 
 try {
     final response = api.browsePodcastsGet();

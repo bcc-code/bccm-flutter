@@ -1,8 +1,8 @@
-# openapi.api.EventsApi
+# bmm_api.api.EventsApi
 
 ## Load the API package
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 ```
 
 All URIs are relative to *http://localhost*
@@ -19,9 +19,9 @@ Method | HTTP request | Description
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getEventsApi();
+final api = BmmApi().getEventsApi();
 final String path = path_example; // String | 
 
 try {

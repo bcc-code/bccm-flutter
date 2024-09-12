@@ -3,9 +3,9 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:bmm_api/src/model/highlighting.dart';
+import 'package:bmm_api/src/model/i_album_contributor_podcast_playlist_or_track.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:openapi/src/model/highlighting.dart';
-import 'package:openapi/src/model/i_album_contributor_podcast_playlist_or_track.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 

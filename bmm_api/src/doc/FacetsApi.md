@@ -1,8 +1,8 @@
-# openapi.api.FacetsApi
+# bmm_api.api.FacetsApi
 
 ## Load the API package
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 ```
 
 All URIs are relative to *http://localhost*
@@ -19,9 +19,9 @@ Method | HTTP request | Description
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 
-final api = Openapi().getFacetsApi();
+final api = BmmApi().getFacetsApi();
 final String controller = controller_example; // String | 
 final PublishedFilter unpublished = ; // PublishedFilter | 
 

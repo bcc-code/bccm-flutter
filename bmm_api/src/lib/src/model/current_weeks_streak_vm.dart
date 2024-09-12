@@ -3,9 +3,9 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:openapi/src/model/current_weeks_streak_vm_home_screen_text_options.dart';
+import 'package:bmm_api/src/model/current_weeks_streak_vm_home_screen_text_options.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:openapi/src/model/day_of_week.dart';
+import 'package:bmm_api/src/model/day_of_week.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 

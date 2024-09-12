@@ -3,10 +3,10 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:bmm_api/src/model/chapter_header.dart';
+import 'package:bmm_api/src/model/achievement_model.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:openapi/src/model/chapter_header.dart';
-import 'package:openapi/src/model/achievement_collection.dart';
-import 'package:openapi/src/model/achievement_model.dart';
+import 'package:bmm_api/src/model/achievement_collection.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:one_of/one_of.dart';

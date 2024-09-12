@@ -1,8 +1,8 @@
-# openapi.model.DocumentListIAlbumOrChapterHeader
+# bmm_api.model.DocumentListIAlbumOrChapterHeader
 
 ## Load the model package
 ```dart
-import 'package:openapi/api.dart';
+import 'package:bmm_api/api.dart';
 ```
 
 ## Properties
