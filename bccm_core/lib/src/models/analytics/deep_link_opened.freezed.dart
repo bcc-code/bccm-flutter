@@ -24,8 +24,12 @@ mixin _$DeepLinkOpenedEvent {
   String get source => throw _privateConstructorUsedError;
   String get campaignId => throw _privateConstructorUsedError;
 
+  /// Serializes this DeepLinkOpenedEvent to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DeepLinkOpenedEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DeepLinkOpenedEventCopyWith<DeepLinkOpenedEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -49,6 +53,8 @@ class _$DeepLinkOpenedEventCopyWithImpl<$Res, $Val extends DeepLinkOpenedEvent>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DeepLinkOpenedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -92,6 +98,8 @@ class __$$DeepLinkOpenedEventImplCopyWithImpl<$Res>
       $Res Function(_$DeepLinkOpenedEventImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DeepLinkOpenedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -148,11 +156,13 @@ class _$DeepLinkOpenedEventImpl implements _DeepLinkOpenedEvent {
                 other.campaignId == campaignId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, url, source, campaignId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DeepLinkOpenedEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DeepLinkOpenedEventImplCopyWith<_$DeepLinkOpenedEventImpl> get copyWith =>
@@ -182,8 +192,11 @@ abstract class _DeepLinkOpenedEvent implements DeepLinkOpenedEvent {
   String get source;
   @override
   String get campaignId;
+
+  /// Create a copy of DeepLinkOpenedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DeepLinkOpenedEventImplCopyWith<_$DeepLinkOpenedEventImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -27,8 +27,12 @@ mixin _$ShortStartedEvent {
   double get positionFraction => throw _privateConstructorUsedError;
   int get positionSeconds => throw _privateConstructorUsedError;
 
+  /// Serializes this ShortStartedEvent to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ShortStartedEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ShortStartedEventCopyWith<ShortStartedEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -58,6 +62,8 @@ class _$ShortStartedEventCopyWithImpl<$Res, $Val extends ShortStartedEvent>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ShortStartedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -122,6 +128,8 @@ class __$$ShortStartedEventImplCopyWithImpl<$Res>
       $Res Function(_$ShortStartedEventImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ShortStartedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -210,12 +218,14 @@ class _$ShortStartedEventImpl implements _ShortStartedEvent {
                 other.positionSeconds == positionSeconds));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, shortId, shortTitle, replayCount,
       resumed, positionFraction, positionSeconds);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ShortStartedEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ShortStartedEventImplCopyWith<_$ShortStartedEventImpl> get copyWith =>
@@ -254,8 +264,11 @@ abstract class _ShortStartedEvent implements ShortStartedEvent {
   double get positionFraction;
   @override
   int get positionSeconds;
+
+  /// Create a copy of ShortStartedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ShortStartedEventImplCopyWith<_$ShortStartedEventImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -272,8 +285,12 @@ mixin _$ShortStoppedEvent {
   int get positionSeconds => throw _privateConstructorUsedError;
   int get replayCount => throw _privateConstructorUsedError;
 
+  /// Serializes this ShortStoppedEvent to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ShortStoppedEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ShortStoppedEventCopyWith<ShortStoppedEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -302,6 +319,8 @@ class _$ShortStoppedEventCopyWithImpl<$Res, $Val extends ShortStoppedEvent>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ShortStoppedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -360,6 +379,8 @@ class __$$ShortStoppedEventImplCopyWithImpl<$Res>
       $Res Function(_$ShortStoppedEventImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ShortStoppedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -439,12 +460,14 @@ class _$ShortStoppedEventImpl implements _ShortStoppedEvent {
                 other.replayCount == replayCount));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, shortId, shortTitle,
       positionFraction, positionSeconds, replayCount);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ShortStoppedEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ShortStoppedEventImplCopyWith<_$ShortStoppedEventImpl> get copyWith =>
@@ -480,8 +503,11 @@ abstract class _ShortStoppedEvent implements ShortStoppedEvent {
   int get positionSeconds;
   @override
   int get replayCount;
+
+  /// Create a copy of ShortStoppedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ShortStoppedEventImplCopyWith<_$ShortStoppedEventImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

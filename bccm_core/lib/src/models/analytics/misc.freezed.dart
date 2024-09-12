@@ -26,8 +26,12 @@ mixin _$InteractionEvent {
   String? get contextElementId => throw _privateConstructorUsedError;
   Map<String, dynamic>? get meta => throw _privateConstructorUsedError;
 
+  /// Serializes this InteractionEvent to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of InteractionEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $InteractionEventCopyWith<InteractionEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -56,6 +60,8 @@ class _$InteractionEventCopyWithImpl<$Res, $Val extends InteractionEvent>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of InteractionEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -114,6 +120,8 @@ class __$$InteractionEventImplCopyWithImpl<$Res>
       $Res Function(_$InteractionEventImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of InteractionEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -201,7 +209,7 @@ class _$InteractionEventImpl implements _InteractionEvent {
             const DeepCollectionEquality().equals(other._meta, _meta));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -211,7 +219,9 @@ class _$InteractionEventImpl implements _InteractionEvent {
       contextElementId,
       const DeepCollectionEquality().hash(_meta));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of InteractionEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$InteractionEventImplCopyWith<_$InteractionEventImpl> get copyWith =>
@@ -247,8 +257,11 @@ abstract class _InteractionEvent implements InteractionEvent {
   String? get contextElementId;
   @override
   Map<String, dynamic>? get meta;
+
+  /// Create a copy of InteractionEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$InteractionEventImplCopyWith<_$InteractionEventImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -265,8 +278,12 @@ mixin _$ImpressionEvent {
   String? get contextElementId => throw _privateConstructorUsedError;
   Map<String, dynamic>? get meta => throw _privateConstructorUsedError;
 
+  /// Serializes this ImpressionEvent to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ImpressionEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ImpressionEventCopyWith<ImpressionEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -295,6 +312,8 @@ class _$ImpressionEventCopyWithImpl<$Res, $Val extends ImpressionEvent>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ImpressionEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -353,6 +372,8 @@ class __$$ImpressionEventImplCopyWithImpl<$Res>
       _$ImpressionEventImpl _value, $Res Function(_$ImpressionEventImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ImpressionEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -439,7 +460,7 @@ class _$ImpressionEventImpl implements _ImpressionEvent {
             const DeepCollectionEquality().equals(other._meta, _meta));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -449,7 +470,9 @@ class _$ImpressionEventImpl implements _ImpressionEvent {
       contextElementId,
       const DeepCollectionEquality().hash(_meta));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ImpressionEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ImpressionEventImplCopyWith<_$ImpressionEventImpl> get copyWith =>
@@ -485,8 +508,11 @@ abstract class _ImpressionEvent implements ImpressionEvent {
   String? get contextElementId;
   @override
   Map<String, dynamic>? get meta;
+
+  /// Create a copy of ImpressionEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ImpressionEventImplCopyWith<_$ImpressionEventImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -500,8 +526,12 @@ mixin _$GuideShownEvent {
   String? get guide => throw _privateConstructorUsedError;
   Map<String, dynamic>? get meta => throw _privateConstructorUsedError;
 
+  /// Serializes this GuideShownEvent to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GuideShownEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GuideShownEventCopyWith<GuideShownEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -525,6 +555,8 @@ class _$GuideShownEventCopyWithImpl<$Res, $Val extends GuideShownEvent>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GuideShownEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -563,6 +595,8 @@ class __$$GuideShownEventImplCopyWithImpl<$Res>
       _$GuideShownEventImpl _value, $Res Function(_$GuideShownEventImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GuideShownEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -617,12 +651,14 @@ class _$GuideShownEventImpl implements _GuideShownEvent {
             const DeepCollectionEquality().equals(other._meta, _meta));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, guide, const DeepCollectionEquality().hash(_meta));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GuideShownEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GuideShownEventImplCopyWith<_$GuideShownEventImpl> get copyWith =>
@@ -649,8 +685,11 @@ abstract class _GuideShownEvent implements GuideShownEvent {
   String? get guide;
   @override
   Map<String, dynamic>? get meta;
+
+  /// Create a copy of GuideShownEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GuideShownEventImplCopyWith<_$GuideShownEventImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -665,8 +704,12 @@ mixin _$TimeMeasurementEvent {
   double? get seconds => throw _privateConstructorUsedError;
   Map<String, dynamic>? get meta => throw _privateConstructorUsedError;
 
+  /// Serializes this TimeMeasurementEvent to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of TimeMeasurementEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $TimeMeasurementEventCopyWith<TimeMeasurementEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -691,6 +734,8 @@ class _$TimeMeasurementEventCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of TimeMeasurementEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -734,6 +779,8 @@ class __$$TimeMeasurementEventImplCopyWithImpl<$Res>
       $Res Function(_$TimeMeasurementEventImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of TimeMeasurementEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -797,12 +844,14 @@ class _$TimeMeasurementEventImpl implements _TimeMeasurementEvent {
             const DeepCollectionEquality().equals(other._meta, _meta));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, key, seconds, const DeepCollectionEquality().hash(_meta));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of TimeMeasurementEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$TimeMeasurementEventImplCopyWith<_$TimeMeasurementEventImpl>
@@ -833,8 +882,11 @@ abstract class _TimeMeasurementEvent implements TimeMeasurementEvent {
   double? get seconds;
   @override
   Map<String, dynamic>? get meta;
+
+  /// Create a copy of TimeMeasurementEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TimeMeasurementEventImplCopyWith<_$TimeMeasurementEventImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -850,8 +902,12 @@ mixin _$NotificationReceivedEvent {
   String? get action => throw _privateConstructorUsedError;
   String? get deeplink => throw _privateConstructorUsedError;
 
+  /// Serializes this NotificationReceivedEvent to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of NotificationReceivedEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $NotificationReceivedEventCopyWith<NotificationReceivedEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -876,6 +932,8 @@ class _$NotificationReceivedEventCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of NotificationReceivedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -922,6 +980,8 @@ class __$$NotificationReceivedEventImplCopyWithImpl<$Res>
       $Res Function(_$NotificationReceivedEventImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of NotificationReceivedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -979,12 +1039,14 @@ class _$NotificationReceivedEventImpl implements _NotificationReceivedEvent {
                 other.deeplink == deeplink));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, notificationId, action, deeplink);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of NotificationReceivedEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$NotificationReceivedEventImplCopyWith<_$NotificationReceivedEventImpl>
@@ -1014,8 +1076,11 @@ abstract class _NotificationReceivedEvent implements NotificationReceivedEvent {
   String? get action;
   @override
   String? get deeplink;
+
+  /// Create a copy of NotificationReceivedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotificationReceivedEventImplCopyWith<_$NotificationReceivedEventImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -1029,8 +1094,12 @@ NotificationOpenedEvent _$NotificationOpenedEventFromJson(
 mixin _$NotificationOpenedEvent {
   String? get notificationId => throw _privateConstructorUsedError;
 
+  /// Serializes this NotificationOpenedEvent to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of NotificationOpenedEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $NotificationOpenedEventCopyWith<NotificationOpenedEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1055,6 +1124,8 @@ class _$NotificationOpenedEventCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of NotificationOpenedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1091,6 +1162,8 @@ class __$$NotificationOpenedEventImplCopyWithImpl<$Res>
       $Res Function(_$NotificationOpenedEventImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of NotificationOpenedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1130,11 +1203,13 @@ class _$NotificationOpenedEventImpl implements _NotificationOpenedEvent {
                 other.notificationId == notificationId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, notificationId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of NotificationOpenedEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$NotificationOpenedEventImplCopyWith<_$NotificationOpenedEventImpl>
@@ -1158,8 +1233,11 @@ abstract class _NotificationOpenedEvent implements NotificationOpenedEvent {
 
   @override
   String? get notificationId;
+
+  /// Create a copy of NotificationOpenedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotificationOpenedEventImplCopyWith<_$NotificationOpenedEventImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

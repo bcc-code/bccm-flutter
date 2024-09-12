@@ -24,8 +24,12 @@ mixin _$SearchPerformedEvent {
   int get searchLatency => throw _privateConstructorUsedError;
   int get searchResultCount => throw _privateConstructorUsedError;
 
+  /// Serializes this SearchPerformedEvent to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SearchPerformedEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SearchPerformedEventCopyWith<SearchPerformedEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,6 +54,8 @@ class _$SearchPerformedEventCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SearchPerformedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -93,6 +99,8 @@ class __$$SearchPerformedEventImplCopyWithImpl<$Res>
       $Res Function(_$SearchPerformedEventImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SearchPerformedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -153,12 +161,14 @@ class _$SearchPerformedEventImpl implements _SearchPerformedEvent {
                 other.searchResultCount == searchResultCount));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, searchText, searchLatency, searchResultCount);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SearchPerformedEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SearchPerformedEventImplCopyWith<_$SearchPerformedEventImpl>
@@ -189,8 +199,11 @@ abstract class _SearchPerformedEvent implements SearchPerformedEvent {
   int get searchLatency;
   @override
   int get searchResultCount;
+
+  /// Create a copy of SearchPerformedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SearchPerformedEventImplCopyWith<_$SearchPerformedEventImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

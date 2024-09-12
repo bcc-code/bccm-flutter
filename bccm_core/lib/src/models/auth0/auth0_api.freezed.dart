@@ -33,8 +33,12 @@ mixin _$Auth0SignupRequestBody {
   String? get pictureUrl => throw _privateConstructorUsedError;
   Map<String, String>? get userMetadata => throw _privateConstructorUsedError;
 
+  /// Serializes this Auth0SignupRequestBody to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Auth0SignupRequestBody
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $Auth0SignupRequestBodyCopyWith<Auth0SignupRequestBody> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -70,6 +74,8 @@ class _$Auth0SignupRequestBodyCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Auth0SignupRequestBody
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -167,6 +173,8 @@ class __$$Auth0SignupRequestBodyImplCopyWithImpl<$Res>
       $Res Function(_$Auth0SignupRequestBodyImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Auth0SignupRequestBody
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -334,7 +342,7 @@ class _$Auth0SignupRequestBodyImpl
                 .equals(other._userMetadata, _userMetadata));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -350,7 +358,9 @@ class _$Auth0SignupRequestBodyImpl
       pictureUrl,
       const DeepCollectionEquality().hash(_userMetadata));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Auth0SignupRequestBody
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$Auth0SignupRequestBodyImplCopyWith<_$Auth0SignupRequestBodyImpl>
@@ -404,8 +414,11 @@ abstract class _Auth0SignupRequestBody implements Auth0SignupRequestBody {
   String? get pictureUrl;
   @override
   Map<String, String>? get userMetadata;
+
+  /// Create a copy of Auth0SignupRequestBody
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$Auth0SignupRequestBodyImplCopyWith<_$Auth0SignupRequestBodyImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -422,8 +435,12 @@ mixin _$Auth0SignupResponse {
   bool get emailVerified => throw _privateConstructorUsedError;
   String get email => throw _privateConstructorUsedError;
 
+  /// Serializes this Auth0SignupResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Auth0SignupResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $Auth0SignupResponseCopyWith<Auth0SignupResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -450,6 +467,8 @@ class _$Auth0SignupResponseCopyWithImpl<$Res, $Val extends Auth0SignupResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Auth0SignupResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -496,6 +515,8 @@ class __$$Auth0SignupResponseImplCopyWithImpl<$Res>
       $Res Function(_$Auth0SignupResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Auth0SignupResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -568,11 +589,13 @@ class _$Auth0SignupResponseImpl
             (identical(other.email, email) || other.email == email));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, user_id, emailVerified, email);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Auth0SignupResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$Auth0SignupResponseImplCopyWith<_$Auth0SignupResponseImpl> get copyWith =>
@@ -604,8 +627,11 @@ abstract class _Auth0SignupResponse implements Auth0SignupResponse {
   bool get emailVerified;
   @override
   String get email;
+
+  /// Create a copy of Auth0SignupResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$Auth0SignupResponseImplCopyWith<_$Auth0SignupResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -621,8 +647,12 @@ mixin _$Auth0ApiException {
   String? get description => throw _privateConstructorUsedError;
   int? get statusCode => throw _privateConstructorUsedError;
 
+  /// Serializes this Auth0ApiException to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Auth0ApiException
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $Auth0ApiExceptionCopyWith<Auth0ApiException> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -646,6 +676,8 @@ class _$Auth0ApiExceptionCopyWithImpl<$Res, $Val extends Auth0ApiException>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Auth0ApiException
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -694,6 +726,8 @@ class __$$Auth0ApiExceptionImplCopyWithImpl<$Res>
       $Res Function(_$Auth0ApiExceptionImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Auth0ApiException
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -772,12 +806,14 @@ class _$Auth0ApiExceptionImpl
                 other.statusCode == statusCode));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, name, code, description, statusCode);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Auth0ApiException
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$Auth0ApiExceptionImplCopyWith<_$Auth0ApiExceptionImpl> get copyWith =>
@@ -810,8 +846,11 @@ abstract class _Auth0ApiException implements Auth0ApiException {
   String? get description;
   @override
   int? get statusCode;
+
+  /// Create a copy of Auth0ApiException
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$Auth0ApiExceptionImplCopyWith<_$Auth0ApiExceptionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

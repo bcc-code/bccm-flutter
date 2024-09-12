@@ -23,8 +23,12 @@ AudioOnlyClickedEvent _$AudioOnlyClickedEventFromJson(
 mixin _$AudioOnlyClickedEvent {
   bool get audioOnly => throw _privateConstructorUsedError;
 
+  /// Serializes this AudioOnlyClickedEvent to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AudioOnlyClickedEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AudioOnlyClickedEventCopyWith<AudioOnlyClickedEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -49,6 +53,8 @@ class _$AudioOnlyClickedEventCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AudioOnlyClickedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -84,6 +90,8 @@ class __$$AudioOnlyClickedEventImplCopyWithImpl<$Res>
       $Res Function(_$AudioOnlyClickedEventImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AudioOnlyClickedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -123,11 +131,13 @@ class _$AudioOnlyClickedEventImpl implements _AudioOnlyClickedEvent {
                 other.audioOnly == audioOnly));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, audioOnly);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AudioOnlyClickedEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AudioOnlyClickedEventImplCopyWith<_$AudioOnlyClickedEventImpl>
@@ -151,8 +161,11 @@ abstract class _AudioOnlyClickedEvent implements AudioOnlyClickedEvent {
 
   @override
   bool get audioOnly;
+
+  /// Create a copy of AudioOnlyClickedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AudioOnlyClickedEventImplCopyWith<_$AudioOnlyClickedEventImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

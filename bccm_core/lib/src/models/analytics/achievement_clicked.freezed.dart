@@ -24,8 +24,12 @@ mixin _$AchievementClickedEvent {
   int get elementPosition => throw _privateConstructorUsedError;
   String get elementTitle => throw _privateConstructorUsedError;
 
+  /// Serializes this AchievementClickedEvent to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AchievementClickedEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AchievementClickedEventCopyWith<AchievementClickedEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,6 +54,8 @@ class _$AchievementClickedEventCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AchievementClickedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -91,6 +97,8 @@ class __$$AchievementClickedEventImplCopyWithImpl<$Res>
       $Res Function(_$AchievementClickedEventImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AchievementClickedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -140,11 +148,13 @@ class _$AchievementClickedEventImpl implements _AchievementClickedEvent {
                 other.elementTitle == elementTitle));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, elementPosition, elementTitle);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AchievementClickedEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AchievementClickedEventImplCopyWith<_$AchievementClickedEventImpl>
@@ -171,8 +181,11 @@ abstract class _AchievementClickedEvent implements AchievementClickedEvent {
   int get elementPosition;
   @override
   String get elementTitle;
+
+  /// Create a copy of AchievementClickedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AchievementClickedEventImplCopyWith<_$AchievementClickedEventImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
