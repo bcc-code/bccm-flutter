@@ -82,6 +82,8 @@ class Analytics {
   void notificationOpened(NotificationOpenedEvent event) {}
   @mustBeOverridden
   void reset() {}
+  @mustBeOverridden
+  Future<String> getAnonymousId() => Future(() => "");
 }
 
 class RudderAnalytics extends Analytics {
@@ -384,6 +386,16 @@ class RudderAnalytics extends Analytics {
   @override
   void reset() {
     RudderController.instance.reset(clearAnonymousId: true);
+  }
+
+  @override
+  Future<String> getAnonymousId() async {
+    var anonymousId = '';
+    final ctx = await RudderController.instance.getRudderContext();
+    if (ctx != null && ctx['traits'] != null && ctx['traits']['anonymousId'] != null) {
+      anonymousId = ctx['traits']['anonymousId'];
+    }
+    return anonymousId;
   }
 }
 
