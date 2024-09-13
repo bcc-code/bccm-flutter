@@ -70,14 +70,34 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
   @override
   Future<AuthState?> getExistingAndEnsureNotExpired() async {
     if (state.expiresAt == null || state.auth0AccessToken == null) {
+      FlutterError.reportError(FlutterErrorDetails(
+        exception: 'auth: Either auth0AccessToken or expiresAt is null',
+        stack: StackTrace.current,
+        library: 'bccm_core',
+        context: ErrorDescription('during auth-state retrieval'),
+      ));
+
       return null;
     }
     if (state.expiresAt!.difference(clock.now()) < kMinimumCredentialsTTL) {
       await _refresh();
+
+      FlutterError.reportError(FlutterErrorDetails(
+        exception: 'auth: Auth state is expired. Trying to renew.',
+        stack: StackTrace.current,
+        library: 'bccm_core',
+        context: ErrorDescription('during auth-state retrieval'),
+      ));
     }
     if (state.expiresAt!.difference(clock.now()) < kMinimumCredentialsTTL) {
       logout();
-      throw Exception('Auth state is still expired after attempting to renew.');
+
+      FlutterError.reportError(FlutterErrorDetails(
+        exception: 'auth: Auth state is still expired after attempting to renew.',
+        stack: StackTrace.current,
+        library: 'bccm_core',
+        context: ErrorDescription('during auth-state retrieval'),
+      ));
     }
     return state;
   }
@@ -114,6 +134,13 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
 
     DateTime? expiry = _getAccessTokenExpiry(accessToken);
     if (expiry.difference(clock.now()) < kMinimumCredentialsTTL) {
+      FlutterError.reportError(FlutterErrorDetails(
+        exception: 'auth: Access token is expired. Trying to renew.',
+        stack: StackTrace.current,
+        library: 'bccm_core',
+        context: ErrorDescription('during init/login'),
+      ));
+
       if (await _refresh()) return;
     }
     state = state.copyWith(
@@ -135,6 +162,13 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
     final refreshToken = await _secureStorage.read(key: SecureStorageKeys.refreshToken);
 
     if (refreshToken == null) {
+      FlutterError.reportError(FlutterErrorDetails(
+        exception: 'auth: Refresh token is null',
+        stack: StackTrace.current,
+        library: 'bccm_core',
+        context: ErrorDescription('during auth-token refresh'),
+      ));
+
       return false;
     }
 
@@ -155,9 +189,9 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
     } catch (e, s) {
       FlutterError.reportError(FlutterErrorDetails(
         exception: e,
-        stack: StackTrace.current,
+        stack: s,
         library: 'bccm_core',
-        context: ErrorDescription('during login'),
+        context: ErrorDescription('while attempting to refresh auth token during login'),
       ));
       debugPrint('error on Refresh Token: $e - stack: $s');
       if (kDebugMode) {
@@ -280,7 +314,7 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
     }
     if (isLogin && refreshToken == null) {
       FlutterError.reportError(FlutterErrorDetails(
-        exception: Exception('Refresh token missing on login'),
+        exception: Exception('auth: Refresh token missing on login'),
         stack: StackTrace.current,
         library: 'bccm_core',
         context: ErrorDescription('during login'),
