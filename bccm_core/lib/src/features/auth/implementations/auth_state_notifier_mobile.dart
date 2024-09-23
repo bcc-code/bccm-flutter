@@ -224,19 +224,6 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
   @override
   Future logout({bool manual = true}) async {
     await _clearCredentials();
-    if (Platform.isAndroid && manual && !config.isTv) {
-      final PackageInfo info = await PackageInfo.fromPlatform();
-      final url = Uri.https(
-        config.auth0Domain,
-        '/v2/logout',
-        {'client_id': config.auth0ClientId, 'returnTo': '${info.packageName}://logout-callback'},
-      );
-      // Log out of auth0.
-      // Couldn't get the callback url to work properly with iOS in-app-browser
-      // And with externalApplication on iOS, the callback url doesn't open automatically,
-      // the user has to click "Open".
-      await launchUrl(url, mode: LaunchMode.externalApplication);
-    }
     state = AuthState(signedOutManually: manual);
     config.onSignout?.call();
 
