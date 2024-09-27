@@ -11,8 +11,6 @@ import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:jwt_decoder/jwt_decoder.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:synchronized/synchronized.dart';
-import 'package:universal_io/io.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 import '../../../utils/constants.dart';
 
@@ -70,7 +68,7 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
   @override
   Future<AuthState?> getExistingAndEnsureNotExpired() async {
     if (state.expiresAt == null || state.auth0AccessToken == null) {
-      FlutterError.reportError(FlutterErrorDetails(
+      FlutterError.dumpErrorToConsole(FlutterErrorDetails(
         exception: 'auth: Either auth0AccessToken or expiresAt is null',
         stack: StackTrace.current,
         library: 'bccm_core',
@@ -82,7 +80,7 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
     if (state.expiresAt!.difference(clock.now()) < kMinimumCredentialsTTL) {
       await _refresh();
 
-      FlutterError.reportError(FlutterErrorDetails(
+      FlutterError.dumpErrorToConsole(FlutterErrorDetails(
         exception: 'auth: Auth state is expired. Trying to renew.',
         stack: StackTrace.current,
         library: 'bccm_core',
@@ -92,7 +90,7 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
     if (state.expiresAt!.difference(clock.now()) < kMinimumCredentialsTTL) {
       logout();
 
-      FlutterError.reportError(FlutterErrorDetails(
+      FlutterError.dumpErrorToConsole(FlutterErrorDetails(
         exception: 'auth: Auth state is still expired after attempting to renew.',
         stack: StackTrace.current,
         library: 'bccm_core',
@@ -134,7 +132,7 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
 
     DateTime? expiry = _getAccessTokenExpiry(accessToken);
     if (expiry.difference(clock.now()) < kMinimumCredentialsTTL) {
-      FlutterError.reportError(FlutterErrorDetails(
+      FlutterError.dumpErrorToConsole(FlutterErrorDetails(
         exception: 'auth: Access token is expired. Trying to renew.',
         stack: StackTrace.current,
         library: 'bccm_core',
@@ -162,7 +160,7 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
     final refreshToken = await _secureStorage.read(key: SecureStorageKeys.refreshToken);
 
     if (refreshToken == null) {
-      FlutterError.reportError(FlutterErrorDetails(
+      FlutterError.dumpErrorToConsole(FlutterErrorDetails(
         exception: 'auth: Refresh token is null',
         stack: StackTrace.current,
         library: 'bccm_core',
