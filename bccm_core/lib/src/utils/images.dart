@@ -59,7 +59,7 @@ Widget simpleFadeInImage({required String url, Duration? duration}) => LayoutBui
           placeholder: MemoryImage(kTransparentImage),
           image: networkImageWithRetryAndResize(
             imageUrl: url,
-            cacheHeight: (constraints.maxHeight * MediaQuery.of(context).devicePixelRatio).round(),
+            cacheHeight: (constraints.maxHeight * MediaQuery.devicePixelRatioOf(context)).round(),
           ),
           imageErrorBuilder: imageErrorBuilder,
           fadeInDuration: duration ?? const Duration(milliseconds: 400),

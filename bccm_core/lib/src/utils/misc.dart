@@ -61,7 +61,7 @@ T? tryCatchRecordError<T>(T Function() fn) {
 }
 
 Rect iPadSharePositionOrigin(BuildContext context) {
-  final Size size = MediaQuery.of(context).size;
+  final Size size = MediaQuery.sizeOf(context);
   return Rect.fromLTWH(0, 0, size.width, size.height / 2);
 }
 
