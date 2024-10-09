@@ -55,9 +55,6 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
   final Auth0Api _auth0Api;
   final Ref ref;
 
-  @override
-  Completer<void> initializeCompleter = Completer<void>();
-
   Future<T> _syncAppAuth<T>(Future<T> Function() call) {
     return appAuthLock.synchronized(
       () => call(),
@@ -94,10 +91,6 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
         context: ErrorDescription('during init/login'),
       ));
       rethrow;
-    } finally {
-      if (!initializeCompleter.isCompleted) {
-        initializeCompleter.complete();
-      }
     }
   }
 
@@ -153,7 +146,7 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
           ),
         ),
       );
-      await _setStateBasedOnResponse(result!);
+      await _setStateBasedOnResponse(result);
     } catch (e, s) {
       FlutterError.reportError(FlutterErrorDetails(
         exception: e,
@@ -166,9 +159,7 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
         print('bccm: auth refresh token: $refreshToken');
       }
 
-      if (ref.read(isOfflineProvider)) {
-        return false;
-      } else {
+      if (ref.read(isOfflineProvider) != true) {
         await _clearCredentials();
       }
 
@@ -238,7 +229,7 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
         () => _appAuth.authorizeAndExchangeCode(authorizationTokenRequest),
       );
 
-      await _setStateBasedOnResponse(result!, isLogin: true);
+      await _setStateBasedOnResponse(result, isLogin: true);
       config.onSignIn?.call();
     } catch (e, st) {
       logout(manual: false);

@@ -28,7 +28,6 @@ class AuthConfig {
 }
 
 abstract class AuthStateNotifier implements StateNotifier<AuthState> {
-  Completer<void> get initializeCompleter;
   Future<AuthState?> getExistingAndEnsureNotExpired();
   Future<void> initialize();
   Future<bool> forceRefresh();
