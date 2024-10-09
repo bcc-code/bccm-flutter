@@ -84,6 +84,8 @@ class Analytics {
   void reset() {}
   @mustBeOverridden
   Future<String> getAnonymousId() => Future(() => "");
+  @mustBeOverridden
+  void log(LogEvent event) {}
 }
 
 class RudderAnalytics extends Analytics {
@@ -396,6 +398,11 @@ class RudderAnalytics extends Analytics {
       anonymousId = ctx['traits']['anonymousId'];
     }
     return anonymousId;
+  }
+
+  @override
+  void log(event) {
+    RudderController.instance.track('log', properties: getCommonData().putValue(map: event.toJson()));
   }
 }
 

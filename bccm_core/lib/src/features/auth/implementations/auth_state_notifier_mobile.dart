@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:bccm_core/bccm_core.dart';
+import 'package:bccm_core/platform.dart';
 import 'package:bccm_core/src/models/user_profile.dart';
 import 'package:clock/clock.dart';
 import 'package:flutter/foundation.dart';
@@ -204,6 +205,11 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
       ));
     } catch (e) {
       logout(manual: false);
+      ref.read(analyticsProvider).log(const LogEvent(
+            name: 'logout',
+            message: 'bccm_core, loginViaDeviceCode()',
+            meta: {'manual': false},
+          ));
       rethrow;
     }
   }
@@ -233,6 +239,11 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
       config.onSignIn?.call();
     } catch (e, st) {
       logout(manual: false);
+      ref.read(analyticsProvider).log(const LogEvent(
+            name: 'logout',
+            message: 'bccm_core, login()',
+            meta: {'manual': false},
+          ));
       debugPrint(e.toString());
       FlutterError.reportError(FlutterErrorDetails(
         exception: e,

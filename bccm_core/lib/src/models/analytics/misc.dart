@@ -69,3 +69,15 @@ class NotificationOpenedEvent with _$NotificationOpenedEvent {
 
   factory NotificationOpenedEvent.fromJson(Map<String, dynamic> json) => _$NotificationOpenedEventFromJson(json);
 }
+
+@freezed
+class LogEvent with _$LogEvent {
+  const factory LogEvent({
+    String? name,
+    String? message,
+    String? pageCode,
+    Map<String, dynamic>? meta,
+  }) = _LogEvent;
+
+  factory LogEvent.fromJson(Map<String, dynamic> json) => _$LogEventFromJson(json);
+}

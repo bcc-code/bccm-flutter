@@ -1241,3 +1241,225 @@ abstract class _NotificationOpenedEvent implements NotificationOpenedEvent {
   _$$NotificationOpenedEventImplCopyWith<_$NotificationOpenedEventImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
+
+LogEvent _$LogEventFromJson(Map<String, dynamic> json) {
+  return _LogEvent.fromJson(json);
+}
+
+/// @nodoc
+mixin _$LogEvent {
+  String? get name => throw _privateConstructorUsedError;
+  String? get message => throw _privateConstructorUsedError;
+  String? get pageCode => throw _privateConstructorUsedError;
+  Map<String, dynamic>? get meta => throw _privateConstructorUsedError;
+
+  /// Serializes this LogEvent to a JSON map.
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
+  /// Create a copy of LogEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $LogEventCopyWith<LogEvent> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $LogEventCopyWith<$Res> {
+  factory $LogEventCopyWith(LogEvent value, $Res Function(LogEvent) then) =
+      _$LogEventCopyWithImpl<$Res, LogEvent>;
+  @useResult
+  $Res call(
+      {String? name,
+      String? message,
+      String? pageCode,
+      Map<String, dynamic>? meta});
+}
+
+/// @nodoc
+class _$LogEventCopyWithImpl<$Res, $Val extends LogEvent>
+    implements $LogEventCopyWith<$Res> {
+  _$LogEventCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of LogEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? name = freezed,
+    Object? message = freezed,
+    Object? pageCode = freezed,
+    Object? meta = freezed,
+  }) {
+    return _then(_value.copyWith(
+      name: freezed == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      message: freezed == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String?,
+      pageCode: freezed == pageCode
+          ? _value.pageCode
+          : pageCode // ignore: cast_nullable_to_non_nullable
+              as String?,
+      meta: freezed == meta
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$LogEventImplCopyWith<$Res>
+    implements $LogEventCopyWith<$Res> {
+  factory _$$LogEventImplCopyWith(
+          _$LogEventImpl value, $Res Function(_$LogEventImpl) then) =
+      __$$LogEventImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String? name,
+      String? message,
+      String? pageCode,
+      Map<String, dynamic>? meta});
+}
+
+/// @nodoc
+class __$$LogEventImplCopyWithImpl<$Res>
+    extends _$LogEventCopyWithImpl<$Res, _$LogEventImpl>
+    implements _$$LogEventImplCopyWith<$Res> {
+  __$$LogEventImplCopyWithImpl(
+      _$LogEventImpl _value, $Res Function(_$LogEventImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of LogEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? name = freezed,
+    Object? message = freezed,
+    Object? pageCode = freezed,
+    Object? meta = freezed,
+  }) {
+    return _then(_$LogEventImpl(
+      name: freezed == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      message: freezed == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String?,
+      pageCode: freezed == pageCode
+          ? _value.pageCode
+          : pageCode // ignore: cast_nullable_to_non_nullable
+              as String?,
+      meta: freezed == meta
+          ? _value._meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$LogEventImpl implements _LogEvent {
+  const _$LogEventImpl(
+      {this.name,
+      this.message,
+      this.pageCode,
+      final Map<String, dynamic>? meta})
+      : _meta = meta;
+
+  factory _$LogEventImpl.fromJson(Map<String, dynamic> json) =>
+      _$$LogEventImplFromJson(json);
+
+  @override
+  final String? name;
+  @override
+  final String? message;
+  @override
+  final String? pageCode;
+  final Map<String, dynamic>? _meta;
+  @override
+  Map<String, dynamic>? get meta {
+    final value = _meta;
+    if (value == null) return null;
+    if (_meta is EqualUnmodifiableMapView) return _meta;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(value);
+  }
+
+  @override
+  String toString() {
+    return 'LogEvent(name: $name, message: $message, pageCode: $pageCode, meta: $meta)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$LogEventImpl &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.message, message) || other.message == message) &&
+            (identical(other.pageCode, pageCode) ||
+                other.pageCode == pageCode) &&
+            const DeepCollectionEquality().equals(other._meta, _meta));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, name, message, pageCode,
+      const DeepCollectionEquality().hash(_meta));
+
+  /// Create a copy of LogEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$LogEventImplCopyWith<_$LogEventImpl> get copyWith =>
+      __$$LogEventImplCopyWithImpl<_$LogEventImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$LogEventImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _LogEvent implements LogEvent {
+  const factory _LogEvent(
+      {final String? name,
+      final String? message,
+      final String? pageCode,
+      final Map<String, dynamic>? meta}) = _$LogEventImpl;
+
+  factory _LogEvent.fromJson(Map<String, dynamic> json) =
+      _$LogEventImpl.fromJson;
+
+  @override
+  String? get name;
+  @override
+  String? get message;
+  @override
+  String? get pageCode;
+  @override
+  Map<String, dynamic>? get meta;
+
+  /// Create a copy of LogEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$LogEventImplCopyWith<_$LogEventImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}

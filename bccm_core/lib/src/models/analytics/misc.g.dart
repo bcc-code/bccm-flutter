@@ -103,3 +103,19 @@ Map<String, dynamic> _$$NotificationOpenedEventImplToJson(
     <String, dynamic>{
       'notificationId': instance.notificationId,
     };
+
+_$LogEventImpl _$$LogEventImplFromJson(Map<String, dynamic> json) =>
+    _$LogEventImpl(
+      name: json['name'] as String?,
+      message: json['message'] as String?,
+      pageCode: json['pageCode'] as String?,
+      meta: json['meta'] as Map<String, dynamic>?,
+    );
+
+Map<String, dynamic> _$$LogEventImplToJson(_$LogEventImpl instance) =>
+    <String, dynamic>{
+      'name': instance.name,
+      'message': instance.message,
+      'pageCode': instance.pageCode,
+      'meta': instance.meta,
+    };
