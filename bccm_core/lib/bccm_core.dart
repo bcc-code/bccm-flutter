@@ -41,3 +41,4 @@ export 'src/utils/debouncer.dart';
 export 'src/utils/open_app.dart';
 export 'src/utils/riverpod.dart';
 export 'src/utils/share_image.dart';
+export 'src/utils/widget_to_image/widget_to_image.dart';
