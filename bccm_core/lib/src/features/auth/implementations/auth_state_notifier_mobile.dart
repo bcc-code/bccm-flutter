@@ -136,7 +136,7 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
 
     final PackageInfo info = await PackageInfo.fromPlatform();
     try {
-      final TokenResponse? result = await _syncAppAuth(
+      final result = await _syncAppAuth(
         () => _appAuth.token(
           TokenRequest(
             config.auth0ClientId,
