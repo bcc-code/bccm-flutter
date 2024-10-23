@@ -215,3 +215,148 @@ String normalizeLanguage(String code) {
       return code;
   }
 }
+
+String toThreeLetterLanguageCode(String code) {
+  switch (code) {
+    // Norwegian
+    case 'no':
+    case 'nb':
+    case 'nb-NO':
+    case 'nor':
+    case 'nob':
+    case 'no-nob':
+      return 'nor';
+
+    // English
+    case 'en':
+    case 'eng':
+    case 'en-US':
+    case 'en-GB':
+      return 'eng';
+
+    // French
+    case 'fr':
+    case 'fra':
+    case 'fr-FR':
+      return 'fra';
+
+    // German
+    case 'de':
+    case 'deu':
+    case 'de-DE':
+      return 'deu';
+
+    // Hungarian
+    case 'hu':
+    case 'hun':
+    case 'hu-HU':
+      return 'hun';
+
+    // Spanish
+    case 'es':
+    case 'spa':
+    case 'es-ES':
+      return 'spa';
+
+    // Italian
+    case 'it':
+    case 'ita':
+    case 'it-IT':
+      return 'ita';
+
+    // Polish
+    case 'pl':
+    case 'pol':
+    case 'pl-PL':
+      return 'pol';
+
+    // Romanian
+    case 'ro':
+    case 'ron':
+    case 'ro-RO':
+      return 'ron';
+
+    // Russian
+    case 'ru':
+    case 'rus':
+    case 'ru-RU':
+      return 'rus';
+
+    // Slovenian
+    case 'sl':
+    case 'slv':
+    case 'sl-SI':
+      return 'slv';
+
+    // Turkish
+    case 'tr':
+    case 'tur':
+    case 'tr-TR':
+      return 'tur';
+
+    // Chinese
+    case 'zh':
+    case 'zho':
+    case 'cmn':
+    case 'zh-cmn':
+    case 'zh-CN':
+      return 'zho';
+
+    // Cantonese
+    case 'zh-HK':
+    case 'yue':
+    case 'yue-HK':
+      return 'yue';
+
+    // Tamil
+    case 'ta':
+    case 'tam':
+    case 'ta-IN':
+      return 'tam';
+
+    // Bulgarian
+    case 'bg':
+    case 'bul':
+    case 'bg-BG':
+      return 'bul';
+
+    // Netherlands
+    case 'nl':
+    case 'nld':
+    case 'nl-NL':
+      return 'nld';
+
+    // Danish
+    case 'da':
+    case 'dan':
+    case 'da-DK':
+      return 'dan';
+
+    // Finnish
+    case 'fi':
+    case 'fin':
+    case 'fi-FI':
+      return 'fin';
+
+    // Portuguese
+    case 'pt':
+    case 'por':
+    case 'pt-PT':
+      return 'por';
+
+    // Khasi
+    case 'kha':
+    case 'kha-IN':
+      return 'kha';
+
+    // Croatian
+    case 'hr':
+    case 'hrv':
+    case 'hbs-hrv':
+    case 'hr-HR':
+      return 'hrv';
+
+    default:
+      return code;
+  }
+}
