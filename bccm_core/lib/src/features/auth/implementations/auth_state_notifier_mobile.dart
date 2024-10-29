@@ -238,6 +238,7 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
       await _setStateBasedOnResponse(result, isLogin: true);
       config.onSignIn?.call();
     } on FlutterAppAuthUserCancelledException catch (e) {
+      logout(manual: false);
       final details = e.platformErrorDetails;
       ref.read(analyticsProvider).log(LogEvent(
             name: 'login cancelled by user',
@@ -251,6 +252,7 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
           ));
       return false;
     } on FlutterAppAuthPlatformException catch (e) {
+      logout(manual: false);
       final details = e.platformErrorDetails;
       ref.read(analyticsProvider).log(LogEvent(
             name: 'login failed',
