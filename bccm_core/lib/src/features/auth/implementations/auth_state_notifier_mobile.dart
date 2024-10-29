@@ -231,12 +231,38 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
         additionalParameters: additionalParameters,
       );
 
-      final AuthorizationTokenResponse? result = await _syncAppAuth(
+      final AuthorizationTokenResponse result = await _syncAppAuth(
         () => _appAuth.authorizeAndExchangeCode(authorizationTokenRequest),
       );
 
       await _setStateBasedOnResponse(result, isLogin: true);
       config.onSignIn?.call();
+    } on FlutterAppAuthUserCancelledException catch (e) {
+      final details = e.platformErrorDetails;
+      ref.read(analyticsProvider).log(LogEvent(
+            name: 'login cancelled by user',
+            message: e.message,
+            meta: {
+              'code': details.code,
+              'type': details.type,
+              'error': details.error,
+              'debugDescription': details.errorDebugDescription,
+            },
+          ));
+      return false;
+    } on FlutterAppAuthPlatformException catch (e) {
+      final details = e.platformErrorDetails;
+      ref.read(analyticsProvider).log(LogEvent(
+            name: 'login failed',
+            message: e.message,
+            meta: {
+              'code': details.code,
+              'type': details.type,
+              'error': details.error,
+              'debugDescription': details.errorDebugDescription,
+            },
+          ));
+      return false;
     } catch (e, st) {
       logout(manual: false);
       ref.read(analyticsProvider).log(const LogEvent(
@@ -256,14 +282,13 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
     return true;
   }
 
-  Future<void> _setStateBasedOnResponse(TokenResponse? result, {bool isLogin = false}) async {
-    final accessToken = result?.accessToken;
-    final idToken = result?.idToken;
-    final refreshToken = result?.refreshToken;
+  Future<void> _setStateBasedOnResponse(TokenResponse result, {bool isLogin = false}) async {
+    final accessToken = result.accessToken;
+    final idToken = result.idToken;
+    final refreshToken = result.refreshToken;
     if (accessToken == null || idToken == null) {
       throw Exception([
         'Invalid token response',
-        'result null: ${result == null}',
         'accessToken null: ${accessToken == null}',
         'idToken null: ${idToken == null}',
         'refreshToken null: ${refreshToken == null}'
