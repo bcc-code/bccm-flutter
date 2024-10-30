@@ -9,5 +9,8 @@ String formatAppName(PackageInfo packageInfo) {
   if (packageInfo.appName == 'Live') {
     appName = isAndroidTv ? 'live-androidtv' : 'live-mobile';
   }
+  if (packageInfo.appName == 'Bible Kids') {
+    appName = 'kids-mobile';
+  }
   return appName;
 }
