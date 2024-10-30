@@ -1,6 +1,7 @@
 import 'package:bccm_core/bccm_core.dart';
 import 'package:bccm_core/platform.dart';
 import 'package:bccm_core/src/models/user_profile.dart';
+import 'package:bccm_core/src/utils/app_name.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -136,6 +137,7 @@ class RudderAnalytics extends Analytics {
     final androidTv = ref.read(isAndroidTvProvider);
     var commonData = RudderProperty.fromMap({
       'channel': androidTv ? 'androidtv' : 'mobile',
+      'appName': packageInfo == null ? null : formatAppName(packageInfo!),
       'appLanguage': settings.appLanguage.languageCode,
       'releaseVersion': packageInfo == null ? null : formatAppVersion(packageInfo!),
       'sessionId': settings.sessionId,
