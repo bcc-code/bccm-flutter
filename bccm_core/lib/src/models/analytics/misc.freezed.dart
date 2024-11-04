@@ -1463,3 +1463,163 @@ abstract class _LogEvent implements LogEvent {
   _$$LogEventImplCopyWith<_$LogEventImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
+
+VideoPlayedEvent _$VideoPlayedEventFromJson(Map<String, dynamic> json) {
+  return _VideoPlayedEvent.fromJson(json);
+}
+
+/// @nodoc
+mixin _$VideoPlayedEvent {
+  Map<String, dynamic>? get data => throw _privateConstructorUsedError;
+
+  /// Serializes this VideoPlayedEvent to a JSON map.
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
+  /// Create a copy of VideoPlayedEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $VideoPlayedEventCopyWith<VideoPlayedEvent> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $VideoPlayedEventCopyWith<$Res> {
+  factory $VideoPlayedEventCopyWith(
+          VideoPlayedEvent value, $Res Function(VideoPlayedEvent) then) =
+      _$VideoPlayedEventCopyWithImpl<$Res, VideoPlayedEvent>;
+  @useResult
+  $Res call({Map<String, dynamic>? data});
+}
+
+/// @nodoc
+class _$VideoPlayedEventCopyWithImpl<$Res, $Val extends VideoPlayedEvent>
+    implements $VideoPlayedEventCopyWith<$Res> {
+  _$VideoPlayedEventCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of VideoPlayedEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_value.copyWith(
+      data: freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$VideoPlayedEventImplCopyWith<$Res>
+    implements $VideoPlayedEventCopyWith<$Res> {
+  factory _$$VideoPlayedEventImplCopyWith(_$VideoPlayedEventImpl value,
+          $Res Function(_$VideoPlayedEventImpl) then) =
+      __$$VideoPlayedEventImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({Map<String, dynamic>? data});
+}
+
+/// @nodoc
+class __$$VideoPlayedEventImplCopyWithImpl<$Res>
+    extends _$VideoPlayedEventCopyWithImpl<$Res, _$VideoPlayedEventImpl>
+    implements _$$VideoPlayedEventImplCopyWith<$Res> {
+  __$$VideoPlayedEventImplCopyWithImpl(_$VideoPlayedEventImpl _value,
+      $Res Function(_$VideoPlayedEventImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of VideoPlayedEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$VideoPlayedEventImpl(
+      data: freezed == data
+          ? _value._data
+          : data // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$VideoPlayedEventImpl implements _VideoPlayedEvent {
+  const _$VideoPlayedEventImpl({final Map<String, dynamic>? data})
+      : _data = data;
+
+  factory _$VideoPlayedEventImpl.fromJson(Map<String, dynamic> json) =>
+      _$$VideoPlayedEventImplFromJson(json);
+
+  final Map<String, dynamic>? _data;
+  @override
+  Map<String, dynamic>? get data {
+    final value = _data;
+    if (value == null) return null;
+    if (_data is EqualUnmodifiableMapView) return _data;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(value);
+  }
+
+  @override
+  String toString() {
+    return 'VideoPlayedEvent(data: $data)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$VideoPlayedEventImpl &&
+            const DeepCollectionEquality().equals(other._data, _data));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_data));
+
+  /// Create a copy of VideoPlayedEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$VideoPlayedEventImplCopyWith<_$VideoPlayedEventImpl> get copyWith =>
+      __$$VideoPlayedEventImplCopyWithImpl<_$VideoPlayedEventImpl>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$VideoPlayedEventImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _VideoPlayedEvent implements VideoPlayedEvent {
+  const factory _VideoPlayedEvent({final Map<String, dynamic>? data}) =
+      _$VideoPlayedEventImpl;
+
+  factory _VideoPlayedEvent.fromJson(Map<String, dynamic> json) =
+      _$VideoPlayedEventImpl.fromJson;
+
+  @override
+  Map<String, dynamic>? get data;
+
+  /// Create a copy of VideoPlayedEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$VideoPlayedEventImplCopyWith<_$VideoPlayedEventImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
