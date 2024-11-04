@@ -87,6 +87,8 @@ class Analytics {
   Future<String> getAnonymousId() => Future(() => "");
   @mustBeOverridden
   void log(LogEvent event) {}
+  @mustBeOverridden
+  void videoPlayed(VideoPlayedEvent event) {}
 }
 
 class RudderAnalytics extends Analytics {
@@ -405,6 +407,11 @@ class RudderAnalytics extends Analytics {
   @override
   void log(event) {
     RudderController.instance.track('log', properties: getCommonData().putValue(map: event.toJson()));
+  }
+
+  @override
+  void videoPlayed(VideoPlayedEvent event) {
+    RudderController.instance.track('video_played', properties: getCommonData().putValue(map: event.toJson()));
   }
 }
 

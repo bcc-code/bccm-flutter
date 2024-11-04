@@ -81,3 +81,12 @@ class LogEvent with _$LogEvent {
 
   factory LogEvent.fromJson(Map<String, dynamic> json) => _$LogEventFromJson(json);
 }
+
+@freezed
+class VideoPlayedEvent with _$VideoPlayedEvent {
+  const factory VideoPlayedEvent({
+    Map<String, dynamic>? data,
+  }) = _VideoPlayedEvent;
+
+  factory VideoPlayedEvent.fromJson(Map<String, dynamic> json) => _$VideoPlayedEventFromJson(json);
+}

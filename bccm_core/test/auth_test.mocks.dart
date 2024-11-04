@@ -9,7 +9,8 @@ import 'package:bccm_core/src/features/auth/auth0_api.dart' as _i4;
 import 'package:bccm_core/src/models/auth0/auth0_api.dart' as _i9;
 import 'package:flutter/foundation.dart' as _i7;
 import 'package:flutter_appauth/src/flutter_appauth.dart' as _i5;
-import 'package:flutter_appauth_platform_interface/flutter_appauth_platform_interface.dart' as _i2;
+import 'package:flutter_appauth_platform_interface/flutter_appauth_platform_interface.dart'
+    as _i2;
 import 'package:flutter_secure_storage/flutter_secure_storage.dart' as _i3;
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:mockito/src/dummies.dart' as _i8;
@@ -27,7 +28,8 @@ import 'package:mockito/src/dummies.dart' as _i8;
 // ignore_for_file: camel_case_types
 // ignore_for_file: subtype_of_sealed_class
 
-class _FakeAuthorizationTokenResponse_0 extends _i1.SmartFake implements _i2.AuthorizationTokenResponse {
+class _FakeAuthorizationTokenResponse_0 extends _i1.SmartFake
+    implements _i2.AuthorizationTokenResponse {
   _FakeAuthorizationTokenResponse_0(
     Object parent,
     Invocation parentInvocation,
@@ -37,7 +39,8 @@ class _FakeAuthorizationTokenResponse_0 extends _i1.SmartFake implements _i2.Aut
         );
 }
 
-class _FakeAuthorizationResponse_1 extends _i1.SmartFake implements _i2.AuthorizationResponse {
+class _FakeAuthorizationResponse_1 extends _i1.SmartFake
+    implements _i2.AuthorizationResponse {
   _FakeAuthorizationResponse_1(
     Object parent,
     Invocation parentInvocation,
@@ -57,7 +60,8 @@ class _FakeTokenResponse_2 extends _i1.SmartFake implements _i2.TokenResponse {
         );
 }
 
-class _FakeEndSessionResponse_3 extends _i1.SmartFake implements _i2.EndSessionResponse {
+class _FakeEndSessionResponse_3 extends _i1.SmartFake
+    implements _i2.EndSessionResponse {
   _FakeEndSessionResponse_3(
     Object parent,
     Invocation parentInvocation,
@@ -77,7 +81,8 @@ class _FakeIOSOptions_4 extends _i1.SmartFake implements _i3.IOSOptions {
         );
 }
 
-class _FakeAndroidOptions_5 extends _i1.SmartFake implements _i3.AndroidOptions {
+class _FakeAndroidOptions_5 extends _i1.SmartFake
+    implements _i3.AndroidOptions {
   _FakeAndroidOptions_5(
     Object parent,
     Invocation parentInvocation,
@@ -97,7 +102,8 @@ class _FakeLinuxOptions_6 extends _i1.SmartFake implements _i3.LinuxOptions {
         );
 }
 
-class _FakeWindowsOptions_7 extends _i1.SmartFake implements _i3.WindowsOptions {
+class _FakeWindowsOptions_7 extends _i1.SmartFake
+    implements _i3.WindowsOptions {
   _FakeWindowsOptions_7(
     Object parent,
     Invocation parentInvocation,
@@ -127,7 +133,8 @@ class _FakeMacOsOptions_9 extends _i1.SmartFake implements _i3.MacOsOptions {
         );
 }
 
-class _FakeDeviceTokenRequestResponse_10 extends _i1.SmartFake implements _i4.DeviceTokenRequestResponse {
+class _FakeDeviceTokenRequestResponse_10 extends _i1.SmartFake
+    implements _i4.DeviceTokenRequestResponse {
   _FakeDeviceTokenRequestResponse_10(
     Object parent,
     Invocation parentInvocation,
@@ -152,19 +159,24 @@ class _FakeCredentials_11 extends _i1.SmartFake implements _i4.Credentials {
 /// See the documentation for Mockito's code generation for more information.
 class MockFlutterAppAuth extends _i1.Mock implements _i5.FlutterAppAuth {
   @override
-  _i6.Future<_i2.AuthorizationTokenResponse> authorizeAndExchangeCode(_i2.AuthorizationTokenRequest? request) => (super.noSuchMethod(
+  _i6.Future<_i2.AuthorizationTokenResponse> authorizeAndExchangeCode(
+          _i2.AuthorizationTokenRequest? request) =>
+      (super.noSuchMethod(
         Invocation.method(
           #authorizeAndExchangeCode,
           [request],
         ),
-        returnValue: _i6.Future<_i2.AuthorizationTokenResponse>.value(_FakeAuthorizationTokenResponse_0(
+        returnValue: _i6.Future<_i2.AuthorizationTokenResponse>.value(
+            _FakeAuthorizationTokenResponse_0(
           this,
           Invocation.method(
             #authorizeAndExchangeCode,
             [request],
           ),
         )),
-        returnValueForMissingStub: _i6.Future<_i2.AuthorizationTokenResponse>.value(_FakeAuthorizationTokenResponse_0(
+        returnValueForMissingStub:
+            _i6.Future<_i2.AuthorizationTokenResponse>.value(
+                _FakeAuthorizationTokenResponse_0(
           this,
           Invocation.method(
             #authorizeAndExchangeCode,
@@ -174,19 +186,23 @@ class MockFlutterAppAuth extends _i1.Mock implements _i5.FlutterAppAuth {
       ) as _i6.Future<_i2.AuthorizationTokenResponse>);
 
   @override
-  _i6.Future<_i2.AuthorizationResponse> authorize(_i2.AuthorizationRequest? request) => (super.noSuchMethod(
+  _i6.Future<_i2.AuthorizationResponse> authorize(
+          _i2.AuthorizationRequest? request) =>
+      (super.noSuchMethod(
         Invocation.method(
           #authorize,
           [request],
         ),
-        returnValue: _i6.Future<_i2.AuthorizationResponse>.value(_FakeAuthorizationResponse_1(
+        returnValue: _i6.Future<_i2.AuthorizationResponse>.value(
+            _FakeAuthorizationResponse_1(
           this,
           Invocation.method(
             #authorize,
             [request],
           ),
         )),
-        returnValueForMissingStub: _i6.Future<_i2.AuthorizationResponse>.value(_FakeAuthorizationResponse_1(
+        returnValueForMissingStub: _i6.Future<_i2.AuthorizationResponse>.value(
+            _FakeAuthorizationResponse_1(
           this,
           Invocation.method(
             #authorize,
@@ -196,7 +212,8 @@ class MockFlutterAppAuth extends _i1.Mock implements _i5.FlutterAppAuth {
       ) as _i6.Future<_i2.AuthorizationResponse>);
 
   @override
-  _i6.Future<_i2.TokenResponse> token(_i2.TokenRequest? request) => (super.noSuchMethod(
+  _i6.Future<_i2.TokenResponse> token(_i2.TokenRequest? request) =>
+      (super.noSuchMethod(
         Invocation.method(
           #token,
           [request],
@@ -208,7 +225,8 @@ class MockFlutterAppAuth extends _i1.Mock implements _i5.FlutterAppAuth {
             [request],
           ),
         )),
-        returnValueForMissingStub: _i6.Future<_i2.TokenResponse>.value(_FakeTokenResponse_2(
+        returnValueForMissingStub:
+            _i6.Future<_i2.TokenResponse>.value(_FakeTokenResponse_2(
           this,
           Invocation.method(
             #token,
@@ -218,19 +236,23 @@ class MockFlutterAppAuth extends _i1.Mock implements _i5.FlutterAppAuth {
       ) as _i6.Future<_i2.TokenResponse>);
 
   @override
-  _i6.Future<_i2.EndSessionResponse> endSession(_i2.EndSessionRequest? request) => (super.noSuchMethod(
+  _i6.Future<_i2.EndSessionResponse> endSession(
+          _i2.EndSessionRequest? request) =>
+      (super.noSuchMethod(
         Invocation.method(
           #endSession,
           [request],
         ),
-        returnValue: _i6.Future<_i2.EndSessionResponse>.value(_FakeEndSessionResponse_3(
+        returnValue:
+            _i6.Future<_i2.EndSessionResponse>.value(_FakeEndSessionResponse_3(
           this,
           Invocation.method(
             #endSession,
             [request],
           ),
         )),
-        returnValueForMissingStub: _i6.Future<_i2.EndSessionResponse>.value(_FakeEndSessionResponse_3(
+        returnValueForMissingStub:
+            _i6.Future<_i2.EndSessionResponse>.value(_FakeEndSessionResponse_3(
           this,
           Invocation.method(
             #endSession,
@@ -243,7 +265,8 @@ class MockFlutterAppAuth extends _i1.Mock implements _i5.FlutterAppAuth {
 /// A class which mocks [FlutterSecureStorage].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockFlutterSecureStorage extends _i1.Mock implements _i3.FlutterSecureStorage {
+class MockFlutterSecureStorage extends _i1.Mock
+    implements _i3.FlutterSecureStorage {
   @override
   _i3.IOSOptions get iOptions => (super.noSuchMethod(
         Invocation.getter(#iOptions),
@@ -357,7 +380,8 @@ class MockFlutterSecureStorage extends _i1.Mock implements _i3.FlutterSecureStor
       );
 
   @override
-  void unregisterAllListenersForKey({required String? key}) => super.noSuchMethod(
+  void unregisterAllListenersForKey({required String? key}) =>
+      super.noSuchMethod(
         Invocation.method(
           #unregisterAllListenersForKey,
           [],
@@ -512,7 +536,8 @@ class MockFlutterSecureStorage extends _i1.Mock implements _i3.FlutterSecureStor
           },
         ),
         returnValue: _i6.Future<Map<String, String>>.value(<String, String>{}),
-        returnValueForMissingStub: _i6.Future<Map<String, String>>.value(<String, String>{}),
+        returnValueForMissingStub:
+            _i6.Future<Map<String, String>>.value(<String, String>{}),
       ) as _i6.Future<Map<String, String>>);
 
   @override
@@ -596,7 +621,9 @@ class MockAuth0Api extends _i1.Mock implements _i4.Auth0Api {
       ) as String);
 
   @override
-  _i6.Future<_i9.Auth0SignupResponse?> signup(_i9.Auth0SignupRequestBody? requestBody) => (super.noSuchMethod(
+  _i6.Future<_i9.Auth0SignupResponse?> signup(
+          _i9.Auth0SignupRequestBody? requestBody) =>
+      (super.noSuchMethod(
         Invocation.method(
           #signup,
           [requestBody],
@@ -606,13 +633,16 @@ class MockAuth0Api extends _i1.Mock implements _i4.Auth0Api {
       ) as _i6.Future<_i9.Auth0SignupResponse?>);
 
   @override
-  _i6.Future<_i4.DeviceTokenRequestResponse> fetchDeviceCode({required String? scope}) => (super.noSuchMethod(
+  _i6.Future<_i4.DeviceTokenRequestResponse> fetchDeviceCode(
+          {required String? scope}) =>
+      (super.noSuchMethod(
         Invocation.method(
           #fetchDeviceCode,
           [],
           {#scope: scope},
         ),
-        returnValue: _i6.Future<_i4.DeviceTokenRequestResponse>.value(_FakeDeviceTokenRequestResponse_10(
+        returnValue: _i6.Future<_i4.DeviceTokenRequestResponse>.value(
+            _FakeDeviceTokenRequestResponse_10(
           this,
           Invocation.method(
             #fetchDeviceCode,
@@ -620,7 +650,9 @@ class MockAuth0Api extends _i1.Mock implements _i4.Auth0Api {
             {#scope: scope},
           ),
         )),
-        returnValueForMissingStub: _i6.Future<_i4.DeviceTokenRequestResponse>.value(_FakeDeviceTokenRequestResponse_10(
+        returnValueForMissingStub:
+            _i6.Future<_i4.DeviceTokenRequestResponse>.value(
+                _FakeDeviceTokenRequestResponse_10(
           this,
           Invocation.method(
             #fetchDeviceCode,
@@ -631,7 +663,9 @@ class MockAuth0Api extends _i1.Mock implements _i4.Auth0Api {
       ) as _i6.Future<_i4.DeviceTokenRequestResponse>);
 
   @override
-  _i6.Future<_i4.Credentials> listenToResolve(_i4.DeviceTokenRequestResponse? deviceToken) => (super.noSuchMethod(
+  _i6.Future<_i4.Credentials> listenToResolve(
+          _i4.DeviceTokenRequestResponse? deviceToken) =>
+      (super.noSuchMethod(
         Invocation.method(
           #listenToResolve,
           [deviceToken],
@@ -643,7 +677,8 @@ class MockAuth0Api extends _i1.Mock implements _i4.Auth0Api {
             [deviceToken],
           ),
         )),
-        returnValueForMissingStub: _i6.Future<_i4.Credentials>.value(_FakeCredentials_11(
+        returnValueForMissingStub:
+            _i6.Future<_i4.Credentials>.value(_FakeCredentials_11(
           this,
           Invocation.method(
             #listenToResolve,
