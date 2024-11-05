@@ -96,9 +96,27 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
   }
 
   Future<void> _initialize() async {
-    final accessToken = await _secureStorage.read(key: SecureStorageKeys.accessToken);
-    final idToken = await _secureStorage.read(key: SecureStorageKeys.idToken);
-    final userProfileRaw = await _secureStorage.read(key: SecureStorageKeys.userProfile);
+    final accessToken = await _secureStorage.read(key: SecureStorageKeys.accessToken).catchError((e) {
+      ref.read(analyticsProvider).log(LogEvent(
+            name: 'reading access token from secure storage failed',
+            message: e.toString(),
+          ));
+      return e;
+    });
+    final idToken = await _secureStorage.read(key: SecureStorageKeys.idToken).catchError((e) {
+      ref.read(analyticsProvider).log(LogEvent(
+            name: 'reading id token from secure storage failed',
+            message: e.toString(),
+          ));
+      return e;
+    });
+    final userProfileRaw = await _secureStorage.read(key: SecureStorageKeys.userProfile).catchError((e) {
+      ref.read(analyticsProvider).log(LogEvent(
+            name: 'reading user profile from secure storage failed',
+            message: e.toString(),
+          ));
+      return e;
+    });
 
     if (accessToken == null || idToken == null || userProfileRaw == null) {
       return;
@@ -146,9 +164,19 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
             additionalParameters: {'audience': config.auth0Audience, 'custom_scope': config.scopes.join(' ')},
           ),
         ),
-      );
+      ).catchError((e) {
+        ref.read(analyticsProvider).log(LogEvent(
+              name: 'refresh token request failed',
+              message: e.toString(),
+            ));
+        return e;
+      });
       await _setStateBasedOnResponse(result);
     } catch (e, s) {
+      ref.read(analyticsProvider).log(LogEvent(
+            name: 'refresh auth token failed',
+            message: e.toString(),
+          ));
       FlutterError.reportError(FlutterErrorDetails(
         exception: e,
         stack: s,
@@ -233,7 +261,13 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
 
       final AuthorizationTokenResponse result = await _syncAppAuth(
         () => _appAuth.authorizeAndExchangeCode(authorizationTokenRequest),
-      );
+      ).catchError((e) {
+        ref.read(analyticsProvider).log(LogEvent(
+              name: 'authorization of token request failed',
+              message: e.toString(),
+            ));
+        return e;
+      });
 
       await _setStateBasedOnResponse(result, isLogin: true);
       config.onSignIn?.call();
@@ -255,7 +289,7 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
       logout(manual: false);
       final details = e.platformErrorDetails;
       ref.read(analyticsProvider).log(LogEvent(
-            name: 'login failed',
+            name: 'login failed because of platform exception',
             message: e.message,
             meta: {
               'code': details.code,
@@ -267,10 +301,9 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
       return false;
     } catch (e, st) {
       logout(manual: false);
-      ref.read(analyticsProvider).log(const LogEvent(
-            name: 'logout',
-            message: 'bccm_core, login()',
-            meta: {'manual': false},
+      ref.read(analyticsProvider).log(LogEvent(
+            name: 'login failed',
+            message: e.toString(),
           ));
       debugPrint(e.toString());
       FlutterError.reportError(FlutterErrorDetails(
@@ -307,25 +340,33 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
 
     final userProfile = UserProfile.mergeWithIdToken(_parseIdToken(idToken), state.user);
 
-    await Future.wait([
-      _secureStorage.write(
-        key: SecureStorageKeys.idToken,
-        value: idToken,
-      ),
-      _secureStorage.write(
-        key: SecureStorageKeys.userProfile,
-        value: jsonEncode(userProfile.toJson()),
-      ),
-      _secureStorage.write(
-        key: SecureStorageKeys.accessToken,
-        value: accessToken,
-      ),
-      if (refreshToken != null)
+    try {
+      await Future.wait([
         _secureStorage.write(
-          key: SecureStorageKeys.refreshToken,
-          value: refreshToken,
+          key: SecureStorageKeys.idToken,
+          value: idToken,
         ),
-    ]);
+        _secureStorage.write(
+          key: SecureStorageKeys.userProfile,
+          value: jsonEncode(userProfile.toJson()),
+        ),
+        _secureStorage.write(
+          key: SecureStorageKeys.accessToken,
+          value: accessToken,
+        ),
+        if (refreshToken != null)
+          _secureStorage.write(
+            key: SecureStorageKeys.refreshToken,
+            value: refreshToken,
+          ),
+      ]);
+    } catch (e, st) {
+      ref.read(analyticsProvider).log(LogEvent(
+            name: 'writing credentials to storage failed',
+            message: e.toString(),
+            meta: {'stack': st.toString()},
+          ));
+    }
 
     state = state.copyWith(
       auth0AccessToken: accessToken,
