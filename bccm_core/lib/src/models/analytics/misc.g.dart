@@ -123,11 +123,15 @@ Map<String, dynamic> _$$LogEventImplToJson(_$LogEventImpl instance) =>
 _$VideoPlayedEventImpl _$$VideoPlayedEventImplFromJson(
         Map<String, dynamic> json) =>
     _$VideoPlayedEventImpl(
+      videoId: json['videoId'] as String?,
+      referenceId: json['referenceId'] as String?,
       data: json['data'] as Map<String, dynamic>?,
     );
 
 Map<String, dynamic> _$$VideoPlayedEventImplToJson(
         _$VideoPlayedEventImpl instance) =>
     <String, dynamic>{
+      'videoId': instance.videoId,
+      'referenceId': instance.referenceId,
       'data': instance.data,
     };

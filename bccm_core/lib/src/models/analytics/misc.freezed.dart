@@ -1470,6 +1470,8 @@ VideoPlayedEvent _$VideoPlayedEventFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$VideoPlayedEvent {
+  String? get videoId => throw _privateConstructorUsedError;
+  String? get referenceId => throw _privateConstructorUsedError;
   Map<String, dynamic>? get data => throw _privateConstructorUsedError;
 
   /// Serializes this VideoPlayedEvent to a JSON map.
@@ -1488,7 +1490,7 @@ abstract class $VideoPlayedEventCopyWith<$Res> {
           VideoPlayedEvent value, $Res Function(VideoPlayedEvent) then) =
       _$VideoPlayedEventCopyWithImpl<$Res, VideoPlayedEvent>;
   @useResult
-  $Res call({Map<String, dynamic>? data});
+  $Res call({String? videoId, String? referenceId, Map<String, dynamic>? data});
 }
 
 /// @nodoc
@@ -1506,9 +1508,19 @@ class _$VideoPlayedEventCopyWithImpl<$Res, $Val extends VideoPlayedEvent>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? videoId = freezed,
+    Object? referenceId = freezed,
     Object? data = freezed,
   }) {
     return _then(_value.copyWith(
+      videoId: freezed == videoId
+          ? _value.videoId
+          : videoId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      referenceId: freezed == referenceId
+          ? _value.referenceId
+          : referenceId // ignore: cast_nullable_to_non_nullable
+              as String?,
       data: freezed == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
@@ -1525,7 +1537,7 @@ abstract class _$$VideoPlayedEventImplCopyWith<$Res>
       __$$VideoPlayedEventImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({Map<String, dynamic>? data});
+  $Res call({String? videoId, String? referenceId, Map<String, dynamic>? data});
 }
 
 /// @nodoc
@@ -1541,9 +1553,19 @@ class __$$VideoPlayedEventImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? videoId = freezed,
+    Object? referenceId = freezed,
     Object? data = freezed,
   }) {
     return _then(_$VideoPlayedEventImpl(
+      videoId: freezed == videoId
+          ? _value.videoId
+          : videoId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      referenceId: freezed == referenceId
+          ? _value.referenceId
+          : referenceId // ignore: cast_nullable_to_non_nullable
+              as String?,
       data: freezed == data
           ? _value._data
           : data // ignore: cast_nullable_to_non_nullable
@@ -1555,12 +1577,17 @@ class __$$VideoPlayedEventImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$VideoPlayedEventImpl implements _VideoPlayedEvent {
-  const _$VideoPlayedEventImpl({final Map<String, dynamic>? data})
+  const _$VideoPlayedEventImpl(
+      {this.videoId, this.referenceId, final Map<String, dynamic>? data})
       : _data = data;
 
   factory _$VideoPlayedEventImpl.fromJson(Map<String, dynamic> json) =>
       _$$VideoPlayedEventImplFromJson(json);
 
+  @override
+  final String? videoId;
+  @override
+  final String? referenceId;
   final Map<String, dynamic>? _data;
   @override
   Map<String, dynamic>? get data {
@@ -1573,7 +1600,7 @@ class _$VideoPlayedEventImpl implements _VideoPlayedEvent {
 
   @override
   String toString() {
-    return 'VideoPlayedEvent(data: $data)';
+    return 'VideoPlayedEvent(videoId: $videoId, referenceId: $referenceId, data: $data)';
   }
 
   @override
@@ -1581,13 +1608,16 @@ class _$VideoPlayedEventImpl implements _VideoPlayedEvent {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$VideoPlayedEventImpl &&
+            (identical(other.videoId, videoId) || other.videoId == videoId) &&
+            (identical(other.referenceId, referenceId) ||
+                other.referenceId == referenceId) &&
             const DeepCollectionEquality().equals(other._data, _data));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(_data));
+  int get hashCode => Object.hash(runtimeType, videoId, referenceId,
+      const DeepCollectionEquality().hash(_data));
 
   /// Create a copy of VideoPlayedEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -1607,12 +1637,18 @@ class _$VideoPlayedEventImpl implements _VideoPlayedEvent {
 }
 
 abstract class _VideoPlayedEvent implements VideoPlayedEvent {
-  const factory _VideoPlayedEvent({final Map<String, dynamic>? data}) =
-      _$VideoPlayedEventImpl;
+  const factory _VideoPlayedEvent(
+      {final String? videoId,
+      final String? referenceId,
+      final Map<String, dynamic>? data}) = _$VideoPlayedEventImpl;
 
   factory _VideoPlayedEvent.fromJson(Map<String, dynamic> json) =
       _$VideoPlayedEventImpl.fromJson;
 
+  @override
+  String? get videoId;
+  @override
+  String? get referenceId;
   @override
   Map<String, dynamic>? get data;
 

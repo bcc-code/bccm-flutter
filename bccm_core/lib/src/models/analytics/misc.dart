@@ -85,6 +85,8 @@ class LogEvent with _$LogEvent {
 @freezed
 class VideoPlayedEvent with _$VideoPlayedEvent {
   const factory VideoPlayedEvent({
+    String? videoId,
+    String? referenceId,
     Map<String, dynamic>? data,
   }) = _VideoPlayedEvent;
 
