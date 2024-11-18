@@ -1074,6 +1074,9 @@ class Fragment$SurveyQuestion {
       case "SurveyTextQuestion":
         return Fragment$SurveyQuestion$$SurveyTextQuestion.fromJson(json);
 
+      case "SurveyLinkQuestion":
+        return Fragment$SurveyQuestion$$SurveyLinkQuestion.fromJson(json);
+
       default:
         final l$id = json['id'];
         final l$title = json['title'];
@@ -1167,6 +1170,8 @@ extension UtilityExtension$Fragment$SurveyQuestion on Fragment$SurveyQuestion {
         surveyRatingQuestion,
     required _T Function(Fragment$SurveyQuestion$$SurveyTextQuestion)
         surveyTextQuestion,
+    required _T Function(Fragment$SurveyQuestion$$SurveyLinkQuestion)
+        surveyLinkQuestion,
     required _T Function() orElse,
   }) {
     switch ($__typename) {
@@ -1178,6 +1183,10 @@ extension UtilityExtension$Fragment$SurveyQuestion on Fragment$SurveyQuestion {
         return surveyTextQuestion(
             this as Fragment$SurveyQuestion$$SurveyTextQuestion);
 
+      case "SurveyLinkQuestion":
+        return surveyLinkQuestion(
+            this as Fragment$SurveyQuestion$$SurveyLinkQuestion);
+
       default:
         return orElse();
     }
@@ -1188,6 +1197,8 @@ extension UtilityExtension$Fragment$SurveyQuestion on Fragment$SurveyQuestion {
         surveyRatingQuestion,
     _T Function(Fragment$SurveyQuestion$$SurveyTextQuestion)?
         surveyTextQuestion,
+    _T Function(Fragment$SurveyQuestion$$SurveyLinkQuestion)?
+        surveyLinkQuestion,
     required _T Function() orElse,
   }) {
     switch ($__typename) {
@@ -1203,6 +1214,14 @@ extension UtilityExtension$Fragment$SurveyQuestion on Fragment$SurveyQuestion {
         if (surveyTextQuestion != null) {
           return surveyTextQuestion(
               this as Fragment$SurveyQuestion$$SurveyTextQuestion);
+        } else {
+          return orElse();
+        }
+
+      case "SurveyLinkQuestion":
+        if (surveyLinkQuestion != null) {
+          return surveyLinkQuestion(
+              this as Fragment$SurveyQuestion$$SurveyLinkQuestion);
         } else {
           return orElse();
         }
@@ -1719,6 +1738,172 @@ class _CopyWithStubImpl$Fragment$SurveyQuestion$$SurveyTextQuestion<TRes>
     String? id,
     String? title,
     String? description,
+  }) =>
+      _res;
+}
+
+class Fragment$SurveyQuestion$$SurveyLinkQuestion
+    implements Fragment$SurveyQuestion {
+  Fragment$SurveyQuestion$$SurveyLinkQuestion({
+    required this.id,
+    required this.title,
+    this.description,
+    this.$__typename = 'SurveyLinkQuestion',
+  });
+
+  factory Fragment$SurveyQuestion$$SurveyLinkQuestion.fromJson(
+      Map<String, dynamic> json) {
+    final l$id = json['id'];
+    final l$title = json['title'];
+    final l$description = json['description'];
+    final l$$__typename = json['__typename'];
+    return Fragment$SurveyQuestion$$SurveyLinkQuestion(
+      id: (l$id as String),
+      title: (l$title as String),
+      description: (l$description as String?),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String id;
+
+  final String title;
+
+  final String? description;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$id = id;
+    _resultData['id'] = l$id;
+    final l$title = title;
+    _resultData['title'] = l$title;
+    final l$description = description;
+    _resultData['description'] = l$description;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$id = id;
+    final l$title = title;
+    final l$description = description;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$id,
+      l$title,
+      l$description,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Fragment$SurveyQuestion$$SurveyLinkQuestion) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$id = id;
+    final lOther$id = other.id;
+    if (l$id != lOther$id) {
+      return false;
+    }
+    final l$title = title;
+    final lOther$title = other.title;
+    if (l$title != lOther$title) {
+      return false;
+    }
+    final l$description = description;
+    final lOther$description = other.description;
+    if (l$description != lOther$description) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$SurveyQuestion$$SurveyLinkQuestion
+    on Fragment$SurveyQuestion$$SurveyLinkQuestion {
+  CopyWith$Fragment$SurveyQuestion$$SurveyLinkQuestion<
+          Fragment$SurveyQuestion$$SurveyLinkQuestion>
+      get copyWith => CopyWith$Fragment$SurveyQuestion$$SurveyLinkQuestion(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Fragment$SurveyQuestion$$SurveyLinkQuestion<TRes> {
+  factory CopyWith$Fragment$SurveyQuestion$$SurveyLinkQuestion(
+    Fragment$SurveyQuestion$$SurveyLinkQuestion instance,
+    TRes Function(Fragment$SurveyQuestion$$SurveyLinkQuestion) then,
+  ) = _CopyWithImpl$Fragment$SurveyQuestion$$SurveyLinkQuestion;
+
+  factory CopyWith$Fragment$SurveyQuestion$$SurveyLinkQuestion.stub(TRes res) =
+      _CopyWithStubImpl$Fragment$SurveyQuestion$$SurveyLinkQuestion;
+
+  TRes call({
+    String? id,
+    String? title,
+    String? description,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Fragment$SurveyQuestion$$SurveyLinkQuestion<TRes>
+    implements CopyWith$Fragment$SurveyQuestion$$SurveyLinkQuestion<TRes> {
+  _CopyWithImpl$Fragment$SurveyQuestion$$SurveyLinkQuestion(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$SurveyQuestion$$SurveyLinkQuestion _instance;
+
+  final TRes Function(Fragment$SurveyQuestion$$SurveyLinkQuestion) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? id = _undefined,
+    Object? title = _undefined,
+    Object? description = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Fragment$SurveyQuestion$$SurveyLinkQuestion(
+        id: id == _undefined || id == null ? _instance.id : (id as String),
+        title: title == _undefined || title == null
+            ? _instance.title
+            : (title as String),
+        description: description == _undefined
+            ? _instance.description
+            : (description as String?),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Fragment$SurveyQuestion$$SurveyLinkQuestion<TRes>
+    implements CopyWith$Fragment$SurveyQuestion$$SurveyLinkQuestion<TRes> {
+  _CopyWithStubImpl$Fragment$SurveyQuestion$$SurveyLinkQuestion(this._res);
+
+  TRes _res;
+
+  call({
+    String? id,
+    String? title,
+    String? description,
+    String? $__typename,
   }) =>
       _res;
 }

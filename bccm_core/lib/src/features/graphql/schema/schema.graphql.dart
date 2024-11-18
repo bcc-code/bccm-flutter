@@ -608,6 +608,7 @@ const possibleTypesMap = <String, Set<String>>{
   'SurveyQuestion': {
     'SurveyTextQuestion',
     'SurveyRatingQuestion',
+    'SurveyLinkQuestion',
   },
   'UserCollectionEntryItem': {
     'Show',
