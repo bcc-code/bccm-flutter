@@ -1361,6 +1361,44 @@ const fragmentDefinitionSurveyQuestion = FragmentDefinitionNode(
         )
       ]),
     ),
+    InlineFragmentNode(
+      typeCondition: TypeConditionNode(
+          on: NamedTypeNode(
+        name: NameNode(value: 'SurveyLinkQuestion'),
+        isNonNull: false,
+      )),
+      directives: [],
+      selectionSet: SelectionSetNode(selections: [
+        FieldNode(
+          name: NameNode(value: '__typename'),
+          alias: null,
+          arguments: [],
+          directives: [],
+          selectionSet: null,
+        ),
+        FieldNode(
+          name: NameNode(value: 'url'),
+          alias: null,
+          arguments: [],
+          directives: [],
+          selectionSet: null,
+        ),
+        FieldNode(
+          name: NameNode(value: 'actionButtonText'),
+          alias: null,
+          arguments: [],
+          directives: [],
+          selectionSet: null,
+        ),
+        FieldNode(
+          name: NameNode(value: 'cancelButtonText'),
+          alias: null,
+          arguments: [],
+          directives: [],
+          selectionSet: null,
+        ),
+      ]),
+    ),
     FieldNode(
       name: NameNode(value: '__typename'),
       alias: null,
@@ -1745,25 +1783,42 @@ class _CopyWithStubImpl$Fragment$SurveyQuestion$$SurveyTextQuestion<TRes>
 class Fragment$SurveyQuestion$$SurveyLinkQuestion
     implements Fragment$SurveyQuestion {
   Fragment$SurveyQuestion$$SurveyLinkQuestion({
+    this.$__typename = 'SurveyLinkQuestion',
+    required this.url,
+    required this.actionButtonText,
+    this.cancelButtonText,
     required this.id,
     required this.title,
     this.description,
-    this.$__typename = 'SurveyLinkQuestion',
   });
 
   factory Fragment$SurveyQuestion$$SurveyLinkQuestion.fromJson(
       Map<String, dynamic> json) {
+    final l$$__typename = json['__typename'];
+    final l$url = json['url'];
+    final l$actionButtonText = json['actionButtonText'];
+    final l$cancelButtonText = json['cancelButtonText'];
     final l$id = json['id'];
     final l$title = json['title'];
     final l$description = json['description'];
-    final l$$__typename = json['__typename'];
     return Fragment$SurveyQuestion$$SurveyLinkQuestion(
+      $__typename: (l$$__typename as String),
+      url: (l$url as String),
+      actionButtonText: (l$actionButtonText as String),
+      cancelButtonText: (l$cancelButtonText as String?),
       id: (l$id as String),
       title: (l$title as String),
       description: (l$description as String?),
-      $__typename: (l$$__typename as String),
     );
   }
+
+  final String $__typename;
+
+  final String url;
+
+  final String actionButtonText;
+
+  final String? cancelButtonText;
 
   final String id;
 
@@ -1771,32 +1826,42 @@ class Fragment$SurveyQuestion$$SurveyLinkQuestion
 
   final String? description;
 
-  final String $__typename;
-
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    final l$url = url;
+    _resultData['url'] = l$url;
+    final l$actionButtonText = actionButtonText;
+    _resultData['actionButtonText'] = l$actionButtonText;
+    final l$cancelButtonText = cancelButtonText;
+    _resultData['cancelButtonText'] = l$cancelButtonText;
     final l$id = id;
     _resultData['id'] = l$id;
     final l$title = title;
     _resultData['title'] = l$title;
     final l$description = description;
     _resultData['description'] = l$description;
-    final l$$__typename = $__typename;
-    _resultData['__typename'] = l$$__typename;
     return _resultData;
   }
 
   @override
   int get hashCode {
+    final l$$__typename = $__typename;
+    final l$url = url;
+    final l$actionButtonText = actionButtonText;
+    final l$cancelButtonText = cancelButtonText;
     final l$id = id;
     final l$title = title;
     final l$description = description;
-    final l$$__typename = $__typename;
     return Object.hashAll([
+      l$$__typename,
+      l$url,
+      l$actionButtonText,
+      l$cancelButtonText,
       l$id,
       l$title,
       l$description,
-      l$$__typename,
     ]);
   }
 
@@ -1807,6 +1872,26 @@ class Fragment$SurveyQuestion$$SurveyLinkQuestion
     }
     if (!(other is Fragment$SurveyQuestion$$SurveyLinkQuestion) ||
         runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    final l$url = url;
+    final lOther$url = other.url;
+    if (l$url != lOther$url) {
+      return false;
+    }
+    final l$actionButtonText = actionButtonText;
+    final lOther$actionButtonText = other.actionButtonText;
+    if (l$actionButtonText != lOther$actionButtonText) {
+      return false;
+    }
+    final l$cancelButtonText = cancelButtonText;
+    final lOther$cancelButtonText = other.cancelButtonText;
+    if (l$cancelButtonText != lOther$cancelButtonText) {
       return false;
     }
     final l$id = id;
@@ -1822,11 +1907,6 @@ class Fragment$SurveyQuestion$$SurveyLinkQuestion
     final l$description = description;
     final lOther$description = other.description;
     if (l$description != lOther$description) {
-      return false;
-    }
-    final l$$__typename = $__typename;
-    final lOther$$__typename = other.$__typename;
-    if (l$$__typename != lOther$$__typename) {
       return false;
     }
     return true;
@@ -1853,10 +1933,13 @@ abstract class CopyWith$Fragment$SurveyQuestion$$SurveyLinkQuestion<TRes> {
       _CopyWithStubImpl$Fragment$SurveyQuestion$$SurveyLinkQuestion;
 
   TRes call({
+    String? $__typename,
+    String? url,
+    String? actionButtonText,
+    String? cancelButtonText,
     String? id,
     String? title,
     String? description,
-    String? $__typename,
   });
 }
 
@@ -1874,12 +1957,26 @@ class _CopyWithImpl$Fragment$SurveyQuestion$$SurveyLinkQuestion<TRes>
   static const _undefined = <dynamic, dynamic>{};
 
   TRes call({
+    Object? $__typename = _undefined,
+    Object? url = _undefined,
+    Object? actionButtonText = _undefined,
+    Object? cancelButtonText = _undefined,
     Object? id = _undefined,
     Object? title = _undefined,
     Object? description = _undefined,
-    Object? $__typename = _undefined,
   }) =>
       _then(Fragment$SurveyQuestion$$SurveyLinkQuestion(
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+        url: url == _undefined || url == null ? _instance.url : (url as String),
+        actionButtonText:
+            actionButtonText == _undefined || actionButtonText == null
+                ? _instance.actionButtonText
+                : (actionButtonText as String),
+        cancelButtonText: cancelButtonText == _undefined
+            ? _instance.cancelButtonText
+            : (cancelButtonText as String?),
         id: id == _undefined || id == null ? _instance.id : (id as String),
         title: title == _undefined || title == null
             ? _instance.title
@@ -1887,9 +1984,6 @@ class _CopyWithImpl$Fragment$SurveyQuestion$$SurveyLinkQuestion<TRes>
         description: description == _undefined
             ? _instance.description
             : (description as String?),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
       ));
 }
 
@@ -1900,10 +1994,13 @@ class _CopyWithStubImpl$Fragment$SurveyQuestion$$SurveyLinkQuestion<TRes>
   TRes _res;
 
   call({
+    String? $__typename,
+    String? url,
+    String? actionButtonText,
+    String? cancelButtonText,
     String? id,
     String? title,
     String? description,
-    String? $__typename,
   }) =>
       _res;
 }

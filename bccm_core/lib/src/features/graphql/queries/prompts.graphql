@@ -38,6 +38,12 @@ fragment SurveyQuestion on SurveyQuestion {
   ... on SurveyTextQuestion {
     __typename
   }
+  ... on SurveyLinkQuestion {
+    __typename
+    url
+    actionButtonText
+    cancelButtonText
+  }
 }
 
 mutation answerSurveyQuestion($id: UUID!, $answer: String!) {
