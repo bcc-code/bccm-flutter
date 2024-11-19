@@ -101,21 +101,21 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
             name: 'reading access token from secure storage failed',
             message: e.toString(),
           ));
-      return e;
+      return null;
     });
     final idToken = await _secureStorage.read(key: SecureStorageKeys.idToken).catchError((e) {
       ref.read(analyticsProvider).log(LogEvent(
             name: 'reading id token from secure storage failed',
             message: e.toString(),
           ));
-      return e;
+      return null;
     });
     final userProfileRaw = await _secureStorage.read(key: SecureStorageKeys.userProfile).catchError((e) {
       ref.read(analyticsProvider).log(LogEvent(
             name: 'reading user profile from secure storage failed',
             message: e.toString(),
           ));
-      return e;
+      return null;
     });
 
     if (accessToken == null || idToken == null || userProfileRaw == null) {
@@ -154,7 +154,7 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
 
     final PackageInfo info = await PackageInfo.fromPlatform();
     try {
-      final result = await _syncAppAuth(
+      final TokenResponse result = await _syncAppAuth(
         () => _appAuth.token(
           TokenRequest(
             config.auth0ClientId,
@@ -169,7 +169,7 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
               name: 'refresh token request failed',
               message: e.toString(),
             ));
-        return e;
+        return TokenResponse(null, null, null, null, null, null, null);
       });
       await _setStateBasedOnResponse(result);
     } catch (e, s) {
@@ -266,7 +266,7 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
               name: 'authorization of token request failed',
               message: e.toString(),
             ));
-        return e;
+        return AuthorizationTokenResponse(null, null, null, null, null, null, null, null);
       });
 
       await _setStateBasedOnResponse(result, isLogin: true);
