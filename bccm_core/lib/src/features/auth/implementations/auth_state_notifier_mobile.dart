@@ -22,8 +22,17 @@ AuthStateNotifier getPlatformSpecificAuthStateNotifier(AuthConfig config, Ref re
   return AuthStateNotifierMobile(
     appAuth: const FlutterAppAuth(),
     secureStorage: const FlutterSecureStorage(
+        aOptions: AndroidOptions(
+          encryptedSharedPreferences: true, // https://github.com/juliansteenbakker/flutter_secure_storage/issues/354
+          sharedPreferencesName: 'auth',
+        ),
+        iOptions: IOSOptions(
+          accessibility: KeychainAccessibility.first_unlock_this_device, // https://github.com/juliansteenbakker/flutter_secure_storage/issues/743
+          synchronizable: true,
+        )),
+    legacySecureStorage: const FlutterSecureStorage(
       aOptions: AndroidOptions(
-        encryptedSharedPreferences: true, // https://github.com/mogol/flutter_secure_storage/issues/354
+        encryptedSharedPreferences: true,
         sharedPreferencesName: 'auth',
       ),
     ),
@@ -38,10 +47,12 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
   AuthStateNotifierMobile({
     required FlutterAppAuth appAuth,
     required FlutterSecureStorage secureStorage,
+    required FlutterSecureStorage legacySecureStorage,
     required this.config,
     required this.ref,
   })  : _appAuth = appAuth,
         _secureStorage = secureStorage,
+        _legacySecureStorage = legacySecureStorage,
         _auth0Api = Auth0Api(
           audience: config.auth0Audience,
           domain: config.auth0Domain,
@@ -52,6 +63,7 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
   final appAuthLock = Lock();
   final FlutterAppAuth _appAuth;
   final FlutterSecureStorage _secureStorage;
+  final FlutterSecureStorage _legacySecureStorage;
   final AuthConfig config;
   final Auth0Api _auth0Api;
   final Ref ref;
@@ -96,27 +108,9 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
   }
 
   Future<void> _initialize() async {
-    final accessToken = await _secureStorage.read(key: SecureStorageKeys.accessToken).catchError((e) {
-      ref.read(analyticsProvider).log(LogEvent(
-            name: 'reading access token from secure storage failed',
-            message: e.toString(),
-          ));
-      return null;
-    });
-    final idToken = await _secureStorage.read(key: SecureStorageKeys.idToken).catchError((e) {
-      ref.read(analyticsProvider).log(LogEvent(
-            name: 'reading id token from secure storage failed',
-            message: e.toString(),
-          ));
-      return null;
-    });
-    final userProfileRaw = await _secureStorage.read(key: SecureStorageKeys.userProfile).catchError((e) {
-      ref.read(analyticsProvider).log(LogEvent(
-            name: 'reading user profile from secure storage failed',
-            message: e.toString(),
-          ));
-      return null;
-    });
+    final accessToken = await _readFromSecureStorage(key: SecureStorageKeys.accessToken);
+    final idToken = await _readFromSecureStorage(key: SecureStorageKeys.idToken);
+    final userProfileRaw = await _readFromSecureStorage(key: SecureStorageKeys.userProfile);
 
     if (accessToken == null || idToken == null || userProfileRaw == null) {
       return;
@@ -145,7 +139,7 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
   }
 
   Future<bool> _refresh() async {
-    final refreshToken = await _secureStorage.read(key: SecureStorageKeys.refreshToken);
+    final refreshToken = await _readFromSecureStorage(key: SecureStorageKeys.refreshToken);
 
     if (refreshToken == null) {
       debugPrint('auth: Refresh token is null');
@@ -205,6 +199,10 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
         _secureStorage.delete(key: SecureStorageKeys.accessToken),
         _secureStorage.delete(key: SecureStorageKeys.idToken),
         _secureStorage.delete(key: SecureStorageKeys.userProfile),
+        _legacySecureStorage.delete(key: SecureStorageKeys.refreshToken),
+        _legacySecureStorage.delete(key: SecureStorageKeys.accessToken),
+        _legacySecureStorage.delete(key: SecureStorageKeys.idToken),
+        _legacySecureStorage.delete(key: SecureStorageKeys.userProfile),
       ],
     );
   }
@@ -375,6 +373,38 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
       expiresAt: _getAccessTokenExpiry(accessToken),
       signedOutManually: false,
     );
+  }
+
+  Future<String?> _readFromSecureStorage({required String key}) async {
+    var result = await _secureStorage.read(key: key).then((value) {
+      debugPrint('reading $key from secure storage');
+      return value;
+    }).catchError((e) {
+      ref.read(analyticsProvider).log(
+            LogEvent(
+              name: 'failed reading $key from secure storage',
+              message: e.toString(),
+            ),
+          );
+      return null;
+    });
+
+    // fallback to legacy storage
+    result ??= await _legacySecureStorage.read(key: key).then((value) async {
+      debugPrint('reading $key from legacy secure storage');
+      _secureStorage.write(key: key, value: value);
+      return value;
+    }).catchError((e) {
+      ref.read(analyticsProvider).log(
+            LogEvent(
+              name: 'failed reading $key from legacy secure storage',
+              message: e.toString(),
+            ),
+          );
+      return null;
+    });
+
+    return result;
   }
 }
 
