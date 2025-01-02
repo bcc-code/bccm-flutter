@@ -49,7 +49,6 @@ part 'i_album_or_track.g.dart';
 /// * [contributors] 
 /// * [songbookRelations] 
 /// * [subtype] 
-/// * [transcriptionLanguages] 
 /// * [publisher] 
 /// * [copyright] 
 /// * [media] 

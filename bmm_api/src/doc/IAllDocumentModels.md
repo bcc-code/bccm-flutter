@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **bmmId** | **String** |  | [optional] 
 **cover** | **String** |  | [optional] 
 **id** | **int** |  | 
-**languages** | [**BuiltList&lt;LanguageEnum&gt;**](LanguageEnum.md) |  | 
+**languages** | [**BuiltList&lt;LanguageEnum&gt;**](LanguageEnum.md) |  | [optional] 
 **parentId** | **int** |  | 
 **publishedAt** | [**DateTime**](DateTime.md) |  | 
 **tags** | **BuiltList&lt;String&gt;** |  | 
@@ -48,18 +48,18 @@ Name | Type | Description | Notes
 **pointColor** | **String** |  | [optional] 
 **homeScreenText** | [**CurrentWeeksStreakVmHomeScreenTextOptions**](CurrentWeeksStreakVmHomeScreenTextOptions.md) |  | [optional] 
 **list** | [**BuiltList&lt;AchievementModel&gt;**](AchievementModel.md) |  | [optional] 
-**openByDefault** | **bool** |  | [optional] 
-**points** | **int** |  | [optional] 
-**pointsDescription** | **String** |  | [optional] 
-**achievements** | [**BuiltList&lt;AchievementModel&gt;**](AchievementModel.md) |  | [optional] 
-**rulesLinkTitle** | **String** |  | [optional] 
 **translatedMessage** | **String** |  | [optional] 
 **messageText** | **String** |  | [optional] 
 **link** | **String** |  | [optional] 
 **showIcon** | **bool** |  | [optional] 
+**openByDefault** | **bool** |  | [optional] 
+**points** | **int** |  | [optional] 
+**pointsDescription** | **String** |  | [optional] 
 **buttonTitle** | **String** |  | [optional] 
 **buttonWebsite** | **String** |  | [optional] 
 **buttonShowIcon** | **bool** |  | [optional] 
+**achievements** | [**BuiltList&lt;AchievementModel&gt;**](AchievementModel.md) |  | [optional] 
+**rulesLinkTitle** | **String** |  | [optional] 
 **iconColor** | **String** |  | [optional] 
 **subtitle** | **String** |  | [optional] 
 **contributor** | [**ContributorModel**](ContributorModel.md) |  | [optional] 
@@ -88,7 +88,6 @@ Name | Type | Description | Notes
 **contributors** | [**BuiltList&lt;TrackModelContributorRelation&gt;**](TrackModelContributorRelation.md) |  | [optional] 
 **songbookRelations** | [**BuiltList&lt;TrackModelSongbookRelation&gt;**](TrackModelSongbookRelation.md) |  | [optional] 
 **subtype** | [**TrackSubtype**](TrackSubtype.md) |  | 
-**transcriptionLanguages** | [**BuiltList&lt;LanguageEnum&gt;**](LanguageEnum.md) |  | 
 **publisher** | **String** |  | [optional] 
 **copyright** | **String** |  | [optional] 
 **media** | [**BuiltList&lt;TrackModelMedium&gt;**](TrackModelMedium.md) |  | [optional] 

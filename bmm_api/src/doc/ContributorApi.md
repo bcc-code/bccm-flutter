@@ -15,7 +15,6 @@ Method | HTTP request | Description
 [**contributorIdRandomGet**](ContributorApi.md#contributoridrandomget) | **GET** /contributor/{id}/random | 
 [**contributorIdTrackGet**](ContributorApi.md#contributoridtrackget) | **GET** /contributor/{id}/track | 
 [**contributorSearchTermGet**](ContributorApi.md#contributorsearchtermget) | **GET** /contributor/search/{term} | 
-[**contributorSearchUnpublishedTermGet**](ContributorApi.md#contributorsearchunpublishedtermget) | **GET** /contributor/search_unpublished/{term} | 
 [**contributorSuggesterCompletionTermGet**](ContributorApi.md#contributorsuggestercompletiontermget) | **GET** /contributor/suggester/completion/{term} | 
 
 
@@ -247,49 +246,6 @@ try {
     print(response);
 } catch on DioException (e) {
     print('Exception when calling ContributorApi->contributorSearchTermGet: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **term** | **String**|  | 
- **size** | **int**|  | [optional] [default to 20]
-
-### Return type
-
-[**BuiltList&lt;ContributorModel&gt;**](ContributorModel.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **contributorSearchUnpublishedTermGet**
-> BuiltList<ContributorModel> contributorSearchUnpublishedTermGet(term, size)
-
-
-
-### Example
-```dart
-import 'package:bmm_api/api.dart';
-
-final api = BmmApi().getContributorApi();
-final String term = term_example; // String | 
-final int size = 56; // int | 
-
-try {
-    final response = api.contributorSearchUnpublishedTermGet(term, size);
-    print(response);
-} catch on DioException (e) {
-    print('Exception when calling ContributorApi->contributorSearchUnpublishedTermGet: $e\n');
 }
 ```
 

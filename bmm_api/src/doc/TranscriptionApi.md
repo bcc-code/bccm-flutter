@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 
 # **transcriptionTrackIdLanguageFirstLastGet**
-> BuiltList<TranscriptionSegment> transcriptionTrackIdLanguageFirstLastGet(trackId, language, first, last)
+> BuiltList<TrackTranslationTranscriptionSegment> transcriptionTrackIdLanguageFirstLastGet(trackId, language, first, last)
 
 
 
@@ -47,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList&lt;TranscriptionSegment&gt;**](TranscriptionSegment.md)
+[**BuiltList&lt;TrackTranslationTranscriptionSegment&gt;**](TrackTranslationTranscriptionSegment.md)
 
 ### Authorization
 

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **bmmId** | **String** |  | [optional] 
 **cover** | **String** |  | [optional] 
 **id** | **int** |  | 
-**languages** | [**BuiltList&lt;LanguageEnum&gt;**](LanguageEnum.md) |  | 
+**languages** | [**BuiltList&lt;LanguageEnum&gt;**](LanguageEnum.md) |  | [optional] 
 **parentId** | **int** |  | 
 **publishedAt** | [**DateTime**](DateTime.md) |  | 
 **tags** | **BuiltList&lt;String&gt;** |  | 
@@ -37,7 +37,6 @@ Name | Type | Description | Notes
 **contributors** | [**BuiltList&lt;TrackModelContributorRelation&gt;**](TrackModelContributorRelation.md) |  | [optional] 
 **songbookRelations** | [**BuiltList&lt;TrackModelSongbookRelation&gt;**](TrackModelSongbookRelation.md) |  | [optional] 
 **subtype** | [**TrackSubtype**](TrackSubtype.md) |  | 
-**transcriptionLanguages** | [**BuiltList&lt;LanguageEnum&gt;**](LanguageEnum.md) |  | 
 **publisher** | **String** |  | [optional] 
 **copyright** | **String** |  | [optional] 
 **media** | [**BuiltList&lt;TrackModelMedium&gt;**](TrackModelMedium.md) |  | [optional] 

@@ -13,7 +13,6 @@ import 'package:bmm_api/src/model/achievement_model.dart';
 import 'package:bmm_api/src/model/create_track_played_events_command_event.dart';
 import 'package:bmm_api/src/model/document_list_i_achievement_collection_or_chapter_header.dart';
 import 'package:bmm_api/src/model/forbilde_points.dart';
-import 'package:bmm_api/src/model/get_fra_kaare_statistics_response.dart';
 import 'package:bmm_api/src/model/get_year_in_review_overview_slide.dart';
 import 'package:bmm_api/src/model/language_enum.dart';
 import 'package:bmm_api/src/model/listening_event.dart';
@@ -288,79 +287,6 @@ class StatisticsApi {
     );
   }
 
-  /// statisticsFraKaareGet
-  /// 
-  ///
-  /// Parameters:
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [GetFraKaareStatisticsResponse] as data
-  /// Throws [DioException] if API call or serialization fails
-  Future<Response<GetFraKaareStatisticsResponse>> statisticsFraKaareGet({ 
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/Statistics/fra-kaare';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    GetFraKaareStatisticsResponse? _responseData;
-
-    try {
-      final rawResponse = _response.data;
-      _responseData = rawResponse == null ? null : _serializers.deserialize(
-        rawResponse,
-        specifiedType: const FullType(GetFraKaareStatisticsResponse),
-      ) as GetFraKaareStatisticsResponse;
-
-    } catch (error, stackTrace) {
-      throw DioException(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioExceptionType.unknown,
-        error: error,
-        stackTrace: stackTrace,
-      );
-    }
-
-    return Response<GetFraKaareStatisticsResponse>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
   /// statisticsListeningPost
   /// 
   ///
@@ -426,81 +352,6 @@ class StatisticsApi {
     );
 
     return _response;
-  }
-
-  /// statisticsProjectChurchChurchGet
-  /// 
-  ///
-  /// Parameters:
-  /// * [church] 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [ProjectChurchStatisticsQueryChurchStatistics] as data
-  /// Throws [DioException] if API call or serialization fails
-  Future<Response<ProjectChurchStatisticsQueryChurchStatistics>> statisticsProjectChurchChurchGet({ 
-    required String church,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/Statistics/project/church/{church}'.replaceAll('{' r'church' '}', encodeQueryParameter(_serializers, church, const FullType(String)).toString());
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    ProjectChurchStatisticsQueryChurchStatistics? _responseData;
-
-    try {
-      final rawResponse = _response.data;
-      _responseData = rawResponse == null ? null : _serializers.deserialize(
-        rawResponse,
-        specifiedType: const FullType(ProjectChurchStatisticsQueryChurchStatistics),
-      ) as ProjectChurchStatisticsQueryChurchStatistics;
-
-    } catch (error, stackTrace) {
-      throw DioException(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioExceptionType.unknown,
-        error: error,
-        stackTrace: stackTrace,
-      );
-    }
-
-    return Response<ProjectChurchStatisticsQueryChurchStatistics>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
   }
 
   /// statisticsProjectChurchGet

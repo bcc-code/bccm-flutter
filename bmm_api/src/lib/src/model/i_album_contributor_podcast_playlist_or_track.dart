@@ -58,7 +58,6 @@ part 'i_album_contributor_podcast_playlist_or_track.g.dart';
 /// * [contributors] 
 /// * [songbookRelations] 
 /// * [subtype] 
-/// * [transcriptionLanguages] 
 /// * [publisher] 
 /// * [copyright] 
 /// * [media] 
