@@ -13,7 +13,7 @@ import 'package:bmm_api/src/model/language_enum.dart';
 import 'package:bmm_api/src/model/published_filter.dart';
 import 'package:bmm_api/src/model/track_model.dart';
 import 'package:bmm_api/src/model/track_subtype.dart';
-import 'package:bmm_api/src/model/track_translation_transcription_segment.dart';
+import 'package:bmm_api/src/model/transcription_segment.dart';
 import 'package:built_collection/built_collection.dart';
 
 class TrackApi {
@@ -35,7 +35,8 @@ class TrackApi {
   /// * [tags] 
   /// * [excludeTags] 
   /// * [language] 
-  /// * [policy] 
+  /// * [hasTranscription] 
+  /// * [oneOfPolicies] 
   /// * [contentType2] 
   /// * [tags2] 
   /// * [excludeTags2] 
@@ -56,7 +57,8 @@ class TrackApi {
     BuiltList<String>? tags,
     BuiltList<String>? excludeTags,
     LanguageEnum? language,
-    String? policy,
+    bool? hasTranscription,
+    BuiltList<String>? oneOfPolicies,
     BuiltList<TrackSubtype>? contentType2,
     BuiltList<String>? tags2,
     BuiltList<String>? excludeTags2,
@@ -88,7 +90,8 @@ class TrackApi {
       if (tags != null) r'Tags': encodeCollectionQueryParameter<String>(_serializers, tags, const FullType(BuiltList, [FullType(String)]), format: ListFormat.multi,),
       if (excludeTags != null) r'ExcludeTags': encodeCollectionQueryParameter<String>(_serializers, excludeTags, const FullType(BuiltList, [FullType(String)]), format: ListFormat.multi,),
       if (language != null) r'Language': encodeQueryParameter(_serializers, language, const FullType(LanguageEnum)),
-      if (policy != null) r'Policy': encodeQueryParameter(_serializers, policy, const FullType(String)),
+      if (hasTranscription != null) r'HasTranscription': encodeQueryParameter(_serializers, hasTranscription, const FullType(bool)),
+      if (oneOfPolicies != null) r'OneOfPolicies': encodeCollectionQueryParameter<String>(_serializers, oneOfPolicies, const FullType(BuiltList, [FullType(String)]), format: ListFormat.multi,),
       if (contentType2 != null) r'content-type': encodeCollectionQueryParameter<TrackSubtype>(_serializers, contentType2, const FullType(BuiltList, [FullType(TrackSubtype)]), format: ListFormat.multi,),
       if (tags2 != null) r'tags': encodeCollectionQueryParameter<String>(_serializers, tags2, const FullType(BuiltList, [FullType(String)]), format: ListFormat.multi,),
       if (excludeTags2 != null) r'exclude-tags': encodeCollectionQueryParameter<String>(_serializers, excludeTags2, const FullType(BuiltList, [FullType(String)]), format: ListFormat.multi,),
@@ -229,9 +232,9 @@ class TrackApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<TrackTranslationTranscriptionSegment>] as data
+  /// Returns a [Future] containing a [Response] with a [BuiltList<TranscriptionSegment>] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<BuiltList<TrackTranslationTranscriptionSegment>>> trackIdTranscriptionGet({ 
+  Future<Response<BuiltList<TranscriptionSegment>>> trackIdTranscriptionGet({ 
     required int id,
     PublishedFilter? unpublished,
     CancelToken? cancelToken,
@@ -267,14 +270,14 @@ class TrackApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<TrackTranslationTranscriptionSegment>? _responseData;
+    BuiltList<TranscriptionSegment>? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(BuiltList, [FullType(TrackTranslationTranscriptionSegment)]),
-      ) as BuiltList<TrackTranslationTranscriptionSegment>;
+        specifiedType: const FullType(BuiltList, [FullType(TranscriptionSegment)]),
+      ) as BuiltList<TranscriptionSegment>;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -286,7 +289,7 @@ class TrackApi {
       );
     }
 
-    return Response<BuiltList<TrackTranslationTranscriptionSegment>>(
+    return Response<BuiltList<TranscriptionSegment>>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -312,9 +315,9 @@ class TrackApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<TrackTranslationTranscriptionSegment>] as data
+  /// Returns a [Future] containing a [Response] with a [BuiltList<TranscriptionSegment>] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<BuiltList<TrackTranslationTranscriptionSegment>>> trackIdTranscriptionLanguageGet({ 
+  Future<Response<BuiltList<TranscriptionSegment>>> trackIdTranscriptionLanguageGet({ 
     required int id,
     required LanguageEnum language,
     PublishedFilter? unpublished,
@@ -351,14 +354,14 @@ class TrackApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<TrackTranslationTranscriptionSegment>? _responseData;
+    BuiltList<TranscriptionSegment>? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(BuiltList, [FullType(TrackTranslationTranscriptionSegment)]),
-      ) as BuiltList<TrackTranslationTranscriptionSegment>;
+        specifiedType: const FullType(BuiltList, [FullType(TranscriptionSegment)]),
+      ) as BuiltList<TranscriptionSegment>;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -370,7 +373,7 @@ class TrackApi {
       );
     }
 
-    return Response<BuiltList<TrackTranslationTranscriptionSegment>>(
+    return Response<BuiltList<TranscriptionSegment>>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -380,6 +383,77 @@ class TrackApi {
       statusMessage: _response.statusMessage,
       extra: _response.extra,
     );
+  }
+
+  /// trackIdTranscriptionLanguagePost
+  /// 
+  ///
+  /// Parameters:
+  /// * [id] 
+  /// * [language] 
+  /// * [transcriptionSegment] 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future]
+  /// Throws [DioException] if API call or serialization fails
+  Future<Response<void>> trackIdTranscriptionLanguagePost({ 
+    required int id,
+    required LanguageEnum language,
+    required BuiltList<TranscriptionSegment> transcriptionSegment,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/track/{id}/transcription/{language}'.replaceAll('{' r'id' '}', encodeQueryParameter(_serializers, id, const FullType(int)).toString()).replaceAll('{' r'language' '}', encodeQueryParameter(_serializers, language, const FullType(LanguageEnum)).toString());
+    final _options = Options(
+      method: r'POST',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      contentType: 'application/json',
+      validateStatus: validateStatus,
+    );
+
+    dynamic _bodyData;
+
+    try {
+      const _type = FullType(BuiltList, [FullType(TranscriptionSegment)]);
+      _bodyData = _serializers.serialize(transcriptionSegment, specifiedType: _type);
+
+    } catch(error, stackTrace) {
+      throw DioException(
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
+        type: DioExceptionType.unknown,
+        error: error,
+        stackTrace: stackTrace,
+      );
+    }
+
+    final _response = await _dio.request<Object>(
+      _path,
+      data: _bodyData,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    return _response;
   }
 
   /// trackRecommendationGet
@@ -404,6 +478,79 @@ class TrackApi {
     ProgressCallback? onReceiveProgress,
   }) async {
     final _path = r'/track/recommendation';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    BuiltList<TrackModel>? _responseData;
+
+    try {
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(TrackModel)]),
+      ) as BuiltList<TrackModel>;
+
+    } catch (error, stackTrace) {
+      throw DioException(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioExceptionType.unknown,
+        error: error,
+        stackTrace: stackTrace,
+      );
+    }
+
+    return Response<BuiltList<TrackModel>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// trackTranscribeGet
+  /// 
+  ///
+  /// Parameters:
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [BuiltList<TrackModel>] as data
+  /// Throws [DioException] if API call or serialization fails
+  Future<Response<BuiltList<TrackModel>>> trackTranscribeGet({ 
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/track/transcribe';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{

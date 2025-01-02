@@ -13,9 +13,11 @@ Method | HTTP request | Description
 [**trackCollectionIdAlbumAlbumIdPost**](TrackCollectionApi.md#trackcollectionidalbumalbumidpost) | **POST** /track_collection/{id}/album/{albumId} | 
 [**trackCollectionIdDelete**](TrackCollectionApi.md#trackcollectioniddelete) | **DELETE** /track_collection/{id} | 
 [**trackCollectionIdGet**](TrackCollectionApi.md#trackcollectionidget) | **GET** /track_collection/{id} | Get a single track collection. All hidden or deleted tracks will not show up in this list if the user added them once.
+[**trackCollectionIdPlaylistPlaylistIdPost**](TrackCollectionApi.md#trackcollectionidplaylistplaylistidpost) | **POST** /track_collection/{id}/playlist/{playlistId} | 
 [**trackCollectionIdPost**](TrackCollectionApi.md#trackcollectionidpost) | **POST** /track_collection/{id} | Add tracks to existing track collection without changing anything else
 [**trackCollectionIdPut**](TrackCollectionApi.md#trackcollectionidput) | **PUT** /track_collection/{id} | Edit an existing track collection
 [**trackCollectionIdResetSharePost**](TrackCollectionApi.md#trackcollectionidresetsharepost) | **POST** /track_collection/{id}/reset-share | Resets the sharing link and removes all followers of the track collection
+[**trackCollectionIdTrackCollectionPlaylistIdPost**](TrackCollectionApi.md#trackcollectionidtrackcollectionplaylistidpost) | **POST** /track_collection/{id}/track_collection/{playlistId} | 
 [**trackCollectionIdUnfollowPost**](TrackCollectionApi.md#trackcollectionidunfollowpost) | **POST** /track_collection/{id}/unfollow | Unfollows a track collection
 [**trackCollectionLikePost**](TrackCollectionApi.md#trackcollectionlikepost) | **POST** /track_collection/like | 
 [**trackCollectionPost**](TrackCollectionApi.md#trackcollectionpost) | **POST** /track_collection | Create a track collection
@@ -184,6 +186,48 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **trackCollectionIdPlaylistPlaylistIdPost**
+> trackCollectionIdPlaylistPlaylistIdPost(id, playlistId)
+
+
+
+### Example
+```dart
+import 'package:bmm_api/api.dart';
+
+final api = BmmApi().getTrackCollectionApi();
+final int id = 56; // int | 
+final int playlistId = 56; // int | 
+
+try {
+    api.trackCollectionIdPlaylistPlaylistIdPost(id, playlistId);
+} catch on DioException (e) {
+    print('Exception when calling TrackCollectionApi->trackCollectionIdPlaylistPlaylistIdPost: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+ **playlistId** | **int**|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **trackCollectionIdPost**
 > trackCollectionIdPost(id, link)
 
@@ -308,6 +352,48 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **trackCollectionIdTrackCollectionPlaylistIdPost**
+> trackCollectionIdTrackCollectionPlaylistIdPost(id, playlistId)
+
+
+
+### Example
+```dart
+import 'package:bmm_api/api.dart';
+
+final api = BmmApi().getTrackCollectionApi();
+final int id = 56; // int | 
+final int playlistId = 56; // int | 
+
+try {
+    api.trackCollectionIdTrackCollectionPlaylistIdPost(id, playlistId);
+} catch on DioException (e) {
+    print('Exception when calling TrackCollectionApi->trackCollectionIdTrackCollectionPlaylistIdPost: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+ **playlistId** | **int**|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **trackCollectionIdUnfollowPost**
 > trackCollectionIdUnfollowPost(id)
 
@@ -389,7 +475,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **trackCollectionPost**
-> trackCollectionPost(createTrackCollectionCommand)
+> int trackCollectionPost(createTrackCollectionCommand)
 
 Create a track collection
 
@@ -401,7 +487,8 @@ final api = BmmApi().getTrackCollectionApi();
 final CreateTrackCollectionCommand createTrackCollectionCommand = ; // CreateTrackCollectionCommand | 
 
 try {
-    api.trackCollectionPost(createTrackCollectionCommand);
+    final response = api.trackCollectionPost(createTrackCollectionCommand);
+    print(response);
 } catch on DioException (e) {
     print('Exception when calling TrackCollectionApi->trackCollectionPost: $e\n');
 }
@@ -415,7 +502,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+**int**
 
 ### Authorization
 
@@ -424,7 +511,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json-patch+json, application/json, text/json, application/*+json
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -466,7 +553,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **trackCollectionTopSongsPost**
-> trackCollectionTopSongsPost()
+> int trackCollectionTopSongsPost()
 
 
 
@@ -477,7 +564,8 @@ import 'package:bmm_api/api.dart';
 final api = BmmApi().getTrackCollectionApi();
 
 try {
-    api.trackCollectionTopSongsPost();
+    final response = api.trackCollectionTopSongsPost();
+    print(response);
 } catch on DioException (e) {
     print('Exception when calling TrackCollectionApi->trackCollectionTopSongsPost: $e\n');
 }
@@ -488,7 +576,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-void (empty response body)
+**int**
 
 ### Authorization
 
@@ -497,7 +585,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

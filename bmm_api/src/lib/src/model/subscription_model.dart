@@ -15,6 +15,8 @@ part 'subscription_model.g.dart';
 /// Properties:
 /// * [token] 
 /// * [podcastReferences] 
+/// * [showNotificationBadge] 
+/// * [os] 
 @BuiltValue()
 abstract class SubscriptionModel implements Built<SubscriptionModel, SubscriptionModelBuilder> {
   @BuiltValueField(wireName: r'token')
@@ -22,6 +24,12 @@ abstract class SubscriptionModel implements Built<SubscriptionModel, Subscriptio
 
   @BuiltValueField(wireName: r'podcast_references')
   BuiltList<TrackListReference>? get podcastReferences;
+
+  @BuiltValueField(wireName: r'show_notification_badge')
+  bool? get showNotificationBadge;
+
+  @BuiltValueField(wireName: r'os')
+  String? get os;
 
   SubscriptionModel._();
 
@@ -56,6 +64,20 @@ class _$SubscriptionModelSerializer implements PrimitiveSerializer<SubscriptionM
       yield serializers.serialize(
         object.podcastReferences,
         specifiedType: const FullType.nullable(BuiltList, [FullType(TrackListReference)]),
+      );
+    }
+    if (object.showNotificationBadge != null) {
+      yield r'show_notification_badge';
+      yield serializers.serialize(
+        object.showNotificationBadge,
+        specifiedType: const FullType(bool),
+      );
+    }
+    if (object.os != null) {
+      yield r'os';
+      yield serializers.serialize(
+        object.os,
+        specifiedType: const FullType.nullable(String),
       );
     }
   }
@@ -95,6 +117,21 @@ class _$SubscriptionModelSerializer implements PrimitiveSerializer<SubscriptionM
           ) as BuiltList<TrackListReference>?;
           if (valueDes == null) continue;
           result.podcastReferences.replace(valueDes);
+          break;
+        case r'show_notification_badge':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(bool),
+          ) as bool;
+          result.showNotificationBadge = valueDes;
+          break;
+        case r'os':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.os = valueDes;
           break;
         default:
           unhandled.add(key);
