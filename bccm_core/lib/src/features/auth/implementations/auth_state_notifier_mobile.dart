@@ -87,6 +87,13 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
     }
     if (state.expiresAt!.difference(clock.now()) < kMinimumCredentialsTTL) {
       logout();
+      ref.read(analyticsProvider).log(LogEvent(
+            name: 'auth state is expired',
+            message: 'auth state is expired after attempting to renew',
+            meta: {
+              'state': state.toString(),
+            },
+          ));
       debugPrint('auth: Auth state is still expired after attempting to renew.');
     }
     return state;
@@ -160,22 +167,23 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
         ),
       ).catchError((e) {
         ref.read(analyticsProvider).log(LogEvent(
-              name: 'refresh token request failed',
+              name: 'refresh request for access token failed',
               message: e.toString(),
             ));
         return TokenResponse(null, null, null, null, null, null, null);
       });
-      await _setStateBasedOnResponse(result);
+      await _setStateBasedOnResponse(result).catchError((e) {
+        ref.read(analyticsProvider).log(LogEvent(
+              name: 'failed to set auth state based on refresh request response',
+              message: e.toString(),
+            ));
+      });
     } catch (e, s) {
-      ref.read(analyticsProvider).log(LogEvent(
-            name: 'refresh auth token failed',
-            message: e.toString(),
-          ));
       FlutterError.reportError(FlutterErrorDetails(
         exception: e,
         stack: s,
         library: 'bccm_core',
-        context: ErrorDescription('while attempting to refresh auth token during login'),
+        context: ErrorDescription('while attempting to refresh access token'),
       ));
       debugPrint('error on Refresh Token: $e - stack: $s');
       if (kDebugMode) {
@@ -231,11 +239,6 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
       ));
     } catch (e) {
       logout(manual: false);
-      ref.read(analyticsProvider).log(const LogEvent(
-            name: 'logout',
-            message: 'bccm_core, loginViaDeviceCode()',
-            meta: {'manual': false},
-          ));
       rethrow;
     }
   }
@@ -261,13 +264,18 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
         () => _appAuth.authorizeAndExchangeCode(authorizationTokenRequest),
       ).catchError((e) {
         ref.read(analyticsProvider).log(LogEvent(
-              name: 'authorization of token request failed',
+              name: 'authorization and token exchange request failed',
               message: e.toString(),
             ));
         return AuthorizationTokenResponse(null, null, null, null, null, null, null, null);
       });
 
-      await _setStateBasedOnResponse(result, isLogin: true);
+      await _setStateBasedOnResponse(result, isLogin: true).catchError((e) {
+        ref.read(analyticsProvider).log(LogEvent(
+              name: 'failed to set auth state based on response from token exchange request',
+              message: e.toString(),
+            ));
+      });
       config.onSignIn?.call();
     } on FlutterAppAuthUserCancelledException catch (e) {
       logout(manual: false);
@@ -287,7 +295,7 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
       logout(manual: false);
       final details = e.platformErrorDetails;
       ref.read(analyticsProvider).log(LogEvent(
-            name: 'login failed because of platform exception',
+            name: 'login failed because of flutter_appauth platform exception',
             message: e.message,
             meta: {
               'code': details.code,
