@@ -4,7 +4,6 @@ import 'dart:convert';
 import 'package:bccm_core/bccm_core.dart';
 import 'package:bccm_core/platform.dart';
 import 'package:bccm_core/src/models/user_profile.dart';
-import 'package:clock/clock.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_appauth/flutter_appauth.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -81,11 +80,11 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
       debugPrint('auth: Either auth0AccessToken or expiresAt is null');
       return null;
     }
-    if (state.expiresAt!.difference(clock.now()) < kMinimumCredentialsTTL) {
+    if (state.expiresAt!.difference(DateTime.now().toUtc()) < kMinimumCredentialsTTL) {
       await _refresh();
       debugPrint('auth: Auth state is expired. Trying to renew.');
     }
-    if (state.expiresAt!.difference(clock.now()) < kMinimumCredentialsTTL) {
+    if (state.expiresAt!.difference(DateTime.now().toUtc()) < kMinimumCredentialsTTL) {
       logout();
       ref.read(analyticsProvider).log(LogEvent(
             name: 'auth state is expired',
@@ -126,7 +125,7 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
     final userProfile = UserProfile.fromJson(jsonDecode(userProfileRaw));
 
     DateTime? expiry = _getAccessTokenExpiry(accessToken);
-    if (expiry.difference(clock.now()) < kMinimumCredentialsTTL) {
+    if (expiry.difference(DateTime.now().toUtc()) < kMinimumCredentialsTTL) {
       debugPrint('auth: Access token is expired. Trying to renew.');
       if (await _refresh()) return;
     }
