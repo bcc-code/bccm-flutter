@@ -1,7 +1,7 @@
 import 'package:bccm_core/bccm_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:flutter_image/network.dart';
+import 'package:extended_image/extended_image.dart';
 
 const Map<ImageCropMode, String> _imageCropModeQueryParam = {
   ImageCropMode.faces: 'faces',
@@ -74,9 +74,11 @@ ImageProvider<Object> networkImageWithRetryAndResize({
   return ResizeImage.resizeIfNeeded(
     null,
     cacheHeight,
-    NetworkImageWithRetry(
+    ExtendedNetworkImageProvider(
       imageUrl,
       headers: const {'Keep-Alive': 'timeout=20, max=5'},
+      retries: 3,
+      timeRetry: const Duration(milliseconds: 100),
     ),
   );
 }
