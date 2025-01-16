@@ -41058,6 +41058,7 @@ class Query$FetchMoreItemsForItemSection$section$$AchievementSection
         Fragment$Section$$AchievementSection,
         Query$FetchMoreItemsForItemSection$section {
   Query$FetchMoreItemsForItemSection$section$$AchievementSection({
+    required this.source,
     this.$__typename = 'AchievementSection',
     required this.id,
     this.title,
@@ -41066,17 +41067,21 @@ class Query$FetchMoreItemsForItemSection$section$$AchievementSection
 
   factory Query$FetchMoreItemsForItemSection$section$$AchievementSection.fromJson(
       Map<String, dynamic> json) {
+    final l$source = json['source'];
     final l$$__typename = json['__typename'];
     final l$id = json['id'];
     final l$title = json['title'];
     final l$description = json['description'];
     return Query$FetchMoreItemsForItemSection$section$$AchievementSection(
+      source: fromJson$Enum$AchievementsSource((l$source as String)),
       $__typename: (l$$__typename as String),
       id: (l$id as String),
       title: (l$title as String?),
       description: (l$description as String?),
     );
   }
+
+  final Enum$AchievementsSource source;
 
   final String $__typename;
 
@@ -41088,6 +41093,8 @@ class Query$FetchMoreItemsForItemSection$section$$AchievementSection
 
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
+    final l$source = source;
+    _resultData['source'] = toJson$Enum$AchievementsSource(l$source);
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
     final l$id = id;
@@ -41101,11 +41108,13 @@ class Query$FetchMoreItemsForItemSection$section$$AchievementSection
 
   @override
   int get hashCode {
+    final l$source = source;
     final l$$__typename = $__typename;
     final l$id = id;
     final l$title = title;
     final l$description = description;
     return Object.hashAll([
+      l$source,
       l$$__typename,
       l$id,
       l$title,
@@ -41121,6 +41130,11 @@ class Query$FetchMoreItemsForItemSection$section$$AchievementSection
     if (!(other
             is Query$FetchMoreItemsForItemSection$section$$AchievementSection) ||
         runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$source = source;
+    final lOther$source = other.source;
+    if (l$source != lOther$source) {
       return false;
     }
     final l$$__typename = $__typename;
@@ -41172,6 +41186,7 @@ abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$AchievementS
       _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$AchievementSection;
 
   TRes call({
+    Enum$AchievementsSource? source,
     String? $__typename,
     String? id,
     String? title,
@@ -41198,12 +41213,16 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$AchievementSecti
   static const _undefined = <dynamic, dynamic>{};
 
   TRes call({
+    Object? source = _undefined,
     Object? $__typename = _undefined,
     Object? id = _undefined,
     Object? title = _undefined,
     Object? description = _undefined,
   }) =>
       _then(Query$FetchMoreItemsForItemSection$section$$AchievementSection(
+        source: source == _undefined || source == null
+            ? _instance.source
+            : (source as Enum$AchievementsSource),
         $__typename: $__typename == _undefined || $__typename == null
             ? _instance.$__typename
             : ($__typename as String),
@@ -41226,6 +41245,7 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$AchievementS
   TRes _res;
 
   call({
+    Enum$AchievementsSource? source,
     String? $__typename,
     String? id,
     String? title,
@@ -80879,6 +80899,7 @@ class _CopyWithStubImpl$Query$GetSection$section$$PageDetailsSection<TRes>
 class Query$GetSection$section$$AchievementSection
     implements Fragment$Section$$AchievementSection, Query$GetSection$section {
   Query$GetSection$section$$AchievementSection({
+    required this.source,
     this.$__typename = 'AchievementSection',
     required this.id,
     this.title,
@@ -80887,17 +80908,21 @@ class Query$GetSection$section$$AchievementSection
 
   factory Query$GetSection$section$$AchievementSection.fromJson(
       Map<String, dynamic> json) {
+    final l$source = json['source'];
     final l$$__typename = json['__typename'];
     final l$id = json['id'];
     final l$title = json['title'];
     final l$description = json['description'];
     return Query$GetSection$section$$AchievementSection(
+      source: fromJson$Enum$AchievementsSource((l$source as String)),
       $__typename: (l$$__typename as String),
       id: (l$id as String),
       title: (l$title as String?),
       description: (l$description as String?),
     );
   }
+
+  final Enum$AchievementsSource source;
 
   final String $__typename;
 
@@ -80909,6 +80934,8 @@ class Query$GetSection$section$$AchievementSection
 
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
+    final l$source = source;
+    _resultData['source'] = toJson$Enum$AchievementsSource(l$source);
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
     final l$id = id;
@@ -80922,11 +80949,13 @@ class Query$GetSection$section$$AchievementSection
 
   @override
   int get hashCode {
+    final l$source = source;
     final l$$__typename = $__typename;
     final l$id = id;
     final l$title = title;
     final l$description = description;
     return Object.hashAll([
+      l$source,
       l$$__typename,
       l$id,
       l$title,
@@ -80941,6 +80970,11 @@ class Query$GetSection$section$$AchievementSection
     }
     if (!(other is Query$GetSection$section$$AchievementSection) ||
         runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$source = source;
+    final lOther$source = other.source;
+    if (l$source != lOther$source) {
       return false;
     }
     final l$$__typename = $__typename;
@@ -80987,6 +81021,7 @@ abstract class CopyWith$Query$GetSection$section$$AchievementSection<TRes> {
       _CopyWithStubImpl$Query$GetSection$section$$AchievementSection;
 
   TRes call({
+    Enum$AchievementsSource? source,
     String? $__typename,
     String? id,
     String? title,
@@ -81008,12 +81043,16 @@ class _CopyWithImpl$Query$GetSection$section$$AchievementSection<TRes>
   static const _undefined = <dynamic, dynamic>{};
 
   TRes call({
+    Object? source = _undefined,
     Object? $__typename = _undefined,
     Object? id = _undefined,
     Object? title = _undefined,
     Object? description = _undefined,
   }) =>
       _then(Query$GetSection$section$$AchievementSection(
+        source: source == _undefined || source == null
+            ? _instance.source
+            : (source as Enum$AchievementsSource),
         $__typename: $__typename == _undefined || $__typename == null
             ? _instance.$__typename
             : ($__typename as String),
@@ -81032,6 +81071,7 @@ class _CopyWithStubImpl$Query$GetSection$section$$AchievementSection<TRes>
   TRes _res;
 
   call({
+    Enum$AchievementsSource? source,
     String? $__typename,
     String? id,
     String? title,

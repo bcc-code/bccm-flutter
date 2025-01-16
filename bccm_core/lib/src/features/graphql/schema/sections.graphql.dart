@@ -91,3 +91,36 @@ Enum$GridSectionSize fromJson$Enum$GridSectionSize(String value) {
       return Enum$GridSectionSize.$unknown;
   }
 }
+
+enum Enum$AchievementsSource {
+  internal,
+  bmm,
+  $unknown;
+
+  factory Enum$AchievementsSource.fromJson(String value) =>
+      fromJson$Enum$AchievementsSource(value);
+
+  String toJson() => toJson$Enum$AchievementsSource(this);
+}
+
+String toJson$Enum$AchievementsSource(Enum$AchievementsSource e) {
+  switch (e) {
+    case Enum$AchievementsSource.internal:
+      return r'internal';
+    case Enum$AchievementsSource.bmm:
+      return r'bmm';
+    case Enum$AchievementsSource.$unknown:
+      return r'$unknown';
+  }
+}
+
+Enum$AchievementsSource fromJson$Enum$AchievementsSource(String value) {
+  switch (value) {
+    case r'internal':
+      return Enum$AchievementsSource.internal;
+    case r'bmm':
+      return Enum$AchievementsSource.bmm;
+    default:
+      return Enum$AchievementsSource.$unknown;
+  }
+}

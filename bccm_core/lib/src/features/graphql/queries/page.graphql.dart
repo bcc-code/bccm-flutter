@@ -21859,12 +21859,19 @@ const fragmentDefinitionSection = FragmentDefinitionNode(
       directives: [],
       selectionSet: SelectionSetNode(selections: [
         FieldNode(
+          name: NameNode(value: 'source'),
+          alias: null,
+          arguments: [],
+          directives: [],
+          selectionSet: null,
+        ),
+        FieldNode(
           name: NameNode(value: '__typename'),
           alias: null,
           arguments: [],
           directives: [],
           selectionSet: null,
-        )
+        ),
       ]),
     ),
     FieldNode(
@@ -59280,6 +59287,7 @@ class _CopyWithStubImpl$Fragment$Section$$PageDetailsSection<TRes>
 
 class Fragment$Section$$AchievementSection implements Fragment$Section {
   Fragment$Section$$AchievementSection({
+    required this.source,
     this.$__typename = 'AchievementSection',
     required this.id,
     this.title,
@@ -59288,17 +59296,21 @@ class Fragment$Section$$AchievementSection implements Fragment$Section {
 
   factory Fragment$Section$$AchievementSection.fromJson(
       Map<String, dynamic> json) {
+    final l$source = json['source'];
     final l$$__typename = json['__typename'];
     final l$id = json['id'];
     final l$title = json['title'];
     final l$description = json['description'];
     return Fragment$Section$$AchievementSection(
+      source: fromJson$Enum$AchievementsSource((l$source as String)),
       $__typename: (l$$__typename as String),
       id: (l$id as String),
       title: (l$title as String?),
       description: (l$description as String?),
     );
   }
+
+  final Enum$AchievementsSource source;
 
   final String $__typename;
 
@@ -59310,6 +59322,8 @@ class Fragment$Section$$AchievementSection implements Fragment$Section {
 
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
+    final l$source = source;
+    _resultData['source'] = toJson$Enum$AchievementsSource(l$source);
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
     final l$id = id;
@@ -59323,11 +59337,13 @@ class Fragment$Section$$AchievementSection implements Fragment$Section {
 
   @override
   int get hashCode {
+    final l$source = source;
     final l$$__typename = $__typename;
     final l$id = id;
     final l$title = title;
     final l$description = description;
     return Object.hashAll([
+      l$source,
       l$$__typename,
       l$id,
       l$title,
@@ -59342,6 +59358,11 @@ class Fragment$Section$$AchievementSection implements Fragment$Section {
     }
     if (!(other is Fragment$Section$$AchievementSection) ||
         runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$source = source;
+    final lOther$source = other.source;
+    if (l$source != lOther$source) {
       return false;
     }
     final l$$__typename = $__typename;
@@ -59388,6 +59409,7 @@ abstract class CopyWith$Fragment$Section$$AchievementSection<TRes> {
       _CopyWithStubImpl$Fragment$Section$$AchievementSection;
 
   TRes call({
+    Enum$AchievementsSource? source,
     String? $__typename,
     String? id,
     String? title,
@@ -59409,12 +59431,16 @@ class _CopyWithImpl$Fragment$Section$$AchievementSection<TRes>
   static const _undefined = <dynamic, dynamic>{};
 
   TRes call({
+    Object? source = _undefined,
     Object? $__typename = _undefined,
     Object? id = _undefined,
     Object? title = _undefined,
     Object? description = _undefined,
   }) =>
       _then(Fragment$Section$$AchievementSection(
+        source: source == _undefined || source == null
+            ? _instance.source
+            : (source as Enum$AchievementsSource),
         $__typename: $__typename == _undefined || $__typename == null
             ? _instance.$__typename
             : ($__typename as String),
@@ -59433,6 +59459,7 @@ class _CopyWithStubImpl$Fragment$Section$$AchievementSection<TRes>
   TRes _res;
 
   call({
+    Enum$AchievementsSource? source,
     String? $__typename,
     String? id,
     String? title,

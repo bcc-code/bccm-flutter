@@ -242,6 +242,7 @@ fragment Section on Section {
     description
   }
   ... on AchievementSection {
+    source
     __typename
   }
   __typename
