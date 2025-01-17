@@ -11,6 +11,7 @@ import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:jwt_decoder/jwt_decoder.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:synchronized/synchronized.dart';
+import 'package:unleash_proxy_client_flutter/event_id_generator.dart';
 
 import '../../../utils/constants.dart';
 
@@ -383,6 +384,9 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
   }
 
   Future<String?> _readFromSecureStorage({required String key}) async {
+    final callId = uuid.v4();
+
+    await checkIfSecureStorageIsAvailableAndHasKey('_secureStorage', _secureStorage, key, callId);
     var result = await _secureStorage.read(key: key).then((value) {
       debugPrint('reading $key from secure storage');
       return value;
@@ -391,12 +395,14 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
             LogEvent(
               name: 'failed reading $key from secure storage',
               message: e.toString(),
+              meta: {'callId': callId},
             ),
           );
       return null;
     });
 
     // fallback to legacy storage
+    await checkIfSecureStorageIsAvailableAndHasKey('_legacySecureStorage', _legacySecureStorage, key, callId);
     result ??= await _legacySecureStorage.read(key: key).then((value) async {
       debugPrint('reading $key from legacy secure storage');
       _secureStorage.write(key: key, value: value);
@@ -406,12 +412,42 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
             LogEvent(
               name: 'failed reading $key from legacy secure storage',
               message: e.toString(),
+              meta: {'callId': callId},
             ),
           );
       return null;
     });
 
     return result;
+  }
+
+  checkIfSecureStorageIsAvailableAndHasKey(String storageName, FlutterSecureStorage storage, String key, String uid) async {
+    final [available, hasKey, value] = await Future.wait([
+      storage.isCupertinoProtectedDataAvailable(),
+      storage.containsKey(key: key),
+      storage.read(key: key),
+    ]);
+    if (available != true) {
+      ref.read(analyticsProvider).log(LogEvent(
+            name: 'secure storage data for key $key is not yet available in $storageName',
+            message: 'in checkIfSecureStorageIsAvailableAndHasKey',
+            meta: {'callId': uid},
+          ));
+    }
+    if (hasKey != true) {
+      ref.read(analyticsProvider).log(LogEvent(
+            name: 'secure storage does not contain key $key in $storageName',
+            message: 'in checkIfSecureStorageIsAvailableAndHasKey',
+            meta: {'callId': uid},
+          ));
+    }
+    if (value == null) {
+      ref.read(analyticsProvider).log(LogEvent(
+            name: 'secure storage data for key $key is null in $storageName',
+            message: 'in checkIfSecureStorageIsAvailableAndHasKey',
+            meta: {'callId': uid},
+          ));
+    }
   }
 }
 
