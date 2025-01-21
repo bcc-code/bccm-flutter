@@ -11,7 +11,7 @@ import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:jwt_decoder/jwt_decoder.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:synchronized/synchronized.dart';
-import 'package:unleash_proxy_client_flutter/event_id_generator.dart';
+import 'package:unleash_proxy_client_flutter/id_generator.dart';
 
 import '../../../utils/constants.dart';
 
@@ -384,7 +384,7 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
   }
 
   Future<String?> _readFromSecureStorage({required String key}) async {
-    final callId = uuid.v4();
+    final callId = generateId();
 
     await checkIfSecureStorageIsAvailableAndHasKey('_secureStorage', _secureStorage, key, callId);
     var result = await _secureStorage.read(key: key).then((value) {
