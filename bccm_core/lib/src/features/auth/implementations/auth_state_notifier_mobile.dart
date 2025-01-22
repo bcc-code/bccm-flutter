@@ -91,7 +91,9 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
             name: 'auth state is expired',
             message: 'auth state is expired after attempting to renew',
             meta: {
-              'state': state.toString(),
+              'expiresAt': state.expiresAt.toString(),
+              'now': DateTime.now().toString(),
+              'diff': state.expiresAt!.difference(DateTime.now().toUtc()).toString(),
             },
           ));
       debugPrint('auth: Auth state is still expired after attempting to renew.');
