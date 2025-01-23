@@ -117,9 +117,11 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
   }
 
   Future<void> _initialize() async {
-    final accessToken = await _readFromSecureStorage(key: SecureStorageKeys.accessToken);
-    final idToken = await _readFromSecureStorage(key: SecureStorageKeys.idToken);
-    final userProfileRaw = await _readFromSecureStorage(key: SecureStorageKeys.userProfile);
+    final [accessToken, idToken, userProfileRaw] = await Future.wait([
+      _readFromSecureStorage(key: SecureStorageKeys.accessToken),
+      _readFromSecureStorage(key: SecureStorageKeys.idToken),
+      _readFromSecureStorage(key: SecureStorageKeys.userProfile)
+    ]);
 
     if (accessToken == null || idToken == null || userProfileRaw == null) {
       return;
@@ -423,27 +425,28 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
     return result;
   }
 
-  checkIfSecureStorageIsAvailableAndHasKey(String storageName, FlutterSecureStorage storage, String key, String uid) async {
+  Future<void> checkIfSecureStorageIsAvailableAndHasKey(String storageName, FlutterSecureStorage storage, String key, String uid) async {
     final [available, hasKey, value] = await Future.wait([
       storage.isCupertinoProtectedDataAvailable(),
       storage.containsKey(key: key),
       storage.read(key: key),
     ]);
-    if (available != true) {
+
+    if (available == false) {
       ref.read(analyticsProvider).log(LogEvent(
             name: 'secure storage data for key $key is not yet available in $storageName',
             message: 'in checkIfSecureStorageIsAvailableAndHasKey',
             meta: {'callId': uid},
           ));
     }
-    if (hasKey != true) {
+    if (hasKey == false) {
       ref.read(analyticsProvider).log(LogEvent(
             name: 'secure storage does not contain key $key in $storageName',
             message: 'in checkIfSecureStorageIsAvailableAndHasKey',
             meta: {'callId': uid},
           ));
     }
-    if (value == null) {
+    if (available == true && hasKey == true && value == null) {
       ref.read(analyticsProvider).log(LogEvent(
             name: 'secure storage data for key $key is null in $storageName',
             message: 'in checkIfSecureStorageIsAvailableAndHasKey',
