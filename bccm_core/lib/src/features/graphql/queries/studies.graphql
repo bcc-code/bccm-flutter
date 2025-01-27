@@ -1,6 +1,7 @@
 fragment LessonProgressOverview on Lesson {
   id
   locked
+  completed
   progress {
     total
     completed

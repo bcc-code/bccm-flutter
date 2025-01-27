@@ -89,7 +89,7 @@ class Fragment$Prompt {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Prompt) || runtimeType != other.runtimeType) {
+    if (other is! Fragment$Prompt || runtimeType != other.runtimeType) {
       return false;
     }
     final l$id = id;
@@ -456,7 +456,7 @@ class Fragment$Prompt$$SurveyPrompt implements Fragment$Prompt {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Prompt$$SurveyPrompt) ||
+    if (other is! Fragment$Prompt$$SurveyPrompt ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -669,7 +669,7 @@ class Fragment$Survey {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Survey) || runtimeType != other.runtimeType) {
+    if (other is! Fragment$Survey || runtimeType != other.runtimeType) {
       return false;
     }
     final l$id = id;
@@ -949,7 +949,7 @@ class Fragment$Survey$questions {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Survey$questions) ||
+    if (other is! Fragment$Survey$questions ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1131,8 +1131,7 @@ class Fragment$SurveyQuestion {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$SurveyQuestion) ||
-        runtimeType != other.runtimeType) {
+    if (other is! Fragment$SurveyQuestion || runtimeType != other.runtimeType) {
       return false;
     }
     final l$id = id;
@@ -1510,7 +1509,7 @@ class Fragment$SurveyQuestion$$SurveyRatingQuestion
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$SurveyQuestion$$SurveyRatingQuestion) ||
+    if (other is! Fragment$SurveyQuestion$$SurveyRatingQuestion ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1677,7 +1676,7 @@ class Fragment$SurveyQuestion$$SurveyTextQuestion
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$SurveyQuestion$$SurveyTextQuestion) ||
+    if (other is! Fragment$SurveyQuestion$$SurveyTextQuestion ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1870,7 +1869,7 @@ class Fragment$SurveyQuestion$$SurveyLinkQuestion
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$SurveyQuestion$$SurveyLinkQuestion) ||
+    if (other is! Fragment$SurveyQuestion$$SurveyLinkQuestion ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2050,7 +2049,7 @@ class Query$getPrompts {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$getPrompts) || runtimeType != other.runtimeType) {
+    if (other is! Query$getPrompts || runtimeType != other.runtimeType) {
       return false;
     }
     final l$prompts = prompts;
@@ -2376,7 +2375,7 @@ class Variables$Mutation$answerSurveyQuestion {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Variables$Mutation$answerSurveyQuestion) ||
+    if (other is! Variables$Mutation$answerSurveyQuestion ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2502,7 +2501,7 @@ class Mutation$answerSurveyQuestion {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Mutation$answerSurveyQuestion) ||
+    if (other is! Mutation$answerSurveyQuestion ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2930,7 +2929,7 @@ class Mutation$answerSurveyQuestion$answerSurveyQuestion {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Mutation$answerSurveyQuestion$answerSurveyQuestion) ||
+    if (other is! Mutation$answerSurveyQuestion$answerSurveyQuestion ||
         runtimeType != other.runtimeType) {
       return false;
     }

@@ -69,7 +69,7 @@ class Variables$Mutation$setEpisodeProgress {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Variables$Mutation$setEpisodeProgress) ||
+    if (other is! Variables$Mutation$setEpisodeProgress ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -213,7 +213,7 @@ class Mutation$setEpisodeProgress {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Mutation$setEpisodeProgress) ||
+    if (other is! Mutation$setEpisodeProgress ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -666,7 +666,7 @@ class Mutation$setEpisodeProgress$setEpisodeProgress {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Mutation$setEpisodeProgress$setEpisodeProgress) ||
+    if (other is! Mutation$setEpisodeProgress$setEpisodeProgress ||
         runtimeType != other.runtimeType) {
       return false;
     }

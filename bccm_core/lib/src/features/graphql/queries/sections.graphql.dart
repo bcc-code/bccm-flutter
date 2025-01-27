@@ -71,7 +71,7 @@ class Variables$Query$FetchMoreItemsForItemSection {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Variables$Query$FetchMoreItemsForItemSection) ||
+    if (other is! Variables$Query$FetchMoreItemsForItemSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -213,7 +213,7 @@ class Query$FetchMoreItemsForItemSection {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$FetchMoreItemsForItemSection) ||
+    if (other is! Query$FetchMoreItemsForItemSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -754,7 +754,7 @@ class Query$FetchMoreItemsForItemSection$section implements Fragment$Section {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$FetchMoreItemsForItemSection$section) ||
+    if (other is! Query$FetchMoreItemsForItemSection$section ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1241,7 +1241,7 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$FetchMoreItemsForItemSection$section$$PosterSection) ||
+    if (other is! Query$FetchMoreItemsForItemSection$section$$PosterSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1537,8 +1537,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$metadata
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$PosterSection$metadata) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$PosterSection$metadata ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1781,8 +1781,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$metadata$page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$PosterSection$metadata$page) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$PosterSection$metadata$page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1953,8 +1953,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$PosterSection$items) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$PosterSection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2181,8 +2181,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2406,8 +2406,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2819,8 +2819,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Episode) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Episode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -3093,8 +3093,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Episode$season) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Episode$season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -3271,8 +3271,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Episode$season$show) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Episode$season$show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -3463,8 +3463,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Show) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -3690,8 +3690,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Show$defaultEpisode) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Show$defaultEpisode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -3824,8 +3824,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Season) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -3954,8 +3954,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Page) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -4104,8 +4104,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Link) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Link ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -4238,8 +4238,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$StudyTopic) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$StudyTopic ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -4368,8 +4368,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Game) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Game ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -4548,8 +4548,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Playlist) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Playlist ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -4745,8 +4745,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Short) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Short ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -4893,8 +4893,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Person) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Person ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -5044,8 +5044,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Playlist$items) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Playlist$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -5233,8 +5233,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Playlist$items$items) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Playlist$items$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -5432,8 +5432,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Playlist$items$items$$Short) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Playlist$items$items$$Short ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -5578,8 +5578,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Playlist$items$items$$Episode) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Playlist$items$items$$Episode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -5728,8 +5728,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Show$seasons) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Show$seasons ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -5909,8 +5909,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Show$seasons$items) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Show$seasons$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -6080,8 +6080,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Show$seasons$items$episodes) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Show$seasons$items$episodes ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -6258,8 +6258,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Show$seasons$items$episodes$items) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Show$seasons$items$episodes$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -6457,8 +6457,7 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$FeaturedSection) ||
+    if (other is! Query$FetchMoreItemsForItemSection$section$$FeaturedSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -6755,8 +6754,8 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$metadata
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$FeaturedSection$metadata) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$FeaturedSection$metadata ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -7002,8 +7001,8 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$metadata$page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$FeaturedSection$metadata$page) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$FeaturedSection$metadata$page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -7174,8 +7173,8 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -7411,8 +7410,8 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -7647,8 +7646,8 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$it
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -8051,8 +8050,8 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$it
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Episode) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Episode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -8314,8 +8313,8 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$it
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Episode$season) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Episode$season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -8492,8 +8491,8 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$it
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Episode$season$show) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Episode$season$show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -8672,8 +8671,8 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$it
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Show) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -8870,8 +8869,8 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$it
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Show$defaultEpisode) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Show$defaultEpisode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -9004,8 +9003,8 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$it
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Season) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -9134,8 +9133,8 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$it
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Page) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -9284,8 +9283,8 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$it
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Link) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Link ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -9418,8 +9417,8 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$it
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$StudyTopic) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$StudyTopic ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -9548,8 +9547,8 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$it
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Game) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Game ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -9698,8 +9697,8 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$it
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Playlist) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Playlist ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -9846,8 +9845,8 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$it
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Short) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Short ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -9994,8 +9993,8 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$it
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Person) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Person ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -10191,8 +10190,7 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$DefaultSection) ||
+    if (other is! Query$FetchMoreItemsForItemSection$section$$DefaultSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -10489,8 +10487,8 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection$metadata
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$DefaultSection$metadata) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$DefaultSection$metadata ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -10735,8 +10733,8 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection$metadata$page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$DefaultSection$metadata$page) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$DefaultSection$metadata$page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -10907,8 +10905,8 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$DefaultSection$items) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$DefaultSection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -11135,8 +11133,8 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -11360,8 +11358,8 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$ite
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -11773,8 +11771,8 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$ite
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Episode) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Episode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -12047,8 +12045,8 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$ite
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Episode$season) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Episode$season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -12225,8 +12223,8 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$ite
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Episode$season$show) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Episode$season$show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -12405,8 +12403,8 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$ite
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Show) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -12603,8 +12601,8 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$ite
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Show$defaultEpisode) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Show$defaultEpisode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -12737,8 +12735,8 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$ite
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Season) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -12867,8 +12865,8 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$ite
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Page) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -13017,8 +13015,8 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$ite
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Link) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Link ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -13151,8 +13149,8 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$ite
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$StudyTopic) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$StudyTopic ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -13281,8 +13279,8 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$ite
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Game) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Game ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -13431,8 +13429,8 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$ite
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Playlist) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Playlist ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -13579,8 +13577,8 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$ite
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Short) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Short ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -13727,8 +13725,8 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$ite
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Person) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Person ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -13924,7 +13922,7 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$FetchMoreItemsForItemSection$section$$CardSection) ||
+    if (other is! Query$FetchMoreItemsForItemSection$section$$CardSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -14215,8 +14213,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$metadata
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$CardSection$metadata) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$CardSection$metadata ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -14457,8 +14455,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$metadata$page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$CardSection$metadata$page) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$CardSection$metadata$page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -14629,8 +14627,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$CardSection$items) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$CardSection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -14865,8 +14863,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$items$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$CardSection$items$items) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$CardSection$items$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -15101,8 +15099,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -15506,8 +15504,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Episode) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Episode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -15770,8 +15768,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Episode$season) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Episode$season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -15949,8 +15947,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Episode$season$show) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Episode$season$show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -16130,8 +16128,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Show) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -16329,8 +16327,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Show$defaultEpisode) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Show$defaultEpisode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -16464,8 +16462,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Season) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -16595,8 +16593,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Page) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -16746,8 +16744,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Link) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Link ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -16939,8 +16937,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$StudyTopic) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$StudyTopic ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -17182,8 +17180,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Game) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Game ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -17333,8 +17331,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Playlist) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Playlist ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -17482,8 +17480,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Short) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Short ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -17631,8 +17629,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Person) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Person ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -17819,7 +17817,7 @@ class Query$FetchMoreItemsForItemSection$section$$ListSection
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$FetchMoreItemsForItemSection$section$$ListSection) ||
+    if (other is! Query$FetchMoreItemsForItemSection$section$$ListSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -18099,8 +18097,8 @@ class Query$FetchMoreItemsForItemSection$section$$ListSection$metadata
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$ListSection$metadata) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$ListSection$metadata ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -18341,8 +18339,8 @@ class Query$FetchMoreItemsForItemSection$section$$ListSection$metadata$page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$ListSection$metadata$page) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$ListSection$metadata$page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -18513,8 +18511,8 @@ class Query$FetchMoreItemsForItemSection$section$$ListSection$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$ListSection$items) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$ListSection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -18739,8 +18737,8 @@ class Query$FetchMoreItemsForItemSection$section$$ListSection$items$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$ListSection$items$items) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$ListSection$items$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -18963,8 +18961,8 @@ class Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -19376,8 +19374,8 @@ class Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Episode) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Episode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -19650,8 +19648,8 @@ class Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Episode$season) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Episode$season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -19828,8 +19826,8 @@ class Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Episode$season$show) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Episode$season$show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -20008,8 +20006,8 @@ class Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Show) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -20206,8 +20204,8 @@ class Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Show$defaultEpisode) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Show$defaultEpisode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -20340,8 +20338,8 @@ class Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Season) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -20470,8 +20468,8 @@ class Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Page) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -20620,8 +20618,8 @@ class Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Link) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Link ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -20754,8 +20752,8 @@ class Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$StudyTopic) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$StudyTopic ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -20884,8 +20882,8 @@ class Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Game) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Game ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -21034,8 +21032,8 @@ class Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Playlist) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Playlist ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -21182,8 +21180,8 @@ class Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Short) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Short ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -21330,8 +21328,8 @@ class Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Person) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Person ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -21527,8 +21525,7 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$CardListSection) ||
+    if (other is! Query$FetchMoreItemsForItemSection$section$$CardListSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -21825,8 +21822,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$metadata
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$CardListSection$metadata) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$CardListSection$metadata ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -22072,8 +22069,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$metadata$page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$CardListSection$metadata$page) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$CardListSection$metadata$page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -22244,8 +22241,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$CardListSection$items) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$CardListSection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -22482,8 +22479,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -22719,8 +22716,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$it
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -23124,8 +23121,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$it
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Episode) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Episode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -23388,8 +23385,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$it
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Episode$season) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Episode$season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -23567,8 +23564,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$it
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Episode$season$show) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Episode$season$show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -23748,8 +23745,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$it
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Show) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -23947,8 +23944,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$it
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Show$defaultEpisode) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Show$defaultEpisode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -24082,8 +24079,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$it
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Season) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -24213,8 +24210,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$it
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Page) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -24364,8 +24361,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$it
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Link) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Link ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -24557,8 +24554,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$it
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$StudyTopic) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$StudyTopic ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -24800,8 +24797,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$it
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Game) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Game ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -24951,8 +24948,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$it
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Playlist) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Playlist ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -25100,8 +25097,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$it
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Short) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Short ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -25249,8 +25246,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$it
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Person) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Person ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -25449,8 +25446,8 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$DefaultGridSection) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$DefaultGridSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -25749,8 +25746,8 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$metadata
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$metadata) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$metadata ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -25996,8 +25993,8 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$metadata$pa
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$metadata$page) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$metadata$page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -26169,8 +26166,8 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -26401,8 +26398,8 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -26627,8 +26624,8 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -27032,8 +27029,8 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Episode) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Episode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -27296,8 +27293,8 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Episode$season) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Episode$season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -27475,8 +27472,8 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Episode$season$show) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Episode$season$show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -27656,8 +27653,8 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Show) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -27855,8 +27852,8 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Show$defaultEpisode) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Show$defaultEpisode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -27990,8 +27987,8 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Season) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -28121,8 +28118,8 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Page) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -28272,8 +28269,8 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Link) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Link ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -28407,8 +28404,8 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$StudyTopic) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$StudyTopic ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -28538,8 +28535,8 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Game) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Game ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -28689,8 +28686,8 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Playlist) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Playlist ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -28838,8 +28835,8 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Short) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Short ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -28987,8 +28984,8 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Person) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Person ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -29186,8 +29183,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterGridSection
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$PosterGridSection) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$PosterGridSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -29484,8 +29481,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$metadata
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$PosterGridSection$metadata) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$PosterGridSection$metadata ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -29731,8 +29728,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$metadata$pag
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$PosterGridSection$metadata$page) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$PosterGridSection$metadata$page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -29904,8 +29901,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -30135,8 +30132,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -30361,8 +30358,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -30766,8 +30763,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Episode) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Episode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -31030,8 +31027,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Episode$season) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Episode$season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -31209,8 +31206,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Episode$season$show) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Episode$season$show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -31390,8 +31387,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Show) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -31589,8 +31586,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Show$defaultEpisode) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Show$defaultEpisode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -31724,8 +31721,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Season) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -31855,8 +31852,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Page) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -32006,8 +32003,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Link) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Link ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -32141,8 +32138,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$StudyTopic) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$StudyTopic ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -32272,8 +32269,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Game) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Game ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -32423,8 +32420,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Playlist) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Playlist ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -32572,8 +32569,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Short) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Short ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -32721,8 +32718,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Person) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Person ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -32919,8 +32916,7 @@ class Query$FetchMoreItemsForItemSection$section$$IconGridSection
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$IconGridSection) ||
+    if (other is! Query$FetchMoreItemsForItemSection$section$$IconGridSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -33217,8 +33213,8 @@ class Query$FetchMoreItemsForItemSection$section$$IconGridSection$metadata
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$IconGridSection$metadata) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$IconGridSection$metadata ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -33464,8 +33460,8 @@ class Query$FetchMoreItemsForItemSection$section$$IconGridSection$metadata$page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$IconGridSection$metadata$page) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$IconGridSection$metadata$page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -33637,8 +33633,8 @@ class Query$FetchMoreItemsForItemSection$section$$IconGridSection$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$IconGridSection$items) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$IconGridSection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -33866,8 +33862,8 @@ class Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -34092,8 +34088,8 @@ class Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$it
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -34497,8 +34493,8 @@ class Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$it
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Episode) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Episode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -34761,8 +34757,8 @@ class Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$it
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Episode$season) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Episode$season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -34940,8 +34936,8 @@ class Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$it
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Episode$season$show) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Episode$season$show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -35121,8 +35117,8 @@ class Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$it
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Show) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -35320,8 +35316,8 @@ class Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$it
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Show$defaultEpisode) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Show$defaultEpisode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -35455,8 +35451,8 @@ class Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$it
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Season) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -35586,8 +35582,8 @@ class Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$it
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Page) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -35737,8 +35733,8 @@ class Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$it
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Link) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Link ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -35872,8 +35868,8 @@ class Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$it
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$StudyTopic) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$StudyTopic ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -36003,8 +35999,8 @@ class Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$it
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Game) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Game ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -36154,8 +36150,8 @@ class Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$it
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Playlist) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Playlist ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -36303,8 +36299,8 @@ class Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$it
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Short) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Short ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -36452,8 +36448,8 @@ class Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$it
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Person) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Person ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -36640,7 +36636,7 @@ class Query$FetchMoreItemsForItemSection$section$$IconSection
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$FetchMoreItemsForItemSection$section$$IconSection) ||
+    if (other is! Query$FetchMoreItemsForItemSection$section$$IconSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -36920,8 +36916,8 @@ class Query$FetchMoreItemsForItemSection$section$$IconSection$metadata
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$IconSection$metadata) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$IconSection$metadata ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -37162,8 +37158,8 @@ class Query$FetchMoreItemsForItemSection$section$$IconSection$metadata$page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$IconSection$metadata$page) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$IconSection$metadata$page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -37331,8 +37327,8 @@ class Query$FetchMoreItemsForItemSection$section$$IconSection$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$IconSection$items) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$IconSection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -37565,7 +37561,7 @@ class Query$FetchMoreItemsForItemSection$section$$LabelSection
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$FetchMoreItemsForItemSection$section$$LabelSection) ||
+    if (other is! Query$FetchMoreItemsForItemSection$section$$LabelSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -37848,8 +37844,8 @@ class Query$FetchMoreItemsForItemSection$section$$LabelSection$metadata
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$LabelSection$metadata) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$LabelSection$metadata ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -38092,8 +38088,8 @@ class Query$FetchMoreItemsForItemSection$section$$LabelSection$metadata$page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$LabelSection$metadata$page) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$LabelSection$metadata$page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -38261,8 +38257,8 @@ class Query$FetchMoreItemsForItemSection$section$$LabelSection$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$LabelSection$items) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$LabelSection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -38497,7 +38493,7 @@ class Query$FetchMoreItemsForItemSection$section$$AvatarSection
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$FetchMoreItemsForItemSection$section$$AvatarSection) ||
+    if (other is! Query$FetchMoreItemsForItemSection$section$$AvatarSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -38782,8 +38778,8 @@ class Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -39026,8 +39022,8 @@ class Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata$page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata$page) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$AvatarSection$metadata$page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -39195,8 +39191,8 @@ class Query$FetchMoreItemsForItemSection$section$$AvatarSection$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$AvatarSection$items) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$AvatarSection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -39443,7 +39439,7 @@ class Query$FetchMoreItemsForItemSection$section$$WebSection
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$FetchMoreItemsForItemSection$section$$WebSection) ||
+    if (other is! Query$FetchMoreItemsForItemSection$section$$WebSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -39672,8 +39668,7 @@ class Query$FetchMoreItemsForItemSection$section$$MessageSection
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$MessageSection) ||
+    if (other is! Query$FetchMoreItemsForItemSection$section$$MessageSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -39889,8 +39884,8 @@ class Query$FetchMoreItemsForItemSection$section$$MessageSection$messages
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$MessageSection$messages) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$MessageSection$messages ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -40081,8 +40076,8 @@ class Query$FetchMoreItemsForItemSection$section$$MessageSection$messages$style
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$MessageSection$messages$style) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$MessageSection$messages$style ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -40260,8 +40255,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$it
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$StudyTopic$images) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$StudyTopic$images ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -40426,8 +40421,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$it
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$StudyTopic$lessonsProgress) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$StudyTopic$lessonsProgress ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -40594,8 +40589,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$StudyTopic$images) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$StudyTopic$images ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -40760,8 +40755,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$StudyTopic$lessonsProgress) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$StudyTopic$lessonsProgress ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -40937,8 +40932,8 @@ class Query$FetchMoreItemsForItemSection$section$$PageDetailsSection
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$PageDetailsSection) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$PageDetailsSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -41127,8 +41122,8 @@ class Query$FetchMoreItemsForItemSection$section$$AchievementSection
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchMoreItemsForItemSection$section$$AchievementSection) ||
+    if (other
+            is! Query$FetchMoreItemsForItemSection$section$$AchievementSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -41325,7 +41320,7 @@ class Variables$Query$GetSection {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Variables$Query$GetSection) ||
+    if (other is! Variables$Query$GetSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -41478,7 +41473,7 @@ class Query$GetSection {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection) || runtimeType != other.runtimeType) {
+    if (other is! Query$GetSection || runtimeType != other.runtimeType) {
       return false;
     }
     final l$section = section;
@@ -41933,7 +41928,7 @@ class Query$GetSection$section implements Fragment$Section {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section) ||
+    if (other is! Query$GetSection$section ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -42367,7 +42362,7 @@ class Query$GetSection$section$$PosterSection
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$PosterSection) ||
+    if (other is! Query$GetSection$section$$PosterSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -42638,7 +42633,7 @@ class Query$GetSection$section$$PosterSection$metadata
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$PosterSection$metadata) ||
+    if (other is! Query$GetSection$section$$PosterSection$metadata ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -42863,7 +42858,7 @@ class Query$GetSection$section$$PosterSection$metadata$page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$PosterSection$metadata$page) ||
+    if (other is! Query$GetSection$section$$PosterSection$metadata$page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -43023,7 +43018,7 @@ class Query$GetSection$section$$PosterSection$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$PosterSection$items) ||
+    if (other is! Query$GetSection$section$$PosterSection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -43233,7 +43228,7 @@ class Query$GetSection$section$$PosterSection$items$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$PosterSection$items$items) ||
+    if (other is! Query$GetSection$section$$PosterSection$items$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -43445,7 +43440,7 @@ class Query$GetSection$section$$PosterSection$items$items$item
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$PosterSection$items$items$item) ||
+    if (other is! Query$GetSection$section$$PosterSection$items$items$item ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -43849,8 +43844,8 @@ class Query$GetSection$section$$PosterSection$items$items$item$$Episode
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$PosterSection$items$items$item$$Episode) ||
+    if (other
+            is! Query$GetSection$section$$PosterSection$items$items$item$$Episode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -44120,8 +44115,8 @@ class Query$GetSection$section$$PosterSection$items$items$item$$Episode$season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$PosterSection$items$items$item$$Episode$season) ||
+    if (other
+            is! Query$GetSection$section$$PosterSection$items$items$item$$Episode$season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -44298,8 +44293,8 @@ class Query$GetSection$section$$PosterSection$items$items$item$$Episode$season$s
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$PosterSection$items$items$item$$Episode$season$show) ||
+    if (other
+            is! Query$GetSection$section$$PosterSection$items$items$item$$Episode$season$show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -44490,8 +44485,8 @@ class Query$GetSection$section$$PosterSection$items$items$item$$Show
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$PosterSection$items$items$item$$Show) ||
+    if (other
+            is! Query$GetSection$section$$PosterSection$items$items$item$$Show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -44714,8 +44709,8 @@ class Query$GetSection$section$$PosterSection$items$items$item$$Show$defaultEpis
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$PosterSection$items$items$item$$Show$defaultEpisode) ||
+    if (other
+            is! Query$GetSection$section$$PosterSection$items$items$item$$Show$defaultEpisode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -44848,8 +44843,8 @@ class Query$GetSection$section$$PosterSection$items$items$item$$Season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$PosterSection$items$items$item$$Season) ||
+    if (other
+            is! Query$GetSection$section$$PosterSection$items$items$item$$Season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -44976,8 +44971,8 @@ class Query$GetSection$section$$PosterSection$items$items$item$$Page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$PosterSection$items$items$item$$Page) ||
+    if (other
+            is! Query$GetSection$section$$PosterSection$items$items$item$$Page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -45123,8 +45118,8 @@ class Query$GetSection$section$$PosterSection$items$items$item$$Link
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$PosterSection$items$items$item$$Link) ||
+    if (other
+            is! Query$GetSection$section$$PosterSection$items$items$item$$Link ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -45254,8 +45249,8 @@ class Query$GetSection$section$$PosterSection$items$items$item$$StudyTopic
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$PosterSection$items$items$item$$StudyTopic) ||
+    if (other
+            is! Query$GetSection$section$$PosterSection$items$items$item$$StudyTopic ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -45384,8 +45379,8 @@ class Query$GetSection$section$$PosterSection$items$items$item$$Game
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$PosterSection$items$items$item$$Game) ||
+    if (other
+            is! Query$GetSection$section$$PosterSection$items$items$item$$Game ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -45561,8 +45556,8 @@ class Query$GetSection$section$$PosterSection$items$items$item$$Playlist
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$PosterSection$items$items$item$$Playlist) ||
+    if (other
+            is! Query$GetSection$section$$PosterSection$items$items$item$$Playlist ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -45755,8 +45750,8 @@ class Query$GetSection$section$$PosterSection$items$items$item$$Short
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$PosterSection$items$items$item$$Short) ||
+    if (other
+            is! Query$GetSection$section$$PosterSection$items$items$item$$Short ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -45900,8 +45895,8 @@ class Query$GetSection$section$$PosterSection$items$items$item$$Person
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$PosterSection$items$items$item$$Person) ||
+    if (other
+            is! Query$GetSection$section$$PosterSection$items$items$item$$Person ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -46048,8 +46043,8 @@ class Query$GetSection$section$$PosterSection$items$items$item$$Playlist$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$PosterSection$items$items$item$$Playlist$items) ||
+    if (other
+            is! Query$GetSection$section$$PosterSection$items$items$item$$Playlist$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -46237,8 +46232,8 @@ class Query$GetSection$section$$PosterSection$items$items$item$$Playlist$items$i
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$PosterSection$items$items$item$$Playlist$items$items) ||
+    if (other
+            is! Query$GetSection$section$$PosterSection$items$items$item$$Playlist$items$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -46436,8 +46431,8 @@ class Query$GetSection$section$$PosterSection$items$items$item$$Playlist$items$i
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$PosterSection$items$items$item$$Playlist$items$items$$Short) ||
+    if (other
+            is! Query$GetSection$section$$PosterSection$items$items$item$$Playlist$items$items$$Short ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -46582,8 +46577,8 @@ class Query$GetSection$section$$PosterSection$items$items$item$$Playlist$items$i
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$PosterSection$items$items$item$$Playlist$items$items$$Episode) ||
+    if (other
+            is! Query$GetSection$section$$PosterSection$items$items$item$$Playlist$items$items$$Episode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -46732,8 +46727,8 @@ class Query$GetSection$section$$PosterSection$items$items$item$$Show$seasons
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$PosterSection$items$items$item$$Show$seasons) ||
+    if (other
+            is! Query$GetSection$section$$PosterSection$items$items$item$$Show$seasons ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -46913,8 +46908,8 @@ class Query$GetSection$section$$PosterSection$items$items$item$$Show$seasons$ite
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$PosterSection$items$items$item$$Show$seasons$items) ||
+    if (other
+            is! Query$GetSection$section$$PosterSection$items$items$item$$Show$seasons$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -47084,8 +47079,8 @@ class Query$GetSection$section$$PosterSection$items$items$item$$Show$seasons$ite
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$PosterSection$items$items$item$$Show$seasons$items$episodes) ||
+    if (other
+            is! Query$GetSection$section$$PosterSection$items$items$item$$Show$seasons$items$episodes ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -47262,8 +47257,8 @@ class Query$GetSection$section$$PosterSection$items$items$item$$Show$seasons$ite
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$PosterSection$items$items$item$$Show$seasons$items$episodes$items) ||
+    if (other
+            is! Query$GetSection$section$$PosterSection$items$items$item$$Show$seasons$items$episodes$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -47460,7 +47455,7 @@ class Query$GetSection$section$$FeaturedSection
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$FeaturedSection) ||
+    if (other is! Query$GetSection$section$$FeaturedSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -47734,7 +47729,7 @@ class Query$GetSection$section$$FeaturedSection$metadata
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$FeaturedSection$metadata) ||
+    if (other is! Query$GetSection$section$$FeaturedSection$metadata ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -47966,7 +47961,7 @@ class Query$GetSection$section$$FeaturedSection$metadata$page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$FeaturedSection$metadata$page) ||
+    if (other is! Query$GetSection$section$$FeaturedSection$metadata$page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -48127,7 +48122,7 @@ class Query$GetSection$section$$FeaturedSection$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$FeaturedSection$items) ||
+    if (other is! Query$GetSection$section$$FeaturedSection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -48346,7 +48341,7 @@ class Query$GetSection$section$$FeaturedSection$items$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$FeaturedSection$items$items) ||
+    if (other is! Query$GetSection$section$$FeaturedSection$items$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -48569,8 +48564,7 @@ class Query$GetSection$section$$FeaturedSection$items$items$item
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$FeaturedSection$items$items$item) ||
+    if (other is! Query$GetSection$section$$FeaturedSection$items$items$item ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -48969,8 +48963,8 @@ class Query$GetSection$section$$FeaturedSection$items$items$item$$Episode
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$FeaturedSection$items$items$item$$Episode) ||
+    if (other
+            is! Query$GetSection$section$$FeaturedSection$items$items$item$$Episode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -49231,8 +49225,8 @@ class Query$GetSection$section$$FeaturedSection$items$items$item$$Episode$season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$FeaturedSection$items$items$item$$Episode$season) ||
+    if (other
+            is! Query$GetSection$section$$FeaturedSection$items$items$item$$Episode$season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -49409,8 +49403,8 @@ class Query$GetSection$section$$FeaturedSection$items$items$item$$Episode$season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$FeaturedSection$items$items$item$$Episode$season$show) ||
+    if (other
+            is! Query$GetSection$section$$FeaturedSection$items$items$item$$Episode$season$show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -49589,8 +49583,8 @@ class Query$GetSection$section$$FeaturedSection$items$items$item$$Show
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$FeaturedSection$items$items$item$$Show) ||
+    if (other
+            is! Query$GetSection$section$$FeaturedSection$items$items$item$$Show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -49784,8 +49778,8 @@ class Query$GetSection$section$$FeaturedSection$items$items$item$$Show$defaultEp
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$FeaturedSection$items$items$item$$Show$defaultEpisode) ||
+    if (other
+            is! Query$GetSection$section$$FeaturedSection$items$items$item$$Show$defaultEpisode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -49918,8 +49912,8 @@ class Query$GetSection$section$$FeaturedSection$items$items$item$$Season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$FeaturedSection$items$items$item$$Season) ||
+    if (other
+            is! Query$GetSection$section$$FeaturedSection$items$items$item$$Season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -50046,8 +50040,8 @@ class Query$GetSection$section$$FeaturedSection$items$items$item$$Page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$FeaturedSection$items$items$item$$Page) ||
+    if (other
+            is! Query$GetSection$section$$FeaturedSection$items$items$item$$Page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -50193,8 +50187,8 @@ class Query$GetSection$section$$FeaturedSection$items$items$item$$Link
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$FeaturedSection$items$items$item$$Link) ||
+    if (other
+            is! Query$GetSection$section$$FeaturedSection$items$items$item$$Link ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -50324,8 +50318,8 @@ class Query$GetSection$section$$FeaturedSection$items$items$item$$StudyTopic
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$FeaturedSection$items$items$item$$StudyTopic) ||
+    if (other
+            is! Query$GetSection$section$$FeaturedSection$items$items$item$$StudyTopic ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -50454,8 +50448,8 @@ class Query$GetSection$section$$FeaturedSection$items$items$item$$Game
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$FeaturedSection$items$items$item$$Game) ||
+    if (other
+            is! Query$GetSection$section$$FeaturedSection$items$items$item$$Game ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -50601,8 +50595,8 @@ class Query$GetSection$section$$FeaturedSection$items$items$item$$Playlist
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$FeaturedSection$items$items$item$$Playlist) ||
+    if (other
+            is! Query$GetSection$section$$FeaturedSection$items$items$item$$Playlist ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -50749,8 +50743,8 @@ class Query$GetSection$section$$FeaturedSection$items$items$item$$Short
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$FeaturedSection$items$items$item$$Short) ||
+    if (other
+            is! Query$GetSection$section$$FeaturedSection$items$items$item$$Short ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -50894,8 +50888,8 @@ class Query$GetSection$section$$FeaturedSection$items$items$item$$Person
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$FeaturedSection$items$items$item$$Person) ||
+    if (other
+            is! Query$GetSection$section$$FeaturedSection$items$items$item$$Person ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -51087,7 +51081,7 @@ class Query$GetSection$section$$DefaultSection
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$DefaultSection) ||
+    if (other is! Query$GetSection$section$$DefaultSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -51359,7 +51353,7 @@ class Query$GetSection$section$$DefaultSection$metadata
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$DefaultSection$metadata) ||
+    if (other is! Query$GetSection$section$$DefaultSection$metadata ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -51590,7 +51584,7 @@ class Query$GetSection$section$$DefaultSection$metadata$page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$DefaultSection$metadata$page) ||
+    if (other is! Query$GetSection$section$$DefaultSection$metadata$page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -51750,7 +51744,7 @@ class Query$GetSection$section$$DefaultSection$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$DefaultSection$items) ||
+    if (other is! Query$GetSection$section$$DefaultSection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -51960,7 +51954,7 @@ class Query$GetSection$section$$DefaultSection$items$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$DefaultSection$items$items) ||
+    if (other is! Query$GetSection$section$$DefaultSection$items$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -52172,7 +52166,7 @@ class Query$GetSection$section$$DefaultSection$items$items$item
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$DefaultSection$items$items$item) ||
+    if (other is! Query$GetSection$section$$DefaultSection$items$items$item ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -52580,8 +52574,8 @@ class Query$GetSection$section$$DefaultSection$items$items$item$$Episode
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$DefaultSection$items$items$item$$Episode) ||
+    if (other
+            is! Query$GetSection$section$$DefaultSection$items$items$item$$Episode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -52851,8 +52845,8 @@ class Query$GetSection$section$$DefaultSection$items$items$item$$Episode$season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$DefaultSection$items$items$item$$Episode$season) ||
+    if (other
+            is! Query$GetSection$section$$DefaultSection$items$items$item$$Episode$season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -53029,8 +53023,8 @@ class Query$GetSection$section$$DefaultSection$items$items$item$$Episode$season$
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$DefaultSection$items$items$item$$Episode$season$show) ||
+    if (other
+            is! Query$GetSection$section$$DefaultSection$items$items$item$$Episode$season$show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -53209,8 +53203,8 @@ class Query$GetSection$section$$DefaultSection$items$items$item$$Show
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$DefaultSection$items$items$item$$Show) ||
+    if (other
+            is! Query$GetSection$section$$DefaultSection$items$items$item$$Show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -53404,8 +53398,8 @@ class Query$GetSection$section$$DefaultSection$items$items$item$$Show$defaultEpi
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$DefaultSection$items$items$item$$Show$defaultEpisode) ||
+    if (other
+            is! Query$GetSection$section$$DefaultSection$items$items$item$$Show$defaultEpisode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -53538,8 +53532,8 @@ class Query$GetSection$section$$DefaultSection$items$items$item$$Season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$DefaultSection$items$items$item$$Season) ||
+    if (other
+            is! Query$GetSection$section$$DefaultSection$items$items$item$$Season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -53666,8 +53660,8 @@ class Query$GetSection$section$$DefaultSection$items$items$item$$Page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$DefaultSection$items$items$item$$Page) ||
+    if (other
+            is! Query$GetSection$section$$DefaultSection$items$items$item$$Page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -53813,8 +53807,8 @@ class Query$GetSection$section$$DefaultSection$items$items$item$$Link
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$DefaultSection$items$items$item$$Link) ||
+    if (other
+            is! Query$GetSection$section$$DefaultSection$items$items$item$$Link ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -53944,8 +53938,8 @@ class Query$GetSection$section$$DefaultSection$items$items$item$$StudyTopic
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$DefaultSection$items$items$item$$StudyTopic) ||
+    if (other
+            is! Query$GetSection$section$$DefaultSection$items$items$item$$StudyTopic ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -54074,8 +54068,8 @@ class Query$GetSection$section$$DefaultSection$items$items$item$$Game
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$DefaultSection$items$items$item$$Game) ||
+    if (other
+            is! Query$GetSection$section$$DefaultSection$items$items$item$$Game ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -54221,8 +54215,8 @@ class Query$GetSection$section$$DefaultSection$items$items$item$$Playlist
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$DefaultSection$items$items$item$$Playlist) ||
+    if (other
+            is! Query$GetSection$section$$DefaultSection$items$items$item$$Playlist ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -54368,8 +54362,8 @@ class Query$GetSection$section$$DefaultSection$items$items$item$$Short
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$DefaultSection$items$items$item$$Short) ||
+    if (other
+            is! Query$GetSection$section$$DefaultSection$items$items$item$$Short ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -54513,8 +54507,8 @@ class Query$GetSection$section$$DefaultSection$items$items$item$$Person
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$DefaultSection$items$items$item$$Person) ||
+    if (other
+            is! Query$GetSection$section$$DefaultSection$items$items$item$$Person ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -54706,7 +54700,7 @@ class Query$GetSection$section$$CardSection
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$CardSection) ||
+    if (other is! Query$GetSection$section$$CardSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -54976,7 +54970,7 @@ class Query$GetSection$section$$CardSection$metadata
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$CardSection$metadata) ||
+    if (other is! Query$GetSection$section$$CardSection$metadata ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -55198,7 +55192,7 @@ class Query$GetSection$section$$CardSection$metadata$page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$CardSection$metadata$page) ||
+    if (other is! Query$GetSection$section$$CardSection$metadata$page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -55358,7 +55352,7 @@ class Query$GetSection$section$$CardSection$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$CardSection$items) ||
+    if (other is! Query$GetSection$section$$CardSection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -55577,7 +55571,7 @@ class Query$GetSection$section$$CardSection$items$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$CardSection$items$items) ||
+    if (other is! Query$GetSection$section$$CardSection$items$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -55798,7 +55792,7 @@ class Query$GetSection$section$$CardSection$items$items$item
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$CardSection$items$items$item) ||
+    if (other is! Query$GetSection$section$$CardSection$items$items$item ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -56187,8 +56181,8 @@ class Query$GetSection$section$$CardSection$items$items$item$$Episode
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$CardSection$items$items$item$$Episode) ||
+    if (other
+            is! Query$GetSection$section$$CardSection$items$items$item$$Episode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -56448,8 +56442,8 @@ class Query$GetSection$section$$CardSection$items$items$item$$Episode$season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$CardSection$items$items$item$$Episode$season) ||
+    if (other
+            is! Query$GetSection$section$$CardSection$items$items$item$$Episode$season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -56627,8 +56621,8 @@ class Query$GetSection$section$$CardSection$items$items$item$$Episode$season$sho
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$CardSection$items$items$item$$Episode$season$show) ||
+    if (other
+            is! Query$GetSection$section$$CardSection$items$items$item$$Episode$season$show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -56808,8 +56802,8 @@ class Query$GetSection$section$$CardSection$items$items$item$$Show
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$CardSection$items$items$item$$Show) ||
+    if (other
+            is! Query$GetSection$section$$CardSection$items$items$item$$Show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -57002,8 +56996,8 @@ class Query$GetSection$section$$CardSection$items$items$item$$Show$defaultEpisod
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$CardSection$items$items$item$$Show$defaultEpisode) ||
+    if (other
+            is! Query$GetSection$section$$CardSection$items$items$item$$Show$defaultEpisode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -57137,8 +57131,8 @@ class Query$GetSection$section$$CardSection$items$items$item$$Season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$CardSection$items$items$item$$Season) ||
+    if (other
+            is! Query$GetSection$section$$CardSection$items$items$item$$Season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -57266,8 +57260,8 @@ class Query$GetSection$section$$CardSection$items$items$item$$Page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$CardSection$items$items$item$$Page) ||
+    if (other
+            is! Query$GetSection$section$$CardSection$items$items$item$$Page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -57412,8 +57406,8 @@ class Query$GetSection$section$$CardSection$items$items$item$$Link
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$CardSection$items$items$item$$Link) ||
+    if (other
+            is! Query$GetSection$section$$CardSection$items$items$item$$Link ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -57600,8 +57594,8 @@ class Query$GetSection$section$$CardSection$items$items$item$$StudyTopic
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$CardSection$items$items$item$$StudyTopic) ||
+    if (other
+            is! Query$GetSection$section$$CardSection$items$items$item$$StudyTopic ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -57840,8 +57834,8 @@ class Query$GetSection$section$$CardSection$items$items$item$$Game
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$CardSection$items$items$item$$Game) ||
+    if (other
+            is! Query$GetSection$section$$CardSection$items$items$item$$Game ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -57986,8 +57980,8 @@ class Query$GetSection$section$$CardSection$items$items$item$$Playlist
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$CardSection$items$items$item$$Playlist) ||
+    if (other
+            is! Query$GetSection$section$$CardSection$items$items$item$$Playlist ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -58132,8 +58126,8 @@ class Query$GetSection$section$$CardSection$items$items$item$$Short
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$CardSection$items$items$item$$Short) ||
+    if (other
+            is! Query$GetSection$section$$CardSection$items$items$item$$Short ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -58276,8 +58270,8 @@ class Query$GetSection$section$$CardSection$items$items$item$$Person
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$CardSection$items$items$item$$Person) ||
+    if (other
+            is! Query$GetSection$section$$CardSection$items$items$item$$Person ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -58460,7 +58454,7 @@ class Query$GetSection$section$$ListSection
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$ListSection) ||
+    if (other is! Query$GetSection$section$$ListSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -58719,7 +58713,7 @@ class Query$GetSection$section$$ListSection$metadata
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$ListSection$metadata) ||
+    if (other is! Query$GetSection$section$$ListSection$metadata ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -58941,7 +58935,7 @@ class Query$GetSection$section$$ListSection$metadata$page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$ListSection$metadata$page) ||
+    if (other is! Query$GetSection$section$$ListSection$metadata$page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -59101,7 +59095,7 @@ class Query$GetSection$section$$ListSection$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$ListSection$items) ||
+    if (other is! Query$GetSection$section$$ListSection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -59310,7 +59304,7 @@ class Query$GetSection$section$$ListSection$items$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$ListSection$items$items) ||
+    if (other is! Query$GetSection$section$$ListSection$items$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -59519,7 +59513,7 @@ class Query$GetSection$section$$ListSection$items$items$item
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$ListSection$items$items$item) ||
+    if (other is! Query$GetSection$section$$ListSection$items$items$item ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -59916,8 +59910,8 @@ class Query$GetSection$section$$ListSection$items$items$item$$Episode
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$ListSection$items$items$item$$Episode) ||
+    if (other
+            is! Query$GetSection$section$$ListSection$items$items$item$$Episode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -60187,8 +60181,8 @@ class Query$GetSection$section$$ListSection$items$items$item$$Episode$season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$ListSection$items$items$item$$Episode$season) ||
+    if (other
+            is! Query$GetSection$section$$ListSection$items$items$item$$Episode$season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -60365,8 +60359,8 @@ class Query$GetSection$section$$ListSection$items$items$item$$Episode$season$sho
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$ListSection$items$items$item$$Episode$season$show) ||
+    if (other
+            is! Query$GetSection$section$$ListSection$items$items$item$$Episode$season$show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -60545,8 +60539,8 @@ class Query$GetSection$section$$ListSection$items$items$item$$Show
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$ListSection$items$items$item$$Show) ||
+    if (other
+            is! Query$GetSection$section$$ListSection$items$items$item$$Show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -60738,8 +60732,8 @@ class Query$GetSection$section$$ListSection$items$items$item$$Show$defaultEpisod
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$ListSection$items$items$item$$Show$defaultEpisode) ||
+    if (other
+            is! Query$GetSection$section$$ListSection$items$items$item$$Show$defaultEpisode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -60872,8 +60866,8 @@ class Query$GetSection$section$$ListSection$items$items$item$$Season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$ListSection$items$items$item$$Season) ||
+    if (other
+            is! Query$GetSection$section$$ListSection$items$items$item$$Season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -61000,8 +60994,8 @@ class Query$GetSection$section$$ListSection$items$items$item$$Page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$ListSection$items$items$item$$Page) ||
+    if (other
+            is! Query$GetSection$section$$ListSection$items$items$item$$Page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -61145,8 +61139,8 @@ class Query$GetSection$section$$ListSection$items$items$item$$Link
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$ListSection$items$items$item$$Link) ||
+    if (other
+            is! Query$GetSection$section$$ListSection$items$items$item$$Link ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -61274,8 +61268,8 @@ class Query$GetSection$section$$ListSection$items$items$item$$StudyTopic
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$ListSection$items$items$item$$StudyTopic) ||
+    if (other
+            is! Query$GetSection$section$$ListSection$items$items$item$$StudyTopic ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -61402,8 +61396,8 @@ class Query$GetSection$section$$ListSection$items$items$item$$Game
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$ListSection$items$items$item$$Game) ||
+    if (other
+            is! Query$GetSection$section$$ListSection$items$items$item$$Game ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -61547,8 +61541,8 @@ class Query$GetSection$section$$ListSection$items$items$item$$Playlist
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$ListSection$items$items$item$$Playlist) ||
+    if (other
+            is! Query$GetSection$section$$ListSection$items$items$item$$Playlist ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -61692,8 +61686,8 @@ class Query$GetSection$section$$ListSection$items$items$item$$Short
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$ListSection$items$items$item$$Short) ||
+    if (other
+            is! Query$GetSection$section$$ListSection$items$items$item$$Short ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -61835,8 +61829,8 @@ class Query$GetSection$section$$ListSection$items$items$item$$Person
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$ListSection$items$items$item$$Person) ||
+    if (other
+            is! Query$GetSection$section$$ListSection$items$items$item$$Person ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -62028,7 +62022,7 @@ class Query$GetSection$section$$CardListSection
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$CardListSection) ||
+    if (other is! Query$GetSection$section$$CardListSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -62302,7 +62296,7 @@ class Query$GetSection$section$$CardListSection$metadata
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$CardListSection$metadata) ||
+    if (other is! Query$GetSection$section$$CardListSection$metadata ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -62534,7 +62528,7 @@ class Query$GetSection$section$$CardListSection$metadata$page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$CardListSection$metadata$page) ||
+    if (other is! Query$GetSection$section$$CardListSection$metadata$page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -62695,7 +62689,7 @@ class Query$GetSection$section$$CardListSection$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$CardListSection$items) ||
+    if (other is! Query$GetSection$section$$CardListSection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -62915,7 +62909,7 @@ class Query$GetSection$section$$CardListSection$items$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$CardListSection$items$items) ||
+    if (other is! Query$GetSection$section$$CardListSection$items$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -63139,8 +63133,7 @@ class Query$GetSection$section$$CardListSection$items$items$item
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$CardListSection$items$items$item) ||
+    if (other is! Query$GetSection$section$$CardListSection$items$items$item ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -63540,8 +63533,8 @@ class Query$GetSection$section$$CardListSection$items$items$item$$Episode
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$CardListSection$items$items$item$$Episode) ||
+    if (other
+            is! Query$GetSection$section$$CardListSection$items$items$item$$Episode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -63803,8 +63796,8 @@ class Query$GetSection$section$$CardListSection$items$items$item$$Episode$season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$CardListSection$items$items$item$$Episode$season) ||
+    if (other
+            is! Query$GetSection$section$$CardListSection$items$items$item$$Episode$season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -63982,8 +63975,8 @@ class Query$GetSection$section$$CardListSection$items$items$item$$Episode$season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$CardListSection$items$items$item$$Episode$season$show) ||
+    if (other
+            is! Query$GetSection$section$$CardListSection$items$items$item$$Episode$season$show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -64163,8 +64156,8 @@ class Query$GetSection$section$$CardListSection$items$items$item$$Show
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$CardListSection$items$items$item$$Show) ||
+    if (other
+            is! Query$GetSection$section$$CardListSection$items$items$item$$Show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -64359,8 +64352,8 @@ class Query$GetSection$section$$CardListSection$items$items$item$$Show$defaultEp
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$CardListSection$items$items$item$$Show$defaultEpisode) ||
+    if (other
+            is! Query$GetSection$section$$CardListSection$items$items$item$$Show$defaultEpisode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -64494,8 +64487,8 @@ class Query$GetSection$section$$CardListSection$items$items$item$$Season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$CardListSection$items$items$item$$Season) ||
+    if (other
+            is! Query$GetSection$section$$CardListSection$items$items$item$$Season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -64623,8 +64616,8 @@ class Query$GetSection$section$$CardListSection$items$items$item$$Page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$CardListSection$items$items$item$$Page) ||
+    if (other
+            is! Query$GetSection$section$$CardListSection$items$items$item$$Page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -64771,8 +64764,8 @@ class Query$GetSection$section$$CardListSection$items$items$item$$Link
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$CardListSection$items$items$item$$Link) ||
+    if (other
+            is! Query$GetSection$section$$CardListSection$items$items$item$$Link ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -64961,8 +64954,8 @@ class Query$GetSection$section$$CardListSection$items$items$item$$StudyTopic
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$CardListSection$items$items$item$$StudyTopic) ||
+    if (other
+            is! Query$GetSection$section$$CardListSection$items$items$item$$StudyTopic ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -65204,8 +65197,8 @@ class Query$GetSection$section$$CardListSection$items$items$item$$Game
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$CardListSection$items$items$item$$Game) ||
+    if (other
+            is! Query$GetSection$section$$CardListSection$items$items$item$$Game ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -65352,8 +65345,8 @@ class Query$GetSection$section$$CardListSection$items$items$item$$Playlist
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$CardListSection$items$items$item$$Playlist) ||
+    if (other
+            is! Query$GetSection$section$$CardListSection$items$items$item$$Playlist ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -65501,8 +65494,8 @@ class Query$GetSection$section$$CardListSection$items$items$item$$Short
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$CardListSection$items$items$item$$Short) ||
+    if (other
+            is! Query$GetSection$section$$CardListSection$items$items$item$$Short ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -65647,8 +65640,8 @@ class Query$GetSection$section$$CardListSection$items$items$item$$Person
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$CardListSection$items$items$item$$Person) ||
+    if (other
+            is! Query$GetSection$section$$CardListSection$items$items$item$$Person ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -65841,7 +65834,7 @@ class Query$GetSection$section$$DefaultGridSection
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$DefaultGridSection) ||
+    if (other is! Query$GetSection$section$$DefaultGridSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -66116,7 +66109,7 @@ class Query$GetSection$section$$DefaultGridSection$metadata
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$DefaultGridSection$metadata) ||
+    if (other is! Query$GetSection$section$$DefaultGridSection$metadata ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -66350,8 +66343,7 @@ class Query$GetSection$section$$DefaultGridSection$metadata$page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$DefaultGridSection$metadata$page) ||
+    if (other is! Query$GetSection$section$$DefaultGridSection$metadata$page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -66516,7 +66508,7 @@ class Query$GetSection$section$$DefaultGridSection$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$DefaultGridSection$items) ||
+    if (other is! Query$GetSection$section$$DefaultGridSection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -66732,7 +66724,7 @@ class Query$GetSection$section$$DefaultGridSection$items$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$DefaultGridSection$items$items) ||
+    if (other is! Query$GetSection$section$$DefaultGridSection$items$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -66949,8 +66941,8 @@ class Query$GetSection$section$$DefaultGridSection$items$items$item
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$DefaultGridSection$items$items$item) ||
+    if (other
+            is! Query$GetSection$section$$DefaultGridSection$items$items$item ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -67350,8 +67342,8 @@ class Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode) ||
+    if (other
+            is! Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -67614,8 +67606,8 @@ class Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode$sea
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode$season) ||
+    if (other
+            is! Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode$season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -67793,8 +67785,8 @@ class Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode$sea
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode$season$show) ||
+    if (other
+            is! Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode$season$show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -67974,8 +67966,8 @@ class Query$GetSection$section$$DefaultGridSection$items$items$item$$Show
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$DefaultGridSection$items$items$item$$Show) ||
+    if (other
+            is! Query$GetSection$section$$DefaultGridSection$items$items$item$$Show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -68172,8 +68164,8 @@ class Query$GetSection$section$$DefaultGridSection$items$items$item$$Show$defaul
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$DefaultGridSection$items$items$item$$Show$defaultEpisode) ||
+    if (other
+            is! Query$GetSection$section$$DefaultGridSection$items$items$item$$Show$defaultEpisode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -68307,8 +68299,8 @@ class Query$GetSection$section$$DefaultGridSection$items$items$item$$Season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$DefaultGridSection$items$items$item$$Season) ||
+    if (other
+            is! Query$GetSection$section$$DefaultGridSection$items$items$item$$Season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -68438,8 +68430,8 @@ class Query$GetSection$section$$DefaultGridSection$items$items$item$$Page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$DefaultGridSection$items$items$item$$Page) ||
+    if (other
+            is! Query$GetSection$section$$DefaultGridSection$items$items$item$$Page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -68588,8 +68580,8 @@ class Query$GetSection$section$$DefaultGridSection$items$items$item$$Link
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$DefaultGridSection$items$items$item$$Link) ||
+    if (other
+            is! Query$GetSection$section$$DefaultGridSection$items$items$item$$Link ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -68722,8 +68714,8 @@ class Query$GetSection$section$$DefaultGridSection$items$items$item$$StudyTopic
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$DefaultGridSection$items$items$item$$StudyTopic) ||
+    if (other
+            is! Query$GetSection$section$$DefaultGridSection$items$items$item$$StudyTopic ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -68853,8 +68845,8 @@ class Query$GetSection$section$$DefaultGridSection$items$items$item$$Game
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$DefaultGridSection$items$items$item$$Game) ||
+    if (other
+            is! Query$GetSection$section$$DefaultGridSection$items$items$item$$Game ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -69003,8 +68995,8 @@ class Query$GetSection$section$$DefaultGridSection$items$items$item$$Playlist
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$DefaultGridSection$items$items$item$$Playlist) ||
+    if (other
+            is! Query$GetSection$section$$DefaultGridSection$items$items$item$$Playlist ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -69152,8 +69144,8 @@ class Query$GetSection$section$$DefaultGridSection$items$items$item$$Short
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$DefaultGridSection$items$items$item$$Short) ||
+    if (other
+            is! Query$GetSection$section$$DefaultGridSection$items$items$item$$Short ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -69301,8 +69293,8 @@ class Query$GetSection$section$$DefaultGridSection$items$items$item$$Person
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$DefaultGridSection$items$items$item$$Person) ||
+    if (other
+            is! Query$GetSection$section$$DefaultGridSection$items$items$item$$Person ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -69498,7 +69490,7 @@ class Query$GetSection$section$$PosterGridSection
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$PosterGridSection) ||
+    if (other is! Query$GetSection$section$$PosterGridSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -69773,7 +69765,7 @@ class Query$GetSection$section$$PosterGridSection$metadata
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$PosterGridSection$metadata) ||
+    if (other is! Query$GetSection$section$$PosterGridSection$metadata ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -70007,7 +69999,7 @@ class Query$GetSection$section$$PosterGridSection$metadata$page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$PosterGridSection$metadata$page) ||
+    if (other is! Query$GetSection$section$$PosterGridSection$metadata$page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -70172,7 +70164,7 @@ class Query$GetSection$section$$PosterGridSection$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$PosterGridSection$items) ||
+    if (other is! Query$GetSection$section$$PosterGridSection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -70389,7 +70381,7 @@ class Query$GetSection$section$$PosterGridSection$items$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$PosterGridSection$items$items) ||
+    if (other is! Query$GetSection$section$$PosterGridSection$items$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -70603,8 +70595,8 @@ class Query$GetSection$section$$PosterGridSection$items$items$item
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$PosterGridSection$items$items$item) ||
+    if (other
+            is! Query$GetSection$section$$PosterGridSection$items$items$item ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -71004,8 +70996,8 @@ class Query$GetSection$section$$PosterGridSection$items$items$item$$Episode
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$PosterGridSection$items$items$item$$Episode) ||
+    if (other
+            is! Query$GetSection$section$$PosterGridSection$items$items$item$$Episode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -71268,8 +71260,8 @@ class Query$GetSection$section$$PosterGridSection$items$items$item$$Episode$seas
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$PosterGridSection$items$items$item$$Episode$season) ||
+    if (other
+            is! Query$GetSection$section$$PosterGridSection$items$items$item$$Episode$season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -71447,8 +71439,8 @@ class Query$GetSection$section$$PosterGridSection$items$items$item$$Episode$seas
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$PosterGridSection$items$items$item$$Episode$season$show) ||
+    if (other
+            is! Query$GetSection$section$$PosterGridSection$items$items$item$$Episode$season$show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -71628,8 +71620,8 @@ class Query$GetSection$section$$PosterGridSection$items$items$item$$Show
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$PosterGridSection$items$items$item$$Show) ||
+    if (other
+            is! Query$GetSection$section$$PosterGridSection$items$items$item$$Show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -71824,8 +71816,8 @@ class Query$GetSection$section$$PosterGridSection$items$items$item$$Show$default
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$PosterGridSection$items$items$item$$Show$defaultEpisode) ||
+    if (other
+            is! Query$GetSection$section$$PosterGridSection$items$items$item$$Show$defaultEpisode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -71959,8 +71951,8 @@ class Query$GetSection$section$$PosterGridSection$items$items$item$$Season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$PosterGridSection$items$items$item$$Season) ||
+    if (other
+            is! Query$GetSection$section$$PosterGridSection$items$items$item$$Season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -72090,8 +72082,8 @@ class Query$GetSection$section$$PosterGridSection$items$items$item$$Page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$PosterGridSection$items$items$item$$Page) ||
+    if (other
+            is! Query$GetSection$section$$PosterGridSection$items$items$item$$Page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -72238,8 +72230,8 @@ class Query$GetSection$section$$PosterGridSection$items$items$item$$Link
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$PosterGridSection$items$items$item$$Link) ||
+    if (other
+            is! Query$GetSection$section$$PosterGridSection$items$items$item$$Link ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -72370,8 +72362,8 @@ class Query$GetSection$section$$PosterGridSection$items$items$item$$StudyTopic
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$PosterGridSection$items$items$item$$StudyTopic) ||
+    if (other
+            is! Query$GetSection$section$$PosterGridSection$items$items$item$$StudyTopic ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -72501,8 +72493,8 @@ class Query$GetSection$section$$PosterGridSection$items$items$item$$Game
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$PosterGridSection$items$items$item$$Game) ||
+    if (other
+            is! Query$GetSection$section$$PosterGridSection$items$items$item$$Game ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -72649,8 +72641,8 @@ class Query$GetSection$section$$PosterGridSection$items$items$item$$Playlist
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$PosterGridSection$items$items$item$$Playlist) ||
+    if (other
+            is! Query$GetSection$section$$PosterGridSection$items$items$item$$Playlist ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -72798,8 +72790,8 @@ class Query$GetSection$section$$PosterGridSection$items$items$item$$Short
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$PosterGridSection$items$items$item$$Short) ||
+    if (other
+            is! Query$GetSection$section$$PosterGridSection$items$items$item$$Short ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -72946,8 +72938,8 @@ class Query$GetSection$section$$PosterGridSection$items$items$item$$Person
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$PosterGridSection$items$items$item$$Person) ||
+    if (other
+            is! Query$GetSection$section$$PosterGridSection$items$items$item$$Person ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -73143,7 +73135,7 @@ class Query$GetSection$section$$IconGridSection
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$IconGridSection) ||
+    if (other is! Query$GetSection$section$$IconGridSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -73417,7 +73409,7 @@ class Query$GetSection$section$$IconGridSection$metadata
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$IconGridSection$metadata) ||
+    if (other is! Query$GetSection$section$$IconGridSection$metadata ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -73649,7 +73641,7 @@ class Query$GetSection$section$$IconGridSection$metadata$page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$IconGridSection$metadata$page) ||
+    if (other is! Query$GetSection$section$$IconGridSection$metadata$page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -73811,7 +73803,7 @@ class Query$GetSection$section$$IconGridSection$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$IconGridSection$items) ||
+    if (other is! Query$GetSection$section$$IconGridSection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -74022,7 +74014,7 @@ class Query$GetSection$section$$IconGridSection$items$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$IconGridSection$items$items) ||
+    if (other is! Query$GetSection$section$$IconGridSection$items$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -74235,8 +74227,7 @@ class Query$GetSection$section$$IconGridSection$items$items$item
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$IconGridSection$items$items$item) ||
+    if (other is! Query$GetSection$section$$IconGridSection$items$items$item ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -74636,8 +74627,8 @@ class Query$GetSection$section$$IconGridSection$items$items$item$$Episode
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$IconGridSection$items$items$item$$Episode) ||
+    if (other
+            is! Query$GetSection$section$$IconGridSection$items$items$item$$Episode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -74899,8 +74890,8 @@ class Query$GetSection$section$$IconGridSection$items$items$item$$Episode$season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$IconGridSection$items$items$item$$Episode$season) ||
+    if (other
+            is! Query$GetSection$section$$IconGridSection$items$items$item$$Episode$season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -75078,8 +75069,8 @@ class Query$GetSection$section$$IconGridSection$items$items$item$$Episode$season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$IconGridSection$items$items$item$$Episode$season$show) ||
+    if (other
+            is! Query$GetSection$section$$IconGridSection$items$items$item$$Episode$season$show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -75259,8 +75250,8 @@ class Query$GetSection$section$$IconGridSection$items$items$item$$Show
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$IconGridSection$items$items$item$$Show) ||
+    if (other
+            is! Query$GetSection$section$$IconGridSection$items$items$item$$Show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -75455,8 +75446,8 @@ class Query$GetSection$section$$IconGridSection$items$items$item$$Show$defaultEp
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$IconGridSection$items$items$item$$Show$defaultEpisode) ||
+    if (other
+            is! Query$GetSection$section$$IconGridSection$items$items$item$$Show$defaultEpisode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -75590,8 +75581,8 @@ class Query$GetSection$section$$IconGridSection$items$items$item$$Season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$IconGridSection$items$items$item$$Season) ||
+    if (other
+            is! Query$GetSection$section$$IconGridSection$items$items$item$$Season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -75719,8 +75710,8 @@ class Query$GetSection$section$$IconGridSection$items$items$item$$Page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$IconGridSection$items$items$item$$Page) ||
+    if (other
+            is! Query$GetSection$section$$IconGridSection$items$items$item$$Page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -75867,8 +75858,8 @@ class Query$GetSection$section$$IconGridSection$items$items$item$$Link
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$IconGridSection$items$items$item$$Link) ||
+    if (other
+            is! Query$GetSection$section$$IconGridSection$items$items$item$$Link ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -75999,8 +75990,8 @@ class Query$GetSection$section$$IconGridSection$items$items$item$$StudyTopic
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$IconGridSection$items$items$item$$StudyTopic) ||
+    if (other
+            is! Query$GetSection$section$$IconGridSection$items$items$item$$StudyTopic ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -76130,8 +76121,8 @@ class Query$GetSection$section$$IconGridSection$items$items$item$$Game
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$IconGridSection$items$items$item$$Game) ||
+    if (other
+            is! Query$GetSection$section$$IconGridSection$items$items$item$$Game ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -76278,8 +76269,8 @@ class Query$GetSection$section$$IconGridSection$items$items$item$$Playlist
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$IconGridSection$items$items$item$$Playlist) ||
+    if (other
+            is! Query$GetSection$section$$IconGridSection$items$items$item$$Playlist ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -76427,8 +76418,8 @@ class Query$GetSection$section$$IconGridSection$items$items$item$$Short
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$IconGridSection$items$items$item$$Short) ||
+    if (other
+            is! Query$GetSection$section$$IconGridSection$items$items$item$$Short ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -76573,8 +76564,8 @@ class Query$GetSection$section$$IconGridSection$items$items$item$$Person
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$IconGridSection$items$items$item$$Person) ||
+    if (other
+            is! Query$GetSection$section$$IconGridSection$items$items$item$$Person ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -76757,7 +76748,7 @@ class Query$GetSection$section$$IconSection
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$IconSection) ||
+    if (other is! Query$GetSection$section$$IconSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -77016,7 +77007,7 @@ class Query$GetSection$section$$IconSection$metadata
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$IconSection$metadata) ||
+    if (other is! Query$GetSection$section$$IconSection$metadata ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -77238,7 +77229,7 @@ class Query$GetSection$section$$IconSection$metadata$page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$IconSection$metadata$page) ||
+    if (other is! Query$GetSection$section$$IconSection$metadata$page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -77397,7 +77388,7 @@ class Query$GetSection$section$$IconSection$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$IconSection$items) ||
+    if (other is! Query$GetSection$section$$IconSection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -77617,7 +77608,7 @@ class Query$GetSection$section$$LabelSection
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$LabelSection) ||
+    if (other is! Query$GetSection$section$$LabelSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -77876,7 +77867,7 @@ class Query$GetSection$section$$LabelSection$metadata
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$LabelSection$metadata) ||
+    if (other is! Query$GetSection$section$$LabelSection$metadata ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -78100,7 +78091,7 @@ class Query$GetSection$section$$LabelSection$metadata$page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$LabelSection$metadata$page) ||
+    if (other is! Query$GetSection$section$$LabelSection$metadata$page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -78259,7 +78250,7 @@ class Query$GetSection$section$$LabelSection$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$LabelSection$items) ||
+    if (other is! Query$GetSection$section$$LabelSection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -78479,7 +78470,7 @@ class Query$GetSection$section$$AvatarSection
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$AvatarSection) ||
+    if (other is! Query$GetSection$section$$AvatarSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -78739,7 +78730,7 @@ class Query$GetSection$section$$AvatarSection$metadata
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$AvatarSection$metadata) ||
+    if (other is! Query$GetSection$section$$AvatarSection$metadata ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -78964,7 +78955,7 @@ class Query$GetSection$section$$AvatarSection$metadata$page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$AvatarSection$metadata$page) ||
+    if (other is! Query$GetSection$section$$AvatarSection$metadata$page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -79123,7 +79114,7 @@ class Query$GetSection$section$$AvatarSection$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$AvatarSection$items) ||
+    if (other is! Query$GetSection$section$$AvatarSection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -79355,7 +79346,7 @@ class Query$GetSection$section$$WebSection
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$WebSection) ||
+    if (other is! Query$GetSection$section$$WebSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -79572,7 +79563,7 @@ class Query$GetSection$section$$MessageSection
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$MessageSection) ||
+    if (other is! Query$GetSection$section$$MessageSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -79772,7 +79763,7 @@ class Query$GetSection$section$$MessageSection$messages
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$MessageSection$messages) ||
+    if (other is! Query$GetSection$section$$MessageSection$messages ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -79950,7 +79941,7 @@ class Query$GetSection$section$$MessageSection$messages$style
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$MessageSection$messages$style) ||
+    if (other is! Query$GetSection$section$$MessageSection$messages$style ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -80120,8 +80111,8 @@ class Query$GetSection$section$$CardListSection$items$items$item$$StudyTopic$ima
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$CardListSection$items$items$item$$StudyTopic$images) ||
+    if (other
+            is! Query$GetSection$section$$CardListSection$items$items$item$$StudyTopic$images ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -80286,8 +80277,8 @@ class Query$GetSection$section$$CardListSection$items$items$item$$StudyTopic$les
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$CardListSection$items$items$item$$StudyTopic$lessonsProgress) ||
+    if (other
+            is! Query$GetSection$section$$CardListSection$items$items$item$$StudyTopic$lessonsProgress ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -80454,8 +80445,8 @@ class Query$GetSection$section$$CardSection$items$items$item$$StudyTopic$images
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$CardSection$items$items$item$$StudyTopic$images) ||
+    if (other
+            is! Query$GetSection$section$$CardSection$items$items$item$$StudyTopic$images ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -80620,8 +80611,8 @@ class Query$GetSection$section$$CardSection$items$items$item$$StudyTopic$lessons
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetSection$section$$CardSection$items$items$item$$StudyTopic$lessonsProgress) ||
+    if (other
+            is! Query$GetSection$section$$CardSection$items$items$item$$StudyTopic$lessonsProgress ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -80795,7 +80786,7 @@ class Query$GetSection$section$$PageDetailsSection
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$PageDetailsSection) ||
+    if (other is! Query$GetSection$section$$PageDetailsSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -80968,7 +80959,7 @@ class Query$GetSection$section$$AchievementSection
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSection$section$$AchievementSection) ||
+    if (other is! Query$GetSection$section$$AchievementSection ||
         runtimeType != other.runtimeType) {
       return false;
     }

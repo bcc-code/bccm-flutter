@@ -52,7 +52,7 @@ class Variables$Query$CalendarPeriod {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Variables$Query$CalendarPeriod) ||
+    if (other is! Variables$Query$CalendarPeriod ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -178,7 +178,7 @@ class Query$CalendarPeriod {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$CalendarPeriod) || runtimeType != other.runtimeType) {
+    if (other is! Query$CalendarPeriod || runtimeType != other.runtimeType) {
       return false;
     }
     final l$calendar = calendar;
@@ -578,7 +578,7 @@ class Query$CalendarPeriod$calendar {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$CalendarPeriod$calendar) ||
+    if (other is! Query$CalendarPeriod$calendar ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -727,7 +727,7 @@ class Query$CalendarPeriod$calendar$period {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$CalendarPeriod$calendar$period) ||
+    if (other is! Query$CalendarPeriod$calendar$period ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -909,7 +909,7 @@ class Query$CalendarPeriod$calendar$period$events {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$CalendarPeriod$calendar$period$events) ||
+    if (other is! Query$CalendarPeriod$calendar$period$events ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1038,7 +1038,7 @@ class Variables$Query$CalendarDay {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Variables$Query$CalendarDay) ||
+    if (other is! Variables$Query$CalendarDay ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1144,7 +1144,7 @@ class Query$CalendarDay {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$CalendarDay) || runtimeType != other.runtimeType) {
+    if (other is! Query$CalendarDay || runtimeType != other.runtimeType) {
       return false;
     }
     final l$calendar = calendar;
@@ -1498,7 +1498,7 @@ class Query$CalendarDay$calendar {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$CalendarDay$calendar) ||
+    if (other is! Query$CalendarDay$calendar ||
         runtimeType != other.runtimeType) {
       return false;
     }

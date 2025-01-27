@@ -53,7 +53,7 @@ class Variables$Mutation$SetDeviceToken {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Variables$Mutation$SetDeviceToken) ||
+    if (other is! Variables$Mutation$SetDeviceToken ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -187,8 +187,7 @@ class Mutation$SetDeviceToken {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Mutation$SetDeviceToken) ||
-        runtimeType != other.runtimeType) {
+    if (other is! Mutation$SetDeviceToken || runtimeType != other.runtimeType) {
       return false;
     }
     final l$setDevicePushToken = setDevicePushToken;
@@ -628,7 +627,7 @@ class Mutation$SetDeviceToken$setDevicePushToken {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Mutation$SetDeviceToken$setDevicePushToken) ||
+    if (other is! Mutation$SetDeviceToken$setDevicePushToken ||
         runtimeType != other.runtimeType) {
       return false;
     }

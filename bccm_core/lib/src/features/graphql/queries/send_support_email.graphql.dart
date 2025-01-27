@@ -76,7 +76,7 @@ class Variables$Mutation$sendSupportEmail {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Variables$Mutation$sendSupportEmail) ||
+    if (other is! Variables$Mutation$sendSupportEmail ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -225,7 +225,7 @@ class Mutation$sendSupportEmail {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Mutation$sendSupportEmail) ||
+    if (other is! Mutation$sendSupportEmail ||
         runtimeType != other.runtimeType) {
       return false;
     }

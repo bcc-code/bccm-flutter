@@ -104,7 +104,7 @@ class Fragment$SearchResultItem {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$SearchResultItem) ||
+    if (other is! Fragment$SearchResultItem ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -597,7 +597,7 @@ class Fragment$SearchResultItem$$EpisodeSearchItem
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$SearchResultItem$$EpisodeSearchItem) ||
+    if (other is! Fragment$SearchResultItem$$EpisodeSearchItem ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -863,7 +863,7 @@ class Fragment$SearchResultItem$$ShowSearchItem
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$SearchResultItem$$ShowSearchItem) ||
+    if (other is! Fragment$SearchResultItem$$ShowSearchItem ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1061,7 +1061,7 @@ class Fragment$SearchResultItem$$ShowSearchItem$show {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$SearchResultItem$$ShowSearchItem$show) ||
+    if (other is! Fragment$SearchResultItem$$ShowSearchItem$show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1235,7 +1235,7 @@ class Fragment$SearchResultItem$$SeasonSearchItem
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$SearchResultItem$$SeasonSearchItem) ||
+    if (other is! Fragment$SearchResultItem$$SeasonSearchItem ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1431,8 +1431,7 @@ class Variables$Query$Search {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Variables$Query$Search) ||
-        runtimeType != other.runtimeType) {
+    if (other is! Variables$Query$Search || runtimeType != other.runtimeType) {
       return false;
     }
     final l$queryString = queryString;
@@ -1572,7 +1571,7 @@ class Query$Search {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$Search) || runtimeType != other.runtimeType) {
+    if (other is! Query$Search || runtimeType != other.runtimeType) {
       return false;
     }
     final l$search = search;
@@ -1978,7 +1977,7 @@ class Query$Search$search {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$Search$search) || runtimeType != other.runtimeType) {
+    if (other is! Query$Search$search || runtimeType != other.runtimeType) {
       return false;
     }
     final l$hits = hits;

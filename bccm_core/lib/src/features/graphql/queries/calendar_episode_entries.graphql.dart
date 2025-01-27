@@ -95,7 +95,7 @@ class Fragment$CalendarEntryEpisode {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$CalendarEntryEpisode) ||
+    if (other is! Fragment$CalendarEntryEpisode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -456,7 +456,7 @@ class Fragment$CalendarEntryEpisode$season {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$CalendarEntryEpisode$season) ||
+    if (other is! Fragment$CalendarEntryEpisode$season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -622,7 +622,7 @@ class Fragment$CalendarEntryEpisode$season$show {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$CalendarEntryEpisode$season$show) ||
+    if (other is! Fragment$CalendarEntryEpisode$season$show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -760,7 +760,7 @@ class Fragment$CalendarDayEntries {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$CalendarDayEntries) ||
+    if (other is! Fragment$CalendarDayEntries ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1065,7 +1065,7 @@ class Fragment$CalendarDayEntries$entries {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$CalendarDayEntries$entries) ||
+    if (other is! Fragment$CalendarDayEntries$entries ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1307,7 +1307,7 @@ class Fragment$CalendarDayEntries$entries$$EpisodeCalendarEntry
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$CalendarDayEntries$entries$$EpisodeCalendarEntry) ||
+    if (other is! Fragment$CalendarDayEntries$entries$$EpisodeCalendarEntry ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1488,7 +1488,7 @@ class Fragment$CalendarDayEntries$entries$$SimpleCalendarEntry
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$CalendarDayEntries$entries$$SimpleCalendarEntry) ||
+    if (other is! Fragment$CalendarDayEntries$entries$$SimpleCalendarEntry ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1646,7 +1646,7 @@ class Fragment$CalendarDayEntries$entries$$SeasonCalendarEntry
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$CalendarDayEntries$entries$$SeasonCalendarEntry) ||
+    if (other is! Fragment$CalendarDayEntries$entries$$SeasonCalendarEntry ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1804,7 +1804,7 @@ class Fragment$CalendarDayEntries$entries$$ShowCalendarEntry
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$CalendarDayEntries$entries$$ShowCalendarEntry) ||
+    if (other is! Fragment$CalendarDayEntries$entries$$ShowCalendarEntry ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1943,7 +1943,7 @@ class Variables$Query$CalendarDayEpisodeEntries {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Variables$Query$CalendarDayEpisodeEntries) ||
+    if (other is! Variables$Query$CalendarDayEpisodeEntries ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2049,7 +2049,7 @@ class Query$CalendarDayEpisodeEntries {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$CalendarDayEpisodeEntries) ||
+    if (other is! Query$CalendarDayEpisodeEntries ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2423,7 +2423,7 @@ class Query$CalendarDayEpisodeEntries$calendar {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$CalendarDayEpisodeEntries$calendar) ||
+    if (other is! Query$CalendarDayEpisodeEntries$calendar ||
         runtimeType != other.runtimeType) {
       return false;
     }

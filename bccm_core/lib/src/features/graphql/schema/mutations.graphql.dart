@@ -34,7 +34,7 @@ class Input$BirthOptions {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Input$BirthOptions) || runtimeType != other.runtimeType) {
+    if (other is! Input$BirthOptions || runtimeType != other.runtimeType) {
       return false;
     }
     final l$year = year;
@@ -139,7 +139,7 @@ class Input$NameOptions {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Input$NameOptions) || runtimeType != other.runtimeType) {
+    if (other is! Input$NameOptions || runtimeType != other.runtimeType) {
       return false;
     }
     final l$first = first;
@@ -265,7 +265,7 @@ class Input$EmailOptions {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Input$EmailOptions) || runtimeType != other.runtimeType) {
+    if (other is! Input$EmailOptions || runtimeType != other.runtimeType) {
       return false;
     }
     final l$name = name;

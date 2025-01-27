@@ -8,6 +8,7 @@ class Fragment$LessonProgressOverview {
   Fragment$LessonProgressOverview({
     required this.id,
     required this.locked,
+    required this.completed,
     required this.progress,
     this.$__typename = 'Lesson',
   });
@@ -15,11 +16,13 @@ class Fragment$LessonProgressOverview {
   factory Fragment$LessonProgressOverview.fromJson(Map<String, dynamic> json) {
     final l$id = json['id'];
     final l$locked = json['locked'];
+    final l$completed = json['completed'];
     final l$progress = json['progress'];
     final l$$__typename = json['__typename'];
     return Fragment$LessonProgressOverview(
       id: (l$id as String),
       locked: (l$locked as bool),
+      completed: (l$completed as bool),
       progress: Fragment$LessonProgressOverview$progress.fromJson(
           (l$progress as Map<String, dynamic>)),
       $__typename: (l$$__typename as String),
@@ -29,6 +32,8 @@ class Fragment$LessonProgressOverview {
   final String id;
 
   final bool locked;
+
+  final bool completed;
 
   final Fragment$LessonProgressOverview$progress progress;
 
@@ -40,6 +45,8 @@ class Fragment$LessonProgressOverview {
     _resultData['id'] = l$id;
     final l$locked = locked;
     _resultData['locked'] = l$locked;
+    final l$completed = completed;
+    _resultData['completed'] = l$completed;
     final l$progress = progress;
     _resultData['progress'] = l$progress.toJson();
     final l$$__typename = $__typename;
@@ -51,11 +58,13 @@ class Fragment$LessonProgressOverview {
   int get hashCode {
     final l$id = id;
     final l$locked = locked;
+    final l$completed = completed;
     final l$progress = progress;
     final l$$__typename = $__typename;
     return Object.hashAll([
       l$id,
       l$locked,
+      l$completed,
       l$progress,
       l$$__typename,
     ]);
@@ -66,7 +75,7 @@ class Fragment$LessonProgressOverview {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$LessonProgressOverview) ||
+    if (other is! Fragment$LessonProgressOverview ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -78,6 +87,11 @@ class Fragment$LessonProgressOverview {
     final l$locked = locked;
     final lOther$locked = other.locked;
     if (l$locked != lOther$locked) {
+      return false;
+    }
+    final l$completed = completed;
+    final lOther$completed = other.completed;
+    if (l$completed != lOther$completed) {
       return false;
     }
     final l$progress = progress;
@@ -115,6 +129,7 @@ abstract class CopyWith$Fragment$LessonProgressOverview<TRes> {
   TRes call({
     String? id,
     bool? locked,
+    bool? completed,
     Fragment$LessonProgressOverview$progress? progress,
     String? $__typename,
   });
@@ -137,6 +152,7 @@ class _CopyWithImpl$Fragment$LessonProgressOverview<TRes>
   TRes call({
     Object? id = _undefined,
     Object? locked = _undefined,
+    Object? completed = _undefined,
     Object? progress = _undefined,
     Object? $__typename = _undefined,
   }) =>
@@ -145,6 +161,9 @@ class _CopyWithImpl$Fragment$LessonProgressOverview<TRes>
         locked: locked == _undefined || locked == null
             ? _instance.locked
             : (locked as bool),
+        completed: completed == _undefined || completed == null
+            ? _instance.completed
+            : (completed as bool),
         progress: progress == _undefined || progress == null
             ? _instance.progress
             : (progress as Fragment$LessonProgressOverview$progress),
@@ -169,6 +188,7 @@ class _CopyWithStubImpl$Fragment$LessonProgressOverview<TRes>
   call({
     String? id,
     bool? locked,
+    bool? completed,
     Fragment$LessonProgressOverview$progress? progress,
     String? $__typename,
   }) =>
@@ -196,6 +216,13 @@ const fragmentDefinitionLessonProgressOverview = FragmentDefinitionNode(
     ),
     FieldNode(
       name: NameNode(value: 'locked'),
+      alias: null,
+      arguments: [],
+      directives: [],
+      selectionSet: null,
+    ),
+    FieldNode(
+      name: NameNode(value: 'completed'),
       alias: null,
       arguments: [],
       directives: [],
@@ -334,7 +361,7 @@ class Fragment$LessonProgressOverview$progress {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$LessonProgressOverview$progress) ||
+    if (other is! Fragment$LessonProgressOverview$progress ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -482,7 +509,7 @@ class Fragment$EpisodeLessonProgressOverview {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$EpisodeLessonProgressOverview) ||
+    if (other is! Fragment$EpisodeLessonProgressOverview ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -735,7 +762,7 @@ class Fragment$EpisodeLessonProgressOverview$lessons {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$EpisodeLessonProgressOverview$lessons) ||
+    if (other is! Fragment$EpisodeLessonProgressOverview$lessons ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -896,7 +923,7 @@ class Variables$Query$GetStudyTopicLessonStatuses {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Variables$Query$GetStudyTopicLessonStatuses) ||
+    if (other is! Variables$Query$GetStudyTopicLessonStatuses ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1021,7 +1048,7 @@ class Query$GetStudyTopicLessonStatuses {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetStudyTopicLessonStatuses) ||
+    if (other is! Query$GetStudyTopicLessonStatuses ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1478,7 +1505,7 @@ class Query$GetStudyTopicLessonStatuses$studyTopic {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetStudyTopicLessonStatuses$studyTopic) ||
+    if (other is! Query$GetStudyTopicLessonStatuses$studyTopic ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1622,7 +1649,7 @@ class Query$GetStudyTopicLessonStatuses$studyTopic$lessons {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetStudyTopicLessonStatuses$studyTopic$lessons) ||
+    if (other is! Query$GetStudyTopicLessonStatuses$studyTopic$lessons ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1807,8 +1834,7 @@ class Query$GetStudyTopicLessonStatuses$studyTopic$lessons$items {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetStudyTopicLessonStatuses$studyTopic$lessons$items) ||
+    if (other is! Query$GetStudyTopicLessonStatuses$studyTopic$lessons$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1991,8 +2017,8 @@ class Query$GetStudyTopicLessonStatuses$studyTopic$lessons$items$episodes {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetStudyTopicLessonStatuses$studyTopic$lessons$items$episodes) ||
+    if (other
+            is! Query$GetStudyTopicLessonStatuses$studyTopic$lessons$items$episodes ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2175,8 +2201,8 @@ class Query$GetStudyTopicLessonStatuses$studyTopic$lessons$items$episodes$items 
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetStudyTopicLessonStatuses$studyTopic$lessons$items$episodes$items) ||
+    if (other
+            is! Query$GetStudyTopicLessonStatuses$studyTopic$lessons$items$episodes$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2324,7 +2350,7 @@ class Variables$Query$GetEpisodeLessonProgress {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Variables$Query$GetEpisodeLessonProgress) ||
+    if (other is! Variables$Query$GetEpisodeLessonProgress ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2428,7 +2454,7 @@ class Query$GetEpisodeLessonProgress {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetEpisodeLessonProgress) ||
+    if (other is! Query$GetEpisodeLessonProgress ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2862,7 +2888,7 @@ class Query$GetEpisodeLessonProgress$episode
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetEpisodeLessonProgress$episode) ||
+    if (other is! Query$GetEpisodeLessonProgress$episode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -3036,7 +3062,7 @@ class Query$GetEpisodeLessonProgress$episode$lessons
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetEpisodeLessonProgress$episode$lessons) ||
+    if (other is! Query$GetEpisodeLessonProgress$episode$lessons ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -3202,7 +3228,7 @@ class Query$GetEpisodeLessonProgress$episode$season {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetEpisodeLessonProgress$episode$season) ||
+    if (other is! Query$GetEpisodeLessonProgress$episode$season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -3357,7 +3383,7 @@ class Query$GetEpisodeLessonProgress$episode$season$episodes {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetEpisodeLessonProgress$episode$season$episodes) ||
+    if (other is! Query$GetEpisodeLessonProgress$episode$season$episodes ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -3515,7 +3541,7 @@ class Variables$Query$GetSeasonLessonProgress {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Variables$Query$GetSeasonLessonProgress) ||
+    if (other is! Variables$Query$GetSeasonLessonProgress ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -3619,7 +3645,7 @@ class Query$GetSeasonLessonProgress {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSeasonLessonProgress) ||
+    if (other is! Query$GetSeasonLessonProgress ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -4004,7 +4030,7 @@ class Query$GetSeasonLessonProgress$season {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSeasonLessonProgress$season) ||
+    if (other is! Query$GetSeasonLessonProgress$season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -4144,7 +4170,7 @@ class Query$GetSeasonLessonProgress$season$episodes {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSeasonLessonProgress$season$episodes) ||
+    if (other is! Query$GetSeasonLessonProgress$season$episodes ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -4293,7 +4319,7 @@ class Variables$Query$GetLessonTitle {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Variables$Query$GetLessonTitle) ||
+    if (other is! Variables$Query$GetLessonTitle ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -4397,7 +4423,7 @@ class Query$GetLessonTitle {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetLessonTitle) || runtimeType != other.runtimeType) {
+    if (other is! Query$GetLessonTitle || runtimeType != other.runtimeType) {
       return false;
     }
     final l$studyLesson = studyLesson;
@@ -4753,7 +4779,7 @@ class Query$GetLessonTitle$studyLesson {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetLessonTitle$studyLesson) ||
+    if (other is! Query$GetLessonTitle$studyLesson ||
         runtimeType != other.runtimeType) {
       return false;
     }

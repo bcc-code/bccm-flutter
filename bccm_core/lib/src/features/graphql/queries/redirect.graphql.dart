@@ -41,7 +41,7 @@ class Variables$Query$GetRedirectUrl {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Variables$Query$GetRedirectUrl) ||
+    if (other is! Variables$Query$GetRedirectUrl ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -145,7 +145,7 @@ class Query$GetRedirectUrl {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetRedirectUrl) || runtimeType != other.runtimeType) {
+    if (other is! Query$GetRedirectUrl || runtimeType != other.runtimeType) {
       return false;
     }
     final l$redirect = redirect;
@@ -501,7 +501,7 @@ class Query$GetRedirectUrl$redirect {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetRedirectUrl$redirect) ||
+    if (other is! Query$GetRedirectUrl$redirect ||
         runtimeType != other.runtimeType) {
       return false;
     }

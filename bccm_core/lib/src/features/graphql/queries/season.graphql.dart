@@ -58,7 +58,7 @@ class Variables$Query$GetSeasonEpisodes {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Variables$Query$GetSeasonEpisodes) ||
+    if (other is! Variables$Query$GetSeasonEpisodes ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -185,8 +185,7 @@ class Query$GetSeasonEpisodes {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSeasonEpisodes) ||
-        runtimeType != other.runtimeType) {
+    if (other is! Query$GetSeasonEpisodes || runtimeType != other.runtimeType) {
       return false;
     }
     final l$season = season;
@@ -607,7 +606,7 @@ class Query$GetSeasonEpisodes$season {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSeasonEpisodes$season) ||
+    if (other is! Query$GetSeasonEpisodes$season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -766,7 +765,7 @@ class Query$GetSeasonEpisodes$season$episodes {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetSeasonEpisodes$season$episodes) ||
+    if (other is! Query$GetSeasonEpisodes$season$episodes ||
         runtimeType != other.runtimeType) {
       return false;
     }

@@ -78,8 +78,7 @@ class Fragment$EpisodeChapter {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$EpisodeChapter) ||
-        runtimeType != other.runtimeType) {
+    if (other is! Fragment$EpisodeChapter || runtimeType != other.runtimeType) {
       return false;
     }
     final l$id = id;
@@ -312,8 +311,7 @@ class Fragment$EpisodeContext {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$EpisodeContext) ||
-        runtimeType != other.runtimeType) {
+    if (other is! Fragment$EpisodeContext || runtimeType != other.runtimeType) {
       return false;
     }
     final l$$__typename = $__typename;
@@ -764,7 +762,7 @@ class Fragment$EpisodeContext$$ContextCollection
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$EpisodeContext$$ContextCollection) ||
+    if (other is! Fragment$EpisodeContext$$ContextCollection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -917,7 +915,7 @@ class Fragment$EpisodeContext$$ContextCollection$items {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$EpisodeContext$$ContextCollection$items) ||
+    if (other is! Fragment$EpisodeContext$$ContextCollection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1076,7 +1074,7 @@ class Fragment$EpisodeContext$$ContextCollection$items$items {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$EpisodeContext$$ContextCollection$items$items) ||
+    if (other is! Fragment$EpisodeContext$$ContextCollection$items$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1256,8 +1254,7 @@ class Fragment$EpisodeContext$$ContextCollection$items$items$item {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$EpisodeContext$$ContextCollection$items$items$item) ||
+    if (other is! Fragment$EpisodeContext$$ContextCollection$items$items$item ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1562,8 +1559,8 @@ class Fragment$EpisodeContext$$ContextCollection$items$items$item$$Show
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$EpisodeContext$$ContextCollection$items$items$item$$Show) ||
+    if (other
+            is! Fragment$EpisodeContext$$ContextCollection$items$items$item$$Show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1673,8 +1670,8 @@ class Fragment$EpisodeContext$$ContextCollection$items$items$item$$Season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$EpisodeContext$$ContextCollection$items$items$item$$Season) ||
+    if (other
+            is! Fragment$EpisodeContext$$ContextCollection$items$items$item$$Season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1896,8 +1893,8 @@ class Fragment$EpisodeContext$$ContextCollection$items$items$item$$Episode
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$EpisodeContext$$ContextCollection$items$items$item$$Episode) ||
+    if (other
+            is! Fragment$EpisodeContext$$ContextCollection$items$items$item$$Episode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2154,8 +2151,8 @@ class Fragment$EpisodeContext$$ContextCollection$items$items$item$$Page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$EpisodeContext$$ContextCollection$items$items$item$$Page) ||
+    if (other
+            is! Fragment$EpisodeContext$$ContextCollection$items$items$item$$Page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2265,8 +2262,8 @@ class Fragment$EpisodeContext$$ContextCollection$items$items$item$$Link
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$EpisodeContext$$ContextCollection$items$items$item$$Link) ||
+    if (other
+            is! Fragment$EpisodeContext$$ContextCollection$items$items$item$$Link ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2376,8 +2373,8 @@ class Fragment$EpisodeContext$$ContextCollection$items$items$item$$StudyTopic
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$EpisodeContext$$ContextCollection$items$items$item$$StudyTopic) ||
+    if (other
+            is! Fragment$EpisodeContext$$ContextCollection$items$items$item$$StudyTopic ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2489,8 +2486,8 @@ class Fragment$EpisodeContext$$ContextCollection$items$items$item$$Game
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$EpisodeContext$$ContextCollection$items$items$item$$Game) ||
+    if (other
+            is! Fragment$EpisodeContext$$ContextCollection$items$items$item$$Game ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2600,8 +2597,8 @@ class Fragment$EpisodeContext$$ContextCollection$items$items$item$$Playlist
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$EpisodeContext$$ContextCollection$items$items$item$$Playlist) ||
+    if (other
+            is! Fragment$EpisodeContext$$ContextCollection$items$items$item$$Playlist ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2713,8 +2710,8 @@ class Fragment$EpisodeContext$$ContextCollection$items$items$item$$Short
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$EpisodeContext$$ContextCollection$items$items$item$$Short) ||
+    if (other
+            is! Fragment$EpisodeContext$$ContextCollection$items$items$item$$Short ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2824,8 +2821,8 @@ class Fragment$EpisodeContext$$ContextCollection$items$items$item$$Person
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$EpisodeContext$$ContextCollection$items$items$item$$Person) ||
+    if (other
+            is! Fragment$EpisodeContext$$ContextCollection$items$items$item$$Person ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2986,7 +2983,7 @@ class Fragment$EpisodeContext$$Season implements Fragment$EpisodeContext {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$EpisodeContext$$Season) ||
+    if (other is! Fragment$EpisodeContext$$Season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -3177,7 +3174,7 @@ class Fragment$EpisodeContext$$Season$episodes {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$EpisodeContext$$Season$episodes) ||
+    if (other is! Fragment$EpisodeContext$$Season$episodes ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -3360,7 +3357,7 @@ class Fragment$EpisodeContext$$Season$show {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$EpisodeContext$$Season$show) ||
+    if (other is! Fragment$EpisodeContext$$Season$show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -3532,7 +3529,7 @@ class Fragment$EpisodeContext$$Season$show$seasons {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$EpisodeContext$$Season$show$seasons) ||
+    if (other is! Fragment$EpisodeContext$$Season$show$seasons ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -3697,7 +3694,7 @@ class Fragment$EpisodeContext$$Season$show$seasons$items {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$EpisodeContext$$Season$show$seasons$items) ||
+    if (other is! Fragment$EpisodeContext$$Season$show$seasons$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -3906,7 +3903,7 @@ class Fragment$BasicStream {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$BasicStream) || runtimeType != other.runtimeType) {
+    if (other is! Fragment$BasicStream || runtimeType != other.runtimeType) {
       return false;
     }
     final l$id = id;
@@ -4324,7 +4321,7 @@ class Fragment$SeasonListEpisode implements Fragment$EpisodeThumbnail {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$SeasonListEpisode) ||
+    if (other is! Fragment$SeasonListEpisode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -4722,7 +4719,7 @@ class Fragment$SeasonListEpisode$lessons {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$SeasonListEpisode$lessons) ||
+    if (other is! Fragment$SeasonListEpisode$lessons ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -4860,7 +4857,7 @@ class Fragment$SeasonListEpisode$season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$SeasonListEpisode$season) ||
+    if (other is! Fragment$SeasonListEpisode$season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -5008,7 +5005,7 @@ class Fragment$SeasonListEpisode$season$show
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$SeasonListEpisode$season$show) ||
+    if (other is! Fragment$SeasonListEpisode$season$show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -5182,7 +5179,7 @@ class Fragment$PlayableMediaItem {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$PlayableMediaItem) ||
+    if (other is! Fragment$PlayableMediaItem ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -5728,7 +5725,7 @@ class Fragment$PlayableMediaItem$$Episode
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$PlayableMediaItem$$Episode) ||
+    if (other is! Fragment$PlayableMediaItem$$Episode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -5986,7 +5983,7 @@ class Fragment$PlayableMediaItem$$Episode$context {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$PlayableMediaItem$$Episode$context) ||
+    if (other is! Fragment$PlayableMediaItem$$Episode$context ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -6144,8 +6141,8 @@ class Fragment$PlayableMediaItem$$Episode$context$$ContextCollection
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$PlayableMediaItem$$Episode$context$$ContextCollection) ||
+    if (other
+            is! Fragment$PlayableMediaItem$$Episode$context$$ContextCollection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -6272,7 +6269,7 @@ class Fragment$PlayableMediaItem$$Episode$context$$Season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$PlayableMediaItem$$Episode$context$$Season) ||
+    if (other is! Fragment$PlayableMediaItem$$Episode$context$$Season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -6407,7 +6404,7 @@ class Fragment$PlayableMediaItem$$Episode$season {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$PlayableMediaItem$$Episode$season) ||
+    if (other is! Fragment$PlayableMediaItem$$Episode$season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -6573,7 +6570,7 @@ class Fragment$PlayableMediaItem$$Episode$season$show {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$PlayableMediaItem$$Episode$season$show) ||
+    if (other is! Fragment$PlayableMediaItem$$Episode$season$show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -6749,7 +6746,7 @@ class Fragment$PlayableMediaItem$$Short implements Fragment$PlayableMediaItem {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$PlayableMediaItem$$Short) ||
+    if (other is! Fragment$PlayableMediaItem$$Short ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -6997,8 +6994,7 @@ class Fragment$EpisodeDetails {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$EpisodeDetails) ||
-        runtimeType != other.runtimeType) {
+    if (other is! Fragment$EpisodeDetails || runtimeType != other.runtimeType) {
       return false;
     }
     final l$id = id;
@@ -7341,7 +7337,7 @@ class Fragment$EpisodeDetails$season {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$EpisodeDetails$season) ||
+    if (other is! Fragment$EpisodeDetails$season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -7477,7 +7473,7 @@ class Fragment$EpisodeDetails$season$show {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$EpisodeDetails$season$show) ||
+    if (other is! Fragment$EpisodeDetails$season$show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -7612,7 +7608,7 @@ class Fragment$EpisodeAvailability {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$EpisodeAvailability) ||
+    if (other is! Fragment$EpisodeAvailability ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -7917,7 +7913,7 @@ class Fragment$EpisodeListEpisode
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$EpisodeListEpisode) ||
+    if (other is! Fragment$EpisodeListEpisode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -8276,7 +8272,7 @@ class Fragment$EpisodeListEpisode$lessons
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$EpisodeListEpisode$lessons) ||
+    if (other is! Fragment$EpisodeListEpisode$lessons ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -8416,7 +8412,7 @@ class Fragment$EpisodeListEpisode$season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$EpisodeListEpisode$season) ||
+    if (other is! Fragment$EpisodeListEpisode$season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -8567,7 +8563,7 @@ class Fragment$EpisodeListEpisode$season$show
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$EpisodeListEpisode$season$show) ||
+    if (other is! Fragment$EpisodeListEpisode$season$show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -8712,7 +8708,7 @@ class Variables$Query$FetchEpisode {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Variables$Query$FetchEpisode) ||
+    if (other is! Variables$Query$FetchEpisode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -8852,7 +8848,7 @@ class Query$FetchEpisode {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$FetchEpisode) || runtimeType != other.runtimeType) {
+    if (other is! Query$FetchEpisode || runtimeType != other.runtimeType) {
       return false;
     }
     final l$episode = episode;
@@ -9797,7 +9793,7 @@ class Query$FetchEpisode$episode
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$FetchEpisode$episode) ||
+    if (other is! Query$FetchEpisode$episode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -10289,7 +10285,7 @@ class Query$FetchEpisode$episode$context
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$FetchEpisode$episode$context) ||
+    if (other is! Query$FetchEpisode$episode$context ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -10458,7 +10454,7 @@ class Query$FetchEpisode$episode$context$$ContextCollection
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$FetchEpisode$episode$context$$ContextCollection) ||
+    if (other is! Query$FetchEpisode$episode$context$$ContextCollection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -10662,7 +10658,7 @@ class Query$FetchEpisode$episode$context$$Season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$FetchEpisode$episode$context$$Season) ||
+    if (other is! Query$FetchEpisode$episode$context$$Season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -10884,7 +10880,7 @@ class Query$FetchEpisode$episode$season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$FetchEpisode$episode$season) ||
+    if (other is! Query$FetchEpisode$episode$season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -11061,7 +11057,7 @@ class Query$FetchEpisode$episode$season$show
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$FetchEpisode$episode$season$show) ||
+    if (other is! Query$FetchEpisode$episode$season$show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -11203,8 +11199,7 @@ class Query$FetchEpisode$episode$context$$ContextCollection$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchEpisode$episode$context$$ContextCollection$items) ||
+    if (other is! Query$FetchEpisode$episode$context$$ContextCollection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -11378,8 +11373,8 @@ class Query$FetchEpisode$episode$context$$ContextCollection$items$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchEpisode$episode$context$$ContextCollection$items$items) ||
+    if (other
+            is! Query$FetchEpisode$episode$context$$ContextCollection$items$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -11569,8 +11564,8 @@ class Query$FetchEpisode$episode$context$$ContextCollection$items$items$item
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchEpisode$episode$context$$ContextCollection$items$items$item) ||
+    if (other
+            is! Query$FetchEpisode$episode$context$$ContextCollection$items$items$item ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -11881,8 +11876,8 @@ class Query$FetchEpisode$episode$context$$ContextCollection$items$items$item$$Sh
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchEpisode$episode$context$$ContextCollection$items$items$item$$Show) ||
+    if (other
+            is! Query$FetchEpisode$episode$context$$ContextCollection$items$items$item$$Show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -11996,8 +11991,8 @@ class Query$FetchEpisode$episode$context$$ContextCollection$items$items$item$$Se
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchEpisode$episode$context$$ContextCollection$items$items$item$$Season) ||
+    if (other
+            is! Query$FetchEpisode$episode$context$$ContextCollection$items$items$item$$Season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -12219,8 +12214,8 @@ class Query$FetchEpisode$episode$context$$ContextCollection$items$items$item$$Ep
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchEpisode$episode$context$$ContextCollection$items$items$item$$Episode) ||
+    if (other
+            is! Query$FetchEpisode$episode$context$$ContextCollection$items$items$item$$Episode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -12479,8 +12474,8 @@ class Query$FetchEpisode$episode$context$$ContextCollection$items$items$item$$Pa
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchEpisode$episode$context$$ContextCollection$items$items$item$$Page) ||
+    if (other
+            is! Query$FetchEpisode$episode$context$$ContextCollection$items$items$item$$Page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -12594,8 +12589,8 @@ class Query$FetchEpisode$episode$context$$ContextCollection$items$items$item$$Li
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchEpisode$episode$context$$ContextCollection$items$items$item$$Link) ||
+    if (other
+            is! Query$FetchEpisode$episode$context$$ContextCollection$items$items$item$$Link ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -12709,8 +12704,8 @@ class Query$FetchEpisode$episode$context$$ContextCollection$items$items$item$$St
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchEpisode$episode$context$$ContextCollection$items$items$item$$StudyTopic) ||
+    if (other
+            is! Query$FetchEpisode$episode$context$$ContextCollection$items$items$item$$StudyTopic ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -12824,8 +12819,8 @@ class Query$FetchEpisode$episode$context$$ContextCollection$items$items$item$$Ga
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchEpisode$episode$context$$ContextCollection$items$items$item$$Game) ||
+    if (other
+            is! Query$FetchEpisode$episode$context$$ContextCollection$items$items$item$$Game ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -12939,8 +12934,8 @@ class Query$FetchEpisode$episode$context$$ContextCollection$items$items$item$$Pl
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchEpisode$episode$context$$ContextCollection$items$items$item$$Playlist) ||
+    if (other
+            is! Query$FetchEpisode$episode$context$$ContextCollection$items$items$item$$Playlist ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -13054,8 +13049,8 @@ class Query$FetchEpisode$episode$context$$ContextCollection$items$items$item$$Sh
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchEpisode$episode$context$$ContextCollection$items$items$item$$Short) ||
+    if (other
+            is! Query$FetchEpisode$episode$context$$ContextCollection$items$items$item$$Short ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -13169,8 +13164,8 @@ class Query$FetchEpisode$episode$context$$ContextCollection$items$items$item$$Pe
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchEpisode$episode$context$$ContextCollection$items$items$item$$Person) ||
+    if (other
+            is! Query$FetchEpisode$episode$context$$ContextCollection$items$items$item$$Person ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -13298,7 +13293,7 @@ class Query$FetchEpisode$episode$context$$Season$episodes
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$FetchEpisode$episode$context$$Season$episodes) ||
+    if (other is! Query$FetchEpisode$episode$context$$Season$episodes ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -13490,7 +13485,7 @@ class Query$FetchEpisode$episode$context$$Season$show
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$FetchEpisode$episode$context$$Season$show) ||
+    if (other is! Query$FetchEpisode$episode$context$$Season$show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -13670,7 +13665,7 @@ class Query$FetchEpisode$episode$context$$Season$show$seasons
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$FetchEpisode$episode$context$$Season$show$seasons) ||
+    if (other is! Query$FetchEpisode$episode$context$$Season$show$seasons ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -13845,8 +13840,8 @@ class Query$FetchEpisode$episode$context$$Season$show$seasons$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$FetchEpisode$episode$context$$Season$show$seasons$items) ||
+    if (other
+            is! Query$FetchEpisode$episode$context$$Season$show$seasons$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -13997,7 +13992,7 @@ class Query$FetchEpisode$episode$relatedItems {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$FetchEpisode$episode$relatedItems) ||
+    if (other is! Query$FetchEpisode$episode$relatedItems ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -14154,7 +14149,7 @@ class Query$FetchEpisode$episode$lessons {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$FetchEpisode$episode$lessons) ||
+    if (other is! Query$FetchEpisode$episode$lessons ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -14309,7 +14304,7 @@ class Query$FetchEpisode$episode$lessons$items {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$FetchEpisode$episode$lessons$items) ||
+    if (other is! Query$FetchEpisode$episode$lessons$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -14445,7 +14440,7 @@ class Variables$Query$legacyIDLookup {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Variables$Query$legacyIDLookup) ||
+    if (other is! Variables$Query$legacyIDLookup ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -14577,7 +14572,7 @@ class Query$legacyIDLookup {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$legacyIDLookup) || runtimeType != other.runtimeType) {
+    if (other is! Query$legacyIDLookup || runtimeType != other.runtimeType) {
       return false;
     }
     final l$legacyIDLookup = legacyIDLookup;
@@ -14937,7 +14932,7 @@ class Query$legacyIDLookup$legacyIDLookup {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$legacyIDLookup$legacyIDLookup) ||
+    if (other is! Query$legacyIDLookup$legacyIDLookup ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -15055,7 +15050,7 @@ class Variables$Query$EpisodeDetails {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Variables$Query$EpisodeDetails) ||
+    if (other is! Variables$Query$EpisodeDetails ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -15159,7 +15154,7 @@ class Query$EpisodeDetails {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$EpisodeDetails) || runtimeType != other.runtimeType) {
+    if (other is! Query$EpisodeDetails || runtimeType != other.runtimeType) {
       return false;
     }
     final l$episode = episode;
@@ -15493,7 +15488,7 @@ class Variables$Query$getDefaultEpisodeForShow {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Variables$Query$getDefaultEpisodeForShow) ||
+    if (other is! Variables$Query$getDefaultEpisodeForShow ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -15598,7 +15593,7 @@ class Query$getDefaultEpisodeForShow {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$getDefaultEpisodeForShow) ||
+    if (other is! Query$getDefaultEpisodeForShow ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -15971,7 +15966,7 @@ class Query$getDefaultEpisodeForShow$show {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$getDefaultEpisodeForShow$show) ||
+    if (other is! Query$getDefaultEpisodeForShow$show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -16113,7 +16108,7 @@ class Query$getDefaultEpisodeForShow$show$defaultEpisode {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$getDefaultEpisodeForShow$show$defaultEpisode) ||
+    if (other is! Query$getDefaultEpisodeForShow$show$defaultEpisode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -16254,7 +16249,7 @@ class Variables$Query$getNextEpisodes {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Variables$Query$getNextEpisodes) ||
+    if (other is! Variables$Query$getNextEpisodes ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -16383,7 +16378,7 @@ class Query$getNextEpisodes {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$getNextEpisodes) || runtimeType != other.runtimeType) {
+    if (other is! Query$getNextEpisodes || runtimeType != other.runtimeType) {
       return false;
     }
     final l$episode = episode;
@@ -16754,7 +16749,7 @@ class Query$getNextEpisodes$episode {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$getNextEpisodes$episode) ||
+    if (other is! Query$getNextEpisodes$episode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -16990,7 +16985,7 @@ class Query$getNextEpisodes$episode$next
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$getNextEpisodes$episode$next) ||
+    if (other is! Query$getNextEpisodes$episode$next ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -17249,7 +17244,7 @@ class Query$getNextEpisodes$episode$next$context
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$getNextEpisodes$episode$next$context) ||
+    if (other is! Query$getNextEpisodes$episode$next$context ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -17409,8 +17404,8 @@ class Query$getNextEpisodes$episode$next$context$$ContextCollection
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$getNextEpisodes$episode$next$context$$ContextCollection) ||
+    if (other
+            is! Query$getNextEpisodes$episode$next$context$$ContextCollection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -17537,7 +17532,7 @@ class Query$getNextEpisodes$episode$next$context$$Season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$getNextEpisodes$episode$next$context$$Season) ||
+    if (other is! Query$getNextEpisodes$episode$next$context$$Season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -17671,7 +17666,7 @@ class Query$getNextEpisodes$episode$next$season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$getNextEpisodes$episode$next$season) ||
+    if (other is! Query$getNextEpisodes$episode$next$season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -17838,7 +17833,7 @@ class Query$getNextEpisodes$episode$next$season$show
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$getNextEpisodes$episode$next$season$show) ||
+    if (other is! Query$getNextEpisodes$episode$next$season$show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -17970,7 +17965,7 @@ class Variables$Query$getEpisodeAvailability {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Variables$Query$getEpisodeAvailability) ||
+    if (other is! Variables$Query$getEpisodeAvailability ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -18075,7 +18070,7 @@ class Query$getEpisodeAvailability {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$getEpisodeAvailability) ||
+    if (other is! Query$getEpisodeAvailability ||
         runtimeType != other.runtimeType) {
       return false;
     }

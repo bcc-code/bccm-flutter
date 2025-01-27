@@ -88,7 +88,7 @@ class Fragment$CalendarEventWithEntries {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$CalendarEventWithEntries) ||
+    if (other is! Fragment$CalendarEventWithEntries ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -380,7 +380,7 @@ class Variables$Query$GetEvent {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Variables$Query$GetEvent) ||
+    if (other is! Variables$Query$GetEvent ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -485,7 +485,7 @@ class Query$GetEvent {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetEvent) || runtimeType != other.runtimeType) {
+    if (other is! Query$GetEvent || runtimeType != other.runtimeType) {
       return false;
     }
     final l$event = event;
@@ -825,7 +825,7 @@ class Query$ListEvents {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$ListEvents) || runtimeType != other.runtimeType) {
+    if (other is! Query$ListEvents || runtimeType != other.runtimeType) {
       return false;
     }
     final l$calendar = calendar;
@@ -1151,7 +1151,7 @@ class Query$ListEvents$calendar {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$ListEvents$calendar) ||
+    if (other is! Query$ListEvents$calendar ||
         runtimeType != other.runtimeType) {
       return false;
     }

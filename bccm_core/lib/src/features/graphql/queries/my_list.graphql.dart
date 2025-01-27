@@ -50,7 +50,7 @@ class Fragment$MyListEntry {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$MyListEntry) || runtimeType != other.runtimeType) {
+    if (other is! Fragment$MyListEntry || runtimeType != other.runtimeType) {
       return false;
     }
     final l$item = item;
@@ -363,7 +363,7 @@ class Fragment$MyListEntry$item {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$MyListEntry$item) ||
+    if (other is! Fragment$MyListEntry$item ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -577,7 +577,7 @@ class Fragment$MyListEntry$item$$Episode implements Fragment$MyListEntry$item {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$MyListEntry$item$$Episode) ||
+    if (other is! Fragment$MyListEntry$item$$Episode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -782,7 +782,7 @@ class Fragment$MyListEntry$item$$Short implements Fragment$MyListEntry$item {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$MyListEntry$item$$Short) ||
+    if (other is! Fragment$MyListEntry$item$$Short ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -911,7 +911,7 @@ class Fragment$MyListEntry$item$$Show implements Fragment$MyListEntry$item {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$MyListEntry$item$$Show) ||
+    if (other is! Fragment$MyListEntry$item$$Show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1017,7 +1017,7 @@ class Query$MyList {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$MyList) || runtimeType != other.runtimeType) {
+    if (other is! Query$MyList || runtimeType != other.runtimeType) {
       return false;
     }
     final l$myList = myList;
@@ -1348,7 +1348,7 @@ class Query$MyList$myList {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$MyList$myList) || runtimeType != other.runtimeType) {
+    if (other is! Query$MyList$myList || runtimeType != other.runtimeType) {
       return false;
     }
     final l$entries = entries;
@@ -1484,7 +1484,7 @@ class Query$MyList$myList$entries {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$MyList$myList$entries) ||
+    if (other is! Query$MyList$myList$entries ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1628,7 +1628,7 @@ class Variables$Mutation$addEpisodeToMyList {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Variables$Mutation$addEpisodeToMyList) ||
+    if (other is! Variables$Mutation$addEpisodeToMyList ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1734,7 +1734,7 @@ class Mutation$addEpisodeToMyList {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Mutation$addEpisodeToMyList) ||
+    if (other is! Mutation$addEpisodeToMyList ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2145,7 +2145,7 @@ class Mutation$addEpisodeToMyList$addEpisodeToMyList {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Mutation$addEpisodeToMyList$addEpisodeToMyList) ||
+    if (other is! Mutation$addEpisodeToMyList$addEpisodeToMyList ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2268,7 +2268,7 @@ class Variables$Mutation$addShortToMyList {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Variables$Mutation$addShortToMyList) ||
+    if (other is! Variables$Mutation$addShortToMyList ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2373,7 +2373,7 @@ class Mutation$addShortToMyList {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Mutation$addShortToMyList) ||
+    if (other is! Mutation$addShortToMyList ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2782,7 +2782,7 @@ class Mutation$addShortToMyList$addShortToMyList {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Mutation$addShortToMyList$addShortToMyList) ||
+    if (other is! Mutation$addShortToMyList$addShortToMyList ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2904,7 +2904,7 @@ class Variables$Mutation$removeEntryFromMyList {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Variables$Mutation$removeEntryFromMyList) ||
+    if (other is! Variables$Mutation$removeEntryFromMyList ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -3011,7 +3011,7 @@ class Mutation$removeEntryFromMyList {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Mutation$removeEntryFromMyList) ||
+    if (other is! Mutation$removeEntryFromMyList ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -3426,7 +3426,7 @@ class Mutation$removeEntryFromMyList$removeEntryFromMyList {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Mutation$removeEntryFromMyList$removeEntryFromMyList) ||
+    if (other is! Mutation$removeEntryFromMyList$removeEntryFromMyList ||
         runtimeType != other.runtimeType) {
       return false;
     }
