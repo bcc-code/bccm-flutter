@@ -350,27 +350,28 @@ class CurrentWeeksStreakVmBuilder
   _$CurrentWeeksStreakVm _build() {
     final _$result = _$v ??
         new _$CurrentWeeksStreakVm._(
-            year: year,
-            weekOfTheYear: weekOfTheYear,
-            todaysFraKaareTrackId: todaysFraKaareTrackId,
-            numberOfPerfectWeeks: numberOfPerfectWeeks,
-            isPerfectWeek: isPerfectWeek,
-            total: total,
-            monday: monday,
-            tuesday: tuesday,
-            wednesday: wednesday,
-            thursday: thursday,
-            friday: friday,
-            id: BuiltValueNullFieldError.checkNotNull(
-                id, r'CurrentWeeksStreakVm', 'id'),
-            type: BuiltValueNullFieldError.checkNotNull(
-                type, r'CurrentWeeksStreakVm', 'type'),
-            dayOfTheWeek: dayOfTheWeek,
-            eligibleUntil: eligibleUntil,
-            lastChanged: lastChanged,
-            daysInARow: daysInARow,
-            pointColor: pointColor,
-            homeScreenText: homeScreenText);
+          year: year,
+          weekOfTheYear: weekOfTheYear,
+          todaysFraKaareTrackId: todaysFraKaareTrackId,
+          numberOfPerfectWeeks: numberOfPerfectWeeks,
+          isPerfectWeek: isPerfectWeek,
+          total: total,
+          monday: monday,
+          tuesday: tuesday,
+          wednesday: wednesday,
+          thursday: thursday,
+          friday: friday,
+          id: BuiltValueNullFieldError.checkNotNull(
+              id, r'CurrentWeeksStreakVm', 'id'),
+          type: BuiltValueNullFieldError.checkNotNull(
+              type, r'CurrentWeeksStreakVm', 'type'),
+          dayOfTheWeek: dayOfTheWeek,
+          eligibleUntil: eligibleUntil,
+          lastChanged: lastChanged,
+          daysInARow: daysInARow,
+          pointColor: pointColor,
+          homeScreenText: homeScreenText,
+        );
     replace(_$result);
     return _$result;
   }

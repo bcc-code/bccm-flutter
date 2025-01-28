@@ -203,15 +203,16 @@ class TileMessageModelBuilder
   _$TileMessageModel _build() {
     final _$result = _$v ??
         new _$TileMessageModel._(
-            id: BuiltValueNullFieldError.checkNotNull(
-                id, r'TileMessageModel', 'id'),
-            type: BuiltValueNullFieldError.checkNotNull(
-                type, r'TileMessageModel', 'type'),
-            header: header,
-            title: title,
-            subtitle: subtitle,
-            buttonText: buttonText,
-            buttonUrl: buttonUrl);
+          id: BuiltValueNullFieldError.checkNotNull(
+              id, r'TileMessageModel', 'id'),
+          type: BuiltValueNullFieldError.checkNotNull(
+              type, r'TileMessageModel', 'type'),
+          header: header,
+          title: title,
+          subtitle: subtitle,
+          buttonText: buttonText,
+          buttonUrl: buttonUrl,
+        );
     replace(_$result);
     return _$result;
   }

@@ -108,7 +108,10 @@ class TrackModelMediumBuilder
     try {
       _$result = _$v ??
           new _$TrackModelMedium._(
-              type: type, isVisible: isVisible, files: _files?.build());
+            type: type,
+            isVisible: isVisible,
+            files: _files?.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {

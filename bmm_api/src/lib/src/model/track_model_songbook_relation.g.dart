@@ -119,7 +119,11 @@ class TrackModelSongbookRelationBuilder
   _$TrackModelSongbookRelation _build() {
     final _$result = _$v ??
         new _$TrackModelSongbookRelation._(
-            id: id, name: name, comment: comment, timestamp: timestamp);
+          id: id,
+          name: name,
+          comment: comment,
+          timestamp: timestamp,
+        );
     replace(_$result);
     return _$result;
   }

@@ -182,13 +182,14 @@ class InfoMessageModelBuilder
   _$InfoMessageModel _build() {
     final _$result = _$v ??
         new _$InfoMessageModel._(
-            id: BuiltValueNullFieldError.checkNotNull(
-                id, r'InfoMessageModel', 'id'),
-            type: BuiltValueNullFieldError.checkNotNull(
-                type, r'InfoMessageModel', 'type'),
-            translatedMessage: translatedMessage,
-            messageText: messageText,
-            link: link);
+          id: BuiltValueNullFieldError.checkNotNull(
+              id, r'InfoMessageModel', 'id'),
+          type: BuiltValueNullFieldError.checkNotNull(
+              type, r'InfoMessageModel', 'type'),
+          translatedMessage: translatedMessage,
+          messageText: messageText,
+          link: link,
+        );
     replace(_$result);
     return _$result;
   }

@@ -40,6 +40,7 @@ part 'track_model.g.dart';
 /// * [type] 
 /// * [languages] 
 /// * [language] 
+/// * [transcriptionLanguages] 
 /// * [title] 
 /// * [publisher] 
 /// * [copyright] 
@@ -103,11 +104,14 @@ abstract class TrackModel implements Built<TrackModel, TrackModelBuilder> {
   // enum typeEnum {  track,  };
 
   @BuiltValueField(wireName: r'languages')
-  BuiltList<LanguageEnum>? get languages;
+  BuiltList<LanguageEnum> get languages;
 
   @BuiltValueField(wireName: r'language')
   LanguageEnum get language;
   // enum languageEnum {  af,  bg,  cs,  de,  en,  el,  et,  es,  fi,  fr,  hr,  hu,  it,  nb,  nl,  pl,  pt,  ro,  ru,  tr,  zh,  sl,  he,  ta,  ml,  yue,  kha,  zxx,  ar,  be,  da,  hi,  id,  mn,  no,  sa,  sr,  sv,  uk,  };
+
+  @BuiltValueField(wireName: r'transcription_languages')
+  BuiltList<LanguageEnum> get transcriptionLanguages;
 
   @BuiltValueField(wireName: r'title')
   String? get title;
@@ -256,17 +260,20 @@ class _$TrackModelSerializer implements PrimitiveSerializer<TrackModel> {
       object.type,
       specifiedType: const FullType(TrackModelTypeEnum),
     );
-    if (object.languages != null) {
-      yield r'languages';
-      yield serializers.serialize(
-        object.languages,
-        specifiedType: const FullType.nullable(BuiltList, [FullType(LanguageEnum)]),
-      );
-    }
+    yield r'languages';
+    yield serializers.serialize(
+      object.languages,
+      specifiedType: const FullType(BuiltList, [FullType(LanguageEnum)]),
+    );
     yield r'language';
     yield serializers.serialize(
       object.language,
       specifiedType: const FullType(LanguageEnum),
+    );
+    yield r'transcription_languages';
+    yield serializers.serialize(
+      object.transcriptionLanguages,
+      specifiedType: const FullType(BuiltList, [FullType(LanguageEnum)]),
     );
     if (object.title != null) {
       yield r'title';
@@ -469,9 +476,8 @@ class _$TrackModelSerializer implements PrimitiveSerializer<TrackModel> {
         case r'languages':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType.nullable(BuiltList, [FullType(LanguageEnum)]),
-          ) as BuiltList<LanguageEnum>?;
-          if (valueDes == null) continue;
+            specifiedType: const FullType(BuiltList, [FullType(LanguageEnum)]),
+          ) as BuiltList<LanguageEnum>;
           result.languages.replace(valueDes);
           break;
         case r'language':
@@ -480,6 +486,13 @@ class _$TrackModelSerializer implements PrimitiveSerializer<TrackModel> {
             specifiedType: const FullType(LanguageEnum),
           ) as LanguageEnum;
           result.language = valueDes;
+          break;
+        case r'transcription_languages':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(BuiltList, [FullType(LanguageEnum)]),
+          ) as BuiltList<LanguageEnum>;
+          result.transcriptionLanguages.replace(valueDes);
           break;
         case r'title':
           final valueDes = serializers.deserialize(

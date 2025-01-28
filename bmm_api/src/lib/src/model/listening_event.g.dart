@@ -166,14 +166,15 @@ class ListeningEventBuilder
   _$ListeningEvent _build() {
     final _$result = _$v ??
         new _$ListeningEvent._(
-            personId: personId,
-            trackId: trackId,
-            timestampStart: timestampStart,
-            language: language,
-            playbackOrigin: playbackOrigin,
-            lastPosition: lastPosition,
-            adjustedPlaybackSpeed: adjustedPlaybackSpeed,
-            os: os);
+          personId: personId,
+          trackId: trackId,
+          timestampStart: timestampStart,
+          language: language,
+          playbackOrigin: playbackOrigin,
+          lastPosition: lastPosition,
+          adjustedPlaybackSpeed: adjustedPlaybackSpeed,
+          os: os,
+        );
     replace(_$result);
     return _$result;
   }

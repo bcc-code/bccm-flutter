@@ -150,12 +150,13 @@ class DocumentListPodcastModelBuilder
     try {
       _$result = _$v ??
           new _$DocumentListPodcastModel._(
-              title: title,
-              translationParent: translationParent,
-              translationId: translationId,
-              supportsPaging: supportsPaging,
-              items: _items?.build(),
-              totalItems: totalItems);
+            title: title,
+            translationParent: translationParent,
+            translationId: translationId,
+            supportsPaging: supportsPaging,
+            items: _items?.build(),
+            totalItems: totalItems,
+          );
     } catch (_) {
       late String _$failedField;
       try {

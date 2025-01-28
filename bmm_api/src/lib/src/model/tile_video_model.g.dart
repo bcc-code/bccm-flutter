@@ -213,16 +213,17 @@ class TileVideoModelBuilder
   _$TileVideoModel _build() {
     final _$result = _$v ??
         new _$TileVideoModel._(
-            id: BuiltValueNullFieldError.checkNotNull(
-                id, r'TileVideoModel', 'id'),
-            type: BuiltValueNullFieldError.checkNotNull(
-                type, r'TileVideoModel', 'type'),
-            header: header,
-            buttonText: buttonText,
-            buttonUrl: buttonUrl,
-            title: title,
-            subtitle: subtitle,
-            videoFileName: videoFileName);
+          id: BuiltValueNullFieldError.checkNotNull(
+              id, r'TileVideoModel', 'id'),
+          type: BuiltValueNullFieldError.checkNotNull(
+              type, r'TileVideoModel', 'type'),
+          header: header,
+          buttonText: buttonText,
+          buttonUrl: buttonUrl,
+          title: title,
+          subtitle: subtitle,
+          videoFileName: videoFileName,
+        );
     replace(_$result);
     return _$result;
   }

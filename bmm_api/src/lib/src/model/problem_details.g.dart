@@ -126,11 +126,12 @@ class ProblemDetailsBuilder
   _$ProblemDetails _build() {
     final _$result = _$v ??
         new _$ProblemDetails._(
-            type: type,
-            title: title,
-            status: status,
-            detail: detail,
-            instance: instance);
+          type: type,
+          title: title,
+          status: status,
+          detail: detail,
+          instance: instance,
+        );
     replace(_$result);
     return _$result;
   }

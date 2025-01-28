@@ -147,8 +147,9 @@ class IAlbumOrChapterHeaderBuilder
   _$IAlbumOrChapterHeader _build() {
     final _$result = _$v ??
         new _$IAlbumOrChapterHeader._(
-            oneOf: BuiltValueNullFieldError.checkNotNull(
-                oneOf, r'IAlbumOrChapterHeader', 'oneOf'));
+          oneOf: BuiltValueNullFieldError.checkNotNull(
+              oneOf, r'IAlbumOrChapterHeader', 'oneOf'),
+        );
     replace(_$result);
     return _$result;
   }

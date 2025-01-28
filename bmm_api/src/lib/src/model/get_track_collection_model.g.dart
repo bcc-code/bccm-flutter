@@ -196,18 +196,19 @@ class GetTrackCollectionModelBuilder
     try {
       _$result = _$v ??
           new _$GetTrackCollectionModel._(
-              type: BuiltValueNullFieldError.checkNotNull(
-                  type, r'GetTrackCollectionModel', 'type'),
-              id: BuiltValueNullFieldError.checkNotNull(
-                  id, r'GetTrackCollectionModel', 'id'),
-              name: name,
-              description: description,
-              followerCount: followerCount,
-              shareLink: shareLink,
-              authorName: authorName,
-              canEdit: canEdit,
-              tracks: _tracks?.build(),
-              useLikeIcon: useLikeIcon);
+            type: BuiltValueNullFieldError.checkNotNull(
+                type, r'GetTrackCollectionModel', 'type'),
+            id: BuiltValueNullFieldError.checkNotNull(
+                id, r'GetTrackCollectionModel', 'id'),
+            name: name,
+            description: description,
+            followerCount: followerCount,
+            shareLink: shareLink,
+            authorName: authorName,
+            canEdit: canEdit,
+            tracks: _tracks?.build(),
+            useLikeIcon: useLikeIcon,
+          );
     } catch (_) {
       late String _$failedField;
       try {

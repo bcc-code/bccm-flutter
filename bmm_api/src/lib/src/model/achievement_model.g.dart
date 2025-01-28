@@ -165,14 +165,15 @@ class AchievementModelBuilder
   _$AchievementModel _build() {
     final _$result = _$v ??
         new _$AchievementModel._(
-            id: id,
-            hasAchieved: hasAchieved,
-            hasAcknowledged: hasAcknowledged,
-            url: url,
-            title: title,
-            description: description,
-            trackId: trackId,
-            reward: reward);
+          id: id,
+          hasAchieved: hasAchieved,
+          hasAcknowledged: hasAcknowledged,
+          url: url,
+          title: title,
+          description: description,
+          trackId: trackId,
+          reward: reward,
+        );
     replace(_$result);
     return _$result;
   }

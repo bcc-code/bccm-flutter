@@ -166,11 +166,12 @@ class AchievementCollectionBuilder
     try {
       _$result = _$v ??
           new _$AchievementCollection._(
-              id: BuiltValueNullFieldError.checkNotNull(
-                  id, r'AchievementCollection', 'id'),
-              type: BuiltValueNullFieldError.checkNotNull(
-                  type, r'AchievementCollection', 'type'),
-              list: _list?.build());
+            id: BuiltValueNullFieldError.checkNotNull(
+                id, r'AchievementCollection', 'id'),
+            type: BuiltValueNullFieldError.checkNotNull(
+                type, r'AchievementCollection', 'type'),
+            list: _list?.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {

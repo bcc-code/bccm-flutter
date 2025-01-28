@@ -138,11 +138,12 @@ class SearchResultsBuilder
     try {
       _$result = _$v ??
           new _$SearchResults._(
-              nextPageFromPosition: nextPageFromPosition,
-              items: _items?.build(),
-              isFullyLoaded: isFullyLoaded,
-              highlightings: _highlightings?.build(),
-              totalResults: totalResults);
+            nextPageFromPosition: nextPageFromPosition,
+            items: _items?.build(),
+            isFullyLoaded: isFullyLoaded,
+            highlightings: _highlightings?.build(),
+            totalResults: totalResults,
+          );
     } catch (_) {
       late String _$failedField;
       try {

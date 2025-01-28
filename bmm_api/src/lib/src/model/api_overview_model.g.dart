@@ -150,12 +150,13 @@ class ApiOverviewModelBuilder
     try {
       _$result = _$v ??
           new _$ApiOverviewModel._(
-              name: name,
-              documentation: documentation,
-              systemStatus: _systemStatus?.build(),
-              languages: _languages?.build(),
-              updateIndexes: updateIndexes,
-              environment: environment);
+            name: name,
+            documentation: documentation,
+            systemStatus: _systemStatus?.build(),
+            languages: _languages?.build(),
+            updateIndexes: updateIndexes,
+            environment: environment,
+          );
     } catch (_) {
       late String _$failedField;
       try {

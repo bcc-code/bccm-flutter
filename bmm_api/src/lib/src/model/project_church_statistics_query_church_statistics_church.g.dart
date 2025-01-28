@@ -110,7 +110,9 @@ class ProjectChurchStatisticsQueryChurchStatisticsChurchBuilder
   _$ProjectChurchStatisticsQueryChurchStatisticsChurch _build() {
     final _$result = _$v ??
         new _$ProjectChurchStatisticsQueryChurchStatisticsChurch._(
-            id: id, name: name);
+          id: id,
+          name: name,
+        );
     replace(_$result);
     return _$result;
   }

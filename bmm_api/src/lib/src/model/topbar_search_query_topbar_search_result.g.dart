@@ -124,7 +124,11 @@ class TopbarSearchQueryTopbarSearchResultBuilder
   _$TopbarSearchQueryTopbarSearchResult _build() {
     final _$result = _$v ??
         new _$TopbarSearchQueryTopbarSearchResult._(
-            title: title, subtitle: subtitle, image: image, url: url);
+          title: title,
+          subtitle: subtitle,
+          image: image,
+          url: url,
+        );
     replace(_$result);
     return _$result;
   }

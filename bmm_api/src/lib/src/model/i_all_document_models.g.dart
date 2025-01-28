@@ -23,6 +23,11 @@ const IAllDocumentModelsTypeEnum
     const IAllDocumentModelsTypeEnum._('achievementCollection');
 const IAllDocumentModelsTypeEnum _$iAllDocumentModelsTypeEnum_chapterHeader =
     const IAllDocumentModelsTypeEnum._('chapterHeader');
+const IAllDocumentModelsTypeEnum
+    _$iAllDocumentModelsTypeEnum_gibraltarProjectBox =
+    const IAllDocumentModelsTypeEnum._('gibraltarProjectBox');
+const IAllDocumentModelsTypeEnum _$iAllDocumentModelsTypeEnum_hvheProjectBox =
+    const IAllDocumentModelsTypeEnum._('hvheProjectBox');
 const IAllDocumentModelsTypeEnum _$iAllDocumentModelsTypeEnum_infoMessage =
     const IAllDocumentModelsTypeEnum._('infoMessage');
 const IAllDocumentModelsTypeEnum _$iAllDocumentModelsTypeEnum_projectBox =
@@ -60,6 +65,10 @@ IAllDocumentModelsTypeEnum _$iAllDocumentModelsTypeEnumValueOf(String name) {
       return _$iAllDocumentModelsTypeEnum_achievementCollection;
     case 'chapterHeader':
       return _$iAllDocumentModelsTypeEnum_chapterHeader;
+    case 'gibraltarProjectBox':
+      return _$iAllDocumentModelsTypeEnum_gibraltarProjectBox;
+    case 'hvheProjectBox':
+      return _$iAllDocumentModelsTypeEnum_hvheProjectBox;
     case 'infoMessage':
       return _$iAllDocumentModelsTypeEnum_infoMessage;
     case 'projectBox':
@@ -93,6 +102,8 @@ final BuiltSet<IAllDocumentModelsTypeEnum> _$iAllDocumentModelsTypeEnumValues =
   _$iAllDocumentModelsTypeEnum_listeningStreak,
   _$iAllDocumentModelsTypeEnum_achievementCollection,
   _$iAllDocumentModelsTypeEnum_chapterHeader,
+  _$iAllDocumentModelsTypeEnum_gibraltarProjectBox,
+  _$iAllDocumentModelsTypeEnum_hvheProjectBox,
   _$iAllDocumentModelsTypeEnum_infoMessage,
   _$iAllDocumentModelsTypeEnum_projectBox,
   _$iAllDocumentModelsTypeEnum_recommendation,
@@ -118,6 +129,8 @@ class _$IAllDocumentModelsTypeEnumSerializer
     'listeningStreak': 'listening_streak',
     'achievementCollection': 'achievement_collection',
     'chapterHeader': 'chapter_header',
+    'gibraltarProjectBox': 'gibraltar_project_box',
+    'hvheProjectBox': 'hvhe_project_box',
     'infoMessage': 'InfoMessage',
     'projectBox': 'project_box',
     'recommendation': 'recommendation',
@@ -137,6 +150,8 @@ class _$IAllDocumentModelsTypeEnumSerializer
     'listening_streak': 'listeningStreak',
     'achievement_collection': 'achievementCollection',
     'chapter_header': 'chapterHeader',
+    'gibraltar_project_box': 'gibraltarProjectBox',
+    'hvhe_project_box': 'hvheProjectBox',
     'InfoMessage': 'infoMessage',
     'project_box': 'projectBox',
     'recommendation': 'recommendation',
@@ -248,8 +263,9 @@ class IAllDocumentModelsBuilder
   _$IAllDocumentModels _build() {
     final _$result = _$v ??
         new _$IAllDocumentModels._(
-            oneOf: BuiltValueNullFieldError.checkNotNull(
-                oneOf, r'IAllDocumentModels', 'oneOf'));
+          oneOf: BuiltValueNullFieldError.checkNotNull(
+              oneOf, r'IAllDocumentModels', 'oneOf'),
+        );
     replace(_$result);
     return _$result;
   }

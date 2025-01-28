@@ -10,16 +10,21 @@ All URIs are relative to *http://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**statisticsAchievementDelete**](StatisticsApi.md#statisticsachievementdelete) | **DELETE** /Statistics/achievement | 
+[**statisticsAchievementIdGet**](StatisticsApi.md#statisticsachievementidget) | **GET** /Statistics/achievement/{id} | 
 [**statisticsAchievementNameAcknowledgePut**](StatisticsApi.md#statisticsachievementnameacknowledgeput) | **PUT** /Statistics/achievement/{name}/acknowledge | 
 [**statisticsAchievementsGet**](StatisticsApi.md#statisticsachievementsget) | **GET** /Statistics/achievements | 
 [**statisticsAchievementsToAcknowledgeGet**](StatisticsApi.md#statisticsachievementstoacknowledgeget) | **GET** /Statistics/achievements/to/acknowledge | 
+[**statisticsFraKaareGet**](StatisticsApi.md#statisticsfrakaareget) | **GET** /Statistics/fra-kaare | 
 [**statisticsListeningPost**](StatisticsApi.md#statisticslisteningpost) | **POST** /Statistics/listening | 
+[**statisticsProjectChurchChurchGet**](StatisticsApi.md#statisticsprojectchurchchurchget) | **GET** /Statistics/project/church/{church} | 
 [**statisticsProjectChurchGet**](StatisticsApi.md#statisticsprojectchurchget) | **GET** /Statistics/project/church | 
 [**statisticsProjectProgressGet**](StatisticsApi.md#statisticsprojectprogressget) | **GET** /Statistics/project/progress | 
 [**statisticsProjectProjectIdRulesGet**](StatisticsApi.md#statisticsprojectprojectidrulesget) | **GET** /Statistics/project/{projectId}/rules | 
 [**statisticsProjectRulesGet**](StatisticsApi.md#statisticsprojectrulesget) | **GET** /Statistics/project/rules | 
 [**statisticsStreakpointPost**](StatisticsApi.md#statisticsstreakpointpost) | **POST** /Statistics/streakpoint | 
 [**statisticsTrackPlayedPost**](StatisticsApi.md#statisticstrackplayedpost) | **POST** /Statistics/track/played | 
+[**statisticsV2ProjectProgressGet**](StatisticsApi.md#statisticsv2projectprogressget) | **GET** /Statistics/v2/project/progress | 
+[**statisticsWatchedPost**](StatisticsApi.md#statisticswatchedpost) | **POST** /Statistics/watched | 
 [**statisticsYearInReviewFkGet**](StatisticsApi.md#statisticsyearinreviewfkget) | **GET** /Statistics/year-in-review/fk | 
 [**statisticsYearInReviewHoursGet**](StatisticsApi.md#statisticsyearinreviewhoursget) | **GET** /Statistics/year-in-review/hours | 
 [**statisticsYearInReviewOverviewGet**](StatisticsApi.md#statisticsyearinreviewoverviewget) | **GET** /Statistics/year-in-review/overview | 
@@ -59,6 +64,51 @@ No authorization required
 
  - **Content-Type**: Not defined
  - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **statisticsAchievementIdGet**
+> AchievementModel statisticsAchievementIdGet(id, lang, theme)
+
+
+
+### Example
+```dart
+import 'package:bmm_api/api.dart';
+
+final api = BmmApi().getStatisticsApi();
+final String id = id_example; // String | 
+final LanguageEnum lang = ; // LanguageEnum | 
+final String theme = theme_example; // String | 
+
+try {
+    final response = api.statisticsAchievementIdGet(id, lang, theme);
+    print(response);
+} catch on DioException (e) {
+    print('Exception when calling StatisticsApi->statisticsAchievementIdGet: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**|  | 
+ **lang** | [**LanguageEnum**](.md)|  | [optional] 
+ **theme** | **String**|  | [optional] [default to 'light']
+
+### Return type
+
+[**AchievementModel**](AchievementModel.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -188,6 +238,43 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **statisticsFraKaareGet**
+> GetFraKaareStatisticsResponse statisticsFraKaareGet()
+
+
+
+### Example
+```dart
+import 'package:bmm_api/api.dart';
+
+final api = BmmApi().getStatisticsApi();
+
+try {
+    final response = api.statisticsFraKaareGet();
+    print(response);
+} catch on DioException (e) {
+    print('Exception when calling StatisticsApi->statisticsFraKaareGet: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**GetFraKaareStatisticsResponse**](GetFraKaareStatisticsResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **statisticsListeningPost**
 > statisticsListeningPost(listeningEvent)
 
@@ -225,6 +312,47 @@ No authorization required
 
  - **Content-Type**: application/json-patch+json, application/json, text/json, application/*+json
  - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **statisticsProjectChurchChurchGet**
+> ProjectChurchStatisticsQueryChurchStatistics statisticsProjectChurchChurchGet(church)
+
+
+
+### Example
+```dart
+import 'package:bmm_api/api.dart';
+
+final api = BmmApi().getStatisticsApi();
+final String church = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+
+try {
+    final response = api.statisticsProjectChurchChurchGet(church);
+    print(response);
+} catch on DioException (e) {
+    print('Exception when calling StatisticsApi->statisticsProjectChurchChurchGet: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **church** | **String**|  | 
+
+### Return type
+
+[**ProjectChurchStatisticsQueryChurchStatistics**](ProjectChurchStatisticsQueryChurchStatistics.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -460,6 +588,89 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **createTrackPlayedEventsCommandEvent** | [**BuiltList&lt;CreateTrackPlayedEventsCommandEvent&gt;**](CreateTrackPlayedEventsCommandEvent.md)|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json-patch+json, application/json, text/json, application/*+json
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **statisticsV2ProjectProgressGet**
+> ForbildePoints statisticsV2ProjectProgressGet(lang, theme)
+
+
+
+### Example
+```dart
+import 'package:bmm_api/api.dart';
+
+final api = BmmApi().getStatisticsApi();
+final LanguageEnum lang = ; // LanguageEnum | 
+final String theme = theme_example; // String | 
+
+try {
+    final response = api.statisticsV2ProjectProgressGet(lang, theme);
+    print(response);
+} catch on DioException (e) {
+    print('Exception when calling StatisticsApi->statisticsV2ProjectProgressGet: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **lang** | [**LanguageEnum**](.md)|  | [optional] 
+ **theme** | **String**|  | [optional] [default to 'light']
+
+### Return type
+
+[**ForbildePoints**](ForbildePoints.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **statisticsWatchedPost**
+> statisticsWatchedPost(statisticsControllerWatchedEvent)
+
+
+
+### Example
+```dart
+import 'package:bmm_api/api.dart';
+
+final api = BmmApi().getStatisticsApi();
+final BuiltList<StatisticsControllerWatchedEvent> statisticsControllerWatchedEvent = ; // BuiltList<StatisticsControllerWatchedEvent> | 
+
+try {
+    api.statisticsWatchedPost(statisticsControllerWatchedEvent);
+} catch on DioException (e) {
+    print('Exception when calling StatisticsApi->statisticsWatchedPost: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **statisticsControllerWatchedEvent** | [**BuiltList&lt;StatisticsControllerWatchedEvent&gt;**](StatisticsControllerWatchedEvent.md)|  | 
 
 ### Return type
 

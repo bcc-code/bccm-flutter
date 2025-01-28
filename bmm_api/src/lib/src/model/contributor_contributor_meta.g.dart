@@ -98,7 +98,9 @@ class ContributorContributorMetaBuilder
   _$ContributorContributorMeta _build() {
     final _$result = _$v ??
         new _$ContributorContributorMeta._(
-            modifiedBy: modifiedBy, modifiedAt: modifiedAt);
+          modifiedBy: modifiedBy,
+          modifiedAt: modifiedAt,
+        );
     replace(_$result);
     return _$result;
   }

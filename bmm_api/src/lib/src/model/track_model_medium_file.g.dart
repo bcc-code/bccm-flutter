@@ -117,7 +117,11 @@ class TrackModelMediumFileBuilder
   _$TrackModelMediumFile _build() {
     final _$result = _$v ??
         new _$TrackModelMediumFile._(
-            mimeType: mimeType, size: size, duration: duration, url: url);
+          mimeType: mimeType,
+          size: size,
+          duration: duration,
+          url: url,
+        );
     replace(_$result);
     return _$result;
   }

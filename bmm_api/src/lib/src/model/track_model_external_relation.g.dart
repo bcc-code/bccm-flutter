@@ -108,7 +108,10 @@ class TrackModelExternalRelationBuilder
   _$TrackModelExternalRelation _build() {
     final _$result = _$v ??
         new _$TrackModelExternalRelation._(
-            url: url, name: name, hasListened: hasListened);
+          url: url,
+          name: name,
+          hasListened: hasListened,
+        );
     replace(_$result);
     return _$result;
   }

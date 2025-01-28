@@ -129,11 +129,12 @@ class TrackModelBibleRelationBuilder
   _$TrackModelBibleRelation _build() {
     final _$result = _$v ??
         new _$TrackModelBibleRelation._(
-            book: book,
-            chapter: chapter,
-            verse: verse,
-            comment: comment,
-            timestamp: timestamp);
+          book: book,
+          chapter: chapter,
+          verse: verse,
+          comment: comment,
+          timestamp: timestamp,
+        );
     replace(_$result);
     return _$result;
   }

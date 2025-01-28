@@ -193,14 +193,15 @@ class PodcastModelBuilder
     try {
       _$result = _$v ??
           new _$PodcastModel._(
-              cover: cover,
-              id: BuiltValueNullFieldError.checkNotNull(
-                  id, r'PodcastModel', 'id'),
-              type: BuiltValueNullFieldError.checkNotNull(
-                  type, r'PodcastModel', 'type'),
-              languages: _languages?.build(),
-              language: language,
-              title: title);
+            cover: cover,
+            id: BuiltValueNullFieldError.checkNotNull(
+                id, r'PodcastModel', 'id'),
+            type: BuiltValueNullFieldError.checkNotNull(
+                type, r'PodcastModel', 'type'),
+            languages: _languages?.build(),
+            language: language,
+            title: title,
+          );
     } catch (_) {
       late String _$failedField;
       try {

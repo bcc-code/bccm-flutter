@@ -270,20 +270,21 @@ class TileModelBuilder implements Builder<TileModel, TileModelBuilder> {
     try {
       _$result = _$v ??
           new _$TileModel._(
-              id: BuiltValueNullFieldError.checkNotNull(id, r'TileModel', 'id'),
-              type: BuiltValueNullFieldError.checkNotNull(
-                  type, r'TileModel', 'type'),
-              backgroundColor: backgroundColor,
-              coverUrl: coverUrl,
-              title: title,
-              label: label,
-              date: date,
-              subtitle: subtitle,
-              percentage: percentage,
-              showAllLink: showAllLink,
-              shufflePodcastId: shufflePodcastId,
-              lastPositionInMs: lastPositionInMs,
-              track: _track?.build());
+            id: BuiltValueNullFieldError.checkNotNull(id, r'TileModel', 'id'),
+            type: BuiltValueNullFieldError.checkNotNull(
+                type, r'TileModel', 'type'),
+            backgroundColor: backgroundColor,
+            coverUrl: coverUrl,
+            title: title,
+            label: label,
+            date: date,
+            subtitle: subtitle,
+            percentage: percentage,
+            showAllLink: showAllLink,
+            shufflePodcastId: shufflePodcastId,
+            lastPositionInMs: lastPositionInMs,
+            track: _track?.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {

@@ -193,14 +193,15 @@ class PlaylistModelBuilder
     try {
       _$result = _$v ??
           new _$PlaylistModel._(
-              cover: cover,
-              id: BuiltValueNullFieldError.checkNotNull(
-                  id, r'PlaylistModel', 'id'),
-              type: BuiltValueNullFieldError.checkNotNull(
-                  type, r'PlaylistModel', 'type'),
-              languages: _languages?.build(),
-              language: language,
-              title: title);
+            cover: cover,
+            id: BuiltValueNullFieldError.checkNotNull(
+                id, r'PlaylistModel', 'id'),
+            type: BuiltValueNullFieldError.checkNotNull(
+                type, r'PlaylistModel', 'type'),
+            languages: _languages?.build(),
+            language: language,
+            title: title,
+          );
     } catch (_) {
       late String _$failedField;
       try {

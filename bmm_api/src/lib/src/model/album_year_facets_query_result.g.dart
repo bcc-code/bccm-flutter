@@ -95,8 +95,11 @@ class AlbumYearFacetsQueryResultBuilder
   AlbumYearFacetsQueryResult build() => _build();
 
   _$AlbumYearFacetsQueryResult _build() {
-    final _$result =
-        _$v ?? new _$AlbumYearFacetsQueryResult._(year: year, count: count);
+    final _$result = _$v ??
+        new _$AlbumYearFacetsQueryResult._(
+          year: year,
+          count: count,
+        );
     replace(_$result);
     return _$result;
   }

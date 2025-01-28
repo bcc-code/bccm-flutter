@@ -213,18 +213,19 @@ class TrackModelParentBuilder
     try {
       _$result = _$v ??
           new _$TrackModelParent._(
-              meta: _meta?.build(),
-              id: id,
-              parentId: parentId,
-              type: type,
-              bmmId: bmmId,
-              cover: cover,
-              language: language,
-              languages: _languages?.build(),
-              publishedAt: publishedAt,
-              tags: _tags?.build(),
-              title: title,
-              description: description);
+            meta: _meta?.build(),
+            id: id,
+            parentId: parentId,
+            type: type,
+            bmmId: bmmId,
+            cover: cover,
+            language: language,
+            languages: _languages?.build(),
+            publishedAt: publishedAt,
+            tags: _tags?.build(),
+            title: title,
+            description: description,
+          );
     } catch (_) {
       late String _$failedField;
       try {

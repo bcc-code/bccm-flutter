@@ -20,8 +20,10 @@ import 'package:bmm_api/src/api/events_api.dart';
 import 'package:bmm_api/src/api/facets_api.dart';
 import 'package:bmm_api/src/api/file_api.dart';
 import 'package:bmm_api/src/api/link_metadata_api.dart';
+import 'package:bmm_api/src/api/lyrics_api.dart';
 import 'package:bmm_api/src/api/playlist_api.dart';
 import 'package:bmm_api/src/api/podcast_api.dart';
+import 'package:bmm_api/src/api/question_api.dart';
 import 'package:bmm_api/src/api/search_api.dart';
 import 'package:bmm_api/src/api/shared_playlist_api.dart';
 import 'package:bmm_api/src/api/statistics_api.dart';
@@ -152,6 +154,12 @@ class BmmApi {
     return LinkMetadataApi(dio, serializers);
   }
 
+  /// Get LyricsApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  LyricsApi getLyricsApi() {
+    return LyricsApi(dio, serializers);
+  }
+
   /// Get PlaylistApi instance, base route and serializer can be overridden by a given but be careful,
   /// by doing that all interceptors will not be executed
   PlaylistApi getPlaylistApi() {
@@ -162,6 +170,12 @@ class BmmApi {
   /// by doing that all interceptors will not be executed
   PodcastApi getPodcastApi() {
     return PodcastApi(dio, serializers);
+  }
+
+  /// Get QuestionApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  QuestionApi getQuestionApi() {
+    return QuestionApi(dio, serializers);
   }
 
   /// Get SearchApi instance, base route and serializer can be overridden by a given but be careful,

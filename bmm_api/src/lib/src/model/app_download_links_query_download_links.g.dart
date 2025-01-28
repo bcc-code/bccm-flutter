@@ -134,11 +134,12 @@ class AppDownloadLinksQueryDownloadLinksBuilder
   _$AppDownloadLinksQueryDownloadLinks _build() {
     final _$result = _$v ??
         new _$AppDownloadLinksQueryDownloadLinks._(
-            windows: windows,
-            macIntel: macIntel,
-            macArm: macArm,
-            ios: ios,
-            android: android);
+          windows: windows,
+          macIntel: macIntel,
+          macArm: macArm,
+          ios: ios,
+          android: android,
+        );
     replace(_$result);
     return _$result;
   }

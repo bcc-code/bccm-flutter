@@ -194,14 +194,15 @@ class TrackCollectionModelBuilder
     try {
       _$result = _$v ??
           new _$TrackCollectionModel._(
-              type: BuiltValueNullFieldError.checkNotNull(
-                  type, r'TrackCollectionModel', 'type'),
-              id: BuiltValueNullFieldError.checkNotNull(
-                  id, r'TrackCollectionModel', 'id'),
-              name: BuiltValueNullFieldError.checkNotNull(
-                  name, r'TrackCollectionModel', 'name'),
-              access: _access?.build(),
-              trackReferences: _trackReferences?.build());
+            type: BuiltValueNullFieldError.checkNotNull(
+                type, r'TrackCollectionModel', 'type'),
+            id: BuiltValueNullFieldError.checkNotNull(
+                id, r'TrackCollectionModel', 'id'),
+            name: BuiltValueNullFieldError.checkNotNull(
+                name, r'TrackCollectionModel', 'name'),
+            access: _access?.build(),
+            trackReferences: _trackReferences?.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {

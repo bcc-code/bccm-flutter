@@ -164,14 +164,15 @@ class StreakPointBuilder implements Builder<StreakPoint, StreakPointBuilder> {
   _$StreakPoint _build() {
     final _$result = _$v ??
         new _$StreakPoint._(
-            personId: personId,
-            trackId: trackId,
-            timestampStart: timestampStart,
-            language: language,
-            playbackOrigin: playbackOrigin,
-            lastPosition: lastPosition,
-            adjustedPlaybackSpeed: adjustedPlaybackSpeed,
-            os: os);
+          personId: personId,
+          trackId: trackId,
+          timestampStart: timestampStart,
+          language: language,
+          playbackOrigin: playbackOrigin,
+          lastPosition: lastPosition,
+          adjustedPlaybackSpeed: adjustedPlaybackSpeed,
+          os: os,
+        );
     replace(_$result);
     return _$result;
   }

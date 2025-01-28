@@ -296,23 +296,23 @@ class AlbumModelBuilder implements Builder<AlbumModel, AlbumModelBuilder> {
     try {
       _$result = _$v ??
           new _$AlbumModel._(
-              meta: _meta?.build(),
-              bmmId: bmmId,
-              cover: cover,
-              id: BuiltValueNullFieldError.checkNotNull(
-                  id, r'AlbumModel', 'id'),
-              languages: _languages?.build(),
-              parentId: parentId,
-              publishedAt: publishedAt,
-              tags: _tags?.build(),
-              language: language,
-              title: title,
-              description: description,
-              type: BuiltValueNullFieldError.checkNotNull(
-                  type, r'AlbumModel', 'type'),
-              children: _children?.build(),
-              latestTrackId: latestTrackId,
-              latestTrackPosition: latestTrackPosition);
+            meta: _meta?.build(),
+            bmmId: bmmId,
+            cover: cover,
+            id: BuiltValueNullFieldError.checkNotNull(id, r'AlbumModel', 'id'),
+            languages: _languages?.build(),
+            parentId: parentId,
+            publishedAt: publishedAt,
+            tags: _tags?.build(),
+            language: language,
+            title: title,
+            description: description,
+            type: BuiltValueNullFieldError.checkNotNull(
+                type, r'AlbumModel', 'type'),
+            children: _children?.build(),
+            latestTrackId: latestTrackId,
+            latestTrackPosition: latestTrackPosition,
+          );
     } catch (_) {
       late String _$failedField;
       try {
