@@ -38,12 +38,15 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GetFraKaareStatisticsChurchStatistics.serializer)
       ..add(GetFraKaareStatisticsChurchStatisticsSnapshot.serializer)
       ..add(GetFraKaareStatisticsResponse.serializer)
+      ..add(GetProjectStandingsChurch.serializer)
+      ..add(GetProjectStandingsProjectStandings.serializer)
       ..add(GetTopSongsCollectionModel.serializer)
       ..add(GetTopSongsCollectionModelTrackAndCount.serializer)
       ..add(GetTrackCollectionModel.serializer)
       ..add(GetYearInReviewOverviewSlide.serializer)
       ..add(GibraltarProjectBox.serializer)
       ..add(GibraltarProjectBoxTypeEnum.serializer)
+      ..add(HandleBccmAnswerCommandBccmAnswer.serializer)
       ..add(Highlighting.serializer)
       ..add(HvheProjectBox.serializer)
       ..add(HvheProjectBoxTypeEnum.serializer)
@@ -68,6 +71,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(PodcastModel.serializer)
       ..add(PodcastModelTypeEnum.serializer)
       ..add(ProblemDetails.serializer)
+      ..add(ProcessWatchedCommandEvent.serializer)
       ..add(ProjectBox.serializer)
       ..add(ProjectBoxTypeEnum.serializer)
       ..add(ProjectChurchStatisticsQueryChurchStatistics.serializer)
@@ -89,7 +93,6 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(SearchResults.serializer)
       ..add(SectionHeaderModel.serializer)
       ..add(SectionHeaderModelTypeEnum.serializer)
-      ..add(StatisticsControllerWatchedEvent.serializer)
       ..add(StoreProjectQuestionQuestionHolder.serializer)
       ..add(StoreQuestionResponseCommand.serializer)
       ..add(StoreTranscriptionEditSuggestionsSuggestion.serializer)
@@ -156,6 +159,14 @@ Serializers _$serializers = (new Serializers().toBuilder()
           ]),
           () =>
               new ListBuilder<GetFraKaareStatisticsChurchStatisticsSnapshot>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(GetProjectStandingsChurch)]),
+          () => new ListBuilder<GetProjectStandingsChurch>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(GetProjectStandingsChurch)]),
+          () => new ListBuilder<GetProjectStandingsChurch>())
       ..addBuilderFactory(
           const FullType(BuiltList,
               const [const FullType(GetTopSongsCollectionModelTrackAndCount)]),

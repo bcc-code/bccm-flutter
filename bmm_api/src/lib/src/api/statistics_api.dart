@@ -14,12 +14,13 @@ import 'package:bmm_api/src/model/create_track_played_events_command_event.dart'
 import 'package:bmm_api/src/model/document_list_i_achievement_collection_or_chapter_header.dart';
 import 'package:bmm_api/src/model/forbilde_points.dart';
 import 'package:bmm_api/src/model/get_fra_kaare_statistics_response.dart';
+import 'package:bmm_api/src/model/get_project_standings_project_standings.dart';
 import 'package:bmm_api/src/model/get_year_in_review_overview_slide.dart';
 import 'package:bmm_api/src/model/language_enum.dart';
 import 'package:bmm_api/src/model/listening_event.dart';
+import 'package:bmm_api/src/model/process_watched_command_event.dart';
 import 'package:bmm_api/src/model/project_church_statistics_query_church_statistics.dart';
 import 'package:bmm_api/src/model/project_rules_query_rules.dart';
-import 'package:bmm_api/src/model/statistics_controller_watched_event.dart';
 import 'package:bmm_api/src/model/streak_point.dart';
 import 'package:built_collection/built_collection.dart';
 
@@ -913,6 +914,79 @@ class StatisticsApi {
     );
   }
 
+  /// statisticsProjectStandingsGet
+  /// 
+  ///
+  /// Parameters:
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [GetProjectStandingsProjectStandings] as data
+  /// Throws [DioException] if API call or serialization fails
+  Future<Response<GetProjectStandingsProjectStandings>> statisticsProjectStandingsGet({ 
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/Statistics/project/standings';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    GetProjectStandingsProjectStandings? _responseData;
+
+    try {
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(GetProjectStandingsProjectStandings),
+      ) as GetProjectStandingsProjectStandings;
+
+    } catch (error, stackTrace) {
+      throw DioException(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioExceptionType.unknown,
+        error: error,
+        stackTrace: stackTrace,
+      );
+    }
+
+    return Response<GetProjectStandingsProjectStandings>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
   /// statisticsStreakpointPost
   /// 
   ///
@@ -1134,7 +1208,7 @@ class StatisticsApi {
   /// 
   ///
   /// Parameters:
-  /// * [statisticsControllerWatchedEvent] 
+  /// * [processWatchedCommandEvent] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -1145,7 +1219,7 @@ class StatisticsApi {
   /// Returns a [Future]
   /// Throws [DioException] if API call or serialization fails
   Future<Response<void>> statisticsWatchedPost({ 
-    required BuiltList<StatisticsControllerWatchedEvent> statisticsControllerWatchedEvent,
+    required BuiltList<ProcessWatchedCommandEvent> processWatchedCommandEvent,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -1170,8 +1244,8 @@ class StatisticsApi {
     dynamic _bodyData;
 
     try {
-      const _type = FullType(BuiltList, [FullType(StatisticsControllerWatchedEvent)]);
-      _bodyData = _serializers.serialize(statisticsControllerWatchedEvent, specifiedType: _type);
+      const _type = FullType(BuiltList, [FullType(ProcessWatchedCommandEvent)]);
+      _bodyData = _serializers.serialize(processWatchedCommandEvent, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioException(

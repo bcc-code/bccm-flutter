@@ -21,6 +21,7 @@ Method | HTTP request | Description
 [**statisticsProjectProgressGet**](StatisticsApi.md#statisticsprojectprogressget) | **GET** /Statistics/project/progress | 
 [**statisticsProjectProjectIdRulesGet**](StatisticsApi.md#statisticsprojectprojectidrulesget) | **GET** /Statistics/project/{projectId}/rules | 
 [**statisticsProjectRulesGet**](StatisticsApi.md#statisticsprojectrulesget) | **GET** /Statistics/project/rules | 
+[**statisticsProjectStandingsGet**](StatisticsApi.md#statisticsprojectstandingsget) | **GET** /Statistics/project/standings | 
 [**statisticsStreakpointPost**](StatisticsApi.md#statisticsstreakpointpost) | **POST** /Statistics/streakpoint | 
 [**statisticsTrackPlayedPost**](StatisticsApi.md#statisticstrackplayedpost) | **POST** /Statistics/track/played | 
 [**statisticsV2ProjectProgressGet**](StatisticsApi.md#statisticsv2projectprogressget) | **GET** /Statistics/v2/project/progress | 
@@ -524,6 +525,43 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **statisticsProjectStandingsGet**
+> GetProjectStandingsProjectStandings statisticsProjectStandingsGet()
+
+
+
+### Example
+```dart
+import 'package:bmm_api/api.dart';
+
+final api = BmmApi().getStatisticsApi();
+
+try {
+    final response = api.statisticsProjectStandingsGet();
+    print(response);
+} catch on DioException (e) {
+    print('Exception when calling StatisticsApi->statisticsProjectStandingsGet: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**GetProjectStandingsProjectStandings**](GetProjectStandingsProjectStandings.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **statisticsStreakpointPost**
 > statisticsStreakpointPost(streakPoint)
 
@@ -648,7 +686,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **statisticsWatchedPost**
-> statisticsWatchedPost(statisticsControllerWatchedEvent)
+> statisticsWatchedPost(processWatchedCommandEvent)
 
 
 
@@ -657,10 +695,10 @@ No authorization required
 import 'package:bmm_api/api.dart';
 
 final api = BmmApi().getStatisticsApi();
-final BuiltList<StatisticsControllerWatchedEvent> statisticsControllerWatchedEvent = ; // BuiltList<StatisticsControllerWatchedEvent> | 
+final BuiltList<ProcessWatchedCommandEvent> processWatchedCommandEvent = ; // BuiltList<ProcessWatchedCommandEvent> | 
 
 try {
-    api.statisticsWatchedPost(statisticsControllerWatchedEvent);
+    api.statisticsWatchedPost(processWatchedCommandEvent);
 } catch on DioException (e) {
     print('Exception when calling StatisticsApi->statisticsWatchedPost: $e\n');
 }
@@ -670,7 +708,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **statisticsControllerWatchedEvent** | [**BuiltList&lt;StatisticsControllerWatchedEvent&gt;**](StatisticsControllerWatchedEvent.md)|  | 
+ **processWatchedCommandEvent** | [**BuiltList&lt;ProcessWatchedCommandEvent&gt;**](ProcessWatchedCommandEvent.md)|  | 
 
 ### Return type
 

@@ -40,11 +40,14 @@ import 'package:bmm_api/src/model/forbilde_points.dart';
 import 'package:bmm_api/src/model/get_fra_kaare_statistics_church_statistics.dart';
 import 'package:bmm_api/src/model/get_fra_kaare_statistics_church_statistics_snapshot.dart';
 import 'package:bmm_api/src/model/get_fra_kaare_statistics_response.dart';
+import 'package:bmm_api/src/model/get_project_standings_church.dart';
+import 'package:bmm_api/src/model/get_project_standings_project_standings.dart';
 import 'package:bmm_api/src/model/get_top_songs_collection_model.dart';
 import 'package:bmm_api/src/model/get_top_songs_collection_model_track_and_count.dart';
 import 'package:bmm_api/src/model/get_track_collection_model.dart';
 import 'package:bmm_api/src/model/get_year_in_review_overview_slide.dart';
 import 'package:bmm_api/src/model/gibraltar_project_box.dart';
+import 'package:bmm_api/src/model/handle_bccm_answer_command_bccm_answer.dart';
 import 'package:bmm_api/src/model/highlighting.dart';
 import 'package:bmm_api/src/model/hvhe_project_box.dart';
 import 'package:bmm_api/src/model/i_achievement_collection_or_chapter_header.dart';
@@ -65,6 +68,7 @@ import 'package:bmm_api/src/model/metadata_model.dart';
 import 'package:bmm_api/src/model/playlist_model.dart';
 import 'package:bmm_api/src/model/podcast_model.dart';
 import 'package:bmm_api/src/model/problem_details.dart';
+import 'package:bmm_api/src/model/process_watched_command_event.dart';
 import 'package:bmm_api/src/model/project_box.dart';
 import 'package:bmm_api/src/model/project_church_statistics_query_church_statistics.dart';
 import 'package:bmm_api/src/model/project_church_statistics_query_church_statistics_church.dart';
@@ -82,7 +86,6 @@ import 'package:bmm_api/src/model/role.dart';
 import 'package:bmm_api/src/model/search_filter.dart';
 import 'package:bmm_api/src/model/search_results.dart';
 import 'package:bmm_api/src/model/section_header_model.dart';
-import 'package:bmm_api/src/model/statistics_controller_watched_event.dart';
 import 'package:bmm_api/src/model/store_project_question_question_holder.dart';
 import 'package:bmm_api/src/model/store_question_response_command.dart';
 import 'package:bmm_api/src/model/store_transcription_edit_suggestions_suggestion.dart';
@@ -144,11 +147,14 @@ part 'serializers.g.dart';
   GetFraKaareStatisticsChurchStatistics,
   GetFraKaareStatisticsChurchStatisticsSnapshot,
   GetFraKaareStatisticsResponse,
+  GetProjectStandingsChurch,
+  GetProjectStandingsProjectStandings,
   GetTopSongsCollectionModel,
   GetTopSongsCollectionModelTrackAndCount,
   GetTrackCollectionModel,
   GetYearInReviewOverviewSlide,
   GibraltarProjectBox,
+  HandleBccmAnswerCommandBccmAnswer,
   Highlighting,
   HvheProjectBox,
   IAchievementCollectionOrChapterHeader,
@@ -169,6 +175,7 @@ part 'serializers.g.dart';
   PlaylistModel,
   PodcastModel,
   ProblemDetails,
+  ProcessWatchedCommandEvent,
   ProjectBox,
   ProjectChurchStatisticsQueryChurchStatistics,
   ProjectChurchStatisticsQueryChurchStatisticsChurch,
@@ -186,7 +193,6 @@ part 'serializers.g.dart';
   SearchFilter,
   SearchResults,
   SectionHeaderModel,
-  StatisticsControllerWatchedEvent,
   StoreProjectQuestionQuestionHolder,
   StoreQuestionResponseCommand,
   StoreTranscriptionEditSuggestionsSuggestion,
@@ -221,6 +227,10 @@ part 'serializers.g.dart';
 ])
 Serializers serializers = (_$serializers.toBuilder()
       ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(HandleBccmAnswerCommandBccmAnswer)]),
+        () => ListBuilder<HandleBccmAnswerCommandBccmAnswer>(),
+      )
+      ..addBuilderFactory(
         const FullType(BuiltList, [FullType(StreakPoint)]),
         () => ListBuilder<StreakPoint>(),
       )
@@ -249,16 +259,16 @@ Serializers serializers = (_$serializers.toBuilder()
         () => ListBuilder<CreateTrackPlayedEventsCommandEvent>(),
       )
       ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(StatisticsControllerWatchedEvent)]),
-        () => ListBuilder<StatisticsControllerWatchedEvent>(),
-      )
-      ..addBuilderFactory(
         const FullType(BuiltList, [FullType(AlbumModel)]),
         () => ListBuilder<AlbumModel>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(PodcastModel)]),
         () => ListBuilder<PodcastModel>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(ProcessWatchedCommandEvent)]),
+        () => ListBuilder<ProcessWatchedCommandEvent>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(AchievementModel)]),

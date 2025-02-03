@@ -123,6 +123,7 @@ Class | Method | HTTP request | Description
 [*PodcastApi*](doc/PodcastApi.md) | [**podcastIdRandomGet**](doc/PodcastApi.md#podcastidrandomget) | **GET** /podcast/{id}/random | 
 [*PodcastApi*](doc/PodcastApi.md) | [**podcastIdShuffleGet**](doc/PodcastApi.md#podcastidshuffleget) | **GET** /podcast/{id}/shuffle | 
 [*PodcastApi*](doc/PodcastApi.md) | [**podcastIdTrackGet**](doc/PodcastApi.md#podcastidtrackget) | **GET** /podcast/{id}/track | 
+[*QuestionApi*](doc/QuestionApi.md) | [**questionAnswersPost**](doc/QuestionApi.md#questionanswerspost) | **POST** /question/answers | 
 [*QuestionApi*](doc/QuestionApi.md) | [**questionIdGet**](doc/QuestionApi.md#questionidget) | **GET** /question/{id} | 
 [*QuestionApi*](doc/QuestionApi.md) | [**questionIdPost**](doc/QuestionApi.md#questionidpost) | **POST** /question/{id} | 
 [*SearchApi*](doc/SearchApi.md) | [**searchTermGet**](doc/SearchApi.md#searchtermget) | **GET** /Search/{term} | 
@@ -143,6 +144,7 @@ Class | Method | HTTP request | Description
 [*StatisticsApi*](doc/StatisticsApi.md) | [**statisticsProjectProgressGet**](doc/StatisticsApi.md#statisticsprojectprogressget) | **GET** /Statistics/project/progress | 
 [*StatisticsApi*](doc/StatisticsApi.md) | [**statisticsProjectProjectIdRulesGet**](doc/StatisticsApi.md#statisticsprojectprojectidrulesget) | **GET** /Statistics/project/{projectId}/rules | 
 [*StatisticsApi*](doc/StatisticsApi.md) | [**statisticsProjectRulesGet**](doc/StatisticsApi.md#statisticsprojectrulesget) | **GET** /Statistics/project/rules | 
+[*StatisticsApi*](doc/StatisticsApi.md) | [**statisticsProjectStandingsGet**](doc/StatisticsApi.md#statisticsprojectstandingsget) | **GET** /Statistics/project/standings | 
 [*StatisticsApi*](doc/StatisticsApi.md) | [**statisticsStreakpointPost**](doc/StatisticsApi.md#statisticsstreakpointpost) | **POST** /Statistics/streakpoint | 
 [*StatisticsApi*](doc/StatisticsApi.md) | [**statisticsTrackPlayedPost**](doc/StatisticsApi.md#statisticstrackplayedpost) | **POST** /Statistics/track/played | 
 [*StatisticsApi*](doc/StatisticsApi.md) | [**statisticsV2ProjectProgressGet**](doc/StatisticsApi.md#statisticsv2projectprogressget) | **GET** /Statistics/v2/project/progress | 
@@ -211,11 +213,14 @@ Class | Method | HTTP request | Description
  - [GetFraKaareStatisticsChurchStatistics](doc/GetFraKaareStatisticsChurchStatistics.md)
  - [GetFraKaareStatisticsChurchStatisticsSnapshot](doc/GetFraKaareStatisticsChurchStatisticsSnapshot.md)
  - [GetFraKaareStatisticsResponse](doc/GetFraKaareStatisticsResponse.md)
+ - [GetProjectStandingsChurch](doc/GetProjectStandingsChurch.md)
+ - [GetProjectStandingsProjectStandings](doc/GetProjectStandingsProjectStandings.md)
  - [GetTopSongsCollectionModel](doc/GetTopSongsCollectionModel.md)
  - [GetTopSongsCollectionModelTrackAndCount](doc/GetTopSongsCollectionModelTrackAndCount.md)
  - [GetTrackCollectionModel](doc/GetTrackCollectionModel.md)
  - [GetYearInReviewOverviewSlide](doc/GetYearInReviewOverviewSlide.md)
  - [GibraltarProjectBox](doc/GibraltarProjectBox.md)
+ - [HandleBccmAnswerCommandBccmAnswer](doc/HandleBccmAnswerCommandBccmAnswer.md)
  - [Highlighting](doc/Highlighting.md)
  - [HvheProjectBox](doc/HvheProjectBox.md)
  - [IAchievementCollectionOrChapterHeader](doc/IAchievementCollectionOrChapterHeader.md)
@@ -236,6 +241,7 @@ Class | Method | HTTP request | Description
  - [PlaylistModel](doc/PlaylistModel.md)
  - [PodcastModel](doc/PodcastModel.md)
  - [ProblemDetails](doc/ProblemDetails.md)
+ - [ProcessWatchedCommandEvent](doc/ProcessWatchedCommandEvent.md)
  - [ProjectBox](doc/ProjectBox.md)
  - [ProjectChurchStatisticsQueryChurchStatistics](doc/ProjectChurchStatisticsQueryChurchStatistics.md)
  - [ProjectChurchStatisticsQueryChurchStatisticsChurch](doc/ProjectChurchStatisticsQueryChurchStatisticsChurch.md)
@@ -253,7 +259,6 @@ Class | Method | HTTP request | Description
  - [SearchFilter](doc/SearchFilter.md)
  - [SearchResults](doc/SearchResults.md)
  - [SectionHeaderModel](doc/SectionHeaderModel.md)
- - [StatisticsControllerWatchedEvent](doc/StatisticsControllerWatchedEvent.md)
  - [StoreProjectQuestionQuestionHolder](doc/StoreProjectQuestionQuestionHolder.md)
  - [StoreQuestionResponseCommand](doc/StoreQuestionResponseCommand.md)
  - [StoreTranscriptionEditSuggestionsSuggestion](doc/StoreTranscriptionEditSuggestionsSuggestion.md)
