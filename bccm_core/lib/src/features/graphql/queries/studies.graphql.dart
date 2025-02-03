@@ -9,6 +9,7 @@ class Fragment$LessonProgressOverview {
     required this.id,
     required this.locked,
     required this.completed,
+    required this.showDiscoverPage,
     required this.progress,
     this.$__typename = 'Lesson',
   });
@@ -17,12 +18,14 @@ class Fragment$LessonProgressOverview {
     final l$id = json['id'];
     final l$locked = json['locked'];
     final l$completed = json['completed'];
+    final l$showDiscoverPage = json['showDiscoverPage'];
     final l$progress = json['progress'];
     final l$$__typename = json['__typename'];
     return Fragment$LessonProgressOverview(
       id: (l$id as String),
       locked: (l$locked as bool),
       completed: (l$completed as bool),
+      showDiscoverPage: (l$showDiscoverPage as bool),
       progress: Fragment$LessonProgressOverview$progress.fromJson(
           (l$progress as Map<String, dynamic>)),
       $__typename: (l$$__typename as String),
@@ -34,6 +37,8 @@ class Fragment$LessonProgressOverview {
   final bool locked;
 
   final bool completed;
+
+  final bool showDiscoverPage;
 
   final Fragment$LessonProgressOverview$progress progress;
 
@@ -47,6 +52,8 @@ class Fragment$LessonProgressOverview {
     _resultData['locked'] = l$locked;
     final l$completed = completed;
     _resultData['completed'] = l$completed;
+    final l$showDiscoverPage = showDiscoverPage;
+    _resultData['showDiscoverPage'] = l$showDiscoverPage;
     final l$progress = progress;
     _resultData['progress'] = l$progress.toJson();
     final l$$__typename = $__typename;
@@ -59,12 +66,14 @@ class Fragment$LessonProgressOverview {
     final l$id = id;
     final l$locked = locked;
     final l$completed = completed;
+    final l$showDiscoverPage = showDiscoverPage;
     final l$progress = progress;
     final l$$__typename = $__typename;
     return Object.hashAll([
       l$id,
       l$locked,
       l$completed,
+      l$showDiscoverPage,
       l$progress,
       l$$__typename,
     ]);
@@ -92,6 +101,11 @@ class Fragment$LessonProgressOverview {
     final l$completed = completed;
     final lOther$completed = other.completed;
     if (l$completed != lOther$completed) {
+      return false;
+    }
+    final l$showDiscoverPage = showDiscoverPage;
+    final lOther$showDiscoverPage = other.showDiscoverPage;
+    if (l$showDiscoverPage != lOther$showDiscoverPage) {
       return false;
     }
     final l$progress = progress;
@@ -130,6 +144,7 @@ abstract class CopyWith$Fragment$LessonProgressOverview<TRes> {
     String? id,
     bool? locked,
     bool? completed,
+    bool? showDiscoverPage,
     Fragment$LessonProgressOverview$progress? progress,
     String? $__typename,
   });
@@ -153,6 +168,7 @@ class _CopyWithImpl$Fragment$LessonProgressOverview<TRes>
     Object? id = _undefined,
     Object? locked = _undefined,
     Object? completed = _undefined,
+    Object? showDiscoverPage = _undefined,
     Object? progress = _undefined,
     Object? $__typename = _undefined,
   }) =>
@@ -164,6 +180,10 @@ class _CopyWithImpl$Fragment$LessonProgressOverview<TRes>
         completed: completed == _undefined || completed == null
             ? _instance.completed
             : (completed as bool),
+        showDiscoverPage:
+            showDiscoverPage == _undefined || showDiscoverPage == null
+                ? _instance.showDiscoverPage
+                : (showDiscoverPage as bool),
         progress: progress == _undefined || progress == null
             ? _instance.progress
             : (progress as Fragment$LessonProgressOverview$progress),
@@ -189,6 +209,7 @@ class _CopyWithStubImpl$Fragment$LessonProgressOverview<TRes>
     String? id,
     bool? locked,
     bool? completed,
+    bool? showDiscoverPage,
     Fragment$LessonProgressOverview$progress? progress,
     String? $__typename,
   }) =>
@@ -229,6 +250,13 @@ const fragmentDefinitionLessonProgressOverview = FragmentDefinitionNode(
       selectionSet: null,
     ),
     FieldNode(
+      name: NameNode(value: 'showDiscoverPage'),
+      alias: null,
+      arguments: [],
+      directives: [],
+      selectionSet: null,
+    ),
+    FieldNode(
       name: NameNode(value: 'progress'),
       alias: null,
       arguments: [],
@@ -243,6 +271,27 @@ const fragmentDefinitionLessonProgressOverview = FragmentDefinitionNode(
         ),
         FieldNode(
           name: NameNode(value: 'completed'),
+          alias: null,
+          arguments: [],
+          directives: [],
+          selectionSet: null,
+        ),
+        FieldNode(
+          name: NameNode(value: 'alternativesTasksTotal'),
+          alias: null,
+          arguments: [],
+          directives: [],
+          selectionSet: null,
+        ),
+        FieldNode(
+          name: NameNode(value: 'alternativesTasksCompleted'),
+          alias: null,
+          arguments: [],
+          directives: [],
+          selectionSet: null,
+        ),
+        FieldNode(
+          name: NameNode(value: 'alternativesTasksCorrect'),
           alias: null,
           arguments: [],
           directives: [],
@@ -312,6 +361,9 @@ class Fragment$LessonProgressOverview$progress {
   Fragment$LessonProgressOverview$progress({
     required this.total,
     required this.completed,
+    required this.alternativesTasksTotal,
+    required this.alternativesTasksCompleted,
+    required this.alternativesTasksCorrect,
     this.$__typename = 'TasksProgress',
   });
 
@@ -319,10 +371,16 @@ class Fragment$LessonProgressOverview$progress {
       Map<String, dynamic> json) {
     final l$total = json['total'];
     final l$completed = json['completed'];
+    final l$alternativesTasksTotal = json['alternativesTasksTotal'];
+    final l$alternativesTasksCompleted = json['alternativesTasksCompleted'];
+    final l$alternativesTasksCorrect = json['alternativesTasksCorrect'];
     final l$$__typename = json['__typename'];
     return Fragment$LessonProgressOverview$progress(
       total: (l$total as int),
       completed: (l$completed as int),
+      alternativesTasksTotal: (l$alternativesTasksTotal as int),
+      alternativesTasksCompleted: (l$alternativesTasksCompleted as int),
+      alternativesTasksCorrect: (l$alternativesTasksCorrect as int),
       $__typename: (l$$__typename as String),
     );
   }
@@ -330,6 +388,12 @@ class Fragment$LessonProgressOverview$progress {
   final int total;
 
   final int completed;
+
+  final int alternativesTasksTotal;
+
+  final int alternativesTasksCompleted;
+
+  final int alternativesTasksCorrect;
 
   final String $__typename;
 
@@ -339,6 +403,12 @@ class Fragment$LessonProgressOverview$progress {
     _resultData['total'] = l$total;
     final l$completed = completed;
     _resultData['completed'] = l$completed;
+    final l$alternativesTasksTotal = alternativesTasksTotal;
+    _resultData['alternativesTasksTotal'] = l$alternativesTasksTotal;
+    final l$alternativesTasksCompleted = alternativesTasksCompleted;
+    _resultData['alternativesTasksCompleted'] = l$alternativesTasksCompleted;
+    final l$alternativesTasksCorrect = alternativesTasksCorrect;
+    _resultData['alternativesTasksCorrect'] = l$alternativesTasksCorrect;
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
     return _resultData;
@@ -348,10 +418,16 @@ class Fragment$LessonProgressOverview$progress {
   int get hashCode {
     final l$total = total;
     final l$completed = completed;
+    final l$alternativesTasksTotal = alternativesTasksTotal;
+    final l$alternativesTasksCompleted = alternativesTasksCompleted;
+    final l$alternativesTasksCorrect = alternativesTasksCorrect;
     final l$$__typename = $__typename;
     return Object.hashAll([
       l$total,
       l$completed,
+      l$alternativesTasksTotal,
+      l$alternativesTasksCompleted,
+      l$alternativesTasksCorrect,
       l$$__typename,
     ]);
   }
@@ -373,6 +449,21 @@ class Fragment$LessonProgressOverview$progress {
     final l$completed = completed;
     final lOther$completed = other.completed;
     if (l$completed != lOther$completed) {
+      return false;
+    }
+    final l$alternativesTasksTotal = alternativesTasksTotal;
+    final lOther$alternativesTasksTotal = other.alternativesTasksTotal;
+    if (l$alternativesTasksTotal != lOther$alternativesTasksTotal) {
+      return false;
+    }
+    final l$alternativesTasksCompleted = alternativesTasksCompleted;
+    final lOther$alternativesTasksCompleted = other.alternativesTasksCompleted;
+    if (l$alternativesTasksCompleted != lOther$alternativesTasksCompleted) {
+      return false;
+    }
+    final l$alternativesTasksCorrect = alternativesTasksCorrect;
+    final lOther$alternativesTasksCorrect = other.alternativesTasksCorrect;
+    if (l$alternativesTasksCorrect != lOther$alternativesTasksCorrect) {
       return false;
     }
     final l$$__typename = $__typename;
@@ -406,6 +497,9 @@ abstract class CopyWith$Fragment$LessonProgressOverview$progress<TRes> {
   TRes call({
     int? total,
     int? completed,
+    int? alternativesTasksTotal,
+    int? alternativesTasksCompleted,
+    int? alternativesTasksCorrect,
     String? $__typename,
   });
 }
@@ -426,6 +520,9 @@ class _CopyWithImpl$Fragment$LessonProgressOverview$progress<TRes>
   TRes call({
     Object? total = _undefined,
     Object? completed = _undefined,
+    Object? alternativesTasksTotal = _undefined,
+    Object? alternativesTasksCompleted = _undefined,
+    Object? alternativesTasksCorrect = _undefined,
     Object? $__typename = _undefined,
   }) =>
       _then(Fragment$LessonProgressOverview$progress(
@@ -435,6 +532,18 @@ class _CopyWithImpl$Fragment$LessonProgressOverview$progress<TRes>
         completed: completed == _undefined || completed == null
             ? _instance.completed
             : (completed as int),
+        alternativesTasksTotal: alternativesTasksTotal == _undefined ||
+                alternativesTasksTotal == null
+            ? _instance.alternativesTasksTotal
+            : (alternativesTasksTotal as int),
+        alternativesTasksCompleted: alternativesTasksCompleted == _undefined ||
+                alternativesTasksCompleted == null
+            ? _instance.alternativesTasksCompleted
+            : (alternativesTasksCompleted as int),
+        alternativesTasksCorrect: alternativesTasksCorrect == _undefined ||
+                alternativesTasksCorrect == null
+            ? _instance.alternativesTasksCorrect
+            : (alternativesTasksCorrect as int),
         $__typename: $__typename == _undefined || $__typename == null
             ? _instance.$__typename
             : ($__typename as String),
@@ -450,6 +559,9 @@ class _CopyWithStubImpl$Fragment$LessonProgressOverview$progress<TRes>
   call({
     int? total,
     int? completed,
+    int? alternativesTasksTotal,
+    int? alternativesTasksCompleted,
+    int? alternativesTasksCorrect,
     String? $__typename,
   }) =>
       _res;

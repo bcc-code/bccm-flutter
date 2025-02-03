@@ -2,9 +2,13 @@ fragment LessonProgressOverview on Lesson {
   id
   locked
   completed
+  showDiscoverPage
   progress {
     total
     completed
+    alternativesTasksTotal
+    alternativesTasksCompleted
+    alternativesTasksCorrect
   }
 }
 
