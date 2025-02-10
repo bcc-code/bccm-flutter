@@ -222,16 +222,17 @@ class RecommendationModelBuilder
     try {
       _$result = _$v ??
           new _$RecommendationModel._(
-              title: title,
-              subtitle: subtitle,
-              contributor: _contributor?.build(),
-              track: _track?.build(),
-              playlist: _playlist?.build(),
-              album: _album?.build(),
-              id: BuiltValueNullFieldError.checkNotNull(
-                  id, r'RecommendationModel', 'id'),
-              type: BuiltValueNullFieldError.checkNotNull(
-                  type, r'RecommendationModel', 'type'));
+            title: title,
+            subtitle: subtitle,
+            contributor: _contributor?.build(),
+            track: _track?.build(),
+            playlist: _playlist?.build(),
+            album: _album?.build(),
+            id: BuiltValueNullFieldError.checkNotNull(
+                id, r'RecommendationModel', 'id'),
+            type: BuiltValueNullFieldError.checkNotNull(
+                type, r'RecommendationModel', 'type'),
+          );
     } catch (_) {
       late String _$failedField;
       try {

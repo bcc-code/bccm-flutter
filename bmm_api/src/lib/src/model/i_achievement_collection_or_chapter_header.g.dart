@@ -161,8 +161,9 @@ class IAchievementCollectionOrChapterHeaderBuilder
   _$IAchievementCollectionOrChapterHeader _build() {
     final _$result = _$v ??
         new _$IAchievementCollectionOrChapterHeader._(
-            oneOf: BuiltValueNullFieldError.checkNotNull(
-                oneOf, r'IAchievementCollectionOrChapterHeader', 'oneOf'));
+          oneOf: BuiltValueNullFieldError.checkNotNull(
+              oneOf, r'IAchievementCollectionOrChapterHeader', 'oneOf'),
+        );
     replace(_$result);
     return _$result;
   }

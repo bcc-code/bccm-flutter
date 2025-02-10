@@ -98,8 +98,7 @@ class Fragment$CalendarEntry {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$CalendarEntry) ||
-        runtimeType != other.runtimeType) {
+    if (other is! Fragment$CalendarEntry || runtimeType != other.runtimeType) {
       return false;
     }
     final l$id = id;
@@ -580,7 +579,7 @@ class Fragment$CalendarEntry$$EpisodeCalendarEntry
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$CalendarEntry$$EpisodeCalendarEntry) ||
+    if (other is! Fragment$CalendarEntry$$EpisodeCalendarEntry ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -803,7 +802,7 @@ class Fragment$CalendarEntry$$EpisodeCalendarEntry$episode {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$CalendarEntry$$EpisodeCalendarEntry$episode) ||
+    if (other is! Fragment$CalendarEntry$$EpisodeCalendarEntry$episode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1004,7 +1003,7 @@ class Fragment$CalendarEntry$$SimpleCalendarEntry
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$CalendarEntry$$SimpleCalendarEntry) ||
+    if (other is! Fragment$CalendarEntry$$SimpleCalendarEntry ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1208,7 +1207,7 @@ class Fragment$CalendarEntry$$SeasonCalendarEntry
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$CalendarEntry$$SeasonCalendarEntry) ||
+    if (other is! Fragment$CalendarEntry$$SeasonCalendarEntry ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1412,7 +1411,7 @@ class Fragment$CalendarEntry$$ShowCalendarEntry
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$CalendarEntry$$ShowCalendarEntry) ||
+    if (other is! Fragment$CalendarEntry$$ShowCalendarEntry ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1593,7 +1592,7 @@ class Fragment$CalendarDay {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$CalendarDay) || runtimeType != other.runtimeType) {
+    if (other is! Fragment$CalendarDay || runtimeType != other.runtimeType) {
       return false;
     }
     final l$events = events;
@@ -1943,7 +1942,7 @@ class Fragment$CalendarDay$events {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$CalendarDay$events) ||
+    if (other is! Fragment$CalendarDay$events ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2102,7 +2101,7 @@ class Variables$Query$GetCalendarDay {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Variables$Query$GetCalendarDay) ||
+    if (other is! Variables$Query$GetCalendarDay ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2208,7 +2207,7 @@ class Query$GetCalendarDay {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetCalendarDay) || runtimeType != other.runtimeType) {
+    if (other is! Query$GetCalendarDay || runtimeType != other.runtimeType) {
       return false;
     }
     final l$calendar = calendar;
@@ -2564,7 +2563,7 @@ class Query$GetCalendarDay$calendar {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetCalendarDay$calendar) ||
+    if (other is! Query$GetCalendarDay$calendar ||
         runtimeType != other.runtimeType) {
       return false;
     }

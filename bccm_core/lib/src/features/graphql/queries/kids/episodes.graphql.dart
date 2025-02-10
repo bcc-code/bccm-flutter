@@ -65,7 +65,7 @@ class Variables$Query$KidsGetNextEpisodes {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Variables$Query$KidsGetNextEpisodes) ||
+    if (other is! Variables$Query$KidsGetNextEpisodes ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -194,7 +194,7 @@ class Query$KidsGetNextEpisodes {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$KidsGetNextEpisodes) ||
+    if (other is! Query$KidsGetNextEpisodes ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -584,7 +584,7 @@ class Query$KidsGetNextEpisodes$episode {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$KidsGetNextEpisodes$episode) ||
+    if (other is! Query$KidsGetNextEpisodes$episode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -822,7 +822,7 @@ class Query$KidsGetNextEpisodes$episode$next
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$KidsGetNextEpisodes$episode$next) ||
+    if (other is! Query$KidsGetNextEpisodes$episode$next ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1081,7 +1081,7 @@ class Query$KidsGetNextEpisodes$episode$next$context
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$KidsGetNextEpisodes$episode$next$context) ||
+    if (other is! Query$KidsGetNextEpisodes$episode$next$context ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1243,8 +1243,8 @@ class Query$KidsGetNextEpisodes$episode$next$context$$ContextCollection
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$KidsGetNextEpisodes$episode$next$context$$ContextCollection) ||
+    if (other
+            is! Query$KidsGetNextEpisodes$episode$next$context$$ContextCollection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1373,7 +1373,7 @@ class Query$KidsGetNextEpisodes$episode$next$context$$Season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$KidsGetNextEpisodes$episode$next$context$$Season) ||
+    if (other is! Query$KidsGetNextEpisodes$episode$next$context$$Season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1509,7 +1509,7 @@ class Query$KidsGetNextEpisodes$episode$next$season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$KidsGetNextEpisodes$episode$next$season) ||
+    if (other is! Query$KidsGetNextEpisodes$episode$next$season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1677,7 +1677,7 @@ class Query$KidsGetNextEpisodes$episode$next$season$show
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$KidsGetNextEpisodes$episode$next$season$show) ||
+    if (other is! Query$KidsGetNextEpisodes$episode$next$season$show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1814,7 +1814,7 @@ class Variables$Query$GetManyEpisodeIdsForPlaylist {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Variables$Query$GetManyEpisodeIdsForPlaylist) ||
+    if (other is! Variables$Query$GetManyEpisodeIdsForPlaylist ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1919,7 +1919,7 @@ class Query$GetManyEpisodeIdsForPlaylist {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetManyEpisodeIdsForPlaylist) ||
+    if (other is! Query$GetManyEpisodeIdsForPlaylist ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2338,7 +2338,7 @@ class Query$GetManyEpisodeIdsForPlaylist$playlist {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetManyEpisodeIdsForPlaylist$playlist) ||
+    if (other is! Query$GetManyEpisodeIdsForPlaylist$playlist ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2479,7 +2479,7 @@ class Query$GetManyEpisodeIdsForPlaylist$playlist$items {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetManyEpisodeIdsForPlaylist$playlist$items) ||
+    if (other is! Query$GetManyEpisodeIdsForPlaylist$playlist$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2639,7 +2639,7 @@ class Query$GetManyEpisodeIdsForPlaylist$playlist$items$items {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetManyEpisodeIdsForPlaylist$playlist$items$items) ||
+    if (other is! Query$GetManyEpisodeIdsForPlaylist$playlist$items$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2818,8 +2818,8 @@ class Query$GetManyEpisodeIdsForPlaylist$playlist$items$items$$Episode
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetManyEpisodeIdsForPlaylist$playlist$items$items$$Episode) ||
+    if (other
+            is! Query$GetManyEpisodeIdsForPlaylist$playlist$items$items$$Episode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2957,8 +2957,8 @@ class Query$GetManyEpisodeIdsForPlaylist$playlist$items$items$$Short
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetManyEpisodeIdsForPlaylist$playlist$items$items$$Short) ||
+    if (other
+            is! Query$GetManyEpisodeIdsForPlaylist$playlist$items$items$$Short ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -3090,7 +3090,7 @@ class Variables$Query$KidsFetchEpisode {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Variables$Query$KidsFetchEpisode) ||
+    if (other is! Variables$Query$KidsFetchEpisode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -3218,8 +3218,7 @@ class Query$KidsFetchEpisode {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$KidsFetchEpisode) ||
-        runtimeType != other.runtimeType) {
+    if (other is! Query$KidsFetchEpisode || runtimeType != other.runtimeType) {
       return false;
     }
     final l$episode = episode;
@@ -3785,7 +3784,7 @@ class Query$KidsFetchEpisode$episode
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$KidsFetchEpisode$episode) ||
+    if (other is! Query$KidsFetchEpisode$episode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -4092,7 +4091,7 @@ class Query$KidsFetchEpisode$episode$context
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$KidsFetchEpisode$episode$context) ||
+    if (other is! Query$KidsFetchEpisode$episode$context ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -4262,7 +4261,7 @@ class Query$KidsFetchEpisode$episode$context$$ContextCollection
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$KidsFetchEpisode$episode$context$$ContextCollection) ||
+    if (other is! Query$KidsFetchEpisode$episode$context$$ContextCollection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -4471,7 +4470,7 @@ class Query$KidsFetchEpisode$episode$context$$Season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$KidsFetchEpisode$episode$context$$Season) ||
+    if (other is! Query$KidsFetchEpisode$episode$context$$Season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -4688,7 +4687,7 @@ class Query$KidsFetchEpisode$episode$season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$KidsFetchEpisode$episode$season) ||
+    if (other is! Query$KidsFetchEpisode$episode$season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -4855,7 +4854,7 @@ class Query$KidsFetchEpisode$episode$season$show
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$KidsFetchEpisode$episode$season$show) ||
+    if (other is! Query$KidsFetchEpisode$episode$season$show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -4998,8 +4997,8 @@ class Query$KidsFetchEpisode$episode$context$$ContextCollection$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$KidsFetchEpisode$episode$context$$ContextCollection$items) ||
+    if (other
+            is! Query$KidsFetchEpisode$episode$context$$ContextCollection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -5175,8 +5174,8 @@ class Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items) ||
+    if (other
+            is! Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -5369,8 +5368,8 @@ class Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item) ||
+    if (other
+            is! Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -5681,8 +5680,8 @@ class Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item$$Show) ||
+    if (other
+            is! Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item$$Show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -5796,8 +5795,8 @@ class Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item$$Season) ||
+    if (other
+            is! Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item$$Season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -6019,8 +6018,8 @@ class Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item$$Episode) ||
+    if (other
+            is! Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item$$Episode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -6279,8 +6278,8 @@ class Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item$$Page) ||
+    if (other
+            is! Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item$$Page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -6394,8 +6393,8 @@ class Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item$$Link) ||
+    if (other
+            is! Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item$$Link ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -6509,8 +6508,8 @@ class Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item$$StudyTopic) ||
+    if (other
+            is! Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item$$StudyTopic ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -6624,8 +6623,8 @@ class Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item$$Game) ||
+    if (other
+            is! Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item$$Game ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -6739,8 +6738,8 @@ class Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item$$Playlist) ||
+    if (other
+            is! Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item$$Playlist ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -6854,8 +6853,8 @@ class Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item$$Short) ||
+    if (other
+            is! Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item$$Short ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -6969,8 +6968,8 @@ class Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item$$Person) ||
+    if (other
+            is! Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item$$Person ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -7098,7 +7097,7 @@ class Query$KidsFetchEpisode$episode$context$$Season$episodes
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$KidsFetchEpisode$episode$context$$Season$episodes) ||
+    if (other is! Query$KidsFetchEpisode$episode$context$$Season$episodes ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -7292,7 +7291,7 @@ class Query$KidsFetchEpisode$episode$context$$Season$show
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$KidsFetchEpisode$episode$context$$Season$show) ||
+    if (other is! Query$KidsFetchEpisode$episode$context$$Season$show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -7479,8 +7478,7 @@ class Query$KidsFetchEpisode$episode$context$$Season$show$seasons
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$KidsFetchEpisode$episode$context$$Season$show$seasons) ||
+    if (other is! Query$KidsFetchEpisode$episode$context$$Season$show$seasons ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -7660,8 +7658,8 @@ class Query$KidsFetchEpisode$episode$context$$Season$show$seasons$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$KidsFetchEpisode$episode$context$$Season$show$seasons$items) ||
+    if (other
+            is! Query$KidsFetchEpisode$episode$context$$Season$show$seasons$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -7848,7 +7846,7 @@ class Query$KidsFetchEpisode$episode$next
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$KidsFetchEpisode$episode$next) ||
+    if (other is! Query$KidsFetchEpisode$episode$next ||
         runtimeType != other.runtimeType) {
       return false;
     }

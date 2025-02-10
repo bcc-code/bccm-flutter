@@ -124,7 +124,11 @@ class TrackTranslationTranscriptionSegmentBuilder
   _$TrackTranslationTranscriptionSegment _build() {
     final _$result = _$v ??
         new _$TrackTranslationTranscriptionSegment._(
-            id: id, start: start, end: end, text: text);
+          id: id,
+          start: start,
+          end: end,
+          text: text,
+        );
     replace(_$result);
     return _$result;
   }

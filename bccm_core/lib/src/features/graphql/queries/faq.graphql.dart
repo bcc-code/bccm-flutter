@@ -56,7 +56,7 @@ class Fragment$Question {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Question) || runtimeType != other.runtimeType) {
+    if (other is! Fragment$Question || runtimeType != other.runtimeType) {
       return false;
     }
     final l$question = question;
@@ -273,7 +273,7 @@ class Fragment$FAQCategory {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$FAQCategory) || runtimeType != other.runtimeType) {
+    if (other is! Fragment$FAQCategory || runtimeType != other.runtimeType) {
       return false;
     }
     final l$title = title;
@@ -520,7 +520,7 @@ class Fragment$FAQCategory$questions {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$FAQCategory$questions) ||
+    if (other is! Fragment$FAQCategory$questions ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -668,7 +668,7 @@ class Query$FAQ {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$FAQ) || runtimeType != other.runtimeType) {
+    if (other is! Query$FAQ || runtimeType != other.runtimeType) {
       return false;
     }
     final l$faq = faq;
@@ -999,7 +999,7 @@ class Query$FAQ$faq {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$FAQ$faq) || runtimeType != other.runtimeType) {
+    if (other is! Query$FAQ$faq || runtimeType != other.runtimeType) {
       return false;
     }
     final l$categories = categories;
@@ -1136,7 +1136,7 @@ class Query$FAQ$faq$categories {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$FAQ$faq$categories) ||
+    if (other is! Query$FAQ$faq$categories ||
         runtimeType != other.runtimeType) {
       return false;
     }

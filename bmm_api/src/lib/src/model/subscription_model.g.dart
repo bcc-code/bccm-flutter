@@ -11,12 +11,20 @@ class _$SubscriptionModel extends SubscriptionModel {
   final String token;
   @override
   final BuiltList<TrackListReference>? podcastReferences;
+  @override
+  final bool? showNotificationBadge;
+  @override
+  final String? os;
 
   factory _$SubscriptionModel(
           [void Function(SubscriptionModelBuilder)? updates]) =>
       (new SubscriptionModelBuilder()..update(updates))._build();
 
-  _$SubscriptionModel._({required this.token, this.podcastReferences})
+  _$SubscriptionModel._(
+      {required this.token,
+      this.podcastReferences,
+      this.showNotificationBadge,
+      this.os})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(token, r'SubscriptionModel', 'token');
   }
@@ -34,7 +42,9 @@ class _$SubscriptionModel extends SubscriptionModel {
     if (identical(other, this)) return true;
     return other is SubscriptionModel &&
         token == other.token &&
-        podcastReferences == other.podcastReferences;
+        podcastReferences == other.podcastReferences &&
+        showNotificationBadge == other.showNotificationBadge &&
+        os == other.os;
   }
 
   @override
@@ -42,6 +52,8 @@ class _$SubscriptionModel extends SubscriptionModel {
     var _$hash = 0;
     _$hash = $jc(_$hash, token.hashCode);
     _$hash = $jc(_$hash, podcastReferences.hashCode);
+    _$hash = $jc(_$hash, showNotificationBadge.hashCode);
+    _$hash = $jc(_$hash, os.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -50,7 +62,9 @@ class _$SubscriptionModel extends SubscriptionModel {
   String toString() {
     return (newBuiltValueToStringHelper(r'SubscriptionModel')
           ..add('token', token)
-          ..add('podcastReferences', podcastReferences))
+          ..add('podcastReferences', podcastReferences)
+          ..add('showNotificationBadge', showNotificationBadge)
+          ..add('os', os))
         .toString();
   }
 }
@@ -69,6 +83,15 @@ class SubscriptionModelBuilder
   set podcastReferences(ListBuilder<TrackListReference>? podcastReferences) =>
       _$this._podcastReferences = podcastReferences;
 
+  bool? _showNotificationBadge;
+  bool? get showNotificationBadge => _$this._showNotificationBadge;
+  set showNotificationBadge(bool? showNotificationBadge) =>
+      _$this._showNotificationBadge = showNotificationBadge;
+
+  String? _os;
+  String? get os => _$this._os;
+  set os(String? os) => _$this._os = os;
+
   SubscriptionModelBuilder() {
     SubscriptionModel._defaults(this);
   }
@@ -78,6 +101,8 @@ class SubscriptionModelBuilder
     if ($v != null) {
       _token = $v.token;
       _podcastReferences = $v.podcastReferences?.toBuilder();
+      _showNotificationBadge = $v.showNotificationBadge;
+      _os = $v.os;
       _$v = null;
     }
     return this;
@@ -102,9 +127,12 @@ class SubscriptionModelBuilder
     try {
       _$result = _$v ??
           new _$SubscriptionModel._(
-              token: BuiltValueNullFieldError.checkNotNull(
-                  token, r'SubscriptionModel', 'token'),
-              podcastReferences: _podcastReferences?.build());
+            token: BuiltValueNullFieldError.checkNotNull(
+                token, r'SubscriptionModel', 'token'),
+            podcastReferences: _podcastReferences?.build(),
+            showNotificationBadge: showNotificationBadge,
+            os: os,
+          );
     } catch (_) {
       late String _$failedField;
       try {

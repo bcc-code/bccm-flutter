@@ -304,26 +304,27 @@ class TrackModelTrackMetaBuilder
     try {
       _$result = _$v ??
           new _$TrackModelTrackMeta._(
-              parent: _parent?.build(),
-              rootParent: _rootParent?.build(),
-              rootParentId: rootParentId,
-              modifiedAt: modifiedAt,
-              modifiedBy: modifiedBy,
-              isVisible: isVisible,
-              title: title,
-              language: language,
-              album: album,
-              tracknumber: tracknumber,
-              artist: artist,
-              lyricist: lyricist,
-              composer: composer,
-              publisher: publisher,
-              itunescompilation: itunescompilation,
-              attachedPicture: attachedPicture,
-              time: time,
-              date: date,
-              year: year,
-              copyright: copyright);
+            parent: _parent?.build(),
+            rootParent: _rootParent?.build(),
+            rootParentId: rootParentId,
+            modifiedAt: modifiedAt,
+            modifiedBy: modifiedBy,
+            isVisible: isVisible,
+            title: title,
+            language: language,
+            album: album,
+            tracknumber: tracknumber,
+            artist: artist,
+            lyricist: lyricist,
+            composer: composer,
+            publisher: publisher,
+            itunescompilation: itunescompilation,
+            attachedPicture: attachedPicture,
+            time: time,
+            date: date,
+            year: year,
+            copyright: copyright,
+          );
     } catch (_) {
       late String _$failedField;
       try {

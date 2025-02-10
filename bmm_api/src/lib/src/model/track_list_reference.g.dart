@@ -82,7 +82,10 @@ class TrackListReferenceBuilder
   TrackListReference build() => _build();
 
   _$TrackListReference _build() {
-    final _$result = _$v ?? new _$TrackListReference._(id: id);
+    final _$result = _$v ??
+        new _$TrackListReference._(
+          id: id,
+        );
     replace(_$result);
     return _$result;
   }

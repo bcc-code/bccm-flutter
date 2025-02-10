@@ -19,6 +19,9 @@ type Lesson {
     id: ID!
     title: String!
     description: String!
+    introScreenCode: String
+    showDiscoverPage: Boolean!
+
     image(style: ImageStyle): String @goField(forceResolver: true)
     tasks(first: Int, offset: Int): TaskPagination! @goField(forceResolver: true)
     topic: StudyTopic! @goField(forceResolver: true)
@@ -62,6 +65,9 @@ type LessonsProgress {
 type TasksProgress {
     total: Int!
     completed: Int!
+    alternativesTasksTotal: Int!
+    alternativesTasksCompleted: Int!
+    alternativesTasksCorrect: Int!
 }
 
 type TaskPagination implements Pagination {
@@ -76,7 +82,9 @@ type AlternativesTask implements Task {
     title: String!
     completed: Boolean! @goField(forceResolver: true)
     alternatives: [Alternative!]! @goField(forceResolver: true)
-    competitionMode: Boolean!
+    competitionMode: Boolean! @deprecated(reason: "Equivalent to !showAnswer && lockAnswer")
+    showAnswer: Boolean!
+    lockAnswer: Boolean!
     locked: Boolean! @goField(forceResolver: true)
 }
 

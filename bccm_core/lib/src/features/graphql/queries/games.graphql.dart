@@ -56,7 +56,7 @@ class Fragment$UrlGame {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$UrlGame) || runtimeType != other.runtimeType) {
+    if (other is! Fragment$UrlGame || runtimeType != other.runtimeType) {
       return false;
     }
     final l$id = id;
@@ -251,8 +251,7 @@ class Variables$Query$GetGame {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Variables$Query$GetGame) ||
-        runtimeType != other.runtimeType) {
+    if (other is! Variables$Query$GetGame || runtimeType != other.runtimeType) {
       return false;
     }
     final l$id = id;
@@ -353,7 +352,7 @@ class Query$GetGame {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetGame) || runtimeType != other.runtimeType) {
+    if (other is! Query$GetGame || runtimeType != other.runtimeType) {
       return false;
     }
     final l$game = game;
@@ -717,7 +716,7 @@ class Query$GetGame$game implements Fragment$UrlGame {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetGame$game) || runtimeType != other.runtimeType) {
+    if (other is! Query$GetGame$game || runtimeType != other.runtimeType) {
       return false;
     }
     final l$id = id;

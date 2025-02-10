@@ -43,8 +43,7 @@ class Variables$Query$GetShow {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Variables$Query$GetShow) ||
-        runtimeType != other.runtimeType) {
+    if (other is! Variables$Query$GetShow || runtimeType != other.runtimeType) {
       return false;
     }
     final l$id = id;
@@ -145,7 +144,7 @@ class Query$GetShow {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetShow) || runtimeType != other.runtimeType) {
+    if (other is! Query$GetShow || runtimeType != other.runtimeType) {
       return false;
     }
     final l$$show = $show;
@@ -649,7 +648,7 @@ class Query$GetShow$show {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetShow$show) || runtimeType != other.runtimeType) {
+    if (other is! Query$GetShow$show || runtimeType != other.runtimeType) {
       return false;
     }
     final l$id = id;
@@ -825,7 +824,7 @@ class Query$GetShow$show$seasons {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetShow$show$seasons) ||
+    if (other is! Query$GetShow$show$seasons ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1006,7 +1005,7 @@ class Query$GetShow$show$seasons$items {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetShow$show$seasons$items) ||
+    if (other is! Query$GetShow$show$seasons$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1176,7 +1175,7 @@ class Query$GetShow$show$seasons$items$episodes {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetShow$show$seasons$items$episodes) ||
+    if (other is! Query$GetShow$show$seasons$items$episodes ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1426,7 +1425,7 @@ class Query$GetShow$show$seasons$items$episodes$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetShow$show$seasons$items$episodes$items) ||
+    if (other is! Query$GetShow$show$seasons$items$episodes$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1691,7 +1690,7 @@ class Query$GetShow$show$seasons$items$episodes$items$lessons
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetShow$show$seasons$items$episodes$items$lessons) ||
+    if (other is! Query$GetShow$show$seasons$items$episodes$items$lessons ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1841,7 +1840,7 @@ class Query$GetShow$show$seasons$items$episodes$items$season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetShow$show$seasons$items$episodes$items$season) ||
+    if (other is! Query$GetShow$show$seasons$items$episodes$items$season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2005,8 +2004,7 @@ class Query$GetShow$show$seasons$items$episodes$items$season$show
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Query$GetShow$show$seasons$items$episodes$items$season$show) ||
+    if (other is! Query$GetShow$show$seasons$items$episodes$items$season$show ||
         runtimeType != other.runtimeType) {
       return false;
     }

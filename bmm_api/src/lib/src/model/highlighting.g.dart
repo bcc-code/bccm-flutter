@@ -143,12 +143,13 @@ class HighlightingBuilder
   _$Highlighting _build() {
     final _$result = _$v ??
         new _$Highlighting._(
-            id: id,
-            text: text,
-            startPositionInSeconds: startPositionInSeconds,
-            firstSegmentIndex: firstSegmentIndex,
-            lastSegmentIndex: lastSegmentIndex,
-            language: language);
+          id: id,
+          text: text,
+          startPositionInSeconds: startPositionInSeconds,
+          firstSegmentIndex: firstSegmentIndex,
+          lastSegmentIndex: lastSegmentIndex,
+          language: language,
+        );
     replace(_$result);
     return _$result;
   }

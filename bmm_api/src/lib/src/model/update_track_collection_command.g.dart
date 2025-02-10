@@ -125,10 +125,11 @@ class UpdateTrackCollectionCommandBuilder
     try {
       _$result = _$v ??
           new _$UpdateTrackCollectionCommand._(
-              id: id,
-              name: name,
-              access: _access?.build(),
-              trackReferences: _trackReferences?.build());
+            id: id,
+            name: name,
+            access: _access?.build(),
+            trackReferences: _trackReferences?.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {

@@ -274,21 +274,21 @@ class ProjectBoxBuilder implements Builder<ProjectBox, ProjectBoxBuilder> {
     try {
       _$result = _$v ??
           new _$ProjectBox._(
-              id: BuiltValueNullFieldError.checkNotNull(
-                  id, r'ProjectBox', 'id'),
-              type: BuiltValueNullFieldError.checkNotNull(
-                  type, r'ProjectBox', 'type'),
-              title: title,
-              showIcon: showIcon,
-              openByDefault: openByDefault,
-              points: points,
-              pointsDescription: pointsDescription,
-              buttonTitle: buttonTitle,
-              buttonWebsite: buttonWebsite,
-              buttonShowIcon: buttonShowIcon,
-              achievements: _achievements?.build(),
-              rulesLinkTitle: rulesLinkTitle,
-              iconColor: iconColor);
+            id: BuiltValueNullFieldError.checkNotNull(id, r'ProjectBox', 'id'),
+            type: BuiltValueNullFieldError.checkNotNull(
+                type, r'ProjectBox', 'type'),
+            title: title,
+            showIcon: showIcon,
+            openByDefault: openByDefault,
+            points: points,
+            pointsDescription: pointsDescription,
+            buttonTitle: buttonTitle,
+            buttonWebsite: buttonWebsite,
+            buttonShowIcon: buttonShowIcon,
+            achievements: _achievements?.build(),
+            rulesLinkTitle: rulesLinkTitle,
+            iconColor: iconColor,
+          );
     } catch (_) {
       late String _$failedField;
       try {

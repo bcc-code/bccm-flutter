@@ -136,8 +136,9 @@ class IAlbumOrTrackBuilder
   _$IAlbumOrTrack _build() {
     final _$result = _$v ??
         new _$IAlbumOrTrack._(
-            oneOf: BuiltValueNullFieldError.checkNotNull(
-                oneOf, r'IAlbumOrTrack', 'oneOf'));
+          oneOf: BuiltValueNullFieldError.checkNotNull(
+              oneOf, r'IAlbumOrTrack', 'oneOf'),
+        );
     replace(_$result);
     return _$result;
   }

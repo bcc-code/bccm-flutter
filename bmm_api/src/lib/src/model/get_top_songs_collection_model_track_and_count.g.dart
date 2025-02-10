@@ -107,7 +107,9 @@ class GetTopSongsCollectionModelTrackAndCountBuilder
     try {
       _$result = _$v ??
           new _$GetTopSongsCollectionModelTrackAndCount._(
-              track: _track?.build(), playCount: playCount);
+            track: _track?.build(),
+            playCount: playCount,
+          );
     } catch (_) {
       late String _$failedField;
       try {

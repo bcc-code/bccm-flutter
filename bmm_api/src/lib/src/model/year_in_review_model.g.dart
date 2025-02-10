@@ -203,15 +203,16 @@ class YearInReviewModelBuilder
   _$YearInReviewModel _build() {
     final _$result = _$v ??
         new _$YearInReviewModel._(
-            id: BuiltValueNullFieldError.checkNotNull(
-                id, r'YearInReviewModel', 'id'),
-            type: BuiltValueNullFieldError.checkNotNull(
-                type, r'YearInReviewModel', 'type'),
-            title: title,
-            description: description,
-            buttonTitle: buttonTitle,
-            buttonLink: buttonLink,
-            playlistName: playlistName);
+          id: BuiltValueNullFieldError.checkNotNull(
+              id, r'YearInReviewModel', 'id'),
+          type: BuiltValueNullFieldError.checkNotNull(
+              type, r'YearInReviewModel', 'type'),
+          title: title,
+          description: description,
+          buttonTitle: buttonTitle,
+          buttonLink: buttonLink,
+          playlistName: playlistName,
+        );
     replace(_$result);
     return _$result;
   }

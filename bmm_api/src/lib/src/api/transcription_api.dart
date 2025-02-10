@@ -11,7 +11,7 @@ import 'package:dio/dio.dart';
 import 'package:bmm_api/src/api_util.dart';
 import 'package:bmm_api/src/model/language_enum.dart';
 import 'package:bmm_api/src/model/store_transcription_edit_suggestions_suggestion.dart';
-import 'package:bmm_api/src/model/track_translation_transcription_segment.dart';
+import 'package:bmm_api/src/model/transcription_segment.dart';
 import 'package:built_collection/built_collection.dart';
 
 class TranscriptionApi {
@@ -37,9 +37,9 @@ class TranscriptionApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<TrackTranslationTranscriptionSegment>] as data
+  /// Returns a [Future] containing a [Response] with a [BuiltList<TranscriptionSegment>] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<BuiltList<TrackTranslationTranscriptionSegment>>> transcriptionTrackIdLanguageFirstLastGet({ 
+  Future<Response<BuiltList<TranscriptionSegment>>> transcriptionTrackIdLanguageFirstLastGet({ 
     required int trackId,
     required LanguageEnum language,
     required int first,
@@ -72,14 +72,14 @@ class TranscriptionApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<TrackTranslationTranscriptionSegment>? _responseData;
+    BuiltList<TranscriptionSegment>? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(BuiltList, [FullType(TrackTranslationTranscriptionSegment)]),
-      ) as BuiltList<TrackTranslationTranscriptionSegment>;
+        specifiedType: const FullType(BuiltList, [FullType(TranscriptionSegment)]),
+      ) as BuiltList<TranscriptionSegment>;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -91,7 +91,7 @@ class TranscriptionApi {
       );
     }
 
-    return Response<BuiltList<TrackTranslationTranscriptionSegment>>(
+    return Response<BuiltList<TranscriptionSegment>>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

@@ -76,7 +76,7 @@ class Fragment$GridSectionItem implements Fragment$ItemSectionItem {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$GridSectionItem) ||
+    if (other is! Fragment$GridSectionItem ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -444,7 +444,7 @@ class Fragment$GridSectionItem$item implements Fragment$ItemSectionItem$item {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$GridSectionItem$item) ||
+    if (other is! Fragment$GridSectionItem$item ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -768,7 +768,7 @@ class Fragment$GridSectionItem$item$$Episode
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$GridSectionItem$item$$Episode) ||
+    if (other is! Fragment$GridSectionItem$item$$Episode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1002,7 +1002,7 @@ class Fragment$GridSectionItem$item$$Episode$season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$GridSectionItem$item$$Episode$season) ||
+    if (other is! Fragment$GridSectionItem$item$$Episode$season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1154,7 +1154,7 @@ class Fragment$GridSectionItem$item$$Episode$season$show
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$GridSectionItem$item$$Episode$season$show) ||
+    if (other is! Fragment$GridSectionItem$item$$Episode$season$show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1320,7 +1320,7 @@ class Fragment$GridSectionItem$item$$Show
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$GridSectionItem$item$$Show) ||
+    if (other is! Fragment$GridSectionItem$item$$Show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1496,7 +1496,7 @@ class Fragment$GridSectionItem$item$$Show$defaultEpisode
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$GridSectionItem$item$$Show$defaultEpisode) ||
+    if (other is! Fragment$GridSectionItem$item$$Show$defaultEpisode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1616,7 +1616,7 @@ class Fragment$GridSectionItem$item$$Season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$GridSectionItem$item$$Season) ||
+    if (other is! Fragment$GridSectionItem$item$$Season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1728,7 +1728,7 @@ class Fragment$GridSectionItem$item$$Page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$GridSectionItem$item$$Page) ||
+    if (other is! Fragment$GridSectionItem$item$$Page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1859,7 +1859,7 @@ class Fragment$GridSectionItem$item$$Link
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$GridSectionItem$item$$Link) ||
+    if (other is! Fragment$GridSectionItem$item$$Link ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1973,7 +1973,7 @@ class Fragment$GridSectionItem$item$$StudyTopic
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$GridSectionItem$item$$StudyTopic) ||
+    if (other is! Fragment$GridSectionItem$item$$StudyTopic ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2085,7 +2085,7 @@ class Fragment$GridSectionItem$item$$Game
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$GridSectionItem$item$$Game) ||
+    if (other is! Fragment$GridSectionItem$item$$Game ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2216,7 +2216,7 @@ class Fragment$GridSectionItem$item$$Playlist
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$GridSectionItem$item$$Playlist) ||
+    if (other is! Fragment$GridSectionItem$item$$Playlist ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2345,7 +2345,7 @@ class Fragment$GridSectionItem$item$$Short
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$GridSectionItem$item$$Short) ||
+    if (other is! Fragment$GridSectionItem$item$$Short ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2474,7 +2474,7 @@ class Fragment$GridSectionItem$item$$Person
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$GridSectionItem$item$$Person) ||
+    if (other is! Fragment$GridSectionItem$item$$Person ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2626,7 +2626,7 @@ class Fragment$ItemSectionItem {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSectionItem) ||
+    if (other is! Fragment$ItemSectionItem ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -3002,7 +3002,7 @@ class Fragment$ItemSectionItem$item {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSectionItem$item) ||
+    if (other is! Fragment$ItemSectionItem$item ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -3325,7 +3325,7 @@ class Fragment$ItemSectionItem$item$$Episode
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSectionItem$item$$Episode) ||
+    if (other is! Fragment$ItemSectionItem$item$$Episode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -3557,7 +3557,7 @@ class Fragment$ItemSectionItem$item$$Episode$season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSectionItem$item$$Episode$season) ||
+    if (other is! Fragment$ItemSectionItem$item$$Episode$season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -3707,7 +3707,7 @@ class Fragment$ItemSectionItem$item$$Episode$season$show
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSectionItem$item$$Episode$season$show) ||
+    if (other is! Fragment$ItemSectionItem$item$$Episode$season$show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -3870,7 +3870,7 @@ class Fragment$ItemSectionItem$item$$Show
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSectionItem$item$$Show) ||
+    if (other is! Fragment$ItemSectionItem$item$$Show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -4044,7 +4044,7 @@ class Fragment$ItemSectionItem$item$$Show$defaultEpisode
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSectionItem$item$$Show$defaultEpisode) ||
+    if (other is! Fragment$ItemSectionItem$item$$Show$defaultEpisode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -4162,7 +4162,7 @@ class Fragment$ItemSectionItem$item$$Season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSectionItem$item$$Season) ||
+    if (other is! Fragment$ItemSectionItem$item$$Season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -4271,7 +4271,7 @@ class Fragment$ItemSectionItem$item$$Page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSectionItem$item$$Page) ||
+    if (other is! Fragment$ItemSectionItem$item$$Page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -4399,7 +4399,7 @@ class Fragment$ItemSectionItem$item$$Link
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSectionItem$item$$Link) ||
+    if (other is! Fragment$ItemSectionItem$item$$Link ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -4511,7 +4511,7 @@ class Fragment$ItemSectionItem$item$$StudyTopic
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSectionItem$item$$StudyTopic) ||
+    if (other is! Fragment$ItemSectionItem$item$$StudyTopic ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -4620,7 +4620,7 @@ class Fragment$ItemSectionItem$item$$Game
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSectionItem$item$$Game) ||
+    if (other is! Fragment$ItemSectionItem$item$$Game ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -4748,7 +4748,7 @@ class Fragment$ItemSectionItem$item$$Playlist
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSectionItem$item$$Playlist) ||
+    if (other is! Fragment$ItemSectionItem$item$$Playlist ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -4874,7 +4874,7 @@ class Fragment$ItemSectionItem$item$$Short
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSectionItem$item$$Short) ||
+    if (other is! Fragment$ItemSectionItem$item$$Short ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -5000,7 +5000,7 @@ class Fragment$ItemSectionItem$item$$Person
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSectionItem$item$$Person) ||
+    if (other is! Fragment$ItemSectionItem$item$$Person ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -5199,7 +5199,7 @@ class Fragment$EpisodeThumbnail {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$EpisodeThumbnail) ||
+    if (other is! Fragment$EpisodeThumbnail ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -5584,7 +5584,7 @@ class Fragment$EpisodeThumbnail$season {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$EpisodeThumbnail$season) ||
+    if (other is! Fragment$EpisodeThumbnail$season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -5731,7 +5731,7 @@ class Fragment$EpisodeThumbnail$season$show {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$EpisodeThumbnail$season$show) ||
+    if (other is! Fragment$EpisodeThumbnail$season$show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -5857,7 +5857,7 @@ class Fragment$NavigatablePerson {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$NavigatablePerson) ||
+    if (other is! Fragment$NavigatablePerson ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -6044,7 +6044,7 @@ class Fragment$NavigatableGame {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$NavigatableGame) ||
+    if (other is! Fragment$NavigatableGame ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -6233,7 +6233,7 @@ class Fragment$NavigatableLink {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$NavigatableLink) ||
+    if (other is! Fragment$NavigatableLink ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -6420,7 +6420,7 @@ class Fragment$NavigatablePlaylist {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$NavigatablePlaylist) ||
+    if (other is! Fragment$NavigatablePlaylist ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -6610,7 +6610,7 @@ class Fragment$NavigatablePage {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$NavigatablePage) ||
+    if (other is! Fragment$NavigatablePage ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -6799,7 +6799,7 @@ class Fragment$NavigatableShort {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$NavigatableShort) ||
+    if (other is! Fragment$NavigatableShort ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -6995,7 +6995,7 @@ class Fragment$NavigatableEpisode {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$NavigatableEpisode) ||
+    if (other is! Fragment$NavigatableEpisode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -7210,7 +7210,7 @@ class Fragment$NavigatableShow {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$NavigatableShow) ||
+    if (other is! Fragment$NavigatableShow ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -7441,7 +7441,7 @@ class Fragment$NavigatableShow$defaultEpisode {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$NavigatableShow$defaultEpisode) ||
+    if (other is! Fragment$NavigatableShow$defaultEpisode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -7586,7 +7586,7 @@ class Fragment$NavigatableChapter {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$NavigatableChapter) ||
+    if (other is! Fragment$NavigatableChapter ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -7837,7 +7837,7 @@ class Fragment$NavigatableChapter$episode {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$NavigatableChapter$episode) ||
+    if (other is! Fragment$NavigatableChapter$episode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -7973,7 +7973,7 @@ class Variables$Fragment$ItemSection {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Variables$Fragment$ItemSection) ||
+    if (other is! Variables$Fragment$ItemSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -8154,7 +8154,7 @@ class Fragment$ItemSection {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSection) || runtimeType != other.runtimeType) {
+    if (other is! Fragment$ItemSection || runtimeType != other.runtimeType) {
       return false;
     }
     final l$metadata = metadata;
@@ -8757,7 +8757,7 @@ class Fragment$ItemSection$metadata {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSection$metadata) ||
+    if (other is! Fragment$ItemSection$metadata ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -8973,7 +8973,7 @@ class Fragment$ItemSection$metadata$page {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSection$metadata$page) ||
+    if (other is! Fragment$ItemSection$metadata$page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -9120,7 +9120,7 @@ class Fragment$ItemSection$items {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSection$items) ||
+    if (other is! Fragment$ItemSection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -9308,7 +9308,7 @@ class Fragment$ItemSection$$PosterSection implements Fragment$ItemSection {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSection$$PosterSection) ||
+    if (other is! Fragment$ItemSection$$PosterSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -9536,7 +9536,7 @@ class Fragment$ItemSection$$PosterSection$metadata
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSection$$PosterSection$metadata) ||
+    if (other is! Fragment$ItemSection$$PosterSection$metadata ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -9755,7 +9755,7 @@ class Fragment$ItemSection$$PosterSection$metadata$page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSection$$PosterSection$metadata$page) ||
+    if (other is! Fragment$ItemSection$$PosterSection$metadata$page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -9910,7 +9910,7 @@ class Fragment$ItemSection$$PosterSection$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSection$$PosterSection$items) ||
+    if (other is! Fragment$ItemSection$$PosterSection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -10099,7 +10099,7 @@ class Fragment$ItemSection$$FeaturedSection implements Fragment$ItemSection {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSection$$FeaturedSection) ||
+    if (other is! Fragment$ItemSection$$FeaturedSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -10327,7 +10327,7 @@ class Fragment$ItemSection$$FeaturedSection$metadata
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSection$$FeaturedSection$metadata) ||
+    if (other is! Fragment$ItemSection$$FeaturedSection$metadata ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -10547,7 +10547,7 @@ class Fragment$ItemSection$$FeaturedSection$metadata$page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSection$$FeaturedSection$metadata$page) ||
+    if (other is! Fragment$ItemSection$$FeaturedSection$metadata$page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -10704,7 +10704,7 @@ class Fragment$ItemSection$$FeaturedSection$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSection$$FeaturedSection$items) ||
+    if (other is! Fragment$ItemSection$$FeaturedSection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -10893,7 +10893,7 @@ class Fragment$ItemSection$$DefaultSection implements Fragment$ItemSection {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSection$$DefaultSection) ||
+    if (other is! Fragment$ItemSection$$DefaultSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -11121,7 +11121,7 @@ class Fragment$ItemSection$$DefaultSection$metadata
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSection$$DefaultSection$metadata) ||
+    if (other is! Fragment$ItemSection$$DefaultSection$metadata ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -11341,7 +11341,7 @@ class Fragment$ItemSection$$DefaultSection$metadata$page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSection$$DefaultSection$metadata$page) ||
+    if (other is! Fragment$ItemSection$$DefaultSection$metadata$page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -11496,7 +11496,7 @@ class Fragment$ItemSection$$DefaultSection$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSection$$DefaultSection$items) ||
+    if (other is! Fragment$ItemSection$$DefaultSection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -11685,7 +11685,7 @@ class Fragment$ItemSection$$CardSection implements Fragment$ItemSection {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSection$$CardSection) ||
+    if (other is! Fragment$ItemSection$$CardSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -11912,7 +11912,7 @@ class Fragment$ItemSection$$CardSection$metadata
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSection$$CardSection$metadata) ||
+    if (other is! Fragment$ItemSection$$CardSection$metadata ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -12131,7 +12131,7 @@ class Fragment$ItemSection$$CardSection$metadata$page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSection$$CardSection$metadata$page) ||
+    if (other is! Fragment$ItemSection$$CardSection$metadata$page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -12281,7 +12281,7 @@ class Fragment$ItemSection$$CardSection$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSection$$CardSection$items) ||
+    if (other is! Fragment$ItemSection$$CardSection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -12470,7 +12470,7 @@ class Fragment$ItemSection$$ListSection implements Fragment$ItemSection {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSection$$ListSection) ||
+    if (other is! Fragment$ItemSection$$ListSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -12697,7 +12697,7 @@ class Fragment$ItemSection$$ListSection$metadata
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSection$$ListSection$metadata) ||
+    if (other is! Fragment$ItemSection$$ListSection$metadata ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -12916,7 +12916,7 @@ class Fragment$ItemSection$$ListSection$metadata$page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSection$$ListSection$metadata$page) ||
+    if (other is! Fragment$ItemSection$$ListSection$metadata$page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -13066,7 +13066,7 @@ class Fragment$ItemSection$$ListSection$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSection$$ListSection$items) ||
+    if (other is! Fragment$ItemSection$$ListSection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -13255,7 +13255,7 @@ class Fragment$ItemSection$$CardListSection implements Fragment$ItemSection {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSection$$CardListSection) ||
+    if (other is! Fragment$ItemSection$$CardListSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -13483,7 +13483,7 @@ class Fragment$ItemSection$$CardListSection$metadata
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSection$$CardListSection$metadata) ||
+    if (other is! Fragment$ItemSection$$CardListSection$metadata ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -13703,7 +13703,7 @@ class Fragment$ItemSection$$CardListSection$metadata$page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSection$$CardListSection$metadata$page) ||
+    if (other is! Fragment$ItemSection$$CardListSection$metadata$page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -13860,7 +13860,7 @@ class Fragment$ItemSection$$CardListSection$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSection$$CardListSection$items) ||
+    if (other is! Fragment$ItemSection$$CardListSection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -14049,7 +14049,7 @@ class Fragment$ItemSection$$DefaultGridSection implements Fragment$ItemSection {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSection$$DefaultGridSection) ||
+    if (other is! Fragment$ItemSection$$DefaultGridSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -14279,7 +14279,7 @@ class Fragment$ItemSection$$DefaultGridSection$metadata
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSection$$DefaultGridSection$metadata) ||
+    if (other is! Fragment$ItemSection$$DefaultGridSection$metadata ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -14508,7 +14508,7 @@ class Fragment$ItemSection$$DefaultGridSection$metadata$page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSection$$DefaultGridSection$metadata$page) ||
+    if (other is! Fragment$ItemSection$$DefaultGridSection$metadata$page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -14665,7 +14665,7 @@ class Fragment$ItemSection$$DefaultGridSection$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSection$$DefaultGridSection$items) ||
+    if (other is! Fragment$ItemSection$$DefaultGridSection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -14855,7 +14855,7 @@ class Fragment$ItemSection$$PosterGridSection implements Fragment$ItemSection {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSection$$PosterGridSection) ||
+    if (other is! Fragment$ItemSection$$PosterGridSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -15084,7 +15084,7 @@ class Fragment$ItemSection$$PosterGridSection$metadata
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSection$$PosterGridSection$metadata) ||
+    if (other is! Fragment$ItemSection$$PosterGridSection$metadata ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -15307,7 +15307,7 @@ class Fragment$ItemSection$$PosterGridSection$metadata$page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSection$$PosterGridSection$metadata$page) ||
+    if (other is! Fragment$ItemSection$$PosterGridSection$metadata$page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -15464,7 +15464,7 @@ class Fragment$ItemSection$$PosterGridSection$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSection$$PosterGridSection$items) ||
+    if (other is! Fragment$ItemSection$$PosterGridSection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -15654,7 +15654,7 @@ class Fragment$ItemSection$$IconGridSection implements Fragment$ItemSection {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSection$$IconGridSection) ||
+    if (other is! Fragment$ItemSection$$IconGridSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -15882,7 +15882,7 @@ class Fragment$ItemSection$$IconGridSection$metadata
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSection$$IconGridSection$metadata) ||
+    if (other is! Fragment$ItemSection$$IconGridSection$metadata ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -16102,7 +16102,7 @@ class Fragment$ItemSection$$IconGridSection$metadata$page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSection$$IconGridSection$metadata$page) ||
+    if (other is! Fragment$ItemSection$$IconGridSection$metadata$page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -16259,7 +16259,7 @@ class Fragment$ItemSection$$IconGridSection$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSection$$IconGridSection$items) ||
+    if (other is! Fragment$ItemSection$$IconGridSection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -16448,7 +16448,7 @@ class Fragment$ItemSection$$IconSection implements Fragment$ItemSection {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSection$$IconSection) ||
+    if (other is! Fragment$ItemSection$$IconSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -16675,7 +16675,7 @@ class Fragment$ItemSection$$IconSection$metadata
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSection$$IconSection$metadata) ||
+    if (other is! Fragment$ItemSection$$IconSection$metadata ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -16894,7 +16894,7 @@ class Fragment$ItemSection$$IconSection$metadata$page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSection$$IconSection$metadata$page) ||
+    if (other is! Fragment$ItemSection$$IconSection$metadata$page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -17044,7 +17044,7 @@ class Fragment$ItemSection$$IconSection$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSection$$IconSection$items) ||
+    if (other is! Fragment$ItemSection$$IconSection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -17233,7 +17233,7 @@ class Fragment$ItemSection$$LabelSection implements Fragment$ItemSection {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSection$$LabelSection) ||
+    if (other is! Fragment$ItemSection$$LabelSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -17461,7 +17461,7 @@ class Fragment$ItemSection$$LabelSection$metadata
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSection$$LabelSection$metadata) ||
+    if (other is! Fragment$ItemSection$$LabelSection$metadata ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -17680,7 +17680,7 @@ class Fragment$ItemSection$$LabelSection$metadata$page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSection$$LabelSection$metadata$page) ||
+    if (other is! Fragment$ItemSection$$LabelSection$metadata$page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -17830,7 +17830,7 @@ class Fragment$ItemSection$$LabelSection$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSection$$LabelSection$items) ||
+    if (other is! Fragment$ItemSection$$LabelSection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -18019,7 +18019,7 @@ class Fragment$ItemSection$$AvatarSection implements Fragment$ItemSection {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSection$$AvatarSection) ||
+    if (other is! Fragment$ItemSection$$AvatarSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -18247,7 +18247,7 @@ class Fragment$ItemSection$$AvatarSection$metadata
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSection$$AvatarSection$metadata) ||
+    if (other is! Fragment$ItemSection$$AvatarSection$metadata ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -18466,7 +18466,7 @@ class Fragment$ItemSection$$AvatarSection$metadata$page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSection$$AvatarSection$metadata$page) ||
+    if (other is! Fragment$ItemSection$$AvatarSection$metadata$page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -18621,7 +18621,7 @@ class Fragment$ItemSection$$AvatarSection$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ItemSection$$AvatarSection$items) ||
+    if (other is! Fragment$ItemSection$$AvatarSection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -18808,7 +18808,7 @@ class Variables$Fragment$GridSection {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Variables$Fragment$GridSection) ||
+    if (other is! Variables$Fragment$GridSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -18959,7 +18959,7 @@ class Fragment$GridSection {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$GridSection) || runtimeType != other.runtimeType) {
+    if (other is! Fragment$GridSection || runtimeType != other.runtimeType) {
       return false;
     }
     final l$gridSize = gridSize;
@@ -19287,7 +19287,7 @@ class Fragment$GridSection$items {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$GridSection$items) ||
+    if (other is! Fragment$GridSection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -19450,7 +19450,7 @@ class Fragment$GridSection$$DefaultGridSection implements Fragment$GridSection {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$GridSection$$DefaultGridSection) ||
+    if (other is! Fragment$GridSection$$DefaultGridSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -19602,7 +19602,7 @@ class Fragment$GridSection$$DefaultGridSection$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$GridSection$$DefaultGridSection$items) ||
+    if (other is! Fragment$GridSection$$DefaultGridSection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -19767,7 +19767,7 @@ class Fragment$GridSection$$PosterGridSection implements Fragment$GridSection {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$GridSection$$PosterGridSection) ||
+    if (other is! Fragment$GridSection$$PosterGridSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -19919,7 +19919,7 @@ class Fragment$GridSection$$PosterGridSection$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$GridSection$$PosterGridSection$items) ||
+    if (other is! Fragment$GridSection$$PosterGridSection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -20084,7 +20084,7 @@ class Fragment$GridSection$$IconGridSection implements Fragment$GridSection {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$GridSection$$IconGridSection) ||
+    if (other is! Fragment$GridSection$$IconGridSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -20236,7 +20236,7 @@ class Fragment$GridSection$$IconGridSection$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$GridSection$$IconGridSection$items) ||
+    if (other is! Fragment$GridSection$$IconGridSection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -20401,7 +20401,7 @@ class Variables$Fragment$Section {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Variables$Fragment$Section) ||
+    if (other is! Variables$Fragment$Section ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -20599,7 +20599,7 @@ class Fragment$Section {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section) || runtimeType != other.runtimeType) {
+    if (other is! Fragment$Section || runtimeType != other.runtimeType) {
       return false;
     }
     final l$id = id;
@@ -22033,7 +22033,7 @@ class Fragment$Section$$PosterSection
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$PosterSection) ||
+    if (other is! Fragment$Section$$PosterSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -22300,7 +22300,7 @@ class Fragment$Section$$PosterSection$metadata
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$PosterSection$metadata) ||
+    if (other is! Fragment$Section$$PosterSection$metadata ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -22519,7 +22519,7 @@ class Fragment$Section$$PosterSection$metadata$page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$PosterSection$metadata$page) ||
+    if (other is! Fragment$Section$$PosterSection$metadata$page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -22669,7 +22669,7 @@ class Fragment$Section$$PosterSection$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$PosterSection$items) ||
+    if (other is! Fragment$Section$$PosterSection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -22875,7 +22875,7 @@ class Fragment$Section$$PosterSection$items$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$PosterSection$items$items) ||
+    if (other is! Fragment$Section$$PosterSection$items$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -23071,7 +23071,7 @@ class Fragment$Section$$PosterSection$items$items$item
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$PosterSection$items$items$item) ||
+    if (other is! Fragment$Section$$PosterSection$items$items$item ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -23448,7 +23448,7 @@ class Fragment$Section$$PosterSection$items$items$item$$Episode
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$PosterSection$items$items$item$$Episode) ||
+    if (other is! Fragment$Section$$PosterSection$items$items$item$$Episode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -23713,8 +23713,8 @@ class Fragment$Section$$PosterSection$items$items$item$$Episode$season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$PosterSection$items$items$item$$Episode$season) ||
+    if (other
+            is! Fragment$Section$$PosterSection$items$items$item$$Episode$season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -23887,8 +23887,8 @@ class Fragment$Section$$PosterSection$items$items$item$$Episode$season$show
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$PosterSection$items$items$item$$Episode$season$show) ||
+    if (other
+            is! Fragment$Section$$PosterSection$items$items$item$$Episode$season$show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -24076,7 +24076,7 @@ class Fragment$Section$$PosterSection$items$items$item$$Show
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$PosterSection$items$items$item$$Show) ||
+    if (other is! Fragment$Section$$PosterSection$items$items$item$$Show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -24289,8 +24289,8 @@ class Fragment$Section$$PosterSection$items$items$item$$Show$defaultEpisode
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$PosterSection$items$items$item$$Show$defaultEpisode) ||
+    if (other
+            is! Fragment$Section$$PosterSection$items$items$item$$Show$defaultEpisode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -24422,7 +24422,7 @@ class Fragment$Section$$PosterSection$items$items$item$$Season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$PosterSection$items$items$item$$Season) ||
+    if (other is! Fragment$Section$$PosterSection$items$items$item$$Season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -24546,7 +24546,7 @@ class Fragment$Section$$PosterSection$items$items$item$$Page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$PosterSection$items$items$item$$Page) ||
+    if (other is! Fragment$Section$$PosterSection$items$items$item$$Page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -24685,7 +24685,7 @@ class Fragment$Section$$PosterSection$items$items$item$$Link
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$PosterSection$items$items$item$$Link) ||
+    if (other is! Fragment$Section$$PosterSection$items$items$item$$Link ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -24808,8 +24808,8 @@ class Fragment$Section$$PosterSection$items$items$item$$StudyTopic
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$PosterSection$items$items$item$$StudyTopic) ||
+    if (other
+            is! Fragment$Section$$PosterSection$items$items$item$$StudyTopic ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -24933,7 +24933,7 @@ class Fragment$Section$$PosterSection$items$items$item$$Game
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$PosterSection$items$items$item$$Game) ||
+    if (other is! Fragment$Section$$PosterSection$items$items$item$$Game ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -25100,8 +25100,7 @@ class Fragment$Section$$PosterSection$items$items$item$$Playlist
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$PosterSection$items$items$item$$Playlist) ||
+    if (other is! Fragment$Section$$PosterSection$items$items$item$$Playlist ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -25289,7 +25288,7 @@ class Fragment$Section$$PosterSection$items$items$item$$Short
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$PosterSection$items$items$item$$Short) ||
+    if (other is! Fragment$Section$$PosterSection$items$items$item$$Short ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -25427,7 +25426,7 @@ class Fragment$Section$$PosterSection$items$items$item$$Person
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$PosterSection$items$items$item$$Person) ||
+    if (other is! Fragment$Section$$PosterSection$items$items$item$$Person ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -25570,8 +25569,8 @@ class Fragment$Section$$PosterSection$items$items$item$$Playlist$items {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$PosterSection$items$items$item$$Playlist$items) ||
+    if (other
+            is! Fragment$Section$$PosterSection$items$items$item$$Playlist$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -25754,8 +25753,8 @@ class Fragment$Section$$PosterSection$items$items$item$$Playlist$items$items {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$PosterSection$items$items$item$$Playlist$items$items) ||
+    if (other
+            is! Fragment$Section$$PosterSection$items$items$item$$Playlist$items$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -25952,8 +25951,8 @@ class Fragment$Section$$PosterSection$items$items$item$$Playlist$items$items$$Sh
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$PosterSection$items$items$item$$Playlist$items$items$$Short) ||
+    if (other
+            is! Fragment$Section$$PosterSection$items$items$item$$Playlist$items$items$$Short ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -26097,8 +26096,8 @@ class Fragment$Section$$PosterSection$items$items$item$$Playlist$items$items$$Ep
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$PosterSection$items$items$item$$Playlist$items$items$$Episode) ||
+    if (other
+            is! Fragment$Section$$PosterSection$items$items$item$$Playlist$items$items$$Episode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -26246,8 +26245,8 @@ class Fragment$Section$$PosterSection$items$items$item$$Show$seasons {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$PosterSection$items$items$item$$Show$seasons) ||
+    if (other
+            is! Fragment$Section$$PosterSection$items$items$item$$Show$seasons ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -26422,8 +26421,8 @@ class Fragment$Section$$PosterSection$items$items$item$$Show$seasons$items {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$PosterSection$items$items$item$$Show$seasons$items) ||
+    if (other
+            is! Fragment$Section$$PosterSection$items$items$item$$Show$seasons$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -26591,8 +26590,8 @@ class Fragment$Section$$PosterSection$items$items$item$$Show$seasons$items$episo
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$PosterSection$items$items$item$$Show$seasons$items$episodes) ||
+    if (other
+            is! Fragment$Section$$PosterSection$items$items$item$$Show$seasons$items$episodes ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -26767,8 +26766,8 @@ class Fragment$Section$$PosterSection$items$items$item$$Show$seasons$items$episo
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$PosterSection$items$items$item$$Show$seasons$items$episodes$items) ||
+    if (other
+            is! Fragment$Section$$PosterSection$items$items$item$$Show$seasons$items$episodes$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -26962,7 +26961,7 @@ class Fragment$Section$$FeaturedSection
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$FeaturedSection) ||
+    if (other is! Fragment$Section$$FeaturedSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -27229,7 +27228,7 @@ class Fragment$Section$$FeaturedSection$metadata
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$FeaturedSection$metadata) ||
+    if (other is! Fragment$Section$$FeaturedSection$metadata ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -27448,7 +27447,7 @@ class Fragment$Section$$FeaturedSection$metadata$page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$FeaturedSection$metadata$page) ||
+    if (other is! Fragment$Section$$FeaturedSection$metadata$page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -27598,7 +27597,7 @@ class Fragment$Section$$FeaturedSection$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$FeaturedSection$items) ||
+    if (other is! Fragment$Section$$FeaturedSection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -27813,7 +27812,7 @@ class Fragment$Section$$FeaturedSection$items$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$FeaturedSection$items$items) ||
+    if (other is! Fragment$Section$$FeaturedSection$items$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -28022,7 +28021,7 @@ class Fragment$Section$$FeaturedSection$items$items$item
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$FeaturedSection$items$items$item) ||
+    if (other is! Fragment$Section$$FeaturedSection$items$items$item ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -28400,8 +28399,7 @@ class Fragment$Section$$FeaturedSection$items$items$item$$Episode
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$FeaturedSection$items$items$item$$Episode) ||
+    if (other is! Fragment$Section$$FeaturedSection$items$items$item$$Episode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -28655,8 +28653,8 @@ class Fragment$Section$$FeaturedSection$items$items$item$$Episode$season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$FeaturedSection$items$items$item$$Episode$season) ||
+    if (other
+            is! Fragment$Section$$FeaturedSection$items$items$item$$Episode$season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -28829,8 +28827,8 @@ class Fragment$Section$$FeaturedSection$items$items$item$$Episode$season$show
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$FeaturedSection$items$items$item$$Episode$season$show) ||
+    if (other
+            is! Fragment$Section$$FeaturedSection$items$items$item$$Episode$season$show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -29008,7 +29006,7 @@ class Fragment$Section$$FeaturedSection$items$items$item$$Show
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$FeaturedSection$items$items$item$$Show) ||
+    if (other is! Fragment$Section$$FeaturedSection$items$items$item$$Show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -29199,8 +29197,8 @@ class Fragment$Section$$FeaturedSection$items$items$item$$Show$defaultEpisode
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$FeaturedSection$items$items$item$$Show$defaultEpisode) ||
+    if (other
+            is! Fragment$Section$$FeaturedSection$items$items$item$$Show$defaultEpisode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -29332,8 +29330,7 @@ class Fragment$Section$$FeaturedSection$items$items$item$$Season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$FeaturedSection$items$items$item$$Season) ||
+    if (other is! Fragment$Section$$FeaturedSection$items$items$item$$Season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -29457,7 +29454,7 @@ class Fragment$Section$$FeaturedSection$items$items$item$$Page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$FeaturedSection$items$items$item$$Page) ||
+    if (other is! Fragment$Section$$FeaturedSection$items$items$item$$Page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -29600,7 +29597,7 @@ class Fragment$Section$$FeaturedSection$items$items$item$$Link
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$FeaturedSection$items$items$item$$Link) ||
+    if (other is! Fragment$Section$$FeaturedSection$items$items$item$$Link ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -29727,8 +29724,8 @@ class Fragment$Section$$FeaturedSection$items$items$item$$StudyTopic
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$FeaturedSection$items$items$item$$StudyTopic) ||
+    if (other
+            is! Fragment$Section$$FeaturedSection$items$items$item$$StudyTopic ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -29854,7 +29851,7 @@ class Fragment$Section$$FeaturedSection$items$items$item$$Game
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$FeaturedSection$items$items$item$$Game) ||
+    if (other is! Fragment$Section$$FeaturedSection$items$items$item$$Game ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -29997,8 +29994,8 @@ class Fragment$Section$$FeaturedSection$items$items$item$$Playlist
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$FeaturedSection$items$items$item$$Playlist) ||
+    if (other
+            is! Fragment$Section$$FeaturedSection$items$items$item$$Playlist ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -30139,7 +30136,7 @@ class Fragment$Section$$FeaturedSection$items$items$item$$Short
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$FeaturedSection$items$items$item$$Short) ||
+    if (other is! Fragment$Section$$FeaturedSection$items$items$item$$Short ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -30280,8 +30277,7 @@ class Fragment$Section$$FeaturedSection$items$items$item$$Person
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$FeaturedSection$items$items$item$$Person) ||
+    if (other is! Fragment$Section$$FeaturedSection$items$items$item$$Person ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -30467,7 +30463,7 @@ class Fragment$Section$$DefaultSection
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$DefaultSection) ||
+    if (other is! Fragment$Section$$DefaultSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -30734,7 +30730,7 @@ class Fragment$Section$$DefaultSection$metadata
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$DefaultSection$metadata) ||
+    if (other is! Fragment$Section$$DefaultSection$metadata ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -30953,7 +30949,7 @@ class Fragment$Section$$DefaultSection$metadata$page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$DefaultSection$metadata$page) ||
+    if (other is! Fragment$Section$$DefaultSection$metadata$page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -31103,7 +31099,7 @@ class Fragment$Section$$DefaultSection$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$DefaultSection$items) ||
+    if (other is! Fragment$Section$$DefaultSection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -31309,7 +31305,7 @@ class Fragment$Section$$DefaultSection$items$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$DefaultSection$items$items) ||
+    if (other is! Fragment$Section$$DefaultSection$items$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -31506,7 +31502,7 @@ class Fragment$Section$$DefaultSection$items$items$item
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$DefaultSection$items$items$item) ||
+    if (other is! Fragment$Section$$DefaultSection$items$items$item ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -31893,8 +31889,7 @@ class Fragment$Section$$DefaultSection$items$items$item$$Episode
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$DefaultSection$items$items$item$$Episode) ||
+    if (other is! Fragment$Section$$DefaultSection$items$items$item$$Episode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -32159,8 +32154,8 @@ class Fragment$Section$$DefaultSection$items$items$item$$Episode$season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$DefaultSection$items$items$item$$Episode$season) ||
+    if (other
+            is! Fragment$Section$$DefaultSection$items$items$item$$Episode$season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -32333,8 +32328,8 @@ class Fragment$Section$$DefaultSection$items$items$item$$Episode$season$show
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$DefaultSection$items$items$item$$Episode$season$show) ||
+    if (other
+            is! Fragment$Section$$DefaultSection$items$items$item$$Episode$season$show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -32512,7 +32507,7 @@ class Fragment$Section$$DefaultSection$items$items$item$$Show
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$DefaultSection$items$items$item$$Show) ||
+    if (other is! Fragment$Section$$DefaultSection$items$items$item$$Show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -32700,8 +32695,8 @@ class Fragment$Section$$DefaultSection$items$items$item$$Show$defaultEpisode
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$DefaultSection$items$items$item$$Show$defaultEpisode) ||
+    if (other
+            is! Fragment$Section$$DefaultSection$items$items$item$$Show$defaultEpisode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -32833,7 +32828,7 @@ class Fragment$Section$$DefaultSection$items$items$item$$Season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$DefaultSection$items$items$item$$Season) ||
+    if (other is! Fragment$Section$$DefaultSection$items$items$item$$Season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -32957,7 +32952,7 @@ class Fragment$Section$$DefaultSection$items$items$item$$Page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$DefaultSection$items$items$item$$Page) ||
+    if (other is! Fragment$Section$$DefaultSection$items$items$item$$Page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -33097,7 +33092,7 @@ class Fragment$Section$$DefaultSection$items$items$item$$Link
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$DefaultSection$items$items$item$$Link) ||
+    if (other is! Fragment$Section$$DefaultSection$items$items$item$$Link ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -33221,8 +33216,8 @@ class Fragment$Section$$DefaultSection$items$items$item$$StudyTopic
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$DefaultSection$items$items$item$$StudyTopic) ||
+    if (other
+            is! Fragment$Section$$DefaultSection$items$items$item$$StudyTopic ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -33346,7 +33341,7 @@ class Fragment$Section$$DefaultSection$items$items$item$$Game
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$DefaultSection$items$items$item$$Game) ||
+    if (other is! Fragment$Section$$DefaultSection$items$items$item$$Game ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -33486,8 +33481,7 @@ class Fragment$Section$$DefaultSection$items$items$item$$Playlist
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$DefaultSection$items$items$item$$Playlist) ||
+    if (other is! Fragment$Section$$DefaultSection$items$items$item$$Playlist ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -33628,7 +33622,7 @@ class Fragment$Section$$DefaultSection$items$items$item$$Short
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$DefaultSection$items$items$item$$Short) ||
+    if (other is! Fragment$Section$$DefaultSection$items$items$item$$Short ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -33769,7 +33763,7 @@ class Fragment$Section$$DefaultSection$items$items$item$$Person
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$DefaultSection$items$items$item$$Person) ||
+    if (other is! Fragment$Section$$DefaultSection$items$items$item$$Person ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -33955,7 +33949,7 @@ class Fragment$Section$$CardSection
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$CardSection) ||
+    if (other is! Fragment$Section$$CardSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -34221,7 +34215,7 @@ class Fragment$Section$$CardSection$metadata
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$CardSection$metadata) ||
+    if (other is! Fragment$Section$$CardSection$metadata ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -34440,7 +34434,7 @@ class Fragment$Section$$CardSection$metadata$page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$CardSection$metadata$page) ||
+    if (other is! Fragment$Section$$CardSection$metadata$page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -34589,7 +34583,7 @@ class Fragment$Section$$CardSection$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$CardSection$items) ||
+    if (other is! Fragment$Section$$CardSection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -34804,7 +34798,7 @@ class Fragment$Section$$CardSection$items$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$CardSection$items$items) ||
+    if (other is! Fragment$Section$$CardSection$items$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -35011,7 +35005,7 @@ class Fragment$Section$$CardSection$items$items$item
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$CardSection$items$items$item) ||
+    if (other is! Fragment$Section$$CardSection$items$items$item ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -35374,7 +35368,7 @@ class Fragment$Section$$CardSection$items$items$item$$Episode
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$CardSection$items$items$item$$Episode) ||
+    if (other is! Fragment$Section$$CardSection$items$items$item$$Episode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -35624,8 +35618,8 @@ class Fragment$Section$$CardSection$items$items$item$$Episode$season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$CardSection$items$items$item$$Episode$season) ||
+    if (other
+            is! Fragment$Section$$CardSection$items$items$item$$Episode$season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -35797,8 +35791,8 @@ class Fragment$Section$$CardSection$items$items$item$$Episode$season$show
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$CardSection$items$items$item$$Episode$season$show) ||
+    if (other
+            is! Fragment$Section$$CardSection$items$items$item$$Episode$season$show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -35976,7 +35970,7 @@ class Fragment$Section$$CardSection$items$items$item$$Show
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$CardSection$items$items$item$$Show) ||
+    if (other is! Fragment$Section$$CardSection$items$items$item$$Show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -36164,8 +36158,8 @@ class Fragment$Section$$CardSection$items$items$item$$Show$defaultEpisode
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$CardSection$items$items$item$$Show$defaultEpisode) ||
+    if (other
+            is! Fragment$Section$$CardSection$items$items$item$$Show$defaultEpisode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -36297,7 +36291,7 @@ class Fragment$Section$$CardSection$items$items$item$$Season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$CardSection$items$items$item$$Season) ||
+    if (other is! Fragment$Section$$CardSection$items$items$item$$Season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -36418,7 +36412,7 @@ class Fragment$Section$$CardSection$items$items$item$$Page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$CardSection$items$items$item$$Page) ||
+    if (other is! Fragment$Section$$CardSection$items$items$item$$Page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -36558,7 +36552,7 @@ class Fragment$Section$$CardSection$items$items$item$$Link
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$CardSection$items$items$item$$Link) ||
+    if (other is! Fragment$Section$$CardSection$items$items$item$$Link ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -36739,8 +36733,7 @@ class Fragment$Section$$CardSection$items$items$item$$StudyTopic
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$CardSection$items$items$item$$StudyTopic) ||
+    if (other is! Fragment$Section$$CardSection$items$items$item$$StudyTopic ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -36976,7 +36969,7 @@ class Fragment$Section$$CardSection$items$items$item$$Game
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$CardSection$items$items$item$$Game) ||
+    if (other is! Fragment$Section$$CardSection$items$items$item$$Game ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -37116,7 +37109,7 @@ class Fragment$Section$$CardSection$items$items$item$$Playlist
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$CardSection$items$items$item$$Playlist) ||
+    if (other is! Fragment$Section$$CardSection$items$items$item$$Playlist ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -37258,7 +37251,7 @@ class Fragment$Section$$CardSection$items$items$item$$Short
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$CardSection$items$items$item$$Short) ||
+    if (other is! Fragment$Section$$CardSection$items$items$item$$Short ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -37396,7 +37389,7 @@ class Fragment$Section$$CardSection$items$items$item$$Person
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$CardSection$items$items$item$$Person) ||
+    if (other is! Fragment$Section$$CardSection$items$items$item$$Person ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -37569,7 +37562,7 @@ class Fragment$Section$$ListSection
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$ListSection) ||
+    if (other is! Fragment$Section$$ListSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -37824,7 +37817,7 @@ class Fragment$Section$$ListSection$metadata
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$ListSection$metadata) ||
+    if (other is! Fragment$Section$$ListSection$metadata ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -38043,7 +38036,7 @@ class Fragment$Section$$ListSection$metadata$page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$ListSection$metadata$page) ||
+    if (other is! Fragment$Section$$ListSection$metadata$page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -38192,7 +38185,7 @@ class Fragment$Section$$ListSection$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$ListSection$items) ||
+    if (other is! Fragment$Section$$ListSection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -38398,7 +38391,7 @@ class Fragment$Section$$ListSection$items$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$ListSection$items$items) ||
+    if (other is! Fragment$Section$$ListSection$items$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -38594,7 +38587,7 @@ class Fragment$Section$$ListSection$items$items$item
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$ListSection$items$items$item) ||
+    if (other is! Fragment$Section$$ListSection$items$items$item ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -38965,7 +38958,7 @@ class Fragment$Section$$ListSection$items$items$item$$Episode
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$ListSection$items$items$item$$Episode) ||
+    if (other is! Fragment$Section$$ListSection$items$items$item$$Episode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -39225,8 +39218,8 @@ class Fragment$Section$$ListSection$items$items$item$$Episode$season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$ListSection$items$items$item$$Episode$season) ||
+    if (other
+            is! Fragment$Section$$ListSection$items$items$item$$Episode$season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -39397,8 +39390,8 @@ class Fragment$Section$$ListSection$items$items$item$$Episode$season$show
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$ListSection$items$items$item$$Episode$season$show) ||
+    if (other
+            is! Fragment$Section$$ListSection$items$items$item$$Episode$season$show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -39575,7 +39568,7 @@ class Fragment$Section$$ListSection$items$items$item$$Show
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$ListSection$items$items$item$$Show) ||
+    if (other is! Fragment$Section$$ListSection$items$items$item$$Show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -39762,8 +39755,8 @@ class Fragment$Section$$ListSection$items$items$item$$Show$defaultEpisode
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$ListSection$items$items$item$$Show$defaultEpisode) ||
+    if (other
+            is! Fragment$Section$$ListSection$items$items$item$$Show$defaultEpisode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -39894,7 +39887,7 @@ class Fragment$Section$$ListSection$items$items$item$$Season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$ListSection$items$items$item$$Season) ||
+    if (other is! Fragment$Section$$ListSection$items$items$item$$Season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -40014,7 +40007,7 @@ class Fragment$Section$$ListSection$items$items$item$$Page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$ListSection$items$items$item$$Page) ||
+    if (other is! Fragment$Section$$ListSection$items$items$item$$Page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -40153,7 +40146,7 @@ class Fragment$Section$$ListSection$items$items$item$$Link
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$ListSection$items$items$item$$Link) ||
+    if (other is! Fragment$Section$$ListSection$items$items$item$$Link ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -40276,8 +40269,7 @@ class Fragment$Section$$ListSection$items$items$item$$StudyTopic
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$ListSection$items$items$item$$StudyTopic) ||
+    if (other is! Fragment$Section$$ListSection$items$items$item$$StudyTopic ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -40401,7 +40393,7 @@ class Fragment$Section$$ListSection$items$items$item$$Game
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$ListSection$items$items$item$$Game) ||
+    if (other is! Fragment$Section$$ListSection$items$items$item$$Game ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -40540,7 +40532,7 @@ class Fragment$Section$$ListSection$items$items$item$$Playlist
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$ListSection$items$items$item$$Playlist) ||
+    if (other is! Fragment$Section$$ListSection$items$items$item$$Playlist ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -40681,7 +40673,7 @@ class Fragment$Section$$ListSection$items$items$item$$Short
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$ListSection$items$items$item$$Short) ||
+    if (other is! Fragment$Section$$ListSection$items$items$item$$Short ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -40818,7 +40810,7 @@ class Fragment$Section$$ListSection$items$items$item$$Person
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$ListSection$items$items$item$$Person) ||
+    if (other is! Fragment$Section$$ListSection$items$items$item$$Person ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -41001,7 +40993,7 @@ class Fragment$Section$$CardListSection
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$CardListSection) ||
+    if (other is! Fragment$Section$$CardListSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -41268,7 +41260,7 @@ class Fragment$Section$$CardListSection$metadata
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$CardListSection$metadata) ||
+    if (other is! Fragment$Section$$CardListSection$metadata ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -41487,7 +41479,7 @@ class Fragment$Section$$CardListSection$metadata$page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$CardListSection$metadata$page) ||
+    if (other is! Fragment$Section$$CardListSection$metadata$page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -41637,7 +41629,7 @@ class Fragment$Section$$CardListSection$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$CardListSection$items) ||
+    if (other is! Fragment$Section$$CardListSection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -41852,7 +41844,7 @@ class Fragment$Section$$CardListSection$items$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$CardListSection$items$items) ||
+    if (other is! Fragment$Section$$CardListSection$items$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -42061,7 +42053,7 @@ class Fragment$Section$$CardListSection$items$items$item
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$CardListSection$items$items$item) ||
+    if (other is! Fragment$Section$$CardListSection$items$items$item ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -42440,8 +42432,7 @@ class Fragment$Section$$CardListSection$items$items$item$$Episode
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$CardListSection$items$items$item$$Episode) ||
+    if (other is! Fragment$Section$$CardListSection$items$items$item$$Episode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -42696,8 +42687,8 @@ class Fragment$Section$$CardListSection$items$items$item$$Episode$season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$CardListSection$items$items$item$$Episode$season) ||
+    if (other
+            is! Fragment$Section$$CardListSection$items$items$item$$Episode$season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -42871,8 +42862,8 @@ class Fragment$Section$$CardListSection$items$items$item$$Episode$season$show
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$CardListSection$items$items$item$$Episode$season$show) ||
+    if (other
+            is! Fragment$Section$$CardListSection$items$items$item$$Episode$season$show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -43051,7 +43042,7 @@ class Fragment$Section$$CardListSection$items$items$item$$Show
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$CardListSection$items$items$item$$Show) ||
+    if (other is! Fragment$Section$$CardListSection$items$items$item$$Show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -43243,8 +43234,8 @@ class Fragment$Section$$CardListSection$items$items$item$$Show$defaultEpisode
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$CardListSection$items$items$item$$Show$defaultEpisode) ||
+    if (other
+            is! Fragment$Section$$CardListSection$items$items$item$$Show$defaultEpisode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -43377,8 +43368,7 @@ class Fragment$Section$$CardListSection$items$items$item$$Season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$CardListSection$items$items$item$$Season) ||
+    if (other is! Fragment$Section$$CardListSection$items$items$item$$Season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -43503,7 +43493,7 @@ class Fragment$Section$$CardListSection$items$items$item$$Page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$CardListSection$items$items$item$$Page) ||
+    if (other is! Fragment$Section$$CardListSection$items$items$item$$Page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -43647,7 +43637,7 @@ class Fragment$Section$$CardListSection$items$items$item$$Link
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$CardListSection$items$items$item$$Link) ||
+    if (other is! Fragment$Section$$CardListSection$items$items$item$$Link ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -43833,8 +43823,8 @@ class Fragment$Section$$CardListSection$items$items$item$$StudyTopic
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$CardListSection$items$items$item$$StudyTopic) ||
+    if (other
+            is! Fragment$Section$$CardListSection$items$items$item$$StudyTopic ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -44072,7 +44062,7 @@ class Fragment$Section$$CardListSection$items$items$item$$Game
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$CardListSection$items$items$item$$Game) ||
+    if (other is! Fragment$Section$$CardListSection$items$items$item$$Game ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -44216,8 +44206,8 @@ class Fragment$Section$$CardListSection$items$items$item$$Playlist
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$CardListSection$items$items$item$$Playlist) ||
+    if (other
+            is! Fragment$Section$$CardListSection$items$items$item$$Playlist ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -44359,7 +44349,7 @@ class Fragment$Section$$CardListSection$items$items$item$$Short
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$CardListSection$items$items$item$$Short) ||
+    if (other is! Fragment$Section$$CardListSection$items$items$item$$Short ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -44501,8 +44491,7 @@ class Fragment$Section$$CardListSection$items$items$item$$Person
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$CardListSection$items$items$item$$Person) ||
+    if (other is! Fragment$Section$$CardListSection$items$items$item$$Person ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -44692,7 +44681,7 @@ class Fragment$Section$$DefaultGridSection
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$DefaultGridSection) ||
+    if (other is! Fragment$Section$$DefaultGridSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -44960,7 +44949,7 @@ class Fragment$Section$$DefaultGridSection$metadata
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$DefaultGridSection$metadata) ||
+    if (other is! Fragment$Section$$DefaultGridSection$metadata ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -45180,7 +45169,7 @@ class Fragment$Section$$DefaultGridSection$metadata$page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$DefaultGridSection$metadata$page) ||
+    if (other is! Fragment$Section$$DefaultGridSection$metadata$page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -45337,7 +45326,7 @@ class Fragment$Section$$DefaultGridSection$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$DefaultGridSection$items) ||
+    if (other is! Fragment$Section$$DefaultGridSection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -45543,7 +45532,7 @@ class Fragment$Section$$DefaultGridSection$items$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$DefaultGridSection$items$items) ||
+    if (other is! Fragment$Section$$DefaultGridSection$items$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -45744,7 +45733,7 @@ class Fragment$Section$$DefaultGridSection$items$items$item
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$DefaultGridSection$items$items$item) ||
+    if (other is! Fragment$Section$$DefaultGridSection$items$items$item ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -46131,8 +46120,8 @@ class Fragment$Section$$DefaultGridSection$items$items$item$$Episode
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$DefaultGridSection$items$items$item$$Episode) ||
+    if (other
+            is! Fragment$Section$$DefaultGridSection$items$items$item$$Episode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -46391,8 +46380,8 @@ class Fragment$Section$$DefaultGridSection$items$items$item$$Episode$season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$DefaultGridSection$items$items$item$$Episode$season) ||
+    if (other
+            is! Fragment$Section$$DefaultGridSection$items$items$item$$Episode$season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -46569,8 +46558,8 @@ class Fragment$Section$$DefaultGridSection$items$items$item$$Episode$season$show
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$DefaultGridSection$items$items$item$$Episode$season$show) ||
+    if (other
+            is! Fragment$Section$$DefaultGridSection$items$items$item$$Episode$season$show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -46749,8 +46738,7 @@ class Fragment$Section$$DefaultGridSection$items$items$item$$Show
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$DefaultGridSection$items$items$item$$Show) ||
+    if (other is! Fragment$Section$$DefaultGridSection$items$items$item$$Show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -46942,8 +46930,8 @@ class Fragment$Section$$DefaultGridSection$items$items$item$$Show$defaultEpisode
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$DefaultGridSection$items$items$item$$Show$defaultEpisode) ||
+    if (other
+            is! Fragment$Section$$DefaultGridSection$items$items$item$$Show$defaultEpisode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -47076,8 +47064,8 @@ class Fragment$Section$$DefaultGridSection$items$items$item$$Season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$DefaultGridSection$items$items$item$$Season) ||
+    if (other
+            is! Fragment$Section$$DefaultGridSection$items$items$item$$Season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -47202,8 +47190,7 @@ class Fragment$Section$$DefaultGridSection$items$items$item$$Page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$DefaultGridSection$items$items$item$$Page) ||
+    if (other is! Fragment$Section$$DefaultGridSection$items$items$item$$Page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -47347,8 +47334,7 @@ class Fragment$Section$$DefaultGridSection$items$items$item$$Link
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$DefaultGridSection$items$items$item$$Link) ||
+    if (other is! Fragment$Section$$DefaultGridSection$items$items$item$$Link ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -47476,8 +47462,8 @@ class Fragment$Section$$DefaultGridSection$items$items$item$$StudyTopic
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$DefaultGridSection$items$items$item$$StudyTopic) ||
+    if (other
+            is! Fragment$Section$$DefaultGridSection$items$items$item$$StudyTopic ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -47604,8 +47590,7 @@ class Fragment$Section$$DefaultGridSection$items$items$item$$Game
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$DefaultGridSection$items$items$item$$Game) ||
+    if (other is! Fragment$Section$$DefaultGridSection$items$items$item$$Game ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -47749,8 +47734,8 @@ class Fragment$Section$$DefaultGridSection$items$items$item$$Playlist
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$DefaultGridSection$items$items$item$$Playlist) ||
+    if (other
+            is! Fragment$Section$$DefaultGridSection$items$items$item$$Playlist ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -47894,8 +47879,8 @@ class Fragment$Section$$DefaultGridSection$items$items$item$$Short
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$DefaultGridSection$items$items$item$$Short) ||
+    if (other
+            is! Fragment$Section$$DefaultGridSection$items$items$item$$Short ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -48037,8 +48022,8 @@ class Fragment$Section$$DefaultGridSection$items$items$item$$Person
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$DefaultGridSection$items$items$item$$Person) ||
+    if (other
+            is! Fragment$Section$$DefaultGridSection$items$items$item$$Person ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -48228,7 +48213,7 @@ class Fragment$Section$$PosterGridSection
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$PosterGridSection) ||
+    if (other is! Fragment$Section$$PosterGridSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -48496,7 +48481,7 @@ class Fragment$Section$$PosterGridSection$metadata
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$PosterGridSection$metadata) ||
+    if (other is! Fragment$Section$$PosterGridSection$metadata ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -48715,7 +48700,7 @@ class Fragment$Section$$PosterGridSection$metadata$page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$PosterGridSection$metadata$page) ||
+    if (other is! Fragment$Section$$PosterGridSection$metadata$page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -48872,7 +48857,7 @@ class Fragment$Section$$PosterGridSection$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$PosterGridSection$items) ||
+    if (other is! Fragment$Section$$PosterGridSection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -49078,7 +49063,7 @@ class Fragment$Section$$PosterGridSection$items$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$PosterGridSection$items$items) ||
+    if (other is! Fragment$Section$$PosterGridSection$items$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -49278,7 +49263,7 @@ class Fragment$Section$$PosterGridSection$items$items$item
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$PosterGridSection$items$items$item) ||
+    if (other is! Fragment$Section$$PosterGridSection$items$items$item ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -49664,8 +49649,8 @@ class Fragment$Section$$PosterGridSection$items$items$item$$Episode
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$PosterGridSection$items$items$item$$Episode) ||
+    if (other
+            is! Fragment$Section$$PosterGridSection$items$items$item$$Episode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -49922,8 +49907,8 @@ class Fragment$Section$$PosterGridSection$items$items$item$$Episode$season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$PosterGridSection$items$items$item$$Episode$season) ||
+    if (other
+            is! Fragment$Section$$PosterGridSection$items$items$item$$Episode$season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -50100,8 +50085,8 @@ class Fragment$Section$$PosterGridSection$items$items$item$$Episode$season$show
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$PosterGridSection$items$items$item$$Episode$season$show) ||
+    if (other
+            is! Fragment$Section$$PosterGridSection$items$items$item$$Episode$season$show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -50280,8 +50265,7 @@ class Fragment$Section$$PosterGridSection$items$items$item$$Show
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$PosterGridSection$items$items$item$$Show) ||
+    if (other is! Fragment$Section$$PosterGridSection$items$items$item$$Show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -50473,8 +50457,8 @@ class Fragment$Section$$PosterGridSection$items$items$item$$Show$defaultEpisode
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$PosterGridSection$items$items$item$$Show$defaultEpisode) ||
+    if (other
+            is! Fragment$Section$$PosterGridSection$items$items$item$$Show$defaultEpisode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -50607,8 +50591,8 @@ class Fragment$Section$$PosterGridSection$items$items$item$$Season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$PosterGridSection$items$items$item$$Season) ||
+    if (other
+            is! Fragment$Section$$PosterGridSection$items$items$item$$Season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -50733,8 +50717,7 @@ class Fragment$Section$$PosterGridSection$items$items$item$$Page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$PosterGridSection$items$items$item$$Page) ||
+    if (other is! Fragment$Section$$PosterGridSection$items$items$item$$Page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -50878,8 +50861,7 @@ class Fragment$Section$$PosterGridSection$items$items$item$$Link
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$PosterGridSection$items$items$item$$Link) ||
+    if (other is! Fragment$Section$$PosterGridSection$items$items$item$$Link ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -51007,8 +50989,8 @@ class Fragment$Section$$PosterGridSection$items$items$item$$StudyTopic
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$PosterGridSection$items$items$item$$StudyTopic) ||
+    if (other
+            is! Fragment$Section$$PosterGridSection$items$items$item$$StudyTopic ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -51135,8 +51117,7 @@ class Fragment$Section$$PosterGridSection$items$items$item$$Game
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$PosterGridSection$items$items$item$$Game) ||
+    if (other is! Fragment$Section$$PosterGridSection$items$items$item$$Game ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -51280,8 +51261,8 @@ class Fragment$Section$$PosterGridSection$items$items$item$$Playlist
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$PosterGridSection$items$items$item$$Playlist) ||
+    if (other
+            is! Fragment$Section$$PosterGridSection$items$items$item$$Playlist ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -51425,8 +51406,7 @@ class Fragment$Section$$PosterGridSection$items$items$item$$Short
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$PosterGridSection$items$items$item$$Short) ||
+    if (other is! Fragment$Section$$PosterGridSection$items$items$item$$Short ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -51568,8 +51548,8 @@ class Fragment$Section$$PosterGridSection$items$items$item$$Person
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$PosterGridSection$items$items$item$$Person) ||
+    if (other
+            is! Fragment$Section$$PosterGridSection$items$items$item$$Person ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -51759,7 +51739,7 @@ class Fragment$Section$$IconGridSection
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$IconGridSection) ||
+    if (other is! Fragment$Section$$IconGridSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -52026,7 +52006,7 @@ class Fragment$Section$$IconGridSection$metadata
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$IconGridSection$metadata) ||
+    if (other is! Fragment$Section$$IconGridSection$metadata ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -52245,7 +52225,7 @@ class Fragment$Section$$IconGridSection$metadata$page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$IconGridSection$metadata$page) ||
+    if (other is! Fragment$Section$$IconGridSection$metadata$page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -52397,7 +52377,7 @@ class Fragment$Section$$IconGridSection$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$IconGridSection$items) ||
+    if (other is! Fragment$Section$$IconGridSection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -52603,7 +52583,7 @@ class Fragment$Section$$IconGridSection$items$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$IconGridSection$items$items) ||
+    if (other is! Fragment$Section$$IconGridSection$items$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -52801,7 +52781,7 @@ class Fragment$Section$$IconGridSection$items$items$item
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$IconGridSection$items$items$item) ||
+    if (other is! Fragment$Section$$IconGridSection$items$items$item ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -53180,8 +53160,7 @@ class Fragment$Section$$IconGridSection$items$items$item$$Episode
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$IconGridSection$items$items$item$$Episode) ||
+    if (other is! Fragment$Section$$IconGridSection$items$items$item$$Episode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -53436,8 +53415,8 @@ class Fragment$Section$$IconGridSection$items$items$item$$Episode$season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$IconGridSection$items$items$item$$Episode$season) ||
+    if (other
+            is! Fragment$Section$$IconGridSection$items$items$item$$Episode$season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -53611,8 +53590,8 @@ class Fragment$Section$$IconGridSection$items$items$item$$Episode$season$show
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$IconGridSection$items$items$item$$Episode$season$show) ||
+    if (other
+            is! Fragment$Section$$IconGridSection$items$items$item$$Episode$season$show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -53791,7 +53770,7 @@ class Fragment$Section$$IconGridSection$items$items$item$$Show
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$IconGridSection$items$items$item$$Show) ||
+    if (other is! Fragment$Section$$IconGridSection$items$items$item$$Show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -53983,8 +53962,8 @@ class Fragment$Section$$IconGridSection$items$items$item$$Show$defaultEpisode
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$IconGridSection$items$items$item$$Show$defaultEpisode) ||
+    if (other
+            is! Fragment$Section$$IconGridSection$items$items$item$$Show$defaultEpisode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -54117,8 +54096,7 @@ class Fragment$Section$$IconGridSection$items$items$item$$Season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$IconGridSection$items$items$item$$Season) ||
+    if (other is! Fragment$Section$$IconGridSection$items$items$item$$Season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -54243,7 +54221,7 @@ class Fragment$Section$$IconGridSection$items$items$item$$Page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$IconGridSection$items$items$item$$Page) ||
+    if (other is! Fragment$Section$$IconGridSection$items$items$item$$Page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -54387,7 +54365,7 @@ class Fragment$Section$$IconGridSection$items$items$item$$Link
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$IconGridSection$items$items$item$$Link) ||
+    if (other is! Fragment$Section$$IconGridSection$items$items$item$$Link ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -54515,8 +54493,8 @@ class Fragment$Section$$IconGridSection$items$items$item$$StudyTopic
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$IconGridSection$items$items$item$$StudyTopic) ||
+    if (other
+            is! Fragment$Section$$IconGridSection$items$items$item$$StudyTopic ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -54643,7 +54621,7 @@ class Fragment$Section$$IconGridSection$items$items$item$$Game
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$IconGridSection$items$items$item$$Game) ||
+    if (other is! Fragment$Section$$IconGridSection$items$items$item$$Game ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -54787,8 +54765,8 @@ class Fragment$Section$$IconGridSection$items$items$item$$Playlist
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$IconGridSection$items$items$item$$Playlist) ||
+    if (other
+            is! Fragment$Section$$IconGridSection$items$items$item$$Playlist ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -54930,7 +54908,7 @@ class Fragment$Section$$IconGridSection$items$items$item$$Short
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$IconGridSection$items$items$item$$Short) ||
+    if (other is! Fragment$Section$$IconGridSection$items$items$item$$Short ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -55072,8 +55050,7 @@ class Fragment$Section$$IconGridSection$items$items$item$$Person
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$IconGridSection$items$items$item$$Person) ||
+    if (other is! Fragment$Section$$IconGridSection$items$items$item$$Person ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -55250,7 +55227,7 @@ class Fragment$Section$$IconSection
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$IconSection) ||
+    if (other is! Fragment$Section$$IconSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -55505,7 +55482,7 @@ class Fragment$Section$$IconSection$metadata
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$IconSection$metadata) ||
+    if (other is! Fragment$Section$$IconSection$metadata ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -55724,7 +55701,7 @@ class Fragment$Section$$IconSection$metadata$page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$IconSection$metadata$page) ||
+    if (other is! Fragment$Section$$IconSection$metadata$page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -55873,7 +55850,7 @@ class Fragment$Section$$IconSection$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$IconSection$items) ||
+    if (other is! Fragment$Section$$IconSection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -56089,7 +56066,7 @@ class Fragment$Section$$LabelSection
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$LabelSection) ||
+    if (other is! Fragment$Section$$LabelSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -56345,7 +56322,7 @@ class Fragment$Section$$LabelSection$metadata
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$LabelSection$metadata) ||
+    if (other is! Fragment$Section$$LabelSection$metadata ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -56564,7 +56541,7 @@ class Fragment$Section$$LabelSection$metadata$page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$LabelSection$metadata$page) ||
+    if (other is! Fragment$Section$$LabelSection$metadata$page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -56713,7 +56690,7 @@ class Fragment$Section$$LabelSection$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$LabelSection$items) ||
+    if (other is! Fragment$Section$$LabelSection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -56929,7 +56906,7 @@ class Fragment$Section$$AvatarSection
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$AvatarSection) ||
+    if (other is! Fragment$Section$$AvatarSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -57185,7 +57162,7 @@ class Fragment$Section$$AvatarSection$metadata
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$AvatarSection$metadata) ||
+    if (other is! Fragment$Section$$AvatarSection$metadata ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -57404,7 +57381,7 @@ class Fragment$Section$$AvatarSection$metadata$page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$AvatarSection$metadata$page) ||
+    if (other is! Fragment$Section$$AvatarSection$metadata$page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -57554,7 +57531,7 @@ class Fragment$Section$$AvatarSection$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$AvatarSection$items) ||
+    if (other is! Fragment$Section$$AvatarSection$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -57783,7 +57760,7 @@ class Fragment$Section$$WebSection implements Fragment$Section {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$WebSection) ||
+    if (other is! Fragment$Section$$WebSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -57996,7 +57973,7 @@ class Fragment$Section$$MessageSection implements Fragment$Section {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$MessageSection) ||
+    if (other is! Fragment$Section$$MessageSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -58193,7 +58170,7 @@ class Fragment$Section$$MessageSection$messages {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$MessageSection$messages) ||
+    if (other is! Fragment$Section$$MessageSection$messages ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -58359,7 +58336,7 @@ class Fragment$Section$$MessageSection$messages$style {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$MessageSection$messages$style) ||
+    if (other is! Fragment$Section$$MessageSection$messages$style ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -58519,8 +58496,8 @@ class Fragment$Section$$CardListSection$items$items$item$$StudyTopic$images
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$CardListSection$items$items$item$$StudyTopic$images) ||
+    if (other
+            is! Fragment$Section$$CardListSection$items$items$item$$StudyTopic$images ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -58683,8 +58660,8 @@ class Fragment$Section$$CardListSection$items$items$item$$StudyTopic$lessonsProg
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$CardListSection$items$items$item$$StudyTopic$lessonsProgress) ||
+    if (other
+            is! Fragment$Section$$CardListSection$items$items$item$$StudyTopic$lessonsProgress ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -58849,8 +58826,8 @@ class Fragment$Section$$CardSection$items$items$item$$StudyTopic$images
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$CardSection$items$items$item$$StudyTopic$images) ||
+    if (other
+            is! Fragment$Section$$CardSection$items$items$item$$StudyTopic$images ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -59010,8 +58987,8 @@ class Fragment$Section$$CardSection$items$items$item$$StudyTopic$lessonsProgress
     if (identical(this, other)) {
       return true;
     }
-    if (!(other
-            is Fragment$Section$$CardSection$items$items$item$$StudyTopic$lessonsProgress) ||
+    if (other
+            is! Fragment$Section$$CardSection$items$items$item$$StudyTopic$lessonsProgress ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -59184,7 +59161,7 @@ class Fragment$Section$$PageDetailsSection implements Fragment$Section {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$PageDetailsSection) ||
+    if (other is! Fragment$Section$$PageDetailsSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -59356,7 +59333,7 @@ class Fragment$Section$$AchievementSection implements Fragment$Section {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Section$$AchievementSection) ||
+    if (other is! Fragment$Section$$AchievementSection ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -59547,7 +59524,7 @@ class Fragment$CardItem implements Fragment$ItemSectionItem {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$CardItem) || runtimeType != other.runtimeType) {
+    if (other is! Fragment$CardItem || runtimeType != other.runtimeType) {
       return false;
     }
     final l$id = id;
@@ -59940,8 +59917,7 @@ class Fragment$CardItem$item implements Fragment$ItemSectionItem$item {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$CardItem$item) ||
-        runtimeType != other.runtimeType) {
+    if (other is! Fragment$CardItem$item || runtimeType != other.runtimeType) {
       return false;
     }
     final l$$__typename = $__typename;
@@ -60261,7 +60237,7 @@ class Fragment$CardItem$item$$Episode
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$CardItem$item$$Episode) ||
+    if (other is! Fragment$CardItem$item$$Episode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -60493,7 +60469,7 @@ class Fragment$CardItem$item$$Episode$season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$CardItem$item$$Episode$season) ||
+    if (other is! Fragment$CardItem$item$$Episode$season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -60644,7 +60620,7 @@ class Fragment$CardItem$item$$Episode$season$show
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$CardItem$item$$Episode$season$show) ||
+    if (other is! Fragment$CardItem$item$$Episode$season$show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -60802,7 +60778,7 @@ class Fragment$CardItem$item$$Show
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$CardItem$item$$Show) ||
+    if (other is! Fragment$CardItem$item$$Show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -60974,7 +60950,7 @@ class Fragment$CardItem$item$$Show$defaultEpisode
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$CardItem$item$$Show$defaultEpisode) ||
+    if (other is! Fragment$CardItem$item$$Show$defaultEpisode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -61085,7 +61061,7 @@ class Fragment$CardItem$item$$Season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$CardItem$item$$Season) ||
+    if (other is! Fragment$CardItem$item$$Season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -61195,7 +61171,7 @@ class Fragment$CardItem$item$$Page
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$CardItem$item$$Page) ||
+    if (other is! Fragment$CardItem$item$$Page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -61324,7 +61300,7 @@ class Fragment$CardItem$item$$Link
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$CardItem$item$$Link) ||
+    if (other is! Fragment$CardItem$item$$Link ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -61492,7 +61468,7 @@ class Fragment$CardItem$item$$StudyTopic
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$CardItem$item$$StudyTopic) ||
+    if (other is! Fragment$CardItem$item$$StudyTopic ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -61708,7 +61684,7 @@ class Fragment$CardItem$item$$Game
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$CardItem$item$$Game) ||
+    if (other is! Fragment$CardItem$item$$Game ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -61837,7 +61813,7 @@ class Fragment$CardItem$item$$Playlist
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$CardItem$item$$Playlist) ||
+    if (other is! Fragment$CardItem$item$$Playlist ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -61964,7 +61940,7 @@ class Fragment$CardItem$item$$Short
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$CardItem$item$$Short) ||
+    if (other is! Fragment$CardItem$item$$Short ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -62091,7 +62067,7 @@ class Fragment$CardItem$item$$Person
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$CardItem$item$$Person) ||
+    if (other is! Fragment$CardItem$item$$Person ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -62224,7 +62200,7 @@ class Fragment$CardItem$item$$StudyTopic$images {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$CardItem$item$$StudyTopic$images) ||
+    if (other is! Fragment$CardItem$item$$StudyTopic$images ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -62369,7 +62345,7 @@ class Fragment$CardItem$item$$StudyTopic$lessonsProgress {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$CardItem$item$$StudyTopic$lessonsProgress) ||
+    if (other is! Fragment$CardItem$item$$StudyTopic$lessonsProgress ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -62532,7 +62508,7 @@ class Variables$Query$Page {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Variables$Query$Page) || runtimeType != other.runtimeType) {
+    if (other is! Variables$Query$Page || runtimeType != other.runtimeType) {
       return false;
     }
     final l$code = code;
@@ -62671,7 +62647,7 @@ class Query$Page {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$Page) || runtimeType != other.runtimeType) {
+    if (other is! Query$Page || runtimeType != other.runtimeType) {
       return false;
     }
     final l$page = page;
@@ -63099,7 +63075,7 @@ class Query$Page$page {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$Page$page) || runtimeType != other.runtimeType) {
+    if (other is! Query$Page$page || runtimeType != other.runtimeType) {
       return false;
     }
     final l$code = code;
@@ -63256,7 +63232,7 @@ class Query$Page$page$sections {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$Page$page$sections) ||
+    if (other is! Query$Page$page$sections ||
         runtimeType != other.runtimeType) {
       return false;
     }

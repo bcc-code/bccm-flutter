@@ -187,16 +187,17 @@ class TrackModelRelationBuilder
   _$TrackModelRelation _build() {
     final _$result = _$v ??
         new _$TrackModelRelation._(
-            type: type,
-            comment: comment,
-            name: name,
-            timestamp: timestamp,
-            id: id,
-            url: url,
-            book: book,
-            chapter: chapter,
-            verse: verse,
-            hasListened: hasListened);
+          type: type,
+          comment: comment,
+          name: name,
+          timestamp: timestamp,
+          id: id,
+          url: url,
+          book: book,
+          chapter: chapter,
+          verse: verse,
+          hasListened: hasListened,
+        );
     replace(_$result);
     return _$result;
   }

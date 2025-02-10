@@ -118,9 +118,10 @@ class StoreTranscriptionEditSuggestionsSuggestionBuilder
   _$StoreTranscriptionEditSuggestionsSuggestion _build() {
     final _$result = _$v ??
         new _$StoreTranscriptionEditSuggestionsSuggestion._(
-            segmentIndex: segmentIndex,
-            originalText: originalText,
-            newText: newText);
+          segmentIndex: segmentIndex,
+          originalText: originalText,
+          newText: newText,
+        );
     replace(_$result);
     return _$result;
   }

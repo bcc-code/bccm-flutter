@@ -92,7 +92,11 @@ class TrackReferenceBuilder
   TrackReference build() => _build();
 
   _$TrackReference _build() {
-    final _$result = _$v ?? new _$TrackReference._(id: id, language: language);
+    final _$result = _$v ??
+        new _$TrackReference._(
+          id: id,
+          language: language,
+        );
     replace(_$result);
     return _$result;
   }

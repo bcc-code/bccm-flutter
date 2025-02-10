@@ -60,7 +60,7 @@ class Fragment$Contribution {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Contribution) || runtimeType != other.runtimeType) {
+    if (other is! Fragment$Contribution || runtimeType != other.runtimeType) {
       return false;
     }
     final l$type = type;
@@ -471,7 +471,7 @@ class Fragment$Contribution$type {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Contribution$type) ||
+    if (other is! Fragment$Contribution$type ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -591,7 +591,7 @@ class Fragment$Contribution$item {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Contribution$item) ||
+    if (other is! Fragment$Contribution$item ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -840,7 +840,7 @@ class Fragment$Contribution$item$$Episode
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Contribution$item$$Episode) ||
+    if (other is! Fragment$Contribution$item$$Episode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1145,7 +1145,7 @@ class Fragment$Contribution$item$$Chapter
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Contribution$item$$Chapter) ||
+    if (other is! Fragment$Contribution$item$$Chapter ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1435,7 +1435,7 @@ class Fragment$Contribution$item$$Chapter$episode
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Contribution$item$$Chapter$episode) ||
+    if (other is! Fragment$Contribution$item$$Chapter$episode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1697,7 +1697,7 @@ class Fragment$Contribution$item$$Chapter$episode$lessons
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Contribution$item$$Chapter$episode$lessons) ||
+    if (other is! Fragment$Contribution$item$$Chapter$episode$lessons ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1855,7 +1855,7 @@ class Fragment$Contribution$item$$Chapter$episode$season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Contribution$item$$Chapter$episode$season) ||
+    if (other is! Fragment$Contribution$item$$Chapter$episode$season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2029,7 +2029,7 @@ class Fragment$Contribution$item$$Chapter$episode$season$show
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Contribution$item$$Chapter$episode$season$show) ||
+    if (other is! Fragment$Contribution$item$$Chapter$episode$season$show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2168,7 +2168,7 @@ class Fragment$Contribution$item$$Episode$lessons
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Contribution$item$$Episode$lessons) ||
+    if (other is! Fragment$Contribution$item$$Episode$lessons ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2309,7 +2309,7 @@ class Fragment$Contribution$item$$Episode$season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Contribution$item$$Episode$season) ||
+    if (other is! Fragment$Contribution$item$$Episode$season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2461,7 +2461,7 @@ class Fragment$Contribution$item$$Episode$season$show
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Contribution$item$$Episode$season$show) ||
+    if (other is! Fragment$Contribution$item$$Episode$season$show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2615,7 +2615,7 @@ class Fragment$ContributionItemId {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ContributionItemId) ||
+    if (other is! Fragment$ContributionItemId ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2917,7 +2917,7 @@ class Fragment$ContributionItemId$$Playlist
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ContributionItemId$$Playlist) ||
+    if (other is! Fragment$ContributionItemId$$Playlist ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -3042,7 +3042,7 @@ class Fragment$ContributionItemId$$Game implements Fragment$ContributionItemId {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ContributionItemId$$Game) ||
+    if (other is! Fragment$ContributionItemId$$Game ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -3167,7 +3167,7 @@ class Fragment$ContributionItemId$$Season
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ContributionItemId$$Season) ||
+    if (other is! Fragment$ContributionItemId$$Season ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -3293,7 +3293,7 @@ class Fragment$ContributionItemId$$StudyTopic
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ContributionItemId$$StudyTopic) ||
+    if (other is! Fragment$ContributionItemId$$StudyTopic ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -3419,7 +3419,7 @@ class Fragment$ContributionItemId$$Short
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ContributionItemId$$Short) ||
+    if (other is! Fragment$ContributionItemId$$Short ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -3545,7 +3545,7 @@ class Fragment$ContributionItemId$$Episode
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ContributionItemId$$Episode) ||
+    if (other is! Fragment$ContributionItemId$$Episode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -3671,7 +3671,7 @@ class Fragment$ContributionItemId$$Chapter
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ContributionItemId$$Chapter) ||
+    if (other is! Fragment$ContributionItemId$$Chapter ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -3796,7 +3796,7 @@ class Fragment$ContributionItemId$$Show implements Fragment$ContributionItemId {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$ContributionItemId$$Show) ||
+    if (other is! Fragment$ContributionItemId$$Show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -3913,7 +3913,7 @@ class Variables$Query$GetPerson {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Variables$Query$GetPerson) ||
+    if (other is! Variables$Query$GetPerson ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -4016,7 +4016,7 @@ class Query$GetPerson {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetPerson) || runtimeType != other.runtimeType) {
+    if (other is! Query$GetPerson || runtimeType != other.runtimeType) {
       return false;
     }
     final l$person = person;
@@ -4449,8 +4449,7 @@ class Query$GetPerson$person {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetPerson$person) ||
-        runtimeType != other.runtimeType) {
+    if (other is! Query$GetPerson$person || runtimeType != other.runtimeType) {
       return false;
     }
     final l$id = id;
@@ -4648,7 +4647,7 @@ class Query$GetPerson$person$contributionContentTypes {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetPerson$person$contributionContentTypes) ||
+    if (other is! Query$GetPerson$person$contributionContentTypes ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -4808,7 +4807,7 @@ class Query$GetPerson$person$contributionContentTypes$type {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetPerson$person$contributionContentTypes$type) ||
+    if (other is! Query$GetPerson$person$contributionContentTypes$type ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -4965,7 +4964,7 @@ class Variables$Query$GetRandomContribution {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Variables$Query$GetRandomContribution) ||
+    if (other is! Variables$Query$GetRandomContribution ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -5109,7 +5108,7 @@ class Query$GetRandomContribution {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetRandomContribution) ||
+    if (other is! Query$GetRandomContribution ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -5520,7 +5519,7 @@ class Query$GetRandomContribution$person {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetRandomContribution$person) ||
+    if (other is! Query$GetRandomContribution$person ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -5664,7 +5663,7 @@ class Query$GetRandomContribution$person$contributions {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetRandomContribution$person$contributions) ||
+    if (other is! Query$GetRandomContribution$person$contributions ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -5861,7 +5860,7 @@ class Variables$Query$GetContributions {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Variables$Query$GetContributions) ||
+    if (other is! Variables$Query$GetContributions ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -6047,8 +6046,7 @@ class Query$GetContributions {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetContributions) ||
-        runtimeType != other.runtimeType) {
+    if (other is! Query$GetContributions || runtimeType != other.runtimeType) {
       return false;
     }
     final l$person = person;
@@ -6503,7 +6501,7 @@ class Query$GetContributions$person {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetContributions$person) ||
+    if (other is! Query$GetContributions$person ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -6670,7 +6668,7 @@ class Query$GetContributions$person$contributions {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetContributions$person$contributions) ||
+    if (other is! Query$GetContributions$person$contributions ||
         runtimeType != other.runtimeType) {
       return false;
     }

@@ -100,7 +100,9 @@ class ProjectRulesQueryRulesBuilder
     try {
       _$result = _$v ??
           new _$ProjectRulesQueryRules._(
-              pageTitle: pageTitle, sections: _sections?.build());
+            pageTitle: pageTitle,
+            sections: _sections?.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {

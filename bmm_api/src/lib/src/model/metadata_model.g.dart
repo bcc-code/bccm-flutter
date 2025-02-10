@@ -103,7 +103,10 @@ class MetadataModelBuilder
   _$MetadataModel _build() {
     final _$result = _$v ??
         new _$MetadataModel._(
-            title: title, description: description, coverUrl: coverUrl);
+          title: title,
+          description: description,
+          coverUrl: coverUrl,
+        );
     replace(_$result);
     return _$result;
   }

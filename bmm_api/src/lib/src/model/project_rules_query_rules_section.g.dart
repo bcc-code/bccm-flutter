@@ -96,8 +96,11 @@ class ProjectRulesQueryRulesSectionBuilder
   ProjectRulesQueryRulesSection build() => _build();
 
   _$ProjectRulesQueryRulesSection _build() {
-    final _$result =
-        _$v ?? new _$ProjectRulesQueryRulesSection._(title: title, text: text);
+    final _$result = _$v ??
+        new _$ProjectRulesQueryRulesSection._(
+          title: title,
+          text: text,
+        );
     replace(_$result);
     return _$result;
   }

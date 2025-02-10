@@ -78,7 +78,7 @@ class Fragment$PlayableMediaItemShort {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$PlayableMediaItemShort) ||
+    if (other is! Fragment$PlayableMediaItemShort ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -421,7 +421,7 @@ class Fragment$Short implements Fragment$PlayableMediaItemShort {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Short) || runtimeType != other.runtimeType) {
+    if (other is! Fragment$Short || runtimeType != other.runtimeType) {
       return false;
     }
     final l$id = id;
@@ -838,7 +838,7 @@ class Fragment$Short$source {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Short$source) || runtimeType != other.runtimeType) {
+    if (other is! Fragment$Short$source || runtimeType != other.runtimeType) {
       return false;
     }
     final l$item = item;
@@ -981,7 +981,7 @@ class Fragment$Short$source$item {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Short$source$item) ||
+    if (other is! Fragment$Short$source$item ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1127,7 +1127,7 @@ class Fragment$Short$source$item$$Episode
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Short$source$item$$Episode) ||
+    if (other is! Fragment$Short$source$item$$Episode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1286,7 +1286,7 @@ class Variables$Query$getShorts {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Variables$Query$getShorts) ||
+    if (other is! Variables$Query$getShorts ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1432,7 +1432,7 @@ class Query$getShorts {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$getShorts) || runtimeType != other.runtimeType) {
+    if (other is! Query$getShorts || runtimeType != other.runtimeType) {
       return false;
     }
     final l$shorts = shorts;
@@ -1843,8 +1843,7 @@ class Query$getShorts$shorts {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$getShorts$shorts) ||
-        runtimeType != other.runtimeType) {
+    if (other is! Query$getShorts$shorts || runtimeType != other.runtimeType) {
       return false;
     }
     final l$cursor = cursor;
@@ -2006,7 +2005,7 @@ class Variables$Query$getShort {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Variables$Query$getShort) ||
+    if (other is! Variables$Query$getShort ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2108,7 +2107,7 @@ class Query$getShort {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$getShort) || runtimeType != other.runtimeType) {
+    if (other is! Query$getShort || runtimeType != other.runtimeType) {
       return false;
     }
     final l$short = short;
@@ -2448,7 +2447,7 @@ class Variables$Mutation$setShortProgress {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Variables$Mutation$setShortProgress) ||
+    if (other is! Variables$Mutation$setShortProgress ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2573,7 +2572,7 @@ class Mutation$setShortProgress {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Mutation$setShortProgress) ||
+    if (other is! Mutation$setShortProgress ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2985,7 +2984,7 @@ class Variables$Query$getShortStreams {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Variables$Query$getShortStreams) ||
+    if (other is! Variables$Query$getShortStreams ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -3089,7 +3088,7 @@ class Query$getShortStreams {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$getShortStreams) || runtimeType != other.runtimeType) {
+    if (other is! Query$getShortStreams || runtimeType != other.runtimeType) {
       return false;
     }
     final l$short = short;
@@ -3446,7 +3445,7 @@ class Query$getShortStreams$short {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$getShortStreams$short) ||
+    if (other is! Query$getShortStreams$short ||
         runtimeType != other.runtimeType) {
       return false;
     }

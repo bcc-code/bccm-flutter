@@ -53,7 +53,7 @@ class Input$LegacyIDLookupOptions {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Input$LegacyIDLookupOptions) ||
+    if (other is! Input$LegacyIDLookupOptions ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -220,7 +220,7 @@ class Input$EpisodeContext {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Input$EpisodeContext) || runtimeType != other.runtimeType) {
+    if (other is! Input$EpisodeContext || runtimeType != other.runtimeType) {
       return false;
     }
     final l$collectionId = collectionId;

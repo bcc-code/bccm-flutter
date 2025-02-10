@@ -185,8 +185,9 @@ class IAlbumContributorPodcastPlaylistOrTrackBuilder
   _$IAlbumContributorPodcastPlaylistOrTrack _build() {
     final _$result = _$v ??
         new _$IAlbumContributorPodcastPlaylistOrTrack._(
-            oneOf: BuiltValueNullFieldError.checkNotNull(
-                oneOf, r'IAlbumContributorPodcastPlaylistOrTrack', 'oneOf'));
+          oneOf: BuiltValueNullFieldError.checkNotNull(
+              oneOf, r'IAlbumContributorPodcastPlaylistOrTrack', 'oneOf'),
+        );
     replace(_$result);
     return _$result;
   }

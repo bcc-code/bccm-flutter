@@ -95,7 +95,10 @@ class ApiOverviewModelStatusBuilder
 
   _$ApiOverviewModelStatus _build() {
     final _$result = _$v ??
-        new _$ApiOverviewModelStatus._(database: database, search: search);
+        new _$ApiOverviewModelStatus._(
+          database: database,
+          search: search,
+        );
     replace(_$result);
     return _$result;
   }

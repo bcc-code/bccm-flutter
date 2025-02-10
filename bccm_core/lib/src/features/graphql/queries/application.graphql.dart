@@ -45,7 +45,7 @@ class Variables$Query$Application {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Variables$Query$Application) ||
+    if (other is! Variables$Query$Application ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -154,7 +154,7 @@ class Query$Application {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$Application) || runtimeType != other.runtimeType) {
+    if (other is! Query$Application || runtimeType != other.runtimeType) {
       return false;
     }
     final l$application = application;
@@ -626,7 +626,7 @@ class Query$Application$application {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$Application$application) ||
+    if (other is! Query$Application$application ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -846,7 +846,7 @@ class Query$Application$application$page {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$Application$application$page) ||
+    if (other is! Query$Application$application$page ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -973,7 +973,7 @@ class Query$Application$application$searchPage {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$Application$application$searchPage) ||
+    if (other is! Query$Application$application$searchPage ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1100,7 +1100,7 @@ class Query$Application$application$gamesPage {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$Application$application$gamesPage) ||
+    if (other is! Query$Application$application$gamesPage ||
         runtimeType != other.runtimeType) {
       return false;
     }

@@ -35,11 +35,21 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(DocumentListIAllDocumentModels.serializer)
       ..add(DocumentListPodcastModel.serializer)
       ..add(ForbildePoints.serializer)
+      ..add(GetFraKaareStatisticsChurchStatistics.serializer)
+      ..add(GetFraKaareStatisticsChurchStatisticsSnapshot.serializer)
+      ..add(GetFraKaareStatisticsResponse.serializer)
+      ..add(GetProjectStandingsChurch.serializer)
+      ..add(GetProjectStandingsProjectStandings.serializer)
       ..add(GetTopSongsCollectionModel.serializer)
       ..add(GetTopSongsCollectionModelTrackAndCount.serializer)
       ..add(GetTrackCollectionModel.serializer)
       ..add(GetYearInReviewOverviewSlide.serializer)
+      ..add(GibraltarProjectBox.serializer)
+      ..add(GibraltarProjectBoxTypeEnum.serializer)
+      ..add(HandleBccmAnswerCommandBccmAnswer.serializer)
       ..add(Highlighting.serializer)
+      ..add(HvheProjectBox.serializer)
+      ..add(HvheProjectBoxTypeEnum.serializer)
       ..add(IAchievementCollectionOrChapterHeader.serializer)
       ..add(IAlbumContributorPodcastPlaylistOrTrack.serializer)
       ..add(IAlbumOrChapterHeader.serializer)
@@ -52,6 +62,8 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(LanguageEnum.serializer)
       ..add(ListenedStatus.serializer)
       ..add(ListeningEvent.serializer)
+      ..add(Lyrics.serializer)
+      ..add(LyricsVerse.serializer)
       ..add(MediaTypeEnum.serializer)
       ..add(MetadataModel.serializer)
       ..add(PlaylistModel.serializer)
@@ -59,6 +71,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(PodcastModel.serializer)
       ..add(PodcastModelTypeEnum.serializer)
       ..add(ProblemDetails.serializer)
+      ..add(ProcessWatchedCommandEvent.serializer)
       ..add(ProjectBox.serializer)
       ..add(ProjectBoxTypeEnum.serializer)
       ..add(ProjectChurchStatisticsQueryChurchStatistics.serializer)
@@ -66,6 +79,11 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(ProjectRulesQueryRules.serializer)
       ..add(ProjectRulesQueryRulesSection.serializer)
       ..add(PublishedFilter.serializer)
+      ..add(QuestionAnswer.serializer)
+      ..add(QuestionModel.serializer)
+      ..add(QuestionModelTypeEnum.serializer)
+      ..add(QuestionQuestionStyle.serializer)
+      ..add(QuestionShortAnswer.serializer)
       ..add(RecommendationModel.serializer)
       ..add(RecommendationModelTypeEnum.serializer)
       ..add(ResourceAvailability.serializer)
@@ -76,6 +94,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(SectionHeaderModel.serializer)
       ..add(SectionHeaderModelTypeEnum.serializer)
       ..add(StoreProjectQuestionQuestionHolder.serializer)
+      ..add(StoreQuestionResponseCommand.serializer)
       ..add(StoreTranscriptionEditSuggestionsSuggestion.serializer)
       ..add(StreakPoint.serializer)
       ..add(SubscriptionModel.serializer)
@@ -105,7 +124,8 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(TrackModelTypeEnum.serializer)
       ..add(TrackReference.serializer)
       ..add(TrackSubtype.serializer)
-      ..add(TrackTranslationTranscriptionSegment.serializer)
+      ..add(TranscriptionSegment.serializer)
+      ..add(TranscriptionTranscriptionSource.serializer)
       ..add(UpdateTrackCollectionCommand.serializer)
       ..add(UserModel.serializer)
       ..add(YearInReviewModel.serializer)
@@ -119,6 +139,34 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(AchievementModel)]),
           () => new ListBuilder<AchievementModel>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(AchievementModel)]),
+          () => new ListBuilder<AchievementModel>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(AchievementModel)]),
+          () => new ListBuilder<AchievementModel>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType(GetFraKaareStatisticsChurchStatistics)]),
+          () => new ListBuilder<GetFraKaareStatisticsChurchStatistics>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType(GetFraKaareStatisticsChurchStatistics)]),
+          () => new ListBuilder<GetFraKaareStatisticsChurchStatistics>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(GetFraKaareStatisticsChurchStatisticsSnapshot)
+          ]),
+          () =>
+              new ListBuilder<GetFraKaareStatisticsChurchStatisticsSnapshot>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(GetProjectStandingsChurch)]),
+          () => new ListBuilder<GetProjectStandingsChurch>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(GetProjectStandingsChurch)]),
+          () => new ListBuilder<GetProjectStandingsChurch>())
       ..addBuilderFactory(
           const FullType(BuiltList,
               const [const FullType(GetTopSongsCollectionModelTrackAndCount)]),
@@ -182,6 +230,13 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(
               BuiltList, const [const FullType(ProjectRulesQueryRulesSection)]),
           () => new ListBuilder<ProjectRulesQueryRulesSection>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(QuestionAnswer)]),
+          () => new ListBuilder<QuestionAnswer>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(QuestionShortAnswer)]),
+          () => new ListBuilder<QuestionShortAnswer>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(Role)]),
           () => new ListBuilder<Role>())
@@ -248,8 +303,20 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(BuiltList, const [const FullType(LanguageEnum)]),
           () => new ListBuilder<LanguageEnum>())
       ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(LanguageEnum)]),
+          () => new ListBuilder<LanguageEnum>())
+      ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(TrackModelMedium)]),
-          () => new ListBuilder<TrackModelMedium>()))
+          () => new ListBuilder<TrackModelMedium>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(int)]),
+          () => new ListBuilder<int>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(int)]),
+          () => new ListBuilder<int>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(LyricsVerse)]),
+          () => new ListBuilder<LyricsVerse>()))
     .build();
 
 // ignore_for_file: deprecated_member_use_from_same_package,type=lint

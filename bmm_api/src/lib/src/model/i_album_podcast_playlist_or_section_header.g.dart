@@ -174,8 +174,9 @@ class IAlbumPodcastPlaylistOrSectionHeaderBuilder
   _$IAlbumPodcastPlaylistOrSectionHeader _build() {
     final _$result = _$v ??
         new _$IAlbumPodcastPlaylistOrSectionHeader._(
-            oneOf: BuiltValueNullFieldError.checkNotNull(
-                oneOf, r'IAlbumPodcastPlaylistOrSectionHeader', 'oneOf'));
+          oneOf: BuiltValueNullFieldError.checkNotNull(
+              oneOf, r'IAlbumPodcastPlaylistOrSectionHeader', 'oneOf'),
+        );
     replace(_$result);
     return _$result;
   }

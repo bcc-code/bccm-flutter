@@ -160,8 +160,9 @@ class IAlbumPlaylistOrChapterHeaderBuilder
   _$IAlbumPlaylistOrChapterHeader _build() {
     final _$result = _$v ??
         new _$IAlbumPlaylistOrChapterHeader._(
-            oneOf: BuiltValueNullFieldError.checkNotNull(
-                oneOf, r'IAlbumPlaylistOrChapterHeader', 'oneOf'));
+          oneOf: BuiltValueNullFieldError.checkNotNull(
+              oneOf, r'IAlbumPlaylistOrChapterHeader', 'oneOf'),
+        );
     replace(_$result);
     return _$result;
   }

@@ -120,10 +120,11 @@ class GetYearInReviewOverviewSlideBuilder
   _$GetYearInReviewOverviewSlide _build() {
     final _$result = _$v ??
         new _$GetYearInReviewOverviewSlide._(
-            url: url,
-            subtitle: subtitle,
-            description: description,
-            color: color);
+          url: url,
+          subtitle: subtitle,
+          description: description,
+          color: color,
+        );
     replace(_$result);
     return _$result;
   }

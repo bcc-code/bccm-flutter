@@ -48,7 +48,7 @@ class Query$me {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$me) || runtimeType != other.runtimeType) {
+    if (other is! Query$me || runtimeType != other.runtimeType) {
       return false;
     }
     final l$me = me;
@@ -441,7 +441,7 @@ class Query$me$me {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$me$me) || runtimeType != other.runtimeType) {
+    if (other is! Query$me$me || runtimeType != other.runtimeType) {
       return false;
     }
     final l$id = id;
@@ -630,7 +630,7 @@ class Query$me$me$analytics {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$me$me$analytics) || runtimeType != other.runtimeType) {
+    if (other is! Query$me$me$analytics || runtimeType != other.runtimeType) {
       return false;
     }
     final l$anonymousId = anonymousId;
@@ -753,7 +753,7 @@ class Mutation$sendVerificationEmail {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Mutation$sendVerificationEmail) ||
+    if (other is! Mutation$sendVerificationEmail ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1127,7 +1127,7 @@ class Variables$Mutation$updateUserMetadata {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Variables$Mutation$updateUserMetadata) ||
+    if (other is! Variables$Mutation$updateUserMetadata ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1252,7 +1252,7 @@ class Mutation$updateUserMetadata {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Mutation$updateUserMetadata) ||
+    if (other is! Mutation$updateUserMetadata ||
         runtimeType != other.runtimeType) {
       return false;
     }

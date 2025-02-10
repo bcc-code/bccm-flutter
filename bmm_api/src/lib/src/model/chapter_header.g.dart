@@ -153,11 +153,11 @@ class ChapterHeaderBuilder
   _$ChapterHeader _build() {
     final _$result = _$v ??
         new _$ChapterHeader._(
-            id: BuiltValueNullFieldError.checkNotNull(
-                id, r'ChapterHeader', 'id'),
-            type: BuiltValueNullFieldError.checkNotNull(
-                type, r'ChapterHeader', 'type'),
-            title: title);
+          id: BuiltValueNullFieldError.checkNotNull(id, r'ChapterHeader', 'id'),
+          type: BuiltValueNullFieldError.checkNotNull(
+              type, r'ChapterHeader', 'type'),
+          title: title,
+        );
     replace(_$result);
     return _$result;
   }

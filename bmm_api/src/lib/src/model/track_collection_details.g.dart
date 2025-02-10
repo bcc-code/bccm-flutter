@@ -161,16 +161,17 @@ class TrackCollectionDetailsBuilder
   _$TrackCollectionDetails _build() {
     final _$result = _$v ??
         new _$TrackCollectionDetails._(
-            id: BuiltValueNullFieldError.checkNotNull(
-                id, r'TrackCollectionDetails', 'id'),
-            name: name,
-            trackCount: trackCount,
-            followerCount: BuiltValueNullFieldError.checkNotNull(
-                followerCount, r'TrackCollectionDetails', 'followerCount'),
-            authorName: authorName,
-            canEdit: BuiltValueNullFieldError.checkNotNull(
-                canEdit, r'TrackCollectionDetails', 'canEdit'),
-            useLikeIcon: useLikeIcon);
+          id: BuiltValueNullFieldError.checkNotNull(
+              id, r'TrackCollectionDetails', 'id'),
+          name: name,
+          trackCount: trackCount,
+          followerCount: BuiltValueNullFieldError.checkNotNull(
+              followerCount, r'TrackCollectionDetails', 'followerCount'),
+          authorName: authorName,
+          canEdit: BuiltValueNullFieldError.checkNotNull(
+              canEdit, r'TrackCollectionDetails', 'canEdit'),
+          useLikeIcon: useLikeIcon,
+        );
     replace(_$result);
     return _$result;
   }

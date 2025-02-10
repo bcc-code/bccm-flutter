@@ -313,26 +313,27 @@ class CreateTrackPlayedEventsCommandEventBuilder
     try {
       _$result = _$v ??
           new _$CreateTrackPlayedEventsCommandEvent._(
-              id: id,
-              personId: personId,
-              trackId: trackId,
-              uniqueSecondsListened: uniqueSecondsListened,
-              status: status,
-              percentage: percentage,
-              trackLength: trackLength,
-              timestampStart: timestampStart,
-              timestampEnd: timestampEnd,
-              spentTime: spentTime,
-              typeOfTrack: typeOfTrack,
-              availability: availability,
-              albumId: albumId,
-              tags: _tags?.build(),
-              sentAfterStartup: sentAfterStartup,
-              language: language,
-              playbackOrigin: playbackOrigin,
-              lastPosition: lastPosition,
-              adjustedPlaybackSpeed: adjustedPlaybackSpeed,
-              client: client);
+            id: id,
+            personId: personId,
+            trackId: trackId,
+            uniqueSecondsListened: uniqueSecondsListened,
+            status: status,
+            percentage: percentage,
+            trackLength: trackLength,
+            timestampStart: timestampStart,
+            timestampEnd: timestampEnd,
+            spentTime: spentTime,
+            typeOfTrack: typeOfTrack,
+            availability: availability,
+            albumId: albumId,
+            tags: _tags?.build(),
+            sentAfterStartup: sentAfterStartup,
+            language: language,
+            playbackOrigin: playbackOrigin,
+            lastPosition: lastPosition,
+            adjustedPlaybackSpeed: adjustedPlaybackSpeed,
+            client: client,
+          );
     } catch (_) {
       late String _$failedField;
       try {

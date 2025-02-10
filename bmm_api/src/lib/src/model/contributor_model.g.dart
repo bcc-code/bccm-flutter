@@ -219,16 +219,17 @@ class ContributorModelBuilder
     try {
       _$result = _$v ??
           new _$ContributorModel._(
-              id: BuiltValueNullFieldError.checkNotNull(
-                  id, r'ContributorModel', 'id'),
-              type: BuiltValueNullFieldError.checkNotNull(
-                  type, r'ContributorModel', 'type'),
-              isVisible: isVisible,
-              name: name,
-              cover: cover,
-              meta: _meta?.build(),
-              interpretReferences: interpretReferences,
-              otherReferences: otherReferences);
+            id: BuiltValueNullFieldError.checkNotNull(
+                id, r'ContributorModel', 'id'),
+            type: BuiltValueNullFieldError.checkNotNull(
+                type, r'ContributorModel', 'type'),
+            isVisible: isVisible,
+            name: name,
+            cover: cover,
+            meta: _meta?.build(),
+            interpretReferences: interpretReferences,
+            otherReferences: otherReferences,
+          );
     } catch (_) {
       late String _$failedField;
       try {

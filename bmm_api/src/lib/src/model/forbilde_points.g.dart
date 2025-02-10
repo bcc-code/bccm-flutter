@@ -135,11 +135,12 @@ class ForbildePointsBuilder
     try {
       _$result = _$v ??
           new _$ForbildePoints._(
-              streak: _streak?.build(),
-              days: days,
-              currentBoost: currentBoost,
-              points: points,
-              achievements: _achievements?.build());
+            streak: _streak?.build(),
+            days: days,
+            currentBoost: currentBoost,
+            points: points,
+            achievements: _achievements?.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {

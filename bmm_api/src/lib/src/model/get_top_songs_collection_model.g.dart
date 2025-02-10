@@ -143,13 +143,14 @@ class GetTopSongsCollectionModelBuilder
     try {
       _$result = _$v ??
           new _$GetTopSongsCollectionModel._(
-              type: BuiltValueNullFieldError.checkNotNull(
-                  type, r'GetTopSongsCollectionModel', 'type'),
-              id: BuiltValueNullFieldError.checkNotNull(
-                  id, r'GetTopSongsCollectionModel', 'id'),
-              pageTitle: pageTitle,
-              name: name,
-              tracks: _tracks?.build());
+            type: BuiltValueNullFieldError.checkNotNull(
+                type, r'GetTopSongsCollectionModel', 'type'),
+            id: BuiltValueNullFieldError.checkNotNull(
+                id, r'GetTopSongsCollectionModel', 'id'),
+            pageTitle: pageTitle,
+            name: name,
+            tracks: _tracks?.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {

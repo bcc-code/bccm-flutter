@@ -25,8 +25,9 @@ Name | Type | Description | Notes
 **tags** | **BuiltList&lt;String&gt;** |  | 
 **meta** | [**TrackModelTrackMeta**](TrackModelTrackMeta.md) |  | 
 **type** | **String** |  | 
-**languages** | [**BuiltList&lt;LanguageEnum&gt;**](LanguageEnum.md) |  | [optional] 
+**languages** | [**BuiltList&lt;LanguageEnum&gt;**](LanguageEnum.md) |  | 
 **language** | [**LanguageEnum**](LanguageEnum.md) |  | 
+**transcriptionLanguages** | [**BuiltList&lt;LanguageEnum&gt;**](LanguageEnum.md) |  | 
 **title** | **String** |  | [optional] 
 **publisher** | **String** |  | [optional] 
 **copyright** | **String** |  | [optional] 

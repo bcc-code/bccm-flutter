@@ -37,11 +37,19 @@ import 'package:bmm_api/src/model/document_list_i_album_playlist_or_chapter_head
 import 'package:bmm_api/src/model/document_list_i_all_document_models.dart';
 import 'package:bmm_api/src/model/document_list_podcast_model.dart';
 import 'package:bmm_api/src/model/forbilde_points.dart';
+import 'package:bmm_api/src/model/get_fra_kaare_statistics_church_statistics.dart';
+import 'package:bmm_api/src/model/get_fra_kaare_statistics_church_statistics_snapshot.dart';
+import 'package:bmm_api/src/model/get_fra_kaare_statistics_response.dart';
+import 'package:bmm_api/src/model/get_project_standings_church.dart';
+import 'package:bmm_api/src/model/get_project_standings_project_standings.dart';
 import 'package:bmm_api/src/model/get_top_songs_collection_model.dart';
 import 'package:bmm_api/src/model/get_top_songs_collection_model_track_and_count.dart';
 import 'package:bmm_api/src/model/get_track_collection_model.dart';
 import 'package:bmm_api/src/model/get_year_in_review_overview_slide.dart';
+import 'package:bmm_api/src/model/gibraltar_project_box.dart';
+import 'package:bmm_api/src/model/handle_bccm_answer_command_bccm_answer.dart';
 import 'package:bmm_api/src/model/highlighting.dart';
+import 'package:bmm_api/src/model/hvhe_project_box.dart';
 import 'package:bmm_api/src/model/i_achievement_collection_or_chapter_header.dart';
 import 'package:bmm_api/src/model/i_album_contributor_podcast_playlist_or_track.dart';
 import 'package:bmm_api/src/model/i_album_or_chapter_header.dart';
@@ -53,17 +61,24 @@ import 'package:bmm_api/src/model/info_message_model.dart';
 import 'package:bmm_api/src/model/language_enum.dart';
 import 'package:bmm_api/src/model/listened_status.dart';
 import 'package:bmm_api/src/model/listening_event.dart';
+import 'package:bmm_api/src/model/lyrics.dart';
+import 'package:bmm_api/src/model/lyrics_verse.dart';
 import 'package:bmm_api/src/model/media_type_enum.dart';
 import 'package:bmm_api/src/model/metadata_model.dart';
 import 'package:bmm_api/src/model/playlist_model.dart';
 import 'package:bmm_api/src/model/podcast_model.dart';
 import 'package:bmm_api/src/model/problem_details.dart';
+import 'package:bmm_api/src/model/process_watched_command_event.dart';
 import 'package:bmm_api/src/model/project_box.dart';
 import 'package:bmm_api/src/model/project_church_statistics_query_church_statistics.dart';
 import 'package:bmm_api/src/model/project_church_statistics_query_church_statistics_church.dart';
 import 'package:bmm_api/src/model/project_rules_query_rules.dart';
 import 'package:bmm_api/src/model/project_rules_query_rules_section.dart';
 import 'package:bmm_api/src/model/published_filter.dart';
+import 'package:bmm_api/src/model/question_answer.dart';
+import 'package:bmm_api/src/model/question_model.dart';
+import 'package:bmm_api/src/model/question_question_style.dart';
+import 'package:bmm_api/src/model/question_short_answer.dart';
 import 'package:bmm_api/src/model/recommendation_model.dart';
 import 'package:bmm_api/src/model/resource_availability.dart';
 import 'package:bmm_api/src/model/resource_type.dart';
@@ -72,6 +87,7 @@ import 'package:bmm_api/src/model/search_filter.dart';
 import 'package:bmm_api/src/model/search_results.dart';
 import 'package:bmm_api/src/model/section_header_model.dart';
 import 'package:bmm_api/src/model/store_project_question_question_holder.dart';
+import 'package:bmm_api/src/model/store_question_response_command.dart';
 import 'package:bmm_api/src/model/store_transcription_edit_suggestions_suggestion.dart';
 import 'package:bmm_api/src/model/streak_point.dart';
 import 'package:bmm_api/src/model/subscription_model.dart';
@@ -96,7 +112,8 @@ import 'package:bmm_api/src/model/track_model_track_contributor_type.dart';
 import 'package:bmm_api/src/model/track_model_track_meta.dart';
 import 'package:bmm_api/src/model/track_reference.dart';
 import 'package:bmm_api/src/model/track_subtype.dart';
-import 'package:bmm_api/src/model/track_translation_transcription_segment.dart';
+import 'package:bmm_api/src/model/transcription_segment.dart';
+import 'package:bmm_api/src/model/transcription_transcription_source.dart';
 import 'package:bmm_api/src/model/update_track_collection_command.dart';
 import 'package:bmm_api/src/model/user_model.dart';
 import 'package:bmm_api/src/model/year_in_review_model.dart';
@@ -127,11 +144,19 @@ part 'serializers.g.dart';
   DocumentListIAllDocumentModels,
   DocumentListPodcastModel,
   ForbildePoints,
+  GetFraKaareStatisticsChurchStatistics,
+  GetFraKaareStatisticsChurchStatisticsSnapshot,
+  GetFraKaareStatisticsResponse,
+  GetProjectStandingsChurch,
+  GetProjectStandingsProjectStandings,
   GetTopSongsCollectionModel,
   GetTopSongsCollectionModelTrackAndCount,
   GetTrackCollectionModel,
   GetYearInReviewOverviewSlide,
+  GibraltarProjectBox,
+  HandleBccmAnswerCommandBccmAnswer,
   Highlighting,
+  HvheProjectBox,
   IAchievementCollectionOrChapterHeader,
   IAlbumContributorPodcastPlaylistOrTrack,
   IAlbumOrChapterHeader,
@@ -143,17 +168,24 @@ part 'serializers.g.dart';
   LanguageEnum,
   ListenedStatus,
   ListeningEvent,
+  Lyrics,
+  LyricsVerse,
   MediaTypeEnum,
   MetadataModel,
   PlaylistModel,
   PodcastModel,
   ProblemDetails,
+  ProcessWatchedCommandEvent,
   ProjectBox,
   ProjectChurchStatisticsQueryChurchStatistics,
   ProjectChurchStatisticsQueryChurchStatisticsChurch,
   ProjectRulesQueryRules,
   ProjectRulesQueryRulesSection,
   PublishedFilter,
+  QuestionAnswer,
+  QuestionModel,
+  QuestionQuestionStyle,
+  QuestionShortAnswer,
   RecommendationModel,
   ResourceAvailability,
   ResourceType,
@@ -162,6 +194,7 @@ part 'serializers.g.dart';
   SearchResults,
   SectionHeaderModel,
   StoreProjectQuestionQuestionHolder,
+  StoreQuestionResponseCommand,
   StoreTranscriptionEditSuggestionsSuggestion,
   StreakPoint,
   SubscriptionModel,
@@ -186,12 +219,17 @@ part 'serializers.g.dart';
   TrackModelTrackMeta,
   TrackReference,
   TrackSubtype,
-  TrackTranslationTranscriptionSegment,
+  TranscriptionSegment,
+  TranscriptionTranscriptionSource,
   UpdateTrackCollectionCommand,
   UserModel,
   YearInReviewModel,
 ])
 Serializers serializers = (_$serializers.toBuilder()
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(HandleBccmAnswerCommandBccmAnswer)]),
+        () => ListBuilder<HandleBccmAnswerCommandBccmAnswer>(),
+      )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(StreakPoint)]),
         () => ListBuilder<StreakPoint>(),
@@ -199,6 +237,10 @@ Serializers serializers = (_$serializers.toBuilder()
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(TrackModel)]),
         () => ListBuilder<TrackModel>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(Lyrics)]),
+        () => ListBuilder<Lyrics>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(TrackSubtype)]),
@@ -217,16 +259,16 @@ Serializers serializers = (_$serializers.toBuilder()
         () => ListBuilder<CreateTrackPlayedEventsCommandEvent>(),
       )
       ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(TrackTranslationTranscriptionSegment)]),
-        () => ListBuilder<TrackTranslationTranscriptionSegment>(),
-      )
-      ..addBuilderFactory(
         const FullType(BuiltList, [FullType(AlbumModel)]),
         () => ListBuilder<AlbumModel>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(PodcastModel)]),
         () => ListBuilder<PodcastModel>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(ProcessWatchedCommandEvent)]),
+        () => ListBuilder<ProcessWatchedCommandEvent>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(AchievementModel)]),
@@ -255,6 +297,10 @@ Serializers serializers = (_$serializers.toBuilder()
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(PlaylistModel)]),
         () => ListBuilder<PlaylistModel>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(TranscriptionSegment)]),
+        () => ListBuilder<TranscriptionSegment>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(IAllDocumentModels)]),

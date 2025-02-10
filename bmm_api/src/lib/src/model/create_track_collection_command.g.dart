@@ -115,9 +115,10 @@ class CreateTrackCollectionCommandBuilder
     try {
       _$result = _$v ??
           new _$CreateTrackCollectionCommand._(
-              name: name,
-              access: _access?.build(),
-              trackReferences: _trackReferences?.build());
+            name: name,
+            access: _access?.build(),
+            trackReferences: _trackReferences?.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {

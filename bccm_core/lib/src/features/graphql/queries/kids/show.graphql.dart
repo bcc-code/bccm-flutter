@@ -83,7 +83,7 @@ class Fragment$KidsEpisodeThumbnail {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$KidsEpisodeThumbnail) ||
+    if (other is! Fragment$KidsEpisodeThumbnail ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -337,7 +337,7 @@ class Variables$Query$GetShowOverview {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Variables$Query$GetShowOverview) ||
+    if (other is! Variables$Query$GetShowOverview ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -441,7 +441,7 @@ class Query$GetShowOverview {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetShowOverview) || runtimeType != other.runtimeType) {
+    if (other is! Query$GetShowOverview || runtimeType != other.runtimeType) {
       return false;
     }
     final l$$show = $show;
@@ -890,7 +890,7 @@ class Query$GetShowOverview$show {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetShowOverview$show) ||
+    if (other is! Query$GetShowOverview$show ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1051,7 +1051,7 @@ class Query$GetShowOverview$show$seasons {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetShowOverview$show$seasons) ||
+    if (other is! Query$GetShowOverview$show$seasons ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1207,7 +1207,7 @@ class Query$GetShowOverview$show$seasons$items {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetShowOverview$show$seasons$items) ||
+    if (other is! Query$GetShowOverview$show$seasons$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1350,7 +1350,7 @@ class Query$GetShowOverview$show$seasons$items$episodes {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetShowOverview$show$seasons$items$episodes) ||
+    if (other is! Query$GetShowOverview$show$seasons$items$episodes ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1549,7 +1549,7 @@ class Query$GetShowOverview$show$seasons$items$episodes$items
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetShowOverview$show$seasons$items$episodes$items) ||
+    if (other is! Query$GetShowOverview$show$seasons$items$episodes$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1720,7 +1720,7 @@ class Variables$Query$GetPlaylistOverview {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Variables$Query$GetPlaylistOverview) ||
+    if (other is! Variables$Query$GetPlaylistOverview ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1824,7 +1824,7 @@ class Query$GetPlaylistOverview {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetPlaylistOverview) ||
+    if (other is! Query$GetPlaylistOverview ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2243,7 +2243,7 @@ class Query$GetPlaylistOverview$playlist {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetPlaylistOverview$playlist) ||
+    if (other is! Query$GetPlaylistOverview$playlist ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2403,7 +2403,7 @@ class Query$GetPlaylistOverview$playlist$items {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetPlaylistOverview$playlist$items) ||
+    if (other is! Query$GetPlaylistOverview$playlist$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2566,7 +2566,7 @@ class Query$GetPlaylistOverview$playlist$items$items {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetPlaylistOverview$playlist$items$items) ||
+    if (other is! Query$GetPlaylistOverview$playlist$items$items ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2763,7 +2763,7 @@ class Query$GetPlaylistOverview$playlist$items$items$$Episode
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetPlaylistOverview$playlist$items$items$$Episode) ||
+    if (other is! Query$GetPlaylistOverview$playlist$items$items$$Episode ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2927,7 +2927,7 @@ class Query$GetPlaylistOverview$playlist$items$items$$Short
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$GetPlaylistOverview$playlist$items$items$$Short) ||
+    if (other is! Query$GetPlaylistOverview$playlist$items$items$$Short ||
         runtimeType != other.runtimeType) {
       return false;
     }

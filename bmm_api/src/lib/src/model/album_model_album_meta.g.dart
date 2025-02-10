@@ -122,10 +122,11 @@ class AlbumModelAlbumMetaBuilder
     try {
       _$result = _$v ??
           new _$AlbumModelAlbumMeta._(
-              containedTypes: _containedTypes?.build(),
-              isVisible: isVisible,
-              modifiedAt: modifiedAt,
-              modifiedBy: modifiedBy);
+            containedTypes: _containedTypes?.build(),
+            isVisible: isVisible,
+            modifiedAt: modifiedAt,
+            modifiedBy: modifiedBy,
+          );
     } catch (_) {
       late String _$failedField;
       try {

@@ -183,13 +183,14 @@ class SectionHeaderModelBuilder
   _$SectionHeaderModel _build() {
     final _$result = _$v ??
         new _$SectionHeaderModel._(
-            title: title,
-            link: link,
-            id: BuiltValueNullFieldError.checkNotNull(
-                id, r'SectionHeaderModel', 'id'),
-            useCoverCarousel: useCoverCarousel,
-            type: BuiltValueNullFieldError.checkNotNull(
-                type, r'SectionHeaderModel', 'type'));
+          title: title,
+          link: link,
+          id: BuiltValueNullFieldError.checkNotNull(
+              id, r'SectionHeaderModel', 'id'),
+          useCoverCarousel: useCoverCarousel,
+          type: BuiltValueNullFieldError.checkNotNull(
+              type, r'SectionHeaderModel', 'type'),
+        );
     replace(_$result);
     return _$result;
   }

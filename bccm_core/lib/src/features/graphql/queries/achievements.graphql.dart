@@ -92,7 +92,7 @@ class Fragment$Achievement {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$Achievement) || runtimeType != other.runtimeType) {
+    if (other is! Fragment$Achievement || runtimeType != other.runtimeType) {
       return false;
     }
     final l$id = id;
@@ -365,7 +365,7 @@ class Variables$Fragment$AchievementGroup {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Variables$Fragment$AchievementGroup) ||
+    if (other is! Variables$Fragment$AchievementGroup ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -494,7 +494,7 @@ class Fragment$AchievementGroup {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$AchievementGroup) ||
+    if (other is! Fragment$AchievementGroup ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -768,7 +768,7 @@ class Fragment$AchievementGroup$achievements {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Fragment$AchievementGroup$achievements) ||
+    if (other is! Fragment$AchievementGroup$achievements ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -923,7 +923,7 @@ class Variables$Query$getAchievementGroups {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Variables$Query$getAchievementGroups) ||
+    if (other is! Variables$Query$getAchievementGroups ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1048,7 +1048,7 @@ class Query$getAchievementGroups {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$getAchievementGroups) ||
+    if (other is! Query$getAchievementGroups ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1429,7 +1429,7 @@ class Query$getAchievementGroups$achievementGroups {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$getAchievementGroups$achievementGroups) ||
+    if (other is! Query$getAchievementGroups$achievementGroups ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1589,7 +1589,7 @@ class Variables$Query$getAchievementGroup {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Variables$Query$getAchievementGroup) ||
+    if (other is! Variables$Query$getAchievementGroup ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1714,7 +1714,7 @@ class Query$getAchievementGroup {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$getAchievementGroup) ||
+    if (other is! Query$getAchievementGroup ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2076,7 +2076,7 @@ class Query$getPendingAchievements {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$getPendingAchievements) ||
+    if (other is! Query$getPendingAchievements ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2412,7 +2412,7 @@ class Variables$Mutation$confirmAchievement {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Variables$Mutation$confirmAchievement) ||
+    if (other is! Variables$Mutation$confirmAchievement ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2517,7 +2517,7 @@ class Mutation$confirmAchievement {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Mutation$confirmAchievement) ||
+    if (other is! Mutation$confirmAchievement ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2928,7 +2928,7 @@ class Mutation$confirmAchievement$confirmAchievement {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Mutation$confirmAchievement$confirmAchievement) ||
+    if (other is! Mutation$confirmAchievement$confirmAchievement ||
         runtimeType != other.runtimeType) {
       return false;
     }

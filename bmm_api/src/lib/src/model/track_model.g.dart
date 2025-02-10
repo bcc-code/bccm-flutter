@@ -88,9 +88,11 @@ class _$TrackModel extends TrackModel {
   @override
   final TrackModelTypeEnum type;
   @override
-  final BuiltList<LanguageEnum>? languages;
+  final BuiltList<LanguageEnum> languages;
   @override
   final LanguageEnum language;
+  @override
+  final BuiltList<LanguageEnum> transcriptionLanguages;
   @override
   final String? title;
   @override
@@ -127,8 +129,9 @@ class _$TrackModel extends TrackModel {
       required this.tags,
       required this.meta,
       required this.type,
-      this.languages,
+      required this.languages,
       required this.language,
+      required this.transcriptionLanguages,
       this.title,
       this.publisher,
       this.copyright,
@@ -147,7 +150,11 @@ class _$TrackModel extends TrackModel {
     BuiltValueNullFieldError.checkNotNull(tags, r'TrackModel', 'tags');
     BuiltValueNullFieldError.checkNotNull(meta, r'TrackModel', 'meta');
     BuiltValueNullFieldError.checkNotNull(type, r'TrackModel', 'type');
+    BuiltValueNullFieldError.checkNotNull(
+        languages, r'TrackModel', 'languages');
     BuiltValueNullFieldError.checkNotNull(language, r'TrackModel', 'language');
+    BuiltValueNullFieldError.checkNotNull(
+        transcriptionLanguages, r'TrackModel', 'transcriptionLanguages');
   }
 
   @override
@@ -180,6 +187,7 @@ class _$TrackModel extends TrackModel {
         type == other.type &&
         languages == other.languages &&
         language == other.language &&
+        transcriptionLanguages == other.transcriptionLanguages &&
         title == other.title &&
         publisher == other.publisher &&
         copyright == other.copyright &&
@@ -211,6 +219,7 @@ class _$TrackModel extends TrackModel {
     _$hash = $jc(_$hash, type.hashCode);
     _$hash = $jc(_$hash, languages.hashCode);
     _$hash = $jc(_$hash, language.hashCode);
+    _$hash = $jc(_$hash, transcriptionLanguages.hashCode);
     _$hash = $jc(_$hash, title.hashCode);
     _$hash = $jc(_$hash, publisher.hashCode);
     _$hash = $jc(_$hash, copyright.hashCode);
@@ -244,6 +253,7 @@ class _$TrackModel extends TrackModel {
           ..add('type', type)
           ..add('languages', languages)
           ..add('language', language)
+          ..add('transcriptionLanguages', transcriptionLanguages)
           ..add('title', title)
           ..add('publisher', publisher)
           ..add('copyright', copyright)
@@ -350,6 +360,13 @@ class TrackModelBuilder implements Builder<TrackModel, TrackModelBuilder> {
   LanguageEnum? get language => _$this._language;
   set language(LanguageEnum? language) => _$this._language = language;
 
+  ListBuilder<LanguageEnum>? _transcriptionLanguages;
+  ListBuilder<LanguageEnum> get transcriptionLanguages =>
+      _$this._transcriptionLanguages ??= new ListBuilder<LanguageEnum>();
+  set transcriptionLanguages(
+          ListBuilder<LanguageEnum>? transcriptionLanguages) =>
+      _$this._transcriptionLanguages = transcriptionLanguages;
+
   String? _title;
   String? get title => _$this._title;
   set title(String? title) => _$this._title = title;
@@ -404,8 +421,9 @@ class TrackModelBuilder implements Builder<TrackModel, TrackModelBuilder> {
       _tags = $v.tags.toBuilder();
       _meta = $v.meta.toBuilder();
       _type = $v.type;
-      _languages = $v.languages?.toBuilder();
+      _languages = $v.languages.toBuilder();
       _language = $v.language;
+      _transcriptionLanguages = $v.transcriptionLanguages.toBuilder();
       _title = $v.title;
       _publisher = $v.publisher;
       _copyright = $v.copyright;
@@ -437,39 +455,40 @@ class TrackModelBuilder implements Builder<TrackModel, TrackModelBuilder> {
     try {
       _$result = _$v ??
           new _$TrackModel._(
-              comment: comment,
-              cover: cover,
-              id: BuiltValueNullFieldError.checkNotNull(
-                  id, r'TrackModel', 'id'),
-              isVisible: isVisible,
-              order: order,
-              parentId: BuiltValueNullFieldError.checkNotNull(
-                  parentId, r'TrackModel', 'parentId'),
-              publishedAt: BuiltValueNullFieldError.checkNotNull(
-                  publishedAt, r'TrackModel', 'publishedAt'),
-              recordedAt: BuiltValueNullFieldError.checkNotNull(
-                  recordedAt, r'TrackModel', 'recordedAt'),
-              rel: _rel?.build(),
-              bibleRelations: _bibleRelations?.build(),
-              externalRelations: _externalRelations?.build(),
-              contributors: _contributors?.build(),
-              songbookRelations: _songbookRelations?.build(),
-              subtype: BuiltValueNullFieldError.checkNotNull(
-                  subtype, r'TrackModel', 'subtype'),
-              tags: tags.build(),
-              meta: meta.build(),
-              type: BuiltValueNullFieldError.checkNotNull(
-                  type, r'TrackModel', 'type'),
-              languages: _languages?.build(),
-              language: BuiltValueNullFieldError.checkNotNull(
-                  language, r'TrackModel', 'language'),
-              title: title,
-              publisher: publisher,
-              copyright: copyright,
-              media: _media?.build(),
-              hasListened: hasListened,
-              hasTranscription: hasTranscription,
-              isLiked: isLiked);
+            comment: comment,
+            cover: cover,
+            id: BuiltValueNullFieldError.checkNotNull(id, r'TrackModel', 'id'),
+            isVisible: isVisible,
+            order: order,
+            parentId: BuiltValueNullFieldError.checkNotNull(
+                parentId, r'TrackModel', 'parentId'),
+            publishedAt: BuiltValueNullFieldError.checkNotNull(
+                publishedAt, r'TrackModel', 'publishedAt'),
+            recordedAt: BuiltValueNullFieldError.checkNotNull(
+                recordedAt, r'TrackModel', 'recordedAt'),
+            rel: _rel?.build(),
+            bibleRelations: _bibleRelations?.build(),
+            externalRelations: _externalRelations?.build(),
+            contributors: _contributors?.build(),
+            songbookRelations: _songbookRelations?.build(),
+            subtype: BuiltValueNullFieldError.checkNotNull(
+                subtype, r'TrackModel', 'subtype'),
+            tags: tags.build(),
+            meta: meta.build(),
+            type: BuiltValueNullFieldError.checkNotNull(
+                type, r'TrackModel', 'type'),
+            languages: languages.build(),
+            language: BuiltValueNullFieldError.checkNotNull(
+                language, r'TrackModel', 'language'),
+            transcriptionLanguages: transcriptionLanguages.build(),
+            title: title,
+            publisher: publisher,
+            copyright: copyright,
+            media: _media?.build(),
+            hasListened: hasListened,
+            hasTranscription: hasTranscription,
+            isLiked: isLiked,
+          );
     } catch (_) {
       late String _$failedField;
       try {
@@ -490,7 +509,10 @@ class TrackModelBuilder implements Builder<TrackModel, TrackModelBuilder> {
         meta.build();
 
         _$failedField = 'languages';
-        _languages?.build();
+        languages.build();
+
+        _$failedField = 'transcriptionLanguages';
+        transcriptionLanguages.build();
 
         _$failedField = 'media';
         _media?.build();

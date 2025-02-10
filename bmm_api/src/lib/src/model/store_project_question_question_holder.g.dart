@@ -90,8 +90,10 @@ class StoreProjectQuestionQuestionHolderBuilder
   StoreProjectQuestionQuestionHolder build() => _build();
 
   _$StoreProjectQuestionQuestionHolder _build() {
-    final _$result =
-        _$v ?? new _$StoreProjectQuestionQuestionHolder._(question: question);
+    final _$result = _$v ??
+        new _$StoreProjectQuestionQuestionHolder._(
+          question: question,
+        );
     replace(_$result);
     return _$result;
   }

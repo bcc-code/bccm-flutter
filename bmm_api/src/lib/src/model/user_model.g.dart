@@ -115,10 +115,11 @@ class UserModelBuilder implements Builder<UserModel, UserModelBuilder> {
     try {
       _$result = _$v ??
           new _$UserModel._(
-              username: username,
-              personId: personId,
-              token: token,
-              roles: _roles?.build());
+            username: username,
+            personId: personId,
+            token: token,
+            roles: _roles?.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
