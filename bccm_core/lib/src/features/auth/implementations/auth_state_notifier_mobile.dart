@@ -426,19 +426,11 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
   }
 
   Future<void> checkIfSecureStorageIsAvailableAndHasKey(String storageName, FlutterSecureStorage storage, String key, String uid) async {
-    final [available, hasKey, value] = await Future.wait([
-      storage.isCupertinoProtectedDataAvailable(),
+    final [hasKey, value] = await Future.wait([
       storage.containsKey(key: key),
       storage.read(key: key),
     ]);
 
-    if (available == false) {
-      ref.read(analyticsProvider).log(LogEvent(
-            name: 'secure storage data for key $key is not yet available in $storageName',
-            message: 'in checkIfSecureStorageIsAvailableAndHasKey',
-            meta: {'callId': uid},
-          ));
-    }
     if (hasKey == false) {
       ref.read(analyticsProvider).log(LogEvent(
             name: 'secure storage does not contain key $key in $storageName',
@@ -446,7 +438,7 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
             meta: {'callId': uid},
           ));
     }
-    if (available == true && hasKey == true && value == null) {
+    if (hasKey == true && value == null) {
       ref.read(analyticsProvider).log(LogEvent(
             name: 'secure storage data for key $key is null in $storageName',
             message: 'in checkIfSecureStorageIsAvailableAndHasKey',
