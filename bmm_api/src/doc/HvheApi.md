@@ -9,13 +9,14 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**gamenightPost**](HvheApi.md#gamenightpost) | **POST** /gamenight | 
-[**notificationsPost**](HvheApi.md#notificationspost) | **POST** /notifications | 
-[**statusGet**](HvheApi.md#statusget) | **GET** /status | 
+[**hVHEGamenightPost**](HvheApi.md#hvhegamenightpost) | **POST** /HVHE/gamenight | 
+[**hVHENotificationsPost**](HvheApi.md#hvhenotificationspost) | **POST** /HVHE/notifications | 
+[**hVHEProgressGet**](HvheApi.md#hvheprogressget) | **GET** /HVHE/progress | 
+[**hVHEStatusGet**](HvheApi.md#hvhestatusget) | **GET** /HVHE/status | 
 
 
-# **gamenightPost**
-> gamenightPost()
+# **hVHEGamenightPost**
+> hVHEGamenightPost()
 
 
 
@@ -26,9 +27,9 @@ import 'package:bmm_api/api.dart';
 final api = BmmApi().getHvheApi();
 
 try {
-    api.gamenightPost();
+    api.hVHEGamenightPost();
 } catch on DioException (e) {
-    print('Exception when calling HvheApi->gamenightPost: $e\n');
+    print('Exception when calling HvheApi->hVHEGamenightPost: $e\n');
 }
 ```
 
@@ -50,8 +51,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **notificationsPost**
-> notificationsPost()
+# **hVHENotificationsPost**
+> hVHENotificationsPost()
 
 
 
@@ -62,9 +63,9 @@ import 'package:bmm_api/api.dart';
 final api = BmmApi().getHvheApi();
 
 try {
-    api.notificationsPost();
+    api.hVHENotificationsPost();
 } catch on DioException (e) {
-    print('Exception when calling HvheApi->notificationsPost: $e\n');
+    print('Exception when calling HvheApi->hVHENotificationsPost: $e\n');
 }
 ```
 
@@ -86,8 +87,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **statusGet**
-> HvheControllerHvheStatus statusGet()
+# **hVHEProgressGet**
+> HvheProjectBox hVHEProgressGet(theme)
 
 
 
@@ -96,12 +97,53 @@ No authorization required
 import 'package:bmm_api/api.dart';
 
 final api = BmmApi().getHvheApi();
+final String theme = theme_example; // String | 
 
 try {
-    final response = api.statusGet();
+    final response = api.hVHEProgressGet(theme);
     print(response);
 } catch on DioException (e) {
-    print('Exception when calling HvheApi->statusGet: $e\n');
+    print('Exception when calling HvheApi->hVHEProgressGet: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **theme** | **String**|  | [optional] [default to 'light']
+
+### Return type
+
+[**HvheProjectBox**](HvheProjectBox.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **hVHEStatusGet**
+> HvheControllerHvheStatus hVHEStatusGet()
+
+
+
+### Example
+```dart
+import 'package:bmm_api/api.dart';
+
+final api = BmmApi().getHvheApi();
+
+try {
+    final response = api.hVHEStatusGet();
+    print(response);
+} catch on DioException (e) {
+    print('Exception when calling HvheApi->hVHEStatusGet: $e\n');
 }
 ```
 

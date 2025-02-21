@@ -643,7 +643,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **statisticsV2ProjectProgressGet**
-> ForbildePoints statisticsV2ProjectProgressGet(lang, theme)
+> HvheProjectBox statisticsV2ProjectProgressGet(lang, theme)
 
 
 
@@ -672,7 +672,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ForbildePoints**](ForbildePoints.md)
+[**HvheProjectBox**](HvheProjectBox.md)
 
 ### Authorization
 

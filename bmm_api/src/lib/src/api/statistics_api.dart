@@ -16,6 +16,7 @@ import 'package:bmm_api/src/model/forbilde_points.dart';
 import 'package:bmm_api/src/model/get_fra_kaare_statistics_response.dart';
 import 'package:bmm_api/src/model/get_project_standings_project_standings.dart';
 import 'package:bmm_api/src/model/get_year_in_review_overview_slide.dart';
+import 'package:bmm_api/src/model/hvhe_project_box.dart';
 import 'package:bmm_api/src/model/language_enum.dart';
 import 'package:bmm_api/src/model/listening_event.dart';
 import 'package:bmm_api/src/model/process_watched_command_event.dart';
@@ -1134,9 +1135,9 @@ class StatisticsApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [ForbildePoints] as data
+  /// Returns a [Future] containing a [Response] with a [HvheProjectBox] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<ForbildePoints>> statisticsV2ProjectProgressGet({ 
+  Future<Response<HvheProjectBox>> statisticsV2ProjectProgressGet({ 
     LanguageEnum? lang,
     String? theme = 'light',
     CancelToken? cancelToken,
@@ -1173,14 +1174,14 @@ class StatisticsApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    ForbildePoints? _responseData;
+    HvheProjectBox? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(ForbildePoints),
-      ) as ForbildePoints;
+        specifiedType: const FullType(HvheProjectBox),
+      ) as HvheProjectBox;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -1192,7 +1193,7 @@ class StatisticsApi {
       );
     }
 
-    return Response<ForbildePoints>(
+    return Response<HvheProjectBox>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

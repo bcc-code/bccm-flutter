@@ -104,9 +104,10 @@ Class | Method | HTTP request | Description
 [*FileApi*](doc/FileApi.md) | [**fileApkGet**](doc/FileApi.md#fileapkget) | **GET** /File/apk | 
 [*FileApi*](doc/FileApi.md) | [**fileProtectedTrackIdNameGet**](doc/FileApi.md#fileprotectedtrackidnameget) | **GET** /File/protected/track/{id}/{name} | 
 [*FileApi*](doc/FileApi.md) | [**fileProtectedTypeIdNameGet**](doc/FileApi.md#fileprotectedtypeidnameget) | **GET** /File/protected/{type}/{id}/{name} | 
-[*HvheApi*](doc/HvheApi.md) | [**gamenightPost**](doc/HvheApi.md#gamenightpost) | **POST** /gamenight | 
-[*HvheApi*](doc/HvheApi.md) | [**notificationsPost**](doc/HvheApi.md#notificationspost) | **POST** /notifications | 
-[*HvheApi*](doc/HvheApi.md) | [**statusGet**](doc/HvheApi.md#statusget) | **GET** /status | 
+[*HvheApi*](doc/HvheApi.md) | [**hVHEGamenightPost**](doc/HvheApi.md#hvhegamenightpost) | **POST** /HVHE/gamenight | 
+[*HvheApi*](doc/HvheApi.md) | [**hVHENotificationsPost**](doc/HvheApi.md#hvhenotificationspost) | **POST** /HVHE/notifications | 
+[*HvheApi*](doc/HvheApi.md) | [**hVHEProgressGet**](doc/HvheApi.md#hvheprogressget) | **GET** /HVHE/progress | 
+[*HvheApi*](doc/HvheApi.md) | [**hVHEStatusGet**](doc/HvheApi.md#hvhestatusget) | **GET** /HVHE/status | 
 [*LinkMetadataApi*](doc/LinkMetadataApi.md) | [**linkMetadataTrackIdGet**](doc/LinkMetadataApi.md#linkmetadatatrackidget) | **GET** /LinkMetadata/track/{id} | 
 [*LinkMetadataApi*](doc/LinkMetadataApi.md) | [**linkMetadataTrackIdLanguageGet**](doc/LinkMetadataApi.md#linkmetadatatrackidlanguageget) | **GET** /LinkMetadata/track/{id}/{language} | 
 [*LyricsApi*](doc/LyricsApi.md) | [**lyricsGet**](doc/LyricsApi.md#lyricsget) | **GET** /lyrics | 

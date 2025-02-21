@@ -273,6 +273,3 @@ lib/src/model/user_model.dart
 lib/src/model/year_in_review_model.dart
 lib/src/serializers.dart
 pubspec.yaml
-test/get_project_standings_church_game_night_test.dart
-test/hvhe_api_test.dart
-test/hvhe_controller_hvhe_status_test.dart
