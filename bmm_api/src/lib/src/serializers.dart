@@ -41,6 +41,7 @@ import 'package:bmm_api/src/model/get_fra_kaare_statistics_church_statistics.dar
 import 'package:bmm_api/src/model/get_fra_kaare_statistics_church_statistics_snapshot.dart';
 import 'package:bmm_api/src/model/get_fra_kaare_statistics_response.dart';
 import 'package:bmm_api/src/model/get_project_standings_church.dart';
+import 'package:bmm_api/src/model/get_project_standings_church_game_night.dart';
 import 'package:bmm_api/src/model/get_project_standings_project_standings.dart';
 import 'package:bmm_api/src/model/get_top_songs_collection_model.dart';
 import 'package:bmm_api/src/model/get_top_songs_collection_model_track_and_count.dart';
@@ -49,6 +50,7 @@ import 'package:bmm_api/src/model/get_year_in_review_overview_slide.dart';
 import 'package:bmm_api/src/model/gibraltar_project_box.dart';
 import 'package:bmm_api/src/model/handle_bccm_answer_command_bccm_answer.dart';
 import 'package:bmm_api/src/model/highlighting.dart';
+import 'package:bmm_api/src/model/hvhe_controller_hvhe_status.dart';
 import 'package:bmm_api/src/model/hvhe_project_box.dart';
 import 'package:bmm_api/src/model/i_achievement_collection_or_chapter_header.dart';
 import 'package:bmm_api/src/model/i_album_contributor_podcast_playlist_or_track.dart';
@@ -148,6 +150,7 @@ part 'serializers.g.dart';
   GetFraKaareStatisticsChurchStatisticsSnapshot,
   GetFraKaareStatisticsResponse,
   GetProjectStandingsChurch,
+  GetProjectStandingsChurchGameNight,
   GetProjectStandingsProjectStandings,
   GetTopSongsCollectionModel,
   GetTopSongsCollectionModelTrackAndCount,
@@ -156,6 +159,7 @@ part 'serializers.g.dart';
   GibraltarProjectBox,
   HandleBccmAnswerCommandBccmAnswer,
   Highlighting,
+  HvheControllerHvheStatus,
   HvheProjectBox,
   IAchievementCollectionOrChapterHeader,
   IAlbumContributorPodcastPlaylistOrTrack,

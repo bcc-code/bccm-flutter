@@ -11,5 +11,5 @@ This will run the openapi code generator, and generate Dart files for all models
 After running the OpenAPI codegen, you need to generate `.g.dart` files for each of the newly generated files.
 
 ```sh
-dart run build_runner watch --delete-conflicting-outputs
+dart run build_runner build --delete-conflicting-outputs
 ```

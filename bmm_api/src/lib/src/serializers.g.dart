@@ -39,6 +39,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GetFraKaareStatisticsChurchStatisticsSnapshot.serializer)
       ..add(GetFraKaareStatisticsResponse.serializer)
       ..add(GetProjectStandingsChurch.serializer)
+      ..add(GetProjectStandingsChurchGameNight.serializer)
       ..add(GetProjectStandingsProjectStandings.serializer)
       ..add(GetTopSongsCollectionModel.serializer)
       ..add(GetTopSongsCollectionModelTrackAndCount.serializer)
@@ -48,6 +49,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GibraltarProjectBoxTypeEnum.serializer)
       ..add(HandleBccmAnswerCommandBccmAnswer.serializer)
       ..add(Highlighting.serializer)
+      ..add(HvheControllerHvheStatus.serializer)
       ..add(HvheProjectBox.serializer)
       ..add(HvheProjectBoxTypeEnum.serializer)
       ..add(IAchievementCollectionOrChapterHeader.serializer)
@@ -167,6 +169,10 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(
               BuiltList, const [const FullType(GetProjectStandingsChurch)]),
           () => new ListBuilder<GetProjectStandingsChurch>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType(GetProjectStandingsChurchGameNight)]),
+          () => new ListBuilder<GetProjectStandingsChurchGameNight>())
       ..addBuilderFactory(
           const FullType(BuiltList,
               const [const FullType(GetTopSongsCollectionModelTrackAndCount)]),

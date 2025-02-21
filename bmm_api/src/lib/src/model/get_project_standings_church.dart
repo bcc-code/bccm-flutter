@@ -3,6 +3,8 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:built_collection/built_collection.dart';
+import 'package:bmm_api/src/model/get_project_standings_church_game_night.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -15,12 +17,7 @@ part 'get_project_standings_church.g.dart';
 /// * [isHighlighted] 
 /// * [boysPoints] 
 /// * [girlsPoints] 
-/// * [boysWon11] 
-/// * [boysWon12] 
-/// * [boysWon21] 
-/// * [boysWon22] 
-/// * [boysWon31] 
-/// * [boysWon32] 
+/// * [gameNights] 
 @BuiltValue()
 abstract class GetProjectStandingsChurch implements Built<GetProjectStandingsChurch, GetProjectStandingsChurchBuilder> {
   @BuiltValueField(wireName: r'name')
@@ -35,23 +32,8 @@ abstract class GetProjectStandingsChurch implements Built<GetProjectStandingsChu
   @BuiltValueField(wireName: r'girls_points')
   int? get girlsPoints;
 
-  @BuiltValueField(wireName: r'boys_won_1_1')
-  bool? get boysWon11;
-
-  @BuiltValueField(wireName: r'boys_won_1_2')
-  bool? get boysWon12;
-
-  @BuiltValueField(wireName: r'boys_won_2_1')
-  bool? get boysWon21;
-
-  @BuiltValueField(wireName: r'boys_won_2_2')
-  bool? get boysWon22;
-
-  @BuiltValueField(wireName: r'boys_won_3_1')
-  bool? get boysWon31;
-
-  @BuiltValueField(wireName: r'boys_won_3_2')
-  bool? get boysWon32;
+  @BuiltValueField(wireName: r'game_nights')
+  BuiltList<GetProjectStandingsChurchGameNight>? get gameNights;
 
   GetProjectStandingsChurch._();
 
@@ -104,46 +86,11 @@ class _$GetProjectStandingsChurchSerializer implements PrimitiveSerializer<GetPr
         specifiedType: const FullType(int),
       );
     }
-    if (object.boysWon11 != null) {
-      yield r'boys_won_1_1';
+    if (object.gameNights != null) {
+      yield r'game_nights';
       yield serializers.serialize(
-        object.boysWon11,
-        specifiedType: const FullType.nullable(bool),
-      );
-    }
-    if (object.boysWon12 != null) {
-      yield r'boys_won_1_2';
-      yield serializers.serialize(
-        object.boysWon12,
-        specifiedType: const FullType.nullable(bool),
-      );
-    }
-    if (object.boysWon21 != null) {
-      yield r'boys_won_2_1';
-      yield serializers.serialize(
-        object.boysWon21,
-        specifiedType: const FullType.nullable(bool),
-      );
-    }
-    if (object.boysWon22 != null) {
-      yield r'boys_won_2_2';
-      yield serializers.serialize(
-        object.boysWon22,
-        specifiedType: const FullType.nullable(bool),
-      );
-    }
-    if (object.boysWon31 != null) {
-      yield r'boys_won_3_1';
-      yield serializers.serialize(
-        object.boysWon31,
-        specifiedType: const FullType.nullable(bool),
-      );
-    }
-    if (object.boysWon32 != null) {
-      yield r'boys_won_3_2';
-      yield serializers.serialize(
-        object.boysWon32,
-        specifiedType: const FullType.nullable(bool),
+        object.gameNights,
+        specifiedType: const FullType.nullable(BuiltList, [FullType(GetProjectStandingsChurchGameNight)]),
       );
     }
   }
@@ -198,53 +145,13 @@ class _$GetProjectStandingsChurchSerializer implements PrimitiveSerializer<GetPr
           ) as int;
           result.girlsPoints = valueDes;
           break;
-        case r'boys_won_1_1':
+        case r'game_nights':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType.nullable(bool),
-          ) as bool?;
+            specifiedType: const FullType.nullable(BuiltList, [FullType(GetProjectStandingsChurchGameNight)]),
+          ) as BuiltList<GetProjectStandingsChurchGameNight>?;
           if (valueDes == null) continue;
-          result.boysWon11 = valueDes;
-          break;
-        case r'boys_won_1_2':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType.nullable(bool),
-          ) as bool?;
-          if (valueDes == null) continue;
-          result.boysWon12 = valueDes;
-          break;
-        case r'boys_won_2_1':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType.nullable(bool),
-          ) as bool?;
-          if (valueDes == null) continue;
-          result.boysWon21 = valueDes;
-          break;
-        case r'boys_won_2_2':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType.nullable(bool),
-          ) as bool?;
-          if (valueDes == null) continue;
-          result.boysWon22 = valueDes;
-          break;
-        case r'boys_won_3_1':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType.nullable(bool),
-          ) as bool?;
-          if (valueDes == null) continue;
-          result.boysWon31 = valueDes;
-          break;
-        case r'boys_won_3_2':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType.nullable(bool),
-          ) as bool?;
-          if (valueDes == null) continue;
-          result.boysWon32 = valueDes;
+          result.gameNights.replace(valueDes);
           break;
         default:
           unhandled.add(key);

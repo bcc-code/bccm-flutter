@@ -38,6 +38,7 @@ doc/GetFraKaareStatisticsChurchStatistics.md
 doc/GetFraKaareStatisticsChurchStatisticsSnapshot.md
 doc/GetFraKaareStatisticsResponse.md
 doc/GetProjectStandingsChurch.md
+doc/GetProjectStandingsChurchGameNight.md
 doc/GetProjectStandingsProjectStandings.md
 doc/GetTopSongsCollectionModel.md
 doc/GetTopSongsCollectionModelTrackAndCount.md
@@ -46,6 +47,8 @@ doc/GetYearInReviewOverviewSlide.md
 doc/GibraltarProjectBox.md
 doc/HandleBccmAnswerCommandBccmAnswer.md
 doc/Highlighting.md
+doc/HvheApi.md
+doc/HvheControllerHvheStatus.md
 doc/HvheProjectBox.md
 doc/IAchievementCollectionOrChapterHeader.md
 doc/IAlbumContributorPodcastPlaylistOrTrack.md
@@ -140,6 +143,7 @@ lib/src/api/download_links_api.dart
 lib/src/api/events_api.dart
 lib/src/api/facets_api.dart
 lib/src/api/file_api.dart
+lib/src/api/hvhe_api.dart
 lib/src/api/link_metadata_api.dart
 lib/src/api/lyrics_api.dart
 lib/src/api/playlist_api.dart
@@ -189,6 +193,7 @@ lib/src/model/get_fra_kaare_statistics_church_statistics.dart
 lib/src/model/get_fra_kaare_statistics_church_statistics_snapshot.dart
 lib/src/model/get_fra_kaare_statistics_response.dart
 lib/src/model/get_project_standings_church.dart
+lib/src/model/get_project_standings_church_game_night.dart
 lib/src/model/get_project_standings_project_standings.dart
 lib/src/model/get_top_songs_collection_model.dart
 lib/src/model/get_top_songs_collection_model_track_and_count.dart
@@ -197,6 +202,7 @@ lib/src/model/get_year_in_review_overview_slide.dart
 lib/src/model/gibraltar_project_box.dart
 lib/src/model/handle_bccm_answer_command_bccm_answer.dart
 lib/src/model/highlighting.dart
+lib/src/model/hvhe_controller_hvhe_status.dart
 lib/src/model/hvhe_project_box.dart
 lib/src/model/i_achievement_collection_or_chapter_header.dart
 lib/src/model/i_album_contributor_podcast_playlist_or_track.dart
@@ -267,7 +273,6 @@ lib/src/model/user_model.dart
 lib/src/model/year_in_review_model.dart
 lib/src/serializers.dart
 pubspec.yaml
-test/get_project_standings_church_test.dart
-test/get_project_standings_project_standings_test.dart
-test/handle_bccm_answer_command_bccm_answer_test.dart
-test/process_watched_command_event_test.dart
+test/get_project_standings_church_game_night_test.dart
+test/hvhe_api_test.dart
+test/hvhe_controller_hvhe_status_test.dart

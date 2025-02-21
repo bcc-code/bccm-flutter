@@ -19,6 +19,7 @@ import 'package:bmm_api/src/api/download_links_api.dart';
 import 'package:bmm_api/src/api/events_api.dart';
 import 'package:bmm_api/src/api/facets_api.dart';
 import 'package:bmm_api/src/api/file_api.dart';
+import 'package:bmm_api/src/api/hvhe_api.dart';
 import 'package:bmm_api/src/api/link_metadata_api.dart';
 import 'package:bmm_api/src/api/lyrics_api.dart';
 import 'package:bmm_api/src/api/playlist_api.dart';
@@ -146,6 +147,12 @@ class BmmApi {
   /// by doing that all interceptors will not be executed
   FileApi getFileApi() {
     return FileApi(dio, serializers);
+  }
+
+  /// Get HvheApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  HvheApi getHvheApi() {
+    return HvheApi(dio, serializers);
   }
 
   /// Get LinkMetadataApi instance, base route and serializer can be overridden by a given but be careful,

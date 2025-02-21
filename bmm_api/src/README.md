@@ -104,6 +104,9 @@ Class | Method | HTTP request | Description
 [*FileApi*](doc/FileApi.md) | [**fileApkGet**](doc/FileApi.md#fileapkget) | **GET** /File/apk | 
 [*FileApi*](doc/FileApi.md) | [**fileProtectedTrackIdNameGet**](doc/FileApi.md#fileprotectedtrackidnameget) | **GET** /File/protected/track/{id}/{name} | 
 [*FileApi*](doc/FileApi.md) | [**fileProtectedTypeIdNameGet**](doc/FileApi.md#fileprotectedtypeidnameget) | **GET** /File/protected/{type}/{id}/{name} | 
+[*HvheApi*](doc/HvheApi.md) | [**gamenightPost**](doc/HvheApi.md#gamenightpost) | **POST** /gamenight | 
+[*HvheApi*](doc/HvheApi.md) | [**notificationsPost**](doc/HvheApi.md#notificationspost) | **POST** /notifications | 
+[*HvheApi*](doc/HvheApi.md) | [**statusGet**](doc/HvheApi.md#statusget) | **GET** /status | 
 [*LinkMetadataApi*](doc/LinkMetadataApi.md) | [**linkMetadataTrackIdGet**](doc/LinkMetadataApi.md#linkmetadatatrackidget) | **GET** /LinkMetadata/track/{id} | 
 [*LinkMetadataApi*](doc/LinkMetadataApi.md) | [**linkMetadataTrackIdLanguageGet**](doc/LinkMetadataApi.md#linkmetadatatrackidlanguageget) | **GET** /LinkMetadata/track/{id}/{language} | 
 [*LyricsApi*](doc/LyricsApi.md) | [**lyricsGet**](doc/LyricsApi.md#lyricsget) | **GET** /lyrics | 
@@ -214,6 +217,7 @@ Class | Method | HTTP request | Description
  - [GetFraKaareStatisticsChurchStatisticsSnapshot](doc/GetFraKaareStatisticsChurchStatisticsSnapshot.md)
  - [GetFraKaareStatisticsResponse](doc/GetFraKaareStatisticsResponse.md)
  - [GetProjectStandingsChurch](doc/GetProjectStandingsChurch.md)
+ - [GetProjectStandingsChurchGameNight](doc/GetProjectStandingsChurchGameNight.md)
  - [GetProjectStandingsProjectStandings](doc/GetProjectStandingsProjectStandings.md)
  - [GetTopSongsCollectionModel](doc/GetTopSongsCollectionModel.md)
  - [GetTopSongsCollectionModelTrackAndCount](doc/GetTopSongsCollectionModelTrackAndCount.md)
@@ -222,6 +226,7 @@ Class | Method | HTTP request | Description
  - [GibraltarProjectBox](doc/GibraltarProjectBox.md)
  - [HandleBccmAnswerCommandBccmAnswer](doc/HandleBccmAnswerCommandBccmAnswer.md)
  - [Highlighting](doc/Highlighting.md)
+ - [HvheControllerHvheStatus](doc/HvheControllerHvheStatus.md)
  - [HvheProjectBox](doc/HvheProjectBox.md)
  - [IAchievementCollectionOrChapterHeader](doc/IAchievementCollectionOrChapterHeader.md)
  - [IAlbumContributorPodcastPlaylistOrTrack](doc/IAlbumContributorPodcastPlaylistOrTrack.md)
