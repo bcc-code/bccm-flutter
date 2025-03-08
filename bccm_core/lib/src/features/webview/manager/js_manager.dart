@@ -87,7 +87,7 @@ window.dispatchEvent(new Event("app_webview_ready"))
     controller.runJavaScript('window.flutter_webview_manager.respondError("$requestId", {error: "${error.toString()}"})');
   }
 
-  void handleMessage(JavaScriptMessage message) {
+  void handleMessage(JavaScriptMessage message) async {
     final msg = jsonDecode(message.message);
     final requestId = msg['requestId'];
     final handlerName = msg['name'];
@@ -111,7 +111,7 @@ window.dispatchEvent(new Event("app_webview_ready"))
       return;
     }
     try {
-      final response = handler.handleMessage(arguments);
+      final response = await Future.value(handler.handleMessage(arguments));
       _respond(requestId, response);
     } catch (e) {
       _respondError(requestId, e);
