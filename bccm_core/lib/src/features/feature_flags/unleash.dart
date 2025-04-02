@@ -17,6 +17,7 @@ UnleashContext getStandardUnleashContext({
   String? appVersion,
   String? appBuildNumber,
   bool? androidTv,
+  String? appLanguage,
 }) {
   final birthDateTime = birthDate == null ? null : DateTime.parse(birthDate);
   final age = birthDateTime == null ? null : getAgeFromBirthDate(birthDateTime);
@@ -29,7 +30,8 @@ UnleashContext getStandardUnleashContext({
     if (isBetaTester != null) 'isBetaTester': isBetaTester.toString(),
     if (appVersion != null) 'appVersion': appVersion,
     if (appBuildNumber != null) 'appBuildNumber': appBuildNumber,
+    if (appLanguage != null) 'appLanguage': appLanguage,
     'os': Platform.operatingSystem,
-    'isAndroidTv': isAndroidTv.toString(),
+    'isAndroidTv': androidTv.toString(),
   });
 }
