@@ -15,26 +15,25 @@ import 'package:unleash_proxy_client_flutter/id_generator.dart';
 
 import '../../../utils/constants.dart';
 
+AndroidOptions _getAndroidSecureStorageOptions() => const AndroidOptions(
+      encryptedSharedPreferences: true, // https://github.com/juliansteenbakker/flutter_secure_storage/issues/354
+      sharedPreferencesName: 'auth',
+    );
+
+IOSOptions _getIOSSecureStorageOptions() => const IOSOptions(
+      accessibility: KeychainAccessibility.first_unlock_this_device, // https://github.com/juliansteenbakker/flutter_secure_storage/issues/743
+      synchronizable: true,
+    );
+
 // Careful. The function naming here is very important,
 // but because it's conditionally imported (see auth_state_notifier_interface.dart)
 // IDEs don't show any errors when you remove/change it..
 AuthStateNotifier getPlatformSpecificAuthStateNotifier(AuthConfig config, Ref ref) {
   return AuthStateNotifierMobile(
     appAuth: const FlutterAppAuth(),
-    secureStorage: const FlutterSecureStorage(
-        aOptions: AndroidOptions(
-          encryptedSharedPreferences: true, // https://github.com/juliansteenbakker/flutter_secure_storage/issues/354
-          sharedPreferencesName: 'auth',
-        ),
-        iOptions: IOSOptions(
-          accessibility: KeychainAccessibility.first_unlock_this_device, // https://github.com/juliansteenbakker/flutter_secure_storage/issues/743
-          synchronizable: true,
-        )),
-    legacySecureStorage: const FlutterSecureStorage(
-      aOptions: AndroidOptions(
-        encryptedSharedPreferences: true,
-        sharedPreferencesName: 'auth',
-      ),
+    secureStorage: FlutterSecureStorage(
+      aOptions: _getAndroidSecureStorageOptions(),
+      iOptions: _getIOSSecureStorageOptions(),
     ),
     config: config,
     ref: ref,
@@ -47,12 +46,10 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
   AuthStateNotifierMobile({
     required FlutterAppAuth appAuth,
     required FlutterSecureStorage secureStorage,
-    required FlutterSecureStorage legacySecureStorage,
     required this.config,
     required this.ref,
   })  : _appAuth = appAuth,
         _secureStorage = secureStorage,
-        _legacySecureStorage = legacySecureStorage,
         _auth0Api = Auth0Api(
           audience: config.auth0Audience,
           domain: config.auth0Domain,
@@ -63,7 +60,6 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
   final appAuthLock = Lock();
   final FlutterAppAuth _appAuth;
   final FlutterSecureStorage _secureStorage;
-  final FlutterSecureStorage _legacySecureStorage;
   final AuthConfig config;
   final Auth0Api _auth0Api;
   final Ref ref;
@@ -207,14 +203,10 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
   Future _clearCredentials() async {
     await Future.wait(
       [
-        _secureStorage.delete(key: SecureStorageKeys.refreshToken),
-        _secureStorage.delete(key: SecureStorageKeys.accessToken),
-        _secureStorage.delete(key: SecureStorageKeys.idToken),
-        _secureStorage.delete(key: SecureStorageKeys.userProfile),
-        _legacySecureStorage.delete(key: SecureStorageKeys.refreshToken),
-        _legacySecureStorage.delete(key: SecureStorageKeys.accessToken),
-        _legacySecureStorage.delete(key: SecureStorageKeys.idToken),
-        _legacySecureStorage.delete(key: SecureStorageKeys.userProfile),
+        _deleteFromSecureStorage(key: SecureStorageKeys.refreshToken),
+        _deleteFromSecureStorage(key: SecureStorageKeys.accessToken),
+        _deleteFromSecureStorage(key: SecureStorageKeys.idToken),
+        _deleteFromSecureStorage(key: SecureStorageKeys.userProfile),
       ],
     );
   }
@@ -352,20 +344,20 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
 
     try {
       await Future.wait([
-        _secureStorage.write(
+        _writeToSecureStorage(
           key: SecureStorageKeys.idToken,
           value: idToken,
         ),
-        _secureStorage.write(
+        _writeToSecureStorage(
           key: SecureStorageKeys.userProfile,
           value: jsonEncode(userProfile.toJson()),
         ),
-        _secureStorage.write(
+        _writeToSecureStorage(
           key: SecureStorageKeys.accessToken,
           value: accessToken,
         ),
         if (refreshToken != null)
-          _secureStorage.write(
+          _writeToSecureStorage(
             key: SecureStorageKeys.refreshToken,
             value: refreshToken,
           ),
@@ -391,7 +383,13 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
     final callId = generateId();
 
     await checkIfSecureStorageIsAvailableAndHasKey('_secureStorage', _secureStorage, key, callId);
-    var result = await _secureStorage.read(key: key).then((value) {
+    var result = await _secureStorage
+        .read(
+      key: key,
+      iOptions: _getIOSSecureStorageOptions(),
+      aOptions: _getAndroidSecureStorageOptions(),
+    )
+        .then((value) {
       debugPrint('reading $key from secure storage');
       return value;
     }).catchError((e) {
@@ -405,24 +403,24 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
       return null;
     });
 
-    // fallback to legacy storage
-    await checkIfSecureStorageIsAvailableAndHasKey('_legacySecureStorage', _legacySecureStorage, key, callId);
-    result ??= await _legacySecureStorage.read(key: key).then((value) async {
-      debugPrint('reading $key from legacy secure storage');
-      _secureStorage.write(key: key, value: value);
-      return value;
-    }).catchError((e) {
-      ref.read(analyticsProvider).log(
-            LogEvent(
-              name: 'failed reading $key from legacy secure storage',
-              message: e.toString(),
-              meta: {'callId': callId},
-            ),
-          );
-      return null;
-    });
-
     return result;
+  }
+
+  Future<void> _writeToSecureStorage({required String key, required String value}) async {
+    await _secureStorage.write(
+      key: key,
+      value: value,
+      iOptions: _getIOSSecureStorageOptions(),
+      aOptions: _getAndroidSecureStorageOptions(),
+    );
+  }
+
+  Future<void> _deleteFromSecureStorage({required String key}) async {
+    await _secureStorage.delete(
+      key: key,
+      iOptions: _getIOSSecureStorageOptions(),
+      aOptions: _getAndroidSecureStorageOptions(),
+    );
   }
 
   Future<void> checkIfSecureStorageIsAvailableAndHasKey(String storageName, FlutterSecureStorage storage, String key, String uid) async {

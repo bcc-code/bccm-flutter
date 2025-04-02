@@ -62,7 +62,6 @@ void main() {
       final auth = AuthStateNotifierMobile(
         appAuth: MockFlutterAppAuth(),
         secureStorage: secureStorage,
-        legacySecureStorage: secureStorage,
         config: AuthConfig(
           auth0Audience: 'audience',
           auth0ClientId: 'clientId',
@@ -93,7 +92,6 @@ void main() {
       final auth = AuthStateNotifierMobile(
         appAuth: mockAppAuth,
         secureStorage: secureStorage,
-        legacySecureStorage: secureStorage,
         config: AuthConfig(
           auth0Audience: 'audience',
           auth0ClientId: 'clientId',
