@@ -149,10 +149,9 @@ class FcmNotificationService implements NotificationService {
       }
       _trackNotificationReceived(message);
     }
-    if (userInteracted && notification != null && message.data['show_in_app'] == true) {
+    if (userInteracted && notification != null) {
       _trackNotificationOpened(message);
     }
-
     if (userInteracted && notification != null && message.data['show_in_app'] == true) {
       onShowInAppRequested?.call(message);
     }
