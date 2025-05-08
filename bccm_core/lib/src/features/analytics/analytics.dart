@@ -82,6 +82,16 @@ class Analytics {
   @mustBeOverridden
   void notificationOpened(NotificationOpenedEvent event) {}
   @mustBeOverridden
+  void notificationPromptDismissed(NotificationPromptDismissedEvent event) {}
+  @mustBeOverridden
+  void notificationPromptClicked(NotificationPromptClickedEvent event) {}
+  @mustBeOverridden
+  void notificationPromptAccepted(NotificationPromptAcceptedEvent event) {}
+  @mustBeOverridden
+  void notificationPromptDenied(NotificationPromptDeniedEvent event) {}
+  @mustBeOverridden
+  void notificationsSettingToggled(NotificationsSettingToggledEvent event) {}
+  @mustBeOverridden
   void reset() {}
   @mustBeOverridden
   Future<String> getAnonymousId() => Future(() => "");
@@ -412,6 +422,31 @@ class RudderAnalytics extends Analytics {
   @override
   void videoPlayed(VideoPlayedEvent event) {
     RudderController.instance.track('video_played', properties: getCommonData().putValue(map: event.toJson()));
+  }
+
+  @override
+  void notificationPromptDismissed(NotificationPromptDismissedEvent event) {
+    RudderController.instance.track('notification_prompt_dismissed', properties: getCommonData().putValue(map: event.toJson()));
+  }
+
+  @override
+  void notificationPromptClicked(NotificationPromptClickedEvent event) {
+    RudderController.instance.track('notification_prompt_clicked', properties: getCommonData().putValue(map: event.toJson()));
+  }
+
+  @override
+  void notificationPromptAccepted(NotificationPromptAcceptedEvent event) {
+    RudderController.instance.track('notification_prompt_accepted', properties: getCommonData().putValue(map: event.toJson()));
+  }
+
+  @override
+  void notificationPromptDenied(NotificationPromptDeniedEvent event) {
+    RudderController.instance.track('notification_prompt_denied', properties: getCommonData().putValue(map: event.toJson()));
+  }
+
+  @override
+  void notificationsSettingToggled(NotificationsSettingToggledEvent event) {
+    RudderController.instance.track('notifications_setting_toggled', properties: getCommonData().putValue(map: event.toJson()));
   }
 }
 

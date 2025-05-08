@@ -25,29 +25,20 @@ _$Auth0SignupRequestBodyImpl _$$Auth0SignupRequestBodyImplFromJson(
     );
 
 Map<String, dynamic> _$$Auth0SignupRequestBodyImplToJson(
-    _$Auth0SignupRequestBodyImpl instance) {
-  final val = <String, dynamic>{
-    'client_id': instance.clientId,
-    'email': instance.email,
-    'password': instance.password,
-    'connection': instance.connection,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('username', instance.username);
-  writeNotNull('given_name', instance.givenName);
-  writeNotNull('family_name', instance.familyName);
-  writeNotNull('name', instance.name);
-  writeNotNull('nickname', instance.nickname);
-  writeNotNull('picture_url', instance.pictureUrl);
-  writeNotNull('user_metadata', instance.userMetadata);
-  return val;
-}
+        _$Auth0SignupRequestBodyImpl instance) =>
+    <String, dynamic>{
+      'client_id': instance.clientId,
+      'email': instance.email,
+      'password': instance.password,
+      'connection': instance.connection,
+      if (instance.username case final value?) 'username': value,
+      if (instance.givenName case final value?) 'given_name': value,
+      if (instance.familyName case final value?) 'family_name': value,
+      if (instance.name case final value?) 'name': value,
+      if (instance.nickname case final value?) 'nickname': value,
+      if (instance.pictureUrl case final value?) 'picture_url': value,
+      if (instance.userMetadata case final value?) 'user_metadata': value,
+    };
 
 _$Auth0SignupResponseImpl _$$Auth0SignupResponseImplFromJson(
         Map<String, dynamic> json) =>
