@@ -16,14 +16,14 @@ final notificationServiceProvider = Provider<NotificationService>((ref) {
 });
 
 abstract class NotificationService {
-  Future<void> requestPermissionAndSetup();
+  Future<NotificationSettings?> requestPermissionAndSetup();
   void dispose();
   void deleteToken();
 }
 
 class DisabledNotificationService implements NotificationService {
   @override
-  Future<void> requestPermissionAndSetup() {
+  Future<NotificationSettings?> requestPermissionAndSetup() {
     return Future.value();
   }
 
@@ -34,7 +34,7 @@ class DisabledNotificationService implements NotificationService {
 }
 
 class FcmNotificationService implements NotificationService {
-  final LocalNotificationService localNotificationService;
+  final LocalNotificationService? localNotificationService;
   String? fcmToken;
   late StreamSubscription<AppReadyEvent> _appReadySubscription;
   StreamSubscription<RemoteMessage>? _onMessageSubscription;
@@ -66,7 +66,7 @@ class FcmNotificationService implements NotificationService {
   }
 
   void _setupLocalNotifications() {
-    localNotificationService.stream.listen(_onLocalNotificationOpened);
+    localNotificationService?.stream.listen(_onLocalNotificationOpened);
   }
 
   void _onLocalNotificationOpened(NotificationResponse response) {
@@ -92,9 +92,8 @@ class FcmNotificationService implements NotificationService {
 
   /// Request permission and get token to start receiving push notifications
   @override
-  Future<void> requestPermissionAndSetup() async {
-    var result = await FirebaseMessaging.instance.requestPermission();
-    debugPrint('NotificationStatus: ${result.authorizationStatus}');
+  Future<NotificationSettings> requestPermissionAndSetup() async {
+    final result = await FirebaseMessaging.instance.requestPermission();
     FirebaseMessaging.instance.setForegroundNotificationPresentationOptions(alert: true, badge: false, sound: false);
     _setupLocalNotifications();
 
@@ -114,6 +113,7 @@ class FcmNotificationService implements NotificationService {
       ));
     }
     _setupTokenListeners();
+    return result;
   }
 
   void _setupTokenListeners() {
