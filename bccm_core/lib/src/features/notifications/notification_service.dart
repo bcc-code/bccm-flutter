@@ -116,6 +116,11 @@ class FcmNotificationService implements NotificationService {
     return result;
   }
 
+  Future<AuthorizationStatus> getAuthorizationStatus() async {
+    final result = await FirebaseMessaging.instance.getNotificationSettings();
+    return result.authorizationStatus;
+  }
+
   void _setupTokenListeners() {
     _tokenSubscription ??= FirebaseMessaging.instance.onTokenRefresh.listen(_onTokenChanged)
       ..onError((err) {
