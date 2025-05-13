@@ -17,6 +17,7 @@ final notificationServiceProvider = Provider<NotificationService>((ref) {
 
 abstract class NotificationService {
   Future<NotificationSettings?> requestPermissionAndSetup();
+  Future<AuthorizationStatus?> getAuthorizationStatus();
   void dispose();
   void deleteToken();
 }
@@ -24,6 +25,11 @@ abstract class NotificationService {
 class DisabledNotificationService implements NotificationService {
   @override
   Future<NotificationSettings?> requestPermissionAndSetup() {
+    return Future.value();
+  }
+
+  @override
+  Future<AuthorizationStatus?> getAuthorizationStatus() {
     return Future.value();
   }
 
@@ -116,6 +122,7 @@ class FcmNotificationService implements NotificationService {
     return result;
   }
 
+  @override
   Future<AuthorizationStatus> getAuthorizationStatus() async {
     final result = await FirebaseMessaging.instance.getNotificationSettings();
     return result.authorizationStatus;
