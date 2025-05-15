@@ -12,6 +12,9 @@ Name | Type | Description | Notes
 **largeChurches** | [**BuiltList&lt;GetFraKaareStatisticsChurchStatistics&gt;**](GetFraKaareStatisticsChurchStatistics.md) |  | [optional] 
 **smallChurches** | [**BuiltList&lt;GetFraKaareStatisticsChurchStatistics&gt;**](GetFraKaareStatisticsChurchStatistics.md) |  | [optional] 
 **timeSeries** | [**BuiltList&lt;GetFraKaareStatisticsChurchStatisticsSnapshot&gt;**](GetFraKaareStatisticsChurchStatisticsSnapshot.md) |  | [optional] 
+**drawOptions** | [**BuiltList&lt;FraKaareDrawCommandDrawOption&gt;**](FraKaareDrawCommandDrawOption.md) |  | [optional] 
+**maxDraws** | **int** |  | [optional] 
+**drawsLeft** | **int** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

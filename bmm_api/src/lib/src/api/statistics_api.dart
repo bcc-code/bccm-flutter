@@ -13,13 +13,15 @@ import 'package:bmm_api/src/model/achievement_model.dart';
 import 'package:bmm_api/src/model/create_track_played_events_command_event.dart';
 import 'package:bmm_api/src/model/document_list_i_achievement_collection_or_chapter_header.dart';
 import 'package:bmm_api/src/model/forbilde_points.dart';
+import 'package:bmm_api/src/model/fra_kaare_draw_command.dart';
+import 'package:bmm_api/src/model/fra_kaare_draw_command_response.dart';
 import 'package:bmm_api/src/model/get_fra_kaare_statistics_response.dart';
 import 'package:bmm_api/src/model/get_project_standings_project_standings.dart';
 import 'package:bmm_api/src/model/get_year_in_review_overview_slide.dart';
-import 'package:bmm_api/src/model/hvhe_project_box.dart';
 import 'package:bmm_api/src/model/language_enum.dart';
 import 'package:bmm_api/src/model/listening_event.dart';
 import 'package:bmm_api/src/model/process_watched_command_event.dart';
+import 'package:bmm_api/src/model/project_box_v2.dart';
 import 'package:bmm_api/src/model/project_church_statistics_query_church_statistics.dart';
 import 'package:bmm_api/src/model/project_rules_query_rules.dart';
 import 'package:bmm_api/src/model/streak_point.dart';
@@ -365,6 +367,101 @@ class StatisticsApi {
     }
 
     return Response<BuiltList<AchievementModel>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// statisticsFraKaareDrawPost
+  /// 
+  ///
+  /// Parameters:
+  /// * [fraKaareDrawCommand] 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [FraKaareDrawCommandResponse] as data
+  /// Throws [DioException] if API call or serialization fails
+  Future<Response<FraKaareDrawCommandResponse>> statisticsFraKaareDrawPost({ 
+    required FraKaareDrawCommand fraKaareDrawCommand,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/Statistics/fra-kaare/draw';
+    final _options = Options(
+      method: r'POST',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      contentType: 'application/json',
+      validateStatus: validateStatus,
+    );
+
+    dynamic _bodyData;
+
+    try {
+      const _type = FullType(FraKaareDrawCommand);
+      _bodyData = _serializers.serialize(fraKaareDrawCommand, specifiedType: _type);
+
+    } catch(error, stackTrace) {
+      throw DioException(
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
+        type: DioExceptionType.unknown,
+        error: error,
+        stackTrace: stackTrace,
+      );
+    }
+
+    final _response = await _dio.request<Object>(
+      _path,
+      data: _bodyData,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    FraKaareDrawCommandResponse? _responseData;
+
+    try {
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(FraKaareDrawCommandResponse),
+      ) as FraKaareDrawCommandResponse;
+
+    } catch (error, stackTrace) {
+      throw DioException(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioExceptionType.unknown,
+        error: error,
+        stackTrace: stackTrace,
+      );
+    }
+
+    return Response<FraKaareDrawCommandResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -1135,9 +1232,9 @@ class StatisticsApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [HvheProjectBox] as data
+  /// Returns a [Future] containing a [Response] with a [ProjectBoxV2] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<HvheProjectBox>> statisticsV2ProjectProgressGet({ 
+  Future<Response<ProjectBoxV2>> statisticsV2ProjectProgressGet({ 
     LanguageEnum? lang,
     String? theme = 'light',
     CancelToken? cancelToken,
@@ -1174,14 +1271,14 @@ class StatisticsApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    HvheProjectBox? _responseData;
+    ProjectBoxV2? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(HvheProjectBox),
-      ) as HvheProjectBox;
+        specifiedType: const FullType(ProjectBoxV2),
+      ) as ProjectBoxV2;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -1193,7 +1290,7 @@ class StatisticsApi {
       );
     }
 
-    return Response<HvheProjectBox>(
+    return Response<ProjectBoxV2>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

@@ -7,8 +7,10 @@ import 'package:bmm_api/src/model/playlist_model.dart';
 import 'package:bmm_api/src/model/album_model.dart';
 import 'package:bmm_api/src/model/album_model_album_meta.dart';
 import 'package:built_collection/built_collection.dart';
+import 'package:bmm_api/src/model/track_model.dart';
 import 'package:bmm_api/src/model/podcast_model.dart';
 import 'package:bmm_api/src/model/language_enum.dart';
+import 'package:bmm_api/src/model/playlist_details_model.dart';
 import 'package:bmm_api/src/model/section_header_model.dart';
 import 'package:bmm_api/src/model/i_album_or_track.dart';
 import 'package:built_value/built_value.dart';
@@ -33,13 +35,19 @@ part 'i_album_podcast_playlist_or_section_header.g.dart';
 /// * [description] 
 /// * [type] 
 /// * [children] 
+/// * [trackCount] 
+/// * [totalSeconds] 
 /// * [latestTrackId] 
 /// * [latestTrackPosition] 
+/// * [secondsLeft] 
+/// * [tracks] 
+/// * [useWeekGrouping] 
+/// * [showInChronologicalOrder] 
 /// * [link] 
 /// * [useCoverCarousel] 
 @BuiltValue()
 abstract class IAlbumPodcastPlaylistOrSectionHeader implements Built<IAlbumPodcastPlaylistOrSectionHeader, IAlbumPodcastPlaylistOrSectionHeaderBuilder> {
-  /// One Of [AlbumModel], [PlaylistModel], [PodcastModel], [SectionHeaderModel]
+  /// One Of [AlbumModel], [PlaylistDetailsModel], [PlaylistModel], [PodcastModel], [SectionHeaderModel]
   OneOf get oneOf;
 
   static const String discriminatorFieldName = r'type';
@@ -47,6 +55,7 @@ abstract class IAlbumPodcastPlaylistOrSectionHeader implements Built<IAlbumPodca
   static const Map<String, Type> discriminatorMapping = {
     r'album': AlbumModel,
     r'playlist': PlaylistModel,
+    r'playlist_details': PlaylistDetailsModel,
     r'podcast': PodcastModel,
     r'section_header': SectionHeaderModel,
   };
@@ -70,6 +79,9 @@ extension IAlbumPodcastPlaylistOrSectionHeaderDiscriminatorExt on IAlbumPodcastP
         if (this is PlaylistModel) {
             return r'playlist';
         }
+        if (this is PlaylistDetailsModel) {
+            return r'playlist_details';
+        }
         if (this is PodcastModel) {
             return r'podcast';
         }
@@ -86,6 +98,9 @@ extension IAlbumPodcastPlaylistOrSectionHeaderBuilderDiscriminatorExt on IAlbumP
         }
         if (this is PlaylistModelBuilder) {
             return r'playlist';
+        }
+        if (this is PlaylistDetailsModelBuilder) {
+            return r'playlist_details';
         }
         if (this is PodcastModelBuilder) {
             return r'podcast';
@@ -133,7 +148,7 @@ class _$IAlbumPodcastPlaylistOrSectionHeaderSerializer implements PrimitiveSeria
     final discIndex = serializedList.indexOf(IAlbumPodcastPlaylistOrSectionHeader.discriminatorFieldName) + 1;
     final discValue = serializers.deserialize(serializedList[discIndex], specifiedType: FullType(String)) as String;
     oneOfDataSrc = serialized;
-    final oneOfTypes = [AlbumModel, PlaylistModel, PodcastModel, SectionHeaderModel, ];
+    final oneOfTypes = [AlbumModel, PlaylistModel, PlaylistDetailsModel, PodcastModel, SectionHeaderModel, ];
     Object oneOfResult;
     Type oneOfType;
     switch (discValue) {
@@ -150,6 +165,13 @@ class _$IAlbumPodcastPlaylistOrSectionHeaderSerializer implements PrimitiveSeria
           specifiedType: FullType(PlaylistModel),
         ) as PlaylistModel;
         oneOfType = PlaylistModel;
+        break;
+      case r'playlist_details':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(PlaylistDetailsModel),
+        ) as PlaylistDetailsModel;
+        oneOfType = PlaylistDetailsModel;
         break;
       case r'podcast':
         oneOfResult = serializers.deserialize(
@@ -177,6 +199,8 @@ class IAlbumPodcastPlaylistOrSectionHeaderTypeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'album')
   static const IAlbumPodcastPlaylistOrSectionHeaderTypeEnum album = _$iAlbumPodcastPlaylistOrSectionHeaderTypeEnum_album;
+  @BuiltValueEnumConst(wireName: r'playlist_details')
+  static const IAlbumPodcastPlaylistOrSectionHeaderTypeEnum playlistDetails = _$iAlbumPodcastPlaylistOrSectionHeaderTypeEnum_playlistDetails;
   @BuiltValueEnumConst(wireName: r'playlist')
   static const IAlbumPodcastPlaylistOrSectionHeaderTypeEnum playlist = _$iAlbumPodcastPlaylistOrSectionHeaderTypeEnum_playlist;
   @BuiltValueEnumConst(wireName: r'podcast')

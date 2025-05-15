@@ -35,6 +35,9 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(DocumentListIAllDocumentModels.serializer)
       ..add(DocumentListPodcastModel.serializer)
       ..add(ForbildePoints.serializer)
+      ..add(FraKaareDrawCommand.serializer)
+      ..add(FraKaareDrawCommandDrawOption.serializer)
+      ..add(FraKaareDrawCommandResponse.serializer)
       ..add(GetFraKaareStatisticsChurchStatistics.serializer)
       ..add(GetFraKaareStatisticsChurchStatisticsSnapshot.serializer)
       ..add(GetFraKaareStatisticsResponse.serializer)
@@ -49,9 +52,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GibraltarProjectBoxTypeEnum.serializer)
       ..add(HandleBccmAnswerCommandBccmAnswer.serializer)
       ..add(Highlighting.serializer)
-      ..add(HvheControllerHvheStatus.serializer)
-      ..add(HvheProjectBox.serializer)
-      ..add(HvheProjectBoxTypeEnum.serializer)
+      ..add(HvheCompetitionPoints.serializer)
       ..add(IAchievementCollectionOrChapterHeader.serializer)
       ..add(IAlbumContributorPodcastPlaylistOrTrack.serializer)
       ..add(IAlbumOrChapterHeader.serializer)
@@ -68,6 +69,9 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(LyricsVerse.serializer)
       ..add(MediaTypeEnum.serializer)
       ..add(MetadataModel.serializer)
+      ..add(PersonGenderEnum.serializer)
+      ..add(PlaylistDetailsModel.serializer)
+      ..add(PlaylistDetailsModelTypeEnum.serializer)
       ..add(PlaylistModel.serializer)
       ..add(PlaylistModelTypeEnum.serializer)
       ..add(PodcastModel.serializer)
@@ -76,6 +80,8 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(ProcessWatchedCommandEvent.serializer)
       ..add(ProjectBox.serializer)
       ..add(ProjectBoxTypeEnum.serializer)
+      ..add(ProjectBoxV2.serializer)
+      ..add(ProjectBoxV2TypeEnum.serializer)
       ..add(ProjectChurchStatisticsQueryChurchStatistics.serializer)
       ..add(ProjectChurchStatisticsQueryChurchStatisticsChurch.serializer)
       ..add(ProjectRulesQueryRules.serializer)
@@ -107,9 +113,9 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(TileVideoModel.serializer)
       ..add(TileVideoModelTypeEnum.serializer)
       ..add(TopbarSearchQueryTopbarSearchResult.serializer)
-      ..add(TrackCollectionDetails.serializer)
       ..add(TrackCollectionModel.serializer)
       ..add(TrackCollectionModelTypeEnum.serializer)
+      ..add(TrackCollectionShell.serializer)
       ..add(TrackListReference.serializer)
       ..add(TrackModel.serializer)
       ..add(TrackModelBibleRelation.serializer)
@@ -161,6 +167,10 @@ Serializers _$serializers = (new Serializers().toBuilder()
           ]),
           () =>
               new ListBuilder<GetFraKaareStatisticsChurchStatisticsSnapshot>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(FraKaareDrawCommandDrawOption)]),
+          () => new ListBuilder<FraKaareDrawCommandDrawOption>())
       ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(GetProjectStandingsChurch)]),
@@ -223,6 +233,12 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(IAlbumOrTrack)]),
           () => new ListBuilder<IAlbumOrTrack>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(LanguageEnum)]),
+          () => new ListBuilder<LanguageEnum>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(TrackModel)]),
+          () => new ListBuilder<TrackModel>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(PodcastModel)]),
           () => new ListBuilder<PodcastModel>())
@@ -314,6 +330,9 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(TrackModelMedium)]),
           () => new ListBuilder<TrackModelMedium>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(int)]),
+          () => new ListBuilder<int>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(int)]),
           () => new ListBuilder<int>())

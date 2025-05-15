@@ -14,6 +14,7 @@ Method | HTTP request | Description
 [**statisticsAchievementNameAcknowledgePut**](StatisticsApi.md#statisticsachievementnameacknowledgeput) | **PUT** /Statistics/achievement/{name}/acknowledge | 
 [**statisticsAchievementsGet**](StatisticsApi.md#statisticsachievementsget) | **GET** /Statistics/achievements | 
 [**statisticsAchievementsToAcknowledgeGet**](StatisticsApi.md#statisticsachievementstoacknowledgeget) | **GET** /Statistics/achievements/to/acknowledge | 
+[**statisticsFraKaareDrawPost**](StatisticsApi.md#statisticsfrakaaredrawpost) | **POST** /Statistics/fra-kaare/draw | 
 [**statisticsFraKaareGet**](StatisticsApi.md#statisticsfrakaareget) | **GET** /Statistics/fra-kaare | 
 [**statisticsListeningPost**](StatisticsApi.md#statisticslisteningpost) | **POST** /Statistics/listening | 
 [**statisticsProjectChurchChurchGet**](StatisticsApi.md#statisticsprojectchurchchurchget) | **GET** /Statistics/project/church/{church} | 
@@ -235,6 +236,47 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **statisticsFraKaareDrawPost**
+> FraKaareDrawCommandResponse statisticsFraKaareDrawPost(fraKaareDrawCommand)
+
+
+
+### Example
+```dart
+import 'package:bmm_api/api.dart';
+
+final api = BmmApi().getStatisticsApi();
+final FraKaareDrawCommand fraKaareDrawCommand = ; // FraKaareDrawCommand | 
+
+try {
+    final response = api.statisticsFraKaareDrawPost(fraKaareDrawCommand);
+    print(response);
+} catch on DioException (e) {
+    print('Exception when calling StatisticsApi->statisticsFraKaareDrawPost: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fraKaareDrawCommand** | [**FraKaareDrawCommand**](FraKaareDrawCommand.md)|  | 
+
+### Return type
+
+[**FraKaareDrawCommandResponse**](FraKaareDrawCommandResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json-patch+json, application/json, text/json, application/*+json
  - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -643,7 +685,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **statisticsV2ProjectProgressGet**
-> HvheProjectBox statisticsV2ProjectProgressGet(lang, theme)
+> ProjectBoxV2 statisticsV2ProjectProgressGet(lang, theme)
 
 
 
@@ -672,7 +714,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**HvheProjectBox**](HvheProjectBox.md)
+[**ProjectBoxV2**](ProjectBoxV2.md)
 
 ### Authorization
 

@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **questionId** | **String** |  | [optional] 
 **answeredCorrectly** | **bool** |  | [optional] 
 **selectedAnswerId** | **String** |  | [optional] 
+**personId** | **int** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

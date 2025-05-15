@@ -23,6 +23,10 @@ class _$AchievementModel extends AchievementModel {
   final int? trackId;
   @override
   final String? reward;
+  @override
+  final String? actionUrl;
+  @override
+  final String? actionText;
 
   factory _$AchievementModel(
           [void Function(AchievementModelBuilder)? updates]) =>
@@ -36,7 +40,9 @@ class _$AchievementModel extends AchievementModel {
       this.title,
       this.description,
       this.trackId,
-      this.reward})
+      this.reward,
+      this.actionUrl,
+      this.actionText})
       : super._();
 
   @override
@@ -58,7 +64,9 @@ class _$AchievementModel extends AchievementModel {
         title == other.title &&
         description == other.description &&
         trackId == other.trackId &&
-        reward == other.reward;
+        reward == other.reward &&
+        actionUrl == other.actionUrl &&
+        actionText == other.actionText;
   }
 
   @override
@@ -72,6 +80,8 @@ class _$AchievementModel extends AchievementModel {
     _$hash = $jc(_$hash, description.hashCode);
     _$hash = $jc(_$hash, trackId.hashCode);
     _$hash = $jc(_$hash, reward.hashCode);
+    _$hash = $jc(_$hash, actionUrl.hashCode);
+    _$hash = $jc(_$hash, actionText.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -86,7 +96,9 @@ class _$AchievementModel extends AchievementModel {
           ..add('title', title)
           ..add('description', description)
           ..add('trackId', trackId)
-          ..add('reward', reward))
+          ..add('reward', reward)
+          ..add('actionUrl', actionUrl)
+          ..add('actionText', actionText))
         .toString();
   }
 }
@@ -128,6 +140,14 @@ class AchievementModelBuilder
   String? get reward => _$this._reward;
   set reward(String? reward) => _$this._reward = reward;
 
+  String? _actionUrl;
+  String? get actionUrl => _$this._actionUrl;
+  set actionUrl(String? actionUrl) => _$this._actionUrl = actionUrl;
+
+  String? _actionText;
+  String? get actionText => _$this._actionText;
+  set actionText(String? actionText) => _$this._actionText = actionText;
+
   AchievementModelBuilder() {
     AchievementModel._defaults(this);
   }
@@ -143,6 +163,8 @@ class AchievementModelBuilder
       _description = $v.description;
       _trackId = $v.trackId;
       _reward = $v.reward;
+      _actionUrl = $v.actionUrl;
+      _actionText = $v.actionText;
       _$v = null;
     }
     return this;
@@ -173,6 +195,8 @@ class AchievementModelBuilder
           description: description,
           trackId: trackId,
           reward: reward,
+          actionUrl: actionUrl,
+          actionText: actionText,
         );
     replace(_$result);
     return _$result;

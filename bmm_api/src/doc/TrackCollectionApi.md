@@ -27,7 +27,7 @@ Method | HTTP request | Description
 
 
 # **trackCollectionGet**
-> BuiltList<TrackCollectionDetails> trackCollectionGet()
+> BuiltList<TrackCollectionShell> trackCollectionGet()
 
 Get a list of track collections for the current user.
 
@@ -50,7 +50,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BuiltList&lt;TrackCollectionDetails&gt;**](TrackCollectionDetails.md)
+[**BuiltList&lt;TrackCollectionShell&gt;**](TrackCollectionShell.md)
 
 ### Authorization
 

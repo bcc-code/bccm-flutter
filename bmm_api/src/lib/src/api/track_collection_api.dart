@@ -13,7 +13,7 @@ import 'package:bmm_api/src/model/create_track_collection_command.dart';
 import 'package:bmm_api/src/model/get_top_songs_collection_model.dart';
 import 'package:bmm_api/src/model/get_track_collection_model.dart';
 import 'package:bmm_api/src/model/problem_details.dart';
-import 'package:bmm_api/src/model/track_collection_details.dart';
+import 'package:bmm_api/src/model/track_collection_shell.dart';
 import 'package:bmm_api/src/model/update_track_collection_command.dart';
 import 'package:built_collection/built_collection.dart';
 
@@ -36,9 +36,9 @@ class TrackCollectionApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<TrackCollectionDetails>] as data
+  /// Returns a [Future] containing a [Response] with a [BuiltList<TrackCollectionShell>] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<BuiltList<TrackCollectionDetails>>> trackCollectionGet({ 
+  Future<Response<BuiltList<TrackCollectionShell>>> trackCollectionGet({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -67,14 +67,14 @@ class TrackCollectionApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<TrackCollectionDetails>? _responseData;
+    BuiltList<TrackCollectionShell>? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(BuiltList, [FullType(TrackCollectionDetails)]),
-      ) as BuiltList<TrackCollectionDetails>;
+        specifiedType: const FullType(BuiltList, [FullType(TrackCollectionShell)]),
+      ) as BuiltList<TrackCollectionShell>;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -86,7 +86,7 @@ class TrackCollectionApi {
       );
     }
 
-    return Response<BuiltList<TrackCollectionDetails>>(
+    return Response<BuiltList<TrackCollectionShell>>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

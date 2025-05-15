@@ -9,8 +9,8 @@ import 'package:bmm_api/src/model/track_model_songbook_relation.dart';
 import 'package:bmm_api/src/model/achievement_model.dart';
 import 'package:bmm_api/src/model/track_model.dart';
 import 'package:bmm_api/src/model/tile_model.dart';
-import 'package:bmm_api/src/model/hvhe_project_box.dart';
 import 'package:bmm_api/src/model/year_in_review_model.dart';
+import 'package:bmm_api/src/model/playlist_details_model.dart';
 import 'package:bmm_api/src/model/project_box.dart';
 import 'package:bmm_api/src/model/track_model_contributor_relation.dart';
 import 'package:bmm_api/src/model/track_model_track_meta.dart';
@@ -35,6 +35,7 @@ import 'package:bmm_api/src/model/tile_video_model.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:bmm_api/src/model/contributor_contributor_meta.dart';
 import 'package:bmm_api/src/model/podcast_model.dart';
+import 'package:bmm_api/src/model/project_box_v2.dart';
 import 'package:bmm_api/src/model/achievement_collection.dart';
 import 'package:bmm_api/src/model/section_header_model.dart';
 import 'package:bmm_api/src/model/i_album_or_track.dart';
@@ -60,13 +61,19 @@ part 'i_all_document_models.g.dart';
 /// * [description] 
 /// * [type] 
 /// * [children] 
+/// * [trackCount] 
+/// * [totalSeconds] 
 /// * [latestTrackId] 
 /// * [latestTrackPosition] 
+/// * [secondsLeft] 
 /// * [isVisible] 
 /// * [name] 
 /// * [meta] 
 /// * [interpretReferences] 
 /// * [otherReferences] 
+/// * [tracks] 
+/// * [useWeekGrouping] 
+/// * [showInChronologicalOrder] 
 /// * [access] 
 /// * [trackReferences] 
 /// * [year] 
@@ -92,8 +99,6 @@ part 'i_all_document_models.g.dart';
 /// * [pointsDescription] 
 /// * [achievements] 
 /// * [rulesLinkTitle] 
-/// * [boysPoints] 
-/// * [girlsPoints] 
 /// * [translatedMessage] 
 /// * [messageText] 
 /// * [link] 
@@ -140,7 +145,7 @@ part 'i_all_document_models.g.dart';
 /// * [playlistName] 
 @BuiltValue()
 abstract class IAllDocumentModels implements Built<IAllDocumentModels, IAllDocumentModelsBuilder> {
-  /// One Of [AchievementCollection], [AlbumModel], [ChapterHeader], [ContributorModel], [CurrentWeeksStreakVm], [GibraltarProjectBox], [HvheProjectBox], [InfoMessageModel], [PlaylistModel], [PodcastModel], [ProjectBox], [RecommendationModel], [SectionHeaderModel], [TileMessageModel], [TileModel], [TileVideoModel], [TrackCollectionModel], [TrackModel], [YearInReviewModel]
+  /// One Of [AchievementCollection], [AlbumModel], [ChapterHeader], [ContributorModel], [CurrentWeeksStreakVm], [GibraltarProjectBox], [InfoMessageModel], [PlaylistDetailsModel], [PlaylistModel], [PodcastModel], [ProjectBox], [ProjectBoxV2], [RecommendationModel], [SectionHeaderModel], [TileMessageModel], [TileModel], [TileVideoModel], [TrackCollectionModel], [TrackModel], [YearInReviewModel]
   OneOf get oneOf;
 
   static const String discriminatorFieldName = r'type';
@@ -153,11 +158,12 @@ abstract class IAllDocumentModels implements Built<IAllDocumentModels, IAllDocum
     r'chapter_header': ChapterHeader,
     r'contributor': ContributorModel,
     r'gibraltar_project_box': GibraltarProjectBox,
-    r'hvhe_project_box': HvheProjectBox,
     r'listening_streak': CurrentWeeksStreakVm,
     r'playlist': PlaylistModel,
+    r'playlist_details': PlaylistDetailsModel,
     r'podcast': PodcastModel,
     r'project_box': ProjectBox,
+    r'project_box_v2': ProjectBoxV2,
     r'recommendation': RecommendationModel,
     r'section_header': SectionHeaderModel,
     r'tile_message': TileMessageModel,
@@ -201,20 +207,23 @@ extension IAllDocumentModelsDiscriminatorExt on IAllDocumentModels {
         if (this is GibraltarProjectBox) {
             return r'gibraltar_project_box';
         }
-        if (this is HvheProjectBox) {
-            return r'hvhe_project_box';
-        }
         if (this is CurrentWeeksStreakVm) {
             return r'listening_streak';
         }
         if (this is PlaylistModel) {
             return r'playlist';
         }
+        if (this is PlaylistDetailsModel) {
+            return r'playlist_details';
+        }
         if (this is PodcastModel) {
             return r'podcast';
         }
         if (this is ProjectBox) {
             return r'project_box';
+        }
+        if (this is ProjectBoxV2) {
+            return r'project_box_v2';
         }
         if (this is RecommendationModel) {
             return r'recommendation';
@@ -263,20 +272,23 @@ extension IAllDocumentModelsBuilderDiscriminatorExt on IAllDocumentModelsBuilder
         if (this is GibraltarProjectBoxBuilder) {
             return r'gibraltar_project_box';
         }
-        if (this is HvheProjectBoxBuilder) {
-            return r'hvhe_project_box';
-        }
         if (this is CurrentWeeksStreakVmBuilder) {
             return r'listening_streak';
         }
         if (this is PlaylistModelBuilder) {
             return r'playlist';
         }
+        if (this is PlaylistDetailsModelBuilder) {
+            return r'playlist_details';
+        }
         if (this is PodcastModelBuilder) {
             return r'podcast';
         }
         if (this is ProjectBoxBuilder) {
             return r'project_box';
+        }
+        if (this is ProjectBoxV2Builder) {
+            return r'project_box_v2';
         }
         if (this is RecommendationModelBuilder) {
             return r'recommendation';
@@ -339,7 +351,7 @@ class _$IAllDocumentModelsSerializer implements PrimitiveSerializer<IAllDocument
     final discIndex = serializedList.indexOf(IAllDocumentModels.discriminatorFieldName) + 1;
     final discValue = serializers.deserialize(serializedList[discIndex], specifiedType: FullType(String)) as String;
     oneOfDataSrc = serialized;
-    final oneOfTypes = [InfoMessageModel, TileModel, AchievementCollection, AlbumModel, ChapterHeader, ContributorModel, GibraltarProjectBox, HvheProjectBox, CurrentWeeksStreakVm, PlaylistModel, PodcastModel, ProjectBox, RecommendationModel, SectionHeaderModel, TileMessageModel, TileVideoModel, TrackModel, TrackCollectionModel, YearInReviewModel, ];
+    final oneOfTypes = [InfoMessageModel, TileModel, AchievementCollection, AlbumModel, ChapterHeader, ContributorModel, GibraltarProjectBox, CurrentWeeksStreakVm, PlaylistModel, PlaylistDetailsModel, PodcastModel, ProjectBox, ProjectBoxV2, RecommendationModel, SectionHeaderModel, TileMessageModel, TileVideoModel, TrackModel, TrackCollectionModel, YearInReviewModel, ];
     Object oneOfResult;
     Type oneOfType;
     switch (discValue) {
@@ -392,13 +404,6 @@ class _$IAllDocumentModelsSerializer implements PrimitiveSerializer<IAllDocument
         ) as GibraltarProjectBox;
         oneOfType = GibraltarProjectBox;
         break;
-      case r'hvhe_project_box':
-        oneOfResult = serializers.deserialize(
-          oneOfDataSrc,
-          specifiedType: FullType(HvheProjectBox),
-        ) as HvheProjectBox;
-        oneOfType = HvheProjectBox;
-        break;
       case r'listening_streak':
         oneOfResult = serializers.deserialize(
           oneOfDataSrc,
@@ -413,6 +418,13 @@ class _$IAllDocumentModelsSerializer implements PrimitiveSerializer<IAllDocument
         ) as PlaylistModel;
         oneOfType = PlaylistModel;
         break;
+      case r'playlist_details':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(PlaylistDetailsModel),
+        ) as PlaylistDetailsModel;
+        oneOfType = PlaylistDetailsModel;
+        break;
       case r'podcast':
         oneOfResult = serializers.deserialize(
           oneOfDataSrc,
@@ -426,6 +438,13 @@ class _$IAllDocumentModelsSerializer implements PrimitiveSerializer<IAllDocument
           specifiedType: FullType(ProjectBox),
         ) as ProjectBox;
         oneOfType = ProjectBox;
+        break;
+      case r'project_box_v2':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(ProjectBoxV2),
+        ) as ProjectBoxV2;
+        oneOfType = ProjectBoxV2;
         break;
       case r'recommendation':
         oneOfResult = serializers.deserialize(
@@ -490,6 +509,8 @@ class IAllDocumentModelsTypeEnum extends EnumClass {
   static const IAllDocumentModelsTypeEnum album = _$iAllDocumentModelsTypeEnum_album;
   @BuiltValueEnumConst(wireName: r'contributor')
   static const IAllDocumentModelsTypeEnum contributor = _$iAllDocumentModelsTypeEnum_contributor;
+  @BuiltValueEnumConst(wireName: r'playlist_details')
+  static const IAllDocumentModelsTypeEnum playlistDetails = _$iAllDocumentModelsTypeEnum_playlistDetails;
   @BuiltValueEnumConst(wireName: r'playlist')
   static const IAllDocumentModelsTypeEnum playlist = _$iAllDocumentModelsTypeEnum_playlist;
   @BuiltValueEnumConst(wireName: r'podcast')
@@ -504,8 +525,8 @@ class IAllDocumentModelsTypeEnum extends EnumClass {
   static const IAllDocumentModelsTypeEnum chapterHeader = _$iAllDocumentModelsTypeEnum_chapterHeader;
   @BuiltValueEnumConst(wireName: r'gibraltar_project_box')
   static const IAllDocumentModelsTypeEnum gibraltarProjectBox = _$iAllDocumentModelsTypeEnum_gibraltarProjectBox;
-  @BuiltValueEnumConst(wireName: r'hvhe_project_box')
-  static const IAllDocumentModelsTypeEnum hvheProjectBox = _$iAllDocumentModelsTypeEnum_hvheProjectBox;
+  @BuiltValueEnumConst(wireName: r'project_box_v2')
+  static const IAllDocumentModelsTypeEnum projectBoxV2 = _$iAllDocumentModelsTypeEnum_projectBoxV2;
   @BuiltValueEnumConst(wireName: r'InfoMessage')
   static const IAllDocumentModelsTypeEnum infoMessage = _$iAllDocumentModelsTypeEnum_infoMessage;
   @BuiltValueEnumConst(wireName: r'project_box')

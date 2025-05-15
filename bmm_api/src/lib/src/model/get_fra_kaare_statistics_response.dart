@@ -4,6 +4,7 @@
 
 // ignore_for_file: unused_element
 import 'package:built_collection/built_collection.dart';
+import 'package:bmm_api/src/model/fra_kaare_draw_command_draw_option.dart';
 import 'package:bmm_api/src/model/get_fra_kaare_statistics_church_statistics.dart';
 import 'package:bmm_api/src/model/get_fra_kaare_statistics_church_statistics_snapshot.dart';
 import 'package:built_value/built_value.dart';
@@ -18,6 +19,9 @@ part 'get_fra_kaare_statistics_response.g.dart';
 /// * [largeChurches] 
 /// * [smallChurches] 
 /// * [timeSeries] 
+/// * [drawOptions] 
+/// * [maxDraws] 
+/// * [drawsLeft] 
 @BuiltValue()
 abstract class GetFraKaareStatisticsResponse implements Built<GetFraKaareStatisticsResponse, GetFraKaareStatisticsResponseBuilder> {
   @BuiltValueField(wireName: r'highlighted_church_name')
@@ -31,6 +35,15 @@ abstract class GetFraKaareStatisticsResponse implements Built<GetFraKaareStatist
 
   @BuiltValueField(wireName: r'time_series')
   BuiltList<GetFraKaareStatisticsChurchStatisticsSnapshot>? get timeSeries;
+
+  @BuiltValueField(wireName: r'draw_options')
+  BuiltList<FraKaareDrawCommandDrawOption>? get drawOptions;
+
+  @BuiltValueField(wireName: r'max_draws')
+  int? get maxDraws;
+
+  @BuiltValueField(wireName: r'draws_left')
+  int? get drawsLeft;
 
   GetFraKaareStatisticsResponse._();
 
@@ -81,6 +94,27 @@ class _$GetFraKaareStatisticsResponseSerializer implements PrimitiveSerializer<G
       yield serializers.serialize(
         object.timeSeries,
         specifiedType: const FullType.nullable(BuiltList, [FullType(GetFraKaareStatisticsChurchStatisticsSnapshot)]),
+      );
+    }
+    if (object.drawOptions != null) {
+      yield r'draw_options';
+      yield serializers.serialize(
+        object.drawOptions,
+        specifiedType: const FullType.nullable(BuiltList, [FullType(FraKaareDrawCommandDrawOption)]),
+      );
+    }
+    if (object.maxDraws != null) {
+      yield r'max_draws';
+      yield serializers.serialize(
+        object.maxDraws,
+        specifiedType: const FullType(int),
+      );
+    }
+    if (object.drawsLeft != null) {
+      yield r'draws_left';
+      yield serializers.serialize(
+        object.drawsLeft,
+        specifiedType: const FullType(int),
       );
     }
   }
@@ -137,6 +171,28 @@ class _$GetFraKaareStatisticsResponseSerializer implements PrimitiveSerializer<G
           ) as BuiltList<GetFraKaareStatisticsChurchStatisticsSnapshot>?;
           if (valueDes == null) continue;
           result.timeSeries.replace(valueDes);
+          break;
+        case r'draw_options':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(BuiltList, [FullType(FraKaareDrawCommandDrawOption)]),
+          ) as BuiltList<FraKaareDrawCommandDrawOption>?;
+          if (valueDes == null) continue;
+          result.drawOptions.replace(valueDes);
+          break;
+        case r'max_draws':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(int),
+          ) as int;
+          result.maxDraws = valueDes;
+          break;
+        case r'draws_left':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(int),
+          ) as int;
+          result.drawsLeft = valueDes;
           break;
         default:
           unhandled.add(key);

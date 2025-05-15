@@ -13,6 +13,9 @@ const IAlbumContributorPodcastPlaylistOrTrackTypeEnum
     _$iAlbumContributorPodcastPlaylistOrTrackTypeEnum_contributor =
     const IAlbumContributorPodcastPlaylistOrTrackTypeEnum._('contributor');
 const IAlbumContributorPodcastPlaylistOrTrackTypeEnum
+    _$iAlbumContributorPodcastPlaylistOrTrackTypeEnum_playlistDetails =
+    const IAlbumContributorPodcastPlaylistOrTrackTypeEnum._('playlistDetails');
+const IAlbumContributorPodcastPlaylistOrTrackTypeEnum
     _$iAlbumContributorPodcastPlaylistOrTrackTypeEnum_playlist =
     const IAlbumContributorPodcastPlaylistOrTrackTypeEnum._('playlist');
 const IAlbumContributorPodcastPlaylistOrTrackTypeEnum
@@ -29,6 +32,8 @@ IAlbumContributorPodcastPlaylistOrTrackTypeEnum
       return _$iAlbumContributorPodcastPlaylistOrTrackTypeEnum_album;
     case 'contributor':
       return _$iAlbumContributorPodcastPlaylistOrTrackTypeEnum_contributor;
+    case 'playlistDetails':
+      return _$iAlbumContributorPodcastPlaylistOrTrackTypeEnum_playlistDetails;
     case 'playlist':
       return _$iAlbumContributorPodcastPlaylistOrTrackTypeEnum_playlist;
     case 'podcast':
@@ -45,6 +50,7 @@ final BuiltSet<IAlbumContributorPodcastPlaylistOrTrackTypeEnum>
         IAlbumContributorPodcastPlaylistOrTrackTypeEnum>(const <IAlbumContributorPodcastPlaylistOrTrackTypeEnum>[
   _$iAlbumContributorPodcastPlaylistOrTrackTypeEnum_album,
   _$iAlbumContributorPodcastPlaylistOrTrackTypeEnum_contributor,
+  _$iAlbumContributorPodcastPlaylistOrTrackTypeEnum_playlistDetails,
   _$iAlbumContributorPodcastPlaylistOrTrackTypeEnum_playlist,
   _$iAlbumContributorPodcastPlaylistOrTrackTypeEnum_podcast,
   _$iAlbumContributorPodcastPlaylistOrTrackTypeEnum_track,
@@ -60,6 +66,7 @@ class _$IAlbumContributorPodcastPlaylistOrTrackTypeEnumSerializer
   static const Map<String, Object> _toWire = const <String, Object>{
     'album': 'album',
     'contributor': 'contributor',
+    'playlistDetails': 'playlist_details',
     'playlist': 'playlist',
     'podcast': 'podcast',
     'track': 'track',
@@ -67,6 +74,7 @@ class _$IAlbumContributorPodcastPlaylistOrTrackTypeEnumSerializer
   static const Map<Object, String> _fromWire = const <Object, String>{
     'album': 'album',
     'contributor': 'contributor',
+    'playlist_details': 'playlistDetails',
     'playlist': 'playlist',
     'podcast': 'podcast',
     'track': 'track',

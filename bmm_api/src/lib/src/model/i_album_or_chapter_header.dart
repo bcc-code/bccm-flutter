@@ -31,8 +31,11 @@ part 'i_album_or_chapter_header.g.dart';
 /// * [description] 
 /// * [type] 
 /// * [children] 
+/// * [trackCount] 
+/// * [totalSeconds] 
 /// * [latestTrackId] 
 /// * [latestTrackPosition] 
+/// * [secondsLeft] 
 @BuiltValue()
 abstract class IAlbumOrChapterHeader implements Built<IAlbumOrChapterHeader, IAlbumOrChapterHeaderBuilder> {
   /// One Of [AlbumModel], [ChapterHeader]

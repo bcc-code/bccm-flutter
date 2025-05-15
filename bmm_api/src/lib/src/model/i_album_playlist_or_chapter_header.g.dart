@@ -10,6 +10,9 @@ const IAlbumPlaylistOrChapterHeaderTypeEnum
     _$iAlbumPlaylistOrChapterHeaderTypeEnum_album =
     const IAlbumPlaylistOrChapterHeaderTypeEnum._('album');
 const IAlbumPlaylistOrChapterHeaderTypeEnum
+    _$iAlbumPlaylistOrChapterHeaderTypeEnum_playlistDetails =
+    const IAlbumPlaylistOrChapterHeaderTypeEnum._('playlistDetails');
+const IAlbumPlaylistOrChapterHeaderTypeEnum
     _$iAlbumPlaylistOrChapterHeaderTypeEnum_playlist =
     const IAlbumPlaylistOrChapterHeaderTypeEnum._('playlist');
 const IAlbumPlaylistOrChapterHeaderTypeEnum
@@ -21,6 +24,8 @@ IAlbumPlaylistOrChapterHeaderTypeEnum
   switch (name) {
     case 'album':
       return _$iAlbumPlaylistOrChapterHeaderTypeEnum_album;
+    case 'playlistDetails':
+      return _$iAlbumPlaylistOrChapterHeaderTypeEnum_playlistDetails;
     case 'playlist':
       return _$iAlbumPlaylistOrChapterHeaderTypeEnum_playlist;
     case 'chapterHeader':
@@ -34,6 +39,7 @@ final BuiltSet<IAlbumPlaylistOrChapterHeaderTypeEnum>
     _$iAlbumPlaylistOrChapterHeaderTypeEnumValues = new BuiltSet<
         IAlbumPlaylistOrChapterHeaderTypeEnum>(const <IAlbumPlaylistOrChapterHeaderTypeEnum>[
   _$iAlbumPlaylistOrChapterHeaderTypeEnum_album,
+  _$iAlbumPlaylistOrChapterHeaderTypeEnum_playlistDetails,
   _$iAlbumPlaylistOrChapterHeaderTypeEnum_playlist,
   _$iAlbumPlaylistOrChapterHeaderTypeEnum_chapterHeader,
 ]);
@@ -46,11 +52,13 @@ class _$IAlbumPlaylistOrChapterHeaderTypeEnumSerializer
     implements PrimitiveSerializer<IAlbumPlaylistOrChapterHeaderTypeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'album': 'album',
+    'playlistDetails': 'playlist_details',
     'playlist': 'playlist',
     'chapterHeader': 'chapter_header',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'album': 'album',
+    'playlist_details': 'playlistDetails',
     'playlist': 'playlist',
     'chapter_header': 'chapterHeader',
   };

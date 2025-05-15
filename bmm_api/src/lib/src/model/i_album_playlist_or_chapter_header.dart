@@ -8,7 +8,9 @@ import 'package:bmm_api/src/model/playlist_model.dart';
 import 'package:bmm_api/src/model/album_model.dart';
 import 'package:bmm_api/src/model/album_model_album_meta.dart';
 import 'package:built_collection/built_collection.dart';
+import 'package:bmm_api/src/model/track_model.dart';
 import 'package:bmm_api/src/model/language_enum.dart';
+import 'package:bmm_api/src/model/playlist_details_model.dart';
 import 'package:bmm_api/src/model/i_album_or_track.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
@@ -32,11 +34,15 @@ part 'i_album_playlist_or_chapter_header.g.dart';
 /// * [description] 
 /// * [type] 
 /// * [children] 
+/// * [trackCount] 
+/// * [totalSeconds] 
 /// * [latestTrackId] 
 /// * [latestTrackPosition] 
+/// * [secondsLeft] 
+/// * [tracks] 
 @BuiltValue()
 abstract class IAlbumPlaylistOrChapterHeader implements Built<IAlbumPlaylistOrChapterHeader, IAlbumPlaylistOrChapterHeaderBuilder> {
-  /// One Of [AlbumModel], [ChapterHeader], [PlaylistModel]
+  /// One Of [AlbumModel], [ChapterHeader], [PlaylistDetailsModel], [PlaylistModel]
   OneOf get oneOf;
 
   static const String discriminatorFieldName = r'type';
@@ -45,6 +51,7 @@ abstract class IAlbumPlaylistOrChapterHeader implements Built<IAlbumPlaylistOrCh
     r'album': AlbumModel,
     r'chapter_header': ChapterHeader,
     r'playlist': PlaylistModel,
+    r'playlist_details': PlaylistDetailsModel,
   };
 
   IAlbumPlaylistOrChapterHeader._();
@@ -69,6 +76,9 @@ extension IAlbumPlaylistOrChapterHeaderDiscriminatorExt on IAlbumPlaylistOrChapt
         if (this is PlaylistModel) {
             return r'playlist';
         }
+        if (this is PlaylistDetailsModel) {
+            return r'playlist_details';
+        }
         return null;
     }
 }
@@ -82,6 +92,9 @@ extension IAlbumPlaylistOrChapterHeaderBuilderDiscriminatorExt on IAlbumPlaylist
         }
         if (this is PlaylistModelBuilder) {
             return r'playlist';
+        }
+        if (this is PlaylistDetailsModelBuilder) {
+            return r'playlist_details';
         }
         return null;
     }
@@ -123,7 +136,7 @@ class _$IAlbumPlaylistOrChapterHeaderSerializer implements PrimitiveSerializer<I
     final discIndex = serializedList.indexOf(IAlbumPlaylistOrChapterHeader.discriminatorFieldName) + 1;
     final discValue = serializers.deserialize(serializedList[discIndex], specifiedType: FullType(String)) as String;
     oneOfDataSrc = serialized;
-    final oneOfTypes = [AlbumModel, ChapterHeader, PlaylistModel, ];
+    final oneOfTypes = [AlbumModel, ChapterHeader, PlaylistModel, PlaylistDetailsModel, ];
     Object oneOfResult;
     Type oneOfType;
     switch (discValue) {
@@ -148,6 +161,13 @@ class _$IAlbumPlaylistOrChapterHeaderSerializer implements PrimitiveSerializer<I
         ) as PlaylistModel;
         oneOfType = PlaylistModel;
         break;
+      case r'playlist_details':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(PlaylistDetailsModel),
+        ) as PlaylistDetailsModel;
+        oneOfType = PlaylistDetailsModel;
+        break;
       default:
         throw UnsupportedError("Couldn't deserialize oneOf for the discriminator value: ${discValue}");
     }
@@ -160,6 +180,8 @@ class IAlbumPlaylistOrChapterHeaderTypeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'album')
   static const IAlbumPlaylistOrChapterHeaderTypeEnum album = _$iAlbumPlaylistOrChapterHeaderTypeEnum_album;
+  @BuiltValueEnumConst(wireName: r'playlist_details')
+  static const IAlbumPlaylistOrChapterHeaderTypeEnum playlistDetails = _$iAlbumPlaylistOrChapterHeaderTypeEnum_playlistDetails;
   @BuiltValueEnumConst(wireName: r'playlist')
   static const IAlbumPlaylistOrChapterHeaderTypeEnum playlist = _$iAlbumPlaylistOrChapterHeaderTypeEnum_playlist;
   @BuiltValueEnumConst(wireName: r'chapter_header')

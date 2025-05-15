@@ -37,6 +37,9 @@ import 'package:bmm_api/src/model/document_list_i_album_playlist_or_chapter_head
 import 'package:bmm_api/src/model/document_list_i_all_document_models.dart';
 import 'package:bmm_api/src/model/document_list_podcast_model.dart';
 import 'package:bmm_api/src/model/forbilde_points.dart';
+import 'package:bmm_api/src/model/fra_kaare_draw_command.dart';
+import 'package:bmm_api/src/model/fra_kaare_draw_command_draw_option.dart';
+import 'package:bmm_api/src/model/fra_kaare_draw_command_response.dart';
 import 'package:bmm_api/src/model/get_fra_kaare_statistics_church_statistics.dart';
 import 'package:bmm_api/src/model/get_fra_kaare_statistics_church_statistics_snapshot.dart';
 import 'package:bmm_api/src/model/get_fra_kaare_statistics_response.dart';
@@ -50,8 +53,7 @@ import 'package:bmm_api/src/model/get_year_in_review_overview_slide.dart';
 import 'package:bmm_api/src/model/gibraltar_project_box.dart';
 import 'package:bmm_api/src/model/handle_bccm_answer_command_bccm_answer.dart';
 import 'package:bmm_api/src/model/highlighting.dart';
-import 'package:bmm_api/src/model/hvhe_controller_hvhe_status.dart';
-import 'package:bmm_api/src/model/hvhe_project_box.dart';
+import 'package:bmm_api/src/model/hvhe_competition_points.dart';
 import 'package:bmm_api/src/model/i_achievement_collection_or_chapter_header.dart';
 import 'package:bmm_api/src/model/i_album_contributor_podcast_playlist_or_track.dart';
 import 'package:bmm_api/src/model/i_album_or_chapter_header.dart';
@@ -67,11 +69,14 @@ import 'package:bmm_api/src/model/lyrics.dart';
 import 'package:bmm_api/src/model/lyrics_verse.dart';
 import 'package:bmm_api/src/model/media_type_enum.dart';
 import 'package:bmm_api/src/model/metadata_model.dart';
+import 'package:bmm_api/src/model/person_gender_enum.dart';
+import 'package:bmm_api/src/model/playlist_details_model.dart';
 import 'package:bmm_api/src/model/playlist_model.dart';
 import 'package:bmm_api/src/model/podcast_model.dart';
 import 'package:bmm_api/src/model/problem_details.dart';
 import 'package:bmm_api/src/model/process_watched_command_event.dart';
 import 'package:bmm_api/src/model/project_box.dart';
+import 'package:bmm_api/src/model/project_box_v2.dart';
 import 'package:bmm_api/src/model/project_church_statistics_query_church_statistics.dart';
 import 'package:bmm_api/src/model/project_church_statistics_query_church_statistics_church.dart';
 import 'package:bmm_api/src/model/project_rules_query_rules.dart';
@@ -97,8 +102,8 @@ import 'package:bmm_api/src/model/tile_message_model.dart';
 import 'package:bmm_api/src/model/tile_model.dart';
 import 'package:bmm_api/src/model/tile_video_model.dart';
 import 'package:bmm_api/src/model/topbar_search_query_topbar_search_result.dart';
-import 'package:bmm_api/src/model/track_collection_details.dart';
 import 'package:bmm_api/src/model/track_collection_model.dart';
+import 'package:bmm_api/src/model/track_collection_shell.dart';
 import 'package:bmm_api/src/model/track_list_reference.dart';
 import 'package:bmm_api/src/model/track_model.dart';
 import 'package:bmm_api/src/model/track_model_bible_relation.dart';
@@ -146,6 +151,9 @@ part 'serializers.g.dart';
   DocumentListIAllDocumentModels,
   DocumentListPodcastModel,
   ForbildePoints,
+  FraKaareDrawCommand,
+  FraKaareDrawCommandDrawOption,
+  FraKaareDrawCommandResponse,
   GetFraKaareStatisticsChurchStatistics,
   GetFraKaareStatisticsChurchStatisticsSnapshot,
   GetFraKaareStatisticsResponse,
@@ -159,8 +167,7 @@ part 'serializers.g.dart';
   GibraltarProjectBox,
   HandleBccmAnswerCommandBccmAnswer,
   Highlighting,
-  HvheControllerHvheStatus,
-  HvheProjectBox,
+  HvheCompetitionPoints,
   IAchievementCollectionOrChapterHeader,
   IAlbumContributorPodcastPlaylistOrTrack,
   IAlbumOrChapterHeader,
@@ -176,11 +183,14 @@ part 'serializers.g.dart';
   LyricsVerse,
   MediaTypeEnum,
   MetadataModel,
+  PersonGenderEnum,
+  PlaylistDetailsModel,
   PlaylistModel,
   PodcastModel,
   ProblemDetails,
   ProcessWatchedCommandEvent,
   ProjectBox,
+  ProjectBoxV2,
   ProjectChurchStatisticsQueryChurchStatistics,
   ProjectChurchStatisticsQueryChurchStatisticsChurch,
   ProjectRulesQueryRules,
@@ -206,8 +216,8 @@ part 'serializers.g.dart';
   TileModel,
   TileVideoModel,
   TopbarSearchQueryTopbarSearchResult,
-  TrackCollectionDetails,
   TrackCollectionModel,
+  TrackCollectionShell,
   TrackListReference,
   TrackModel,
   TrackModelBibleRelation,
@@ -295,10 +305,6 @@ Serializers serializers = (_$serializers.toBuilder()
         () => ListBuilder<TopbarSearchQueryTopbarSearchResult>(),
       )
       ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(TrackCollectionDetails)]),
-        () => ListBuilder<TrackCollectionDetails>(),
-      )
-      ..addBuilderFactory(
         const FullType(BuiltList, [FullType(PlaylistModel)]),
         () => ListBuilder<PlaylistModel>(),
       )
@@ -325,6 +331,10 @@ Serializers serializers = (_$serializers.toBuilder()
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(ResourceType)]),
         () => ListBuilder<ResourceType>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(TrackCollectionShell)]),
+        () => ListBuilder<TrackCollectionShell>(),
       )
       ..add(const OneOfSerializer())
       ..add(const AnyOfSerializer())

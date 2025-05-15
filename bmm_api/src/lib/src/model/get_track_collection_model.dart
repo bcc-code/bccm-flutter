@@ -23,6 +23,8 @@ part 'get_track_collection_model.g.dart';
 /// * [canEdit] 
 /// * [tracks] 
 /// * [useLikeIcon] 
+/// * [trackCount] 
+/// * [totalSeconds] 
 @BuiltValue()
 abstract class GetTrackCollectionModel implements Built<GetTrackCollectionModel, GetTrackCollectionModelBuilder> {
   @BuiltValueField(wireName: r'type')
@@ -54,6 +56,12 @@ abstract class GetTrackCollectionModel implements Built<GetTrackCollectionModel,
 
   @BuiltValueField(wireName: r'use_like_icon')
   bool? get useLikeIcon;
+
+  @BuiltValueField(wireName: r'track_count')
+  int get trackCount;
+
+  @BuiltValueField(wireName: r'total_seconds')
+  int get totalSeconds;
 
   GetTrackCollectionModel._();
 
@@ -144,6 +152,16 @@ class _$GetTrackCollectionModelSerializer implements PrimitiveSerializer<GetTrac
         specifiedType: const FullType(bool),
       );
     }
+    yield r'track_count';
+    yield serializers.serialize(
+      object.trackCount,
+      specifiedType: const FullType(int),
+    );
+    yield r'total_seconds';
+    yield serializers.serialize(
+      object.totalSeconds,
+      specifiedType: const FullType(int),
+    );
   }
 
   @override
@@ -241,6 +259,20 @@ class _$GetTrackCollectionModelSerializer implements PrimitiveSerializer<GetTrac
             specifiedType: const FullType(bool),
           ) as bool;
           result.useLikeIcon = valueDes;
+          break;
+        case r'track_count':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(int),
+          ) as int;
+          result.trackCount = valueDes;
+          break;
+        case r'total_seconds':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(int),
+          ) as int;
+          result.totalSeconds = valueDes;
           break;
         default:
           unhandled.add(key);

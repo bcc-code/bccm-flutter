@@ -9,6 +9,7 @@ import 'package:bmm_api/src/model/track_model_songbook_relation.dart';
 import 'package:bmm_api/src/model/track_model.dart';
 import 'package:bmm_api/src/model/track_model_medium.dart';
 import 'package:bmm_api/src/model/language_enum.dart';
+import 'package:bmm_api/src/model/playlist_details_model.dart';
 import 'package:bmm_api/src/model/track_model_contributor_relation.dart';
 import 'package:bmm_api/src/model/track_model_track_meta.dart';
 import 'package:bmm_api/src/model/track_model_external_relation.dart';
@@ -42,13 +43,19 @@ part 'i_album_contributor_podcast_playlist_or_track.g.dart';
 /// * [description] 
 /// * [type] 
 /// * [children] 
+/// * [trackCount] 
+/// * [totalSeconds] 
 /// * [latestTrackId] 
 /// * [latestTrackPosition] 
+/// * [secondsLeft] 
 /// * [isVisible] 
 /// * [name] 
 /// * [meta] 
 /// * [interpretReferences] 
 /// * [otherReferences] 
+/// * [tracks] 
+/// * [useWeekGrouping] 
+/// * [showInChronologicalOrder] 
 /// * [comment] 
 /// * [order] 
 /// * [recordedAt] 
@@ -67,7 +74,7 @@ part 'i_album_contributor_podcast_playlist_or_track.g.dart';
 /// * [isLiked] 
 @BuiltValue()
 abstract class IAlbumContributorPodcastPlaylistOrTrack implements Built<IAlbumContributorPodcastPlaylistOrTrack, IAlbumContributorPodcastPlaylistOrTrackBuilder> {
-  /// One Of [AlbumModel], [ContributorModel], [PlaylistModel], [PodcastModel], [TrackModel]
+  /// One Of [AlbumModel], [ContributorModel], [PlaylistDetailsModel], [PlaylistModel], [PodcastModel], [TrackModel]
   OneOf get oneOf;
 
   static const String discriminatorFieldName = r'type';
@@ -76,6 +83,7 @@ abstract class IAlbumContributorPodcastPlaylistOrTrack implements Built<IAlbumCo
     r'album': AlbumModel,
     r'contributor': ContributorModel,
     r'playlist': PlaylistModel,
+    r'playlist_details': PlaylistDetailsModel,
     r'podcast': PodcastModel,
     r'track': TrackModel,
   };
@@ -102,6 +110,9 @@ extension IAlbumContributorPodcastPlaylistOrTrackDiscriminatorExt on IAlbumContr
         if (this is PlaylistModel) {
             return r'playlist';
         }
+        if (this is PlaylistDetailsModel) {
+            return r'playlist_details';
+        }
         if (this is PodcastModel) {
             return r'podcast';
         }
@@ -121,6 +132,9 @@ extension IAlbumContributorPodcastPlaylistOrTrackBuilderDiscriminatorExt on IAlb
         }
         if (this is PlaylistModelBuilder) {
             return r'playlist';
+        }
+        if (this is PlaylistDetailsModelBuilder) {
+            return r'playlist_details';
         }
         if (this is PodcastModelBuilder) {
             return r'podcast';
@@ -168,7 +182,7 @@ class _$IAlbumContributorPodcastPlaylistOrTrackSerializer implements PrimitiveSe
     final discIndex = serializedList.indexOf(IAlbumContributorPodcastPlaylistOrTrack.discriminatorFieldName) + 1;
     final discValue = serializers.deserialize(serializedList[discIndex], specifiedType: FullType(String)) as String;
     oneOfDataSrc = serialized;
-    final oneOfTypes = [AlbumModel, ContributorModel, PlaylistModel, PodcastModel, TrackModel, ];
+    final oneOfTypes = [AlbumModel, ContributorModel, PlaylistModel, PlaylistDetailsModel, PodcastModel, TrackModel, ];
     Object oneOfResult;
     Type oneOfType;
     switch (discValue) {
@@ -192,6 +206,13 @@ class _$IAlbumContributorPodcastPlaylistOrTrackSerializer implements PrimitiveSe
           specifiedType: FullType(PlaylistModel),
         ) as PlaylistModel;
         oneOfType = PlaylistModel;
+        break;
+      case r'playlist_details':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(PlaylistDetailsModel),
+        ) as PlaylistDetailsModel;
+        oneOfType = PlaylistDetailsModel;
         break;
       case r'podcast':
         oneOfResult = serializers.deserialize(
@@ -221,6 +242,8 @@ class IAlbumContributorPodcastPlaylistOrTrackTypeEnum extends EnumClass {
   static const IAlbumContributorPodcastPlaylistOrTrackTypeEnum album = _$iAlbumContributorPodcastPlaylistOrTrackTypeEnum_album;
   @BuiltValueEnumConst(wireName: r'contributor')
   static const IAlbumContributorPodcastPlaylistOrTrackTypeEnum contributor = _$iAlbumContributorPodcastPlaylistOrTrackTypeEnum_contributor;
+  @BuiltValueEnumConst(wireName: r'playlist_details')
+  static const IAlbumContributorPodcastPlaylistOrTrackTypeEnum playlistDetails = _$iAlbumContributorPodcastPlaylistOrTrackTypeEnum_playlistDetails;
   @BuiltValueEnumConst(wireName: r'playlist')
   static const IAlbumContributorPodcastPlaylistOrTrackTypeEnum playlist = _$iAlbumContributorPodcastPlaylistOrTrackTypeEnum_playlist;
   @BuiltValueEnumConst(wireName: r'podcast')

@@ -19,6 +19,8 @@ part 'achievement_model.g.dart';
 /// * [description] 
 /// * [trackId] 
 /// * [reward] 
+/// * [actionUrl] 
+/// * [actionText] 
 @BuiltValue()
 abstract class AchievementModel implements Built<AchievementModel, AchievementModelBuilder> {
   @BuiltValueField(wireName: r'id')
@@ -44,6 +46,12 @@ abstract class AchievementModel implements Built<AchievementModel, AchievementMo
 
   @BuiltValueField(wireName: r'reward')
   String? get reward;
+
+  @BuiltValueField(wireName: r'action_url')
+  String? get actionUrl;
+
+  @BuiltValueField(wireName: r'action_text')
+  String? get actionText;
 
   AchievementModel._();
 
@@ -121,6 +129,20 @@ class _$AchievementModelSerializer implements PrimitiveSerializer<AchievementMod
       yield r'reward';
       yield serializers.serialize(
         object.reward,
+        specifiedType: const FullType.nullable(String),
+      );
+    }
+    if (object.actionUrl != null) {
+      yield r'action_url';
+      yield serializers.serialize(
+        object.actionUrl,
+        specifiedType: const FullType.nullable(String),
+      );
+    }
+    if (object.actionText != null) {
+      yield r'action_text';
+      yield serializers.serialize(
+        object.actionText,
         specifiedType: const FullType.nullable(String),
       );
     }
@@ -208,6 +230,22 @@ class _$AchievementModelSerializer implements PrimitiveSerializer<AchievementMod
           ) as String?;
           if (valueDes == null) continue;
           result.reward = valueDes;
+          break;
+        case r'action_url':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.actionUrl = valueDes;
+          break;
+        case r'action_text':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.actionText = valueDes;
           break;
         default:
           unhandled.add(key);

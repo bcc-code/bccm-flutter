@@ -10,6 +10,8 @@ const IAllDocumentModelsTypeEnum _$iAllDocumentModelsTypeEnum_album =
     const IAllDocumentModelsTypeEnum._('album');
 const IAllDocumentModelsTypeEnum _$iAllDocumentModelsTypeEnum_contributor =
     const IAllDocumentModelsTypeEnum._('contributor');
+const IAllDocumentModelsTypeEnum _$iAllDocumentModelsTypeEnum_playlistDetails =
+    const IAllDocumentModelsTypeEnum._('playlistDetails');
 const IAllDocumentModelsTypeEnum _$iAllDocumentModelsTypeEnum_playlist =
     const IAllDocumentModelsTypeEnum._('playlist');
 const IAllDocumentModelsTypeEnum _$iAllDocumentModelsTypeEnum_podcast =
@@ -26,8 +28,8 @@ const IAllDocumentModelsTypeEnum _$iAllDocumentModelsTypeEnum_chapterHeader =
 const IAllDocumentModelsTypeEnum
     _$iAllDocumentModelsTypeEnum_gibraltarProjectBox =
     const IAllDocumentModelsTypeEnum._('gibraltarProjectBox');
-const IAllDocumentModelsTypeEnum _$iAllDocumentModelsTypeEnum_hvheProjectBox =
-    const IAllDocumentModelsTypeEnum._('hvheProjectBox');
+const IAllDocumentModelsTypeEnum _$iAllDocumentModelsTypeEnum_projectBoxV2 =
+    const IAllDocumentModelsTypeEnum._('projectBoxV2');
 const IAllDocumentModelsTypeEnum _$iAllDocumentModelsTypeEnum_infoMessage =
     const IAllDocumentModelsTypeEnum._('infoMessage');
 const IAllDocumentModelsTypeEnum _$iAllDocumentModelsTypeEnum_projectBox =
@@ -53,6 +55,8 @@ IAllDocumentModelsTypeEnum _$iAllDocumentModelsTypeEnumValueOf(String name) {
       return _$iAllDocumentModelsTypeEnum_album;
     case 'contributor':
       return _$iAllDocumentModelsTypeEnum_contributor;
+    case 'playlistDetails':
+      return _$iAllDocumentModelsTypeEnum_playlistDetails;
     case 'playlist':
       return _$iAllDocumentModelsTypeEnum_playlist;
     case 'podcast':
@@ -67,8 +71,8 @@ IAllDocumentModelsTypeEnum _$iAllDocumentModelsTypeEnumValueOf(String name) {
       return _$iAllDocumentModelsTypeEnum_chapterHeader;
     case 'gibraltarProjectBox':
       return _$iAllDocumentModelsTypeEnum_gibraltarProjectBox;
-    case 'hvheProjectBox':
-      return _$iAllDocumentModelsTypeEnum_hvheProjectBox;
+    case 'projectBoxV2':
+      return _$iAllDocumentModelsTypeEnum_projectBoxV2;
     case 'infoMessage':
       return _$iAllDocumentModelsTypeEnum_infoMessage;
     case 'projectBox':
@@ -96,6 +100,7 @@ final BuiltSet<IAllDocumentModelsTypeEnum> _$iAllDocumentModelsTypeEnumValues =
     new BuiltSet<IAllDocumentModelsTypeEnum>(const <IAllDocumentModelsTypeEnum>[
   _$iAllDocumentModelsTypeEnum_album,
   _$iAllDocumentModelsTypeEnum_contributor,
+  _$iAllDocumentModelsTypeEnum_playlistDetails,
   _$iAllDocumentModelsTypeEnum_playlist,
   _$iAllDocumentModelsTypeEnum_podcast,
   _$iAllDocumentModelsTypeEnum_trackCollection,
@@ -103,7 +108,7 @@ final BuiltSet<IAllDocumentModelsTypeEnum> _$iAllDocumentModelsTypeEnumValues =
   _$iAllDocumentModelsTypeEnum_achievementCollection,
   _$iAllDocumentModelsTypeEnum_chapterHeader,
   _$iAllDocumentModelsTypeEnum_gibraltarProjectBox,
-  _$iAllDocumentModelsTypeEnum_hvheProjectBox,
+  _$iAllDocumentModelsTypeEnum_projectBoxV2,
   _$iAllDocumentModelsTypeEnum_infoMessage,
   _$iAllDocumentModelsTypeEnum_projectBox,
   _$iAllDocumentModelsTypeEnum_recommendation,
@@ -123,6 +128,7 @@ class _$IAllDocumentModelsTypeEnumSerializer
   static const Map<String, Object> _toWire = const <String, Object>{
     'album': 'album',
     'contributor': 'contributor',
+    'playlistDetails': 'playlist_details',
     'playlist': 'playlist',
     'podcast': 'podcast',
     'trackCollection': 'track_collection',
@@ -130,7 +136,7 @@ class _$IAllDocumentModelsTypeEnumSerializer
     'achievementCollection': 'achievement_collection',
     'chapterHeader': 'chapter_header',
     'gibraltarProjectBox': 'gibraltar_project_box',
-    'hvheProjectBox': 'hvhe_project_box',
+    'projectBoxV2': 'project_box_v2',
     'infoMessage': 'InfoMessage',
     'projectBox': 'project_box',
     'recommendation': 'recommendation',
@@ -144,6 +150,7 @@ class _$IAllDocumentModelsTypeEnumSerializer
   static const Map<Object, String> _fromWire = const <Object, String>{
     'album': 'album',
     'contributor': 'contributor',
+    'playlist_details': 'playlistDetails',
     'playlist': 'playlist',
     'podcast': 'podcast',
     'track_collection': 'trackCollection',
@@ -151,7 +158,7 @@ class _$IAllDocumentModelsTypeEnumSerializer
     'achievement_collection': 'achievementCollection',
     'chapter_header': 'chapterHeader',
     'gibraltar_project_box': 'gibraltarProjectBox',
-    'hvhe_project_box': 'hvheProjectBox',
+    'project_box_v2': 'projectBoxV2',
     'InfoMessage': 'infoMessage',
     'project_box': 'projectBox',
     'recommendation': 'recommendation',

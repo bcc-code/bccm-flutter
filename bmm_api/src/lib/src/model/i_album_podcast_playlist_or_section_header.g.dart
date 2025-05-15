@@ -10,6 +10,9 @@ const IAlbumPodcastPlaylistOrSectionHeaderTypeEnum
     _$iAlbumPodcastPlaylistOrSectionHeaderTypeEnum_album =
     const IAlbumPodcastPlaylistOrSectionHeaderTypeEnum._('album');
 const IAlbumPodcastPlaylistOrSectionHeaderTypeEnum
+    _$iAlbumPodcastPlaylistOrSectionHeaderTypeEnum_playlistDetails =
+    const IAlbumPodcastPlaylistOrSectionHeaderTypeEnum._('playlistDetails');
+const IAlbumPodcastPlaylistOrSectionHeaderTypeEnum
     _$iAlbumPodcastPlaylistOrSectionHeaderTypeEnum_playlist =
     const IAlbumPodcastPlaylistOrSectionHeaderTypeEnum._('playlist');
 const IAlbumPodcastPlaylistOrSectionHeaderTypeEnum
@@ -24,6 +27,8 @@ IAlbumPodcastPlaylistOrSectionHeaderTypeEnum
   switch (name) {
     case 'album':
       return _$iAlbumPodcastPlaylistOrSectionHeaderTypeEnum_album;
+    case 'playlistDetails':
+      return _$iAlbumPodcastPlaylistOrSectionHeaderTypeEnum_playlistDetails;
     case 'playlist':
       return _$iAlbumPodcastPlaylistOrSectionHeaderTypeEnum_playlist;
     case 'podcast':
@@ -39,6 +44,7 @@ final BuiltSet<IAlbumPodcastPlaylistOrSectionHeaderTypeEnum>
     _$iAlbumPodcastPlaylistOrSectionHeaderTypeEnumValues = new BuiltSet<
         IAlbumPodcastPlaylistOrSectionHeaderTypeEnum>(const <IAlbumPodcastPlaylistOrSectionHeaderTypeEnum>[
   _$iAlbumPodcastPlaylistOrSectionHeaderTypeEnum_album,
+  _$iAlbumPodcastPlaylistOrSectionHeaderTypeEnum_playlistDetails,
   _$iAlbumPodcastPlaylistOrSectionHeaderTypeEnum_playlist,
   _$iAlbumPodcastPlaylistOrSectionHeaderTypeEnum_podcast,
   _$iAlbumPodcastPlaylistOrSectionHeaderTypeEnum_sectionHeader,
@@ -53,12 +59,14 @@ class _$IAlbumPodcastPlaylistOrSectionHeaderTypeEnumSerializer
         PrimitiveSerializer<IAlbumPodcastPlaylistOrSectionHeaderTypeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'album': 'album',
+    'playlistDetails': 'playlist_details',
     'playlist': 'playlist',
     'podcast': 'podcast',
     'sectionHeader': 'section_header',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'album': 'album',
+    'playlist_details': 'playlistDetails',
     'playlist': 'playlist',
     'podcast': 'podcast',
     'section_header': 'sectionHeader',

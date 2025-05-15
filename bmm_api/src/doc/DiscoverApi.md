@@ -9,8 +9,52 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**discoverCarplayGet**](DiscoverApi.md#discovercarplayget) | **GET** /Discover/carplay | 
 [**discoverGet**](DiscoverApi.md#discoverget) | **GET** /Discover | 
 
+
+# **discoverCarplayGet**
+> BuiltList<IAllDocumentModels> discoverCarplayGet(lang, theme)
+
+
+
+### Example
+```dart
+import 'package:bmm_api/api.dart';
+
+final api = BmmApi().getDiscoverApi();
+final LanguageEnum lang = ; // LanguageEnum | 
+final String theme = theme_example; // String | 
+
+try {
+    final response = api.discoverCarplayGet(lang, theme);
+    print(response);
+} catch on DioException (e) {
+    print('Exception when calling DiscoverApi->discoverCarplayGet: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **lang** | [**LanguageEnum**](.md)|  | [optional] 
+ **theme** | **String**|  | [optional] [default to 'light']
+
+### Return type
+
+[**BuiltList&lt;IAllDocumentModels&gt;**](IAllDocumentModels.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **discoverGet**
 > BuiltList<IAllDocumentModels> discoverGet(lang, age, theme)

@@ -9,86 +9,12 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**hVHEGamenightPost**](HvheApi.md#hvhegamenightpost) | **POST** /HVHE/gamenight | 
-[**hVHENotificationsPost**](HvheApi.md#hvhenotificationspost) | **POST** /HVHE/notifications | 
 [**hVHEProgressGet**](HvheApi.md#hvheprogressget) | **GET** /HVHE/progress | 
 [**hVHEStatusGet**](HvheApi.md#hvhestatusget) | **GET** /HVHE/status | 
 
 
-# **hVHEGamenightPost**
-> hVHEGamenightPost()
-
-
-
-### Example
-```dart
-import 'package:bmm_api/api.dart';
-
-final api = BmmApi().getHvheApi();
-
-try {
-    api.hVHEGamenightPost();
-} catch on DioException (e) {
-    print('Exception when calling HvheApi->hVHEGamenightPost: $e\n');
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **hVHENotificationsPost**
-> hVHENotificationsPost()
-
-
-
-### Example
-```dart
-import 'package:bmm_api/api.dart';
-
-final api = BmmApi().getHvheApi();
-
-try {
-    api.hVHENotificationsPost();
-} catch on DioException (e) {
-    print('Exception when calling HvheApi->hVHENotificationsPost: $e\n');
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **hVHEProgressGet**
-> HvheProjectBox hVHEProgressGet(theme)
+> ProjectBoxV2 hVHEProgressGet(theme)
 
 
 
@@ -115,7 +41,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**HvheProjectBox**](HvheProjectBox.md)
+[**ProjectBoxV2**](ProjectBoxV2.md)
 
 ### Authorization
 
@@ -129,7 +55,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **hVHEStatusGet**
-> HvheControllerHvheStatus hVHEStatusGet()
+> HvheCompetitionPoints hVHEStatusGet()
 
 
 
@@ -152,7 +78,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**HvheControllerHvheStatus**](HvheControllerHvheStatus.md)
+[**HvheCompetitionPoints**](HvheCompetitionPoints.md)
 
 ### Authorization
 

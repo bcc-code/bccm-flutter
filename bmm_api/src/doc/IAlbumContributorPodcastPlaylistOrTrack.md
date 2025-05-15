@@ -21,13 +21,19 @@ Name | Type | Description | Notes
 **description** | **String** |  | [optional] 
 **type** | **String** |  | 
 **children** | [**BuiltList&lt;IAlbumOrTrack&gt;**](IAlbumOrTrack.md) |  | [optional] 
+**trackCount** | **int** |  | 
+**totalSeconds** | **int** |  | 
 **latestTrackId** | **int** |  | [optional] 
 **latestTrackPosition** | **int** |  | [optional] 
+**secondsLeft** | **int** |  | [optional] 
 **isVisible** | **bool** |  | [optional] 
 **name** | **String** |  | [optional] 
 **meta** | [**ContributorContributorMeta**](ContributorContributorMeta.md) |  | [optional] 
 **interpretReferences** | **int** |  | [optional] 
 **otherReferences** | **int** |  | [optional] 
+**tracks** | [**BuiltList&lt;TrackModel&gt;**](TrackModel.md) |  | [optional] 
+**useWeekGrouping** | **bool** |  | [optional] 
+**showInChronologicalOrder** | **bool** |  | [optional] 
 **comment** | **String** |  | [optional] 
 **order** | **int** |  | [optional] 
 **recordedAt** | [**DateTime**](DateTime.md) |  | 

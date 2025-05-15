@@ -80,9 +80,15 @@ class _$AlbumModel extends AlbumModel {
   @override
   final BuiltList<IAlbumOrTrack>? children;
   @override
+  final int trackCount;
+  @override
+  final int totalSeconds;
+  @override
   final int? latestTrackId;
   @override
   final int? latestTrackPosition;
+  @override
+  final int? secondsLeft;
 
   factory _$AlbumModel([void Function(AlbumModelBuilder)? updates]) =>
       (new AlbumModelBuilder()..update(updates))._build();
@@ -101,11 +107,18 @@ class _$AlbumModel extends AlbumModel {
       this.description,
       required this.type,
       this.children,
+      required this.trackCount,
+      required this.totalSeconds,
       this.latestTrackId,
-      this.latestTrackPosition})
+      this.latestTrackPosition,
+      this.secondsLeft})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(id, r'AlbumModel', 'id');
     BuiltValueNullFieldError.checkNotNull(type, r'AlbumModel', 'type');
+    BuiltValueNullFieldError.checkNotNull(
+        trackCount, r'AlbumModel', 'trackCount');
+    BuiltValueNullFieldError.checkNotNull(
+        totalSeconds, r'AlbumModel', 'totalSeconds');
   }
 
   @override
@@ -132,8 +145,11 @@ class _$AlbumModel extends AlbumModel {
         description == other.description &&
         type == other.type &&
         children == other.children &&
+        trackCount == other.trackCount &&
+        totalSeconds == other.totalSeconds &&
         latestTrackId == other.latestTrackId &&
-        latestTrackPosition == other.latestTrackPosition;
+        latestTrackPosition == other.latestTrackPosition &&
+        secondsLeft == other.secondsLeft;
   }
 
   @override
@@ -152,8 +168,11 @@ class _$AlbumModel extends AlbumModel {
     _$hash = $jc(_$hash, description.hashCode);
     _$hash = $jc(_$hash, type.hashCode);
     _$hash = $jc(_$hash, children.hashCode);
+    _$hash = $jc(_$hash, trackCount.hashCode);
+    _$hash = $jc(_$hash, totalSeconds.hashCode);
     _$hash = $jc(_$hash, latestTrackId.hashCode);
     _$hash = $jc(_$hash, latestTrackPosition.hashCode);
+    _$hash = $jc(_$hash, secondsLeft.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -174,8 +193,11 @@ class _$AlbumModel extends AlbumModel {
           ..add('description', description)
           ..add('type', type)
           ..add('children', children)
+          ..add('trackCount', trackCount)
+          ..add('totalSeconds', totalSeconds)
           ..add('latestTrackId', latestTrackId)
-          ..add('latestTrackPosition', latestTrackPosition))
+          ..add('latestTrackPosition', latestTrackPosition)
+          ..add('secondsLeft', secondsLeft))
         .toString();
   }
 }
@@ -240,6 +262,14 @@ class AlbumModelBuilder implements Builder<AlbumModel, AlbumModelBuilder> {
   set children(ListBuilder<IAlbumOrTrack>? children) =>
       _$this._children = children;
 
+  int? _trackCount;
+  int? get trackCount => _$this._trackCount;
+  set trackCount(int? trackCount) => _$this._trackCount = trackCount;
+
+  int? _totalSeconds;
+  int? get totalSeconds => _$this._totalSeconds;
+  set totalSeconds(int? totalSeconds) => _$this._totalSeconds = totalSeconds;
+
   int? _latestTrackId;
   int? get latestTrackId => _$this._latestTrackId;
   set latestTrackId(int? latestTrackId) =>
@@ -249,6 +279,10 @@ class AlbumModelBuilder implements Builder<AlbumModel, AlbumModelBuilder> {
   int? get latestTrackPosition => _$this._latestTrackPosition;
   set latestTrackPosition(int? latestTrackPosition) =>
       _$this._latestTrackPosition = latestTrackPosition;
+
+  int? _secondsLeft;
+  int? get secondsLeft => _$this._secondsLeft;
+  set secondsLeft(int? secondsLeft) => _$this._secondsLeft = secondsLeft;
 
   AlbumModelBuilder() {
     AlbumModel._defaults(this);
@@ -270,8 +304,11 @@ class AlbumModelBuilder implements Builder<AlbumModel, AlbumModelBuilder> {
       _description = $v.description;
       _type = $v.type;
       _children = $v.children?.toBuilder();
+      _trackCount = $v.trackCount;
+      _totalSeconds = $v.totalSeconds;
       _latestTrackId = $v.latestTrackId;
       _latestTrackPosition = $v.latestTrackPosition;
+      _secondsLeft = $v.secondsLeft;
       _$v = null;
     }
     return this;
@@ -310,8 +347,13 @@ class AlbumModelBuilder implements Builder<AlbumModel, AlbumModelBuilder> {
             type: BuiltValueNullFieldError.checkNotNull(
                 type, r'AlbumModel', 'type'),
             children: _children?.build(),
+            trackCount: BuiltValueNullFieldError.checkNotNull(
+                trackCount, r'AlbumModel', 'trackCount'),
+            totalSeconds: BuiltValueNullFieldError.checkNotNull(
+                totalSeconds, r'AlbumModel', 'totalSeconds'),
             latestTrackId: latestTrackId,
             latestTrackPosition: latestTrackPosition,
+            secondsLeft: secondsLeft,
           );
     } catch (_) {
       late String _$failedField;

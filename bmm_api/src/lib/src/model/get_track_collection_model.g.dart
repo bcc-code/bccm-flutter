@@ -27,6 +27,10 @@ class _$GetTrackCollectionModel extends GetTrackCollectionModel {
   final BuiltList<TrackModel>? tracks;
   @override
   final bool? useLikeIcon;
+  @override
+  final int trackCount;
+  @override
+  final int totalSeconds;
 
   factory _$GetTrackCollectionModel(
           [void Function(GetTrackCollectionModelBuilder)? updates]) =>
@@ -42,11 +46,17 @@ class _$GetTrackCollectionModel extends GetTrackCollectionModel {
       this.authorName,
       this.canEdit,
       this.tracks,
-      this.useLikeIcon})
+      this.useLikeIcon,
+      required this.trackCount,
+      required this.totalSeconds})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         type, r'GetTrackCollectionModel', 'type');
     BuiltValueNullFieldError.checkNotNull(id, r'GetTrackCollectionModel', 'id');
+    BuiltValueNullFieldError.checkNotNull(
+        trackCount, r'GetTrackCollectionModel', 'trackCount');
+    BuiltValueNullFieldError.checkNotNull(
+        totalSeconds, r'GetTrackCollectionModel', 'totalSeconds');
   }
 
   @override
@@ -71,7 +81,9 @@ class _$GetTrackCollectionModel extends GetTrackCollectionModel {
         authorName == other.authorName &&
         canEdit == other.canEdit &&
         tracks == other.tracks &&
-        useLikeIcon == other.useLikeIcon;
+        useLikeIcon == other.useLikeIcon &&
+        trackCount == other.trackCount &&
+        totalSeconds == other.totalSeconds;
   }
 
   @override
@@ -87,6 +99,8 @@ class _$GetTrackCollectionModel extends GetTrackCollectionModel {
     _$hash = $jc(_$hash, canEdit.hashCode);
     _$hash = $jc(_$hash, tracks.hashCode);
     _$hash = $jc(_$hash, useLikeIcon.hashCode);
+    _$hash = $jc(_$hash, trackCount.hashCode);
+    _$hash = $jc(_$hash, totalSeconds.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -103,7 +117,9 @@ class _$GetTrackCollectionModel extends GetTrackCollectionModel {
           ..add('authorName', authorName)
           ..add('canEdit', canEdit)
           ..add('tracks', tracks)
-          ..add('useLikeIcon', useLikeIcon))
+          ..add('useLikeIcon', useLikeIcon)
+          ..add('trackCount', trackCount)
+          ..add('totalSeconds', totalSeconds))
         .toString();
   }
 }
@@ -155,6 +171,14 @@ class GetTrackCollectionModelBuilder
   bool? get useLikeIcon => _$this._useLikeIcon;
   set useLikeIcon(bool? useLikeIcon) => _$this._useLikeIcon = useLikeIcon;
 
+  int? _trackCount;
+  int? get trackCount => _$this._trackCount;
+  set trackCount(int? trackCount) => _$this._trackCount = trackCount;
+
+  int? _totalSeconds;
+  int? get totalSeconds => _$this._totalSeconds;
+  set totalSeconds(int? totalSeconds) => _$this._totalSeconds = totalSeconds;
+
   GetTrackCollectionModelBuilder() {
     GetTrackCollectionModel._defaults(this);
   }
@@ -172,6 +196,8 @@ class GetTrackCollectionModelBuilder
       _canEdit = $v.canEdit;
       _tracks = $v.tracks?.toBuilder();
       _useLikeIcon = $v.useLikeIcon;
+      _trackCount = $v.trackCount;
+      _totalSeconds = $v.totalSeconds;
       _$v = null;
     }
     return this;
@@ -208,6 +234,10 @@ class GetTrackCollectionModelBuilder
             canEdit: canEdit,
             tracks: _tracks?.build(),
             useLikeIcon: useLikeIcon,
+            trackCount: BuiltValueNullFieldError.checkNotNull(
+                trackCount, r'GetTrackCollectionModel', 'trackCount'),
+            totalSeconds: BuiltValueNullFieldError.checkNotNull(
+                totalSeconds, r'GetTrackCollectionModel', 'totalSeconds'),
           );
     } catch (_) {
       late String _$failedField;

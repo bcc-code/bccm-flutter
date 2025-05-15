@@ -21,8 +21,11 @@ Name | Type | Description | Notes
 **description** | **String** |  | [optional] 
 **type** | **String** |  | 
 **children** | [**BuiltList&lt;IAlbumOrTrack&gt;**](IAlbumOrTrack.md) |  | [optional] 
+**trackCount** | **int** |  | 
+**totalSeconds** | **int** |  | 
 **latestTrackId** | **int** |  | [optional] 
 **latestTrackPosition** | **int** |  | [optional] 
+**secondsLeft** | **int** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

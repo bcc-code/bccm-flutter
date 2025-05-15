@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**playlistDocumentsGet**](PlaylistApi.md#playlistdocumentsget) | **GET** /playlist/documents | 
 [**playlistGet**](PlaylistApi.md#playlistget) | **GET** /playlist | List of playlists.  The apps use this endpoint to load single playlists as well (as optimization)
 [**playlistIdCoverGet**](PlaylistApi.md#playlistidcoverget) | **GET** /playlist/{id}/cover | 
+[**playlistIdDetailsGet**](PlaylistApi.md#playlistiddetailsget) | **GET** /playlist/{id}/details | 
 [**playlistIdGet**](PlaylistApi.md#playlistidget) | **GET** /playlist/{id} | 
 [**playlistIdTrackGet**](PlaylistApi.md#playlistidtrackget) | **GET** /playlist/{id}/track | 
 
@@ -133,6 +134,47 @@ No authorization required
 
  - **Content-Type**: Not defined
  - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **playlistIdDetailsGet**
+> PlaylistDetailsModel playlistIdDetailsGet(id)
+
+
+
+### Example
+```dart
+import 'package:bmm_api/api.dart';
+
+final api = BmmApi().getPlaylistApi();
+final int id = 56; // int | 
+
+try {
+    final response = api.playlistIdDetailsGet(id);
+    print(response);
+} catch on DioException (e) {
+    print('Exception when calling PlaylistApi->playlistIdDetailsGet: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+[**PlaylistDetailsModel**](PlaylistDetailsModel.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

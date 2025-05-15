@@ -28,8 +28,11 @@ part 'album_model.g.dart';
 /// * [description] 
 /// * [type] 
 /// * [children] 
+/// * [trackCount] 
+/// * [totalSeconds] 
 /// * [latestTrackId] 
 /// * [latestTrackPosition] 
+/// * [secondsLeft] 
 @BuiltValue()
 abstract class AlbumModel implements Built<AlbumModel, AlbumModelBuilder> {
   @BuiltValueField(wireName: r'_meta')
@@ -73,11 +76,20 @@ abstract class AlbumModel implements Built<AlbumModel, AlbumModelBuilder> {
   @BuiltValueField(wireName: r'children')
   BuiltList<IAlbumOrTrack>? get children;
 
+  @BuiltValueField(wireName: r'track_count')
+  int get trackCount;
+
+  @BuiltValueField(wireName: r'total_seconds')
+  int get totalSeconds;
+
   @BuiltValueField(wireName: r'latest_track_id')
   int? get latestTrackId;
 
   @BuiltValueField(wireName: r'latest_track_position')
   int? get latestTrackPosition;
+
+  @BuiltValueField(wireName: r'seconds_left')
+  int? get secondsLeft;
 
   AlbumModel._();
 
@@ -189,6 +201,16 @@ class _$AlbumModelSerializer implements PrimitiveSerializer<AlbumModel> {
         specifiedType: const FullType.nullable(BuiltList, [FullType(IAlbumOrTrack)]),
       );
     }
+    yield r'track_count';
+    yield serializers.serialize(
+      object.trackCount,
+      specifiedType: const FullType(int),
+    );
+    yield r'total_seconds';
+    yield serializers.serialize(
+      object.totalSeconds,
+      specifiedType: const FullType(int),
+    );
     if (object.latestTrackId != null) {
       yield r'latest_track_id';
       yield serializers.serialize(
@@ -200,6 +222,13 @@ class _$AlbumModelSerializer implements PrimitiveSerializer<AlbumModel> {
       yield r'latest_track_position';
       yield serializers.serialize(
         object.latestTrackPosition,
+        specifiedType: const FullType.nullable(int),
+      );
+    }
+    if (object.secondsLeft != null) {
+      yield r'seconds_left';
+      yield serializers.serialize(
+        object.secondsLeft,
         specifiedType: const FullType.nullable(int),
       );
     }
@@ -325,6 +354,20 @@ class _$AlbumModelSerializer implements PrimitiveSerializer<AlbumModel> {
           if (valueDes == null) continue;
           result.children.replace(valueDes);
           break;
+        case r'track_count':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(int),
+          ) as int;
+          result.trackCount = valueDes;
+          break;
+        case r'total_seconds':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(int),
+          ) as int;
+          result.totalSeconds = valueDes;
+          break;
         case r'latest_track_id':
           final valueDes = serializers.deserialize(
             value,
@@ -340,6 +383,14 @@ class _$AlbumModelSerializer implements PrimitiveSerializer<AlbumModel> {
           ) as int?;
           if (valueDes == null) continue;
           result.latestTrackPosition = valueDes;
+          break;
+        case r'seconds_left':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(int),
+          ) as int?;
+          if (valueDes == null) continue;
+          result.secondsLeft = valueDes;
           break;
         default:
           unhandled.add(key);

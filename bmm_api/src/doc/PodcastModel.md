@@ -14,6 +14,9 @@ Name | Type | Description | Notes
 **languages** | [**BuiltList&lt;LanguageEnum&gt;**](LanguageEnum.md) |  | [optional] 
 **language** | [**LanguageEnum**](LanguageEnum.md) |  | [optional] 
 **title** | **String** |  | [optional] 
+**description** | **String** |  | [optional] 
+**useWeekGrouping** | **bool** |  | [optional] 
+**showInChronologicalOrder** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

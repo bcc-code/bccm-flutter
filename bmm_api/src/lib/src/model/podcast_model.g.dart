@@ -65,6 +65,12 @@ class _$PodcastModel extends PodcastModel {
   final LanguageEnum? language;
   @override
   final String? title;
+  @override
+  final String? description;
+  @override
+  final bool? useWeekGrouping;
+  @override
+  final bool? showInChronologicalOrder;
 
   factory _$PodcastModel([void Function(PodcastModelBuilder)? updates]) =>
       (new PodcastModelBuilder()..update(updates))._build();
@@ -75,7 +81,10 @@ class _$PodcastModel extends PodcastModel {
       required this.type,
       this.languages,
       this.language,
-      this.title})
+      this.title,
+      this.description,
+      this.useWeekGrouping,
+      this.showInChronologicalOrder})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(id, r'PodcastModel', 'id');
     BuiltValueNullFieldError.checkNotNull(type, r'PodcastModel', 'type');
@@ -97,7 +106,10 @@ class _$PodcastModel extends PodcastModel {
         type == other.type &&
         languages == other.languages &&
         language == other.language &&
-        title == other.title;
+        title == other.title &&
+        description == other.description &&
+        useWeekGrouping == other.useWeekGrouping &&
+        showInChronologicalOrder == other.showInChronologicalOrder;
   }
 
   @override
@@ -109,6 +121,9 @@ class _$PodcastModel extends PodcastModel {
     _$hash = $jc(_$hash, languages.hashCode);
     _$hash = $jc(_$hash, language.hashCode);
     _$hash = $jc(_$hash, title.hashCode);
+    _$hash = $jc(_$hash, description.hashCode);
+    _$hash = $jc(_$hash, useWeekGrouping.hashCode);
+    _$hash = $jc(_$hash, showInChronologicalOrder.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -121,7 +136,10 @@ class _$PodcastModel extends PodcastModel {
           ..add('type', type)
           ..add('languages', languages)
           ..add('language', language)
-          ..add('title', title))
+          ..add('title', title)
+          ..add('description', description)
+          ..add('useWeekGrouping', useWeekGrouping)
+          ..add('showInChronologicalOrder', showInChronologicalOrder))
         .toString();
   }
 }
@@ -156,6 +174,20 @@ class PodcastModelBuilder
   String? get title => _$this._title;
   set title(String? title) => _$this._title = title;
 
+  String? _description;
+  String? get description => _$this._description;
+  set description(String? description) => _$this._description = description;
+
+  bool? _useWeekGrouping;
+  bool? get useWeekGrouping => _$this._useWeekGrouping;
+  set useWeekGrouping(bool? useWeekGrouping) =>
+      _$this._useWeekGrouping = useWeekGrouping;
+
+  bool? _showInChronologicalOrder;
+  bool? get showInChronologicalOrder => _$this._showInChronologicalOrder;
+  set showInChronologicalOrder(bool? showInChronologicalOrder) =>
+      _$this._showInChronologicalOrder = showInChronologicalOrder;
+
   PodcastModelBuilder() {
     PodcastModel._defaults(this);
   }
@@ -169,6 +201,9 @@ class PodcastModelBuilder
       _languages = $v.languages?.toBuilder();
       _language = $v.language;
       _title = $v.title;
+      _description = $v.description;
+      _useWeekGrouping = $v.useWeekGrouping;
+      _showInChronologicalOrder = $v.showInChronologicalOrder;
       _$v = null;
     }
     return this;
@@ -201,6 +236,9 @@ class PodcastModelBuilder
             languages: _languages?.build(),
             language: language,
             title: title,
+            description: description,
+            useWeekGrouping: useWeekGrouping,
+            showInChronologicalOrder: showInChronologicalOrder,
           );
     } catch (_) {
       late String _$failedField;

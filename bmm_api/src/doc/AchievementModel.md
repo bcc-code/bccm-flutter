@@ -16,6 +16,8 @@ Name | Type | Description | Notes
 **description** | **String** |  | [optional] 
 **trackId** | **int** |  | [optional] 
 **reward** | **String** |  | [optional] 
+**actionUrl** | **String** |  | [optional] 
+**actionText** | **String** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

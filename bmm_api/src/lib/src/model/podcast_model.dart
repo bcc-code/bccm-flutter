@@ -19,6 +19,9 @@ part 'podcast_model.g.dart';
 /// * [languages] 
 /// * [language] 
 /// * [title] 
+/// * [description] 
+/// * [useWeekGrouping] 
+/// * [showInChronologicalOrder] 
 @BuiltValue()
 abstract class PodcastModel implements Built<PodcastModel, PodcastModelBuilder> {
   @BuiltValueField(wireName: r'cover')
@@ -40,6 +43,15 @@ abstract class PodcastModel implements Built<PodcastModel, PodcastModelBuilder> 
 
   @BuiltValueField(wireName: r'title')
   String? get title;
+
+  @BuiltValueField(wireName: r'description')
+  String? get description;
+
+  @BuiltValueField(wireName: r'use_week_grouping')
+  bool? get useWeekGrouping;
+
+  @BuiltValueField(wireName: r'show_in_chronological_order')
+  bool? get showInChronologicalOrder;
 
   PodcastModel._();
 
@@ -100,6 +112,27 @@ class _$PodcastModelSerializer implements PrimitiveSerializer<PodcastModel> {
       yield serializers.serialize(
         object.title,
         specifiedType: const FullType.nullable(String),
+      );
+    }
+    if (object.description != null) {
+      yield r'description';
+      yield serializers.serialize(
+        object.description,
+        specifiedType: const FullType.nullable(String),
+      );
+    }
+    if (object.useWeekGrouping != null) {
+      yield r'use_week_grouping';
+      yield serializers.serialize(
+        object.useWeekGrouping,
+        specifiedType: const FullType(bool),
+      );
+    }
+    if (object.showInChronologicalOrder != null) {
+      yield r'show_in_chronological_order';
+      yield serializers.serialize(
+        object.showInChronologicalOrder,
+        specifiedType: const FullType(bool),
       );
     }
   }
@@ -169,6 +202,28 @@ class _$PodcastModelSerializer implements PrimitiveSerializer<PodcastModel> {
           ) as String?;
           if (valueDes == null) continue;
           result.title = valueDes;
+          break;
+        case r'description':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.description = valueDes;
+          break;
+        case r'use_week_grouping':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(bool),
+          ) as bool;
+          result.useWeekGrouping = valueDes;
+          break;
+        case r'show_in_chronological_order':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(bool),
+          ) as bool;
+          result.showInChronologicalOrder = valueDes;
           break;
         default:
           unhandled.add(key);

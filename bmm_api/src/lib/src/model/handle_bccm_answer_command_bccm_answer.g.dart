@@ -14,6 +14,8 @@ class _$HandleBccmAnswerCommandBccmAnswer
   final bool? answeredCorrectly;
   @override
   final String? selectedAnswerId;
+  @override
+  final int? personId;
 
   factory _$HandleBccmAnswerCommandBccmAnswer(
           [void Function(HandleBccmAnswerCommandBccmAnswerBuilder)? updates]) =>
@@ -21,7 +23,10 @@ class _$HandleBccmAnswerCommandBccmAnswer
           ._build();
 
   _$HandleBccmAnswerCommandBccmAnswer._(
-      {this.questionId, this.answeredCorrectly, this.selectedAnswerId})
+      {this.questionId,
+      this.answeredCorrectly,
+      this.selectedAnswerId,
+      this.personId})
       : super._();
 
   @override
@@ -39,7 +44,8 @@ class _$HandleBccmAnswerCommandBccmAnswer
     return other is HandleBccmAnswerCommandBccmAnswer &&
         questionId == other.questionId &&
         answeredCorrectly == other.answeredCorrectly &&
-        selectedAnswerId == other.selectedAnswerId;
+        selectedAnswerId == other.selectedAnswerId &&
+        personId == other.personId;
   }
 
   @override
@@ -48,6 +54,7 @@ class _$HandleBccmAnswerCommandBccmAnswer
     _$hash = $jc(_$hash, questionId.hashCode);
     _$hash = $jc(_$hash, answeredCorrectly.hashCode);
     _$hash = $jc(_$hash, selectedAnswerId.hashCode);
+    _$hash = $jc(_$hash, personId.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -57,7 +64,8 @@ class _$HandleBccmAnswerCommandBccmAnswer
     return (newBuiltValueToStringHelper(r'HandleBccmAnswerCommandBccmAnswer')
           ..add('questionId', questionId)
           ..add('answeredCorrectly', answeredCorrectly)
-          ..add('selectedAnswerId', selectedAnswerId))
+          ..add('selectedAnswerId', selectedAnswerId)
+          ..add('personId', personId))
         .toString();
   }
 }
@@ -82,6 +90,10 @@ class HandleBccmAnswerCommandBccmAnswerBuilder
   set selectedAnswerId(String? selectedAnswerId) =>
       _$this._selectedAnswerId = selectedAnswerId;
 
+  int? _personId;
+  int? get personId => _$this._personId;
+  set personId(int? personId) => _$this._personId = personId;
+
   HandleBccmAnswerCommandBccmAnswerBuilder() {
     HandleBccmAnswerCommandBccmAnswer._defaults(this);
   }
@@ -92,6 +104,7 @@ class HandleBccmAnswerCommandBccmAnswerBuilder
       _questionId = $v.questionId;
       _answeredCorrectly = $v.answeredCorrectly;
       _selectedAnswerId = $v.selectedAnswerId;
+      _personId = $v.personId;
       _$v = null;
     }
     return this;
@@ -118,6 +131,7 @@ class HandleBccmAnswerCommandBccmAnswerBuilder
           questionId: questionId,
           answeredCorrectly: answeredCorrectly,
           selectedAnswerId: selectedAnswerId,
+          personId: personId,
         );
     replace(_$result);
     return _$result;

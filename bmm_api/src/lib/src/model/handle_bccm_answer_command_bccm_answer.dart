@@ -14,6 +14,7 @@ part 'handle_bccm_answer_command_bccm_answer.g.dart';
 /// * [questionId] 
 /// * [answeredCorrectly] 
 /// * [selectedAnswerId] 
+/// * [personId] 
 @BuiltValue()
 abstract class HandleBccmAnswerCommandBccmAnswer implements Built<HandleBccmAnswerCommandBccmAnswer, HandleBccmAnswerCommandBccmAnswerBuilder> {
   @BuiltValueField(wireName: r'question_id')
@@ -24,6 +25,9 @@ abstract class HandleBccmAnswerCommandBccmAnswer implements Built<HandleBccmAnsw
 
   @BuiltValueField(wireName: r'selected_answer_id')
   String? get selectedAnswerId;
+
+  @BuiltValueField(wireName: r'person_id')
+  int? get personId;
 
   HandleBccmAnswerCommandBccmAnswer._();
 
@@ -69,6 +73,13 @@ class _$HandleBccmAnswerCommandBccmAnswerSerializer implements PrimitiveSerializ
         specifiedType: const FullType(String),
       );
     }
+    if (object.personId != null) {
+      yield r'person_id';
+      yield serializers.serialize(
+        object.personId,
+        specifiedType: const FullType(int),
+      );
+    }
   }
 
   @override
@@ -112,6 +123,13 @@ class _$HandleBccmAnswerCommandBccmAnswerSerializer implements PrimitiveSerializ
             specifiedType: const FullType(String),
           ) as String;
           result.selectedAnswerId = valueDes;
+          break;
+        case r'person_id':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(int),
+          ) as int;
+          result.personId = valueDes;
           break;
         default:
           unhandled.add(key);

@@ -96,6 +96,7 @@ Class | Method | HTTP request | Description
 [*DefaultApi*](doc/DefaultApi.md) | [**questionPost**](doc/DefaultApi.md#questionpost) | **POST** /question | 
 [*DefaultApi*](doc/DefaultApi.md) | [**rootGet**](doc/DefaultApi.md#rootget) | **GET** / | 
 [*DefaultApi*](doc/DefaultApi.md) | [**rootHead**](doc/DefaultApi.md#roothead) | **HEAD** / | 
+[*DiscoverApi*](doc/DiscoverApi.md) | [**discoverCarplayGet**](doc/DiscoverApi.md#discovercarplayget) | **GET** /Discover/carplay | 
 [*DiscoverApi*](doc/DiscoverApi.md) | [**discoverGet**](doc/DiscoverApi.md#discoverget) | **GET** /Discover | 
 [*DownloadLinksApi*](doc/DownloadLinksApi.md) | [**downloadLinksGet**](doc/DownloadLinksApi.md#downloadlinksget) | **GET** /download-links | 
 [*DownloadLinksApi*](doc/DownloadLinksApi.md) | [**downloadLinksWindowsGet**](doc/DownloadLinksApi.md#downloadlinkswindowsget) | **GET** /download-links/windows | 
@@ -104,8 +105,6 @@ Class | Method | HTTP request | Description
 [*FileApi*](doc/FileApi.md) | [**fileApkGet**](doc/FileApi.md#fileapkget) | **GET** /File/apk | 
 [*FileApi*](doc/FileApi.md) | [**fileProtectedTrackIdNameGet**](doc/FileApi.md#fileprotectedtrackidnameget) | **GET** /File/protected/track/{id}/{name} | 
 [*FileApi*](doc/FileApi.md) | [**fileProtectedTypeIdNameGet**](doc/FileApi.md#fileprotectedtypeidnameget) | **GET** /File/protected/{type}/{id}/{name} | 
-[*HvheApi*](doc/HvheApi.md) | [**hVHEGamenightPost**](doc/HvheApi.md#hvhegamenightpost) | **POST** /HVHE/gamenight | 
-[*HvheApi*](doc/HvheApi.md) | [**hVHENotificationsPost**](doc/HvheApi.md#hvhenotificationspost) | **POST** /HVHE/notifications | 
 [*HvheApi*](doc/HvheApi.md) | [**hVHEProgressGet**](doc/HvheApi.md#hvheprogressget) | **GET** /HVHE/progress | 
 [*HvheApi*](doc/HvheApi.md) | [**hVHEStatusGet**](doc/HvheApi.md#hvhestatusget) | **GET** /HVHE/status | 
 [*LinkMetadataApi*](doc/LinkMetadataApi.md) | [**linkMetadataTrackIdGet**](doc/LinkMetadataApi.md#linkmetadatatrackidget) | **GET** /LinkMetadata/track/{id} | 
@@ -119,6 +118,7 @@ Class | Method | HTTP request | Description
 [*PlaylistApi*](doc/PlaylistApi.md) | [**playlistDocumentsGet**](doc/PlaylistApi.md#playlistdocumentsget) | **GET** /playlist/documents | 
 [*PlaylistApi*](doc/PlaylistApi.md) | [**playlistGet**](doc/PlaylistApi.md#playlistget) | **GET** /playlist | List of playlists.  The apps use this endpoint to load single playlists as well (as optimization)
 [*PlaylistApi*](doc/PlaylistApi.md) | [**playlistIdCoverGet**](doc/PlaylistApi.md#playlistidcoverget) | **GET** /playlist/{id}/cover | 
+[*PlaylistApi*](doc/PlaylistApi.md) | [**playlistIdDetailsGet**](doc/PlaylistApi.md#playlistiddetailsget) | **GET** /playlist/{id}/details | 
 [*PlaylistApi*](doc/PlaylistApi.md) | [**playlistIdGet**](doc/PlaylistApi.md#playlistidget) | **GET** /playlist/{id} | 
 [*PlaylistApi*](doc/PlaylistApi.md) | [**playlistIdTrackGet**](doc/PlaylistApi.md#playlistidtrackget) | **GET** /playlist/{id}/track | 
 [*PodcastApi*](doc/PodcastApi.md) | [**podcastGet**](doc/PodcastApi.md#podcastget) | **GET** /podcast | 
@@ -141,6 +141,7 @@ Class | Method | HTTP request | Description
 [*StatisticsApi*](doc/StatisticsApi.md) | [**statisticsAchievementNameAcknowledgePut**](doc/StatisticsApi.md#statisticsachievementnameacknowledgeput) | **PUT** /Statistics/achievement/{name}/acknowledge | 
 [*StatisticsApi*](doc/StatisticsApi.md) | [**statisticsAchievementsGet**](doc/StatisticsApi.md#statisticsachievementsget) | **GET** /Statistics/achievements | 
 [*StatisticsApi*](doc/StatisticsApi.md) | [**statisticsAchievementsToAcknowledgeGet**](doc/StatisticsApi.md#statisticsachievementstoacknowledgeget) | **GET** /Statistics/achievements/to/acknowledge | 
+[*StatisticsApi*](doc/StatisticsApi.md) | [**statisticsFraKaareDrawPost**](doc/StatisticsApi.md#statisticsfrakaaredrawpost) | **POST** /Statistics/fra-kaare/draw | 
 [*StatisticsApi*](doc/StatisticsApi.md) | [**statisticsFraKaareGet**](doc/StatisticsApi.md#statisticsfrakaareget) | **GET** /Statistics/fra-kaare | 
 [*StatisticsApi*](doc/StatisticsApi.md) | [**statisticsListeningPost**](doc/StatisticsApi.md#statisticslisteningpost) | **POST** /Statistics/listening | 
 [*StatisticsApi*](doc/StatisticsApi.md) | [**statisticsProjectChurchChurchGet**](doc/StatisticsApi.md#statisticsprojectchurchchurchget) | **GET** /Statistics/project/church/{church} | 
@@ -214,6 +215,9 @@ Class | Method | HTTP request | Description
  - [DocumentListIAllDocumentModels](doc/DocumentListIAllDocumentModels.md)
  - [DocumentListPodcastModel](doc/DocumentListPodcastModel.md)
  - [ForbildePoints](doc/ForbildePoints.md)
+ - [FraKaareDrawCommand](doc/FraKaareDrawCommand.md)
+ - [FraKaareDrawCommandDrawOption](doc/FraKaareDrawCommandDrawOption.md)
+ - [FraKaareDrawCommandResponse](doc/FraKaareDrawCommandResponse.md)
  - [GetFraKaareStatisticsChurchStatistics](doc/GetFraKaareStatisticsChurchStatistics.md)
  - [GetFraKaareStatisticsChurchStatisticsSnapshot](doc/GetFraKaareStatisticsChurchStatisticsSnapshot.md)
  - [GetFraKaareStatisticsResponse](doc/GetFraKaareStatisticsResponse.md)
@@ -227,8 +231,7 @@ Class | Method | HTTP request | Description
  - [GibraltarProjectBox](doc/GibraltarProjectBox.md)
  - [HandleBccmAnswerCommandBccmAnswer](doc/HandleBccmAnswerCommandBccmAnswer.md)
  - [Highlighting](doc/Highlighting.md)
- - [HvheControllerHvheStatus](doc/HvheControllerHvheStatus.md)
- - [HvheProjectBox](doc/HvheProjectBox.md)
+ - [HvheCompetitionPoints](doc/HvheCompetitionPoints.md)
  - [IAchievementCollectionOrChapterHeader](doc/IAchievementCollectionOrChapterHeader.md)
  - [IAlbumContributorPodcastPlaylistOrTrack](doc/IAlbumContributorPodcastPlaylistOrTrack.md)
  - [IAlbumOrChapterHeader](doc/IAlbumOrChapterHeader.md)
@@ -244,11 +247,14 @@ Class | Method | HTTP request | Description
  - [LyricsVerse](doc/LyricsVerse.md)
  - [MediaTypeEnum](doc/MediaTypeEnum.md)
  - [MetadataModel](doc/MetadataModel.md)
+ - [PersonGenderEnum](doc/PersonGenderEnum.md)
+ - [PlaylistDetailsModel](doc/PlaylistDetailsModel.md)
  - [PlaylistModel](doc/PlaylistModel.md)
  - [PodcastModel](doc/PodcastModel.md)
  - [ProblemDetails](doc/ProblemDetails.md)
  - [ProcessWatchedCommandEvent](doc/ProcessWatchedCommandEvent.md)
  - [ProjectBox](doc/ProjectBox.md)
+ - [ProjectBoxV2](doc/ProjectBoxV2.md)
  - [ProjectChurchStatisticsQueryChurchStatistics](doc/ProjectChurchStatisticsQueryChurchStatistics.md)
  - [ProjectChurchStatisticsQueryChurchStatisticsChurch](doc/ProjectChurchStatisticsQueryChurchStatisticsChurch.md)
  - [ProjectRulesQueryRules](doc/ProjectRulesQueryRules.md)
@@ -274,8 +280,8 @@ Class | Method | HTTP request | Description
  - [TileModel](doc/TileModel.md)
  - [TileVideoModel](doc/TileVideoModel.md)
  - [TopbarSearchQueryTopbarSearchResult](doc/TopbarSearchQueryTopbarSearchResult.md)
- - [TrackCollectionDetails](doc/TrackCollectionDetails.md)
  - [TrackCollectionModel](doc/TrackCollectionModel.md)
+ - [TrackCollectionShell](doc/TrackCollectionShell.md)
  - [TrackListReference](doc/TrackListReference.md)
  - [TrackModel](doc/TrackModel.md)
  - [TrackModelBibleRelation](doc/TrackModelBibleRelation.md)

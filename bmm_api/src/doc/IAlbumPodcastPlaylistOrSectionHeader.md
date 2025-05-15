@@ -21,8 +21,14 @@ Name | Type | Description | Notes
 **description** | **String** |  | [optional] 
 **type** | **String** |  | 
 **children** | [**BuiltList&lt;IAlbumOrTrack&gt;**](IAlbumOrTrack.md) |  | [optional] 
+**trackCount** | **int** |  | 
+**totalSeconds** | **int** |  | 
 **latestTrackId** | **int** |  | [optional] 
 **latestTrackPosition** | **int** |  | [optional] 
+**secondsLeft** | **int** |  | [optional] 
+**tracks** | [**BuiltList&lt;TrackModel&gt;**](TrackModel.md) |  | [optional] 
+**useWeekGrouping** | **bool** |  | [optional] 
+**showInChronologicalOrder** | **bool** |  | [optional] 
 **link** | **String** |  | [optional] 
 **useCoverCarousel** | **bool** |  | [optional] 
 

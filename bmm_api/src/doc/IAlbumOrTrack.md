@@ -21,8 +21,11 @@ Name | Type | Description | Notes
 **description** | **String** |  | [optional] 
 **type** | **String** |  | 
 **children** | [**BuiltList&lt;IAlbumOrTrack&gt;**](IAlbumOrTrack.md) |  | [optional] 
+**trackCount** | **int** |  | 
+**totalSeconds** | **int** |  | 
 **latestTrackId** | **int** |  | [optional] 
 **latestTrackPosition** | **int** |  | [optional] 
+**secondsLeft** | **int** |  | [optional] 
 **comment** | **String** |  | [optional] 
 **isVisible** | **bool** |  | [optional] 
 **order** | **int** |  | [optional] 

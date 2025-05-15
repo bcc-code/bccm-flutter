@@ -18,6 +18,8 @@ Name | Type | Description | Notes
 **canEdit** | **bool** |  | [optional] 
 **tracks** | [**BuiltList&lt;TrackModel&gt;**](TrackModel.md) |  | [optional] 
 **useLikeIcon** | **bool** |  | [optional] 
+**trackCount** | **int** |  | 
+**totalSeconds** | **int** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
