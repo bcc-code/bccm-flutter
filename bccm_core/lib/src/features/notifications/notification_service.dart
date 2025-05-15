@@ -88,6 +88,7 @@ class FcmNotificationService implements NotificationService {
   void _onTokenChanged(String token) {
     fcmToken = token;
     onTokenChanged(token);
+    refRead(analyticsProvider).notificationsDeviceTokenUpdated(NotificationDeviceTokenUpdatedEvent());
   }
 
   @override

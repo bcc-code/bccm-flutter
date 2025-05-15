@@ -87,4 +87,5 @@ export 'package:bccm_core/src/models/analytics/search_result_clicked.dart';
 export 'package:bccm_core/src/models/analytics/sections.dart';
 export 'package:bccm_core/src/models/analytics/shorts.dart';
 export 'package:bccm_core/src/models/analytics/notification_prompt.dart';
+export 'package:bccm_core/src/models/analytics/notifications.dart';
 export 'package:bccm_core/src/utils/environments.dart';

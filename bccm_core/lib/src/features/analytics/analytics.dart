@@ -92,6 +92,8 @@ class Analytics {
   @mustBeOverridden
   void notificationsSettingToggled(NotificationsSettingToggledEvent event) {}
   @mustBeOverridden
+  void notificationsDeviceTokenUpdated(NotificationDeviceTokenUpdatedEvent event) {}
+  @mustBeOverridden
   void reset() {}
   @mustBeOverridden
   Future<String> getAnonymousId() => Future(() => "");
@@ -447,6 +449,11 @@ class RudderAnalytics extends Analytics {
   @override
   void notificationsSettingToggled(NotificationsSettingToggledEvent event) {
     RudderController.instance.track('notifications_setting_toggled', properties: getCommonData().putValue(map: event.toJson()));
+  }
+
+  @override
+  void notificationsDeviceTokenUpdated(NotificationDeviceTokenUpdatedEvent event) {
+    RudderController.instance.track('notifications_device_token_updated', properties: getCommonData().putValue(map: event.toJson()));
   }
 }
 
