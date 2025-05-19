@@ -5,3 +5,21 @@ mutation SetDeviceToken($token: String!, $languages: [String!]!) {
     updatedAt
   }
 }
+
+mutation SetDeviceTokenV2(
+  $token: String!
+  $languages: [String!]!
+  $os: OS!
+  $appBuildNumber: Int!
+) {
+  setDevicePushTokenV2(
+    token: $token
+    languages: $languages
+    os: $os
+    appBuildNumber: $appBuildNumber
+  ) {
+    __typename
+    token
+    updatedAt
+  }
+}

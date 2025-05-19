@@ -344,6 +344,53 @@ class _CopyWithStubImpl$Input$EmailOptions<TRes>
       _res;
 }
 
+enum Enum$OS {
+  iOS,
+  Android,
+  iPadOS,
+  tvOS,
+  unknown,
+  $unknown;
+
+  factory Enum$OS.fromJson(String value) => fromJson$Enum$OS(value);
+
+  String toJson() => toJson$Enum$OS(this);
+}
+
+String toJson$Enum$OS(Enum$OS e) {
+  switch (e) {
+    case Enum$OS.iOS:
+      return r'iOS';
+    case Enum$OS.Android:
+      return r'Android';
+    case Enum$OS.iPadOS:
+      return r'iPadOS';
+    case Enum$OS.tvOS:
+      return r'tvOS';
+    case Enum$OS.unknown:
+      return r'unknown';
+    case Enum$OS.$unknown:
+      return r'$unknown';
+  }
+}
+
+Enum$OS fromJson$Enum$OS(String value) {
+  switch (value) {
+    case r'iOS':
+      return Enum$OS.iOS;
+    case r'Android':
+      return Enum$OS.Android;
+    case r'iPadOS':
+      return Enum$OS.iPadOS;
+    case r'tvOS':
+      return Enum$OS.tvOS;
+    case r'unknown':
+      return Enum$OS.unknown;
+    default:
+      return Enum$OS.$unknown;
+  }
+}
+
 enum Enum$SubscriptionTopic {
   comics,
   $unknown;
