@@ -9,6 +9,8 @@ final bccmGraphQLProvider = Provider<GraphQLClient>((ref) {
 class BccmGraphqlHeaders {
   BccmGraphqlHeaders({
     required this.acceptLanguage,
+    required this.acceptAudioLanguage,
+    required this.acceptSubtitleLanguage,
     required this.application,
     required this.applicationVersion,
     required this.featureFlags,
@@ -16,9 +18,12 @@ class BccmGraphqlHeaders {
     required this.isTablet,
     required this.os,
     required this.osVersion,
+    required this.onlyPreferredLanguagesContent,
   });
 
   final List<String> acceptLanguage;
+  final List<String> acceptAudioLanguage;
+  final List<String> acceptSubtitleLanguage;
   final String application;
   final String applicationVersion;
   final List<String>? featureFlags;
@@ -26,15 +31,19 @@ class BccmGraphqlHeaders {
   final bool isTablet;
   final String os;
   final String osVersion;
+  final bool? onlyPreferredLanguagesContent;
 
   Map<String, String> toMap() {
     return {
       'Accept-Language': acceptLanguage.join(','),
+      'X-Accept-Audio-Language': acceptAudioLanguage.join(','),
+      'X-Accept-Subtitle-Language': acceptSubtitleLanguage.join(','),
       'X-Application': application,
       'X-Application-Version': applicationVersion,
       'X-Is-Tablet': isTablet ? 'true' : 'false',
       'X-OS': os,
       'X-OS-Version': osVersion,
+      'X-Only-Preferred-Languages-Content': onlyPreferredLanguagesContent == true ? 'true' : 'false',
       if (featureFlags?.isNotEmpty == true) 'X-Feature-Flags': featureFlags!.join(','),
       if (extraUsergroups.isNotEmpty) 'x-explicit-roles': extraUsergroups.join(','),
     };
