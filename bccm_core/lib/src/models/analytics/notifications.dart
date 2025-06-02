@@ -28,3 +28,13 @@ class NotificationDeviceTokenUpdatedEvent with _$NotificationDeviceTokenUpdatedE
   const factory NotificationDeviceTokenUpdatedEvent() = _NotificationDeviceTokenUpdatedEvent;
   factory NotificationDeviceTokenUpdatedEvent.fromJson(Map<String, dynamic> json) => _$NotificationDeviceTokenUpdatedEventFromJson(json);
 }
+
+@freezed
+class NotificationsStatusEvent with _$NotificationsStatusEvent {
+  const factory NotificationsStatusEvent({
+    String? recipientId,
+    bool? enabled,
+  }) = _NotificationsStatusEvent;
+
+  factory NotificationsStatusEvent.fromJson(Map<String, dynamic> json) => _$NotificationsStatusEventFromJson(json);
+}

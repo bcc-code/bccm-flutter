@@ -465,3 +465,177 @@ abstract class _NotificationDeviceTokenUpdatedEvent
           Map<String, dynamic> json) =
       _$NotificationDeviceTokenUpdatedEventImpl.fromJson;
 }
+
+NotificationsStatusEvent _$NotificationsStatusEventFromJson(
+    Map<String, dynamic> json) {
+  return _NotificationsStatusEvent.fromJson(json);
+}
+
+/// @nodoc
+mixin _$NotificationsStatusEvent {
+  String? get recipientId => throw _privateConstructorUsedError;
+  bool? get enabled => throw _privateConstructorUsedError;
+
+  /// Serializes this NotificationsStatusEvent to a JSON map.
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
+  /// Create a copy of NotificationsStatusEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $NotificationsStatusEventCopyWith<NotificationsStatusEvent> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $NotificationsStatusEventCopyWith<$Res> {
+  factory $NotificationsStatusEventCopyWith(NotificationsStatusEvent value,
+          $Res Function(NotificationsStatusEvent) then) =
+      _$NotificationsStatusEventCopyWithImpl<$Res, NotificationsStatusEvent>;
+  @useResult
+  $Res call({String? recipientId, bool? enabled});
+}
+
+/// @nodoc
+class _$NotificationsStatusEventCopyWithImpl<$Res,
+        $Val extends NotificationsStatusEvent>
+    implements $NotificationsStatusEventCopyWith<$Res> {
+  _$NotificationsStatusEventCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of NotificationsStatusEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? recipientId = freezed,
+    Object? enabled = freezed,
+  }) {
+    return _then(_value.copyWith(
+      recipientId: freezed == recipientId
+          ? _value.recipientId
+          : recipientId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      enabled: freezed == enabled
+          ? _value.enabled
+          : enabled // ignore: cast_nullable_to_non_nullable
+              as bool?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$NotificationsStatusEventImplCopyWith<$Res>
+    implements $NotificationsStatusEventCopyWith<$Res> {
+  factory _$$NotificationsStatusEventImplCopyWith(
+          _$NotificationsStatusEventImpl value,
+          $Res Function(_$NotificationsStatusEventImpl) then) =
+      __$$NotificationsStatusEventImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String? recipientId, bool? enabled});
+}
+
+/// @nodoc
+class __$$NotificationsStatusEventImplCopyWithImpl<$Res>
+    extends _$NotificationsStatusEventCopyWithImpl<$Res,
+        _$NotificationsStatusEventImpl>
+    implements _$$NotificationsStatusEventImplCopyWith<$Res> {
+  __$$NotificationsStatusEventImplCopyWithImpl(
+      _$NotificationsStatusEventImpl _value,
+      $Res Function(_$NotificationsStatusEventImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of NotificationsStatusEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? recipientId = freezed,
+    Object? enabled = freezed,
+  }) {
+    return _then(_$NotificationsStatusEventImpl(
+      recipientId: freezed == recipientId
+          ? _value.recipientId
+          : recipientId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      enabled: freezed == enabled
+          ? _value.enabled
+          : enabled // ignore: cast_nullable_to_non_nullable
+              as bool?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$NotificationsStatusEventImpl implements _NotificationsStatusEvent {
+  const _$NotificationsStatusEventImpl({this.recipientId, this.enabled});
+
+  factory _$NotificationsStatusEventImpl.fromJson(Map<String, dynamic> json) =>
+      _$$NotificationsStatusEventImplFromJson(json);
+
+  @override
+  final String? recipientId;
+  @override
+  final bool? enabled;
+
+  @override
+  String toString() {
+    return 'NotificationsStatusEvent(recipientId: $recipientId, enabled: $enabled)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$NotificationsStatusEventImpl &&
+            (identical(other.recipientId, recipientId) ||
+                other.recipientId == recipientId) &&
+            (identical(other.enabled, enabled) || other.enabled == enabled));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, recipientId, enabled);
+
+  /// Create a copy of NotificationsStatusEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$NotificationsStatusEventImplCopyWith<_$NotificationsStatusEventImpl>
+      get copyWith => __$$NotificationsStatusEventImplCopyWithImpl<
+          _$NotificationsStatusEventImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$NotificationsStatusEventImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _NotificationsStatusEvent implements NotificationsStatusEvent {
+  const factory _NotificationsStatusEvent(
+      {final String? recipientId,
+      final bool? enabled}) = _$NotificationsStatusEventImpl;
+
+  factory _NotificationsStatusEvent.fromJson(Map<String, dynamic> json) =
+      _$NotificationsStatusEventImpl.fromJson;
+
+  @override
+  String? get recipientId;
+  @override
+  bool? get enabled;
+
+  /// Create a copy of NotificationsStatusEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$NotificationsStatusEventImplCopyWith<_$NotificationsStatusEventImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}

@@ -42,3 +42,17 @@ _$NotificationDeviceTokenUpdatedEventImpl
 Map<String, dynamic> _$$NotificationDeviceTokenUpdatedEventImplToJson(
         _$NotificationDeviceTokenUpdatedEventImpl instance) =>
     <String, dynamic>{};
+
+_$NotificationsStatusEventImpl _$$NotificationsStatusEventImplFromJson(
+        Map<String, dynamic> json) =>
+    _$NotificationsStatusEventImpl(
+      recipientId: json['recipientId'] as String?,
+      enabled: json['enabled'] as bool?,
+    );
+
+Map<String, dynamic> _$$NotificationsStatusEventImplToJson(
+        _$NotificationsStatusEventImpl instance) =>
+    <String, dynamic>{
+      'recipientId': instance.recipientId,
+      'enabled': instance.enabled,
+    };
