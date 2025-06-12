@@ -36,4 +36,5 @@ fragment KidsEpisodeThumbnail on Episode {
   duration
   image
   cursor
+  publishDate
 }

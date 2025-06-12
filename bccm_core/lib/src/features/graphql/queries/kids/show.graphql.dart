@@ -11,6 +11,7 @@ class Fragment$KidsEpisodeThumbnail {
     required this.duration,
     this.image,
     required this.cursor,
+    required this.publishDate,
     this.$__typename = 'Episode',
   });
 
@@ -20,6 +21,7 @@ class Fragment$KidsEpisodeThumbnail {
     final l$duration = json['duration'];
     final l$image = json['image'];
     final l$cursor = json['cursor'];
+    final l$publishDate = json['publishDate'];
     final l$$__typename = json['__typename'];
     return Fragment$KidsEpisodeThumbnail(
       id: (l$id as String),
@@ -27,6 +29,7 @@ class Fragment$KidsEpisodeThumbnail {
       duration: (l$duration as int),
       image: (l$image as String?),
       cursor: (l$cursor as String),
+      publishDate: (l$publishDate as String),
       $__typename: (l$$__typename as String),
     );
   }
@@ -40,6 +43,8 @@ class Fragment$KidsEpisodeThumbnail {
   final String? image;
 
   final String cursor;
+
+  final String publishDate;
 
   final String $__typename;
 
@@ -55,6 +60,8 @@ class Fragment$KidsEpisodeThumbnail {
     _resultData['image'] = l$image;
     final l$cursor = cursor;
     _resultData['cursor'] = l$cursor;
+    final l$publishDate = publishDate;
+    _resultData['publishDate'] = l$publishDate;
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
     return _resultData;
@@ -67,6 +74,7 @@ class Fragment$KidsEpisodeThumbnail {
     final l$duration = duration;
     final l$image = image;
     final l$cursor = cursor;
+    final l$publishDate = publishDate;
     final l$$__typename = $__typename;
     return Object.hashAll([
       l$id,
@@ -74,6 +82,7 @@ class Fragment$KidsEpisodeThumbnail {
       l$duration,
       l$image,
       l$cursor,
+      l$publishDate,
       l$$__typename,
     ]);
   }
@@ -112,6 +121,11 @@ class Fragment$KidsEpisodeThumbnail {
     if (l$cursor != lOther$cursor) {
       return false;
     }
+    final l$publishDate = publishDate;
+    final lOther$publishDate = other.publishDate;
+    if (l$publishDate != lOther$publishDate) {
+      return false;
+    }
     final l$$__typename = $__typename;
     final lOther$$__typename = other.$__typename;
     if (l$$__typename != lOther$$__typename) {
@@ -145,6 +159,7 @@ abstract class CopyWith$Fragment$KidsEpisodeThumbnail<TRes> {
     int? duration,
     String? image,
     String? cursor,
+    String? publishDate,
     String? $__typename,
   });
 }
@@ -168,6 +183,7 @@ class _CopyWithImpl$Fragment$KidsEpisodeThumbnail<TRes>
     Object? duration = _undefined,
     Object? image = _undefined,
     Object? cursor = _undefined,
+    Object? publishDate = _undefined,
     Object? $__typename = _undefined,
   }) =>
       _then(Fragment$KidsEpisodeThumbnail(
@@ -182,6 +198,9 @@ class _CopyWithImpl$Fragment$KidsEpisodeThumbnail<TRes>
         cursor: cursor == _undefined || cursor == null
             ? _instance.cursor
             : (cursor as String),
+        publishDate: publishDate == _undefined || publishDate == null
+            ? _instance.publishDate
+            : (publishDate as String),
         $__typename: $__typename == _undefined || $__typename == null
             ? _instance.$__typename
             : ($__typename as String),
@@ -200,6 +219,7 @@ class _CopyWithStubImpl$Fragment$KidsEpisodeThumbnail<TRes>
     int? duration,
     String? image,
     String? cursor,
+    String? publishDate,
     String? $__typename,
   }) =>
       _res;
@@ -244,6 +264,13 @@ const fragmentDefinitionKidsEpisodeThumbnail = FragmentDefinitionNode(
     ),
     FieldNode(
       name: NameNode(value: 'cursor'),
+      alias: null,
+      arguments: [],
+      directives: [],
+      selectionSet: null,
+    ),
+    FieldNode(
+      name: NameNode(value: 'publishDate'),
       alias: null,
       arguments: [],
       directives: [],
@@ -1476,6 +1503,7 @@ class Query$GetShowOverview$show$seasons$items$episodes$items
     required this.duration,
     this.image,
     required this.cursor,
+    required this.publishDate,
     this.$__typename = 'Episode',
   });
 
@@ -1486,6 +1514,7 @@ class Query$GetShowOverview$show$seasons$items$episodes$items
     final l$duration = json['duration'];
     final l$image = json['image'];
     final l$cursor = json['cursor'];
+    final l$publishDate = json['publishDate'];
     final l$$__typename = json['__typename'];
     return Query$GetShowOverview$show$seasons$items$episodes$items(
       id: (l$id as String),
@@ -1493,6 +1522,7 @@ class Query$GetShowOverview$show$seasons$items$episodes$items
       duration: (l$duration as int),
       image: (l$image as String?),
       cursor: (l$cursor as String),
+      publishDate: (l$publishDate as String),
       $__typename: (l$$__typename as String),
     );
   }
@@ -1506,6 +1536,8 @@ class Query$GetShowOverview$show$seasons$items$episodes$items
   final String? image;
 
   final String cursor;
+
+  final String publishDate;
 
   final String $__typename;
 
@@ -1521,6 +1553,8 @@ class Query$GetShowOverview$show$seasons$items$episodes$items
     _resultData['image'] = l$image;
     final l$cursor = cursor;
     _resultData['cursor'] = l$cursor;
+    final l$publishDate = publishDate;
+    _resultData['publishDate'] = l$publishDate;
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
     return _resultData;
@@ -1533,6 +1567,7 @@ class Query$GetShowOverview$show$seasons$items$episodes$items
     final l$duration = duration;
     final l$image = image;
     final l$cursor = cursor;
+    final l$publishDate = publishDate;
     final l$$__typename = $__typename;
     return Object.hashAll([
       l$id,
@@ -1540,6 +1575,7 @@ class Query$GetShowOverview$show$seasons$items$episodes$items
       l$duration,
       l$image,
       l$cursor,
+      l$publishDate,
       l$$__typename,
     ]);
   }
@@ -1576,6 +1612,11 @@ class Query$GetShowOverview$show$seasons$items$episodes$items
     final l$cursor = cursor;
     final lOther$cursor = other.cursor;
     if (l$cursor != lOther$cursor) {
+      return false;
+    }
+    final l$publishDate = publishDate;
+    final lOther$publishDate = other.publishDate;
+    if (l$publishDate != lOther$publishDate) {
       return false;
     }
     final l$$__typename = $__typename;
@@ -1615,6 +1656,7 @@ abstract class CopyWith$Query$GetShowOverview$show$seasons$items$episodes$items<
     int? duration,
     String? image,
     String? cursor,
+    String? publishDate,
     String? $__typename,
   });
 }
@@ -1641,6 +1683,7 @@ class _CopyWithImpl$Query$GetShowOverview$show$seasons$items$episodes$items<
     Object? duration = _undefined,
     Object? image = _undefined,
     Object? cursor = _undefined,
+    Object? publishDate = _undefined,
     Object? $__typename = _undefined,
   }) =>
       _then(Query$GetShowOverview$show$seasons$items$episodes$items(
@@ -1655,6 +1698,9 @@ class _CopyWithImpl$Query$GetShowOverview$show$seasons$items$episodes$items<
         cursor: cursor == _undefined || cursor == null
             ? _instance.cursor
             : (cursor as String),
+        publishDate: publishDate == _undefined || publishDate == null
+            ? _instance.publishDate
+            : (publishDate as String),
         $__typename: $__typename == _undefined || $__typename == null
             ? _instance.$__typename
             : ($__typename as String),
@@ -1676,6 +1722,7 @@ class _CopyWithStubImpl$Query$GetShowOverview$show$seasons$items$episodes$items<
     int? duration,
     String? image,
     String? cursor,
+    String? publishDate,
     String? $__typename,
   }) =>
       _res;
@@ -2690,6 +2737,7 @@ class Query$GetPlaylistOverview$playlist$items$items$$Episode
     required this.duration,
     this.image,
     required this.cursor,
+    required this.publishDate,
     this.$__typename = 'Episode',
   });
 
@@ -2700,6 +2748,7 @@ class Query$GetPlaylistOverview$playlist$items$items$$Episode
     final l$duration = json['duration'];
     final l$image = json['image'];
     final l$cursor = json['cursor'];
+    final l$publishDate = json['publishDate'];
     final l$$__typename = json['__typename'];
     return Query$GetPlaylistOverview$playlist$items$items$$Episode(
       id: (l$id as String),
@@ -2707,6 +2756,7 @@ class Query$GetPlaylistOverview$playlist$items$items$$Episode
       duration: (l$duration as int),
       image: (l$image as String?),
       cursor: (l$cursor as String),
+      publishDate: (l$publishDate as String),
       $__typename: (l$$__typename as String),
     );
   }
@@ -2720,6 +2770,8 @@ class Query$GetPlaylistOverview$playlist$items$items$$Episode
   final String? image;
 
   final String cursor;
+
+  final String publishDate;
 
   final String $__typename;
 
@@ -2735,6 +2787,8 @@ class Query$GetPlaylistOverview$playlist$items$items$$Episode
     _resultData['image'] = l$image;
     final l$cursor = cursor;
     _resultData['cursor'] = l$cursor;
+    final l$publishDate = publishDate;
+    _resultData['publishDate'] = l$publishDate;
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
     return _resultData;
@@ -2747,6 +2801,7 @@ class Query$GetPlaylistOverview$playlist$items$items$$Episode
     final l$duration = duration;
     final l$image = image;
     final l$cursor = cursor;
+    final l$publishDate = publishDate;
     final l$$__typename = $__typename;
     return Object.hashAll([
       l$id,
@@ -2754,6 +2809,7 @@ class Query$GetPlaylistOverview$playlist$items$items$$Episode
       l$duration,
       l$image,
       l$cursor,
+      l$publishDate,
       l$$__typename,
     ]);
   }
@@ -2790,6 +2846,11 @@ class Query$GetPlaylistOverview$playlist$items$items$$Episode
     final l$cursor = cursor;
     final lOther$cursor = other.cursor;
     if (l$cursor != lOther$cursor) {
+      return false;
+    }
+    final l$publishDate = publishDate;
+    final lOther$publishDate = other.publishDate;
+    if (l$publishDate != lOther$publishDate) {
       return false;
     }
     final l$$__typename = $__typename;
@@ -2829,6 +2890,7 @@ abstract class CopyWith$Query$GetPlaylistOverview$playlist$items$items$$Episode<
     int? duration,
     String? image,
     String? cursor,
+    String? publishDate,
     String? $__typename,
   });
 }
@@ -2855,6 +2917,7 @@ class _CopyWithImpl$Query$GetPlaylistOverview$playlist$items$items$$Episode<
     Object? duration = _undefined,
     Object? image = _undefined,
     Object? cursor = _undefined,
+    Object? publishDate = _undefined,
     Object? $__typename = _undefined,
   }) =>
       _then(Query$GetPlaylistOverview$playlist$items$items$$Episode(
@@ -2869,6 +2932,9 @@ class _CopyWithImpl$Query$GetPlaylistOverview$playlist$items$items$$Episode<
         cursor: cursor == _undefined || cursor == null
             ? _instance.cursor
             : (cursor as String),
+        publishDate: publishDate == _undefined || publishDate == null
+            ? _instance.publishDate
+            : (publishDate as String),
         $__typename: $__typename == _undefined || $__typename == null
             ? _instance.$__typename
             : ($__typename as String),
@@ -2890,6 +2956,7 @@ class _CopyWithStubImpl$Query$GetPlaylistOverview$playlist$items$items$$Episode<
     int? duration,
     String? image,
     String? cursor,
+    String? publishDate,
     String? $__typename,
   }) =>
       _res;

@@ -704,6 +704,7 @@ class Query$KidsGetNextEpisodes$episode$next
     required this.duration,
     this.image,
     required this.cursor,
+    required this.publishDate,
     this.$__typename = 'Episode',
     required this.streams,
     required this.originalTitle,
@@ -718,6 +719,7 @@ class Query$KidsGetNextEpisodes$episode$next
     final l$duration = json['duration'];
     final l$image = json['image'];
     final l$cursor = json['cursor'];
+    final l$publishDate = json['publishDate'];
     final l$$__typename = json['__typename'];
     final l$streams = json['streams'];
     final l$originalTitle = json['originalTitle'];
@@ -729,6 +731,7 @@ class Query$KidsGetNextEpisodes$episode$next
       duration: (l$duration as int),
       image: (l$image as String?),
       cursor: (l$cursor as String),
+      publishDate: (l$publishDate as String),
       $__typename: (l$$__typename as String),
       streams: (l$streams as List<dynamic>)
           .map(
@@ -756,6 +759,8 @@ class Query$KidsGetNextEpisodes$episode$next
 
   final String cursor;
 
+  final String publishDate;
+
   final String $__typename;
 
   final List<Fragment$BasicStream> streams;
@@ -778,6 +783,8 @@ class Query$KidsGetNextEpisodes$episode$next
     _resultData['image'] = l$image;
     final l$cursor = cursor;
     _resultData['cursor'] = l$cursor;
+    final l$publishDate = publishDate;
+    _resultData['publishDate'] = l$publishDate;
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
     final l$streams = streams;
@@ -798,6 +805,7 @@ class Query$KidsGetNextEpisodes$episode$next
     final l$duration = duration;
     final l$image = image;
     final l$cursor = cursor;
+    final l$publishDate = publishDate;
     final l$$__typename = $__typename;
     final l$streams = streams;
     final l$originalTitle = originalTitle;
@@ -809,6 +817,7 @@ class Query$KidsGetNextEpisodes$episode$next
       l$duration,
       l$image,
       l$cursor,
+      l$publishDate,
       l$$__typename,
       Object.hashAll(l$streams.map((v) => v)),
       l$originalTitle,
@@ -849,6 +858,11 @@ class Query$KidsGetNextEpisodes$episode$next
     final l$cursor = cursor;
     final lOther$cursor = other.cursor;
     if (l$cursor != lOther$cursor) {
+      return false;
+    }
+    final l$publishDate = publishDate;
+    final lOther$publishDate = other.publishDate;
+    if (l$publishDate != lOther$publishDate) {
       return false;
     }
     final l$$__typename = $__typename;
@@ -912,6 +926,7 @@ abstract class CopyWith$Query$KidsGetNextEpisodes$episode$next<TRes> {
     int? duration,
     String? image,
     String? cursor,
+    String? publishDate,
     String? $__typename,
     List<Fragment$BasicStream>? streams,
     String? originalTitle,
@@ -945,6 +960,7 @@ class _CopyWithImpl$Query$KidsGetNextEpisodes$episode$next<TRes>
     Object? duration = _undefined,
     Object? image = _undefined,
     Object? cursor = _undefined,
+    Object? publishDate = _undefined,
     Object? $__typename = _undefined,
     Object? streams = _undefined,
     Object? originalTitle = _undefined,
@@ -963,6 +979,9 @@ class _CopyWithImpl$Query$KidsGetNextEpisodes$episode$next<TRes>
         cursor: cursor == _undefined || cursor == null
             ? _instance.cursor
             : (cursor as String),
+        publishDate: publishDate == _undefined || publishDate == null
+            ? _instance.publishDate
+            : (publishDate as String),
         $__typename: $__typename == _undefined || $__typename == null
             ? _instance.$__typename
             : ($__typename as String),
@@ -1022,6 +1041,7 @@ class _CopyWithStubImpl$Query$KidsGetNextEpisodes$episode$next<TRes>
     int? duration,
     String? image,
     String? cursor,
+    String? publishDate,
     String? $__typename,
     List<Fragment$BasicStream>? streams,
     String? originalTitle,
@@ -7773,6 +7793,7 @@ class Query$KidsFetchEpisode$episode$next
     required this.duration,
     this.image,
     required this.cursor,
+    required this.publishDate,
     this.$__typename = 'Episode',
   });
 
@@ -7783,6 +7804,7 @@ class Query$KidsFetchEpisode$episode$next
     final l$duration = json['duration'];
     final l$image = json['image'];
     final l$cursor = json['cursor'];
+    final l$publishDate = json['publishDate'];
     final l$$__typename = json['__typename'];
     return Query$KidsFetchEpisode$episode$next(
       id: (l$id as String),
@@ -7790,6 +7812,7 @@ class Query$KidsFetchEpisode$episode$next
       duration: (l$duration as int),
       image: (l$image as String?),
       cursor: (l$cursor as String),
+      publishDate: (l$publishDate as String),
       $__typename: (l$$__typename as String),
     );
   }
@@ -7803,6 +7826,8 @@ class Query$KidsFetchEpisode$episode$next
   final String? image;
 
   final String cursor;
+
+  final String publishDate;
 
   final String $__typename;
 
@@ -7818,6 +7843,8 @@ class Query$KidsFetchEpisode$episode$next
     _resultData['image'] = l$image;
     final l$cursor = cursor;
     _resultData['cursor'] = l$cursor;
+    final l$publishDate = publishDate;
+    _resultData['publishDate'] = l$publishDate;
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
     return _resultData;
@@ -7830,6 +7857,7 @@ class Query$KidsFetchEpisode$episode$next
     final l$duration = duration;
     final l$image = image;
     final l$cursor = cursor;
+    final l$publishDate = publishDate;
     final l$$__typename = $__typename;
     return Object.hashAll([
       l$id,
@@ -7837,6 +7865,7 @@ class Query$KidsFetchEpisode$episode$next
       l$duration,
       l$image,
       l$cursor,
+      l$publishDate,
       l$$__typename,
     ]);
   }
@@ -7875,6 +7904,11 @@ class Query$KidsFetchEpisode$episode$next
     if (l$cursor != lOther$cursor) {
       return false;
     }
+    final l$publishDate = publishDate;
+    final lOther$publishDate = other.publishDate;
+    if (l$publishDate != lOther$publishDate) {
+      return false;
+    }
     final l$$__typename = $__typename;
     final lOther$$__typename = other.$__typename;
     if (l$$__typename != lOther$$__typename) {
@@ -7909,6 +7943,7 @@ abstract class CopyWith$Query$KidsFetchEpisode$episode$next<TRes> {
     int? duration,
     String? image,
     String? cursor,
+    String? publishDate,
     String? $__typename,
   });
 }
@@ -7932,6 +7967,7 @@ class _CopyWithImpl$Query$KidsFetchEpisode$episode$next<TRes>
     Object? duration = _undefined,
     Object? image = _undefined,
     Object? cursor = _undefined,
+    Object? publishDate = _undefined,
     Object? $__typename = _undefined,
   }) =>
       _then(Query$KidsFetchEpisode$episode$next(
@@ -7946,6 +7982,9 @@ class _CopyWithImpl$Query$KidsFetchEpisode$episode$next<TRes>
         cursor: cursor == _undefined || cursor == null
             ? _instance.cursor
             : (cursor as String),
+        publishDate: publishDate == _undefined || publishDate == null
+            ? _instance.publishDate
+            : (publishDate as String),
         $__typename: $__typename == _undefined || $__typename == null
             ? _instance.$__typename
             : ($__typename as String),
@@ -7964,6 +8003,7 @@ class _CopyWithStubImpl$Query$KidsFetchEpisode$episode$next<TRes>
     int? duration,
     String? image,
     String? cursor,
+    String? publishDate,
     String? $__typename,
   }) =>
       _res;
