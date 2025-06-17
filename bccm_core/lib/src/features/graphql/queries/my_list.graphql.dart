@@ -1119,7 +1119,12 @@ const documentNodeQueryMyList = DocumentNode(definitions: [
           FieldNode(
             name: NameNode(value: 'entries'),
             alias: null,
-            arguments: [],
+            arguments: [
+              ArgumentNode(
+                name: NameNode(value: 'first'),
+                value: IntValueNode(value: '200'),
+              )
+            ],
             directives: [],
             selectionSet: SelectionSetNode(selections: [
               FieldNode(

@@ -19,7 +19,7 @@ fragment MyListEntry on UserCollectionEntry {
 
 query MyList {
   myList {
-    entries {
+    entries(first: 200) {
       items {
         ...MyListEntry
       }
