@@ -7,7 +7,7 @@ abstract class CommonSettings {
   Locale get appLanguage;
   List<String> get audioLanguages;
   List<String> get subtitleLanguages;
-  int? get sessionId;
+  String? get sessionId;
   bool? get isBetaTester;
 }
 
