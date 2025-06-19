@@ -19,6 +19,8 @@ class BccmGraphqlHeaders {
     required this.os,
     required this.osVersion,
     required this.onlyPreferredLanguagesContent,
+    this.sessionId,
+    this.searchSessionId,
   });
 
   final List<String> acceptLanguage;
@@ -32,6 +34,8 @@ class BccmGraphqlHeaders {
   final String os;
   final String osVersion;
   final bool? onlyPreferredLanguagesContent;
+  final String? sessionId;
+  final String? searchSessionId;
 
   Map<String, String> toMap() {
     return {
@@ -46,6 +50,8 @@ class BccmGraphqlHeaders {
       'X-Only-Preferred-Languages-Content': onlyPreferredLanguagesContent == true ? 'true' : 'false',
       if (featureFlags?.isNotEmpty == true) 'X-Feature-Flags': featureFlags!.join(','),
       if (extraUsergroups.isNotEmpty) 'x-explicit-roles': extraUsergroups.join(','),
+      if (sessionId != null) 'X-Session-ID': sessionId!,
+      if (searchSessionId != null) 'X-Search-Session-ID': searchSessionId!,
     };
   }
 }
