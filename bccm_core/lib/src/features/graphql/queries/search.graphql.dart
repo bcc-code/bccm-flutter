@@ -366,6 +366,13 @@ const fragmentDefinitionSearchResultItem = FragmentDefinitionNode(
           selectionSet: null,
         ),
         FieldNode(
+          name: NameNode(value: 'seasonTitle'),
+          alias: null,
+          arguments: [],
+          directives: [],
+          selectionSet: null,
+        ),
+        FieldNode(
           name: NameNode(value: 'ageRating'),
           alias: null,
           arguments: [],
@@ -484,6 +491,7 @@ class Fragment$SearchResultItem$$EpisodeSearchItem
     implements Fragment$SearchResultItem {
   Fragment$SearchResultItem$$EpisodeSearchItem({
     this.showTitle,
+    this.seasonTitle,
     required this.ageRating,
     required this.duration,
     this.$__typename = 'EpisodeSearchItem',
@@ -498,6 +506,7 @@ class Fragment$SearchResultItem$$EpisodeSearchItem
   factory Fragment$SearchResultItem$$EpisodeSearchItem.fromJson(
       Map<String, dynamic> json) {
     final l$showTitle = json['showTitle'];
+    final l$seasonTitle = json['seasonTitle'];
     final l$ageRating = json['ageRating'];
     final l$duration = json['duration'];
     final l$$__typename = json['__typename'];
@@ -509,6 +518,7 @@ class Fragment$SearchResultItem$$EpisodeSearchItem
     final l$image = json['image'];
     return Fragment$SearchResultItem$$EpisodeSearchItem(
       showTitle: (l$showTitle as String?),
+      seasonTitle: (l$seasonTitle as String?),
       ageRating: (l$ageRating as String),
       duration: (l$duration as int),
       $__typename: (l$$__typename as String),
@@ -522,6 +532,8 @@ class Fragment$SearchResultItem$$EpisodeSearchItem
   }
 
   final String? showTitle;
+
+  final String? seasonTitle;
 
   final String ageRating;
 
@@ -545,6 +557,8 @@ class Fragment$SearchResultItem$$EpisodeSearchItem
     final _resultData = <String, dynamic>{};
     final l$showTitle = showTitle;
     _resultData['showTitle'] = l$showTitle;
+    final l$seasonTitle = seasonTitle;
+    _resultData['seasonTitle'] = l$seasonTitle;
     final l$ageRating = ageRating;
     _resultData['ageRating'] = l$ageRating;
     final l$duration = duration;
@@ -569,6 +583,7 @@ class Fragment$SearchResultItem$$EpisodeSearchItem
   @override
   int get hashCode {
     final l$showTitle = showTitle;
+    final l$seasonTitle = seasonTitle;
     final l$ageRating = ageRating;
     final l$duration = duration;
     final l$$__typename = $__typename;
@@ -580,6 +595,7 @@ class Fragment$SearchResultItem$$EpisodeSearchItem
     final l$image = image;
     return Object.hashAll([
       l$showTitle,
+      l$seasonTitle,
       l$ageRating,
       l$duration,
       l$$__typename,
@@ -604,6 +620,11 @@ class Fragment$SearchResultItem$$EpisodeSearchItem
     final l$showTitle = showTitle;
     final lOther$showTitle = other.showTitle;
     if (l$showTitle != lOther$showTitle) {
+      return false;
+    }
+    final l$seasonTitle = seasonTitle;
+    final lOther$seasonTitle = other.seasonTitle;
+    if (l$seasonTitle != lOther$seasonTitle) {
       return false;
     }
     final l$ageRating = ageRating;
@@ -676,6 +697,7 @@ abstract class CopyWith$Fragment$SearchResultItem$$EpisodeSearchItem<TRes> {
 
   TRes call({
     String? showTitle,
+    String? seasonTitle,
     String? ageRating,
     int? duration,
     String? $__typename,
@@ -703,6 +725,7 @@ class _CopyWithImpl$Fragment$SearchResultItem$$EpisodeSearchItem<TRes>
 
   TRes call({
     Object? showTitle = _undefined,
+    Object? seasonTitle = _undefined,
     Object? ageRating = _undefined,
     Object? duration = _undefined,
     Object? $__typename = _undefined,
@@ -717,6 +740,9 @@ class _CopyWithImpl$Fragment$SearchResultItem$$EpisodeSearchItem<TRes>
         showTitle: showTitle == _undefined
             ? _instance.showTitle
             : (showTitle as String?),
+        seasonTitle: seasonTitle == _undefined
+            ? _instance.seasonTitle
+            : (seasonTitle as String?),
         ageRating: ageRating == _undefined || ageRating == null
             ? _instance.ageRating
             : (ageRating as String),
@@ -750,6 +776,7 @@ class _CopyWithStubImpl$Fragment$SearchResultItem$$EpisodeSearchItem<TRes>
 
   call({
     String? showTitle,
+    String? seasonTitle,
     String? ageRating,
     int? duration,
     String? $__typename,
