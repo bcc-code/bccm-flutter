@@ -1,1 +1,3 @@
 lib/src/features/graphql/**/*.graphql.dart linguist-generated=true
+lib/src/**/*.freezed.dart linguist-generated=true
+lib/src/**/*.g.dart linguist-generated=true
