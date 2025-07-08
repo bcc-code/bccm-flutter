@@ -171,15 +171,15 @@ const languages = {
 };
 
 final appLanuageCodes = [
-  LanguageCodes.de,
+  LanguageCodes.no,
   LanguageCodes.en,
+  LanguageCodes.de,
   LanguageCodes.es,
-  LanguageCodes.fi,
   LanguageCodes.fr,
+  LanguageCodes.nl,
+  LanguageCodes.fi,
   LanguageCodes.hu,
   LanguageCodes.it,
-  LanguageCodes.nl,
-  LanguageCodes.no,
   LanguageCodes.pl,
   LanguageCodes.pt,
   LanguageCodes.ro,
