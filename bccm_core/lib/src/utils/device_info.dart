@@ -92,6 +92,36 @@ class ContactDeviceInfo {
       'User ID': userId,
     };
   }
+
+  String toUrlQueryParams() {
+    final params = {
+      'version': appVer,
+      'resolution': screenSize,
+      'device': device,
+      'environment': envOverride,
+      'manufacturer': manufacturer,
+      'os': os,
+      'user': userId,
+    };
+
+    return params.entries
+        .where((param) {
+          if (param.value == null) {
+            return false;
+          }
+          if (param.value!.isEmpty) {
+            return false;
+          }
+          if (param.value == 'null') {
+            return false;
+          }
+          return true;
+        })
+        .map(
+          (param) => '${param.key}=${Uri.encodeQueryComponent(param.value!)}',
+        )
+        .join('&');
+  }
 }
 
 String getOsVersion(BaseDeviceInfo deviceInfo) {
