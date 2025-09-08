@@ -6626,6 +6626,7 @@ class Query$GetContributions$person$contributions {
 
   final int first;
 
+  @Deprecated('Offset is deprecated, use cursor')
   final int offset;
 
   final List<Fragment$Contribution> items;

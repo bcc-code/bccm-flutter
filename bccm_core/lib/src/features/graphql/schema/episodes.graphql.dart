@@ -106,3 +106,36 @@ Enum$StreamType fromJson$Enum$StreamType(String value) {
       return Enum$StreamType.$unknown;
   }
 }
+
+enum Enum$PrimaryMediaType {
+  video,
+  audio,
+  $unknown;
+
+  factory Enum$PrimaryMediaType.fromJson(String value) =>
+      fromJson$Enum$PrimaryMediaType(value);
+
+  String toJson() => toJson$Enum$PrimaryMediaType(this);
+}
+
+String toJson$Enum$PrimaryMediaType(Enum$PrimaryMediaType e) {
+  switch (e) {
+    case Enum$PrimaryMediaType.video:
+      return r'video';
+    case Enum$PrimaryMediaType.audio:
+      return r'audio';
+    case Enum$PrimaryMediaType.$unknown:
+      return r'$unknown';
+  }
+}
+
+Enum$PrimaryMediaType fromJson$Enum$PrimaryMediaType(String value) {
+  switch (value) {
+    case r'video':
+      return Enum$PrimaryMediaType.video;
+    case r'audio':
+      return Enum$PrimaryMediaType.audio;
+    default:
+      return Enum$PrimaryMediaType.$unknown;
+  }
+}

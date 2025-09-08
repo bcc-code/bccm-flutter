@@ -9080,6 +9080,7 @@ class Fragment$ItemSection$items {
     );
   }
 
+  @Deprecated('Offset is deprecated, use cursor')
   final int offset;
 
   final int first;
@@ -9870,6 +9871,7 @@ class Fragment$ItemSection$$PosterSection$items
     );
   }
 
+  @Deprecated('Offset is deprecated, use cursor')
   final int offset;
 
   final int first;
@@ -10664,6 +10666,7 @@ class Fragment$ItemSection$$FeaturedSection$items
     );
   }
 
+  @Deprecated('Offset is deprecated, use cursor')
   final int offset;
 
   final int first;
@@ -11456,6 +11459,7 @@ class Fragment$ItemSection$$DefaultSection$items
     );
   }
 
+  @Deprecated('Offset is deprecated, use cursor')
   final int offset;
 
   final int first;
@@ -12241,6 +12245,7 @@ class Fragment$ItemSection$$CardSection$items
     );
   }
 
+  @Deprecated('Offset is deprecated, use cursor')
   final int offset;
 
   final int first;
@@ -13026,6 +13031,7 @@ class Fragment$ItemSection$$ListSection$items
     );
   }
 
+  @Deprecated('Offset is deprecated, use cursor')
   final int offset;
 
   final int first;
@@ -13820,6 +13826,7 @@ class Fragment$ItemSection$$CardListSection$items
     );
   }
 
+  @Deprecated('Offset is deprecated, use cursor')
   final int offset;
 
   final int first;
@@ -14625,6 +14632,7 @@ class Fragment$ItemSection$$DefaultGridSection$items
     );
   }
 
+  @Deprecated('Offset is deprecated, use cursor')
   final int offset;
 
   final int first;
@@ -15424,6 +15432,7 @@ class Fragment$ItemSection$$PosterGridSection$items
     );
   }
 
+  @Deprecated('Offset is deprecated, use cursor')
   final int offset;
 
   final int first;
@@ -16219,6 +16228,7 @@ class Fragment$ItemSection$$IconGridSection$items
     );
   }
 
+  @Deprecated('Offset is deprecated, use cursor')
   final int offset;
 
   final int first;
@@ -17004,6 +17014,7 @@ class Fragment$ItemSection$$IconSection$items
     );
   }
 
+  @Deprecated('Offset is deprecated, use cursor')
   final int offset;
 
   final int first;
@@ -17790,6 +17801,7 @@ class Fragment$ItemSection$$LabelSection$items
     );
   }
 
+  @Deprecated('Offset is deprecated, use cursor')
   final int offset;
 
   final int first;
@@ -18581,6 +18593,7 @@ class Fragment$ItemSection$$AvatarSection$items
     );
   }
 
+  @Deprecated('Offset is deprecated, use cursor')
   final int offset;
 
   final int first;
@@ -22629,6 +22642,7 @@ class Fragment$Section$$PosterSection$items
     );
   }
 
+  @Deprecated('Offset is deprecated, use cursor')
   final int offset;
 
   final int first;
@@ -27557,6 +27571,7 @@ class Fragment$Section$$FeaturedSection$items
     );
   }
 
+  @Deprecated('Offset is deprecated, use cursor')
   final int offset;
 
   final int first;
@@ -31059,6 +31074,7 @@ class Fragment$Section$$DefaultSection$items
     );
   }
 
+  @Deprecated('Offset is deprecated, use cursor')
   final int offset;
 
   final int first;
@@ -34543,6 +34559,7 @@ class Fragment$Section$$CardSection$items
     );
   }
 
+  @Deprecated('Offset is deprecated, use cursor')
   final int offset;
 
   final int first;
@@ -38145,6 +38162,7 @@ class Fragment$Section$$ListSection$items
     );
   }
 
+  @Deprecated('Offset is deprecated, use cursor')
   final int offset;
 
   final int first;
@@ -41589,6 +41607,7 @@ class Fragment$Section$$CardListSection$items
     );
   }
 
+  @Deprecated('Offset is deprecated, use cursor')
   final int offset;
 
   final int first;
@@ -45286,6 +45305,7 @@ class Fragment$Section$$DefaultGridSection$items
     );
   }
 
+  @Deprecated('Offset is deprecated, use cursor')
   final int offset;
 
   final int first;
@@ -48817,6 +48837,7 @@ class Fragment$Section$$PosterGridSection$items
     );
   }
 
+  @Deprecated('Offset is deprecated, use cursor')
   final int offset;
 
   final int first;
@@ -52337,6 +52358,7 @@ class Fragment$Section$$IconGridSection$items
     );
   }
 
+  @Deprecated('Offset is deprecated, use cursor')
   final int offset;
 
   final int first;
@@ -55810,6 +55832,7 @@ class Fragment$Section$$IconSection$items
     );
   }
 
+  @Deprecated('Offset is deprecated, use cursor')
   final int offset;
 
   final int first;
@@ -56650,6 +56673,7 @@ class Fragment$Section$$LabelSection$items
     );
   }
 
+  @Deprecated('Offset is deprecated, use cursor')
   final int offset;
 
   final int first;
@@ -57491,6 +57515,7 @@ class Fragment$Section$$AvatarSection$items
     );
   }
 
+  @Deprecated('Offset is deprecated, use cursor')
   final int offset;
 
   final int first;

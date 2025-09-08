@@ -1911,6 +1911,7 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$items
     );
   }
 
+  @Deprecated('Offset is deprecated, use cursor')
   final int offset;
 
   final int first;
@@ -7131,6 +7132,7 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items
     );
   }
 
+  @Deprecated('Offset is deprecated, use cursor')
   final int offset;
 
   final int first;
@@ -10863,6 +10865,7 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection$items
     );
   }
 
+  @Deprecated('Offset is deprecated, use cursor')
   final int offset;
 
   final int first;
@@ -14585,6 +14588,7 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$items
     );
   }
 
+  @Deprecated('Offset is deprecated, use cursor')
   final int offset;
 
   final int first;
@@ -18469,6 +18473,7 @@ class Query$FetchMoreItemsForItemSection$section$$ListSection$items
     );
   }
 
+  @Deprecated('Offset is deprecated, use cursor')
   final int offset;
 
   final int first;
@@ -22199,6 +22204,7 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$items
     );
   }
 
+  @Deprecated('Offset is deprecated, use cursor')
   final int offset;
 
   final int first;
@@ -26124,6 +26130,7 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items
     );
   }
 
+  @Deprecated('Offset is deprecated, use cursor')
   final int offset;
 
   final int first;
@@ -29859,6 +29866,7 @@ class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items
     );
   }
 
+  @Deprecated('Offset is deprecated, use cursor')
   final int offset;
 
   final int first;
@@ -33591,6 +33599,7 @@ class Query$FetchMoreItemsForItemSection$section$$IconGridSection$items
     );
   }
 
+  @Deprecated('Offset is deprecated, use cursor')
   final int offset;
 
   final int first;
@@ -37287,6 +37296,7 @@ class Query$FetchMoreItemsForItemSection$section$$IconSection$items
     );
   }
 
+  @Deprecated('Offset is deprecated, use cursor')
   final int offset;
 
   final int first;
@@ -38217,6 +38227,7 @@ class Query$FetchMoreItemsForItemSection$section$$LabelSection$items
     );
   }
 
+  @Deprecated('Offset is deprecated, use cursor')
   final int offset;
 
   final int first;
@@ -39151,6 +39162,7 @@ class Query$FetchMoreItemsForItemSection$section$$AvatarSection$items
     );
   }
 
+  @Deprecated('Offset is deprecated, use cursor')
   final int offset;
 
   final int first;
@@ -42978,6 +42990,7 @@ class Query$GetSection$section$$PosterSection$items
     );
   }
 
+  @Deprecated('Offset is deprecated, use cursor')
   final int offset;
 
   final int first;
@@ -48082,6 +48095,7 @@ class Query$GetSection$section$$FeaturedSection$items
     );
   }
 
+  @Deprecated('Offset is deprecated, use cursor')
   final int offset;
 
   final int first;
@@ -51704,6 +51718,7 @@ class Query$GetSection$section$$DefaultSection$items
     );
   }
 
+  @Deprecated('Offset is deprecated, use cursor')
   final int offset;
 
   final int first;
@@ -55312,6 +55327,7 @@ class Query$GetSection$section$$CardSection$items
     );
   }
 
+  @Deprecated('Offset is deprecated, use cursor')
   final int offset;
 
   final int first;
@@ -59055,6 +59071,7 @@ class Query$GetSection$section$$ListSection$items
     );
   }
 
+  @Deprecated('Offset is deprecated, use cursor')
   final int offset;
 
   final int first;
@@ -62649,6 +62666,7 @@ class Query$GetSection$section$$CardListSection$items
     );
   }
 
+  @Deprecated('Offset is deprecated, use cursor')
   final int offset;
 
   final int first;
@@ -66468,6 +66486,7 @@ class Query$GetSection$section$$DefaultGridSection$items
     );
   }
 
+  @Deprecated('Offset is deprecated, use cursor')
   final int offset;
 
   final int first;
@@ -70124,6 +70143,7 @@ class Query$GetSection$section$$PosterGridSection$items
     );
   }
 
+  @Deprecated('Offset is deprecated, use cursor')
   final int offset;
 
   final int first;
@@ -73763,6 +73783,7 @@ class Query$GetSection$section$$IconGridSection$items
     );
   }
 
+  @Deprecated('Offset is deprecated, use cursor')
   final int offset;
 
   final int first;
@@ -77348,6 +77369,7 @@ class Query$GetSection$section$$IconSection$items
     );
   }
 
+  @Deprecated('Offset is deprecated, use cursor')
   final int offset;
 
   final int first;
@@ -78210,6 +78232,7 @@ class Query$GetSection$section$$LabelSection$items
     );
   }
 
+  @Deprecated('Offset is deprecated, use cursor')
   final int offset;
 
   final int first;
@@ -79074,6 +79097,7 @@ class Query$GetSection$section$$AvatarSection$items
     );
   }
 
+  @Deprecated('Offset is deprecated, use cursor')
   final int offset;
 
   final int first;
