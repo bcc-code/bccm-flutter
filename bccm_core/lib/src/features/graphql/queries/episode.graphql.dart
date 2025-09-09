@@ -3802,6 +3802,7 @@ class Fragment$BasicStream {
     required this.audioLanguages,
     required this.subtitleLanguages,
     required this.downloadable,
+    required this.primaryMediaType,
     this.$__typename = 'Stream',
   });
 
@@ -3814,6 +3815,7 @@ class Fragment$BasicStream {
     final l$audioLanguages = json['audioLanguages'];
     final l$subtitleLanguages = json['subtitleLanguages'];
     final l$downloadable = json['downloadable'];
+    final l$primaryMediaType = json['primaryMediaType'];
     final l$$__typename = json['__typename'];
     return Fragment$BasicStream(
       id: (l$id as String),
@@ -3828,6 +3830,8 @@ class Fragment$BasicStream {
           .map((e) => (e as String))
           .toList(),
       downloadable: (l$downloadable as bool),
+      primaryMediaType:
+          fromJson$Enum$PrimaryMediaType((l$primaryMediaType as String)),
       $__typename: (l$$__typename as String),
     );
   }
@@ -3847,6 +3851,8 @@ class Fragment$BasicStream {
   final List<String> subtitleLanguages;
 
   final bool downloadable;
+
+  final Enum$PrimaryMediaType primaryMediaType;
 
   final String $__typename;
 
@@ -3869,6 +3875,9 @@ class Fragment$BasicStream {
         l$subtitleLanguages.map((e) => e).toList();
     final l$downloadable = downloadable;
     _resultData['downloadable'] = l$downloadable;
+    final l$primaryMediaType = primaryMediaType;
+    _resultData['primaryMediaType'] =
+        toJson$Enum$PrimaryMediaType(l$primaryMediaType);
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
     return _resultData;
@@ -3884,6 +3893,7 @@ class Fragment$BasicStream {
     final l$audioLanguages = audioLanguages;
     final l$subtitleLanguages = subtitleLanguages;
     final l$downloadable = downloadable;
+    final l$primaryMediaType = primaryMediaType;
     final l$$__typename = $__typename;
     return Object.hashAll([
       l$id,
@@ -3894,6 +3904,7 @@ class Fragment$BasicStream {
       Object.hashAll(l$audioLanguages.map((v) => v)),
       Object.hashAll(l$subtitleLanguages.map((v) => v)),
       l$downloadable,
+      l$primaryMediaType,
       l$$__typename,
     ]);
   }
@@ -3960,6 +3971,11 @@ class Fragment$BasicStream {
     if (l$downloadable != lOther$downloadable) {
       return false;
     }
+    final l$primaryMediaType = primaryMediaType;
+    final lOther$primaryMediaType = other.primaryMediaType;
+    if (l$primaryMediaType != lOther$primaryMediaType) {
+      return false;
+    }
     final l$$__typename = $__typename;
     final lOther$$__typename = other.$__typename;
     if (l$$__typename != lOther$$__typename) {
@@ -3995,6 +4011,7 @@ abstract class CopyWith$Fragment$BasicStream<TRes> {
     List<String>? audioLanguages,
     List<String>? subtitleLanguages,
     bool? downloadable,
+    Enum$PrimaryMediaType? primaryMediaType,
     String? $__typename,
   });
 }
@@ -4021,6 +4038,7 @@ class _CopyWithImpl$Fragment$BasicStream<TRes>
     Object? audioLanguages = _undefined,
     Object? subtitleLanguages = _undefined,
     Object? downloadable = _undefined,
+    Object? primaryMediaType = _undefined,
     Object? $__typename = _undefined,
   }) =>
       _then(Fragment$BasicStream(
@@ -4045,6 +4063,10 @@ class _CopyWithImpl$Fragment$BasicStream<TRes>
         downloadable: downloadable == _undefined || downloadable == null
             ? _instance.downloadable
             : (downloadable as bool),
+        primaryMediaType:
+            primaryMediaType == _undefined || primaryMediaType == null
+                ? _instance.primaryMediaType
+                : (primaryMediaType as Enum$PrimaryMediaType),
         $__typename: $__typename == _undefined || $__typename == null
             ? _instance.$__typename
             : ($__typename as String),
@@ -4066,6 +4088,7 @@ class _CopyWithStubImpl$Fragment$BasicStream<TRes>
     List<String>? audioLanguages,
     List<String>? subtitleLanguages,
     bool? downloadable,
+    Enum$PrimaryMediaType? primaryMediaType,
     String? $__typename,
   }) =>
       _res;
@@ -4131,6 +4154,13 @@ const fragmentDefinitionBasicStream = FragmentDefinitionNode(
     ),
     FieldNode(
       name: NameNode(value: 'downloadable'),
+      alias: null,
+      arguments: [],
+      directives: [],
+      selectionSet: null,
+    ),
+    FieldNode(
+      name: NameNode(value: 'primaryMediaType'),
       alias: null,
       arguments: [],
       directives: [],

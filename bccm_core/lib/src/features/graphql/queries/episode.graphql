@@ -105,6 +105,7 @@ fragment BasicStream on Stream {
   audioLanguages
   subtitleLanguages
   downloadable
+  primaryMediaType
 }
 
 fragment SeasonListEpisode on Episode {
