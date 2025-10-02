@@ -12,5 +12,8 @@ String formatAppName(PackageInfo packageInfo) {
   if (packageInfo.appName == 'Bible Kids') {
     appName = 'kids-mobile';
   }
+  if (packageInfo.appName == 'Play') {
+    appName = isAndroidTv ? 'play-androidtv' : 'play-mobile';
+  }
   return appName;
 }
