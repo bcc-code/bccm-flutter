@@ -16,3 +16,7 @@ const kBccmPackageName = 'tv.brunstad.app';
 const kLiveIosId = '6476551025';
 const kLiveAndroidScheme = 'connect.bcc.live.main';
 const kLivePackageName = 'connect.bcc.live';
+
+const kPlayIosId = '6753673220';
+const kPlayAndroidScheme = 'media.bcc.play.main';
+const kPlayPackageName = 'media.bcc.play';
