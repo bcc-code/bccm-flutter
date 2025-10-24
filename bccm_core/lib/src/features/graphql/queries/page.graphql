@@ -32,6 +32,12 @@ fragment ItemSectionItem on SectionItem {
     ...NavigatableEpisode
     ...NavigatableShow
     ... on Episode {
+      contributors {
+        person {
+          name
+        }
+        contributionTypes
+      }
       ...EpisodeThumbnail
     }
     ... on Show {
