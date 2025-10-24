@@ -1,3 +1,4 @@
+import '../../schema/persons.graphql.dart';
 import '../../schema/schema.graphql.dart';
 import '../../schema/shows.graphql.dart';
 import '../episode.graphql.dart';
@@ -710,6 +711,7 @@ class Query$KidsGetNextEpisodes$episode$next
     required this.originalTitle,
     this.context,
     this.season,
+    required this.contributors,
   });
 
   factory Query$KidsGetNextEpisodes$episode$next.fromJson(
@@ -725,6 +727,7 @@ class Query$KidsGetNextEpisodes$episode$next
     final l$originalTitle = json['originalTitle'];
     final l$context = json['context'];
     final l$season = json['season'];
+    final l$contributors = json['contributors'];
     return Query$KidsGetNextEpisodes$episode$next(
       id: (l$id as String),
       title: (l$title as String),
@@ -746,6 +749,11 @@ class Query$KidsGetNextEpisodes$episode$next
           ? null
           : Query$KidsGetNextEpisodes$episode$next$season.fromJson(
               (l$season as Map<String, dynamic>)),
+      contributors: (l$contributors as List<dynamic>)
+          .map((e) =>
+              Query$KidsGetNextEpisodes$episode$next$contributors.fromJson(
+                  (e as Map<String, dynamic>)))
+          .toList(),
     );
   }
 
@@ -771,6 +779,8 @@ class Query$KidsGetNextEpisodes$episode$next
 
   final Query$KidsGetNextEpisodes$episode$next$season? season;
 
+  final List<Query$KidsGetNextEpisodes$episode$next$contributors> contributors;
+
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
     final l$id = id;
@@ -795,6 +805,9 @@ class Query$KidsGetNextEpisodes$episode$next
     _resultData['context'] = l$context?.toJson();
     final l$season = season;
     _resultData['season'] = l$season?.toJson();
+    final l$contributors = contributors;
+    _resultData['contributors'] =
+        l$contributors.map((e) => e.toJson()).toList();
     return _resultData;
   }
 
@@ -811,6 +824,7 @@ class Query$KidsGetNextEpisodes$episode$next
     final l$originalTitle = originalTitle;
     final l$context = context;
     final l$season = season;
+    final l$contributors = contributors;
     return Object.hashAll([
       l$id,
       l$title,
@@ -823,6 +837,7 @@ class Query$KidsGetNextEpisodes$episode$next
       l$originalTitle,
       l$context,
       l$season,
+      Object.hashAll(l$contributors.map((v) => v)),
     ]);
   }
 
@@ -897,6 +912,18 @@ class Query$KidsGetNextEpisodes$episode$next
     if (l$season != lOther$season) {
       return false;
     }
+    final l$contributors = contributors;
+    final lOther$contributors = other.contributors;
+    if (l$contributors.length != lOther$contributors.length) {
+      return false;
+    }
+    for (int i = 0; i < l$contributors.length; i++) {
+      final l$contributors$entry = l$contributors[i];
+      final lOther$contributors$entry = lOther$contributors[i];
+      if (l$contributors$entry != lOther$contributors$entry) {
+        return false;
+      }
+    }
     return true;
   }
 }
@@ -932,6 +959,7 @@ abstract class CopyWith$Query$KidsGetNextEpisodes$episode$next<TRes> {
     String? originalTitle,
     Query$KidsGetNextEpisodes$episode$next$context? context,
     Query$KidsGetNextEpisodes$episode$next$season? season,
+    List<Query$KidsGetNextEpisodes$episode$next$contributors>? contributors,
   });
   TRes streams(
       Iterable<Fragment$BasicStream> Function(
@@ -939,6 +967,12 @@ abstract class CopyWith$Query$KidsGetNextEpisodes$episode$next<TRes> {
           _fn);
   CopyWith$Query$KidsGetNextEpisodes$episode$next$context<TRes> get context;
   CopyWith$Query$KidsGetNextEpisodes$episode$next$season<TRes> get season;
+  TRes contributors(
+      Iterable<Query$KidsGetNextEpisodes$episode$next$contributors> Function(
+              Iterable<
+                  CopyWith$Query$KidsGetNextEpisodes$episode$next$contributors<
+                      Query$KidsGetNextEpisodes$episode$next$contributors>>)
+          _fn);
 }
 
 class _CopyWithImpl$Query$KidsGetNextEpisodes$episode$next<TRes>
@@ -966,6 +1000,7 @@ class _CopyWithImpl$Query$KidsGetNextEpisodes$episode$next<TRes>
     Object? originalTitle = _undefined,
     Object? context = _undefined,
     Object? season = _undefined,
+    Object? contributors = _undefined,
   }) =>
       _then(Query$KidsGetNextEpisodes$episode$next(
         id: id == _undefined || id == null ? _instance.id : (id as String),
@@ -997,6 +1032,10 @@ class _CopyWithImpl$Query$KidsGetNextEpisodes$episode$next<TRes>
         season: season == _undefined
             ? _instance.season
             : (season as Query$KidsGetNextEpisodes$episode$next$season?),
+        contributors: contributors == _undefined || contributors == null
+            ? _instance.contributors
+            : (contributors
+                as List<Query$KidsGetNextEpisodes$episode$next$contributors>),
       ));
 
   TRes streams(
@@ -1027,6 +1066,19 @@ class _CopyWithImpl$Query$KidsGetNextEpisodes$episode$next<TRes>
         : CopyWith$Query$KidsGetNextEpisodes$episode$next$season(
             local$season, (e) => call(season: e));
   }
+
+  TRes contributors(
+          Iterable<Query$KidsGetNextEpisodes$episode$next$contributors> Function(
+                  Iterable<
+                      CopyWith$Query$KidsGetNextEpisodes$episode$next$contributors<
+                          Query$KidsGetNextEpisodes$episode$next$contributors>>)
+              _fn) =>
+      call(
+          contributors: _fn(_instance.contributors.map((e) =>
+              CopyWith$Query$KidsGetNextEpisodes$episode$next$contributors(
+                e,
+                (i) => i,
+              ))).toList());
 }
 
 class _CopyWithStubImpl$Query$KidsGetNextEpisodes$episode$next<TRes>
@@ -1047,6 +1099,7 @@ class _CopyWithStubImpl$Query$KidsGetNextEpisodes$episode$next<TRes>
     String? originalTitle,
     Query$KidsGetNextEpisodes$episode$next$context? context,
     Query$KidsGetNextEpisodes$episode$next$season? season,
+    List<Query$KidsGetNextEpisodes$episode$next$contributors>? contributors,
   }) =>
       _res;
 
@@ -1057,6 +1110,8 @@ class _CopyWithStubImpl$Query$KidsGetNextEpisodes$episode$next<TRes>
 
   CopyWith$Query$KidsGetNextEpisodes$episode$next$season<TRes> get season =>
       CopyWith$Query$KidsGetNextEpisodes$episode$next$season.stub(_res);
+
+  contributors(_fn) => _res;
 }
 
 class Query$KidsGetNextEpisodes$episode$next$context
@@ -1790,6 +1845,331 @@ class _CopyWithStubImpl$Query$KidsGetNextEpisodes$episode$next$season$show<TRes>
   call({
     String? id,
     String? title,
+    String? $__typename,
+  }) =>
+      _res;
+}
+
+class Query$KidsGetNextEpisodes$episode$next$contributors
+    implements Fragment$PlayableMediaItem$$Episode$contributors {
+  Query$KidsGetNextEpisodes$episode$next$contributors({
+    required this.contributionTypes,
+    required this.person,
+    this.$__typename = 'Contributor',
+  });
+
+  factory Query$KidsGetNextEpisodes$episode$next$contributors.fromJson(
+      Map<String, dynamic> json) {
+    final l$contributionTypes = json['contributionTypes'];
+    final l$person = json['person'];
+    final l$$__typename = json['__typename'];
+    return Query$KidsGetNextEpisodes$episode$next$contributors(
+      contributionTypes: (l$contributionTypes as List<dynamic>)
+          .map((e) => fromJson$Enum$ContributionTypeCode((e as String)))
+          .toList(),
+      person:
+          Query$KidsGetNextEpisodes$episode$next$contributors$person.fromJson(
+              (l$person as Map<String, dynamic>)),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final List<Enum$ContributionTypeCode> contributionTypes;
+
+  final Query$KidsGetNextEpisodes$episode$next$contributors$person person;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$contributionTypes = contributionTypes;
+    _resultData['contributionTypes'] = l$contributionTypes
+        .map((e) => toJson$Enum$ContributionTypeCode(e))
+        .toList();
+    final l$person = person;
+    _resultData['person'] = l$person.toJson();
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$contributionTypes = contributionTypes;
+    final l$person = person;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      Object.hashAll(l$contributionTypes.map((v) => v)),
+      l$person,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (other is! Query$KidsGetNextEpisodes$episode$next$contributors ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$contributionTypes = contributionTypes;
+    final lOther$contributionTypes = other.contributionTypes;
+    if (l$contributionTypes.length != lOther$contributionTypes.length) {
+      return false;
+    }
+    for (int i = 0; i < l$contributionTypes.length; i++) {
+      final l$contributionTypes$entry = l$contributionTypes[i];
+      final lOther$contributionTypes$entry = lOther$contributionTypes[i];
+      if (l$contributionTypes$entry != lOther$contributionTypes$entry) {
+        return false;
+      }
+    }
+    final l$person = person;
+    final lOther$person = other.person;
+    if (l$person != lOther$person) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$KidsGetNextEpisodes$episode$next$contributors
+    on Query$KidsGetNextEpisodes$episode$next$contributors {
+  CopyWith$Query$KidsGetNextEpisodes$episode$next$contributors<
+          Query$KidsGetNextEpisodes$episode$next$contributors>
+      get copyWith =>
+          CopyWith$Query$KidsGetNextEpisodes$episode$next$contributors(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$KidsGetNextEpisodes$episode$next$contributors<
+    TRes> {
+  factory CopyWith$Query$KidsGetNextEpisodes$episode$next$contributors(
+    Query$KidsGetNextEpisodes$episode$next$contributors instance,
+    TRes Function(Query$KidsGetNextEpisodes$episode$next$contributors) then,
+  ) = _CopyWithImpl$Query$KidsGetNextEpisodes$episode$next$contributors;
+
+  factory CopyWith$Query$KidsGetNextEpisodes$episode$next$contributors.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$KidsGetNextEpisodes$episode$next$contributors;
+
+  TRes call({
+    List<Enum$ContributionTypeCode>? contributionTypes,
+    Query$KidsGetNextEpisodes$episode$next$contributors$person? person,
+    String? $__typename,
+  });
+  CopyWith$Query$KidsGetNextEpisodes$episode$next$contributors$person<TRes>
+      get person;
+}
+
+class _CopyWithImpl$Query$KidsGetNextEpisodes$episode$next$contributors<TRes>
+    implements
+        CopyWith$Query$KidsGetNextEpisodes$episode$next$contributors<TRes> {
+  _CopyWithImpl$Query$KidsGetNextEpisodes$episode$next$contributors(
+    this._instance,
+    this._then,
+  );
+
+  final Query$KidsGetNextEpisodes$episode$next$contributors _instance;
+
+  final TRes Function(Query$KidsGetNextEpisodes$episode$next$contributors)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? contributionTypes = _undefined,
+    Object? person = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Query$KidsGetNextEpisodes$episode$next$contributors(
+        contributionTypes:
+            contributionTypes == _undefined || contributionTypes == null
+                ? _instance.contributionTypes
+                : (contributionTypes as List<Enum$ContributionTypeCode>),
+        person: person == _undefined || person == null
+            ? _instance.person
+            : (person
+                as Query$KidsGetNextEpisodes$episode$next$contributors$person),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+
+  CopyWith$Query$KidsGetNextEpisodes$episode$next$contributors$person<TRes>
+      get person {
+    final local$person = _instance.person;
+    return CopyWith$Query$KidsGetNextEpisodes$episode$next$contributors$person(
+        local$person, (e) => call(person: e));
+  }
+}
+
+class _CopyWithStubImpl$Query$KidsGetNextEpisodes$episode$next$contributors<
+        TRes>
+    implements
+        CopyWith$Query$KidsGetNextEpisodes$episode$next$contributors<TRes> {
+  _CopyWithStubImpl$Query$KidsGetNextEpisodes$episode$next$contributors(
+      this._res);
+
+  TRes _res;
+
+  call({
+    List<Enum$ContributionTypeCode>? contributionTypes,
+    Query$KidsGetNextEpisodes$episode$next$contributors$person? person,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Query$KidsGetNextEpisodes$episode$next$contributors$person<TRes>
+      get person =>
+          CopyWith$Query$KidsGetNextEpisodes$episode$next$contributors$person
+              .stub(_res);
+}
+
+class Query$KidsGetNextEpisodes$episode$next$contributors$person
+    implements Fragment$PlayableMediaItem$$Episode$contributors$person {
+  Query$KidsGetNextEpisodes$episode$next$contributors$person({
+    required this.name,
+    this.$__typename = 'Person',
+  });
+
+  factory Query$KidsGetNextEpisodes$episode$next$contributors$person.fromJson(
+      Map<String, dynamic> json) {
+    final l$name = json['name'];
+    final l$$__typename = json['__typename'];
+    return Query$KidsGetNextEpisodes$episode$next$contributors$person(
+      name: (l$name as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String name;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$name = name;
+    _resultData['name'] = l$name;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$name = name;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$name,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (other is! Query$KidsGetNextEpisodes$episode$next$contributors$person ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$name = name;
+    final lOther$name = other.name;
+    if (l$name != lOther$name) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$KidsGetNextEpisodes$episode$next$contributors$person
+    on Query$KidsGetNextEpisodes$episode$next$contributors$person {
+  CopyWith$Query$KidsGetNextEpisodes$episode$next$contributors$person<
+          Query$KidsGetNextEpisodes$episode$next$contributors$person>
+      get copyWith =>
+          CopyWith$Query$KidsGetNextEpisodes$episode$next$contributors$person(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$KidsGetNextEpisodes$episode$next$contributors$person<
+    TRes> {
+  factory CopyWith$Query$KidsGetNextEpisodes$episode$next$contributors$person(
+    Query$KidsGetNextEpisodes$episode$next$contributors$person instance,
+    TRes Function(Query$KidsGetNextEpisodes$episode$next$contributors$person)
+        then,
+  ) = _CopyWithImpl$Query$KidsGetNextEpisodes$episode$next$contributors$person;
+
+  factory CopyWith$Query$KidsGetNextEpisodes$episode$next$contributors$person.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$KidsGetNextEpisodes$episode$next$contributors$person;
+
+  TRes call({
+    String? name,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Query$KidsGetNextEpisodes$episode$next$contributors$person<
+        TRes>
+    implements
+        CopyWith$Query$KidsGetNextEpisodes$episode$next$contributors$person<
+            TRes> {
+  _CopyWithImpl$Query$KidsGetNextEpisodes$episode$next$contributors$person(
+    this._instance,
+    this._then,
+  );
+
+  final Query$KidsGetNextEpisodes$episode$next$contributors$person _instance;
+
+  final TRes Function(
+      Query$KidsGetNextEpisodes$episode$next$contributors$person) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? name = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Query$KidsGetNextEpisodes$episode$next$contributors$person(
+        name: name == _undefined || name == null
+            ? _instance.name
+            : (name as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Query$KidsGetNextEpisodes$episode$next$contributors$person<
+        TRes>
+    implements
+        CopyWith$Query$KidsGetNextEpisodes$episode$next$contributors$person<
+            TRes> {
+  _CopyWithStubImpl$Query$KidsGetNextEpisodes$episode$next$contributors$person(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? name,
     String? $__typename,
   }) =>
       _res;
@@ -3670,6 +4050,7 @@ class Query$KidsFetchEpisode$episode
     this.context,
     required this.duration,
     this.season,
+    required this.contributors,
     this.$__typename = 'Episode',
     required this.uuid,
     required this.next,
@@ -3685,6 +4066,7 @@ class Query$KidsFetchEpisode$episode
     final l$context = json['context'];
     final l$duration = json['duration'];
     final l$season = json['season'];
+    final l$contributors = json['contributors'];
     final l$$__typename = json['__typename'];
     final l$uuid = json['uuid'];
     final l$next = json['next'];
@@ -3707,6 +4089,10 @@ class Query$KidsFetchEpisode$episode
           ? null
           : Query$KidsFetchEpisode$episode$season.fromJson(
               (l$season as Map<String, dynamic>)),
+      contributors: (l$contributors as List<dynamic>)
+          .map((e) => Query$KidsFetchEpisode$episode$contributors.fromJson(
+              (e as Map<String, dynamic>)))
+          .toList(),
       $__typename: (l$$__typename as String),
       uuid: (l$uuid as String),
       next: (l$next as List<dynamic>)
@@ -3734,6 +4120,8 @@ class Query$KidsFetchEpisode$episode
 
   final Query$KidsFetchEpisode$episode$season? season;
 
+  final List<Query$KidsFetchEpisode$episode$contributors> contributors;
+
   final String $__typename;
 
   final String uuid;
@@ -3760,6 +4148,9 @@ class Query$KidsFetchEpisode$episode
     _resultData['duration'] = l$duration;
     final l$season = season;
     _resultData['season'] = l$season?.toJson();
+    final l$contributors = contributors;
+    _resultData['contributors'] =
+        l$contributors.map((e) => e.toJson()).toList();
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
     final l$uuid = uuid;
@@ -3780,6 +4171,7 @@ class Query$KidsFetchEpisode$episode
     final l$context = context;
     final l$duration = duration;
     final l$season = season;
+    final l$contributors = contributors;
     final l$$__typename = $__typename;
     final l$uuid = uuid;
     final l$next = next;
@@ -3793,6 +4185,7 @@ class Query$KidsFetchEpisode$episode
       l$context,
       l$duration,
       l$season,
+      Object.hashAll(l$contributors.map((v) => v)),
       l$$__typename,
       l$uuid,
       Object.hashAll(l$next.map((v) => v)),
@@ -3860,6 +4253,18 @@ class Query$KidsFetchEpisode$episode
     if (l$season != lOther$season) {
       return false;
     }
+    final l$contributors = contributors;
+    final lOther$contributors = other.contributors;
+    if (l$contributors.length != lOther$contributors.length) {
+      return false;
+    }
+    for (int i = 0; i < l$contributors.length; i++) {
+      final l$contributors$entry = l$contributors[i];
+      final lOther$contributors$entry = lOther$contributors[i];
+      if (l$contributors$entry != lOther$contributors$entry) {
+        return false;
+      }
+    }
     final l$$__typename = $__typename;
     final lOther$$__typename = other.$__typename;
     if (l$$__typename != lOther$$__typename) {
@@ -3914,6 +4319,7 @@ abstract class CopyWith$Query$KidsFetchEpisode$episode<TRes> {
     Query$KidsFetchEpisode$episode$context? context,
     int? duration,
     Query$KidsFetchEpisode$episode$season? season,
+    List<Query$KidsFetchEpisode$episode$contributors>? contributors,
     String? $__typename,
     String? uuid,
     List<Query$KidsFetchEpisode$episode$next>? next,
@@ -3924,6 +4330,12 @@ abstract class CopyWith$Query$KidsFetchEpisode$episode<TRes> {
           _fn);
   CopyWith$Query$KidsFetchEpisode$episode$context<TRes> get context;
   CopyWith$Query$KidsFetchEpisode$episode$season<TRes> get season;
+  TRes contributors(
+      Iterable<Query$KidsFetchEpisode$episode$contributors> Function(
+              Iterable<
+                  CopyWith$Query$KidsFetchEpisode$episode$contributors<
+                      Query$KidsFetchEpisode$episode$contributors>>)
+          _fn);
   TRes next(
       Iterable<Query$KidsFetchEpisode$episode$next> Function(
               Iterable<
@@ -3955,6 +4367,7 @@ class _CopyWithImpl$Query$KidsFetchEpisode$episode<TRes>
     Object? context = _undefined,
     Object? duration = _undefined,
     Object? season = _undefined,
+    Object? contributors = _undefined,
     Object? $__typename = _undefined,
     Object? uuid = _undefined,
     Object? next = _undefined,
@@ -3983,6 +4396,10 @@ class _CopyWithImpl$Query$KidsFetchEpisode$episode<TRes>
         season: season == _undefined
             ? _instance.season
             : (season as Query$KidsFetchEpisode$episode$season?),
+        contributors: contributors == _undefined || contributors == null
+            ? _instance.contributors
+            : (contributors
+                as List<Query$KidsFetchEpisode$episode$contributors>),
         $__typename: $__typename == _undefined || $__typename == null
             ? _instance.$__typename
             : ($__typename as String),
@@ -4021,6 +4438,19 @@ class _CopyWithImpl$Query$KidsFetchEpisode$episode<TRes>
             local$season, (e) => call(season: e));
   }
 
+  TRes contributors(
+          Iterable<Query$KidsFetchEpisode$episode$contributors> Function(
+                  Iterable<
+                      CopyWith$Query$KidsFetchEpisode$episode$contributors<
+                          Query$KidsFetchEpisode$episode$contributors>>)
+              _fn) =>
+      call(
+          contributors: _fn(_instance.contributors
+              .map((e) => CopyWith$Query$KidsFetchEpisode$episode$contributors(
+                    e,
+                    (i) => i,
+                  ))).toList());
+
   TRes next(
           Iterable<Query$KidsFetchEpisode$episode$next> Function(
                   Iterable<
@@ -4051,6 +4481,7 @@ class _CopyWithStubImpl$Query$KidsFetchEpisode$episode<TRes>
     Query$KidsFetchEpisode$episode$context? context,
     int? duration,
     Query$KidsFetchEpisode$episode$season? season,
+    List<Query$KidsFetchEpisode$episode$contributors>? contributors,
     String? $__typename,
     String? uuid,
     List<Query$KidsFetchEpisode$episode$next>? next,
@@ -4064,6 +4495,8 @@ class _CopyWithStubImpl$Query$KidsFetchEpisode$episode<TRes>
 
   CopyWith$Query$KidsFetchEpisode$episode$season<TRes> get season =>
       CopyWith$Query$KidsFetchEpisode$episode$season.stub(_res);
+
+  contributors(_fn) => _res;
 
   next(_fn) => _res;
 }
@@ -4961,6 +5394,313 @@ class _CopyWithStubImpl$Query$KidsFetchEpisode$episode$season$show<TRes>
   call({
     String? id,
     String? title,
+    String? $__typename,
+  }) =>
+      _res;
+}
+
+class Query$KidsFetchEpisode$episode$contributors
+    implements Fragment$PlayableMediaItem$$Episode$contributors {
+  Query$KidsFetchEpisode$episode$contributors({
+    required this.contributionTypes,
+    required this.person,
+    this.$__typename = 'Contributor',
+  });
+
+  factory Query$KidsFetchEpisode$episode$contributors.fromJson(
+      Map<String, dynamic> json) {
+    final l$contributionTypes = json['contributionTypes'];
+    final l$person = json['person'];
+    final l$$__typename = json['__typename'];
+    return Query$KidsFetchEpisode$episode$contributors(
+      contributionTypes: (l$contributionTypes as List<dynamic>)
+          .map((e) => fromJson$Enum$ContributionTypeCode((e as String)))
+          .toList(),
+      person: Query$KidsFetchEpisode$episode$contributors$person.fromJson(
+          (l$person as Map<String, dynamic>)),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final List<Enum$ContributionTypeCode> contributionTypes;
+
+  final Query$KidsFetchEpisode$episode$contributors$person person;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$contributionTypes = contributionTypes;
+    _resultData['contributionTypes'] = l$contributionTypes
+        .map((e) => toJson$Enum$ContributionTypeCode(e))
+        .toList();
+    final l$person = person;
+    _resultData['person'] = l$person.toJson();
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$contributionTypes = contributionTypes;
+    final l$person = person;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      Object.hashAll(l$contributionTypes.map((v) => v)),
+      l$person,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (other is! Query$KidsFetchEpisode$episode$contributors ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$contributionTypes = contributionTypes;
+    final lOther$contributionTypes = other.contributionTypes;
+    if (l$contributionTypes.length != lOther$contributionTypes.length) {
+      return false;
+    }
+    for (int i = 0; i < l$contributionTypes.length; i++) {
+      final l$contributionTypes$entry = l$contributionTypes[i];
+      final lOther$contributionTypes$entry = lOther$contributionTypes[i];
+      if (l$contributionTypes$entry != lOther$contributionTypes$entry) {
+        return false;
+      }
+    }
+    final l$person = person;
+    final lOther$person = other.person;
+    if (l$person != lOther$person) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$KidsFetchEpisode$episode$contributors
+    on Query$KidsFetchEpisode$episode$contributors {
+  CopyWith$Query$KidsFetchEpisode$episode$contributors<
+          Query$KidsFetchEpisode$episode$contributors>
+      get copyWith => CopyWith$Query$KidsFetchEpisode$episode$contributors(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$KidsFetchEpisode$episode$contributors<TRes> {
+  factory CopyWith$Query$KidsFetchEpisode$episode$contributors(
+    Query$KidsFetchEpisode$episode$contributors instance,
+    TRes Function(Query$KidsFetchEpisode$episode$contributors) then,
+  ) = _CopyWithImpl$Query$KidsFetchEpisode$episode$contributors;
+
+  factory CopyWith$Query$KidsFetchEpisode$episode$contributors.stub(TRes res) =
+      _CopyWithStubImpl$Query$KidsFetchEpisode$episode$contributors;
+
+  TRes call({
+    List<Enum$ContributionTypeCode>? contributionTypes,
+    Query$KidsFetchEpisode$episode$contributors$person? person,
+    String? $__typename,
+  });
+  CopyWith$Query$KidsFetchEpisode$episode$contributors$person<TRes> get person;
+}
+
+class _CopyWithImpl$Query$KidsFetchEpisode$episode$contributors<TRes>
+    implements CopyWith$Query$KidsFetchEpisode$episode$contributors<TRes> {
+  _CopyWithImpl$Query$KidsFetchEpisode$episode$contributors(
+    this._instance,
+    this._then,
+  );
+
+  final Query$KidsFetchEpisode$episode$contributors _instance;
+
+  final TRes Function(Query$KidsFetchEpisode$episode$contributors) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? contributionTypes = _undefined,
+    Object? person = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Query$KidsFetchEpisode$episode$contributors(
+        contributionTypes:
+            contributionTypes == _undefined || contributionTypes == null
+                ? _instance.contributionTypes
+                : (contributionTypes as List<Enum$ContributionTypeCode>),
+        person: person == _undefined || person == null
+            ? _instance.person
+            : (person as Query$KidsFetchEpisode$episode$contributors$person),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+
+  CopyWith$Query$KidsFetchEpisode$episode$contributors$person<TRes> get person {
+    final local$person = _instance.person;
+    return CopyWith$Query$KidsFetchEpisode$episode$contributors$person(
+        local$person, (e) => call(person: e));
+  }
+}
+
+class _CopyWithStubImpl$Query$KidsFetchEpisode$episode$contributors<TRes>
+    implements CopyWith$Query$KidsFetchEpisode$episode$contributors<TRes> {
+  _CopyWithStubImpl$Query$KidsFetchEpisode$episode$contributors(this._res);
+
+  TRes _res;
+
+  call({
+    List<Enum$ContributionTypeCode>? contributionTypes,
+    Query$KidsFetchEpisode$episode$contributors$person? person,
+    String? $__typename,
+  }) =>
+      _res;
+
+  CopyWith$Query$KidsFetchEpisode$episode$contributors$person<TRes>
+      get person =>
+          CopyWith$Query$KidsFetchEpisode$episode$contributors$person.stub(
+              _res);
+}
+
+class Query$KidsFetchEpisode$episode$contributors$person
+    implements Fragment$PlayableMediaItem$$Episode$contributors$person {
+  Query$KidsFetchEpisode$episode$contributors$person({
+    required this.name,
+    this.$__typename = 'Person',
+  });
+
+  factory Query$KidsFetchEpisode$episode$contributors$person.fromJson(
+      Map<String, dynamic> json) {
+    final l$name = json['name'];
+    final l$$__typename = json['__typename'];
+    return Query$KidsFetchEpisode$episode$contributors$person(
+      name: (l$name as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String name;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$name = name;
+    _resultData['name'] = l$name;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$name = name;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$name,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (other is! Query$KidsFetchEpisode$episode$contributors$person ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$name = name;
+    final lOther$name = other.name;
+    if (l$name != lOther$name) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$KidsFetchEpisode$episode$contributors$person
+    on Query$KidsFetchEpisode$episode$contributors$person {
+  CopyWith$Query$KidsFetchEpisode$episode$contributors$person<
+          Query$KidsFetchEpisode$episode$contributors$person>
+      get copyWith =>
+          CopyWith$Query$KidsFetchEpisode$episode$contributors$person(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$KidsFetchEpisode$episode$contributors$person<
+    TRes> {
+  factory CopyWith$Query$KidsFetchEpisode$episode$contributors$person(
+    Query$KidsFetchEpisode$episode$contributors$person instance,
+    TRes Function(Query$KidsFetchEpisode$episode$contributors$person) then,
+  ) = _CopyWithImpl$Query$KidsFetchEpisode$episode$contributors$person;
+
+  factory CopyWith$Query$KidsFetchEpisode$episode$contributors$person.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$KidsFetchEpisode$episode$contributors$person;
+
+  TRes call({
+    String? name,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Query$KidsFetchEpisode$episode$contributors$person<TRes>
+    implements
+        CopyWith$Query$KidsFetchEpisode$episode$contributors$person<TRes> {
+  _CopyWithImpl$Query$KidsFetchEpisode$episode$contributors$person(
+    this._instance,
+    this._then,
+  );
+
+  final Query$KidsFetchEpisode$episode$contributors$person _instance;
+
+  final TRes Function(Query$KidsFetchEpisode$episode$contributors$person) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? name = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Query$KidsFetchEpisode$episode$contributors$person(
+        name: name == _undefined || name == null
+            ? _instance.name
+            : (name as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Query$KidsFetchEpisode$episode$contributors$person<TRes>
+    implements
+        CopyWith$Query$KidsFetchEpisode$episode$contributors$person<TRes> {
+  _CopyWithStubImpl$Query$KidsFetchEpisode$episode$contributors$person(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? name,
     String? $__typename,
   }) =>
       _res;

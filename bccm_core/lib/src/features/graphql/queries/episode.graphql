@@ -160,6 +160,12 @@ fragment PlayableMediaItem on MediaItem {
         title
       }
     }
+    contributors {
+      contributionTypes
+      person {
+        name
+      }
+    }
   }
 }
 
