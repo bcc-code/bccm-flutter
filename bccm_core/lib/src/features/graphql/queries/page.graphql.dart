@@ -653,6 +653,7 @@ class Fragment$GridSectionItem$item$$Episode
         Fragment$GridSectionItem$item {
   Fragment$GridSectionItem$item$$Episode({
     required this.contributors,
+    required this.description,
     required this.id,
     required this.title,
     required this.duration,
@@ -668,6 +669,7 @@ class Fragment$GridSectionItem$item$$Episode
   factory Fragment$GridSectionItem$item$$Episode.fromJson(
       Map<String, dynamic> json) {
     final l$contributors = json['contributors'];
+    final l$description = json['description'];
     final l$id = json['id'];
     final l$title = json['title'];
     final l$duration = json['duration'];
@@ -684,6 +686,7 @@ class Fragment$GridSectionItem$item$$Episode
               Fragment$GridSectionItem$item$$Episode$contributors.fromJson(
                   (e as Map<String, dynamic>)))
           .toList(),
+      description: (l$description as String),
       id: (l$id as String),
       title: (l$title as String),
       duration: (l$duration as int),
@@ -701,6 +704,8 @@ class Fragment$GridSectionItem$item$$Episode
   }
 
   final List<Fragment$GridSectionItem$item$$Episode$contributors> contributors;
+
+  final String description;
 
   final String id;
 
@@ -727,6 +732,8 @@ class Fragment$GridSectionItem$item$$Episode
     final l$contributors = contributors;
     _resultData['contributors'] =
         l$contributors.map((e) => e.toJson()).toList();
+    final l$description = description;
+    _resultData['description'] = l$description;
     final l$id = id;
     _resultData['id'] = l$id;
     final l$title = title;
@@ -753,6 +760,7 @@ class Fragment$GridSectionItem$item$$Episode
   @override
   int get hashCode {
     final l$contributors = contributors;
+    final l$description = description;
     final l$id = id;
     final l$title = title;
     final l$duration = duration;
@@ -765,6 +773,7 @@ class Fragment$GridSectionItem$item$$Episode
     final l$$__typename = $__typename;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
+      l$description,
       l$id,
       l$title,
       l$duration,
@@ -798,6 +807,11 @@ class Fragment$GridSectionItem$item$$Episode
       if (l$contributors$entry != lOther$contributors$entry) {
         return false;
       }
+    }
+    final l$description = description;
+    final lOther$description = other.description;
+    if (l$description != lOther$description) {
+      return false;
     }
     final l$id = id;
     final lOther$id = other.id;
@@ -874,6 +888,7 @@ abstract class CopyWith$Fragment$GridSectionItem$item$$Episode<TRes> {
 
   TRes call({
     List<Fragment$GridSectionItem$item$$Episode$contributors>? contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -909,6 +924,7 @@ class _CopyWithImpl$Fragment$GridSectionItem$item$$Episode<TRes>
 
   TRes call({
     Object? contributors = _undefined,
+    Object? description = _undefined,
     Object? id = _undefined,
     Object? title = _undefined,
     Object? duration = _undefined,
@@ -925,6 +941,9 @@ class _CopyWithImpl$Fragment$GridSectionItem$item$$Episode<TRes>
             ? _instance.contributors
             : (contributors
                 as List<Fragment$GridSectionItem$item$$Episode$contributors>),
+        description: description == _undefined || description == null
+            ? _instance.description
+            : (description as String),
         id: id == _undefined || id == null ? _instance.id : (id as String),
         title: title == _undefined || title == null
             ? _instance.title
@@ -981,6 +1000,7 @@ class _CopyWithStubImpl$Fragment$GridSectionItem$item$$Episode<TRes>
 
   call({
     List<Fragment$GridSectionItem$item$$Episode$contributors>? contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -3247,6 +3267,13 @@ const fragmentDefinitionItemSectionItem = FragmentDefinitionNode(
                 ),
               ]),
             ),
+            FieldNode(
+              name: NameNode(value: 'description'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null,
+            ),
             FragmentSpreadNode(
               name: NameNode(value: 'EpisodeThumbnail'),
               directives: [],
@@ -3633,6 +3660,7 @@ class Fragment$ItemSectionItem$item$$Episode
         Fragment$ItemSectionItem$item {
   Fragment$ItemSectionItem$item$$Episode({
     required this.contributors,
+    required this.description,
     required this.id,
     required this.title,
     required this.duration,
@@ -3648,6 +3676,7 @@ class Fragment$ItemSectionItem$item$$Episode
   factory Fragment$ItemSectionItem$item$$Episode.fromJson(
       Map<String, dynamic> json) {
     final l$contributors = json['contributors'];
+    final l$description = json['description'];
     final l$id = json['id'];
     final l$title = json['title'];
     final l$duration = json['duration'];
@@ -3664,6 +3693,7 @@ class Fragment$ItemSectionItem$item$$Episode
               Fragment$ItemSectionItem$item$$Episode$contributors.fromJson(
                   (e as Map<String, dynamic>)))
           .toList(),
+      description: (l$description as String),
       id: (l$id as String),
       title: (l$title as String),
       duration: (l$duration as int),
@@ -3681,6 +3711,8 @@ class Fragment$ItemSectionItem$item$$Episode
   }
 
   final List<Fragment$ItemSectionItem$item$$Episode$contributors> contributors;
+
+  final String description;
 
   final String id;
 
@@ -3707,6 +3739,8 @@ class Fragment$ItemSectionItem$item$$Episode
     final l$contributors = contributors;
     _resultData['contributors'] =
         l$contributors.map((e) => e.toJson()).toList();
+    final l$description = description;
+    _resultData['description'] = l$description;
     final l$id = id;
     _resultData['id'] = l$id;
     final l$title = title;
@@ -3733,6 +3767,7 @@ class Fragment$ItemSectionItem$item$$Episode
   @override
   int get hashCode {
     final l$contributors = contributors;
+    final l$description = description;
     final l$id = id;
     final l$title = title;
     final l$duration = duration;
@@ -3745,6 +3780,7 @@ class Fragment$ItemSectionItem$item$$Episode
     final l$$__typename = $__typename;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
+      l$description,
       l$id,
       l$title,
       l$duration,
@@ -3778,6 +3814,11 @@ class Fragment$ItemSectionItem$item$$Episode
       if (l$contributors$entry != lOther$contributors$entry) {
         return false;
       }
+    }
+    final l$description = description;
+    final lOther$description = other.description;
+    if (l$description != lOther$description) {
+      return false;
     }
     final l$id = id;
     final lOther$id = other.id;
@@ -3854,6 +3895,7 @@ abstract class CopyWith$Fragment$ItemSectionItem$item$$Episode<TRes> {
 
   TRes call({
     List<Fragment$ItemSectionItem$item$$Episode$contributors>? contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -3889,6 +3931,7 @@ class _CopyWithImpl$Fragment$ItemSectionItem$item$$Episode<TRes>
 
   TRes call({
     Object? contributors = _undefined,
+    Object? description = _undefined,
     Object? id = _undefined,
     Object? title = _undefined,
     Object? duration = _undefined,
@@ -3905,6 +3948,9 @@ class _CopyWithImpl$Fragment$ItemSectionItem$item$$Episode<TRes>
             ? _instance.contributors
             : (contributors
                 as List<Fragment$ItemSectionItem$item$$Episode$contributors>),
+        description: description == _undefined || description == null
+            ? _instance.description
+            : (description as String),
         id: id == _undefined || id == null ? _instance.id : (id as String),
         title: title == _undefined || title == null
             ? _instance.title
@@ -3961,6 +4007,7 @@ class _CopyWithStubImpl$Fragment$ItemSectionItem$item$$Episode<TRes>
 
   call({
     List<Fragment$ItemSectionItem$item$$Episode$contributors>? contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -24137,6 +24184,7 @@ class Fragment$Section$$PosterSection$items$items$item$$Episode
         Fragment$Section$$PosterSection$items$items$item {
   Fragment$Section$$PosterSection$items$items$item$$Episode({
     required this.contributors,
+    required this.description,
     required this.id,
     required this.title,
     required this.duration,
@@ -24153,6 +24201,7 @@ class Fragment$Section$$PosterSection$items$items$item$$Episode
   factory Fragment$Section$$PosterSection$items$items$item$$Episode.fromJson(
       Map<String, dynamic> json) {
     final l$contributors = json['contributors'];
+    final l$description = json['description'];
     final l$id = json['id'];
     final l$title = json['title'];
     final l$duration = json['duration'];
@@ -24170,6 +24219,7 @@ class Fragment$Section$$PosterSection$items$items$item$$Episode
               Fragment$Section$$PosterSection$items$items$item$$Episode$contributors
                   .fromJson((e as Map<String, dynamic>)))
           .toList(),
+      description: (l$description as String),
       id: (l$id as String),
       title: (l$title as String),
       duration: (l$duration as int),
@@ -24190,6 +24240,8 @@ class Fragment$Section$$PosterSection$items$items$item$$Episode
   final List<
           Fragment$Section$$PosterSection$items$items$item$$Episode$contributors>
       contributors;
+
+  final String description;
 
   final String id;
 
@@ -24219,6 +24271,8 @@ class Fragment$Section$$PosterSection$items$items$item$$Episode
     final l$contributors = contributors;
     _resultData['contributors'] =
         l$contributors.map((e) => e.toJson()).toList();
+    final l$description = description;
+    _resultData['description'] = l$description;
     final l$id = id;
     _resultData['id'] = l$id;
     final l$title = title;
@@ -24247,6 +24301,7 @@ class Fragment$Section$$PosterSection$items$items$item$$Episode
   @override
   int get hashCode {
     final l$contributors = contributors;
+    final l$description = description;
     final l$id = id;
     final l$title = title;
     final l$duration = duration;
@@ -24260,6 +24315,7 @@ class Fragment$Section$$PosterSection$items$items$item$$Episode
     final l$productionDate = productionDate;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
+      l$description,
       l$id,
       l$title,
       l$duration,
@@ -24294,6 +24350,11 @@ class Fragment$Section$$PosterSection$items$items$item$$Episode
       if (l$contributors$entry != lOther$contributors$entry) {
         return false;
       }
+    }
+    final l$description = description;
+    final lOther$description = other.description;
+    if (l$description != lOther$description) {
+      return false;
     }
     final l$id = id;
     final lOther$id = other.id;
@@ -24380,6 +24441,7 @@ abstract class CopyWith$Fragment$Section$$PosterSection$items$items$item$$Episod
   TRes call({
     List<Fragment$Section$$PosterSection$items$items$item$$Episode$contributors>?
         contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -24421,6 +24483,7 @@ class _CopyWithImpl$Fragment$Section$$PosterSection$items$items$item$$Episode<
 
   TRes call({
     Object? contributors = _undefined,
+    Object? description = _undefined,
     Object? id = _undefined,
     Object? title = _undefined,
     Object? duration = _undefined,
@@ -24438,6 +24501,9 @@ class _CopyWithImpl$Fragment$Section$$PosterSection$items$items$item$$Episode<
             ? _instance.contributors
             : (contributors as List<
                 Fragment$Section$$PosterSection$items$items$item$$Episode$contributors>),
+        description: description == _undefined || description == null
+            ? _instance.description
+            : (description as String),
         id: id == _undefined || id == null ? _instance.id : (id as String),
         title: title == _undefined || title == null
             ? _instance.title
@@ -24504,6 +24570,7 @@ class _CopyWithStubImpl$Fragment$Section$$PosterSection$items$items$item$$Episod
   call({
     List<Fragment$Section$$PosterSection$items$items$item$$Episode$contributors>?
         contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -29501,6 +29568,7 @@ class Fragment$Section$$FeaturedSection$items$items$item$$Episode
         Fragment$Section$$FeaturedSection$items$items$item {
   Fragment$Section$$FeaturedSection$items$items$item$$Episode({
     required this.contributors,
+    required this.description,
     required this.id,
     required this.title,
     required this.duration,
@@ -29516,6 +29584,7 @@ class Fragment$Section$$FeaturedSection$items$items$item$$Episode
   factory Fragment$Section$$FeaturedSection$items$items$item$$Episode.fromJson(
       Map<String, dynamic> json) {
     final l$contributors = json['contributors'];
+    final l$description = json['description'];
     final l$id = json['id'];
     final l$title = json['title'];
     final l$duration = json['duration'];
@@ -29532,6 +29601,7 @@ class Fragment$Section$$FeaturedSection$items$items$item$$Episode
               Fragment$Section$$FeaturedSection$items$items$item$$Episode$contributors
                   .fromJson((e as Map<String, dynamic>)))
           .toList(),
+      description: (l$description as String),
       id: (l$id as String),
       title: (l$title as String),
       duration: (l$duration as int),
@@ -29551,6 +29621,8 @@ class Fragment$Section$$FeaturedSection$items$items$item$$Episode
   final List<
           Fragment$Section$$FeaturedSection$items$items$item$$Episode$contributors>
       contributors;
+
+  final String description;
 
   final String id;
 
@@ -29578,6 +29650,8 @@ class Fragment$Section$$FeaturedSection$items$items$item$$Episode
     final l$contributors = contributors;
     _resultData['contributors'] =
         l$contributors.map((e) => e.toJson()).toList();
+    final l$description = description;
+    _resultData['description'] = l$description;
     final l$id = id;
     _resultData['id'] = l$id;
     final l$title = title;
@@ -29604,6 +29678,7 @@ class Fragment$Section$$FeaturedSection$items$items$item$$Episode
   @override
   int get hashCode {
     final l$contributors = contributors;
+    final l$description = description;
     final l$id = id;
     final l$title = title;
     final l$duration = duration;
@@ -29616,6 +29691,7 @@ class Fragment$Section$$FeaturedSection$items$items$item$$Episode
     final l$$__typename = $__typename;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
+      l$description,
       l$id,
       l$title,
       l$duration,
@@ -29649,6 +29725,11 @@ class Fragment$Section$$FeaturedSection$items$items$item$$Episode
       if (l$contributors$entry != lOther$contributors$entry) {
         return false;
       }
+    }
+    final l$description = description;
+    final lOther$description = other.description;
+    if (l$description != lOther$description) {
+      return false;
     }
     final l$id = id;
     final lOther$id = other.id;
@@ -29730,6 +29811,7 @@ abstract class CopyWith$Fragment$Section$$FeaturedSection$items$items$item$$Epis
   TRes call({
     List<Fragment$Section$$FeaturedSection$items$items$item$$Episode$contributors>?
         contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -29770,6 +29852,7 @@ class _CopyWithImpl$Fragment$Section$$FeaturedSection$items$items$item$$Episode<
 
   TRes call({
     Object? contributors = _undefined,
+    Object? description = _undefined,
     Object? id = _undefined,
     Object? title = _undefined,
     Object? duration = _undefined,
@@ -29786,6 +29869,9 @@ class _CopyWithImpl$Fragment$Section$$FeaturedSection$items$items$item$$Episode<
             ? _instance.contributors
             : (contributors as List<
                 Fragment$Section$$FeaturedSection$items$items$item$$Episode$contributors>),
+        description: description == _undefined || description == null
+            ? _instance.description
+            : (description as String),
         id: id == _undefined || id == null ? _instance.id : (id as String),
         title: title == _undefined || title == null
             ? _instance.title
@@ -29849,6 +29935,7 @@ class _CopyWithStubImpl$Fragment$Section$$FeaturedSection$items$items$item$$Epis
   call({
     List<Fragment$Section$$FeaturedSection$items$items$item$$Episode$contributors>?
         contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -33386,6 +33473,7 @@ class Fragment$Section$$DefaultSection$items$items$item$$Episode
         Fragment$Section$$DefaultSection$items$items$item {
   Fragment$Section$$DefaultSection$items$items$item$$Episode({
     required this.contributors,
+    required this.description,
     required this.id,
     required this.title,
     required this.duration,
@@ -33402,6 +33490,7 @@ class Fragment$Section$$DefaultSection$items$items$item$$Episode
   factory Fragment$Section$$DefaultSection$items$items$item$$Episode.fromJson(
       Map<String, dynamic> json) {
     final l$contributors = json['contributors'];
+    final l$description = json['description'];
     final l$id = json['id'];
     final l$title = json['title'];
     final l$duration = json['duration'];
@@ -33419,6 +33508,7 @@ class Fragment$Section$$DefaultSection$items$items$item$$Episode
               Fragment$Section$$DefaultSection$items$items$item$$Episode$contributors
                   .fromJson((e as Map<String, dynamic>)))
           .toList(),
+      description: (l$description as String),
       id: (l$id as String),
       title: (l$title as String),
       duration: (l$duration as int),
@@ -33439,6 +33529,8 @@ class Fragment$Section$$DefaultSection$items$items$item$$Episode
   final List<
           Fragment$Section$$DefaultSection$items$items$item$$Episode$contributors>
       contributors;
+
+  final String description;
 
   final String id;
 
@@ -33468,6 +33560,8 @@ class Fragment$Section$$DefaultSection$items$items$item$$Episode
     final l$contributors = contributors;
     _resultData['contributors'] =
         l$contributors.map((e) => e.toJson()).toList();
+    final l$description = description;
+    _resultData['description'] = l$description;
     final l$id = id;
     _resultData['id'] = l$id;
     final l$title = title;
@@ -33496,6 +33590,7 @@ class Fragment$Section$$DefaultSection$items$items$item$$Episode
   @override
   int get hashCode {
     final l$contributors = contributors;
+    final l$description = description;
     final l$id = id;
     final l$title = title;
     final l$duration = duration;
@@ -33509,6 +33604,7 @@ class Fragment$Section$$DefaultSection$items$items$item$$Episode
     final l$productionDate = productionDate;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
+      l$description,
       l$id,
       l$title,
       l$duration,
@@ -33543,6 +33639,11 @@ class Fragment$Section$$DefaultSection$items$items$item$$Episode
       if (l$contributors$entry != lOther$contributors$entry) {
         return false;
       }
+    }
+    final l$description = description;
+    final lOther$description = other.description;
+    if (l$description != lOther$description) {
+      return false;
     }
     final l$id = id;
     final lOther$id = other.id;
@@ -33629,6 +33730,7 @@ abstract class CopyWith$Fragment$Section$$DefaultSection$items$items$item$$Episo
   TRes call({
     List<Fragment$Section$$DefaultSection$items$items$item$$Episode$contributors>?
         contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -33670,6 +33772,7 @@ class _CopyWithImpl$Fragment$Section$$DefaultSection$items$items$item$$Episode<
 
   TRes call({
     Object? contributors = _undefined,
+    Object? description = _undefined,
     Object? id = _undefined,
     Object? title = _undefined,
     Object? duration = _undefined,
@@ -33687,6 +33790,9 @@ class _CopyWithImpl$Fragment$Section$$DefaultSection$items$items$item$$Episode<
             ? _instance.contributors
             : (contributors as List<
                 Fragment$Section$$DefaultSection$items$items$item$$Episode$contributors>),
+        description: description == _undefined || description == null
+            ? _instance.description
+            : (description as String),
         id: id == _undefined || id == null ? _instance.id : (id as String),
         title: title == _undefined || title == null
             ? _instance.title
@@ -33753,6 +33859,7 @@ class _CopyWithStubImpl$Fragment$Section$$DefaultSection$items$items$item$$Episo
   call({
     List<Fragment$Section$$DefaultSection$items$items$item$$Episode$contributors>?
         contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -37279,6 +37386,7 @@ class Fragment$Section$$CardSection$items$items$item$$Episode
         Fragment$Section$$CardSection$items$items$item {
   Fragment$Section$$CardSection$items$items$item$$Episode({
     required this.contributors,
+    required this.description,
     required this.id,
     required this.title,
     required this.duration,
@@ -37294,6 +37402,7 @@ class Fragment$Section$$CardSection$items$items$item$$Episode
   factory Fragment$Section$$CardSection$items$items$item$$Episode.fromJson(
       Map<String, dynamic> json) {
     final l$contributors = json['contributors'];
+    final l$description = json['description'];
     final l$id = json['id'];
     final l$title = json['title'];
     final l$duration = json['duration'];
@@ -37310,6 +37419,7 @@ class Fragment$Section$$CardSection$items$items$item$$Episode
               Fragment$Section$$CardSection$items$items$item$$Episode$contributors
                   .fromJson((e as Map<String, dynamic>)))
           .toList(),
+      description: (l$description as String),
       id: (l$id as String),
       title: (l$title as String),
       duration: (l$duration as int),
@@ -37329,6 +37439,8 @@ class Fragment$Section$$CardSection$items$items$item$$Episode
   final List<
           Fragment$Section$$CardSection$items$items$item$$Episode$contributors>
       contributors;
+
+  final String description;
 
   final String id;
 
@@ -37355,6 +37467,8 @@ class Fragment$Section$$CardSection$items$items$item$$Episode
     final l$contributors = contributors;
     _resultData['contributors'] =
         l$contributors.map((e) => e.toJson()).toList();
+    final l$description = description;
+    _resultData['description'] = l$description;
     final l$id = id;
     _resultData['id'] = l$id;
     final l$title = title;
@@ -37381,6 +37495,7 @@ class Fragment$Section$$CardSection$items$items$item$$Episode
   @override
   int get hashCode {
     final l$contributors = contributors;
+    final l$description = description;
     final l$id = id;
     final l$title = title;
     final l$duration = duration;
@@ -37393,6 +37508,7 @@ class Fragment$Section$$CardSection$items$items$item$$Episode
     final l$$__typename = $__typename;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
+      l$description,
       l$id,
       l$title,
       l$duration,
@@ -37426,6 +37542,11 @@ class Fragment$Section$$CardSection$items$items$item$$Episode
       if (l$contributors$entry != lOther$contributors$entry) {
         return false;
       }
+    }
+    final l$description = description;
+    final lOther$description = other.description;
+    if (l$description != lOther$description) {
+      return false;
     }
     final l$id = id;
     final lOther$id = other.id;
@@ -37506,6 +37627,7 @@ abstract class CopyWith$Fragment$Section$$CardSection$items$items$item$$Episode<
   TRes call({
     List<Fragment$Section$$CardSection$items$items$item$$Episode$contributors>?
         contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -37545,6 +37667,7 @@ class _CopyWithImpl$Fragment$Section$$CardSection$items$items$item$$Episode<
 
   TRes call({
     Object? contributors = _undefined,
+    Object? description = _undefined,
     Object? id = _undefined,
     Object? title = _undefined,
     Object? duration = _undefined,
@@ -37561,6 +37684,9 @@ class _CopyWithImpl$Fragment$Section$$CardSection$items$items$item$$Episode<
             ? _instance.contributors
             : (contributors as List<
                 Fragment$Section$$CardSection$items$items$item$$Episode$contributors>),
+        description: description == _undefined || description == null
+            ? _instance.description
+            : (description as String),
         id: id == _undefined || id == null ? _instance.id : (id as String),
         title: title == _undefined || title == null
             ? _instance.title
@@ -37623,6 +37749,7 @@ class _CopyWithStubImpl$Fragment$Section$$CardSection$items$items$item$$Episode<
   call({
     List<Fragment$Section$$CardSection$items$items$item$$Episode$contributors>?
         contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -41268,6 +41395,7 @@ class Fragment$Section$$ListSection$items$items$item$$Episode
         Fragment$Section$$ListSection$items$items$item {
   Fragment$Section$$ListSection$items$items$item$$Episode({
     required this.contributors,
+    required this.description,
     required this.id,
     required this.title,
     required this.duration,
@@ -41284,6 +41412,7 @@ class Fragment$Section$$ListSection$items$items$item$$Episode
   factory Fragment$Section$$ListSection$items$items$item$$Episode.fromJson(
       Map<String, dynamic> json) {
     final l$contributors = json['contributors'];
+    final l$description = json['description'];
     final l$id = json['id'];
     final l$title = json['title'];
     final l$duration = json['duration'];
@@ -41301,6 +41430,7 @@ class Fragment$Section$$ListSection$items$items$item$$Episode
               Fragment$Section$$ListSection$items$items$item$$Episode$contributors
                   .fromJson((e as Map<String, dynamic>)))
           .toList(),
+      description: (l$description as String),
       id: (l$id as String),
       title: (l$title as String),
       duration: (l$duration as int),
@@ -41321,6 +41451,8 @@ class Fragment$Section$$ListSection$items$items$item$$Episode
   final List<
           Fragment$Section$$ListSection$items$items$item$$Episode$contributors>
       contributors;
+
+  final String description;
 
   final String id;
 
@@ -41349,6 +41481,8 @@ class Fragment$Section$$ListSection$items$items$item$$Episode
     final l$contributors = contributors;
     _resultData['contributors'] =
         l$contributors.map((e) => e.toJson()).toList();
+    final l$description = description;
+    _resultData['description'] = l$description;
     final l$id = id;
     _resultData['id'] = l$id;
     final l$title = title;
@@ -41377,6 +41511,7 @@ class Fragment$Section$$ListSection$items$items$item$$Episode
   @override
   int get hashCode {
     final l$contributors = contributors;
+    final l$description = description;
     final l$id = id;
     final l$title = title;
     final l$duration = duration;
@@ -41390,6 +41525,7 @@ class Fragment$Section$$ListSection$items$items$item$$Episode
     final l$ageRating = ageRating;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
+      l$description,
       l$id,
       l$title,
       l$duration,
@@ -41424,6 +41560,11 @@ class Fragment$Section$$ListSection$items$items$item$$Episode
       if (l$contributors$entry != lOther$contributors$entry) {
         return false;
       }
+    }
+    final l$description = description;
+    final lOther$description = other.description;
+    if (l$description != lOther$description) {
+      return false;
     }
     final l$id = id;
     final lOther$id = other.id;
@@ -41509,6 +41650,7 @@ abstract class CopyWith$Fragment$Section$$ListSection$items$items$item$$Episode<
   TRes call({
     List<Fragment$Section$$ListSection$items$items$item$$Episode$contributors>?
         contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -41549,6 +41691,7 @@ class _CopyWithImpl$Fragment$Section$$ListSection$items$items$item$$Episode<
 
   TRes call({
     Object? contributors = _undefined,
+    Object? description = _undefined,
     Object? id = _undefined,
     Object? title = _undefined,
     Object? duration = _undefined,
@@ -41566,6 +41709,9 @@ class _CopyWithImpl$Fragment$Section$$ListSection$items$items$item$$Episode<
             ? _instance.contributors
             : (contributors as List<
                 Fragment$Section$$ListSection$items$items$item$$Episode$contributors>),
+        description: description == _undefined || description == null
+            ? _instance.description
+            : (description as String),
         id: id == _undefined || id == null ? _instance.id : (id as String),
         title: title == _undefined || title == null
             ? _instance.title
@@ -41631,6 +41777,7 @@ class _CopyWithStubImpl$Fragment$Section$$ListSection$items$items$item$$Episode<
   call({
     List<Fragment$Section$$ListSection$items$items$item$$Episode$contributors>?
         contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -45154,6 +45301,7 @@ class Fragment$Section$$CardListSection$items$items$item$$Episode
         Fragment$Section$$CardListSection$items$items$item {
   Fragment$Section$$CardListSection$items$items$item$$Episode({
     required this.contributors,
+    required this.description,
     required this.id,
     required this.title,
     required this.duration,
@@ -45169,6 +45317,7 @@ class Fragment$Section$$CardListSection$items$items$item$$Episode
   factory Fragment$Section$$CardListSection$items$items$item$$Episode.fromJson(
       Map<String, dynamic> json) {
     final l$contributors = json['contributors'];
+    final l$description = json['description'];
     final l$id = json['id'];
     final l$title = json['title'];
     final l$duration = json['duration'];
@@ -45185,6 +45334,7 @@ class Fragment$Section$$CardListSection$items$items$item$$Episode
               Fragment$Section$$CardListSection$items$items$item$$Episode$contributors
                   .fromJson((e as Map<String, dynamic>)))
           .toList(),
+      description: (l$description as String),
       id: (l$id as String),
       title: (l$title as String),
       duration: (l$duration as int),
@@ -45204,6 +45354,8 @@ class Fragment$Section$$CardListSection$items$items$item$$Episode
   final List<
           Fragment$Section$$CardListSection$items$items$item$$Episode$contributors>
       contributors;
+
+  final String description;
 
   final String id;
 
@@ -45231,6 +45383,8 @@ class Fragment$Section$$CardListSection$items$items$item$$Episode
     final l$contributors = contributors;
     _resultData['contributors'] =
         l$contributors.map((e) => e.toJson()).toList();
+    final l$description = description;
+    _resultData['description'] = l$description;
     final l$id = id;
     _resultData['id'] = l$id;
     final l$title = title;
@@ -45257,6 +45411,7 @@ class Fragment$Section$$CardListSection$items$items$item$$Episode
   @override
   int get hashCode {
     final l$contributors = contributors;
+    final l$description = description;
     final l$id = id;
     final l$title = title;
     final l$duration = duration;
@@ -45269,6 +45424,7 @@ class Fragment$Section$$CardListSection$items$items$item$$Episode
     final l$$__typename = $__typename;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
+      l$description,
       l$id,
       l$title,
       l$duration,
@@ -45302,6 +45458,11 @@ class Fragment$Section$$CardListSection$items$items$item$$Episode
       if (l$contributors$entry != lOther$contributors$entry) {
         return false;
       }
+    }
+    final l$description = description;
+    final lOther$description = other.description;
+    if (l$description != lOther$description) {
+      return false;
     }
     final l$id = id;
     final lOther$id = other.id;
@@ -45383,6 +45544,7 @@ abstract class CopyWith$Fragment$Section$$CardListSection$items$items$item$$Epis
   TRes call({
     List<Fragment$Section$$CardListSection$items$items$item$$Episode$contributors>?
         contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -45423,6 +45585,7 @@ class _CopyWithImpl$Fragment$Section$$CardListSection$items$items$item$$Episode<
 
   TRes call({
     Object? contributors = _undefined,
+    Object? description = _undefined,
     Object? id = _undefined,
     Object? title = _undefined,
     Object? duration = _undefined,
@@ -45439,6 +45602,9 @@ class _CopyWithImpl$Fragment$Section$$CardListSection$items$items$item$$Episode<
             ? _instance.contributors
             : (contributors as List<
                 Fragment$Section$$CardListSection$items$items$item$$Episode$contributors>),
+        description: description == _undefined || description == null
+            ? _instance.description
+            : (description as String),
         id: id == _undefined || id == null ? _instance.id : (id as String),
         title: title == _undefined || title == null
             ? _instance.title
@@ -45502,6 +45668,7 @@ class _CopyWithStubImpl$Fragment$Section$$CardListSection$items$items$item$$Epis
   call({
     List<Fragment$Section$$CardListSection$items$items$item$$Episode$contributors>?
         contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -49250,6 +49417,7 @@ class Fragment$Section$$DefaultGridSection$items$items$item$$Episode
         Fragment$Section$$DefaultGridSection$items$items$item {
   Fragment$Section$$DefaultGridSection$items$items$item$$Episode({
     required this.contributors,
+    required this.description,
     required this.id,
     required this.title,
     required this.duration,
@@ -49265,6 +49433,7 @@ class Fragment$Section$$DefaultGridSection$items$items$item$$Episode
   factory Fragment$Section$$DefaultGridSection$items$items$item$$Episode.fromJson(
       Map<String, dynamic> json) {
     final l$contributors = json['contributors'];
+    final l$description = json['description'];
     final l$id = json['id'];
     final l$title = json['title'];
     final l$duration = json['duration'];
@@ -49281,6 +49450,7 @@ class Fragment$Section$$DefaultGridSection$items$items$item$$Episode
               Fragment$Section$$DefaultGridSection$items$items$item$$Episode$contributors
                   .fromJson((e as Map<String, dynamic>)))
           .toList(),
+      description: (l$description as String),
       id: (l$id as String),
       title: (l$title as String),
       duration: (l$duration as int),
@@ -49300,6 +49470,8 @@ class Fragment$Section$$DefaultGridSection$items$items$item$$Episode
   final List<
           Fragment$Section$$DefaultGridSection$items$items$item$$Episode$contributors>
       contributors;
+
+  final String description;
 
   final String id;
 
@@ -49327,6 +49499,8 @@ class Fragment$Section$$DefaultGridSection$items$items$item$$Episode
     final l$contributors = contributors;
     _resultData['contributors'] =
         l$contributors.map((e) => e.toJson()).toList();
+    final l$description = description;
+    _resultData['description'] = l$description;
     final l$id = id;
     _resultData['id'] = l$id;
     final l$title = title;
@@ -49353,6 +49527,7 @@ class Fragment$Section$$DefaultGridSection$items$items$item$$Episode
   @override
   int get hashCode {
     final l$contributors = contributors;
+    final l$description = description;
     final l$id = id;
     final l$title = title;
     final l$duration = duration;
@@ -49365,6 +49540,7 @@ class Fragment$Section$$DefaultGridSection$items$items$item$$Episode
     final l$$__typename = $__typename;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
+      l$description,
       l$id,
       l$title,
       l$duration,
@@ -49399,6 +49575,11 @@ class Fragment$Section$$DefaultGridSection$items$items$item$$Episode
       if (l$contributors$entry != lOther$contributors$entry) {
         return false;
       }
+    }
+    final l$description = description;
+    final lOther$description = other.description;
+    if (l$description != lOther$description) {
+      return false;
     }
     final l$id = id;
     final lOther$id = other.id;
@@ -49481,6 +49662,7 @@ abstract class CopyWith$Fragment$Section$$DefaultGridSection$items$items$item$$E
   TRes call({
     List<Fragment$Section$$DefaultGridSection$items$items$item$$Episode$contributors>?
         contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -49523,6 +49705,7 @@ class _CopyWithImpl$Fragment$Section$$DefaultGridSection$items$items$item$$Episo
 
   TRes call({
     Object? contributors = _undefined,
+    Object? description = _undefined,
     Object? id = _undefined,
     Object? title = _undefined,
     Object? duration = _undefined,
@@ -49539,6 +49722,9 @@ class _CopyWithImpl$Fragment$Section$$DefaultGridSection$items$items$item$$Episo
             ? _instance.contributors
             : (contributors as List<
                 Fragment$Section$$DefaultGridSection$items$items$item$$Episode$contributors>),
+        description: description == _undefined || description == null
+            ? _instance.description
+            : (description as String),
         id: id == _undefined || id == null ? _instance.id : (id as String),
         title: title == _undefined || title == null
             ? _instance.title
@@ -49602,6 +49788,7 @@ class _CopyWithStubImpl$Fragment$Section$$DefaultGridSection$items$items$item$$E
   call({
     List<Fragment$Section$$DefaultGridSection$items$items$item$$Episode$contributors>?
         contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -53187,6 +53374,7 @@ class Fragment$Section$$PosterGridSection$items$items$item$$Episode
         Fragment$Section$$PosterGridSection$items$items$item {
   Fragment$Section$$PosterGridSection$items$items$item$$Episode({
     required this.contributors,
+    required this.description,
     required this.id,
     required this.title,
     required this.duration,
@@ -53202,6 +53390,7 @@ class Fragment$Section$$PosterGridSection$items$items$item$$Episode
   factory Fragment$Section$$PosterGridSection$items$items$item$$Episode.fromJson(
       Map<String, dynamic> json) {
     final l$contributors = json['contributors'];
+    final l$description = json['description'];
     final l$id = json['id'];
     final l$title = json['title'];
     final l$duration = json['duration'];
@@ -53218,6 +53407,7 @@ class Fragment$Section$$PosterGridSection$items$items$item$$Episode
               Fragment$Section$$PosterGridSection$items$items$item$$Episode$contributors
                   .fromJson((e as Map<String, dynamic>)))
           .toList(),
+      description: (l$description as String),
       id: (l$id as String),
       title: (l$title as String),
       duration: (l$duration as int),
@@ -53237,6 +53427,8 @@ class Fragment$Section$$PosterGridSection$items$items$item$$Episode
   final List<
           Fragment$Section$$PosterGridSection$items$items$item$$Episode$contributors>
       contributors;
+
+  final String description;
 
   final String id;
 
@@ -53264,6 +53456,8 @@ class Fragment$Section$$PosterGridSection$items$items$item$$Episode
     final l$contributors = contributors;
     _resultData['contributors'] =
         l$contributors.map((e) => e.toJson()).toList();
+    final l$description = description;
+    _resultData['description'] = l$description;
     final l$id = id;
     _resultData['id'] = l$id;
     final l$title = title;
@@ -53290,6 +53484,7 @@ class Fragment$Section$$PosterGridSection$items$items$item$$Episode
   @override
   int get hashCode {
     final l$contributors = contributors;
+    final l$description = description;
     final l$id = id;
     final l$title = title;
     final l$duration = duration;
@@ -53302,6 +53497,7 @@ class Fragment$Section$$PosterGridSection$items$items$item$$Episode
     final l$$__typename = $__typename;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
+      l$description,
       l$id,
       l$title,
       l$duration,
@@ -53336,6 +53532,11 @@ class Fragment$Section$$PosterGridSection$items$items$item$$Episode
       if (l$contributors$entry != lOther$contributors$entry) {
         return false;
       }
+    }
+    final l$description = description;
+    final lOther$description = other.description;
+    if (l$description != lOther$description) {
+      return false;
     }
     final l$id = id;
     final lOther$id = other.id;
@@ -53417,6 +53618,7 @@ abstract class CopyWith$Fragment$Section$$PosterGridSection$items$items$item$$Ep
   TRes call({
     List<Fragment$Section$$PosterGridSection$items$items$item$$Episode$contributors>?
         contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -53458,6 +53660,7 @@ class _CopyWithImpl$Fragment$Section$$PosterGridSection$items$items$item$$Episod
 
   TRes call({
     Object? contributors = _undefined,
+    Object? description = _undefined,
     Object? id = _undefined,
     Object? title = _undefined,
     Object? duration = _undefined,
@@ -53474,6 +53677,9 @@ class _CopyWithImpl$Fragment$Section$$PosterGridSection$items$items$item$$Episod
             ? _instance.contributors
             : (contributors as List<
                 Fragment$Section$$PosterGridSection$items$items$item$$Episode$contributors>),
+        description: description == _undefined || description == null
+            ? _instance.description
+            : (description as String),
         id: id == _undefined || id == null ? _instance.id : (id as String),
         title: title == _undefined || title == null
             ? _instance.title
@@ -53537,6 +53743,7 @@ class _CopyWithStubImpl$Fragment$Section$$PosterGridSection$items$items$item$$Ep
   call({
     List<Fragment$Section$$PosterGridSection$items$items$item$$Episode$contributors>?
         contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -57106,6 +57313,7 @@ class Fragment$Section$$IconGridSection$items$items$item$$Episode
         Fragment$Section$$IconGridSection$items$items$item {
   Fragment$Section$$IconGridSection$items$items$item$$Episode({
     required this.contributors,
+    required this.description,
     required this.id,
     required this.title,
     required this.duration,
@@ -57121,6 +57329,7 @@ class Fragment$Section$$IconGridSection$items$items$item$$Episode
   factory Fragment$Section$$IconGridSection$items$items$item$$Episode.fromJson(
       Map<String, dynamic> json) {
     final l$contributors = json['contributors'];
+    final l$description = json['description'];
     final l$id = json['id'];
     final l$title = json['title'];
     final l$duration = json['duration'];
@@ -57137,6 +57346,7 @@ class Fragment$Section$$IconGridSection$items$items$item$$Episode
               Fragment$Section$$IconGridSection$items$items$item$$Episode$contributors
                   .fromJson((e as Map<String, dynamic>)))
           .toList(),
+      description: (l$description as String),
       id: (l$id as String),
       title: (l$title as String),
       duration: (l$duration as int),
@@ -57156,6 +57366,8 @@ class Fragment$Section$$IconGridSection$items$items$item$$Episode
   final List<
           Fragment$Section$$IconGridSection$items$items$item$$Episode$contributors>
       contributors;
+
+  final String description;
 
   final String id;
 
@@ -57183,6 +57395,8 @@ class Fragment$Section$$IconGridSection$items$items$item$$Episode
     final l$contributors = contributors;
     _resultData['contributors'] =
         l$contributors.map((e) => e.toJson()).toList();
+    final l$description = description;
+    _resultData['description'] = l$description;
     final l$id = id;
     _resultData['id'] = l$id;
     final l$title = title;
@@ -57209,6 +57423,7 @@ class Fragment$Section$$IconGridSection$items$items$item$$Episode
   @override
   int get hashCode {
     final l$contributors = contributors;
+    final l$description = description;
     final l$id = id;
     final l$title = title;
     final l$duration = duration;
@@ -57221,6 +57436,7 @@ class Fragment$Section$$IconGridSection$items$items$item$$Episode
     final l$$__typename = $__typename;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
+      l$description,
       l$id,
       l$title,
       l$duration,
@@ -57254,6 +57470,11 @@ class Fragment$Section$$IconGridSection$items$items$item$$Episode
       if (l$contributors$entry != lOther$contributors$entry) {
         return false;
       }
+    }
+    final l$description = description;
+    final lOther$description = other.description;
+    if (l$description != lOther$description) {
+      return false;
     }
     final l$id = id;
     final lOther$id = other.id;
@@ -57335,6 +57556,7 @@ abstract class CopyWith$Fragment$Section$$IconGridSection$items$items$item$$Epis
   TRes call({
     List<Fragment$Section$$IconGridSection$items$items$item$$Episode$contributors>?
         contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -57375,6 +57597,7 @@ class _CopyWithImpl$Fragment$Section$$IconGridSection$items$items$item$$Episode<
 
   TRes call({
     Object? contributors = _undefined,
+    Object? description = _undefined,
     Object? id = _undefined,
     Object? title = _undefined,
     Object? duration = _undefined,
@@ -57391,6 +57614,9 @@ class _CopyWithImpl$Fragment$Section$$IconGridSection$items$items$item$$Episode<
             ? _instance.contributors
             : (contributors as List<
                 Fragment$Section$$IconGridSection$items$items$item$$Episode$contributors>),
+        description: description == _undefined || description == null
+            ? _instance.description
+            : (description as String),
         id: id == _undefined || id == null ? _instance.id : (id as String),
         title: title == _undefined || title == null
             ? _instance.title
@@ -57454,6 +57680,7 @@ class _CopyWithStubImpl$Fragment$Section$$IconGridSection$items$items$item$$Epis
   call({
     List<Fragment$Section$$IconGridSection$items$items$item$$Episode$contributors>?
         contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -64595,6 +64822,7 @@ class Fragment$CardItem$item$$Episode
         Fragment$CardItem$item {
   Fragment$CardItem$item$$Episode({
     required this.contributors,
+    required this.description,
     required this.id,
     required this.title,
     required this.duration,
@@ -64609,6 +64837,7 @@ class Fragment$CardItem$item$$Episode
 
   factory Fragment$CardItem$item$$Episode.fromJson(Map<String, dynamic> json) {
     final l$contributors = json['contributors'];
+    final l$description = json['description'];
     final l$id = json['id'];
     final l$title = json['title'];
     final l$duration = json['duration'];
@@ -64624,6 +64853,7 @@ class Fragment$CardItem$item$$Episode
           .map((e) => Fragment$CardItem$item$$Episode$contributors.fromJson(
               (e as Map<String, dynamic>)))
           .toList(),
+      description: (l$description as String),
       id: (l$id as String),
       title: (l$title as String),
       duration: (l$duration as int),
@@ -64641,6 +64871,8 @@ class Fragment$CardItem$item$$Episode
   }
 
   final List<Fragment$CardItem$item$$Episode$contributors> contributors;
+
+  final String description;
 
   final String id;
 
@@ -64667,6 +64899,8 @@ class Fragment$CardItem$item$$Episode
     final l$contributors = contributors;
     _resultData['contributors'] =
         l$contributors.map((e) => e.toJson()).toList();
+    final l$description = description;
+    _resultData['description'] = l$description;
     final l$id = id;
     _resultData['id'] = l$id;
     final l$title = title;
@@ -64693,6 +64927,7 @@ class Fragment$CardItem$item$$Episode
   @override
   int get hashCode {
     final l$contributors = contributors;
+    final l$description = description;
     final l$id = id;
     final l$title = title;
     final l$duration = duration;
@@ -64705,6 +64940,7 @@ class Fragment$CardItem$item$$Episode
     final l$$__typename = $__typename;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
+      l$description,
       l$id,
       l$title,
       l$duration,
@@ -64738,6 +64974,11 @@ class Fragment$CardItem$item$$Episode
       if (l$contributors$entry != lOther$contributors$entry) {
         return false;
       }
+    }
+    final l$description = description;
+    final lOther$description = other.description;
+    if (l$description != lOther$description) {
+      return false;
     }
     final l$id = id;
     final lOther$id = other.id;
@@ -64813,6 +65054,7 @@ abstract class CopyWith$Fragment$CardItem$item$$Episode<TRes> {
 
   TRes call({
     List<Fragment$CardItem$item$$Episode$contributors>? contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -64848,6 +65090,7 @@ class _CopyWithImpl$Fragment$CardItem$item$$Episode<TRes>
 
   TRes call({
     Object? contributors = _undefined,
+    Object? description = _undefined,
     Object? id = _undefined,
     Object? title = _undefined,
     Object? duration = _undefined,
@@ -64864,6 +65107,9 @@ class _CopyWithImpl$Fragment$CardItem$item$$Episode<TRes>
             ? _instance.contributors
             : (contributors
                 as List<Fragment$CardItem$item$$Episode$contributors>),
+        description: description == _undefined || description == null
+            ? _instance.description
+            : (description as String),
         id: id == _undefined || id == null ? _instance.id : (id as String),
         title: title == _undefined || title == null
             ? _instance.title
@@ -64919,6 +65165,7 @@ class _CopyWithStubImpl$Fragment$CardItem$item$$Episode<TRes>
 
   call({
     List<Fragment$CardItem$item$$Episode$contributors>? contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,

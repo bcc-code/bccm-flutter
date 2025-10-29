@@ -38,6 +38,7 @@ fragment ItemSectionItem on SectionItem {
         }
         contributionTypes
       }
+      description
       ...EpisodeThumbnail
     }
     ... on Show {

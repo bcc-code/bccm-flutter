@@ -2695,6 +2695,7 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item
         Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item {
   Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Episode({
     required this.contributors,
+    required this.description,
     required this.id,
     required this.title,
     required this.duration,
@@ -2711,6 +2712,7 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item
   factory Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Episode.fromJson(
       Map<String, dynamic> json) {
     final l$contributors = json['contributors'];
+    final l$description = json['description'];
     final l$id = json['id'];
     final l$title = json['title'];
     final l$duration = json['duration'];
@@ -2728,6 +2730,7 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item
               Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Episode$contributors
                   .fromJson((e as Map<String, dynamic>)))
           .toList(),
+      description: (l$description as String),
       id: (l$id as String),
       title: (l$title as String),
       duration: (l$duration as int),
@@ -2748,6 +2751,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item
   final List<
           Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Episode$contributors>
       contributors;
+
+  final String description;
 
   final String id;
 
@@ -2777,6 +2782,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item
     final l$contributors = contributors;
     _resultData['contributors'] =
         l$contributors.map((e) => e.toJson()).toList();
+    final l$description = description;
+    _resultData['description'] = l$description;
     final l$id = id;
     _resultData['id'] = l$id;
     final l$title = title;
@@ -2805,6 +2812,7 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item
   @override
   int get hashCode {
     final l$contributors = contributors;
+    final l$description = description;
     final l$id = id;
     final l$title = title;
     final l$duration = duration;
@@ -2818,6 +2826,7 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item
     final l$productionDate = productionDate;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
+      l$description,
       l$id,
       l$title,
       l$duration,
@@ -2853,6 +2862,11 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item
       if (l$contributors$entry != lOther$contributors$entry) {
         return false;
       }
+    }
+    final l$description = description;
+    final lOther$description = other.description;
+    if (l$description != lOther$description) {
+      return false;
     }
     final l$id = id;
     final lOther$id = other.id;
@@ -2941,6 +2955,7 @@ abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterSectio
   TRes call({
     List<Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Episode$contributors>?
         contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -2985,6 +3000,7 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$PosterSection$it
 
   TRes call({
     Object? contributors = _undefined,
+    Object? description = _undefined,
     Object? id = _undefined,
     Object? title = _undefined,
     Object? duration = _undefined,
@@ -3003,6 +3019,9 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$PosterSection$it
             ? _instance.contributors
             : (contributors as List<
                 Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Episode$contributors>),
+        description: description == _undefined || description == null
+            ? _instance.description
+            : (description as String),
         id: id == _undefined || id == null ? _instance.id : (id as String),
         title: title == _undefined || title == null
             ? _instance.title
@@ -3069,6 +3088,7 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$PosterSectio
   call({
     List<Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Episode$contributors>?
         contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -8343,6 +8363,7 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$it
         Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item {
   Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Episode({
     required this.contributors,
+    required this.description,
     required this.id,
     required this.title,
     required this.duration,
@@ -8358,6 +8379,7 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$it
   factory Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Episode.fromJson(
       Map<String, dynamic> json) {
     final l$contributors = json['contributors'];
+    final l$description = json['description'];
     final l$id = json['id'];
     final l$title = json['title'];
     final l$duration = json['duration'];
@@ -8374,6 +8396,7 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$it
               Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Episode$contributors
                   .fromJson((e as Map<String, dynamic>)))
           .toList(),
+      description: (l$description as String),
       id: (l$id as String),
       title: (l$title as String),
       duration: (l$duration as int),
@@ -8393,6 +8416,8 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$it
   final List<
           Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Episode$contributors>
       contributors;
+
+  final String description;
 
   final String id;
 
@@ -8420,6 +8445,8 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$it
     final l$contributors = contributors;
     _resultData['contributors'] =
         l$contributors.map((e) => e.toJson()).toList();
+    final l$description = description;
+    _resultData['description'] = l$description;
     final l$id = id;
     _resultData['id'] = l$id;
     final l$title = title;
@@ -8446,6 +8473,7 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$it
   @override
   int get hashCode {
     final l$contributors = contributors;
+    final l$description = description;
     final l$id = id;
     final l$title = title;
     final l$duration = duration;
@@ -8458,6 +8486,7 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$it
     final l$$__typename = $__typename;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
+      l$description,
       l$id,
       l$title,
       l$duration,
@@ -8492,6 +8521,11 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$it
       if (l$contributors$entry != lOther$contributors$entry) {
         return false;
       }
+    }
+    final l$description = description;
+    final lOther$description = other.description;
+    if (l$description != lOther$description) {
+      return false;
     }
     final l$id = id;
     final lOther$id = other.id;
@@ -8575,6 +8609,7 @@ abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$FeaturedSect
   TRes call({
     List<Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Episode$contributors>?
         contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -8618,6 +8653,7 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$
 
   TRes call({
     Object? contributors = _undefined,
+    Object? description = _undefined,
     Object? id = _undefined,
     Object? title = _undefined,
     Object? duration = _undefined,
@@ -8635,6 +8671,9 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$
             ? _instance.contributors
             : (contributors as List<
                 Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Episode$contributors>),
+        description: description == _undefined || description == null
+            ? _instance.description
+            : (description as String),
         id: id == _undefined || id == null ? _instance.id : (id as String),
         title: title == _undefined || title == null
             ? _instance.title
@@ -8698,6 +8737,7 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$FeaturedSect
   call({
     List<Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Episode$contributors>?
         contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -12463,6 +12503,7 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$ite
         Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item {
   Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Episode({
     required this.contributors,
+    required this.description,
     required this.id,
     required this.title,
     required this.duration,
@@ -12479,6 +12520,7 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$ite
   factory Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Episode.fromJson(
       Map<String, dynamic> json) {
     final l$contributors = json['contributors'];
+    final l$description = json['description'];
     final l$id = json['id'];
     final l$title = json['title'];
     final l$duration = json['duration'];
@@ -12496,6 +12538,7 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$ite
               Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Episode$contributors
                   .fromJson((e as Map<String, dynamic>)))
           .toList(),
+      description: (l$description as String),
       id: (l$id as String),
       title: (l$title as String),
       duration: (l$duration as int),
@@ -12516,6 +12559,8 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$ite
   final List<
           Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Episode$contributors>
       contributors;
+
+  final String description;
 
   final String id;
 
@@ -12545,6 +12590,8 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$ite
     final l$contributors = contributors;
     _resultData['contributors'] =
         l$contributors.map((e) => e.toJson()).toList();
+    final l$description = description;
+    _resultData['description'] = l$description;
     final l$id = id;
     _resultData['id'] = l$id;
     final l$title = title;
@@ -12573,6 +12620,7 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$ite
   @override
   int get hashCode {
     final l$contributors = contributors;
+    final l$description = description;
     final l$id = id;
     final l$title = title;
     final l$duration = duration;
@@ -12586,6 +12634,7 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$ite
     final l$productionDate = productionDate;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
+      l$description,
       l$id,
       l$title,
       l$duration,
@@ -12621,6 +12670,11 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$ite
       if (l$contributors$entry != lOther$contributors$entry) {
         return false;
       }
+    }
+    final l$description = description;
+    final lOther$description = other.description;
+    if (l$description != lOther$description) {
+      return false;
     }
     final l$id = id;
     final lOther$id = other.id;
@@ -12709,6 +12763,7 @@ abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultSecti
   TRes call({
     List<Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Episode$contributors>?
         contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -12753,6 +12808,7 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$DefaultSection$i
 
   TRes call({
     Object? contributors = _undefined,
+    Object? description = _undefined,
     Object? id = _undefined,
     Object? title = _undefined,
     Object? duration = _undefined,
@@ -12771,6 +12827,9 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$DefaultSection$i
             ? _instance.contributors
             : (contributors as List<
                 Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Episode$contributors>),
+        description: description == _undefined || description == null
+            ? _instance.description
+            : (description as String),
         id: id == _undefined || id == null ? _instance.id : (id as String),
         title: title == _undefined || title == null
             ? _instance.title
@@ -12837,6 +12896,7 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$DefaultSecti
   call({
     List<Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Episode$contributors>?
         contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -16613,6 +16673,7 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$
         Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item {
   Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Episode({
     required this.contributors,
+    required this.description,
     required this.id,
     required this.title,
     required this.duration,
@@ -16628,6 +16689,7 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$
   factory Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Episode.fromJson(
       Map<String, dynamic> json) {
     final l$contributors = json['contributors'];
+    final l$description = json['description'];
     final l$id = json['id'];
     final l$title = json['title'];
     final l$duration = json['duration'];
@@ -16644,6 +16706,7 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$
               Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Episode$contributors
                   .fromJson((e as Map<String, dynamic>)))
           .toList(),
+      description: (l$description as String),
       id: (l$id as String),
       title: (l$title as String),
       duration: (l$duration as int),
@@ -16663,6 +16726,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$
   final List<
           Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Episode$contributors>
       contributors;
+
+  final String description;
 
   final String id;
 
@@ -16690,6 +16755,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$
     final l$contributors = contributors;
     _resultData['contributors'] =
         l$contributors.map((e) => e.toJson()).toList();
+    final l$description = description;
+    _resultData['description'] = l$description;
     final l$id = id;
     _resultData['id'] = l$id;
     final l$title = title;
@@ -16716,6 +16783,7 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$
   @override
   int get hashCode {
     final l$contributors = contributors;
+    final l$description = description;
     final l$id = id;
     final l$title = title;
     final l$duration = duration;
@@ -16728,6 +16796,7 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$
     final l$$__typename = $__typename;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
+      l$description,
       l$id,
       l$title,
       l$duration,
@@ -16762,6 +16831,11 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$
       if (l$contributors$entry != lOther$contributors$entry) {
         return false;
       }
+    }
+    final l$description = description;
+    final lOther$description = other.description;
+    if (l$description != lOther$description) {
+      return false;
     }
     final l$id = id;
     final lOther$id = other.id;
@@ -16845,6 +16919,7 @@ abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$CardSection$
   TRes call({
     List<Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Episode$contributors>?
         contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -16888,6 +16963,7 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$CardSection$item
 
   TRes call({
     Object? contributors = _undefined,
+    Object? description = _undefined,
     Object? id = _undefined,
     Object? title = _undefined,
     Object? duration = _undefined,
@@ -16905,6 +16981,9 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$CardSection$item
             ? _instance.contributors
             : (contributors as List<
                 Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Episode$contributors>),
+        description: description == _undefined || description == null
+            ? _instance.description
+            : (description as String),
         id: id == _undefined || id == null ? _instance.id : (id as String),
         title: title == _undefined || title == null
             ? _instance.title
@@ -16968,6 +17047,7 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$CardSection$
   call({
     List<Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Episode$contributors>?
         contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -20884,6 +20964,7 @@ class Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$
         Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item {
   Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Episode({
     required this.contributors,
+    required this.description,
     required this.id,
     required this.title,
     required this.duration,
@@ -20900,6 +20981,7 @@ class Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$
   factory Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Episode.fromJson(
       Map<String, dynamic> json) {
     final l$contributors = json['contributors'];
+    final l$description = json['description'];
     final l$id = json['id'];
     final l$title = json['title'];
     final l$duration = json['duration'];
@@ -20917,6 +20999,7 @@ class Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$
               Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Episode$contributors
                   .fromJson((e as Map<String, dynamic>)))
           .toList(),
+      description: (l$description as String),
       id: (l$id as String),
       title: (l$title as String),
       duration: (l$duration as int),
@@ -20937,6 +21020,8 @@ class Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$
   final List<
           Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Episode$contributors>
       contributors;
+
+  final String description;
 
   final String id;
 
@@ -20966,6 +21051,8 @@ class Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$
     final l$contributors = contributors;
     _resultData['contributors'] =
         l$contributors.map((e) => e.toJson()).toList();
+    final l$description = description;
+    _resultData['description'] = l$description;
     final l$id = id;
     _resultData['id'] = l$id;
     final l$title = title;
@@ -20994,6 +21081,7 @@ class Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$
   @override
   int get hashCode {
     final l$contributors = contributors;
+    final l$description = description;
     final l$id = id;
     final l$title = title;
     final l$duration = duration;
@@ -21007,6 +21095,7 @@ class Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$
     final l$ageRating = ageRating;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
+      l$description,
       l$id,
       l$title,
       l$duration,
@@ -21042,6 +21131,11 @@ class Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$
       if (l$contributors$entry != lOther$contributors$entry) {
         return false;
       }
+    }
+    final l$description = description;
+    final lOther$description = other.description;
+    if (l$description != lOther$description) {
+      return false;
     }
     final l$id = id;
     final lOther$id = other.id;
@@ -21130,6 +21224,7 @@ abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$ListSection$
   TRes call({
     List<Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Episode$contributors>?
         contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -21174,6 +21269,7 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$ListSection$item
 
   TRes call({
     Object? contributors = _undefined,
+    Object? description = _undefined,
     Object? id = _undefined,
     Object? title = _undefined,
     Object? duration = _undefined,
@@ -21192,6 +21288,9 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$ListSection$item
             ? _instance.contributors
             : (contributors as List<
                 Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Episode$contributors>),
+        description: description == _undefined || description == null
+            ? _instance.description
+            : (description as String),
         id: id == _undefined || id == null ? _instance.id : (id as String),
         title: title == _undefined || title == null
             ? _instance.title
@@ -21258,6 +21357,7 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$ListSection$
   call({
     List<Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Episode$contributors>?
         contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -25048,6 +25148,7 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$it
         Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item {
   Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Episode({
     required this.contributors,
+    required this.description,
     required this.id,
     required this.title,
     required this.duration,
@@ -25063,6 +25164,7 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$it
   factory Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Episode.fromJson(
       Map<String, dynamic> json) {
     final l$contributors = json['contributors'];
+    final l$description = json['description'];
     final l$id = json['id'];
     final l$title = json['title'];
     final l$duration = json['duration'];
@@ -25079,6 +25181,7 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$it
               Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Episode$contributors
                   .fromJson((e as Map<String, dynamic>)))
           .toList(),
+      description: (l$description as String),
       id: (l$id as String),
       title: (l$title as String),
       duration: (l$duration as int),
@@ -25098,6 +25201,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$it
   final List<
           Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Episode$contributors>
       contributors;
+
+  final String description;
 
   final String id;
 
@@ -25125,6 +25230,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$it
     final l$contributors = contributors;
     _resultData['contributors'] =
         l$contributors.map((e) => e.toJson()).toList();
+    final l$description = description;
+    _resultData['description'] = l$description;
     final l$id = id;
     _resultData['id'] = l$id;
     final l$title = title;
@@ -25151,6 +25258,7 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$it
   @override
   int get hashCode {
     final l$contributors = contributors;
+    final l$description = description;
     final l$id = id;
     final l$title = title;
     final l$duration = duration;
@@ -25163,6 +25271,7 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$it
     final l$$__typename = $__typename;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
+      l$description,
       l$id,
       l$title,
       l$duration,
@@ -25197,6 +25306,11 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$it
       if (l$contributors$entry != lOther$contributors$entry) {
         return false;
       }
+    }
+    final l$description = description;
+    final lOther$description = other.description;
+    if (l$description != lOther$description) {
+      return false;
     }
     final l$id = id;
     final lOther$id = other.id;
@@ -25280,6 +25394,7 @@ abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$CardListSect
   TRes call({
     List<Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Episode$contributors>?
         contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -25323,6 +25438,7 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$CardListSection$
 
   TRes call({
     Object? contributors = _undefined,
+    Object? description = _undefined,
     Object? id = _undefined,
     Object? title = _undefined,
     Object? duration = _undefined,
@@ -25340,6 +25456,9 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$CardListSection$
             ? _instance.contributors
             : (contributors as List<
                 Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Episode$contributors>),
+        description: description == _undefined || description == null
+            ? _instance.description
+            : (description as String),
         id: id == _undefined || id == null ? _instance.id : (id as String),
         title: title == _undefined || title == null
             ? _instance.title
@@ -25403,6 +25522,7 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$CardListSect
   call({
     List<Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Episode$contributors>?
         contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -29366,6 +29486,7 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items
         Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item {
   Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Episode({
     required this.contributors,
+    required this.description,
     required this.id,
     required this.title,
     required this.duration,
@@ -29381,6 +29502,7 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items
   factory Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Episode.fromJson(
       Map<String, dynamic> json) {
     final l$contributors = json['contributors'];
+    final l$description = json['description'];
     final l$id = json['id'];
     final l$title = json['title'];
     final l$duration = json['duration'];
@@ -29397,6 +29519,7 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items
               Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Episode$contributors
                   .fromJson((e as Map<String, dynamic>)))
           .toList(),
+      description: (l$description as String),
       id: (l$id as String),
       title: (l$title as String),
       duration: (l$duration as int),
@@ -29416,6 +29539,8 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items
   final List<
           Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Episode$contributors>
       contributors;
+
+  final String description;
 
   final String id;
 
@@ -29443,6 +29568,8 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items
     final l$contributors = contributors;
     _resultData['contributors'] =
         l$contributors.map((e) => e.toJson()).toList();
+    final l$description = description;
+    _resultData['description'] = l$description;
     final l$id = id;
     _resultData['id'] = l$id;
     final l$title = title;
@@ -29469,6 +29596,7 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items
   @override
   int get hashCode {
     final l$contributors = contributors;
+    final l$description = description;
     final l$id = id;
     final l$title = title;
     final l$duration = duration;
@@ -29481,6 +29609,7 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items
     final l$$__typename = $__typename;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
+      l$description,
       l$id,
       l$title,
       l$duration,
@@ -29515,6 +29644,11 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items
       if (l$contributors$entry != lOther$contributors$entry) {
         return false;
       }
+    }
+    final l$description = description;
+    final lOther$description = other.description;
+    if (l$description != lOther$description) {
+      return false;
     }
     final l$id = id;
     final lOther$id = other.id;
@@ -29598,6 +29732,7 @@ abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultGridS
   TRes call({
     List<Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Episode$contributors>?
         contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -29641,6 +29776,7 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$DefaultGridSecti
 
   TRes call({
     Object? contributors = _undefined,
+    Object? description = _undefined,
     Object? id = _undefined,
     Object? title = _undefined,
     Object? duration = _undefined,
@@ -29658,6 +29794,9 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$DefaultGridSecti
             ? _instance.contributors
             : (contributors as List<
                 Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Episode$contributors>),
+        description: description == _undefined || description == null
+            ? _instance.description
+            : (description as String),
         id: id == _undefined || id == null ? _instance.id : (id as String),
         title: title == _undefined || title == null
             ? _instance.title
@@ -29721,6 +29860,7 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$DefaultGridS
   call({
     List<Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Episode$contributors>?
         contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -33510,6 +33650,7 @@ class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$
         Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item {
   Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Episode({
     required this.contributors,
+    required this.description,
     required this.id,
     required this.title,
     required this.duration,
@@ -33525,6 +33666,7 @@ class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$
   factory Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Episode.fromJson(
       Map<String, dynamic> json) {
     final l$contributors = json['contributors'];
+    final l$description = json['description'];
     final l$id = json['id'];
     final l$title = json['title'];
     final l$duration = json['duration'];
@@ -33541,6 +33683,7 @@ class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$
               Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Episode$contributors
                   .fromJson((e as Map<String, dynamic>)))
           .toList(),
+      description: (l$description as String),
       id: (l$id as String),
       title: (l$title as String),
       duration: (l$duration as int),
@@ -33560,6 +33703,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$
   final List<
           Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Episode$contributors>
       contributors;
+
+  final String description;
 
   final String id;
 
@@ -33587,6 +33732,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$
     final l$contributors = contributors;
     _resultData['contributors'] =
         l$contributors.map((e) => e.toJson()).toList();
+    final l$description = description;
+    _resultData['description'] = l$description;
     final l$id = id;
     _resultData['id'] = l$id;
     final l$title = title;
@@ -33613,6 +33760,7 @@ class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$
   @override
   int get hashCode {
     final l$contributors = contributors;
+    final l$description = description;
     final l$id = id;
     final l$title = title;
     final l$duration = duration;
@@ -33625,6 +33773,7 @@ class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$
     final l$$__typename = $__typename;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
+      l$description,
       l$id,
       l$title,
       l$duration,
@@ -33659,6 +33808,11 @@ class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$
       if (l$contributors$entry != lOther$contributors$entry) {
         return false;
       }
+    }
+    final l$description = description;
+    final lOther$description = other.description;
+    if (l$description != lOther$description) {
+      return false;
     }
     final l$id = id;
     final lOther$id = other.id;
@@ -33742,6 +33896,7 @@ abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterGridSe
   TRes call({
     List<Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Episode$contributors>?
         contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -33785,6 +33940,7 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$PosterGridSectio
 
   TRes call({
     Object? contributors = _undefined,
+    Object? description = _undefined,
     Object? id = _undefined,
     Object? title = _undefined,
     Object? duration = _undefined,
@@ -33802,6 +33958,9 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$PosterGridSectio
             ? _instance.contributors
             : (contributors as List<
                 Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Episode$contributors>),
+        description: description == _undefined || description == null
+            ? _instance.description
+            : (description as String),
         id: id == _undefined || id == null ? _instance.id : (id as String),
         title: title == _undefined || title == null
             ? _instance.title
@@ -33865,6 +34024,7 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$PosterGridSe
   call({
     List<Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Episode$contributors>?
         contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -37650,6 +37810,7 @@ class Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$it
         Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item {
   Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Episode({
     required this.contributors,
+    required this.description,
     required this.id,
     required this.title,
     required this.duration,
@@ -37665,6 +37826,7 @@ class Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$it
   factory Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Episode.fromJson(
       Map<String, dynamic> json) {
     final l$contributors = json['contributors'];
+    final l$description = json['description'];
     final l$id = json['id'];
     final l$title = json['title'];
     final l$duration = json['duration'];
@@ -37681,6 +37843,7 @@ class Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$it
               Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Episode$contributors
                   .fromJson((e as Map<String, dynamic>)))
           .toList(),
+      description: (l$description as String),
       id: (l$id as String),
       title: (l$title as String),
       duration: (l$duration as int),
@@ -37700,6 +37863,8 @@ class Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$it
   final List<
           Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Episode$contributors>
       contributors;
+
+  final String description;
 
   final String id;
 
@@ -37727,6 +37892,8 @@ class Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$it
     final l$contributors = contributors;
     _resultData['contributors'] =
         l$contributors.map((e) => e.toJson()).toList();
+    final l$description = description;
+    _resultData['description'] = l$description;
     final l$id = id;
     _resultData['id'] = l$id;
     final l$title = title;
@@ -37753,6 +37920,7 @@ class Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$it
   @override
   int get hashCode {
     final l$contributors = contributors;
+    final l$description = description;
     final l$id = id;
     final l$title = title;
     final l$duration = duration;
@@ -37765,6 +37933,7 @@ class Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$it
     final l$$__typename = $__typename;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
+      l$description,
       l$id,
       l$title,
       l$duration,
@@ -37799,6 +37968,11 @@ class Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$it
       if (l$contributors$entry != lOther$contributors$entry) {
         return false;
       }
+    }
+    final l$description = description;
+    final lOther$description = other.description;
+    if (l$description != lOther$description) {
+      return false;
     }
     final l$id = id;
     final lOther$id = other.id;
@@ -37882,6 +38056,7 @@ abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$IconGridSect
   TRes call({
     List<Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Episode$contributors>?
         contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -37925,6 +38100,7 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$IconGridSection$
 
   TRes call({
     Object? contributors = _undefined,
+    Object? description = _undefined,
     Object? id = _undefined,
     Object? title = _undefined,
     Object? duration = _undefined,
@@ -37942,6 +38118,9 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$IconGridSection$
             ? _instance.contributors
             : (contributors as List<
                 Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Episode$contributors>),
+        description: description == _undefined || description == null
+            ? _instance.description
+            : (description as String),
         id: id == _undefined || id == null ? _instance.id : (id as String),
         title: title == _undefined || title == null
             ? _instance.title
@@ -38005,6 +38184,7 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$IconGridSect
   call({
     List<Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Episode$contributors>?
         contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -47405,6 +47585,7 @@ class Query$GetSection$section$$PosterSection$items$items$item$$Episode
         Query$GetSection$section$$PosterSection$items$items$item {
   Query$GetSection$section$$PosterSection$items$items$item$$Episode({
     required this.contributors,
+    required this.description,
     required this.id,
     required this.title,
     required this.duration,
@@ -47421,6 +47602,7 @@ class Query$GetSection$section$$PosterSection$items$items$item$$Episode
   factory Query$GetSection$section$$PosterSection$items$items$item$$Episode.fromJson(
       Map<String, dynamic> json) {
     final l$contributors = json['contributors'];
+    final l$description = json['description'];
     final l$id = json['id'];
     final l$title = json['title'];
     final l$duration = json['duration'];
@@ -47438,6 +47620,7 @@ class Query$GetSection$section$$PosterSection$items$items$item$$Episode
               Query$GetSection$section$$PosterSection$items$items$item$$Episode$contributors
                   .fromJson((e as Map<String, dynamic>)))
           .toList(),
+      description: (l$description as String),
       id: (l$id as String),
       title: (l$title as String),
       duration: (l$duration as int),
@@ -47458,6 +47641,8 @@ class Query$GetSection$section$$PosterSection$items$items$item$$Episode
   final List<
           Query$GetSection$section$$PosterSection$items$items$item$$Episode$contributors>
       contributors;
+
+  final String description;
 
   final String id;
 
@@ -47487,6 +47672,8 @@ class Query$GetSection$section$$PosterSection$items$items$item$$Episode
     final l$contributors = contributors;
     _resultData['contributors'] =
         l$contributors.map((e) => e.toJson()).toList();
+    final l$description = description;
+    _resultData['description'] = l$description;
     final l$id = id;
     _resultData['id'] = l$id;
     final l$title = title;
@@ -47515,6 +47702,7 @@ class Query$GetSection$section$$PosterSection$items$items$item$$Episode
   @override
   int get hashCode {
     final l$contributors = contributors;
+    final l$description = description;
     final l$id = id;
     final l$title = title;
     final l$duration = duration;
@@ -47528,6 +47716,7 @@ class Query$GetSection$section$$PosterSection$items$items$item$$Episode
     final l$productionDate = productionDate;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
+      l$description,
       l$id,
       l$title,
       l$duration,
@@ -47563,6 +47752,11 @@ class Query$GetSection$section$$PosterSection$items$items$item$$Episode
       if (l$contributors$entry != lOther$contributors$entry) {
         return false;
       }
+    }
+    final l$description = description;
+    final lOther$description = other.description;
+    if (l$description != lOther$description) {
+      return false;
     }
     final l$id = id;
     final lOther$id = other.id;
@@ -47650,6 +47844,7 @@ abstract class CopyWith$Query$GetSection$section$$PosterSection$items$items$item
   TRes call({
     List<Query$GetSection$section$$PosterSection$items$items$item$$Episode$contributors>?
         contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -47693,6 +47888,7 @@ class _CopyWithImpl$Query$GetSection$section$$PosterSection$items$items$item$$Ep
 
   TRes call({
     Object? contributors = _undefined,
+    Object? description = _undefined,
     Object? id = _undefined,
     Object? title = _undefined,
     Object? duration = _undefined,
@@ -47710,6 +47906,9 @@ class _CopyWithImpl$Query$GetSection$section$$PosterSection$items$items$item$$Ep
             ? _instance.contributors
             : (contributors as List<
                 Query$GetSection$section$$PosterSection$items$items$item$$Episode$contributors>),
+        description: description == _undefined || description == null
+            ? _instance.description
+            : (description as String),
         id: id == _undefined || id == null ? _instance.id : (id as String),
         title: title == _undefined || title == null
             ? _instance.title
@@ -47776,6 +47975,7 @@ class _CopyWithStubImpl$Query$GetSection$section$$PosterSection$items$items$item
   call({
     List<Query$GetSection$section$$PosterSection$items$items$item$$Episode$contributors>?
         contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -52941,6 +53141,7 @@ class Query$GetSection$section$$FeaturedSection$items$items$item$$Episode
         Query$GetSection$section$$FeaturedSection$items$items$item {
   Query$GetSection$section$$FeaturedSection$items$items$item$$Episode({
     required this.contributors,
+    required this.description,
     required this.id,
     required this.title,
     required this.duration,
@@ -52956,6 +53157,7 @@ class Query$GetSection$section$$FeaturedSection$items$items$item$$Episode
   factory Query$GetSection$section$$FeaturedSection$items$items$item$$Episode.fromJson(
       Map<String, dynamic> json) {
     final l$contributors = json['contributors'];
+    final l$description = json['description'];
     final l$id = json['id'];
     final l$title = json['title'];
     final l$duration = json['duration'];
@@ -52972,6 +53174,7 @@ class Query$GetSection$section$$FeaturedSection$items$items$item$$Episode
               Query$GetSection$section$$FeaturedSection$items$items$item$$Episode$contributors
                   .fromJson((e as Map<String, dynamic>)))
           .toList(),
+      description: (l$description as String),
       id: (l$id as String),
       title: (l$title as String),
       duration: (l$duration as int),
@@ -52991,6 +53194,8 @@ class Query$GetSection$section$$FeaturedSection$items$items$item$$Episode
   final List<
           Query$GetSection$section$$FeaturedSection$items$items$item$$Episode$contributors>
       contributors;
+
+  final String description;
 
   final String id;
 
@@ -53018,6 +53223,8 @@ class Query$GetSection$section$$FeaturedSection$items$items$item$$Episode
     final l$contributors = contributors;
     _resultData['contributors'] =
         l$contributors.map((e) => e.toJson()).toList();
+    final l$description = description;
+    _resultData['description'] = l$description;
     final l$id = id;
     _resultData['id'] = l$id;
     final l$title = title;
@@ -53044,6 +53251,7 @@ class Query$GetSection$section$$FeaturedSection$items$items$item$$Episode
   @override
   int get hashCode {
     final l$contributors = contributors;
+    final l$description = description;
     final l$id = id;
     final l$title = title;
     final l$duration = duration;
@@ -53056,6 +53264,7 @@ class Query$GetSection$section$$FeaturedSection$items$items$item$$Episode
     final l$$__typename = $__typename;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
+      l$description,
       l$id,
       l$title,
       l$duration,
@@ -53090,6 +53299,11 @@ class Query$GetSection$section$$FeaturedSection$items$items$item$$Episode
       if (l$contributors$entry != lOther$contributors$entry) {
         return false;
       }
+    }
+    final l$description = description;
+    final lOther$description = other.description;
+    if (l$description != lOther$description) {
+      return false;
     }
     final l$id = id;
     final lOther$id = other.id;
@@ -53173,6 +53387,7 @@ abstract class CopyWith$Query$GetSection$section$$FeaturedSection$items$items$it
   TRes call({
     List<Query$GetSection$section$$FeaturedSection$items$items$item$$Episode$contributors>?
         contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -53216,6 +53431,7 @@ class _CopyWithImpl$Query$GetSection$section$$FeaturedSection$items$items$item$$
 
   TRes call({
     Object? contributors = _undefined,
+    Object? description = _undefined,
     Object? id = _undefined,
     Object? title = _undefined,
     Object? duration = _undefined,
@@ -53232,6 +53448,9 @@ class _CopyWithImpl$Query$GetSection$section$$FeaturedSection$items$items$item$$
             ? _instance.contributors
             : (contributors as List<
                 Query$GetSection$section$$FeaturedSection$items$items$item$$Episode$contributors>),
+        description: description == _undefined || description == null
+            ? _instance.description
+            : (description as String),
         id: id == _undefined || id == null ? _instance.id : (id as String),
         title: title == _undefined || title == null
             ? _instance.title
@@ -53295,6 +53514,7 @@ class _CopyWithStubImpl$Query$GetSection$section$$FeaturedSection$items$items$it
   call({
     List<Query$GetSection$section$$FeaturedSection$items$items$item$$Episode$contributors>?
         contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -56951,6 +57171,7 @@ class Query$GetSection$section$$DefaultSection$items$items$item$$Episode
         Query$GetSection$section$$DefaultSection$items$items$item {
   Query$GetSection$section$$DefaultSection$items$items$item$$Episode({
     required this.contributors,
+    required this.description,
     required this.id,
     required this.title,
     required this.duration,
@@ -56967,6 +57188,7 @@ class Query$GetSection$section$$DefaultSection$items$items$item$$Episode
   factory Query$GetSection$section$$DefaultSection$items$items$item$$Episode.fromJson(
       Map<String, dynamic> json) {
     final l$contributors = json['contributors'];
+    final l$description = json['description'];
     final l$id = json['id'];
     final l$title = json['title'];
     final l$duration = json['duration'];
@@ -56984,6 +57206,7 @@ class Query$GetSection$section$$DefaultSection$items$items$item$$Episode
               Query$GetSection$section$$DefaultSection$items$items$item$$Episode$contributors
                   .fromJson((e as Map<String, dynamic>)))
           .toList(),
+      description: (l$description as String),
       id: (l$id as String),
       title: (l$title as String),
       duration: (l$duration as int),
@@ -57004,6 +57227,8 @@ class Query$GetSection$section$$DefaultSection$items$items$item$$Episode
   final List<
           Query$GetSection$section$$DefaultSection$items$items$item$$Episode$contributors>
       contributors;
+
+  final String description;
 
   final String id;
 
@@ -57033,6 +57258,8 @@ class Query$GetSection$section$$DefaultSection$items$items$item$$Episode
     final l$contributors = contributors;
     _resultData['contributors'] =
         l$contributors.map((e) => e.toJson()).toList();
+    final l$description = description;
+    _resultData['description'] = l$description;
     final l$id = id;
     _resultData['id'] = l$id;
     final l$title = title;
@@ -57061,6 +57288,7 @@ class Query$GetSection$section$$DefaultSection$items$items$item$$Episode
   @override
   int get hashCode {
     final l$contributors = contributors;
+    final l$description = description;
     final l$id = id;
     final l$title = title;
     final l$duration = duration;
@@ -57074,6 +57302,7 @@ class Query$GetSection$section$$DefaultSection$items$items$item$$Episode
     final l$productionDate = productionDate;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
+      l$description,
       l$id,
       l$title,
       l$duration,
@@ -57109,6 +57338,11 @@ class Query$GetSection$section$$DefaultSection$items$items$item$$Episode
       if (l$contributors$entry != lOther$contributors$entry) {
         return false;
       }
+    }
+    final l$description = description;
+    final lOther$description = other.description;
+    if (l$description != lOther$description) {
+      return false;
     }
     final l$id = id;
     final lOther$id = other.id;
@@ -57196,6 +57430,7 @@ abstract class CopyWith$Query$GetSection$section$$DefaultSection$items$items$ite
   TRes call({
     List<Query$GetSection$section$$DefaultSection$items$items$item$$Episode$contributors>?
         contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -57239,6 +57474,7 @@ class _CopyWithImpl$Query$GetSection$section$$DefaultSection$items$items$item$$E
 
   TRes call({
     Object? contributors = _undefined,
+    Object? description = _undefined,
     Object? id = _undefined,
     Object? title = _undefined,
     Object? duration = _undefined,
@@ -57256,6 +57492,9 @@ class _CopyWithImpl$Query$GetSection$section$$DefaultSection$items$items$item$$E
             ? _instance.contributors
             : (contributors as List<
                 Query$GetSection$section$$DefaultSection$items$items$item$$Episode$contributors>),
+        description: description == _undefined || description == null
+            ? _instance.description
+            : (description as String),
         id: id == _undefined || id == null ? _instance.id : (id as String),
         title: title == _undefined || title == null
             ? _instance.title
@@ -57322,6 +57561,7 @@ class _CopyWithStubImpl$Query$GetSection$section$$DefaultSection$items$items$ite
   call({
     List<Query$GetSection$section$$DefaultSection$items$items$item$$Episode$contributors>?
         contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -60975,6 +61215,7 @@ class Query$GetSection$section$$CardSection$items$items$item$$Episode
         Query$GetSection$section$$CardSection$items$items$item {
   Query$GetSection$section$$CardSection$items$items$item$$Episode({
     required this.contributors,
+    required this.description,
     required this.id,
     required this.title,
     required this.duration,
@@ -60990,6 +61231,7 @@ class Query$GetSection$section$$CardSection$items$items$item$$Episode
   factory Query$GetSection$section$$CardSection$items$items$item$$Episode.fromJson(
       Map<String, dynamic> json) {
     final l$contributors = json['contributors'];
+    final l$description = json['description'];
     final l$id = json['id'];
     final l$title = json['title'];
     final l$duration = json['duration'];
@@ -61006,6 +61248,7 @@ class Query$GetSection$section$$CardSection$items$items$item$$Episode
               Query$GetSection$section$$CardSection$items$items$item$$Episode$contributors
                   .fromJson((e as Map<String, dynamic>)))
           .toList(),
+      description: (l$description as String),
       id: (l$id as String),
       title: (l$title as String),
       duration: (l$duration as int),
@@ -61025,6 +61268,8 @@ class Query$GetSection$section$$CardSection$items$items$item$$Episode
   final List<
           Query$GetSection$section$$CardSection$items$items$item$$Episode$contributors>
       contributors;
+
+  final String description;
 
   final String id;
 
@@ -61052,6 +61297,8 @@ class Query$GetSection$section$$CardSection$items$items$item$$Episode
     final l$contributors = contributors;
     _resultData['contributors'] =
         l$contributors.map((e) => e.toJson()).toList();
+    final l$description = description;
+    _resultData['description'] = l$description;
     final l$id = id;
     _resultData['id'] = l$id;
     final l$title = title;
@@ -61078,6 +61325,7 @@ class Query$GetSection$section$$CardSection$items$items$item$$Episode
   @override
   int get hashCode {
     final l$contributors = contributors;
+    final l$description = description;
     final l$id = id;
     final l$title = title;
     final l$duration = duration;
@@ -61090,6 +61338,7 @@ class Query$GetSection$section$$CardSection$items$items$item$$Episode
     final l$$__typename = $__typename;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
+      l$description,
       l$id,
       l$title,
       l$duration,
@@ -61124,6 +61373,11 @@ class Query$GetSection$section$$CardSection$items$items$item$$Episode
       if (l$contributors$entry != lOther$contributors$entry) {
         return false;
       }
+    }
+    final l$description = description;
+    final lOther$description = other.description;
+    if (l$description != lOther$description) {
+      return false;
     }
     final l$id = id;
     final lOther$id = other.id;
@@ -61206,6 +61460,7 @@ abstract class CopyWith$Query$GetSection$section$$CardSection$items$items$item$$
   TRes call({
     List<Query$GetSection$section$$CardSection$items$items$item$$Episode$contributors>?
         contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -61248,6 +61503,7 @@ class _CopyWithImpl$Query$GetSection$section$$CardSection$items$items$item$$Epis
 
   TRes call({
     Object? contributors = _undefined,
+    Object? description = _undefined,
     Object? id = _undefined,
     Object? title = _undefined,
     Object? duration = _undefined,
@@ -61264,6 +61520,9 @@ class _CopyWithImpl$Query$GetSection$section$$CardSection$items$items$item$$Epis
             ? _instance.contributors
             : (contributors as List<
                 Query$GetSection$section$$CardSection$items$items$item$$Episode$contributors>),
+        description: description == _undefined || description == null
+            ? _instance.description
+            : (description as String),
         id: id == _undefined || id == null ? _instance.id : (id as String),
         title: title == _undefined || title == null
             ? _instance.title
@@ -61327,6 +61586,7 @@ class _CopyWithStubImpl$Query$GetSection$section$$CardSection$items$items$item$$
   call({
     List<Query$GetSection$section$$CardSection$items$items$item$$Episode$contributors>?
         contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -65105,6 +65365,7 @@ class Query$GetSection$section$$ListSection$items$items$item$$Episode
         Query$GetSection$section$$ListSection$items$items$item {
   Query$GetSection$section$$ListSection$items$items$item$$Episode({
     required this.contributors,
+    required this.description,
     required this.id,
     required this.title,
     required this.duration,
@@ -65121,6 +65382,7 @@ class Query$GetSection$section$$ListSection$items$items$item$$Episode
   factory Query$GetSection$section$$ListSection$items$items$item$$Episode.fromJson(
       Map<String, dynamic> json) {
     final l$contributors = json['contributors'];
+    final l$description = json['description'];
     final l$id = json['id'];
     final l$title = json['title'];
     final l$duration = json['duration'];
@@ -65138,6 +65400,7 @@ class Query$GetSection$section$$ListSection$items$items$item$$Episode
               Query$GetSection$section$$ListSection$items$items$item$$Episode$contributors
                   .fromJson((e as Map<String, dynamic>)))
           .toList(),
+      description: (l$description as String),
       id: (l$id as String),
       title: (l$title as String),
       duration: (l$duration as int),
@@ -65158,6 +65421,8 @@ class Query$GetSection$section$$ListSection$items$items$item$$Episode
   final List<
           Query$GetSection$section$$ListSection$items$items$item$$Episode$contributors>
       contributors;
+
+  final String description;
 
   final String id;
 
@@ -65187,6 +65452,8 @@ class Query$GetSection$section$$ListSection$items$items$item$$Episode
     final l$contributors = contributors;
     _resultData['contributors'] =
         l$contributors.map((e) => e.toJson()).toList();
+    final l$description = description;
+    _resultData['description'] = l$description;
     final l$id = id;
     _resultData['id'] = l$id;
     final l$title = title;
@@ -65215,6 +65482,7 @@ class Query$GetSection$section$$ListSection$items$items$item$$Episode
   @override
   int get hashCode {
     final l$contributors = contributors;
+    final l$description = description;
     final l$id = id;
     final l$title = title;
     final l$duration = duration;
@@ -65228,6 +65496,7 @@ class Query$GetSection$section$$ListSection$items$items$item$$Episode
     final l$ageRating = ageRating;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
+      l$description,
       l$id,
       l$title,
       l$duration,
@@ -65263,6 +65532,11 @@ class Query$GetSection$section$$ListSection$items$items$item$$Episode
       if (l$contributors$entry != lOther$contributors$entry) {
         return false;
       }
+    }
+    final l$description = description;
+    final lOther$description = other.description;
+    if (l$description != lOther$description) {
+      return false;
     }
     final l$id = id;
     final lOther$id = other.id;
@@ -65350,6 +65624,7 @@ abstract class CopyWith$Query$GetSection$section$$ListSection$items$items$item$$
   TRes call({
     List<Query$GetSection$section$$ListSection$items$items$item$$Episode$contributors>?
         contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -65393,6 +65668,7 @@ class _CopyWithImpl$Query$GetSection$section$$ListSection$items$items$item$$Epis
 
   TRes call({
     Object? contributors = _undefined,
+    Object? description = _undefined,
     Object? id = _undefined,
     Object? title = _undefined,
     Object? duration = _undefined,
@@ -65410,6 +65686,9 @@ class _CopyWithImpl$Query$GetSection$section$$ListSection$items$items$item$$Epis
             ? _instance.contributors
             : (contributors as List<
                 Query$GetSection$section$$ListSection$items$items$item$$Episode$contributors>),
+        description: description == _undefined || description == null
+            ? _instance.description
+            : (description as String),
         id: id == _undefined || id == null ? _instance.id : (id as String),
         title: title == _undefined || title == null
             ? _instance.title
@@ -65476,6 +65755,7 @@ class _CopyWithStubImpl$Query$GetSection$section$$ListSection$items$items$item$$
   call({
     List<Query$GetSection$section$$ListSection$items$items$item$$Episode$contributors>?
         contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -69145,6 +69425,7 @@ class Query$GetSection$section$$CardListSection$items$items$item$$Episode
         Query$GetSection$section$$CardListSection$items$items$item {
   Query$GetSection$section$$CardListSection$items$items$item$$Episode({
     required this.contributors,
+    required this.description,
     required this.id,
     required this.title,
     required this.duration,
@@ -69160,6 +69441,7 @@ class Query$GetSection$section$$CardListSection$items$items$item$$Episode
   factory Query$GetSection$section$$CardListSection$items$items$item$$Episode.fromJson(
       Map<String, dynamic> json) {
     final l$contributors = json['contributors'];
+    final l$description = json['description'];
     final l$id = json['id'];
     final l$title = json['title'];
     final l$duration = json['duration'];
@@ -69176,6 +69458,7 @@ class Query$GetSection$section$$CardListSection$items$items$item$$Episode
               Query$GetSection$section$$CardListSection$items$items$item$$Episode$contributors
                   .fromJson((e as Map<String, dynamic>)))
           .toList(),
+      description: (l$description as String),
       id: (l$id as String),
       title: (l$title as String),
       duration: (l$duration as int),
@@ -69195,6 +69478,8 @@ class Query$GetSection$section$$CardListSection$items$items$item$$Episode
   final List<
           Query$GetSection$section$$CardListSection$items$items$item$$Episode$contributors>
       contributors;
+
+  final String description;
 
   final String id;
 
@@ -69222,6 +69507,8 @@ class Query$GetSection$section$$CardListSection$items$items$item$$Episode
     final l$contributors = contributors;
     _resultData['contributors'] =
         l$contributors.map((e) => e.toJson()).toList();
+    final l$description = description;
+    _resultData['description'] = l$description;
     final l$id = id;
     _resultData['id'] = l$id;
     final l$title = title;
@@ -69248,6 +69535,7 @@ class Query$GetSection$section$$CardListSection$items$items$item$$Episode
   @override
   int get hashCode {
     final l$contributors = contributors;
+    final l$description = description;
     final l$id = id;
     final l$title = title;
     final l$duration = duration;
@@ -69260,6 +69548,7 @@ class Query$GetSection$section$$CardListSection$items$items$item$$Episode
     final l$$__typename = $__typename;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
+      l$description,
       l$id,
       l$title,
       l$duration,
@@ -69294,6 +69583,11 @@ class Query$GetSection$section$$CardListSection$items$items$item$$Episode
       if (l$contributors$entry != lOther$contributors$entry) {
         return false;
       }
+    }
+    final l$description = description;
+    final lOther$description = other.description;
+    if (l$description != lOther$description) {
+      return false;
     }
     final l$id = id;
     final lOther$id = other.id;
@@ -69377,6 +69671,7 @@ abstract class CopyWith$Query$GetSection$section$$CardListSection$items$items$it
   TRes call({
     List<Query$GetSection$section$$CardListSection$items$items$item$$Episode$contributors>?
         contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -69420,6 +69715,7 @@ class _CopyWithImpl$Query$GetSection$section$$CardListSection$items$items$item$$
 
   TRes call({
     Object? contributors = _undefined,
+    Object? description = _undefined,
     Object? id = _undefined,
     Object? title = _undefined,
     Object? duration = _undefined,
@@ -69436,6 +69732,9 @@ class _CopyWithImpl$Query$GetSection$section$$CardListSection$items$items$item$$
             ? _instance.contributors
             : (contributors as List<
                 Query$GetSection$section$$CardListSection$items$items$item$$Episode$contributors>),
+        description: description == _undefined || description == null
+            ? _instance.description
+            : (description as String),
         id: id == _undefined || id == null ? _instance.id : (id as String),
         title: title == _undefined || title == null
             ? _instance.title
@@ -69499,6 +69798,7 @@ class _CopyWithStubImpl$Query$GetSection$section$$CardListSection$items$items$it
   call({
     List<Query$GetSection$section$$CardListSection$items$items$item$$Episode$contributors>?
         contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -73364,6 +73664,7 @@ class Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode
         Query$GetSection$section$$DefaultGridSection$items$items$item {
   Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode({
     required this.contributors,
+    required this.description,
     required this.id,
     required this.title,
     required this.duration,
@@ -73379,6 +73680,7 @@ class Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode
   factory Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode.fromJson(
       Map<String, dynamic> json) {
     final l$contributors = json['contributors'];
+    final l$description = json['description'];
     final l$id = json['id'];
     final l$title = json['title'];
     final l$duration = json['duration'];
@@ -73395,6 +73697,7 @@ class Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode
               Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode$contributors
                   .fromJson((e as Map<String, dynamic>)))
           .toList(),
+      description: (l$description as String),
       id: (l$id as String),
       title: (l$title as String),
       duration: (l$duration as int),
@@ -73414,6 +73717,8 @@ class Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode
   final List<
           Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode$contributors>
       contributors;
+
+  final String description;
 
   final String id;
 
@@ -73441,6 +73746,8 @@ class Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode
     final l$contributors = contributors;
     _resultData['contributors'] =
         l$contributors.map((e) => e.toJson()).toList();
+    final l$description = description;
+    _resultData['description'] = l$description;
     final l$id = id;
     _resultData['id'] = l$id;
     final l$title = title;
@@ -73467,6 +73774,7 @@ class Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode
   @override
   int get hashCode {
     final l$contributors = contributors;
+    final l$description = description;
     final l$id = id;
     final l$title = title;
     final l$duration = duration;
@@ -73479,6 +73787,7 @@ class Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode
     final l$$__typename = $__typename;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
+      l$description,
       l$id,
       l$title,
       l$duration,
@@ -73513,6 +73822,11 @@ class Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode
       if (l$contributors$entry != lOther$contributors$entry) {
         return false;
       }
+    }
+    final l$description = description;
+    final lOther$description = other.description;
+    if (l$description != lOther$description) {
+      return false;
     }
     final l$id = id;
     final lOther$id = other.id;
@@ -73596,6 +73910,7 @@ abstract class CopyWith$Query$GetSection$section$$DefaultGridSection$items$items
   TRes call({
     List<Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode$contributors>?
         contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -73639,6 +73954,7 @@ class _CopyWithImpl$Query$GetSection$section$$DefaultGridSection$items$items$ite
 
   TRes call({
     Object? contributors = _undefined,
+    Object? description = _undefined,
     Object? id = _undefined,
     Object? title = _undefined,
     Object? duration = _undefined,
@@ -73656,6 +73972,9 @@ class _CopyWithImpl$Query$GetSection$section$$DefaultGridSection$items$items$ite
             ? _instance.contributors
             : (contributors as List<
                 Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode$contributors>),
+        description: description == _undefined || description == null
+            ? _instance.description
+            : (description as String),
         id: id == _undefined || id == null ? _instance.id : (id as String),
         title: title == _undefined || title == null
             ? _instance.title
@@ -73719,6 +74038,7 @@ class _CopyWithStubImpl$Query$GetSection$section$$DefaultGridSection$items$items
   call({
     List<Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode$contributors>?
         contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -77428,6 +77748,7 @@ class Query$GetSection$section$$PosterGridSection$items$items$item$$Episode
         Query$GetSection$section$$PosterGridSection$items$items$item {
   Query$GetSection$section$$PosterGridSection$items$items$item$$Episode({
     required this.contributors,
+    required this.description,
     required this.id,
     required this.title,
     required this.duration,
@@ -77443,6 +77764,7 @@ class Query$GetSection$section$$PosterGridSection$items$items$item$$Episode
   factory Query$GetSection$section$$PosterGridSection$items$items$item$$Episode.fromJson(
       Map<String, dynamic> json) {
     final l$contributors = json['contributors'];
+    final l$description = json['description'];
     final l$id = json['id'];
     final l$title = json['title'];
     final l$duration = json['duration'];
@@ -77459,6 +77781,7 @@ class Query$GetSection$section$$PosterGridSection$items$items$item$$Episode
               Query$GetSection$section$$PosterGridSection$items$items$item$$Episode$contributors
                   .fromJson((e as Map<String, dynamic>)))
           .toList(),
+      description: (l$description as String),
       id: (l$id as String),
       title: (l$title as String),
       duration: (l$duration as int),
@@ -77478,6 +77801,8 @@ class Query$GetSection$section$$PosterGridSection$items$items$item$$Episode
   final List<
           Query$GetSection$section$$PosterGridSection$items$items$item$$Episode$contributors>
       contributors;
+
+  final String description;
 
   final String id;
 
@@ -77505,6 +77830,8 @@ class Query$GetSection$section$$PosterGridSection$items$items$item$$Episode
     final l$contributors = contributors;
     _resultData['contributors'] =
         l$contributors.map((e) => e.toJson()).toList();
+    final l$description = description;
+    _resultData['description'] = l$description;
     final l$id = id;
     _resultData['id'] = l$id;
     final l$title = title;
@@ -77531,6 +77858,7 @@ class Query$GetSection$section$$PosterGridSection$items$items$item$$Episode
   @override
   int get hashCode {
     final l$contributors = contributors;
+    final l$description = description;
     final l$id = id;
     final l$title = title;
     final l$duration = duration;
@@ -77543,6 +77871,7 @@ class Query$GetSection$section$$PosterGridSection$items$items$item$$Episode
     final l$$__typename = $__typename;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
+      l$description,
       l$id,
       l$title,
       l$duration,
@@ -77577,6 +77906,11 @@ class Query$GetSection$section$$PosterGridSection$items$items$item$$Episode
       if (l$contributors$entry != lOther$contributors$entry) {
         return false;
       }
+    }
+    final l$description = description;
+    final lOther$description = other.description;
+    if (l$description != lOther$description) {
+      return false;
     }
     final l$id = id;
     final lOther$id = other.id;
@@ -77660,6 +77994,7 @@ abstract class CopyWith$Query$GetSection$section$$PosterGridSection$items$items$
   TRes call({
     List<Query$GetSection$section$$PosterGridSection$items$items$item$$Episode$contributors>?
         contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -77703,6 +78038,7 @@ class _CopyWithImpl$Query$GetSection$section$$PosterGridSection$items$items$item
 
   TRes call({
     Object? contributors = _undefined,
+    Object? description = _undefined,
     Object? id = _undefined,
     Object? title = _undefined,
     Object? duration = _undefined,
@@ -77720,6 +78056,9 @@ class _CopyWithImpl$Query$GetSection$section$$PosterGridSection$items$items$item
             ? _instance.contributors
             : (contributors as List<
                 Query$GetSection$section$$PosterGridSection$items$items$item$$Episode$contributors>),
+        description: description == _undefined || description == null
+            ? _instance.description
+            : (description as String),
         id: id == _undefined || id == null ? _instance.id : (id as String),
         title: title == _undefined || title == null
             ? _instance.title
@@ -77783,6 +78122,7 @@ class _CopyWithStubImpl$Query$GetSection$section$$PosterGridSection$items$items$
   call({
     List<Query$GetSection$section$$PosterGridSection$items$items$item$$Episode$contributors>?
         contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -81469,6 +81809,7 @@ class Query$GetSection$section$$IconGridSection$items$items$item$$Episode
         Query$GetSection$section$$IconGridSection$items$items$item {
   Query$GetSection$section$$IconGridSection$items$items$item$$Episode({
     required this.contributors,
+    required this.description,
     required this.id,
     required this.title,
     required this.duration,
@@ -81484,6 +81825,7 @@ class Query$GetSection$section$$IconGridSection$items$items$item$$Episode
   factory Query$GetSection$section$$IconGridSection$items$items$item$$Episode.fromJson(
       Map<String, dynamic> json) {
     final l$contributors = json['contributors'];
+    final l$description = json['description'];
     final l$id = json['id'];
     final l$title = json['title'];
     final l$duration = json['duration'];
@@ -81500,6 +81842,7 @@ class Query$GetSection$section$$IconGridSection$items$items$item$$Episode
               Query$GetSection$section$$IconGridSection$items$items$item$$Episode$contributors
                   .fromJson((e as Map<String, dynamic>)))
           .toList(),
+      description: (l$description as String),
       id: (l$id as String),
       title: (l$title as String),
       duration: (l$duration as int),
@@ -81519,6 +81862,8 @@ class Query$GetSection$section$$IconGridSection$items$items$item$$Episode
   final List<
           Query$GetSection$section$$IconGridSection$items$items$item$$Episode$contributors>
       contributors;
+
+  final String description;
 
   final String id;
 
@@ -81546,6 +81891,8 @@ class Query$GetSection$section$$IconGridSection$items$items$item$$Episode
     final l$contributors = contributors;
     _resultData['contributors'] =
         l$contributors.map((e) => e.toJson()).toList();
+    final l$description = description;
+    _resultData['description'] = l$description;
     final l$id = id;
     _resultData['id'] = l$id;
     final l$title = title;
@@ -81572,6 +81919,7 @@ class Query$GetSection$section$$IconGridSection$items$items$item$$Episode
   @override
   int get hashCode {
     final l$contributors = contributors;
+    final l$description = description;
     final l$id = id;
     final l$title = title;
     final l$duration = duration;
@@ -81584,6 +81932,7 @@ class Query$GetSection$section$$IconGridSection$items$items$item$$Episode
     final l$$__typename = $__typename;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
+      l$description,
       l$id,
       l$title,
       l$duration,
@@ -81618,6 +81967,11 @@ class Query$GetSection$section$$IconGridSection$items$items$item$$Episode
       if (l$contributors$entry != lOther$contributors$entry) {
         return false;
       }
+    }
+    final l$description = description;
+    final lOther$description = other.description;
+    if (l$description != lOther$description) {
+      return false;
     }
     final l$id = id;
     final lOther$id = other.id;
@@ -81701,6 +82055,7 @@ abstract class CopyWith$Query$GetSection$section$$IconGridSection$items$items$it
   TRes call({
     List<Query$GetSection$section$$IconGridSection$items$items$item$$Episode$contributors>?
         contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
@@ -81744,6 +82099,7 @@ class _CopyWithImpl$Query$GetSection$section$$IconGridSection$items$items$item$$
 
   TRes call({
     Object? contributors = _undefined,
+    Object? description = _undefined,
     Object? id = _undefined,
     Object? title = _undefined,
     Object? duration = _undefined,
@@ -81760,6 +82116,9 @@ class _CopyWithImpl$Query$GetSection$section$$IconGridSection$items$items$item$$
             ? _instance.contributors
             : (contributors as List<
                 Query$GetSection$section$$IconGridSection$items$items$item$$Episode$contributors>),
+        description: description == _undefined || description == null
+            ? _instance.description
+            : (description as String),
         id: id == _undefined || id == null ? _instance.id : (id as String),
         title: title == _undefined || title == null
             ? _instance.title
@@ -81823,6 +82182,7 @@ class _CopyWithStubImpl$Query$GetSection$section$$IconGridSection$items$items$it
   call({
     List<Query$GetSection$section$$IconGridSection$items$items$item$$Episode$contributors>?
         contributors,
+    String? description,
     String? id,
     String? title,
     int? duration,
