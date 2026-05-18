@@ -455,6 +455,7 @@ extension ClientExtension$Mutation$SetDeviceToken on graphql.GraphQLClient {
   Future<graphql.QueryResult<Mutation$SetDeviceToken>> mutate$SetDeviceToken(
           Options$Mutation$SetDeviceToken options) async =>
       await this.mutate(options);
+
   graphql.ObservableQuery<Mutation$SetDeviceToken> watchMutation$SetDeviceToken(
           WatchOptions$Mutation$SetDeviceToken options) =>
       this.watchMutation(options);
@@ -1241,6 +1242,7 @@ extension ClientExtension$Mutation$SetDeviceTokenV2 on graphql.GraphQLClient {
       mutate$SetDeviceTokenV2(
               Options$Mutation$SetDeviceTokenV2 options) async =>
           await this.mutate(options);
+
   graphql.ObservableQuery<Mutation$SetDeviceTokenV2>
       watchMutation$SetDeviceTokenV2(
               WatchOptions$Mutation$SetDeviceTokenV2 options) =>

@@ -482,9 +482,11 @@ extension ClientExtension$Query$CalendarPeriod on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$CalendarPeriod>> query$CalendarPeriod(
           Options$Query$CalendarPeriod options) async =>
       await this.query(options);
+
   graphql.ObservableQuery<Query$CalendarPeriod> watchQuery$CalendarPeriod(
           WatchOptions$Query$CalendarPeriod options) =>
       this.watchQuery(options);
+
   void writeQuery$CalendarPeriod({
     required Query$CalendarPeriod data,
     required Variables$Query$CalendarPeriod variables,
@@ -499,6 +501,7 @@ extension ClientExtension$Query$CalendarPeriod on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Query$CalendarPeriod? readQuery$CalendarPeriod({
     required Variables$Query$CalendarPeriod variables,
     bool optimistic = true,
@@ -1404,9 +1407,11 @@ extension ClientExtension$Query$CalendarDay on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$CalendarDay>> query$CalendarDay(
           Options$Query$CalendarDay options) async =>
       await this.query(options);
+
   graphql.ObservableQuery<Query$CalendarDay> watchQuery$CalendarDay(
           WatchOptions$Query$CalendarDay options) =>
       this.watchQuery(options);
+
   void writeQuery$CalendarDay({
     required Query$CalendarDay data,
     required Variables$Query$CalendarDay variables,
@@ -1420,6 +1425,7 @@ extension ClientExtension$Query$CalendarDay on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Query$CalendarDay? readQuery$CalendarDay({
     required Variables$Query$CalendarDay variables,
     bool optimistic = true,

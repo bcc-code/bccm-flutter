@@ -310,9 +310,11 @@ extension ClientExtension$Query$me on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$me>> query$me(
           [Options$Query$me? options]) async =>
       await this.query(options ?? Options$Query$me());
+
   graphql.ObservableQuery<Query$me> watchQuery$me(
           [WatchOptions$Query$me? options]) =>
       this.watchQuery(options ?? WatchOptions$Query$me());
+
   void writeQuery$me({
     required Query$me data,
     bool broadcast = true,
@@ -323,6 +325,7 @@ extension ClientExtension$Query$me on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Query$me? readQuery$me({bool optimistic = true}) {
     final result = this.readQuery(
       graphql.Request(
@@ -953,6 +956,7 @@ extension ClientExtension$Mutation$sendVerificationEmail
               [Options$Mutation$sendVerificationEmail? options]) async =>
           await this
               .mutate(options ?? Options$Mutation$sendVerificationEmail());
+
   graphql.ObservableQuery<Mutation$sendVerificationEmail>
       watchMutation$sendVerificationEmail(
               [WatchOptions$Mutation$sendVerificationEmail? options]) =>
@@ -1481,6 +1485,7 @@ extension ClientExtension$Mutation$updateUserMetadata on graphql.GraphQLClient {
       mutate$updateUserMetadata(
               Options$Mutation$updateUserMetadata options) async =>
           await this.mutate(options);
+
   graphql.ObservableQuery<Mutation$updateUserMetadata>
       watchMutation$updateUserMetadata(
               WatchOptions$Mutation$updateUserMetadata options) =>

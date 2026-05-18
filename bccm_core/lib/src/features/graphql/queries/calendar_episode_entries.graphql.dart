@@ -373,6 +373,7 @@ extension ClientExtension$Fragment$CalendarEntryEpisode
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Fragment$CalendarEntryEpisode? readFragment$CalendarEntryEpisode({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -975,6 +976,7 @@ extension ClientExtension$Fragment$CalendarDayEntries on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Fragment$CalendarDayEntries? readFragment$CalendarDayEntries({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -1096,6 +1098,7 @@ extension UtilityExtension$Fragment$CalendarDayEntries$entries
             this,
             (i) => i,
           );
+
   _T when<_T>({
     required _T Function(
             Fragment$CalendarDayEntries$entries$$EpisodeCalendarEntry)
@@ -2319,10 +2322,12 @@ extension ClientExtension$Query$CalendarDayEpisodeEntries
       query$CalendarDayEpisodeEntries(
               Options$Query$CalendarDayEpisodeEntries options) async =>
           await this.query(options);
+
   graphql.ObservableQuery<Query$CalendarDayEpisodeEntries>
       watchQuery$CalendarDayEpisodeEntries(
               WatchOptions$Query$CalendarDayEpisodeEntries options) =>
           this.watchQuery(options);
+
   void writeQuery$CalendarDayEpisodeEntries({
     required Query$CalendarDayEpisodeEntries data,
     required Variables$Query$CalendarDayEpisodeEntries variables,
@@ -2337,6 +2342,7 @@ extension ClientExtension$Query$CalendarDayEpisodeEntries
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Query$CalendarDayEpisodeEntries? readQuery$CalendarDayEpisodeEntries({
     required Variables$Query$CalendarDayEpisodeEntries variables,
     bool optimistic = true,

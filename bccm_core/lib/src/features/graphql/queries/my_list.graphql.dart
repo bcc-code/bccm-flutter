@@ -304,6 +304,7 @@ extension ClientExtension$Fragment$MyListEntry on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Fragment$MyListEntry? readFragment$MyListEntry({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -383,6 +384,7 @@ extension UtilityExtension$Fragment$MyListEntry$item
         this,
         (i) => i,
       );
+
   _T when<_T>({
     required _T Function(Fragment$MyListEntry$item$$Episode) episode,
     required _T Function(Fragment$MyListEntry$item$$Short) short,
@@ -1267,9 +1269,11 @@ extension ClientExtension$Query$MyList on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$MyList>> query$MyList(
           [Options$Query$MyList? options]) async =>
       await this.query(options ?? Options$Query$MyList());
+
   graphql.ObservableQuery<Query$MyList> watchQuery$MyList(
           [WatchOptions$Query$MyList? options]) =>
       this.watchQuery(options ?? WatchOptions$Query$MyList());
+
   void writeQuery$MyList({
     required Query$MyList data,
     bool broadcast = true,
@@ -1280,6 +1284,7 @@ extension ClientExtension$Query$MyList on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Query$MyList? readQuery$MyList({bool optimistic = true}) {
     final result = this.readQuery(
       graphql.Request(
@@ -1984,6 +1989,7 @@ extension ClientExtension$Mutation$addEpisodeToMyList on graphql.GraphQLClient {
       mutate$addEpisodeToMyList(
               Options$Mutation$addEpisodeToMyList options) async =>
           await this.mutate(options);
+
   graphql.ObservableQuery<Mutation$addEpisodeToMyList>
       watchMutation$addEpisodeToMyList(
               WatchOptions$Mutation$addEpisodeToMyList options) =>
@@ -2621,6 +2627,7 @@ extension ClientExtension$Mutation$addShortToMyList on graphql.GraphQLClient {
       mutate$addShortToMyList(
               Options$Mutation$addShortToMyList options) async =>
           await this.mutate(options);
+
   graphql.ObservableQuery<Mutation$addShortToMyList>
       watchMutation$addShortToMyList(
               WatchOptions$Mutation$addShortToMyList options) =>
@@ -3264,6 +3271,7 @@ extension ClientExtension$Mutation$removeEntryFromMyList
       mutate$removeEntryFromMyList(
               Options$Mutation$removeEntryFromMyList options) async =>
           await this.mutate(options);
+
   graphql.ObservableQuery<Mutation$removeEntryFromMyList>
       watchMutation$removeEntryFromMyList(
               WatchOptions$Mutation$removeEntryFromMyList options) =>

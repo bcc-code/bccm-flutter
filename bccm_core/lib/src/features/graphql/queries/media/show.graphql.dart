@@ -518,9 +518,11 @@ extension ClientExtension$Query$GetShow on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$GetShow>> query$GetShow(
           Options$Query$GetShow options) async =>
       await this.query(options);
+
   graphql.ObservableQuery<Query$GetShow> watchQuery$GetShow(
           WatchOptions$Query$GetShow options) =>
       this.watchQuery(options);
+
   void writeQuery$GetShow({
     required Query$GetShow data,
     required Variables$Query$GetShow variables,
@@ -534,6 +536,7 @@ extension ClientExtension$Query$GetShow on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Query$GetShow? readQuery$GetShow({
     required Variables$Query$GetShow variables,
     bool optimistic = true,

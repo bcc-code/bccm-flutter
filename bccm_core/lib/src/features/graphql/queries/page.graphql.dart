@@ -365,6 +365,7 @@ extension ClientExtension$Fragment$GridSectionItem on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Fragment$GridSectionItem? readFragment$GridSectionItem({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -465,6 +466,7 @@ extension UtilityExtension$Fragment$GridSectionItem$item
             this,
             (i) => i,
           );
+
   _T when<_T>({
     required _T Function(Fragment$GridSectionItem$item$$Episode) episode,
     required _T Function(Fragment$GridSectionItem$item$$Show) show,
@@ -3373,6 +3375,7 @@ extension ClientExtension$Fragment$ItemSectionItem on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Fragment$ItemSectionItem? readFragment$ItemSectionItem({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -3473,6 +3476,7 @@ extension UtilityExtension$Fragment$ItemSectionItem$item
             this,
             (i) => i,
           );
+
   _T when<_T>({
     required _T Function(Fragment$ItemSectionItem$item$$Episode) episode,
     required _T Function(Fragment$ItemSectionItem$item$$Show) show,
@@ -6361,6 +6365,7 @@ extension ClientExtension$Fragment$EpisodeThumbnail on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Fragment$EpisodeThumbnail? readFragment$EpisodeThumbnail({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -6831,6 +6836,7 @@ extension ClientExtension$Fragment$NavigatablePerson on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Fragment$NavigatablePerson? readFragment$NavigatablePerson({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -7020,6 +7026,7 @@ extension ClientExtension$Fragment$NavigatableGame on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Fragment$NavigatableGame? readFragment$NavigatableGame({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -7207,6 +7214,7 @@ extension ClientExtension$Fragment$NavigatableLink on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Fragment$NavigatableLink? readFragment$NavigatableLink({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -7395,6 +7403,7 @@ extension ClientExtension$Fragment$NavigatablePlaylist
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Fragment$NavigatablePlaylist? readFragment$NavigatablePlaylist({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -7586,6 +7595,7 @@ extension ClientExtension$Fragment$NavigatablePage on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Fragment$NavigatablePage? readFragment$NavigatablePage({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -7773,6 +7783,7 @@ extension ClientExtension$Fragment$NavigatableShort on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Fragment$NavigatableShort? readFragment$NavigatableShort({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -7987,6 +7998,7 @@ extension ClientExtension$Fragment$NavigatableEpisode on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Fragment$NavigatableEpisode? readFragment$NavigatableEpisode({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -8227,6 +8239,7 @@ extension ClientExtension$Fragment$NavigatableShow on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Fragment$NavigatableShow? readFragment$NavigatableShow({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -8623,6 +8636,7 @@ extension ClientExtension$Fragment$NavigatableChapter on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Fragment$NavigatableChapter? readFragment$NavigatableChapter({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -9030,6 +9044,7 @@ extension UtilityExtension$Fragment$ItemSection on Fragment$ItemSection {
         this,
         (i) => i,
       );
+
   _T when<_T>({
     required _T Function(Fragment$ItemSection$$PosterSection) posterSection,
     required _T Function(Fragment$ItemSection$$FeaturedSection) featuredSection,
@@ -9476,6 +9491,7 @@ extension ClientExtension$Fragment$ItemSection on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Fragment$ItemSection? readFragment$ItemSection({
     required Map<String, dynamic> idFields,
     Variables$Fragment$ItemSection? variables,
@@ -19848,6 +19864,7 @@ extension UtilityExtension$Fragment$GridSection on Fragment$GridSection {
         this,
         (i) => i,
       );
+
   _T when<_T>({
     required _T Function(Fragment$GridSection$$DefaultGridSection)
         defaultGridSection,
@@ -20082,6 +20099,7 @@ extension ClientExtension$Fragment$GridSection on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Fragment$GridSection? readFragment$GridSection({
     required Map<String, dynamic> idFields,
     Variables$Fragment$GridSection? variables,
@@ -21493,6 +21511,7 @@ extension UtilityExtension$Fragment$Section on Fragment$Section {
         this,
         (i) => i,
       );
+
   _T when<_T>({
     required _T Function(Fragment$Section$$PosterSection) posterSection,
     required _T Function(Fragment$Section$$FeaturedSection) featuredSection,
@@ -22781,6 +22800,7 @@ extension ClientExtension$Fragment$Section on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Fragment$Section? readFragment$Section({
     required Map<String, dynamic> idFields,
     Variables$Fragment$Section? variables,
@@ -23954,6 +23974,7 @@ extension UtilityExtension$Fragment$Section$$PosterSection$items$items$item
             this,
             (i) => i,
           );
+
   _T when<_T>({
     required _T Function(
             Fragment$Section$$PosterSection$items$items$item$$Episode)
@@ -27066,6 +27087,7 @@ extension UtilityExtension$Fragment$Section$$PosterSection$items$items$item$$Pla
             this,
             (i) => i,
           );
+
   _T when<_T>({
     required _T Function(
             Fragment$Section$$PosterSection$items$items$item$$Playlist$items$items$$Short)
@@ -29329,6 +29351,7 @@ extension UtilityExtension$Fragment$Section$$FeaturedSection$items$items$item
             this,
             (i) => i,
           );
+
   _T when<_T>({
     required _T Function(
             Fragment$Section$$FeaturedSection$items$items$item$$Episode)
@@ -33234,6 +33257,7 @@ extension UtilityExtension$Fragment$Section$$DefaultSection$items$items$item
             this,
             (i) => i,
           );
+
   _T when<_T>({
     required _T Function(
             Fragment$Section$$DefaultSection$items$items$item$$Episode)
@@ -37160,6 +37184,7 @@ extension UtilityExtension$Fragment$Section$$CardSection$items$items$item
             this,
             (i) => i,
           );
+
   _T when<_T>({
     required _T Function(
             Fragment$Section$$CardSection$items$items$item$$Episode)
@@ -41170,6 +41195,7 @@ extension UtilityExtension$Fragment$Section$$ListSection$items$items$item
             this,
             (i) => i,
           );
+
   _T when<_T>({
     required _T Function(
             Fragment$Section$$ListSection$items$items$item$$Episode)
@@ -45061,6 +45087,7 @@ extension UtilityExtension$Fragment$Section$$CardListSection$items$items$item
             this,
             (i) => i,
           );
+
   _T when<_T>({
     required _T Function(
             Fragment$Section$$CardListSection$items$items$item$$Episode)
@@ -49169,6 +49196,7 @@ extension UtilityExtension$Fragment$Section$$DefaultGridSection$items$items$item
             this,
             (i) => i,
           );
+
   _T when<_T>({
     required _T Function(
             Fragment$Section$$DefaultGridSection$items$items$item$$Episode)
@@ -53127,6 +53155,7 @@ extension UtilityExtension$Fragment$Section$$PosterGridSection$items$items$item
             this,
             (i) => i,
           );
+
   _T when<_T>({
     required _T Function(
             Fragment$Section$$PosterGridSection$items$items$item$$Episode)
@@ -57073,6 +57102,7 @@ extension UtilityExtension$Fragment$Section$$IconGridSection$items$items$item
             this,
             (i) => i,
           );
+
   _T when<_T>({
     required _T Function(
             Fragment$Section$$IconGridSection$items$items$item$$Episode)
@@ -64538,6 +64568,7 @@ extension ClientExtension$Fragment$CardItem on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Fragment$CardItem? readFragment$CardItem({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -64635,6 +64666,7 @@ extension UtilityExtension$Fragment$CardItem$item on Fragment$CardItem$item {
         this,
         (i) => i,
       );
+
   _T when<_T>({
     required _T Function(Fragment$CardItem$item$$Episode) episode,
     required _T Function(Fragment$CardItem$item$$Show) show,
@@ -68046,9 +68078,11 @@ extension ClientExtension$Query$Page on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$Page>> query$Page(
           Options$Query$Page options) async =>
       await this.query(options);
+
   graphql.ObservableQuery<Query$Page> watchQuery$Page(
           WatchOptions$Query$Page options) =>
       this.watchQuery(options);
+
   void writeQuery$Page({
     required Query$Page data,
     required Variables$Query$Page variables,
@@ -68062,6 +68096,7 @@ extension ClientExtension$Query$Page on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Query$Page? readQuery$Page({
     required Variables$Query$Page variables,
     bool optimistic = true,

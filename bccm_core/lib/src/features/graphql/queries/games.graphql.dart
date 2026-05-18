@@ -196,6 +196,7 @@ extension ClientExtension$Fragment$UrlGame on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Fragment$UrlGame? readFragment$UrlGame({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -605,9 +606,11 @@ extension ClientExtension$Query$GetGame on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$GetGame>> query$GetGame(
           Options$Query$GetGame options) async =>
       await this.query(options);
+
   graphql.ObservableQuery<Query$GetGame> watchQuery$GetGame(
           WatchOptions$Query$GetGame options) =>
       this.watchQuery(options);
+
   void writeQuery$GetGame({
     required Query$GetGame data,
     required Variables$Query$GetGame variables,
@@ -621,6 +624,7 @@ extension ClientExtension$Query$GetGame on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Query$GetGame? readQuery$GetGame({
     required Variables$Query$GetGame variables,
     bool optimistic = true,

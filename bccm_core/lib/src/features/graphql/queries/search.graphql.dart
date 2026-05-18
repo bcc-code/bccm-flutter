@@ -154,6 +154,7 @@ extension UtilityExtension$Fragment$SearchResultItem
         this,
         (i) => i,
       );
+
   _T when<_T>({
     required _T Function(Fragment$SearchResultItem$$EpisodeSearchItem)
         episodeSearchItem,
@@ -469,6 +470,7 @@ extension ClientExtension$Fragment$SearchResultItem on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Fragment$SearchResultItem? readFragment$SearchResultItem({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -1890,9 +1892,11 @@ extension ClientExtension$Query$Search on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$Search>> query$Search(
           Options$Query$Search options) async =>
       await this.query(options);
+
   graphql.ObservableQuery<Query$Search> watchQuery$Search(
           WatchOptions$Query$Search options) =>
       this.watchQuery(options);
+
   void writeQuery$Search({
     required Query$Search data,
     required Variables$Query$Search variables,
@@ -1906,6 +1910,7 @@ extension ClientExtension$Query$Search on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Query$Search? readQuery$Search({
     required Variables$Query$Search variables,
     bool optimistic = true,

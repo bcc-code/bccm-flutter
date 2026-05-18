@@ -257,6 +257,7 @@ extension ClientExtension$Fragment$EpisodeChapter on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Fragment$EpisodeChapter? readFragment$EpisodeChapter({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -330,6 +331,7 @@ extension UtilityExtension$Fragment$EpisodeContext on Fragment$EpisodeContext {
         this,
         (i) => i,
       );
+
   _T when<_T>({
     required _T Function(Fragment$EpisodeContext$$ContextCollection)
         contextCollection,
@@ -688,6 +690,7 @@ extension ClientExtension$Fragment$EpisodeContext on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Fragment$EpisodeContext? readFragment$EpisodeContext({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -1277,6 +1280,7 @@ extension UtilityExtension$Fragment$EpisodeContext$$ContextCollection$items$item
             this,
             (i) => i,
           );
+
   _T when<_T>({
     required _T Function(
             Fragment$EpisodeContext$$ContextCollection$items$items$item$$Show)
@@ -4197,6 +4201,7 @@ extension ClientExtension$Fragment$BasicStream on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Fragment$BasicStream? readFragment$BasicStream({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -4688,6 +4693,7 @@ extension ClientExtension$Fragment$SeasonListEpisode on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Fragment$SeasonListEpisode? readFragment$SeasonListEpisode({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -5262,6 +5268,7 @@ extension UtilityExtension$Fragment$PlayableMediaItem
             this,
             (i) => i,
           );
+
   _T when<_T>({
     required _T Function(Fragment$PlayableMediaItem$$Episode) episode,
     required _T Function(Fragment$PlayableMediaItem$$Short) short,
@@ -5656,6 +5663,7 @@ extension ClientExtension$Fragment$PlayableMediaItem on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Fragment$PlayableMediaItem? readFragment$PlayableMediaItem({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -6132,6 +6140,7 @@ extension UtilityExtension$Fragment$PlayableMediaItem$$Episode$context
             this,
             (i) => i,
           );
+
   _T when<_T>({
     required _T Function(
             Fragment$PlayableMediaItem$$Episode$context$$ContextCollection)
@@ -7715,6 +7724,7 @@ extension ClientExtension$Fragment$EpisodeDetails on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Fragment$EpisodeDetails? readFragment$EpisodeDetails({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -8195,6 +8205,7 @@ extension ClientExtension$Fragment$EpisodeAvailability
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Fragment$EpisodeAvailability? readFragment$EpisodeAvailability({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -8649,6 +8660,7 @@ extension ClientExtension$Fragment$EpisodeListEpisode on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Fragment$EpisodeListEpisode? readFragment$EpisodeListEpisode({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -9901,9 +9913,11 @@ extension ClientExtension$Query$FetchEpisode on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$FetchEpisode>> query$FetchEpisode(
           Options$Query$FetchEpisode options) async =>
       await this.query(options);
+
   graphql.ObservableQuery<Query$FetchEpisode> watchQuery$FetchEpisode(
           WatchOptions$Query$FetchEpisode options) =>
       this.watchQuery(options);
+
   void writeQuery$FetchEpisode({
     required Query$FetchEpisode data,
     required Variables$Query$FetchEpisode variables,
@@ -9917,6 +9931,7 @@ extension ClientExtension$Query$FetchEpisode on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Query$FetchEpisode? readQuery$FetchEpisode({
     required Variables$Query$FetchEpisode variables,
     bool optimistic = true,
@@ -10798,6 +10813,7 @@ extension UtilityExtension$Query$FetchEpisode$episode$context
             this,
             (i) => i,
           );
+
   _T when<_T>({
     required _T Function(Query$FetchEpisode$episode$context$$ContextCollection)
         contextCollection,
@@ -12379,6 +12395,7 @@ extension UtilityExtension$Query$FetchEpisode$episode$context$$ContextCollection
             this,
             (i) => i,
           );
+
   _T when<_T>({
     required _T Function(
             Query$FetchEpisode$episode$context$$ContextCollection$items$items$item$$Show)
@@ -15627,9 +15644,11 @@ extension ClientExtension$Query$legacyIDLookup on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$legacyIDLookup>> query$legacyIDLookup(
           [Options$Query$legacyIDLookup? options]) async =>
       await this.query(options ?? Options$Query$legacyIDLookup());
+
   graphql.ObservableQuery<Query$legacyIDLookup> watchQuery$legacyIDLookup(
           [WatchOptions$Query$legacyIDLookup? options]) =>
       this.watchQuery(options ?? WatchOptions$Query$legacyIDLookup());
+
   void writeQuery$legacyIDLookup({
     required Query$legacyIDLookup data,
     Variables$Query$legacyIDLookup? variables,
@@ -15644,6 +15663,7 @@ extension ClientExtension$Query$legacyIDLookup on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Query$legacyIDLookup? readQuery$legacyIDLookup({
     Variables$Query$legacyIDLookup? variables,
     bool optimistic = true,
@@ -16189,9 +16209,11 @@ extension ClientExtension$Query$EpisodeDetails on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$EpisodeDetails>> query$EpisodeDetails(
           Options$Query$EpisodeDetails options) async =>
       await this.query(options);
+
   graphql.ObservableQuery<Query$EpisodeDetails> watchQuery$EpisodeDetails(
           WatchOptions$Query$EpisodeDetails options) =>
       this.watchQuery(options);
+
   void writeQuery$EpisodeDetails({
     required Query$EpisodeDetails data,
     required Variables$Query$EpisodeDetails variables,
@@ -16206,6 +16228,7 @@ extension ClientExtension$Query$EpisodeDetails on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Query$EpisodeDetails? readQuery$EpisodeDetails({
     required Variables$Query$EpisodeDetails variables,
     bool optimistic = true,
@@ -16653,10 +16676,12 @@ extension ClientExtension$Query$getDefaultEpisodeForShow
       query$getDefaultEpisodeForShow(
               Options$Query$getDefaultEpisodeForShow options) async =>
           await this.query(options);
+
   graphql.ObservableQuery<Query$getDefaultEpisodeForShow>
       watchQuery$getDefaultEpisodeForShow(
               WatchOptions$Query$getDefaultEpisodeForShow options) =>
           this.watchQuery(options);
+
   void writeQuery$getDefaultEpisodeForShow({
     required Query$getDefaultEpisodeForShow data,
     required Variables$Query$getDefaultEpisodeForShow variables,
@@ -16671,6 +16696,7 @@ extension ClientExtension$Query$getDefaultEpisodeForShow
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Query$getDefaultEpisodeForShow? readQuery$getDefaultEpisodeForShow({
     required Variables$Query$getDefaultEpisodeForShow variables,
     bool optimistic = true,
@@ -17442,9 +17468,11 @@ extension ClientExtension$Query$getNextEpisodes on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$getNextEpisodes>> query$getNextEpisodes(
           Options$Query$getNextEpisodes options) async =>
       await this.query(options);
+
   graphql.ObservableQuery<Query$getNextEpisodes> watchQuery$getNextEpisodes(
           WatchOptions$Query$getNextEpisodes options) =>
       this.watchQuery(options);
+
   void writeQuery$getNextEpisodes({
     required Query$getNextEpisodes data,
     required Variables$Query$getNextEpisodes variables,
@@ -17459,6 +17487,7 @@ extension ClientExtension$Query$getNextEpisodes on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Query$getNextEpisodes? readQuery$getNextEpisodes({
     required Variables$Query$getNextEpisodes variables,
     bool optimistic = true,
@@ -18110,6 +18139,7 @@ extension UtilityExtension$Query$getNextEpisodes$episode$next$context
             this,
             (i) => i,
           );
+
   _T when<_T>({
     required _T Function(
             Query$getNextEpisodes$episode$next$context$$ContextCollection)
@@ -19478,10 +19508,12 @@ extension ClientExtension$Query$getEpisodeAvailability
       query$getEpisodeAvailability(
               Options$Query$getEpisodeAvailability options) async =>
           await this.query(options);
+
   graphql.ObservableQuery<Query$getEpisodeAvailability>
       watchQuery$getEpisodeAvailability(
               WatchOptions$Query$getEpisodeAvailability options) =>
           this.watchQuery(options);
+
   void writeQuery$getEpisodeAvailability({
     required Query$getEpisodeAvailability data,
     required Variables$Query$getEpisodeAvailability variables,
@@ -19496,6 +19528,7 @@ extension ClientExtension$Query$getEpisodeAvailability
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Query$getEpisodeAvailability? readQuery$getEpisodeAvailability({
     required Variables$Query$getEpisodeAvailability variables,
     bool optimistic = true,

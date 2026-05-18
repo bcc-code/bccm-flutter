@@ -567,10 +567,12 @@ extension ClientExtension$Query$FetchMoreItemsForItemSection
       query$FetchMoreItemsForItemSection(
               Options$Query$FetchMoreItemsForItemSection options) async =>
           await this.query(options);
+
   graphql.ObservableQuery<Query$FetchMoreItemsForItemSection>
       watchQuery$FetchMoreItemsForItemSection(
               WatchOptions$Query$FetchMoreItemsForItemSection options) =>
           this.watchQuery(options);
+
   void writeQuery$FetchMoreItemsForItemSection({
     required Query$FetchMoreItemsForItemSection data,
     required Variables$Query$FetchMoreItemsForItemSection variables,
@@ -585,6 +587,7 @@ extension ClientExtension$Query$FetchMoreItemsForItemSection
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Query$FetchMoreItemsForItemSection? readQuery$FetchMoreItemsForItemSection({
     required Variables$Query$FetchMoreItemsForItemSection variables,
     bool optimistic = true,
@@ -791,6 +794,7 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section
             this,
             (i) => i,
           );
+
   _T when<_T>({
     required _T Function(
             Query$FetchMoreItemsForItemSection$section$$PosterSection)
@@ -2431,6 +2435,7 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$PosterSec
             this,
             (i) => i,
           );
+
   _T when<_T>({
     required _T Function(
             Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Episode)
@@ -5690,6 +5695,7 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$PosterSec
             this,
             (i) => i,
           );
+
   _T when<_T>({
     required _T Function(
             Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Playlist$items$items$$Short)
@@ -8099,6 +8105,7 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$FeaturedS
             this,
             (i) => i,
           );
+
   _T when<_T>({
     required _T Function(
             Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Episode)
@@ -12239,6 +12246,7 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$DefaultSe
             this,
             (i) => i,
           );
+
   _T when<_T>({
     required _T Function(
             Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Episode)
@@ -16408,6 +16416,7 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$CardSecti
             this,
             (i) => i,
           );
+
   _T when<_T>({
     required _T Function(
             Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Episode)
@@ -20700,6 +20709,7 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$ListSecti
             this,
             (i) => i,
           );
+
   _T when<_T>({
     required _T Function(
             Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Episode)
@@ -24883,6 +24893,7 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$CardListS
             this,
             (i) => i,
           );
+
   _T when<_T>({
     required _T Function(
             Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Episode)
@@ -29221,6 +29232,7 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$DefaultGr
             this,
             (i) => i,
           );
+
   _T when<_T>({
     required _T Function(
             Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Episode)
@@ -33385,6 +33397,7 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$PosterGri
             this,
             (i) => i,
           );
+
   _T when<_T>({
     required _T Function(
             Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Episode)
@@ -37545,6 +37558,7 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$IconGridS
             this,
             (i) => i,
           );
+
   _T when<_T>({
     required _T Function(
             Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Episode)
@@ -45632,9 +45646,11 @@ extension ClientExtension$Query$GetSection on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$GetSection>> query$GetSection(
           Options$Query$GetSection options) async =>
       await this.query(options);
+
   graphql.ObservableQuery<Query$GetSection> watchQuery$GetSection(
           WatchOptions$Query$GetSection options) =>
       this.watchQuery(options);
+
   void writeQuery$GetSection({
     required Query$GetSection data,
     required Variables$Query$GetSection variables,
@@ -45648,6 +45664,7 @@ extension ClientExtension$Query$GetSection on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Query$GetSection? readQuery$GetSection({
     required Variables$Query$GetSection variables,
     bool optimistic = true,
@@ -45829,6 +45846,7 @@ extension UtilityExtension$Query$GetSection$section
         this,
         (i) => i,
       );
+
   _T when<_T>({
     required _T Function(Query$GetSection$section$$PosterSection) posterSection,
     required _T Function(Query$GetSection$section$$FeaturedSection)
@@ -47329,6 +47347,7 @@ extension UtilityExtension$Query$GetSection$section$$PosterSection$items$items$i
             this,
             (i) => i,
           );
+
   _T when<_T>({
     required _T Function(
             Query$GetSection$section$$PosterSection$items$items$item$$Episode)
@@ -50554,6 +50573,7 @@ extension UtilityExtension$Query$GetSection$section$$PosterSection$items$items$i
             this,
             (i) => i,
           );
+
   _T when<_T>({
     required _T Function(
             Query$GetSection$section$$PosterSection$items$items$item$$Playlist$items$items$$Short)
@@ -52881,6 +52901,7 @@ extension UtilityExtension$Query$GetSection$section$$FeaturedSection$items$items
             this,
             (i) => i,
           );
+
   _T when<_T>({
     required _T Function(
             Query$GetSection$section$$FeaturedSection$items$items$item$$Episode)
@@ -56911,6 +56932,7 @@ extension UtilityExtension$Query$GetSection$section$$DefaultSection$items$items$
             this,
             (i) => i,
           );
+
   _T when<_T>({
     required _T Function(
             Query$GetSection$section$$DefaultSection$items$items$item$$Episode)
@@ -60965,6 +60987,7 @@ extension UtilityExtension$Query$GetSection$section$$CardSection$items$items$ite
             this,
             (i) => i,
           );
+
   _T when<_T>({
     required _T Function(
             Query$GetSection$section$$CardSection$items$items$item$$Episode)
@@ -65116,6 +65139,7 @@ extension UtilityExtension$Query$GetSection$section$$ListSection$items$items$ite
             this,
             (i) => i,
           );
+
   _T when<_T>({
     required _T Function(
             Query$GetSection$section$$ListSection$items$items$item$$Episode)
@@ -69164,6 +69188,7 @@ extension UtilityExtension$Query$GetSection$section$$CardListSection$items$items
             this,
             (i) => i,
           );
+
   _T when<_T>({
     required _T Function(
             Query$GetSection$section$$CardListSection$items$items$item$$Episode)
@@ -73403,6 +73428,7 @@ extension UtilityExtension$Query$GetSection$section$$DefaultGridSection$items$it
             this,
             (i) => i,
           );
+
   _T when<_T>({
     required _T Function(
             Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode)
@@ -77487,6 +77513,7 @@ extension UtilityExtension$Query$GetSection$section$$PosterGridSection$items$ite
             this,
             (i) => i,
           );
+
   _T when<_T>({
     required _T Function(
             Query$GetSection$section$$PosterGridSection$items$items$item$$Episode)
@@ -81548,6 +81575,7 @@ extension UtilityExtension$Query$GetSection$section$$IconGridSection$items$items
             this,
             (i) => i,
           );
+
   _T when<_T>({
     required _T Function(
             Query$GetSection$section$$IconGridSection$items$items$item$$Episode)

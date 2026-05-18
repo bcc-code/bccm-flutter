@@ -307,6 +307,7 @@ extension ClientExtension$Fragment$KidsEpisodeThumbnail
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Fragment$KidsEpisodeThumbnail? readFragment$KidsEpisodeThumbnail({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -802,9 +803,11 @@ extension ClientExtension$Query$GetShowOverview on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$GetShowOverview>> query$GetShowOverview(
           Options$Query$GetShowOverview options) async =>
       await this.query(options);
+
   graphql.ObservableQuery<Query$GetShowOverview> watchQuery$GetShowOverview(
           WatchOptions$Query$GetShowOverview options) =>
       this.watchQuery(options);
+
   void writeQuery$GetShowOverview({
     required Query$GetShowOverview data,
     required Variables$Query$GetShowOverview variables,
@@ -819,6 +822,7 @@ extension ClientExtension$Query$GetShowOverview on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Query$GetShowOverview? readQuery$GetShowOverview({
     required Variables$Query$GetShowOverview variables,
     bool optimistic = true,
@@ -2181,10 +2185,12 @@ extension ClientExtension$Query$GetPlaylistOverview on graphql.GraphQLClient {
       query$GetPlaylistOverview(
               Options$Query$GetPlaylistOverview options) async =>
           await this.query(options);
+
   graphql.ObservableQuery<Query$GetPlaylistOverview>
       watchQuery$GetPlaylistOverview(
               WatchOptions$Query$GetPlaylistOverview options) =>
           this.watchQuery(options);
+
   void writeQuery$GetPlaylistOverview({
     required Query$GetPlaylistOverview data,
     required Variables$Query$GetPlaylistOverview variables,
@@ -2199,6 +2205,7 @@ extension ClientExtension$Query$GetPlaylistOverview on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Query$GetPlaylistOverview? readQuery$GetPlaylistOverview({
     required Variables$Query$GetPlaylistOverview variables,
     bool optimistic = true,
@@ -2634,6 +2641,7 @@ extension UtilityExtension$Query$GetPlaylistOverview$playlist$items$items
             this,
             (i) => i,
           );
+
   _T when<_T>({
     required _T Function(
             Query$GetPlaylistOverview$playlist$items$items$$Episode)

@@ -478,9 +478,11 @@ extension ClientExtension$Query$Application on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$Application>> query$Application(
           [Options$Query$Application? options]) async =>
       await this.query(options ?? Options$Query$Application());
+
   graphql.ObservableQuery<Query$Application> watchQuery$Application(
           [WatchOptions$Query$Application? options]) =>
       this.watchQuery(options ?? WatchOptions$Query$Application());
+
   void writeQuery$Application({
     required Query$Application data,
     Variables$Query$Application? variables,
@@ -494,6 +496,7 @@ extension ClientExtension$Query$Application on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Query$Application? readQuery$Application({
     Variables$Query$Application? variables,
     bool optimistic = true,

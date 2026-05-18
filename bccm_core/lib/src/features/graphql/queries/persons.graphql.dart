@@ -410,6 +410,7 @@ extension ClientExtension$Fragment$Contribution on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Fragment$Contribution? readFragment$Contribution({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -611,6 +612,7 @@ extension UtilityExtension$Fragment$Contribution$item
             this,
             (i) => i,
           );
+
   _T when<_T>({
     required _T Function(Fragment$Contribution$item$$Episode) episode,
     required _T Function(Fragment$Contribution$item$$Chapter) chapter,
@@ -2640,6 +2642,7 @@ extension UtilityExtension$Fragment$ContributionItemId
             this,
             (i) => i,
           );
+
   _T when<_T>({
     required _T Function(Fragment$ContributionItemId$$Playlist) playlist,
     required _T Function(Fragment$ContributionItemId$$Game) game,
@@ -2854,6 +2857,7 @@ extension ClientExtension$Fragment$ContributionItemId on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Fragment$ContributionItemId? readFragment$ContributionItemId({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -4324,9 +4328,11 @@ extension ClientExtension$Query$GetPerson on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$GetPerson>> query$GetPerson(
           Options$Query$GetPerson options) async =>
       await this.query(options);
+
   graphql.ObservableQuery<Query$GetPerson> watchQuery$GetPerson(
           WatchOptions$Query$GetPerson options) =>
       this.watchQuery(options);
+
   void writeQuery$GetPerson({
     required Query$GetPerson data,
     required Variables$Query$GetPerson variables,
@@ -4340,6 +4346,7 @@ extension ClientExtension$Query$GetPerson on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Query$GetPerson? readQuery$GetPerson({
     required Variables$Query$GetPerson variables,
     bool optimistic = true,
@@ -5418,10 +5425,12 @@ extension ClientExtension$Query$GetRandomContribution on graphql.GraphQLClient {
       query$GetRandomContribution(
               Options$Query$GetRandomContribution options) async =>
           await this.query(options);
+
   graphql.ObservableQuery<Query$GetRandomContribution>
       watchQuery$GetRandomContribution(
               WatchOptions$Query$GetRandomContribution options) =>
           this.watchQuery(options);
+
   void writeQuery$GetRandomContribution({
     required Query$GetRandomContribution data,
     required Variables$Query$GetRandomContribution variables,
@@ -5436,6 +5445,7 @@ extension ClientExtension$Query$GetRandomContribution on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Query$GetRandomContribution? readQuery$GetRandomContribution({
     required Variables$Query$GetRandomContribution variables,
     bool optimistic = true,
@@ -6404,9 +6414,11 @@ extension ClientExtension$Query$GetContributions on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$GetContributions>> query$GetContributions(
           Options$Query$GetContributions options) async =>
       await this.query(options);
+
   graphql.ObservableQuery<Query$GetContributions> watchQuery$GetContributions(
           WatchOptions$Query$GetContributions options) =>
       this.watchQuery(options);
+
   void writeQuery$GetContributions({
     required Query$GetContributions data,
     required Variables$Query$GetContributions variables,
@@ -6421,6 +6433,7 @@ extension ClientExtension$Query$GetContributions on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Query$GetContributions? readQuery$GetContributions({
     required Variables$Query$GetContributions variables,
     bool optimistic = true,

@@ -132,6 +132,7 @@ extension UtilityExtension$Fragment$Prompt on Fragment$Prompt {
         this,
         (i) => i,
       );
+
   _T when<_T>({
     required _T Function(Fragment$Prompt$$SurveyPrompt) surveyPrompt,
     required _T Function() orElse,
@@ -350,6 +351,7 @@ extension ClientExtension$Fragment$Prompt on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Fragment$Prompt? readFragment$Prompt({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -885,6 +887,7 @@ extension ClientExtension$Fragment$Survey on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Fragment$Survey? readFragment$Survey({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -1164,6 +1167,7 @@ extension UtilityExtension$Fragment$SurveyQuestion on Fragment$SurveyQuestion {
         this,
         (i) => i,
       );
+
   _T when<_T>({
     required _T Function(Fragment$SurveyQuestion$$SurveyRatingQuestion)
         surveyRatingQuestion,
@@ -1428,6 +1432,7 @@ extension ClientExtension$Fragment$SurveyQuestion on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Fragment$SurveyQuestion? readFragment$SurveyQuestion({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -2283,9 +2288,11 @@ extension ClientExtension$Query$getPrompts on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$getPrompts>> query$getPrompts(
           [Options$Query$getPrompts? options]) async =>
       await this.query(options ?? Options$Query$getPrompts());
+
   graphql.ObservableQuery<Query$getPrompts> watchQuery$getPrompts(
           [WatchOptions$Query$getPrompts? options]) =>
       this.watchQuery(options ?? WatchOptions$Query$getPrompts());
+
   void writeQuery$getPrompts({
     required Query$getPrompts data,
     bool broadcast = true,
@@ -2297,6 +2304,7 @@ extension ClientExtension$Query$getPrompts on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Query$getPrompts? readQuery$getPrompts({bool optimistic = true}) {
     final result = this.readQuery(
       graphql.Request(
@@ -2762,6 +2770,7 @@ extension ClientExtension$Mutation$answerSurveyQuestion
       mutate$answerSurveyQuestion(
               Options$Mutation$answerSurveyQuestion options) async =>
           await this.mutate(options);
+
   graphql.ObservableQuery<Mutation$answerSurveyQuestion>
       watchMutation$answerSurveyQuestion(
               WatchOptions$Mutation$answerSurveyQuestion options) =>

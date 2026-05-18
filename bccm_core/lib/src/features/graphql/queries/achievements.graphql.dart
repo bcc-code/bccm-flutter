@@ -304,6 +304,7 @@ extension ClientExtension$Fragment$Achievement on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Fragment$Achievement? readFragment$Achievement({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -701,6 +702,7 @@ extension ClientExtension$Fragment$AchievementGroup on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Fragment$AchievementGroup? readFragment$AchievementGroup({
     required Map<String, dynamic> idFields,
     Variables$Fragment$AchievementGroup? variables,
@@ -1327,10 +1329,12 @@ extension ClientExtension$Query$getAchievementGroups on graphql.GraphQLClient {
       query$getAchievementGroups(
               Options$Query$getAchievementGroups options) async =>
           await this.query(options);
+
   graphql.ObservableQuery<Query$getAchievementGroups>
       watchQuery$getAchievementGroups(
               WatchOptions$Query$getAchievementGroups options) =>
           this.watchQuery(options);
+
   void writeQuery$getAchievementGroups({
     required Query$getAchievementGroups data,
     required Variables$Query$getAchievementGroups variables,
@@ -1345,6 +1349,7 @@ extension ClientExtension$Query$getAchievementGroups on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Query$getAchievementGroups? readQuery$getAchievementGroups({
     required Variables$Query$getAchievementGroups variables,
     bool optimistic = true,
@@ -1974,10 +1979,12 @@ extension ClientExtension$Query$getAchievementGroup on graphql.GraphQLClient {
       query$getAchievementGroup(
               Options$Query$getAchievementGroup options) async =>
           await this.query(options);
+
   graphql.ObservableQuery<Query$getAchievementGroup>
       watchQuery$getAchievementGroup(
               WatchOptions$Query$getAchievementGroup options) =>
           this.watchQuery(options);
+
   void writeQuery$getAchievementGroup({
     required Query$getAchievementGroup data,
     required Variables$Query$getAchievementGroup variables,
@@ -1992,6 +1999,7 @@ extension ClientExtension$Query$getAchievementGroup on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Query$getAchievementGroup? readQuery$getAchievementGroup({
     required Variables$Query$getAchievementGroup variables,
     bool optimistic = true,
@@ -2320,10 +2328,12 @@ extension ClientExtension$Query$getPendingAchievements
       query$getPendingAchievements(
               [Options$Query$getPendingAchievements? options]) async =>
           await this.query(options ?? Options$Query$getPendingAchievements());
+
   graphql.ObservableQuery<
       Query$getPendingAchievements> watchQuery$getPendingAchievements(
           [WatchOptions$Query$getPendingAchievements? options]) =>
       this.watchQuery(options ?? WatchOptions$Query$getPendingAchievements());
+
   void writeQuery$getPendingAchievements({
     required Query$getPendingAchievements data,
     bool broadcast = true,
@@ -2335,6 +2345,7 @@ extension ClientExtension$Query$getPendingAchievements
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Query$getPendingAchievements? readQuery$getPendingAchievements(
       {bool optimistic = true}) {
     final result = this.readQuery(
@@ -2762,6 +2773,7 @@ extension ClientExtension$Mutation$confirmAchievement on graphql.GraphQLClient {
       mutate$confirmAchievement(
               Options$Mutation$confirmAchievement options) async =>
           await this.mutate(options);
+
   graphql.ObservableQuery<Mutation$confirmAchievement>
       watchMutation$confirmAchievement(
               WatchOptions$Mutation$confirmAchievement options) =>

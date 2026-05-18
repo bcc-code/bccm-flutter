@@ -299,6 +299,7 @@ extension ClientExtension$Fragment$PlayableMediaItemShort
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Fragment$PlayableMediaItemShort? readFragment$PlayableMediaItemShort({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -758,6 +759,7 @@ extension ClientExtension$Fragment$Short on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Fragment$Short? readFragment$Short({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -1001,6 +1003,7 @@ extension UtilityExtension$Fragment$Short$source$item
             this,
             (i) => i,
           );
+
   _T when<_T>({
     required _T Function(Fragment$Short$source$item$$Episode) episode,
     required _T Function() orElse,
@@ -1730,9 +1733,11 @@ extension ClientExtension$Query$getShorts on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$getShorts>> query$getShorts(
           [Options$Query$getShorts? options]) async =>
       await this.query(options ?? Options$Query$getShorts());
+
   graphql.ObservableQuery<Query$getShorts> watchQuery$getShorts(
           [WatchOptions$Query$getShorts? options]) =>
       this.watchQuery(options ?? WatchOptions$Query$getShorts());
+
   void writeQuery$getShorts({
     required Query$getShorts data,
     Variables$Query$getShorts? variables,
@@ -1746,6 +1751,7 @@ extension ClientExtension$Query$getShorts on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Query$getShorts? readQuery$getShorts({
     Variables$Query$getShorts? variables,
     bool optimistic = true,
@@ -2348,9 +2354,11 @@ extension ClientExtension$Query$getShort on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$getShort>> query$getShort(
           Options$Query$getShort options) async =>
       await this.query(options);
+
   graphql.ObservableQuery<Query$getShort> watchQuery$getShort(
           WatchOptions$Query$getShort options) =>
       this.watchQuery(options);
+
   void writeQuery$getShort({
     required Query$getShort data,
     required Variables$Query$getShort variables,
@@ -2364,6 +2372,7 @@ extension ClientExtension$Query$getShort on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Query$getShort? readQuery$getShort({
     required Variables$Query$getShort variables,
     bool optimistic = true,
@@ -2825,6 +2834,7 @@ extension ClientExtension$Mutation$setShortProgress on graphql.GraphQLClient {
       mutate$setShortProgress(
               Options$Mutation$setShortProgress options) async =>
           await this.mutate(options);
+
   graphql.ObservableQuery<Mutation$setShortProgress>
       watchMutation$setShortProgress(
               WatchOptions$Mutation$setShortProgress options) =>
@@ -3346,9 +3356,11 @@ extension ClientExtension$Query$getShortStreams on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$getShortStreams>> query$getShortStreams(
           Options$Query$getShortStreams options) async =>
       await this.query(options);
+
   graphql.ObservableQuery<Query$getShortStreams> watchQuery$getShortStreams(
           WatchOptions$Query$getShortStreams options) =>
       this.watchQuery(options);
+
   void writeQuery$getShortStreams({
     required Query$getShortStreams data,
     required Variables$Query$getShortStreams variables,
@@ -3363,6 +3375,7 @@ extension ClientExtension$Query$getShortStreams on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Query$getShortStreams? readQuery$getShortStreams({
     required Variables$Query$getShortStreams variables,
     bool optimistic = true,

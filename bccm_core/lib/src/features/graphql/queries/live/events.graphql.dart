@@ -323,6 +323,7 @@ extension ClientExtension$Fragment$CalendarEventWithEntries
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Fragment$CalendarEventWithEntries? readFragment$CalendarEventWithEntries({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -729,9 +730,11 @@ extension ClientExtension$Query$GetEvent on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$GetEvent>> query$GetEvent(
           Options$Query$GetEvent options) async =>
       await this.query(options);
+
   graphql.ObservableQuery<Query$GetEvent> watchQuery$GetEvent(
           WatchOptions$Query$GetEvent options) =>
       this.watchQuery(options);
+
   void writeQuery$GetEvent({
     required Query$GetEvent data,
     required Variables$Query$GetEvent variables,
@@ -745,6 +748,7 @@ extension ClientExtension$Query$GetEvent on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Query$GetEvent? readQuery$GetEvent({
     required Variables$Query$GetEvent variables,
     bool optimistic = true,
@@ -1062,9 +1066,11 @@ extension ClientExtension$Query$ListEvents on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$ListEvents>> query$ListEvents(
           [Options$Query$ListEvents? options]) async =>
       await this.query(options ?? Options$Query$ListEvents());
+
   graphql.ObservableQuery<Query$ListEvents> watchQuery$ListEvents(
           [WatchOptions$Query$ListEvents? options]) =>
       this.watchQuery(options ?? WatchOptions$Query$ListEvents());
+
   void writeQuery$ListEvents({
     required Query$ListEvents data,
     bool broadcast = true,
@@ -1076,6 +1082,7 @@ extension ClientExtension$Query$ListEvents on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Query$ListEvents? readQuery$ListEvents({bool optimistic = true}) {
     final result = this.readQuery(
       graphql.Request(

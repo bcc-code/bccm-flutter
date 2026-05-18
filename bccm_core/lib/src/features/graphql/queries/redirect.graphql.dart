@@ -397,9 +397,11 @@ extension ClientExtension$Query$GetRedirectUrl on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$GetRedirectUrl>> query$GetRedirectUrl(
           Options$Query$GetRedirectUrl options) async =>
       await this.query(options);
+
   graphql.ObservableQuery<Query$GetRedirectUrl> watchQuery$GetRedirectUrl(
           WatchOptions$Query$GetRedirectUrl options) =>
       this.watchQuery(options);
+
   void writeQuery$GetRedirectUrl({
     required Query$GetRedirectUrl data,
     required Variables$Query$GetRedirectUrl variables,
@@ -414,6 +416,7 @@ extension ClientExtension$Query$GetRedirectUrl on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Query$GetRedirectUrl? readQuery$GetRedirectUrl({
     required Variables$Query$GetRedirectUrl variables,
     bool optimistic = true,

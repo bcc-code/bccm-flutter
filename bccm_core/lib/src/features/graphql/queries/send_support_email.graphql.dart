@@ -479,6 +479,7 @@ extension ClientExtension$Mutation$sendSupportEmail on graphql.GraphQLClient {
       mutate$sendSupportEmail(
               Options$Mutation$sendSupportEmail options) async =>
           await this.mutate(options);
+
   graphql.ObservableQuery<Mutation$sendSupportEmail>
       watchMutation$sendSupportEmail(
               WatchOptions$Mutation$sendSupportEmail options) =>

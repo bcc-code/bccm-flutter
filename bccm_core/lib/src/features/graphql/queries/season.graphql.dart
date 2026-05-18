@@ -490,9 +490,11 @@ extension ClientExtension$Query$GetSeasonEpisodes on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$GetSeasonEpisodes>> query$GetSeasonEpisodes(
           Options$Query$GetSeasonEpisodes options) async =>
       await this.query(options);
+
   graphql.ObservableQuery<Query$GetSeasonEpisodes> watchQuery$GetSeasonEpisodes(
           WatchOptions$Query$GetSeasonEpisodes options) =>
       this.watchQuery(options);
+
   void writeQuery$GetSeasonEpisodes({
     required Query$GetSeasonEpisodes data,
     required Variables$Query$GetSeasonEpisodes variables,
@@ -507,6 +509,7 @@ extension ClientExtension$Query$GetSeasonEpisodes on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Query$GetSeasonEpisodes? readQuery$GetSeasonEpisodes({
     required Variables$Query$GetSeasonEpisodes variables,
     bool optimistic = true,

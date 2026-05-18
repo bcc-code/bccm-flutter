@@ -200,6 +200,7 @@ extension ClientExtension$Fragment$Question on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Fragment$Question? readFragment$Question({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -457,6 +458,7 @@ extension ClientExtension$Fragment$FAQCategory on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Fragment$FAQCategory? readFragment$FAQCategory({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -911,9 +913,11 @@ extension ClientExtension$Query$FAQ on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$FAQ>> query$FAQ(
           [Options$Query$FAQ? options]) async =>
       await this.query(options ?? Options$Query$FAQ());
+
   graphql.ObservableQuery<Query$FAQ> watchQuery$FAQ(
           [WatchOptions$Query$FAQ? options]) =>
       this.watchQuery(options ?? WatchOptions$Query$FAQ());
+
   void writeQuery$FAQ({
     required Query$FAQ data,
     bool broadcast = true,
@@ -924,6 +928,7 @@ extension ClientExtension$Query$FAQ on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Query$FAQ? readQuery$FAQ({bool optimistic = true}) {
     final result = this.readQuery(
       graphql.Request(

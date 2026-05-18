@@ -491,6 +491,7 @@ extension ClientExtension$Mutation$setEpisodeProgress on graphql.GraphQLClient {
       mutate$setEpisodeProgress(
               Options$Mutation$setEpisodeProgress options) async =>
           await this.mutate(options);
+
   graphql.ObservableQuery<Mutation$setEpisodeProgress>
       watchMutation$setEpisodeProgress(
               WatchOptions$Mutation$setEpisodeProgress options) =>

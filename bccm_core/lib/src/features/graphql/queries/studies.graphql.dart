@@ -337,6 +337,7 @@ extension ClientExtension$Fragment$LessonProgressOverview
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Fragment$LessonProgressOverview? readFragment$LessonProgressOverview({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -806,6 +807,7 @@ extension ClientExtension$Fragment$EpisodeLessonProgressOverview
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Fragment$EpisodeLessonProgressOverview?
       readFragment$EpisodeLessonProgressOverview({
     required Map<String, dynamic> idFields,
@@ -1513,10 +1515,12 @@ extension ClientExtension$Query$GetStudyTopicLessonStatuses
       query$GetStudyTopicLessonStatuses(
               Options$Query$GetStudyTopicLessonStatuses options) async =>
           await this.query(options);
+
   graphql.ObservableQuery<Query$GetStudyTopicLessonStatuses>
       watchQuery$GetStudyTopicLessonStatuses(
               WatchOptions$Query$GetStudyTopicLessonStatuses options) =>
           this.watchQuery(options);
+
   void writeQuery$GetStudyTopicLessonStatuses({
     required Query$GetStudyTopicLessonStatuses data,
     required Variables$Query$GetStudyTopicLessonStatuses variables,
@@ -1531,6 +1535,7 @@ extension ClientExtension$Query$GetStudyTopicLessonStatuses
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Query$GetStudyTopicLessonStatuses? readQuery$GetStudyTopicLessonStatuses({
     required Variables$Query$GetStudyTopicLessonStatuses variables,
     bool optimistic = true,
@@ -2874,10 +2879,12 @@ extension ClientExtension$Query$GetEpisodeLessonProgress
       query$GetEpisodeLessonProgress(
               Options$Query$GetEpisodeLessonProgress options) async =>
           await this.query(options);
+
   graphql.ObservableQuery<Query$GetEpisodeLessonProgress>
       watchQuery$GetEpisodeLessonProgress(
               WatchOptions$Query$GetEpisodeLessonProgress options) =>
           this.watchQuery(options);
+
   void writeQuery$GetEpisodeLessonProgress({
     required Query$GetEpisodeLessonProgress data,
     required Variables$Query$GetEpisodeLessonProgress variables,
@@ -2892,6 +2899,7 @@ extension ClientExtension$Query$GetEpisodeLessonProgress
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Query$GetEpisodeLessonProgress? readQuery$GetEpisodeLessonProgress({
     required Variables$Query$GetEpisodeLessonProgress variables,
     bool optimistic = true,
@@ -4038,10 +4046,12 @@ extension ClientExtension$Query$GetSeasonLessonProgress
       query$GetSeasonLessonProgress(
               Options$Query$GetSeasonLessonProgress options) async =>
           await this.query(options);
+
   graphql.ObservableQuery<Query$GetSeasonLessonProgress>
       watchQuery$GetSeasonLessonProgress(
               WatchOptions$Query$GetSeasonLessonProgress options) =>
           this.watchQuery(options);
+
   void writeQuery$GetSeasonLessonProgress({
     required Query$GetSeasonLessonProgress data,
     required Variables$Query$GetSeasonLessonProgress variables,
@@ -4056,6 +4066,7 @@ extension ClientExtension$Query$GetSeasonLessonProgress
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Query$GetSeasonLessonProgress? readQuery$GetSeasonLessonProgress({
     required Variables$Query$GetSeasonLessonProgress variables,
     bool optimistic = true,
@@ -4787,9 +4798,11 @@ extension ClientExtension$Query$GetLessonTitle on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$GetLessonTitle>> query$GetLessonTitle(
           Options$Query$GetLessonTitle options) async =>
       await this.query(options);
+
   graphql.ObservableQuery<Query$GetLessonTitle> watchQuery$GetLessonTitle(
           WatchOptions$Query$GetLessonTitle options) =>
       this.watchQuery(options);
+
   void writeQuery$GetLessonTitle({
     required Query$GetLessonTitle data,
     required Variables$Query$GetLessonTitle variables,
@@ -4804,6 +4817,7 @@ extension ClientExtension$Query$GetLessonTitle on graphql.GraphQLClient {
         data: data.toJson(),
         broadcast: broadcast,
       );
+
   Query$GetLessonTitle? readQuery$GetLessonTitle({
     required Variables$Query$GetLessonTitle variables,
     bool optimistic = true,
