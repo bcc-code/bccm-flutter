@@ -1,0 +1,56 @@
+fragment PlaylistDetails on Playlist {
+  id
+  title
+  description
+  image
+}
+
+fragment PlaylistContributor on Contributor {
+  contributionTypes
+  person {
+    id
+    name
+  }
+}
+
+query GetPlaylist($id: ID!, $first: Int, $cursor: Cursor) {
+  playlist(id: $id) {
+    ...PlaylistDetails
+    items(first: $first, cursor: $cursor) {
+      total
+      first
+      nextCursor
+      hasNext
+      items {
+        __typename
+        ... on Episode {
+          id
+          title
+          description
+          duration
+          copyrightHolder {
+            id
+            name
+            type
+          }
+          songs {
+            id
+            key
+            title
+            urls
+            contributors {
+              ...PlaylistContributor
+            }
+          }
+          contributors {
+            ...PlaylistContributor
+          }
+        }
+        ... on Short {
+          id
+          title
+        }
+      }
+    }
+  }
+}

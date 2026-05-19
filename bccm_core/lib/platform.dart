@@ -13,6 +13,7 @@ export 'package:bccm_core/src/features/graphql/queries/games.graphql.dart';
 export 'package:bccm_core/src/features/graphql/queries/me.graphql.dart';
 export 'package:bccm_core/src/features/graphql/queries/my_list.graphql.dart';
 export 'package:bccm_core/src/features/graphql/queries/page.graphql.dart';
+export 'package:bccm_core/src/features/graphql/queries/playlists.graphql.dart';
 export 'package:bccm_core/src/features/graphql/queries/progress.graphql.dart';
 export 'package:bccm_core/src/features/graphql/queries/prompts.graphql.dart';
 export 'package:bccm_core/src/features/graphql/queries/redirect.graphql.dart';
