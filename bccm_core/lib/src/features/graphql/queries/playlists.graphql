@@ -38,6 +38,10 @@ query GetPlaylist($id: ID!, $first: Int, $cursor: Cursor) {
             key
             title
             urls
+            collection {
+              id
+              code
+            }
             contributors {
               ...PlaylistContributor
             }

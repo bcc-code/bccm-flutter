@@ -1189,6 +1189,35 @@ const documentNodeQueryGetPlaylist = DocumentNode(definitions: [
                             selectionSet: null,
                           ),
                           FieldNode(
+                            name: NameNode(value: 'collection'),
+                            alias: null,
+                            arguments: [],
+                            directives: [],
+                            selectionSet: SelectionSetNode(selections: [
+                              FieldNode(
+                                name: NameNode(value: 'id'),
+                                alias: null,
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null,
+                              ),
+                              FieldNode(
+                                name: NameNode(value: 'code'),
+                                alias: null,
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null,
+                              ),
+                              FieldNode(
+                                name: NameNode(value: '__typename'),
+                                alias: null,
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null,
+                              ),
+                            ]),
+                          ),
+                          FieldNode(
                             name: NameNode(value: 'contributors'),
                             alias: null,
                             arguments: [],
@@ -2578,6 +2607,7 @@ class Query$GetPlaylist$playlist$items$items$$Episode$songs {
     required this.key,
     required this.title,
     required this.urls,
+    required this.collection,
     required this.contributors,
     this.$__typename = 'Song',
   });
@@ -2588,6 +2618,7 @@ class Query$GetPlaylist$playlist$items$items$$Episode$songs {
     final l$key = json['key'];
     final l$title = json['title'];
     final l$urls = json['urls'];
+    final l$collection = json['collection'];
     final l$contributors = json['contributors'];
     final l$$__typename = json['__typename'];
     return Query$GetPlaylist$playlist$items$items$$Episode$songs(
@@ -2595,6 +2626,9 @@ class Query$GetPlaylist$playlist$items$items$$Episode$songs {
       key: (l$key as String),
       title: (l$title as String),
       urls: (l$urls as List<dynamic>).map((e) => (e as String)).toList(),
+      collection:
+          Query$GetPlaylist$playlist$items$items$$Episode$songs$collection
+              .fromJson((l$collection as Map<String, dynamic>)),
       contributors: (l$contributors as List<dynamic>)
           .map((e) => Fragment$PlaylistContributor.fromJson(
               (e as Map<String, dynamic>)))
@@ -2611,6 +2645,9 @@ class Query$GetPlaylist$playlist$items$items$$Episode$songs {
 
   final List<String> urls;
 
+  final Query$GetPlaylist$playlist$items$items$$Episode$songs$collection
+      collection;
+
   final List<Fragment$PlaylistContributor> contributors;
 
   final String $__typename;
@@ -2625,6 +2662,8 @@ class Query$GetPlaylist$playlist$items$items$$Episode$songs {
     _resultData['title'] = l$title;
     final l$urls = urls;
     _resultData['urls'] = l$urls.map((e) => e).toList();
+    final l$collection = collection;
+    _resultData['collection'] = l$collection.toJson();
     final l$contributors = contributors;
     _resultData['contributors'] =
         l$contributors.map((e) => e.toJson()).toList();
@@ -2639,6 +2678,7 @@ class Query$GetPlaylist$playlist$items$items$$Episode$songs {
     final l$key = key;
     final l$title = title;
     final l$urls = urls;
+    final l$collection = collection;
     final l$contributors = contributors;
     final l$$__typename = $__typename;
     return Object.hashAll([
@@ -2646,6 +2686,7 @@ class Query$GetPlaylist$playlist$items$items$$Episode$songs {
       l$key,
       l$title,
       Object.hashAll(l$urls.map((v) => v)),
+      l$collection,
       Object.hashAll(l$contributors.map((v) => v)),
       l$$__typename,
     ]);
@@ -2686,6 +2727,11 @@ class Query$GetPlaylist$playlist$items$items$$Episode$songs {
       if (l$urls$entry != lOther$urls$entry) {
         return false;
       }
+    }
+    final l$collection = collection;
+    final lOther$collection = other.collection;
+    if (l$collection != lOther$collection) {
+      return false;
     }
     final l$contributors = contributors;
     final lOther$contributors = other.contributors;
@@ -2735,9 +2781,13 @@ abstract class CopyWith$Query$GetPlaylist$playlist$items$items$$Episode$songs<
     String? key,
     String? title,
     List<String>? urls,
+    Query$GetPlaylist$playlist$items$items$$Episode$songs$collection?
+        collection,
     List<Fragment$PlaylistContributor>? contributors,
     String? $__typename,
   });
+  CopyWith$Query$GetPlaylist$playlist$items$items$$Episode$songs$collection<
+      TRes> get collection;
   TRes contributors(
       Iterable<Fragment$PlaylistContributor> Function(
               Iterable<
@@ -2766,6 +2816,7 @@ class _CopyWithImpl$Query$GetPlaylist$playlist$items$items$$Episode$songs<TRes>
     Object? key = _undefined,
     Object? title = _undefined,
     Object? urls = _undefined,
+    Object? collection = _undefined,
     Object? contributors = _undefined,
     Object? $__typename = _undefined,
   }) =>
@@ -2778,6 +2829,10 @@ class _CopyWithImpl$Query$GetPlaylist$playlist$items$items$$Episode$songs<TRes>
         urls: urls == _undefined || urls == null
             ? _instance.urls
             : (urls as List<String>),
+        collection: collection == _undefined || collection == null
+            ? _instance.collection
+            : (collection
+                as Query$GetPlaylist$playlist$items$items$$Episode$songs$collection),
         contributors: contributors == _undefined || contributors == null
             ? _instance.contributors
             : (contributors as List<Fragment$PlaylistContributor>),
@@ -2785,6 +2840,13 @@ class _CopyWithImpl$Query$GetPlaylist$playlist$items$items$$Episode$songs<TRes>
             ? _instance.$__typename
             : ($__typename as String),
       ));
+
+  CopyWith$Query$GetPlaylist$playlist$items$items$$Episode$songs$collection<
+      TRes> get collection {
+    final local$collection = _instance.collection;
+    return CopyWith$Query$GetPlaylist$playlist$items$items$$Episode$songs$collection(
+        local$collection, (e) => call(collection: e));
+  }
 
   TRes contributors(
           Iterable<Fragment$PlaylistContributor> Function(
@@ -2814,12 +2876,180 @@ class _CopyWithStubImpl$Query$GetPlaylist$playlist$items$items$$Episode$songs<
     String? key,
     String? title,
     List<String>? urls,
+    Query$GetPlaylist$playlist$items$items$$Episode$songs$collection?
+        collection,
     List<Fragment$PlaylistContributor>? contributors,
     String? $__typename,
   }) =>
       _res;
 
+  CopyWith$Query$GetPlaylist$playlist$items$items$$Episode$songs$collection<
+          TRes>
+      get collection =>
+          CopyWith$Query$GetPlaylist$playlist$items$items$$Episode$songs$collection
+              .stub(_res);
+
   contributors(_fn) => _res;
+}
+
+class Query$GetPlaylist$playlist$items$items$$Episode$songs$collection {
+  Query$GetPlaylist$playlist$items$items$$Episode$songs$collection({
+    required this.id,
+    required this.code,
+    this.$__typename = 'SongCollection',
+  });
+
+  factory Query$GetPlaylist$playlist$items$items$$Episode$songs$collection.fromJson(
+      Map<String, dynamic> json) {
+    final l$id = json['id'];
+    final l$code = json['code'];
+    final l$$__typename = json['__typename'];
+    return Query$GetPlaylist$playlist$items$items$$Episode$songs$collection(
+      id: (l$id as String),
+      code: (l$code as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String id;
+
+  final String code;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$id = id;
+    _resultData['id'] = l$id;
+    final l$code = code;
+    _resultData['code'] = l$code;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$id = id;
+    final l$code = code;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$id,
+      l$code,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (other
+            is! Query$GetPlaylist$playlist$items$items$$Episode$songs$collection ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$id = id;
+    final lOther$id = other.id;
+    if (l$id != lOther$id) {
+      return false;
+    }
+    final l$code = code;
+    final lOther$code = other.code;
+    if (l$code != lOther$code) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$GetPlaylist$playlist$items$items$$Episode$songs$collection
+    on Query$GetPlaylist$playlist$items$items$$Episode$songs$collection {
+  CopyWith$Query$GetPlaylist$playlist$items$items$$Episode$songs$collection<
+          Query$GetPlaylist$playlist$items$items$$Episode$songs$collection>
+      get copyWith =>
+          CopyWith$Query$GetPlaylist$playlist$items$items$$Episode$songs$collection(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$GetPlaylist$playlist$items$items$$Episode$songs$collection<
+    TRes> {
+  factory CopyWith$Query$GetPlaylist$playlist$items$items$$Episode$songs$collection(
+    Query$GetPlaylist$playlist$items$items$$Episode$songs$collection instance,
+    TRes Function(
+            Query$GetPlaylist$playlist$items$items$$Episode$songs$collection)
+        then,
+  ) = _CopyWithImpl$Query$GetPlaylist$playlist$items$items$$Episode$songs$collection;
+
+  factory CopyWith$Query$GetPlaylist$playlist$items$items$$Episode$songs$collection.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$GetPlaylist$playlist$items$items$$Episode$songs$collection;
+
+  TRes call({
+    String? id,
+    String? code,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Query$GetPlaylist$playlist$items$items$$Episode$songs$collection<
+        TRes>
+    implements
+        CopyWith$Query$GetPlaylist$playlist$items$items$$Episode$songs$collection<
+            TRes> {
+  _CopyWithImpl$Query$GetPlaylist$playlist$items$items$$Episode$songs$collection(
+    this._instance,
+    this._then,
+  );
+
+  final Query$GetPlaylist$playlist$items$items$$Episode$songs$collection
+      _instance;
+
+  final TRes Function(
+      Query$GetPlaylist$playlist$items$items$$Episode$songs$collection) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? id = _undefined,
+    Object? code = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Query$GetPlaylist$playlist$items$items$$Episode$songs$collection(
+        id: id == _undefined || id == null ? _instance.id : (id as String),
+        code: code == _undefined || code == null
+            ? _instance.code
+            : (code as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Query$GetPlaylist$playlist$items$items$$Episode$songs$collection<
+        TRes>
+    implements
+        CopyWith$Query$GetPlaylist$playlist$items$items$$Episode$songs$collection<
+            TRes> {
+  _CopyWithStubImpl$Query$GetPlaylist$playlist$items$items$$Episode$songs$collection(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? id,
+    String? code,
+    String? $__typename,
+  }) =>
+      _res;
 }
 
 class Query$GetPlaylist$playlist$items$items$$Short
