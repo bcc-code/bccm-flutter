@@ -13,6 +13,20 @@ fragment PlaylistContributor on Contributor {
   }
 }
 
+fragment PlaylistSong on Song {
+  id
+  key
+  title
+  urls
+  collection {
+    id
+    code
+  }
+  contributors {
+    ...PlaylistContributor
+  }
+}
+
 query GetPlaylist($id: ID!, $first: Int, $cursor: Cursor) {
   playlist(id: $id) {
     ...PlaylistDetails
@@ -34,17 +48,7 @@ query GetPlaylist($id: ID!, $first: Int, $cursor: Cursor) {
             type
           }
           songs {
-            id
-            key
-            title
-            urls
-            collection {
-              id
-              code
-            }
-            contributors {
-              ...PlaylistContributor
-            }
+            ...PlaylistSong
           }
           contributors {
             ...PlaylistContributor
@@ -53,6 +57,9 @@ query GetPlaylist($id: ID!, $first: Int, $cursor: Cursor) {
         ... on Short {
           id
           title
+          songs {
+            ...PlaylistSong
+          }
         }
       }
     }
