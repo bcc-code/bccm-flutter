@@ -1,18 +1,3 @@
-fragment PlaylistDetails on Playlist {
-  id
-  title
-  description
-  image
-}
-
-fragment PlaylistContributor on Contributor {
-  contributionTypes
-  person {
-    id
-    name
-  }
-}
-
 fragment PlaylistSong on Song {
   id
   key
@@ -23,13 +8,20 @@ fragment PlaylistSong on Song {
     code
   }
   contributors {
-    ...PlaylistContributor
+    contributionTypes
+    person {
+      id
+      name
+    }
   }
 }
 
 query GetPlaylist($id: ID!, $first: Int, $cursor: Cursor) {
   playlist(id: $id) {
-    ...PlaylistDetails
+    id
+    title
+    description
+    image
     items(first: $first, cursor: $cursor) {
       total
       first
@@ -38,22 +30,13 @@ query GetPlaylist($id: ID!, $first: Int, $cursor: Cursor) {
       items {
         __typename
         ... on Episode {
-          id
-          title
-          description
-          duration
+          ...PlayableMediaItem
           copyrightHolder {
-            id
             name
-            type
           }
           songs {
             ...PlaylistSong
           }
-          contributors {
-            ...PlaylistContributor
-          }
-          ...PlayableMediaItem
         }
         ... on Short {
           id
