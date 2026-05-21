@@ -171,11 +171,34 @@ fragment PlayableMediaItem on MediaItem {
 
 fragment EpisodeDetails on Episode {
   id
+  description
   publishDate
   availableFrom
   availableTo
   ageRating
   audioLanguages
+  contributors {
+    person {
+      name
+    }
+    contributionTypes
+  }
+  songs {
+    id
+    title
+    collection {
+      title
+    }
+    contributors {
+      person {
+        name
+      }
+      contributionTypes
+    }
+  }
+  copyrightHolder {
+    name
+  }
   season {
     show {
       description
