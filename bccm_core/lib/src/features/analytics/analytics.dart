@@ -22,21 +22,13 @@ class Analytics {
   @mustBeOverridden
   void heyJustHereToTellYouIBelieveTheSessionIsStillAlive() {}
   @mustBeOverridden
-  void sectionItemClicked(
-    BuildContext context, {
-    SectionAnalyticsData? sectionAnalyticsOverride,
-    SectionItemAnalyticsData? itemAnalyticsOverride,
-  }) {}
+  void sectionItemClicked(BuildContext context, {SectionAnalyticsData? sectionAnalyticsOverride, SectionItemAnalyticsData? itemAnalyticsOverride}) {}
   @mustBeOverridden
   void myListTabEntryClicked(BuildContext context) {}
   @mustBeOverridden
   void searchPerformed(SearchPerformedEvent event) {}
   @mustBeOverridden
-  void searchResultClicked(
-    BuildContext context, {
-    SearchAnalytics? searchAnalyticsOverride,
-    SearchItemAnalytics? itemAnalyticsOverride,
-  }) {}
+  void searchResultClicked(BuildContext context, {SearchAnalytics? searchAnalyticsOverride, SearchItemAnalytics? itemAnalyticsOverride}) {}
   @mustBeOverridden
   void deepLinkOpened(DeepLinkOpenedEvent event) {}
   @mustBeOverridden
@@ -111,20 +103,12 @@ class RudderAnalytics extends Analytics {
   DateTime _lastAlive = DateTime.now();
   void Function() onShouldRefreshSessionId;
 
-  RudderAnalytics({
-    required this.ref,
-    required String rudderstackWriteKey,
-    required this.onShouldRefreshSessionId,
-    bool? strictAnonymousAnalytics,
-  }) {
+  RudderAnalytics({required this.ref, required String rudderstackWriteKey, required this.onShouldRefreshSessionId, bool? strictAnonymousAnalytics}) {
     final RudderController controller = RudderController.instance;
     RudderLogger.init(RudderLogger.VERBOSE);
     RudderConfigBuilder builder = RudderConfigBuilder();
     builder.withDataPlaneUrl('https://rs.bcc.media/');
-    builder.withMobileConfig(MobileConfig(
-      recordScreenViews: false,
-      collectDeviceId: strictAnonymousAnalytics != true,
-    ));
+    builder.withMobileConfig(MobileConfig(recordScreenViews: false, collectDeviceId: strictAnonymousAnalytics != true));
     controller.initialize(rudderstackWriteKey, config: builder.build());
     PackageInfo.fromPlatform().then((value) => packageInfo = value);
   }
@@ -156,7 +140,7 @@ class RudderAnalytics extends Analytics {
       'appName': packageInfo == null ? null : formatAppName(packageInfo!),
       'appLanguage': settings.appLanguage.languageCode,
       'releaseVersion': packageInfo == null ? null : formatAppVersion(packageInfo!),
-      'sessionId': settings.sessionId,
+      'appSessionId': settings.sessionId,
       'featureFlags': ref.read(featureFlagVariantListProvider).join(','),
     });
 
@@ -164,29 +148,29 @@ class RudderAnalytics extends Analytics {
   }
 
   @override
-  void sectionItemClicked(
-    BuildContext context, {
-    SectionAnalyticsData? sectionAnalyticsOverride,
-    SectionItemAnalyticsData? itemAnalyticsOverride,
-  }) {
+  void sectionItemClicked(BuildContext context, {SectionAnalyticsData? sectionAnalyticsOverride, SectionItemAnalyticsData? itemAnalyticsOverride}) {
     var sectionAnalytics = sectionAnalyticsOverride ?? SectionAnalytics.read(context);
     if (sectionAnalytics == null) {
-      FlutterError.reportError(FlutterErrorDetails(
-        exception: Exception('Missing SectionAnalytics.'),
-        stack: StackTrace.current,
-        library: 'bccm_core',
-        context: ErrorDescription('analytics'),
-      ));
+      FlutterError.reportError(
+        FlutterErrorDetails(
+          exception: Exception('Missing SectionAnalytics.'),
+          stack: StackTrace.current,
+          library: 'bccm_core',
+          context: ErrorDescription('analytics'),
+        ),
+      );
       return;
     }
     var sectionItemAnalytics = itemAnalyticsOverride ?? SectionItemAnalytics.read(context);
     if (sectionItemAnalytics == null) {
-      FlutterError.reportError(FlutterErrorDetails(
-        exception: Exception('Missing sectionItemAnalytics.'),
-        stack: StackTrace.current,
-        library: 'bccm_core',
-        context: ErrorDescription('analytics'),
-      ));
+      FlutterError.reportError(
+        FlutterErrorDetails(
+          exception: Exception('Missing sectionItemAnalytics.'),
+          stack: StackTrace.current,
+          library: 'bccm_core',
+          context: ErrorDescription('analytics'),
+        ),
+      );
       return;
     }
     var event = SectionClickedEvent(
@@ -201,10 +185,7 @@ class RudderAnalytics extends Analytics {
       elementId: sectionItemAnalytics.id,
       meta: sectionAnalytics.meta == null && sectionItemAnalytics.meta == null
           ? null
-          : {
-              ...sectionAnalytics.meta ?? {},
-              ...sectionItemAnalytics.meta ?? {},
-            },
+          : {...sectionAnalytics.meta ?? {}, ...sectionItemAnalytics.meta ?? {}},
     );
     RudderController.instance.track('section_clicked', properties: getCommonData().putValue(map: event.toJson()));
   }
@@ -213,12 +194,14 @@ class RudderAnalytics extends Analytics {
   void myListTabEntryClicked(BuildContext context) {
     var sectionItemAnalytics = SectionItemAnalytics.read(context);
     if (sectionItemAnalytics == null) {
-      FlutterError.reportError(FlutterErrorDetails(
-        exception: Exception('Missing sectionItemAnalytics.'),
-        stack: StackTrace.current,
-        library: 'bccm_core',
-        context: ErrorDescription('analytics'),
-      ));
+      FlutterError.reportError(
+        FlutterErrorDetails(
+          exception: Exception('Missing sectionItemAnalytics.'),
+          stack: StackTrace.current,
+          library: 'bccm_core',
+          context: ErrorDescription('analytics'),
+        ),
+      );
       return;
     }
 
@@ -242,29 +225,29 @@ class RudderAnalytics extends Analytics {
   }
 
   @override
-  void searchResultClicked(
-    BuildContext context, {
-    SearchAnalytics? searchAnalyticsOverride,
-    SearchItemAnalytics? itemAnalyticsOverride,
-  }) {
+  void searchResultClicked(BuildContext context, {SearchAnalytics? searchAnalyticsOverride, SearchItemAnalytics? itemAnalyticsOverride}) {
     final searchAnalytics = searchAnalyticsOverride ?? InheritedData.read<SearchAnalytics>(context);
     if (searchAnalytics == null) {
-      FlutterError.reportError(FlutterErrorDetails(
-        exception: Exception('Missing SearchAnalytics.'),
-        stack: StackTrace.current,
-        library: 'bccm_core',
-        context: ErrorDescription('analytics'),
-      ));
+      FlutterError.reportError(
+        FlutterErrorDetails(
+          exception: Exception('Missing SearchAnalytics.'),
+          stack: StackTrace.current,
+          library: 'bccm_core',
+          context: ErrorDescription('analytics'),
+        ),
+      );
       return;
     }
     final searchItemAnalytics = itemAnalyticsOverride ?? InheritedData.read<SearchItemAnalytics>(context);
     if (searchItemAnalytics == null) {
-      FlutterError.reportError(FlutterErrorDetails(
-        exception: Exception('Missing SearchItemAnalytics.'),
-        stack: StackTrace.current,
-        library: 'bccm_core',
-        context: ErrorDescription('analytics'),
-      ));
+      FlutterError.reportError(
+        FlutterErrorDetails(
+          exception: Exception('Missing SearchItemAnalytics.'),
+          stack: StackTrace.current,
+          library: 'bccm_core',
+          context: ErrorDescription('analytics'),
+        ),
+      );
       return;
     }
 
