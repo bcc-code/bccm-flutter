@@ -12,7 +12,8 @@ part of 'user_profile.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 UserProfile _$UserProfileFromJson(Map<String, dynamic> json) {
   return _UserProfile.fromJson(json);
@@ -49,25 +50,27 @@ mixin _$UserProfile {
 /// @nodoc
 abstract class $UserProfileCopyWith<$Res> {
   factory $UserProfileCopyWith(
-          UserProfile value, $Res Function(UserProfile) then) =
-      _$UserProfileCopyWithImpl<$Res, UserProfile>;
+    UserProfile value,
+    $Res Function(UserProfile) then,
+  ) = _$UserProfileCopyWithImpl<$Res, UserProfile>;
   @useResult
-  $Res call(
-      {String id,
-      String name,
-      String? nickname,
-      String? picture,
-      String? updatedAt,
-      String? countryIso2Code,
-      int? churchId,
-      String? birthdate,
-      String? email,
-      String? gender,
-      String? givenName,
-      String? familyName,
-      bool? mediaSubscriber,
-      bool? hasMembership,
-      String? bccPersonId});
+  $Res call({
+    String id,
+    String name,
+    String? nickname,
+    String? picture,
+    String? updatedAt,
+    String? countryIso2Code,
+    int? churchId,
+    String? birthdate,
+    String? email,
+    String? gender,
+    String? givenName,
+    String? familyName,
+    bool? mediaSubscriber,
+    bool? hasMembership,
+    String? bccPersonId,
+  });
 }
 
 /// @nodoc
@@ -101,68 +104,71 @@ class _$UserProfileCopyWithImpl<$Res, $Val extends UserProfile>
     Object? hasMembership = freezed,
     Object? bccPersonId = freezed,
   }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      nickname: freezed == nickname
-          ? _value.nickname
-          : nickname // ignore: cast_nullable_to_non_nullable
-              as String?,
-      picture: freezed == picture
-          ? _value.picture
-          : picture // ignore: cast_nullable_to_non_nullable
-              as String?,
-      updatedAt: freezed == updatedAt
-          ? _value.updatedAt
-          : updatedAt // ignore: cast_nullable_to_non_nullable
-              as String?,
-      countryIso2Code: freezed == countryIso2Code
-          ? _value.countryIso2Code
-          : countryIso2Code // ignore: cast_nullable_to_non_nullable
-              as String?,
-      churchId: freezed == churchId
-          ? _value.churchId
-          : churchId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      birthdate: freezed == birthdate
-          ? _value.birthdate
-          : birthdate // ignore: cast_nullable_to_non_nullable
-              as String?,
-      email: freezed == email
-          ? _value.email
-          : email // ignore: cast_nullable_to_non_nullable
-              as String?,
-      gender: freezed == gender
-          ? _value.gender
-          : gender // ignore: cast_nullable_to_non_nullable
-              as String?,
-      givenName: freezed == givenName
-          ? _value.givenName
-          : givenName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      familyName: freezed == familyName
-          ? _value.familyName
-          : familyName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      mediaSubscriber: freezed == mediaSubscriber
-          ? _value.mediaSubscriber
-          : mediaSubscriber // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      hasMembership: freezed == hasMembership
-          ? _value.hasMembership
-          : hasMembership // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      bccPersonId: freezed == bccPersonId
-          ? _value.bccPersonId
-          : bccPersonId // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id: null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                      as String,
+            name: null == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                      as String,
+            nickname: freezed == nickname
+                ? _value.nickname
+                : nickname // ignore: cast_nullable_to_non_nullable
+                      as String?,
+            picture: freezed == picture
+                ? _value.picture
+                : picture // ignore: cast_nullable_to_non_nullable
+                      as String?,
+            updatedAt: freezed == updatedAt
+                ? _value.updatedAt
+                : updatedAt // ignore: cast_nullable_to_non_nullable
+                      as String?,
+            countryIso2Code: freezed == countryIso2Code
+                ? _value.countryIso2Code
+                : countryIso2Code // ignore: cast_nullable_to_non_nullable
+                      as String?,
+            churchId: freezed == churchId
+                ? _value.churchId
+                : churchId // ignore: cast_nullable_to_non_nullable
+                      as int?,
+            birthdate: freezed == birthdate
+                ? _value.birthdate
+                : birthdate // ignore: cast_nullable_to_non_nullable
+                      as String?,
+            email: freezed == email
+                ? _value.email
+                : email // ignore: cast_nullable_to_non_nullable
+                      as String?,
+            gender: freezed == gender
+                ? _value.gender
+                : gender // ignore: cast_nullable_to_non_nullable
+                      as String?,
+            givenName: freezed == givenName
+                ? _value.givenName
+                : givenName // ignore: cast_nullable_to_non_nullable
+                      as String?,
+            familyName: freezed == familyName
+                ? _value.familyName
+                : familyName // ignore: cast_nullable_to_non_nullable
+                      as String?,
+            mediaSubscriber: freezed == mediaSubscriber
+                ? _value.mediaSubscriber
+                : mediaSubscriber // ignore: cast_nullable_to_non_nullable
+                      as bool?,
+            hasMembership: freezed == hasMembership
+                ? _value.hasMembership
+                : hasMembership // ignore: cast_nullable_to_non_nullable
+                      as bool?,
+            bccPersonId: freezed == bccPersonId
+                ? _value.bccPersonId
+                : bccPersonId // ignore: cast_nullable_to_non_nullable
+                      as String?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -170,26 +176,28 @@ class _$UserProfileCopyWithImpl<$Res, $Val extends UserProfile>
 abstract class _$$UserProfileImplCopyWith<$Res>
     implements $UserProfileCopyWith<$Res> {
   factory _$$UserProfileImplCopyWith(
-          _$UserProfileImpl value, $Res Function(_$UserProfileImpl) then) =
-      __$$UserProfileImplCopyWithImpl<$Res>;
+    _$UserProfileImpl value,
+    $Res Function(_$UserProfileImpl) then,
+  ) = __$$UserProfileImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String id,
-      String name,
-      String? nickname,
-      String? picture,
-      String? updatedAt,
-      String? countryIso2Code,
-      int? churchId,
-      String? birthdate,
-      String? email,
-      String? gender,
-      String? givenName,
-      String? familyName,
-      bool? mediaSubscriber,
-      bool? hasMembership,
-      String? bccPersonId});
+  $Res call({
+    String id,
+    String name,
+    String? nickname,
+    String? picture,
+    String? updatedAt,
+    String? countryIso2Code,
+    int? churchId,
+    String? birthdate,
+    String? email,
+    String? gender,
+    String? givenName,
+    String? familyName,
+    bool? mediaSubscriber,
+    bool? hasMembership,
+    String? bccPersonId,
+  });
 }
 
 /// @nodoc
@@ -197,8 +205,9 @@ class __$$UserProfileImplCopyWithImpl<$Res>
     extends _$UserProfileCopyWithImpl<$Res, _$UserProfileImpl>
     implements _$$UserProfileImplCopyWith<$Res> {
   __$$UserProfileImplCopyWithImpl(
-      _$UserProfileImpl _value, $Res Function(_$UserProfileImpl) _then)
-      : super(_value, _then);
+    _$UserProfileImpl _value,
+    $Res Function(_$UserProfileImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of UserProfile
   /// with the given fields replaced by the non-null parameter values.
@@ -221,91 +230,93 @@ class __$$UserProfileImplCopyWithImpl<$Res>
     Object? hasMembership = freezed,
     Object? bccPersonId = freezed,
   }) {
-    return _then(_$UserProfileImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      nickname: freezed == nickname
-          ? _value.nickname
-          : nickname // ignore: cast_nullable_to_non_nullable
-              as String?,
-      picture: freezed == picture
-          ? _value.picture
-          : picture // ignore: cast_nullable_to_non_nullable
-              as String?,
-      updatedAt: freezed == updatedAt
-          ? _value.updatedAt
-          : updatedAt // ignore: cast_nullable_to_non_nullable
-              as String?,
-      countryIso2Code: freezed == countryIso2Code
-          ? _value.countryIso2Code
-          : countryIso2Code // ignore: cast_nullable_to_non_nullable
-              as String?,
-      churchId: freezed == churchId
-          ? _value.churchId
-          : churchId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      birthdate: freezed == birthdate
-          ? _value.birthdate
-          : birthdate // ignore: cast_nullable_to_non_nullable
-              as String?,
-      email: freezed == email
-          ? _value.email
-          : email // ignore: cast_nullable_to_non_nullable
-              as String?,
-      gender: freezed == gender
-          ? _value.gender
-          : gender // ignore: cast_nullable_to_non_nullable
-              as String?,
-      givenName: freezed == givenName
-          ? _value.givenName
-          : givenName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      familyName: freezed == familyName
-          ? _value.familyName
-          : familyName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      mediaSubscriber: freezed == mediaSubscriber
-          ? _value.mediaSubscriber
-          : mediaSubscriber // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      hasMembership: freezed == hasMembership
-          ? _value.hasMembership
-          : hasMembership // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      bccPersonId: freezed == bccPersonId
-          ? _value.bccPersonId
-          : bccPersonId // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$UserProfileImpl(
+        id: null == id
+            ? _value.id
+            : id // ignore: cast_nullable_to_non_nullable
+                  as String,
+        name: null == name
+            ? _value.name
+            : name // ignore: cast_nullable_to_non_nullable
+                  as String,
+        nickname: freezed == nickname
+            ? _value.nickname
+            : nickname // ignore: cast_nullable_to_non_nullable
+                  as String?,
+        picture: freezed == picture
+            ? _value.picture
+            : picture // ignore: cast_nullable_to_non_nullable
+                  as String?,
+        updatedAt: freezed == updatedAt
+            ? _value.updatedAt
+            : updatedAt // ignore: cast_nullable_to_non_nullable
+                  as String?,
+        countryIso2Code: freezed == countryIso2Code
+            ? _value.countryIso2Code
+            : countryIso2Code // ignore: cast_nullable_to_non_nullable
+                  as String?,
+        churchId: freezed == churchId
+            ? _value.churchId
+            : churchId // ignore: cast_nullable_to_non_nullable
+                  as int?,
+        birthdate: freezed == birthdate
+            ? _value.birthdate
+            : birthdate // ignore: cast_nullable_to_non_nullable
+                  as String?,
+        email: freezed == email
+            ? _value.email
+            : email // ignore: cast_nullable_to_non_nullable
+                  as String?,
+        gender: freezed == gender
+            ? _value.gender
+            : gender // ignore: cast_nullable_to_non_nullable
+                  as String?,
+        givenName: freezed == givenName
+            ? _value.givenName
+            : givenName // ignore: cast_nullable_to_non_nullable
+                  as String?,
+        familyName: freezed == familyName
+            ? _value.familyName
+            : familyName // ignore: cast_nullable_to_non_nullable
+                  as String?,
+        mediaSubscriber: freezed == mediaSubscriber
+            ? _value.mediaSubscriber
+            : mediaSubscriber // ignore: cast_nullable_to_non_nullable
+                  as bool?,
+        hasMembership: freezed == hasMembership
+            ? _value.hasMembership
+            : hasMembership // ignore: cast_nullable_to_non_nullable
+                  as bool?,
+        bccPersonId: freezed == bccPersonId
+            ? _value.bccPersonId
+            : bccPersonId // ignore: cast_nullable_to_non_nullable
+                  as String?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$UserProfileImpl extends _UserProfile {
-  const _$UserProfileImpl(
-      {required this.id,
-      required this.name,
-      this.nickname,
-      this.picture,
-      this.updatedAt,
-      this.countryIso2Code,
-      this.churchId,
-      this.birthdate,
-      this.email,
-      this.gender,
-      this.givenName,
-      this.familyName,
-      this.mediaSubscriber,
-      this.hasMembership,
-      this.bccPersonId})
-      : super._();
+  const _$UserProfileImpl({
+    required this.id,
+    required this.name,
+    this.nickname,
+    this.picture,
+    this.updatedAt,
+    this.countryIso2Code,
+    this.churchId,
+    this.birthdate,
+    this.email,
+    this.gender,
+    this.givenName,
+    this.familyName,
+    this.mediaSubscriber,
+    this.hasMembership,
+    this.bccPersonId,
+  }) : super._();
 
   factory _$UserProfileImpl.fromJson(Map<String, dynamic> json) =>
       _$$UserProfileImplFromJson(json);
@@ -381,22 +392,23 @@ class _$UserProfileImpl extends _UserProfile {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      name,
-      nickname,
-      picture,
-      updatedAt,
-      countryIso2Code,
-      churchId,
-      birthdate,
-      email,
-      gender,
-      givenName,
-      familyName,
-      mediaSubscriber,
-      hasMembership,
-      bccPersonId);
+    runtimeType,
+    id,
+    name,
+    nickname,
+    picture,
+    updatedAt,
+    countryIso2Code,
+    churchId,
+    birthdate,
+    email,
+    gender,
+    givenName,
+    familyName,
+    mediaSubscriber,
+    hasMembership,
+    bccPersonId,
+  );
 
   /// Create a copy of UserProfile
   /// with the given fields replaced by the non-null parameter values.
@@ -408,29 +420,28 @@ class _$UserProfileImpl extends _UserProfile {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$UserProfileImplToJson(
-      this,
-    );
+    return _$$UserProfileImplToJson(this);
   }
 }
 
 abstract class _UserProfile extends UserProfile {
-  const factory _UserProfile(
-      {required final String id,
-      required final String name,
-      final String? nickname,
-      final String? picture,
-      final String? updatedAt,
-      final String? countryIso2Code,
-      final int? churchId,
-      final String? birthdate,
-      final String? email,
-      final String? gender,
-      final String? givenName,
-      final String? familyName,
-      final bool? mediaSubscriber,
-      final bool? hasMembership,
-      final String? bccPersonId}) = _$UserProfileImpl;
+  const factory _UserProfile({
+    required final String id,
+    required final String name,
+    final String? nickname,
+    final String? picture,
+    final String? updatedAt,
+    final String? countryIso2Code,
+    final int? churchId,
+    final String? birthdate,
+    final String? email,
+    final String? gender,
+    final String? givenName,
+    final String? familyName,
+    final bool? mediaSubscriber,
+    final bool? hasMembership,
+    final String? bccPersonId,
+  }) = _$UserProfileImpl;
   const _UserProfile._() : super._();
 
   factory _UserProfile.fromJson(Map<String, dynamic> json) =

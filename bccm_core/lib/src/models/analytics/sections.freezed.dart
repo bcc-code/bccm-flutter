@@ -12,7 +12,8 @@ part of 'sections.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 SectionClickedEvent _$SectionClickedEventFromJson(Map<String, dynamic> json) {
   return _SectionClickedEvent.fromJson(json);
@@ -44,20 +45,22 @@ mixin _$SectionClickedEvent {
 /// @nodoc
 abstract class $SectionClickedEventCopyWith<$Res> {
   factory $SectionClickedEventCopyWith(
-          SectionClickedEvent value, $Res Function(SectionClickedEvent) then) =
-      _$SectionClickedEventCopyWithImpl<$Res, SectionClickedEvent>;
+    SectionClickedEvent value,
+    $Res Function(SectionClickedEvent) then,
+  ) = _$SectionClickedEventCopyWithImpl<$Res, SectionClickedEvent>;
   @useResult
-  $Res call(
-      {String sectionId,
-      String? sectionName,
-      int sectionPosition,
-      String sectionType,
-      String? elementName,
-      int elementPosition,
-      String elementType,
-      String elementId,
-      String? pageCode,
-      Map<String, dynamic>? meta});
+  $Res call({
+    String sectionId,
+    String? sectionName,
+    int sectionPosition,
+    String sectionType,
+    String? elementName,
+    int elementPosition,
+    String elementType,
+    String elementId,
+    String? pageCode,
+    Map<String, dynamic>? meta,
+  });
 }
 
 /// @nodoc
@@ -86,79 +89,85 @@ class _$SectionClickedEventCopyWithImpl<$Res, $Val extends SectionClickedEvent>
     Object? pageCode = freezed,
     Object? meta = freezed,
   }) {
-    return _then(_value.copyWith(
-      sectionId: null == sectionId
-          ? _value.sectionId
-          : sectionId // ignore: cast_nullable_to_non_nullable
-              as String,
-      sectionName: freezed == sectionName
-          ? _value.sectionName
-          : sectionName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      sectionPosition: null == sectionPosition
-          ? _value.sectionPosition
-          : sectionPosition // ignore: cast_nullable_to_non_nullable
-              as int,
-      sectionType: null == sectionType
-          ? _value.sectionType
-          : sectionType // ignore: cast_nullable_to_non_nullable
-              as String,
-      elementName: freezed == elementName
-          ? _value.elementName
-          : elementName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      elementPosition: null == elementPosition
-          ? _value.elementPosition
-          : elementPosition // ignore: cast_nullable_to_non_nullable
-              as int,
-      elementType: null == elementType
-          ? _value.elementType
-          : elementType // ignore: cast_nullable_to_non_nullable
-              as String,
-      elementId: null == elementId
-          ? _value.elementId
-          : elementId // ignore: cast_nullable_to_non_nullable
-              as String,
-      pageCode: freezed == pageCode
-          ? _value.pageCode
-          : pageCode // ignore: cast_nullable_to_non_nullable
-              as String?,
-      meta: freezed == meta
-          ? _value.meta
-          : meta // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            sectionId: null == sectionId
+                ? _value.sectionId
+                : sectionId // ignore: cast_nullable_to_non_nullable
+                      as String,
+            sectionName: freezed == sectionName
+                ? _value.sectionName
+                : sectionName // ignore: cast_nullable_to_non_nullable
+                      as String?,
+            sectionPosition: null == sectionPosition
+                ? _value.sectionPosition
+                : sectionPosition // ignore: cast_nullable_to_non_nullable
+                      as int,
+            sectionType: null == sectionType
+                ? _value.sectionType
+                : sectionType // ignore: cast_nullable_to_non_nullable
+                      as String,
+            elementName: freezed == elementName
+                ? _value.elementName
+                : elementName // ignore: cast_nullable_to_non_nullable
+                      as String?,
+            elementPosition: null == elementPosition
+                ? _value.elementPosition
+                : elementPosition // ignore: cast_nullable_to_non_nullable
+                      as int,
+            elementType: null == elementType
+                ? _value.elementType
+                : elementType // ignore: cast_nullable_to_non_nullable
+                      as String,
+            elementId: null == elementId
+                ? _value.elementId
+                : elementId // ignore: cast_nullable_to_non_nullable
+                      as String,
+            pageCode: freezed == pageCode
+                ? _value.pageCode
+                : pageCode // ignore: cast_nullable_to_non_nullable
+                      as String?,
+            meta: freezed == meta
+                ? _value.meta
+                : meta // ignore: cast_nullable_to_non_nullable
+                      as Map<String, dynamic>?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$SectionClickedEventImplCopyWith<$Res>
     implements $SectionClickedEventCopyWith<$Res> {
-  factory _$$SectionClickedEventImplCopyWith(_$SectionClickedEventImpl value,
-          $Res Function(_$SectionClickedEventImpl) then) =
-      __$$SectionClickedEventImplCopyWithImpl<$Res>;
+  factory _$$SectionClickedEventImplCopyWith(
+    _$SectionClickedEventImpl value,
+    $Res Function(_$SectionClickedEventImpl) then,
+  ) = __$$SectionClickedEventImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String sectionId,
-      String? sectionName,
-      int sectionPosition,
-      String sectionType,
-      String? elementName,
-      int elementPosition,
-      String elementType,
-      String elementId,
-      String? pageCode,
-      Map<String, dynamic>? meta});
+  $Res call({
+    String sectionId,
+    String? sectionName,
+    int sectionPosition,
+    String sectionType,
+    String? elementName,
+    int elementPosition,
+    String elementType,
+    String elementId,
+    String? pageCode,
+    Map<String, dynamic>? meta,
+  });
 }
 
 /// @nodoc
 class __$$SectionClickedEventImplCopyWithImpl<$Res>
     extends _$SectionClickedEventCopyWithImpl<$Res, _$SectionClickedEventImpl>
     implements _$$SectionClickedEventImplCopyWith<$Res> {
-  __$$SectionClickedEventImplCopyWithImpl(_$SectionClickedEventImpl _value,
-      $Res Function(_$SectionClickedEventImpl) _then)
-      : super(_value, _then);
+  __$$SectionClickedEventImplCopyWithImpl(
+    _$SectionClickedEventImpl _value,
+    $Res Function(_$SectionClickedEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of SectionClickedEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -176,66 +185,68 @@ class __$$SectionClickedEventImplCopyWithImpl<$Res>
     Object? pageCode = freezed,
     Object? meta = freezed,
   }) {
-    return _then(_$SectionClickedEventImpl(
-      sectionId: null == sectionId
-          ? _value.sectionId
-          : sectionId // ignore: cast_nullable_to_non_nullable
-              as String,
-      sectionName: freezed == sectionName
-          ? _value.sectionName
-          : sectionName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      sectionPosition: null == sectionPosition
-          ? _value.sectionPosition
-          : sectionPosition // ignore: cast_nullable_to_non_nullable
-              as int,
-      sectionType: null == sectionType
-          ? _value.sectionType
-          : sectionType // ignore: cast_nullable_to_non_nullable
-              as String,
-      elementName: freezed == elementName
-          ? _value.elementName
-          : elementName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      elementPosition: null == elementPosition
-          ? _value.elementPosition
-          : elementPosition // ignore: cast_nullable_to_non_nullable
-              as int,
-      elementType: null == elementType
-          ? _value.elementType
-          : elementType // ignore: cast_nullable_to_non_nullable
-              as String,
-      elementId: null == elementId
-          ? _value.elementId
-          : elementId // ignore: cast_nullable_to_non_nullable
-              as String,
-      pageCode: freezed == pageCode
-          ? _value.pageCode
-          : pageCode // ignore: cast_nullable_to_non_nullable
-              as String?,
-      meta: freezed == meta
-          ? _value._meta
-          : meta // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
-    ));
+    return _then(
+      _$SectionClickedEventImpl(
+        sectionId: null == sectionId
+            ? _value.sectionId
+            : sectionId // ignore: cast_nullable_to_non_nullable
+                  as String,
+        sectionName: freezed == sectionName
+            ? _value.sectionName
+            : sectionName // ignore: cast_nullable_to_non_nullable
+                  as String?,
+        sectionPosition: null == sectionPosition
+            ? _value.sectionPosition
+            : sectionPosition // ignore: cast_nullable_to_non_nullable
+                  as int,
+        sectionType: null == sectionType
+            ? _value.sectionType
+            : sectionType // ignore: cast_nullable_to_non_nullable
+                  as String,
+        elementName: freezed == elementName
+            ? _value.elementName
+            : elementName // ignore: cast_nullable_to_non_nullable
+                  as String?,
+        elementPosition: null == elementPosition
+            ? _value.elementPosition
+            : elementPosition // ignore: cast_nullable_to_non_nullable
+                  as int,
+        elementType: null == elementType
+            ? _value.elementType
+            : elementType // ignore: cast_nullable_to_non_nullable
+                  as String,
+        elementId: null == elementId
+            ? _value.elementId
+            : elementId // ignore: cast_nullable_to_non_nullable
+                  as String,
+        pageCode: freezed == pageCode
+            ? _value.pageCode
+            : pageCode // ignore: cast_nullable_to_non_nullable
+                  as String?,
+        meta: freezed == meta
+            ? _value._meta
+            : meta // ignore: cast_nullable_to_non_nullable
+                  as Map<String, dynamic>?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$SectionClickedEventImpl implements _SectionClickedEvent {
-  const _$SectionClickedEventImpl(
-      {required this.sectionId,
-      this.sectionName,
-      required this.sectionPosition,
-      required this.sectionType,
-      this.elementName,
-      required this.elementPosition,
-      required this.elementType,
-      required this.elementId,
-      this.pageCode,
-      final Map<String, dynamic>? meta})
-      : _meta = meta;
+  const _$SectionClickedEventImpl({
+    required this.sectionId,
+    this.sectionName,
+    required this.sectionPosition,
+    required this.sectionType,
+    this.elementName,
+    required this.elementPosition,
+    required this.elementType,
+    required this.elementId,
+    this.pageCode,
+    final Map<String, dynamic>? meta,
+  }) : _meta = meta;
 
   factory _$SectionClickedEventImpl.fromJson(Map<String, dynamic> json) =>
       _$$SectionClickedEventImplFromJson(json);
@@ -302,17 +313,18 @@ class _$SectionClickedEventImpl implements _SectionClickedEvent {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      sectionId,
-      sectionName,
-      sectionPosition,
-      sectionType,
-      elementName,
-      elementPosition,
-      elementType,
-      elementId,
-      pageCode,
-      const DeepCollectionEquality().hash(_meta));
+    runtimeType,
+    sectionId,
+    sectionName,
+    sectionPosition,
+    sectionType,
+    elementName,
+    elementPosition,
+    elementType,
+    elementId,
+    pageCode,
+    const DeepCollectionEquality().hash(_meta),
+  );
 
   /// Create a copy of SectionClickedEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -321,28 +333,29 @@ class _$SectionClickedEventImpl implements _SectionClickedEvent {
   @pragma('vm:prefer-inline')
   _$$SectionClickedEventImplCopyWith<_$SectionClickedEventImpl> get copyWith =>
       __$$SectionClickedEventImplCopyWithImpl<_$SectionClickedEventImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SectionClickedEventImplToJson(
-      this,
-    );
+    return _$$SectionClickedEventImplToJson(this);
   }
 }
 
 abstract class _SectionClickedEvent implements SectionClickedEvent {
-  const factory _SectionClickedEvent(
-      {required final String sectionId,
-      final String? sectionName,
-      required final int sectionPosition,
-      required final String sectionType,
-      final String? elementName,
-      required final int elementPosition,
-      required final String elementType,
-      required final String elementId,
-      final String? pageCode,
-      final Map<String, dynamic>? meta}) = _$SectionClickedEventImpl;
+  const factory _SectionClickedEvent({
+    required final String sectionId,
+    final String? sectionName,
+    required final int sectionPosition,
+    required final String sectionType,
+    final String? elementName,
+    required final int elementPosition,
+    required final String elementType,
+    required final String elementId,
+    final String? pageCode,
+    final Map<String, dynamic>? meta,
+  }) = _$SectionClickedEventImpl;
 
   factory _SectionClickedEvent.fromJson(Map<String, dynamic> json) =
       _$SectionClickedEventImpl.fromJson;
@@ -394,22 +407,26 @@ mixin _$SectionAnalyticsData {
 
 /// @nodoc
 abstract class $SectionAnalyticsDataCopyWith<$Res> {
-  factory $SectionAnalyticsDataCopyWith(SectionAnalyticsData value,
-          $Res Function(SectionAnalyticsData) then) =
-      _$SectionAnalyticsDataCopyWithImpl<$Res, SectionAnalyticsData>;
+  factory $SectionAnalyticsDataCopyWith(
+    SectionAnalyticsData value,
+    $Res Function(SectionAnalyticsData) then,
+  ) = _$SectionAnalyticsDataCopyWithImpl<$Res, SectionAnalyticsData>;
   @useResult
-  $Res call(
-      {String? pageCode,
-      String id,
-      String? name,
-      int position,
-      String type,
-      Map<String, dynamic>? meta});
+  $Res call({
+    String? pageCode,
+    String id,
+    String? name,
+    int position,
+    String type,
+    Map<String, dynamic>? meta,
+  });
 }
 
 /// @nodoc
-class _$SectionAnalyticsDataCopyWithImpl<$Res,
-        $Val extends SectionAnalyticsData>
+class _$SectionAnalyticsDataCopyWithImpl<
+  $Res,
+  $Val extends SectionAnalyticsData
+>
     implements $SectionAnalyticsDataCopyWith<$Res> {
   _$SectionAnalyticsDataCopyWithImpl(this._value, this._then);
 
@@ -430,59 +447,65 @@ class _$SectionAnalyticsDataCopyWithImpl<$Res,
     Object? type = null,
     Object? meta = freezed,
   }) {
-    return _then(_value.copyWith(
-      pageCode: freezed == pageCode
-          ? _value.pageCode
-          : pageCode // ignore: cast_nullable_to_non_nullable
-              as String?,
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      position: null == position
-          ? _value.position
-          : position // ignore: cast_nullable_to_non_nullable
-              as int,
-      type: null == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as String,
-      meta: freezed == meta
-          ? _value.meta
-          : meta // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            pageCode: freezed == pageCode
+                ? _value.pageCode
+                : pageCode // ignore: cast_nullable_to_non_nullable
+                      as String?,
+            id: null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                      as String,
+            name: freezed == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                      as String?,
+            position: null == position
+                ? _value.position
+                : position // ignore: cast_nullable_to_non_nullable
+                      as int,
+            type: null == type
+                ? _value.type
+                : type // ignore: cast_nullable_to_non_nullable
+                      as String,
+            meta: freezed == meta
+                ? _value.meta
+                : meta // ignore: cast_nullable_to_non_nullable
+                      as Map<String, dynamic>?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$SectionAnalyticsDataImplCopyWith<$Res>
     implements $SectionAnalyticsDataCopyWith<$Res> {
-  factory _$$SectionAnalyticsDataImplCopyWith(_$SectionAnalyticsDataImpl value,
-          $Res Function(_$SectionAnalyticsDataImpl) then) =
-      __$$SectionAnalyticsDataImplCopyWithImpl<$Res>;
+  factory _$$SectionAnalyticsDataImplCopyWith(
+    _$SectionAnalyticsDataImpl value,
+    $Res Function(_$SectionAnalyticsDataImpl) then,
+  ) = __$$SectionAnalyticsDataImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String? pageCode,
-      String id,
-      String? name,
-      int position,
-      String type,
-      Map<String, dynamic>? meta});
+  $Res call({
+    String? pageCode,
+    String id,
+    String? name,
+    int position,
+    String type,
+    Map<String, dynamic>? meta,
+  });
 }
 
 /// @nodoc
 class __$$SectionAnalyticsDataImplCopyWithImpl<$Res>
     extends _$SectionAnalyticsDataCopyWithImpl<$Res, _$SectionAnalyticsDataImpl>
     implements _$$SectionAnalyticsDataImplCopyWith<$Res> {
-  __$$SectionAnalyticsDataImplCopyWithImpl(_$SectionAnalyticsDataImpl _value,
-      $Res Function(_$SectionAnalyticsDataImpl) _then)
-      : super(_value, _then);
+  __$$SectionAnalyticsDataImplCopyWithImpl(
+    _$SectionAnalyticsDataImpl _value,
+    $Res Function(_$SectionAnalyticsDataImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of SectionAnalyticsData
   /// with the given fields replaced by the non-null parameter values.
@@ -496,46 +519,48 @@ class __$$SectionAnalyticsDataImplCopyWithImpl<$Res>
     Object? type = null,
     Object? meta = freezed,
   }) {
-    return _then(_$SectionAnalyticsDataImpl(
-      pageCode: freezed == pageCode
-          ? _value.pageCode
-          : pageCode // ignore: cast_nullable_to_non_nullable
-              as String?,
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      position: null == position
-          ? _value.position
-          : position // ignore: cast_nullable_to_non_nullable
-              as int,
-      type: null == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as String,
-      meta: freezed == meta
-          ? _value._meta
-          : meta // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
-    ));
+    return _then(
+      _$SectionAnalyticsDataImpl(
+        pageCode: freezed == pageCode
+            ? _value.pageCode
+            : pageCode // ignore: cast_nullable_to_non_nullable
+                  as String?,
+        id: null == id
+            ? _value.id
+            : id // ignore: cast_nullable_to_non_nullable
+                  as String,
+        name: freezed == name
+            ? _value.name
+            : name // ignore: cast_nullable_to_non_nullable
+                  as String?,
+        position: null == position
+            ? _value.position
+            : position // ignore: cast_nullable_to_non_nullable
+                  as int,
+        type: null == type
+            ? _value.type
+            : type // ignore: cast_nullable_to_non_nullable
+                  as String,
+        meta: freezed == meta
+            ? _value._meta
+            : meta // ignore: cast_nullable_to_non_nullable
+                  as Map<String, dynamic>?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 
 class _$SectionAnalyticsDataImpl implements _SectionAnalyticsData {
-  const _$SectionAnalyticsDataImpl(
-      {this.pageCode,
-      required this.id,
-      this.name,
-      required this.position,
-      required this.type,
-      final Map<String, dynamic>? meta})
-      : _meta = meta;
+  const _$SectionAnalyticsDataImpl({
+    this.pageCode,
+    required this.id,
+    this.name,
+    required this.position,
+    required this.type,
+    final Map<String, dynamic>? meta,
+  }) : _meta = meta;
 
   @override
   final String? pageCode;
@@ -578,8 +603,15 @@ class _$SectionAnalyticsDataImpl implements _SectionAnalyticsData {
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, pageCode, id, name, position,
-      type, const DeepCollectionEquality().hash(_meta));
+  int get hashCode => Object.hash(
+    runtimeType,
+    pageCode,
+    id,
+    name,
+    position,
+    type,
+    const DeepCollectionEquality().hash(_meta),
+  );
 
   /// Create a copy of SectionAnalyticsData
   /// with the given fields replaced by the non-null parameter values.
@@ -587,19 +619,22 @@ class _$SectionAnalyticsDataImpl implements _SectionAnalyticsData {
   @override
   @pragma('vm:prefer-inline')
   _$$SectionAnalyticsDataImplCopyWith<_$SectionAnalyticsDataImpl>
-      get copyWith =>
-          __$$SectionAnalyticsDataImplCopyWithImpl<_$SectionAnalyticsDataImpl>(
-              this, _$identity);
+  get copyWith =>
+      __$$SectionAnalyticsDataImplCopyWithImpl<_$SectionAnalyticsDataImpl>(
+        this,
+        _$identity,
+      );
 }
 
 abstract class _SectionAnalyticsData implements SectionAnalyticsData {
-  const factory _SectionAnalyticsData(
-      {final String? pageCode,
-      required final String id,
-      final String? name,
-      required final int position,
-      required final String type,
-      final Map<String, dynamic>? meta}) = _$SectionAnalyticsDataImpl;
+  const factory _SectionAnalyticsData({
+    final String? pageCode,
+    required final String id,
+    final String? name,
+    required final int position,
+    required final String type,
+    final Map<String, dynamic>? meta,
+  }) = _$SectionAnalyticsDataImpl;
 
   @override
   String? get pageCode;
@@ -619,7 +654,7 @@ abstract class _SectionAnalyticsData implements SectionAnalyticsData {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SectionAnalyticsDataImplCopyWith<_$SectionAnalyticsDataImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -639,21 +674,25 @@ mixin _$SectionItemAnalyticsData {
 
 /// @nodoc
 abstract class $SectionItemAnalyticsDataCopyWith<$Res> {
-  factory $SectionItemAnalyticsDataCopyWith(SectionItemAnalyticsData value,
-          $Res Function(SectionItemAnalyticsData) then) =
-      _$SectionItemAnalyticsDataCopyWithImpl<$Res, SectionItemAnalyticsData>;
+  factory $SectionItemAnalyticsDataCopyWith(
+    SectionItemAnalyticsData value,
+    $Res Function(SectionItemAnalyticsData) then,
+  ) = _$SectionItemAnalyticsDataCopyWithImpl<$Res, SectionItemAnalyticsData>;
   @useResult
-  $Res call(
-      {int position,
-      String type,
-      String id,
-      String? name,
-      Map<String, dynamic>? meta});
+  $Res call({
+    int position,
+    String type,
+    String id,
+    String? name,
+    Map<String, dynamic>? meta,
+  });
 }
 
 /// @nodoc
-class _$SectionItemAnalyticsDataCopyWithImpl<$Res,
-        $Val extends SectionItemAnalyticsData>
+class _$SectionItemAnalyticsDataCopyWithImpl<
+  $Res,
+  $Val extends SectionItemAnalyticsData
+>
     implements $SectionItemAnalyticsDataCopyWith<$Res> {
   _$SectionItemAnalyticsDataCopyWithImpl(this._value, this._then);
 
@@ -673,28 +712,31 @@ class _$SectionItemAnalyticsDataCopyWithImpl<$Res,
     Object? name = freezed,
     Object? meta = freezed,
   }) {
-    return _then(_value.copyWith(
-      position: null == position
-          ? _value.position
-          : position // ignore: cast_nullable_to_non_nullable
-              as int,
-      type: null == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as String,
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      meta: freezed == meta
-          ? _value.meta
-          : meta // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            position: null == position
+                ? _value.position
+                : position // ignore: cast_nullable_to_non_nullable
+                      as int,
+            type: null == type
+                ? _value.type
+                : type // ignore: cast_nullable_to_non_nullable
+                      as String,
+            id: null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                      as String,
+            name: freezed == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                      as String?,
+            meta: freezed == meta
+                ? _value.meta
+                : meta // ignore: cast_nullable_to_non_nullable
+                      as Map<String, dynamic>?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -702,28 +744,32 @@ class _$SectionItemAnalyticsDataCopyWithImpl<$Res,
 abstract class _$$SectionItemAnalyticsDataImplCopyWith<$Res>
     implements $SectionItemAnalyticsDataCopyWith<$Res> {
   factory _$$SectionItemAnalyticsDataImplCopyWith(
-          _$SectionItemAnalyticsDataImpl value,
-          $Res Function(_$SectionItemAnalyticsDataImpl) then) =
-      __$$SectionItemAnalyticsDataImplCopyWithImpl<$Res>;
+    _$SectionItemAnalyticsDataImpl value,
+    $Res Function(_$SectionItemAnalyticsDataImpl) then,
+  ) = __$$SectionItemAnalyticsDataImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {int position,
-      String type,
-      String id,
-      String? name,
-      Map<String, dynamic>? meta});
+  $Res call({
+    int position,
+    String type,
+    String id,
+    String? name,
+    Map<String, dynamic>? meta,
+  });
 }
 
 /// @nodoc
 class __$$SectionItemAnalyticsDataImplCopyWithImpl<$Res>
-    extends _$SectionItemAnalyticsDataCopyWithImpl<$Res,
-        _$SectionItemAnalyticsDataImpl>
+    extends
+        _$SectionItemAnalyticsDataCopyWithImpl<
+          $Res,
+          _$SectionItemAnalyticsDataImpl
+        >
     implements _$$SectionItemAnalyticsDataImplCopyWith<$Res> {
   __$$SectionItemAnalyticsDataImplCopyWithImpl(
-      _$SectionItemAnalyticsDataImpl _value,
-      $Res Function(_$SectionItemAnalyticsDataImpl) _then)
-      : super(_value, _then);
+    _$SectionItemAnalyticsDataImpl _value,
+    $Res Function(_$SectionItemAnalyticsDataImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of SectionItemAnalyticsData
   /// with the given fields replaced by the non-null parameter values.
@@ -736,41 +782,43 @@ class __$$SectionItemAnalyticsDataImplCopyWithImpl<$Res>
     Object? name = freezed,
     Object? meta = freezed,
   }) {
-    return _then(_$SectionItemAnalyticsDataImpl(
-      position: null == position
-          ? _value.position
-          : position // ignore: cast_nullable_to_non_nullable
-              as int,
-      type: null == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as String,
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      meta: freezed == meta
-          ? _value._meta
-          : meta // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
-    ));
+    return _then(
+      _$SectionItemAnalyticsDataImpl(
+        position: null == position
+            ? _value.position
+            : position // ignore: cast_nullable_to_non_nullable
+                  as int,
+        type: null == type
+            ? _value.type
+            : type // ignore: cast_nullable_to_non_nullable
+                  as String,
+        id: null == id
+            ? _value.id
+            : id // ignore: cast_nullable_to_non_nullable
+                  as String,
+        name: freezed == name
+            ? _value.name
+            : name // ignore: cast_nullable_to_non_nullable
+                  as String?,
+        meta: freezed == meta
+            ? _value._meta
+            : meta // ignore: cast_nullable_to_non_nullable
+                  as Map<String, dynamic>?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 
 class _$SectionItemAnalyticsDataImpl implements _SectionItemAnalyticsData {
-  const _$SectionItemAnalyticsDataImpl(
-      {required this.position,
-      required this.type,
-      required this.id,
-      this.name,
-      final Map<String, dynamic>? meta})
-      : _meta = meta;
+  const _$SectionItemAnalyticsDataImpl({
+    required this.position,
+    required this.type,
+    required this.id,
+    this.name,
+    final Map<String, dynamic>? meta,
+  }) : _meta = meta;
 
   @override
   final int position;
@@ -809,8 +857,14 @@ class _$SectionItemAnalyticsDataImpl implements _SectionItemAnalyticsData {
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, position, type, id, name,
-      const DeepCollectionEquality().hash(_meta));
+  int get hashCode => Object.hash(
+    runtimeType,
+    position,
+    type,
+    id,
+    name,
+    const DeepCollectionEquality().hash(_meta),
+  );
 
   /// Create a copy of SectionItemAnalyticsData
   /// with the given fields replaced by the non-null parameter values.
@@ -818,17 +872,20 @@ class _$SectionItemAnalyticsDataImpl implements _SectionItemAnalyticsData {
   @override
   @pragma('vm:prefer-inline')
   _$$SectionItemAnalyticsDataImplCopyWith<_$SectionItemAnalyticsDataImpl>
-      get copyWith => __$$SectionItemAnalyticsDataImplCopyWithImpl<
-          _$SectionItemAnalyticsDataImpl>(this, _$identity);
+  get copyWith =>
+      __$$SectionItemAnalyticsDataImplCopyWithImpl<
+        _$SectionItemAnalyticsDataImpl
+      >(this, _$identity);
 }
 
 abstract class _SectionItemAnalyticsData implements SectionItemAnalyticsData {
-  const factory _SectionItemAnalyticsData(
-      {required final int position,
-      required final String type,
-      required final String id,
-      final String? name,
-      final Map<String, dynamic>? meta}) = _$SectionItemAnalyticsDataImpl;
+  const factory _SectionItemAnalyticsData({
+    required final int position,
+    required final String type,
+    required final String id,
+    final String? name,
+    final Map<String, dynamic>? meta,
+  }) = _$SectionItemAnalyticsDataImpl;
 
   @override
   int get position;
@@ -846,5 +903,5 @@ abstract class _SectionItemAnalyticsData implements SectionItemAnalyticsData {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SectionItemAnalyticsDataImplCopyWith<_$SectionItemAnalyticsDataImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

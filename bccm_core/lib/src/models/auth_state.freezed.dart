@@ -12,7 +12,8 @@ part of 'auth_state.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 /// @nodoc
 mixin _$AuthState {
@@ -34,12 +35,13 @@ abstract class $AuthStateCopyWith<$Res> {
   factory $AuthStateCopyWith(AuthState value, $Res Function(AuthState) then) =
       _$AuthStateCopyWithImpl<$Res, AuthState>;
   @useResult
-  $Res call(
-      {UserProfile? user,
-      String? auth0AccessToken,
-      DateTime? expiresAt,
-      String? idToken,
-      bool? signedOutManually});
+  $Res call({
+    UserProfile? user,
+    String? auth0AccessToken,
+    DateTime? expiresAt,
+    String? idToken,
+    bool? signedOutManually,
+  });
 
   $UserProfileCopyWith<$Res>? get user;
 }
@@ -65,28 +67,31 @@ class _$AuthStateCopyWithImpl<$Res, $Val extends AuthState>
     Object? idToken = freezed,
     Object? signedOutManually = freezed,
   }) {
-    return _then(_value.copyWith(
-      user: freezed == user
-          ? _value.user
-          : user // ignore: cast_nullable_to_non_nullable
-              as UserProfile?,
-      auth0AccessToken: freezed == auth0AccessToken
-          ? _value.auth0AccessToken
-          : auth0AccessToken // ignore: cast_nullable_to_non_nullable
-              as String?,
-      expiresAt: freezed == expiresAt
-          ? _value.expiresAt
-          : expiresAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      idToken: freezed == idToken
-          ? _value.idToken
-          : idToken // ignore: cast_nullable_to_non_nullable
-              as String?,
-      signedOutManually: freezed == signedOutManually
-          ? _value.signedOutManually
-          : signedOutManually // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            user: freezed == user
+                ? _value.user
+                : user // ignore: cast_nullable_to_non_nullable
+                      as UserProfile?,
+            auth0AccessToken: freezed == auth0AccessToken
+                ? _value.auth0AccessToken
+                : auth0AccessToken // ignore: cast_nullable_to_non_nullable
+                      as String?,
+            expiresAt: freezed == expiresAt
+                ? _value.expiresAt
+                : expiresAt // ignore: cast_nullable_to_non_nullable
+                      as DateTime?,
+            idToken: freezed == idToken
+                ? _value.idToken
+                : idToken // ignore: cast_nullable_to_non_nullable
+                      as String?,
+            signedOutManually: freezed == signedOutManually
+                ? _value.signedOutManually
+                : signedOutManually // ignore: cast_nullable_to_non_nullable
+                      as bool?,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of AuthState
@@ -107,16 +112,18 @@ class _$AuthStateCopyWithImpl<$Res, $Val extends AuthState>
 /// @nodoc
 abstract class _$$AuthImplCopyWith<$Res> implements $AuthStateCopyWith<$Res> {
   factory _$$AuthImplCopyWith(
-          _$AuthImpl value, $Res Function(_$AuthImpl) then) =
-      __$$AuthImplCopyWithImpl<$Res>;
+    _$AuthImpl value,
+    $Res Function(_$AuthImpl) then,
+  ) = __$$AuthImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {UserProfile? user,
-      String? auth0AccessToken,
-      DateTime? expiresAt,
-      String? idToken,
-      bool? signedOutManually});
+  $Res call({
+    UserProfile? user,
+    String? auth0AccessToken,
+    DateTime? expiresAt,
+    String? idToken,
+    bool? signedOutManually,
+  });
 
   @override
   $UserProfileCopyWith<$Res>? get user;
@@ -127,7 +134,7 @@ class __$$AuthImplCopyWithImpl<$Res>
     extends _$AuthStateCopyWithImpl<$Res, _$AuthImpl>
     implements _$$AuthImplCopyWith<$Res> {
   __$$AuthImplCopyWithImpl(_$AuthImpl _value, $Res Function(_$AuthImpl) _then)
-      : super(_value, _then);
+    : super(_value, _then);
 
   /// Create a copy of AuthState
   /// with the given fields replaced by the non-null parameter values.
@@ -140,41 +147,43 @@ class __$$AuthImplCopyWithImpl<$Res>
     Object? idToken = freezed,
     Object? signedOutManually = freezed,
   }) {
-    return _then(_$AuthImpl(
-      user: freezed == user
-          ? _value.user
-          : user // ignore: cast_nullable_to_non_nullable
-              as UserProfile?,
-      auth0AccessToken: freezed == auth0AccessToken
-          ? _value.auth0AccessToken
-          : auth0AccessToken // ignore: cast_nullable_to_non_nullable
-              as String?,
-      expiresAt: freezed == expiresAt
-          ? _value.expiresAt
-          : expiresAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      idToken: freezed == idToken
-          ? _value.idToken
-          : idToken // ignore: cast_nullable_to_non_nullable
-              as String?,
-      signedOutManually: freezed == signedOutManually
-          ? _value.signedOutManually
-          : signedOutManually // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ));
+    return _then(
+      _$AuthImpl(
+        user: freezed == user
+            ? _value.user
+            : user // ignore: cast_nullable_to_non_nullable
+                  as UserProfile?,
+        auth0AccessToken: freezed == auth0AccessToken
+            ? _value.auth0AccessToken
+            : auth0AccessToken // ignore: cast_nullable_to_non_nullable
+                  as String?,
+        expiresAt: freezed == expiresAt
+            ? _value.expiresAt
+            : expiresAt // ignore: cast_nullable_to_non_nullable
+                  as DateTime?,
+        idToken: freezed == idToken
+            ? _value.idToken
+            : idToken // ignore: cast_nullable_to_non_nullable
+                  as String?,
+        signedOutManually: freezed == signedOutManually
+            ? _value.signedOutManually
+            : signedOutManually // ignore: cast_nullable_to_non_nullable
+                  as bool?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 
 class _$AuthImpl extends _Auth {
-  const _$AuthImpl(
-      {this.user,
-      this.auth0AccessToken,
-      this.expiresAt,
-      this.idToken,
-      this.signedOutManually})
-      : super._();
+  const _$AuthImpl({
+    this.user,
+    this.auth0AccessToken,
+    this.expiresAt,
+    this.idToken,
+    this.signedOutManually,
+  }) : super._();
 
   @override
   final UserProfile? user;
@@ -208,8 +217,14 @@ class _$AuthImpl extends _Auth {
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, user, auth0AccessToken,
-      expiresAt, idToken, signedOutManually);
+  int get hashCode => Object.hash(
+    runtimeType,
+    user,
+    auth0AccessToken,
+    expiresAt,
+    idToken,
+    signedOutManually,
+  );
 
   /// Create a copy of AuthState
   /// with the given fields replaced by the non-null parameter values.
@@ -221,12 +236,13 @@ class _$AuthImpl extends _Auth {
 }
 
 abstract class _Auth extends AuthState {
-  const factory _Auth(
-      {final UserProfile? user,
-      final String? auth0AccessToken,
-      final DateTime? expiresAt,
-      final String? idToken,
-      final bool? signedOutManually}) = _$AuthImpl;
+  const factory _Auth({
+    final UserProfile? user,
+    final String? auth0AccessToken,
+    final DateTime? expiresAt,
+    final String? idToken,
+    final bool? signedOutManually,
+  }) = _$AuthImpl;
   const _Auth._() : super._();
 
   @override
