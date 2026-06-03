@@ -17,8 +17,7 @@ fragment CalendarEventWithEntries on Event {
 query ListEvents($from: Date) {
   calendar {
     events(from: $from) {
-      id
-      title
+      ...CalendarEventWithEntries
     }
   }
 }

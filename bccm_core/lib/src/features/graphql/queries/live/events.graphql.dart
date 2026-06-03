@@ -1058,19 +1058,9 @@ const documentNodeQueryListEvents = DocumentNode(definitions: [
             ],
             directives: [],
             selectionSet: SelectionSetNode(selections: [
-              FieldNode(
-                name: NameNode(value: 'id'),
-                alias: null,
-                arguments: [],
+              FragmentSpreadNode(
+                name: NameNode(value: 'CalendarEventWithEntries'),
                 directives: [],
-                selectionSet: null,
-              ),
-              FieldNode(
-                name: NameNode(value: 'title'),
-                alias: null,
-                arguments: [],
-                directives: [],
-                selectionSet: null,
               ),
               FieldNode(
                 name: NameNode(value: '__typename'),
@@ -1099,6 +1089,8 @@ const documentNodeQueryListEvents = DocumentNode(definitions: [
       ),
     ]),
   ),
+  fragmentDefinitionCalendarEventWithEntries,
+  fragmentDefinitionCalendarEntry,
 ]);
 Query$ListEvents _parserFn$Query$ListEvents(Map<String, dynamic> data) =>
     Query$ListEvents.fromJson(data);
@@ -1263,14 +1255,14 @@ class Query$ListEvents$calendar {
     final l$$__typename = json['__typename'];
     return Query$ListEvents$calendar(
       events: (l$events as List<dynamic>)
-          .map((e) => Query$ListEvents$calendar$events.fromJson(
+          .map((e) => Fragment$CalendarEventWithEntries.fromJson(
               (e as Map<String, dynamic>)))
           .toList(),
       $__typename: (l$$__typename as String),
     );
   }
 
-  final List<Query$ListEvents$calendar$events> events;
+  final List<Fragment$CalendarEventWithEntries> events;
 
   final String $__typename;
 
@@ -1342,14 +1334,14 @@ abstract class CopyWith$Query$ListEvents$calendar<TRes> {
       _CopyWithStubImpl$Query$ListEvents$calendar;
 
   TRes call({
-    List<Query$ListEvents$calendar$events>? events,
+    List<Fragment$CalendarEventWithEntries>? events,
     String? $__typename,
   });
   TRes events(
-      Iterable<Query$ListEvents$calendar$events> Function(
+      Iterable<Fragment$CalendarEventWithEntries> Function(
               Iterable<
-                  CopyWith$Query$ListEvents$calendar$events<
-                      Query$ListEvents$calendar$events>>)
+                  CopyWith$Fragment$CalendarEventWithEntries<
+                      Fragment$CalendarEventWithEntries>>)
           _fn);
 }
 
@@ -1373,21 +1365,21 @@ class _CopyWithImpl$Query$ListEvents$calendar<TRes>
       _then(Query$ListEvents$calendar(
         events: events == _undefined || events == null
             ? _instance.events
-            : (events as List<Query$ListEvents$calendar$events>),
+            : (events as List<Fragment$CalendarEventWithEntries>),
         $__typename: $__typename == _undefined || $__typename == null
             ? _instance.$__typename
             : ($__typename as String),
       ));
 
   TRes events(
-          Iterable<Query$ListEvents$calendar$events> Function(
+          Iterable<Fragment$CalendarEventWithEntries> Function(
                   Iterable<
-                      CopyWith$Query$ListEvents$calendar$events<
-                          Query$ListEvents$calendar$events>>)
+                      CopyWith$Fragment$CalendarEventWithEntries<
+                          Fragment$CalendarEventWithEntries>>)
               _fn) =>
       call(
           events: _fn(_instance.events
-              .map((e) => CopyWith$Query$ListEvents$calendar$events(
+              .map((e) => CopyWith$Fragment$CalendarEventWithEntries(
                     e,
                     (i) => i,
                   ))).toList());
@@ -1400,153 +1392,10 @@ class _CopyWithStubImpl$Query$ListEvents$calendar<TRes>
   TRes _res;
 
   call({
-    List<Query$ListEvents$calendar$events>? events,
+    List<Fragment$CalendarEventWithEntries>? events,
     String? $__typename,
   }) =>
       _res;
 
   events(_fn) => _res;
-}
-
-class Query$ListEvents$calendar$events {
-  Query$ListEvents$calendar$events({
-    required this.id,
-    required this.title,
-    this.$__typename = 'Event',
-  });
-
-  factory Query$ListEvents$calendar$events.fromJson(Map<String, dynamic> json) {
-    final l$id = json['id'];
-    final l$title = json['title'];
-    final l$$__typename = json['__typename'];
-    return Query$ListEvents$calendar$events(
-      id: (l$id as String),
-      title: (l$title as String),
-      $__typename: (l$$__typename as String),
-    );
-  }
-
-  final String id;
-
-  final String title;
-
-  final String $__typename;
-
-  Map<String, dynamic> toJson() {
-    final _resultData = <String, dynamic>{};
-    final l$id = id;
-    _resultData['id'] = l$id;
-    final l$title = title;
-    _resultData['title'] = l$title;
-    final l$$__typename = $__typename;
-    _resultData['__typename'] = l$$__typename;
-    return _resultData;
-  }
-
-  @override
-  int get hashCode {
-    final l$id = id;
-    final l$title = title;
-    final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$id,
-      l$title,
-      l$$__typename,
-    ]);
-  }
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) {
-      return true;
-    }
-    if (other is! Query$ListEvents$calendar$events ||
-        runtimeType != other.runtimeType) {
-      return false;
-    }
-    final l$id = id;
-    final lOther$id = other.id;
-    if (l$id != lOther$id) {
-      return false;
-    }
-    final l$title = title;
-    final lOther$title = other.title;
-    if (l$title != lOther$title) {
-      return false;
-    }
-    final l$$__typename = $__typename;
-    final lOther$$__typename = other.$__typename;
-    if (l$$__typename != lOther$$__typename) {
-      return false;
-    }
-    return true;
-  }
-}
-
-extension UtilityExtension$Query$ListEvents$calendar$events
-    on Query$ListEvents$calendar$events {
-  CopyWith$Query$ListEvents$calendar$events<Query$ListEvents$calendar$events>
-      get copyWith => CopyWith$Query$ListEvents$calendar$events(
-            this,
-            (i) => i,
-          );
-}
-
-abstract class CopyWith$Query$ListEvents$calendar$events<TRes> {
-  factory CopyWith$Query$ListEvents$calendar$events(
-    Query$ListEvents$calendar$events instance,
-    TRes Function(Query$ListEvents$calendar$events) then,
-  ) = _CopyWithImpl$Query$ListEvents$calendar$events;
-
-  factory CopyWith$Query$ListEvents$calendar$events.stub(TRes res) =
-      _CopyWithStubImpl$Query$ListEvents$calendar$events;
-
-  TRes call({
-    String? id,
-    String? title,
-    String? $__typename,
-  });
-}
-
-class _CopyWithImpl$Query$ListEvents$calendar$events<TRes>
-    implements CopyWith$Query$ListEvents$calendar$events<TRes> {
-  _CopyWithImpl$Query$ListEvents$calendar$events(
-    this._instance,
-    this._then,
-  );
-
-  final Query$ListEvents$calendar$events _instance;
-
-  final TRes Function(Query$ListEvents$calendar$events) _then;
-
-  static const _undefined = <dynamic, dynamic>{};
-
-  TRes call({
-    Object? id = _undefined,
-    Object? title = _undefined,
-    Object? $__typename = _undefined,
-  }) =>
-      _then(Query$ListEvents$calendar$events(
-        id: id == _undefined || id == null ? _instance.id : (id as String),
-        title: title == _undefined || title == null
-            ? _instance.title
-            : (title as String),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
-}
-
-class _CopyWithStubImpl$Query$ListEvents$calendar$events<TRes>
-    implements CopyWith$Query$ListEvents$calendar$events<TRes> {
-  _CopyWithStubImpl$Query$ListEvents$calendar$events(this._res);
-
-  TRes _res;
-
-  call({
-    String? id,
-    String? title,
-    String? $__typename,
-  }) =>
-      _res;
 }
