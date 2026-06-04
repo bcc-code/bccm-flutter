@@ -710,5 +710,6 @@ const possibleTypesMap = <String, Set<String>>{
   'EpisodeContextUnion': {
     'Season',
     'ContextCollection',
+    'Playlist',
   },
 };

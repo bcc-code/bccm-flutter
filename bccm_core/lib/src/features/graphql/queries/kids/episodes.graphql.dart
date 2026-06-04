@@ -1132,6 +1132,10 @@ class Query$KidsGetNextEpisodes$episode$next$context
         return Query$KidsGetNextEpisodes$episode$next$context$$Season.fromJson(
             json);
 
+      case "Playlist":
+        return Query$KidsGetNextEpisodes$episode$next$context$$Playlist
+            .fromJson(json);
+
       default:
         final l$$__typename = json['__typename'];
         return Query$KidsGetNextEpisodes$episode$next$context(
@@ -1187,6 +1191,9 @@ extension UtilityExtension$Query$KidsGetNextEpisodes$episode$next$context
         contextCollection,
     required _T Function(Query$KidsGetNextEpisodes$episode$next$context$$Season)
         season,
+    required _T Function(
+            Query$KidsGetNextEpisodes$episode$next$context$$Playlist)
+        playlist,
     required _T Function() orElse,
   }) {
     switch ($__typename) {
@@ -1198,6 +1205,10 @@ extension UtilityExtension$Query$KidsGetNextEpisodes$episode$next$context
         return season(
             this as Query$KidsGetNextEpisodes$episode$next$context$$Season);
 
+      case "Playlist":
+        return playlist(
+            this as Query$KidsGetNextEpisodes$episode$next$context$$Playlist);
+
       default:
         return orElse();
     }
@@ -1208,6 +1219,8 @@ extension UtilityExtension$Query$KidsGetNextEpisodes$episode$next$context
             Query$KidsGetNextEpisodes$episode$next$context$$ContextCollection)?
         contextCollection,
     _T Function(Query$KidsGetNextEpisodes$episode$next$context$$Season)? season,
+    _T Function(Query$KidsGetNextEpisodes$episode$next$context$$Playlist)?
+        playlist,
     required _T Function() orElse,
   }) {
     switch ($__typename) {
@@ -1223,6 +1236,14 @@ extension UtilityExtension$Query$KidsGetNextEpisodes$episode$next$context
         if (season != null) {
           return season(
               this as Query$KidsGetNextEpisodes$episode$next$context$$Season);
+        } else {
+          return orElse();
+        }
+
+      case "Playlist":
+        if (playlist != null) {
+          return playlist(
+              this as Query$KidsGetNextEpisodes$episode$next$context$$Playlist);
         } else {
           return orElse();
         }
@@ -1517,6 +1538,116 @@ class _CopyWithStubImpl$Query$KidsGetNextEpisodes$episode$next$context$$Season<
     implements
         CopyWith$Query$KidsGetNextEpisodes$episode$next$context$$Season<TRes> {
   _CopyWithStubImpl$Query$KidsGetNextEpisodes$episode$next$context$$Season(
+      this._res);
+
+  TRes _res;
+
+  call({String? $__typename}) => _res;
+}
+
+class Query$KidsGetNextEpisodes$episode$next$context$$Playlist
+    implements
+        Fragment$PlayableMediaItem$$Episode$context$$Playlist,
+        Query$KidsGetNextEpisodes$episode$next$context {
+  Query$KidsGetNextEpisodes$episode$next$context$$Playlist(
+      {this.$__typename = 'Playlist'});
+
+  factory Query$KidsGetNextEpisodes$episode$next$context$$Playlist.fromJson(
+      Map<String, dynamic> json) {
+    final l$$__typename = json['__typename'];
+    return Query$KidsGetNextEpisodes$episode$next$context$$Playlist(
+        $__typename: (l$$__typename as String));
+  }
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$$__typename = $__typename;
+    return Object.hashAll([l$$__typename]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (other is! Query$KidsGetNextEpisodes$episode$next$context$$Playlist ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$KidsGetNextEpisodes$episode$next$context$$Playlist
+    on Query$KidsGetNextEpisodes$episode$next$context$$Playlist {
+  CopyWith$Query$KidsGetNextEpisodes$episode$next$context$$Playlist<
+          Query$KidsGetNextEpisodes$episode$next$context$$Playlist>
+      get copyWith =>
+          CopyWith$Query$KidsGetNextEpisodes$episode$next$context$$Playlist(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$KidsGetNextEpisodes$episode$next$context$$Playlist<
+    TRes> {
+  factory CopyWith$Query$KidsGetNextEpisodes$episode$next$context$$Playlist(
+    Query$KidsGetNextEpisodes$episode$next$context$$Playlist instance,
+    TRes Function(Query$KidsGetNextEpisodes$episode$next$context$$Playlist)
+        then,
+  ) = _CopyWithImpl$Query$KidsGetNextEpisodes$episode$next$context$$Playlist;
+
+  factory CopyWith$Query$KidsGetNextEpisodes$episode$next$context$$Playlist.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$KidsGetNextEpisodes$episode$next$context$$Playlist;
+
+  TRes call({String? $__typename});
+}
+
+class _CopyWithImpl$Query$KidsGetNextEpisodes$episode$next$context$$Playlist<
+        TRes>
+    implements
+        CopyWith$Query$KidsGetNextEpisodes$episode$next$context$$Playlist<
+            TRes> {
+  _CopyWithImpl$Query$KidsGetNextEpisodes$episode$next$context$$Playlist(
+    this._instance,
+    this._then,
+  );
+
+  final Query$KidsGetNextEpisodes$episode$next$context$$Playlist _instance;
+
+  final TRes Function(Query$KidsGetNextEpisodes$episode$next$context$$Playlist)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({Object? $__typename = _undefined}) =>
+      _then(Query$KidsGetNextEpisodes$episode$next$context$$Playlist(
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String)));
+}
+
+class _CopyWithStubImpl$Query$KidsGetNextEpisodes$episode$next$context$$Playlist<
+        TRes>
+    implements
+        CopyWith$Query$KidsGetNextEpisodes$episode$next$context$$Playlist<
+            TRes> {
+  _CopyWithStubImpl$Query$KidsGetNextEpisodes$episode$next$context$$Playlist(
       this._res);
 
   TRes _res;
@@ -4528,6 +4659,9 @@ class Query$KidsFetchEpisode$episode$context
       case "Season":
         return Query$KidsFetchEpisode$episode$context$$Season.fromJson(json);
 
+      case "Playlist":
+        return Query$KidsFetchEpisode$episode$context$$Playlist.fromJson(json);
+
       default:
         final l$$__typename = json['__typename'];
         return Query$KidsFetchEpisode$episode$context(
@@ -4582,6 +4716,8 @@ extension UtilityExtension$Query$KidsFetchEpisode$episode$context
             Query$KidsFetchEpisode$episode$context$$ContextCollection)
         contextCollection,
     required _T Function(Query$KidsFetchEpisode$episode$context$$Season) season,
+    required _T Function(Query$KidsFetchEpisode$episode$context$$Playlist)
+        playlist,
     required _T Function() orElse,
   }) {
     switch ($__typename) {
@@ -4592,6 +4728,10 @@ extension UtilityExtension$Query$KidsFetchEpisode$episode$context
       case "Season":
         return season(this as Query$KidsFetchEpisode$episode$context$$Season);
 
+      case "Playlist":
+        return playlist(
+            this as Query$KidsFetchEpisode$episode$context$$Playlist);
+
       default:
         return orElse();
     }
@@ -4601,6 +4741,7 @@ extension UtilityExtension$Query$KidsFetchEpisode$episode$context
     _T Function(Query$KidsFetchEpisode$episode$context$$ContextCollection)?
         contextCollection,
     _T Function(Query$KidsFetchEpisode$episode$context$$Season)? season,
+    _T Function(Query$KidsFetchEpisode$episode$context$$Playlist)? playlist,
     required _T Function() orElse,
   }) {
     switch ($__typename) {
@@ -4615,6 +4756,14 @@ extension UtilityExtension$Query$KidsFetchEpisode$episode$context
       case "Season":
         if (season != null) {
           return season(this as Query$KidsFetchEpisode$episode$context$$Season);
+        } else {
+          return orElse();
+        }
+
+      case "Playlist":
+        if (playlist != null) {
+          return playlist(
+              this as Query$KidsFetchEpisode$episode$context$$Playlist);
         } else {
           return orElse();
         }
@@ -5086,6 +5235,106 @@ class _CopyWithStubImpl$Query$KidsFetchEpisode$episode$context$$Season<TRes>
       get $show =>
           CopyWith$Query$KidsFetchEpisode$episode$context$$Season$show.stub(
               _res);
+}
+
+class Query$KidsFetchEpisode$episode$context$$Playlist
+    implements
+        Fragment$PlayableMediaItem$$Episode$context$$Playlist,
+        Fragment$EpisodeContext$$Playlist,
+        Query$KidsFetchEpisode$episode$context {
+  Query$KidsFetchEpisode$episode$context$$Playlist(
+      {this.$__typename = 'Playlist'});
+
+  factory Query$KidsFetchEpisode$episode$context$$Playlist.fromJson(
+      Map<String, dynamic> json) {
+    final l$$__typename = json['__typename'];
+    return Query$KidsFetchEpisode$episode$context$$Playlist(
+        $__typename: (l$$__typename as String));
+  }
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$$__typename = $__typename;
+    return Object.hashAll([l$$__typename]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (other is! Query$KidsFetchEpisode$episode$context$$Playlist ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$KidsFetchEpisode$episode$context$$Playlist
+    on Query$KidsFetchEpisode$episode$context$$Playlist {
+  CopyWith$Query$KidsFetchEpisode$episode$context$$Playlist<
+          Query$KidsFetchEpisode$episode$context$$Playlist>
+      get copyWith => CopyWith$Query$KidsFetchEpisode$episode$context$$Playlist(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$KidsFetchEpisode$episode$context$$Playlist<TRes> {
+  factory CopyWith$Query$KidsFetchEpisode$episode$context$$Playlist(
+    Query$KidsFetchEpisode$episode$context$$Playlist instance,
+    TRes Function(Query$KidsFetchEpisode$episode$context$$Playlist) then,
+  ) = _CopyWithImpl$Query$KidsFetchEpisode$episode$context$$Playlist;
+
+  factory CopyWith$Query$KidsFetchEpisode$episode$context$$Playlist.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$KidsFetchEpisode$episode$context$$Playlist;
+
+  TRes call({String? $__typename});
+}
+
+class _CopyWithImpl$Query$KidsFetchEpisode$episode$context$$Playlist<TRes>
+    implements CopyWith$Query$KidsFetchEpisode$episode$context$$Playlist<TRes> {
+  _CopyWithImpl$Query$KidsFetchEpisode$episode$context$$Playlist(
+    this._instance,
+    this._then,
+  );
+
+  final Query$KidsFetchEpisode$episode$context$$Playlist _instance;
+
+  final TRes Function(Query$KidsFetchEpisode$episode$context$$Playlist) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({Object? $__typename = _undefined}) =>
+      _then(Query$KidsFetchEpisode$episode$context$$Playlist(
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String)));
+}
+
+class _CopyWithStubImpl$Query$KidsFetchEpisode$episode$context$$Playlist<TRes>
+    implements CopyWith$Query$KidsFetchEpisode$episode$context$$Playlist<TRes> {
+  _CopyWithStubImpl$Query$KidsFetchEpisode$episode$context$$Playlist(this._res);
+
+  TRes _res;
+
+  call({String? $__typename}) => _res;
 }
 
 class Query$KidsFetchEpisode$episode$season
