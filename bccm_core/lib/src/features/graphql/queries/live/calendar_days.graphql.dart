@@ -12,6 +12,7 @@ class Fragment$CalendarEntry {
     required this.description,
     required this.start,
     required this.end,
+    required this.image,
     this.buffer,
   });
 
@@ -36,6 +37,7 @@ class Fragment$CalendarEntry {
         final l$description = json['description'];
         final l$start = json['start'];
         final l$end = json['end'];
+        final l$image = json['image'];
         final l$buffer = json['buffer'];
         return Fragment$CalendarEntry(
           $__typename: (l$$__typename as String),
@@ -44,6 +46,7 @@ class Fragment$CalendarEntry {
           description: (l$description as String),
           start: (l$start as String),
           end: (l$end as String),
+          image: (l$image as String),
           buffer: l$buffer == null
               ? null
               : Fragment$CalendarEntry$buffer.fromJson(
@@ -64,6 +67,8 @@ class Fragment$CalendarEntry {
 
   final String end;
 
+  final String image;
+
   final Fragment$CalendarEntry$buffer? buffer;
 
   Map<String, dynamic> toJson() {
@@ -80,6 +85,8 @@ class Fragment$CalendarEntry {
     _resultData['start'] = l$start;
     final l$end = end;
     _resultData['end'] = l$end;
+    final l$image = image;
+    _resultData['image'] = l$image;
     final l$buffer = buffer;
     _resultData['buffer'] = l$buffer?.toJson();
     return _resultData;
@@ -93,6 +100,7 @@ class Fragment$CalendarEntry {
     final l$description = description;
     final l$start = start;
     final l$end = end;
+    final l$image = image;
     final l$buffer = buffer;
     return Object.hashAll([
       l$$__typename,
@@ -101,6 +109,7 @@ class Fragment$CalendarEntry {
       l$description,
       l$start,
       l$end,
+      l$image,
       l$buffer,
     ]);
   }
@@ -141,6 +150,11 @@ class Fragment$CalendarEntry {
     final l$end = end;
     final lOther$end = other.end;
     if (l$end != lOther$end) {
+      return false;
+    }
+    final l$image = image;
+    final lOther$image = other.image;
+    if (l$image != lOther$image) {
       return false;
     }
     final l$buffer = buffer;
@@ -257,6 +271,7 @@ abstract class CopyWith$Fragment$CalendarEntry<TRes> {
     String? description,
     String? start,
     String? end,
+    String? image,
     Fragment$CalendarEntry$buffer? buffer,
   });
   CopyWith$Fragment$CalendarEntry$buffer<TRes> get buffer;
@@ -282,6 +297,7 @@ class _CopyWithImpl$Fragment$CalendarEntry<TRes>
     Object? description = _undefined,
     Object? start = _undefined,
     Object? end = _undefined,
+    Object? image = _undefined,
     Object? buffer = _undefined,
   }) =>
       _then(Fragment$CalendarEntry(
@@ -299,6 +315,9 @@ class _CopyWithImpl$Fragment$CalendarEntry<TRes>
             ? _instance.start
             : (start as String),
         end: end == _undefined || end == null ? _instance.end : (end as String),
+        image: image == _undefined || image == null
+            ? _instance.image
+            : (image as String),
         buffer: buffer == _undefined
             ? _instance.buffer
             : (buffer as Fragment$CalendarEntry$buffer?),
@@ -326,6 +345,7 @@ class _CopyWithStubImpl$Fragment$CalendarEntry<TRes>
     String? description,
     String? start,
     String? end,
+    String? image,
     Fragment$CalendarEntry$buffer? buffer,
   }) =>
       _res;
@@ -380,6 +400,13 @@ const fragmentDefinitionCalendarEntry = FragmentDefinitionNode(
     ),
     FieldNode(
       name: NameNode(value: 'end'),
+      alias: null,
+      arguments: [],
+      directives: [],
+      selectionSet: null,
+    ),
+    FieldNode(
+      name: NameNode(value: 'image'),
       alias: null,
       arguments: [],
       directives: [],
@@ -453,18 +480,6 @@ const fragmentDefinitionCalendarEntry = FragmentDefinitionNode(
               name: NameNode(value: 'publishDate'),
               alias: null,
               arguments: [],
-              directives: [],
-              selectionSet: null,
-            ),
-            FieldNode(
-              name: NameNode(value: 'image'),
-              alias: null,
-              arguments: [
-                ArgumentNode(
-                  name: NameNode(value: 'style'),
-                  value: EnumValueNode(name: NameNode(value: 'default')),
-                )
-              ],
               directives: [],
               selectionSet: null,
             ),
@@ -705,6 +720,7 @@ class Fragment$CalendarEntry$$EpisodeCalendarEntry
     required this.description,
     required this.start,
     required this.end,
+    required this.image,
     this.buffer,
   });
 
@@ -717,6 +733,7 @@ class Fragment$CalendarEntry$$EpisodeCalendarEntry
     final l$description = json['description'];
     final l$start = json['start'];
     final l$end = json['end'];
+    final l$image = json['image'];
     final l$buffer = json['buffer'];
     return Fragment$CalendarEntry$$EpisodeCalendarEntry(
       id: (l$id as String),
@@ -729,6 +746,7 @@ class Fragment$CalendarEntry$$EpisodeCalendarEntry
       description: (l$description as String),
       start: (l$start as String),
       end: (l$end as String),
+      image: (l$image as String),
       buffer: l$buffer == null
           ? null
           : Fragment$CalendarEntry$$EpisodeCalendarEntry$buffer.fromJson(
@@ -750,6 +768,8 @@ class Fragment$CalendarEntry$$EpisodeCalendarEntry
 
   final String end;
 
+  final String image;
+
   final Fragment$CalendarEntry$$EpisodeCalendarEntry$buffer? buffer;
 
   Map<String, dynamic> toJson() {
@@ -768,6 +788,8 @@ class Fragment$CalendarEntry$$EpisodeCalendarEntry
     _resultData['start'] = l$start;
     final l$end = end;
     _resultData['end'] = l$end;
+    final l$image = image;
+    _resultData['image'] = l$image;
     final l$buffer = buffer;
     _resultData['buffer'] = l$buffer?.toJson();
     return _resultData;
@@ -782,6 +804,7 @@ class Fragment$CalendarEntry$$EpisodeCalendarEntry
     final l$description = description;
     final l$start = start;
     final l$end = end;
+    final l$image = image;
     final l$buffer = buffer;
     return Object.hashAll([
       l$id,
@@ -791,6 +814,7 @@ class Fragment$CalendarEntry$$EpisodeCalendarEntry
       l$description,
       l$start,
       l$end,
+      l$image,
       l$buffer,
     ]);
   }
@@ -839,6 +863,11 @@ class Fragment$CalendarEntry$$EpisodeCalendarEntry
     if (l$end != lOther$end) {
       return false;
     }
+    final l$image = image;
+    final lOther$image = other.image;
+    if (l$image != lOther$image) {
+      return false;
+    }
     final l$buffer = buffer;
     final lOther$buffer = other.buffer;
     if (l$buffer != lOther$buffer) {
@@ -875,6 +904,7 @@ abstract class CopyWith$Fragment$CalendarEntry$$EpisodeCalendarEntry<TRes> {
     String? description,
     String? start,
     String? end,
+    String? image,
     Fragment$CalendarEntry$$EpisodeCalendarEntry$buffer? buffer,
   });
   CopyWith$Fragment$CalendarEntry$$EpisodeCalendarEntry$episode<TRes>
@@ -903,6 +933,7 @@ class _CopyWithImpl$Fragment$CalendarEntry$$EpisodeCalendarEntry<TRes>
     Object? description = _undefined,
     Object? start = _undefined,
     Object? end = _undefined,
+    Object? image = _undefined,
     Object? buffer = _undefined,
   }) =>
       _then(Fragment$CalendarEntry$$EpisodeCalendarEntry(
@@ -924,6 +955,9 @@ class _CopyWithImpl$Fragment$CalendarEntry$$EpisodeCalendarEntry<TRes>
             ? _instance.start
             : (start as String),
         end: end == _undefined || end == null ? _instance.end : (end as String),
+        image: image == _undefined || image == null
+            ? _instance.image
+            : (image as String),
         buffer: buffer == _undefined
             ? _instance.buffer
             : (buffer as Fragment$CalendarEntry$$EpisodeCalendarEntry$buffer?),
@@ -964,6 +998,7 @@ class _CopyWithStubImpl$Fragment$CalendarEntry$$EpisodeCalendarEntry<TRes>
     String? description,
     String? start,
     String? end,
+    String? image,
     Fragment$CalendarEntry$$EpisodeCalendarEntry$buffer? buffer,
   }) =>
       _res;
@@ -984,7 +1019,6 @@ class Fragment$CalendarEntry$$EpisodeCalendarEntry$episode {
     this.$__typename = 'Episode',
     required this.id,
     required this.publishDate,
-    this.image,
     required this.locked,
   });
 
@@ -993,13 +1027,11 @@ class Fragment$CalendarEntry$$EpisodeCalendarEntry$episode {
     final l$$__typename = json['__typename'];
     final l$id = json['id'];
     final l$publishDate = json['publishDate'];
-    final l$image = json['image'];
     final l$locked = json['locked'];
     return Fragment$CalendarEntry$$EpisodeCalendarEntry$episode(
       $__typename: (l$$__typename as String),
       id: (l$id as String),
       publishDate: (l$publishDate as String),
-      image: (l$image as String?),
       locked: (l$locked as bool),
     );
   }
@@ -1009,8 +1041,6 @@ class Fragment$CalendarEntry$$EpisodeCalendarEntry$episode {
   final String id;
 
   final String publishDate;
-
-  final String? image;
 
   final bool locked;
 
@@ -1022,8 +1052,6 @@ class Fragment$CalendarEntry$$EpisodeCalendarEntry$episode {
     _resultData['id'] = l$id;
     final l$publishDate = publishDate;
     _resultData['publishDate'] = l$publishDate;
-    final l$image = image;
-    _resultData['image'] = l$image;
     final l$locked = locked;
     _resultData['locked'] = l$locked;
     return _resultData;
@@ -1034,13 +1062,11 @@ class Fragment$CalendarEntry$$EpisodeCalendarEntry$episode {
     final l$$__typename = $__typename;
     final l$id = id;
     final l$publishDate = publishDate;
-    final l$image = image;
     final l$locked = locked;
     return Object.hashAll([
       l$$__typename,
       l$id,
       l$publishDate,
-      l$image,
       l$locked,
     ]);
   }
@@ -1067,11 +1093,6 @@ class Fragment$CalendarEntry$$EpisodeCalendarEntry$episode {
     final l$publishDate = publishDate;
     final lOther$publishDate = other.publishDate;
     if (l$publishDate != lOther$publishDate) {
-      return false;
-    }
-    final l$image = image;
-    final lOther$image = other.image;
-    if (l$image != lOther$image) {
       return false;
     }
     final l$locked = locked;
@@ -1109,7 +1130,6 @@ abstract class CopyWith$Fragment$CalendarEntry$$EpisodeCalendarEntry$episode<
     String? $__typename,
     String? id,
     String? publishDate,
-    String? image,
     bool? locked,
   });
 }
@@ -1133,7 +1153,6 @@ class _CopyWithImpl$Fragment$CalendarEntry$$EpisodeCalendarEntry$episode<TRes>
     Object? $__typename = _undefined,
     Object? id = _undefined,
     Object? publishDate = _undefined,
-    Object? image = _undefined,
     Object? locked = _undefined,
   }) =>
       _then(Fragment$CalendarEntry$$EpisodeCalendarEntry$episode(
@@ -1144,7 +1163,6 @@ class _CopyWithImpl$Fragment$CalendarEntry$$EpisodeCalendarEntry$episode<TRes>
         publishDate: publishDate == _undefined || publishDate == null
             ? _instance.publishDate
             : (publishDate as String),
-        image: image == _undefined ? _instance.image : (image as String?),
         locked: locked == _undefined || locked == null
             ? _instance.locked
             : (locked as bool),
@@ -1164,7 +1182,6 @@ class _CopyWithStubImpl$Fragment$CalendarEntry$$EpisodeCalendarEntry$episode<
     String? $__typename,
     String? id,
     String? publishDate,
-    String? image,
     bool? locked,
   }) =>
       _res;
@@ -1179,6 +1196,7 @@ class Fragment$CalendarEntry$$SimpleCalendarEntry
     required this.description,
     required this.start,
     required this.end,
+    required this.image,
     this.buffer,
   });
 
@@ -1190,6 +1208,7 @@ class Fragment$CalendarEntry$$SimpleCalendarEntry
     final l$description = json['description'];
     final l$start = json['start'];
     final l$end = json['end'];
+    final l$image = json['image'];
     final l$buffer = json['buffer'];
     return Fragment$CalendarEntry$$SimpleCalendarEntry(
       id: (l$id as String),
@@ -1198,6 +1217,7 @@ class Fragment$CalendarEntry$$SimpleCalendarEntry
       description: (l$description as String),
       start: (l$start as String),
       end: (l$end as String),
+      image: (l$image as String),
       buffer: l$buffer == null
           ? null
           : Fragment$CalendarEntry$$SimpleCalendarEntry$buffer.fromJson(
@@ -1217,6 +1237,8 @@ class Fragment$CalendarEntry$$SimpleCalendarEntry
 
   final String end;
 
+  final String image;
+
   final Fragment$CalendarEntry$$SimpleCalendarEntry$buffer? buffer;
 
   Map<String, dynamic> toJson() {
@@ -1233,6 +1255,8 @@ class Fragment$CalendarEntry$$SimpleCalendarEntry
     _resultData['start'] = l$start;
     final l$end = end;
     _resultData['end'] = l$end;
+    final l$image = image;
+    _resultData['image'] = l$image;
     final l$buffer = buffer;
     _resultData['buffer'] = l$buffer?.toJson();
     return _resultData;
@@ -1246,6 +1270,7 @@ class Fragment$CalendarEntry$$SimpleCalendarEntry
     final l$description = description;
     final l$start = start;
     final l$end = end;
+    final l$image = image;
     final l$buffer = buffer;
     return Object.hashAll([
       l$id,
@@ -1254,6 +1279,7 @@ class Fragment$CalendarEntry$$SimpleCalendarEntry
       l$description,
       l$start,
       l$end,
+      l$image,
       l$buffer,
     ]);
   }
@@ -1297,6 +1323,11 @@ class Fragment$CalendarEntry$$SimpleCalendarEntry
     if (l$end != lOther$end) {
       return false;
     }
+    final l$image = image;
+    final lOther$image = other.image;
+    if (l$image != lOther$image) {
+      return false;
+    }
     final l$buffer = buffer;
     final lOther$buffer = other.buffer;
     if (l$buffer != lOther$buffer) {
@@ -1332,6 +1363,7 @@ abstract class CopyWith$Fragment$CalendarEntry$$SimpleCalendarEntry<TRes> {
     String? description,
     String? start,
     String? end,
+    String? image,
     Fragment$CalendarEntry$$SimpleCalendarEntry$buffer? buffer,
   });
   CopyWith$Fragment$CalendarEntry$$SimpleCalendarEntry$buffer<TRes> get buffer;
@@ -1357,6 +1389,7 @@ class _CopyWithImpl$Fragment$CalendarEntry$$SimpleCalendarEntry<TRes>
     Object? description = _undefined,
     Object? start = _undefined,
     Object? end = _undefined,
+    Object? image = _undefined,
     Object? buffer = _undefined,
   }) =>
       _then(Fragment$CalendarEntry$$SimpleCalendarEntry(
@@ -1374,6 +1407,9 @@ class _CopyWithImpl$Fragment$CalendarEntry$$SimpleCalendarEntry<TRes>
             ? _instance.start
             : (start as String),
         end: end == _undefined || end == null ? _instance.end : (end as String),
+        image: image == _undefined || image == null
+            ? _instance.image
+            : (image as String),
         buffer: buffer == _undefined
             ? _instance.buffer
             : (buffer as Fragment$CalendarEntry$$SimpleCalendarEntry$buffer?),
@@ -1402,6 +1438,7 @@ class _CopyWithStubImpl$Fragment$CalendarEntry$$SimpleCalendarEntry<TRes>
     String? description,
     String? start,
     String? end,
+    String? image,
     Fragment$CalendarEntry$$SimpleCalendarEntry$buffer? buffer,
   }) =>
       _res;
@@ -1727,6 +1764,7 @@ class Fragment$CalendarEntry$$SeasonCalendarEntry
     required this.description,
     required this.start,
     required this.end,
+    required this.image,
     this.buffer,
   });
 
@@ -1738,6 +1776,7 @@ class Fragment$CalendarEntry$$SeasonCalendarEntry
     final l$description = json['description'];
     final l$start = json['start'];
     final l$end = json['end'];
+    final l$image = json['image'];
     final l$buffer = json['buffer'];
     return Fragment$CalendarEntry$$SeasonCalendarEntry(
       $__typename: (l$$__typename as String),
@@ -1746,6 +1785,7 @@ class Fragment$CalendarEntry$$SeasonCalendarEntry
       description: (l$description as String),
       start: (l$start as String),
       end: (l$end as String),
+      image: (l$image as String),
       buffer: l$buffer == null
           ? null
           : Fragment$CalendarEntry$$SeasonCalendarEntry$buffer.fromJson(
@@ -1765,6 +1805,8 @@ class Fragment$CalendarEntry$$SeasonCalendarEntry
 
   final String end;
 
+  final String image;
+
   final Fragment$CalendarEntry$$SeasonCalendarEntry$buffer? buffer;
 
   Map<String, dynamic> toJson() {
@@ -1781,6 +1823,8 @@ class Fragment$CalendarEntry$$SeasonCalendarEntry
     _resultData['start'] = l$start;
     final l$end = end;
     _resultData['end'] = l$end;
+    final l$image = image;
+    _resultData['image'] = l$image;
     final l$buffer = buffer;
     _resultData['buffer'] = l$buffer?.toJson();
     return _resultData;
@@ -1794,6 +1838,7 @@ class Fragment$CalendarEntry$$SeasonCalendarEntry
     final l$description = description;
     final l$start = start;
     final l$end = end;
+    final l$image = image;
     final l$buffer = buffer;
     return Object.hashAll([
       l$$__typename,
@@ -1802,6 +1847,7 @@ class Fragment$CalendarEntry$$SeasonCalendarEntry
       l$description,
       l$start,
       l$end,
+      l$image,
       l$buffer,
     ]);
   }
@@ -1845,6 +1891,11 @@ class Fragment$CalendarEntry$$SeasonCalendarEntry
     if (l$end != lOther$end) {
       return false;
     }
+    final l$image = image;
+    final lOther$image = other.image;
+    if (l$image != lOther$image) {
+      return false;
+    }
     final l$buffer = buffer;
     final lOther$buffer = other.buffer;
     if (l$buffer != lOther$buffer) {
@@ -1880,6 +1931,7 @@ abstract class CopyWith$Fragment$CalendarEntry$$SeasonCalendarEntry<TRes> {
     String? description,
     String? start,
     String? end,
+    String? image,
     Fragment$CalendarEntry$$SeasonCalendarEntry$buffer? buffer,
   });
   CopyWith$Fragment$CalendarEntry$$SeasonCalendarEntry$buffer<TRes> get buffer;
@@ -1905,6 +1957,7 @@ class _CopyWithImpl$Fragment$CalendarEntry$$SeasonCalendarEntry<TRes>
     Object? description = _undefined,
     Object? start = _undefined,
     Object? end = _undefined,
+    Object? image = _undefined,
     Object? buffer = _undefined,
   }) =>
       _then(Fragment$CalendarEntry$$SeasonCalendarEntry(
@@ -1922,6 +1975,9 @@ class _CopyWithImpl$Fragment$CalendarEntry$$SeasonCalendarEntry<TRes>
             ? _instance.start
             : (start as String),
         end: end == _undefined || end == null ? _instance.end : (end as String),
+        image: image == _undefined || image == null
+            ? _instance.image
+            : (image as String),
         buffer: buffer == _undefined
             ? _instance.buffer
             : (buffer as Fragment$CalendarEntry$$SeasonCalendarEntry$buffer?),
@@ -1950,6 +2006,7 @@ class _CopyWithStubImpl$Fragment$CalendarEntry$$SeasonCalendarEntry<TRes>
     String? description,
     String? start,
     String? end,
+    String? image,
     Fragment$CalendarEntry$$SeasonCalendarEntry$buffer? buffer,
   }) =>
       _res;
@@ -2121,6 +2178,7 @@ class Fragment$CalendarEntry$$ShowCalendarEntry
     required this.description,
     required this.start,
     required this.end,
+    required this.image,
     this.buffer,
   });
 
@@ -2132,6 +2190,7 @@ class Fragment$CalendarEntry$$ShowCalendarEntry
     final l$description = json['description'];
     final l$start = json['start'];
     final l$end = json['end'];
+    final l$image = json['image'];
     final l$buffer = json['buffer'];
     return Fragment$CalendarEntry$$ShowCalendarEntry(
       $__typename: (l$$__typename as String),
@@ -2140,6 +2199,7 @@ class Fragment$CalendarEntry$$ShowCalendarEntry
       description: (l$description as String),
       start: (l$start as String),
       end: (l$end as String),
+      image: (l$image as String),
       buffer: l$buffer == null
           ? null
           : Fragment$CalendarEntry$$ShowCalendarEntry$buffer.fromJson(
@@ -2159,6 +2219,8 @@ class Fragment$CalendarEntry$$ShowCalendarEntry
 
   final String end;
 
+  final String image;
+
   final Fragment$CalendarEntry$$ShowCalendarEntry$buffer? buffer;
 
   Map<String, dynamic> toJson() {
@@ -2175,6 +2237,8 @@ class Fragment$CalendarEntry$$ShowCalendarEntry
     _resultData['start'] = l$start;
     final l$end = end;
     _resultData['end'] = l$end;
+    final l$image = image;
+    _resultData['image'] = l$image;
     final l$buffer = buffer;
     _resultData['buffer'] = l$buffer?.toJson();
     return _resultData;
@@ -2188,6 +2252,7 @@ class Fragment$CalendarEntry$$ShowCalendarEntry
     final l$description = description;
     final l$start = start;
     final l$end = end;
+    final l$image = image;
     final l$buffer = buffer;
     return Object.hashAll([
       l$$__typename,
@@ -2196,6 +2261,7 @@ class Fragment$CalendarEntry$$ShowCalendarEntry
       l$description,
       l$start,
       l$end,
+      l$image,
       l$buffer,
     ]);
   }
@@ -2239,6 +2305,11 @@ class Fragment$CalendarEntry$$ShowCalendarEntry
     if (l$end != lOther$end) {
       return false;
     }
+    final l$image = image;
+    final lOther$image = other.image;
+    if (l$image != lOther$image) {
+      return false;
+    }
     final l$buffer = buffer;
     final lOther$buffer = other.buffer;
     if (l$buffer != lOther$buffer) {
@@ -2274,6 +2345,7 @@ abstract class CopyWith$Fragment$CalendarEntry$$ShowCalendarEntry<TRes> {
     String? description,
     String? start,
     String? end,
+    String? image,
     Fragment$CalendarEntry$$ShowCalendarEntry$buffer? buffer,
   });
   CopyWith$Fragment$CalendarEntry$$ShowCalendarEntry$buffer<TRes> get buffer;
@@ -2299,6 +2371,7 @@ class _CopyWithImpl$Fragment$CalendarEntry$$ShowCalendarEntry<TRes>
     Object? description = _undefined,
     Object? start = _undefined,
     Object? end = _undefined,
+    Object? image = _undefined,
     Object? buffer = _undefined,
   }) =>
       _then(Fragment$CalendarEntry$$ShowCalendarEntry(
@@ -2316,6 +2389,9 @@ class _CopyWithImpl$Fragment$CalendarEntry$$ShowCalendarEntry<TRes>
             ? _instance.start
             : (start as String),
         end: end == _undefined || end == null ? _instance.end : (end as String),
+        image: image == _undefined || image == null
+            ? _instance.image
+            : (image as String),
         buffer: buffer == _undefined
             ? _instance.buffer
             : (buffer as Fragment$CalendarEntry$$ShowCalendarEntry$buffer?),
@@ -2344,6 +2420,7 @@ class _CopyWithStubImpl$Fragment$CalendarEntry$$ShowCalendarEntry<TRes>
     String? description,
     String? start,
     String? end,
+    String? image,
     Fragment$CalendarEntry$$ShowCalendarEntry$buffer? buffer,
   }) =>
       _res;
