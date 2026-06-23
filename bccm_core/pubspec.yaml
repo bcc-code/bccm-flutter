@@ -1,6 +1,6 @@
 name: bccm_core
 description: Contains core functionality, etc
-version: 0.0.1
+version: 1.0.0
 homepage:
 
 environment:

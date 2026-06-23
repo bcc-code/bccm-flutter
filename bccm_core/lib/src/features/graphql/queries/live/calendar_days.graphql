@@ -17,6 +17,8 @@ fragment CalendarEntry on CalendarEntry {
   buffer {
     url
     availableUntil
+    start
+    end
   }
   ... on EpisodeCalendarEntry {
     id

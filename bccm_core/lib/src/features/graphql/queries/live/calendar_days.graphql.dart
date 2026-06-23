@@ -433,6 +433,20 @@ const fragmentDefinitionCalendarEntry = FragmentDefinitionNode(
           selectionSet: null,
         ),
         FieldNode(
+          name: NameNode(value: 'start'),
+          alias: null,
+          arguments: [],
+          directives: [],
+          selectionSet: null,
+        ),
+        FieldNode(
+          name: NameNode(value: 'end'),
+          alias: null,
+          arguments: [],
+          directives: [],
+          selectionSet: null,
+        ),
+        FieldNode(
           name: NameNode(value: '__typename'),
           alias: null,
           arguments: [],
@@ -571,16 +585,22 @@ class Fragment$CalendarEntry$buffer {
   Fragment$CalendarEntry$buffer({
     required this.url,
     required this.availableUntil,
+    required this.start,
+    required this.end,
     this.$__typename = 'CalendarEntryBuffer',
   });
 
   factory Fragment$CalendarEntry$buffer.fromJson(Map<String, dynamic> json) {
     final l$url = json['url'];
     final l$availableUntil = json['availableUntil'];
+    final l$start = json['start'];
+    final l$end = json['end'];
     final l$$__typename = json['__typename'];
     return Fragment$CalendarEntry$buffer(
       url: (l$url as String),
       availableUntil: (l$availableUntil as String),
+      start: (l$start as String),
+      end: (l$end as String),
       $__typename: (l$$__typename as String),
     );
   }
@@ -588,6 +608,10 @@ class Fragment$CalendarEntry$buffer {
   final String url;
 
   final String availableUntil;
+
+  final String start;
+
+  final String end;
 
   final String $__typename;
 
@@ -597,6 +621,10 @@ class Fragment$CalendarEntry$buffer {
     _resultData['url'] = l$url;
     final l$availableUntil = availableUntil;
     _resultData['availableUntil'] = l$availableUntil;
+    final l$start = start;
+    _resultData['start'] = l$start;
+    final l$end = end;
+    _resultData['end'] = l$end;
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
     return _resultData;
@@ -606,10 +634,14 @@ class Fragment$CalendarEntry$buffer {
   int get hashCode {
     final l$url = url;
     final l$availableUntil = availableUntil;
+    final l$start = start;
+    final l$end = end;
     final l$$__typename = $__typename;
     return Object.hashAll([
       l$url,
       l$availableUntil,
+      l$start,
+      l$end,
       l$$__typename,
     ]);
   }
@@ -631,6 +663,16 @@ class Fragment$CalendarEntry$buffer {
     final l$availableUntil = availableUntil;
     final lOther$availableUntil = other.availableUntil;
     if (l$availableUntil != lOther$availableUntil) {
+      return false;
+    }
+    final l$start = start;
+    final lOther$start = other.start;
+    if (l$start != lOther$start) {
+      return false;
+    }
+    final l$end = end;
+    final lOther$end = other.end;
+    if (l$end != lOther$end) {
       return false;
     }
     final l$$__typename = $__typename;
@@ -663,6 +705,8 @@ abstract class CopyWith$Fragment$CalendarEntry$buffer<TRes> {
   TRes call({
     String? url,
     String? availableUntil,
+    String? start,
+    String? end,
     String? $__typename,
   });
 }
@@ -683,6 +727,8 @@ class _CopyWithImpl$Fragment$CalendarEntry$buffer<TRes>
   TRes call({
     Object? url = _undefined,
     Object? availableUntil = _undefined,
+    Object? start = _undefined,
+    Object? end = _undefined,
     Object? $__typename = _undefined,
   }) =>
       _then(Fragment$CalendarEntry$buffer(
@@ -690,6 +736,10 @@ class _CopyWithImpl$Fragment$CalendarEntry$buffer<TRes>
         availableUntil: availableUntil == _undefined || availableUntil == null
             ? _instance.availableUntil
             : (availableUntil as String),
+        start: start == _undefined || start == null
+            ? _instance.start
+            : (start as String),
+        end: end == _undefined || end == null ? _instance.end : (end as String),
         $__typename: $__typename == _undefined || $__typename == null
             ? _instance.$__typename
             : ($__typename as String),
@@ -705,6 +755,8 @@ class _CopyWithStubImpl$Fragment$CalendarEntry$buffer<TRes>
   call({
     String? url,
     String? availableUntil,
+    String? start,
+    String? end,
     String? $__typename,
   }) =>
       _res;
@@ -1454,6 +1506,8 @@ class Fragment$CalendarEntry$$SimpleCalendarEntry$buffer
   Fragment$CalendarEntry$$SimpleCalendarEntry$buffer({
     required this.url,
     required this.availableUntil,
+    required this.start,
+    required this.end,
     this.$__typename = 'CalendarEntryBuffer',
   });
 
@@ -1461,10 +1515,14 @@ class Fragment$CalendarEntry$$SimpleCalendarEntry$buffer
       Map<String, dynamic> json) {
     final l$url = json['url'];
     final l$availableUntil = json['availableUntil'];
+    final l$start = json['start'];
+    final l$end = json['end'];
     final l$$__typename = json['__typename'];
     return Fragment$CalendarEntry$$SimpleCalendarEntry$buffer(
       url: (l$url as String),
       availableUntil: (l$availableUntil as String),
+      start: (l$start as String),
+      end: (l$end as String),
       $__typename: (l$$__typename as String),
     );
   }
@@ -1472,6 +1530,10 @@ class Fragment$CalendarEntry$$SimpleCalendarEntry$buffer
   final String url;
 
   final String availableUntil;
+
+  final String start;
+
+  final String end;
 
   final String $__typename;
 
@@ -1481,6 +1543,10 @@ class Fragment$CalendarEntry$$SimpleCalendarEntry$buffer
     _resultData['url'] = l$url;
     final l$availableUntil = availableUntil;
     _resultData['availableUntil'] = l$availableUntil;
+    final l$start = start;
+    _resultData['start'] = l$start;
+    final l$end = end;
+    _resultData['end'] = l$end;
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
     return _resultData;
@@ -1490,10 +1556,14 @@ class Fragment$CalendarEntry$$SimpleCalendarEntry$buffer
   int get hashCode {
     final l$url = url;
     final l$availableUntil = availableUntil;
+    final l$start = start;
+    final l$end = end;
     final l$$__typename = $__typename;
     return Object.hashAll([
       l$url,
       l$availableUntil,
+      l$start,
+      l$end,
       l$$__typename,
     ]);
   }
@@ -1515,6 +1585,16 @@ class Fragment$CalendarEntry$$SimpleCalendarEntry$buffer
     final l$availableUntil = availableUntil;
     final lOther$availableUntil = other.availableUntil;
     if (l$availableUntil != lOther$availableUntil) {
+      return false;
+    }
+    final l$start = start;
+    final lOther$start = other.start;
+    if (l$start != lOther$start) {
+      return false;
+    }
+    final l$end = end;
+    final lOther$end = other.end;
+    if (l$end != lOther$end) {
       return false;
     }
     final l$$__typename = $__typename;
@@ -1551,6 +1631,8 @@ abstract class CopyWith$Fragment$CalendarEntry$$SimpleCalendarEntry$buffer<
   TRes call({
     String? url,
     String? availableUntil,
+    String? start,
+    String? end,
     String? $__typename,
   });
 }
@@ -1572,6 +1654,8 @@ class _CopyWithImpl$Fragment$CalendarEntry$$SimpleCalendarEntry$buffer<TRes>
   TRes call({
     Object? url = _undefined,
     Object? availableUntil = _undefined,
+    Object? start = _undefined,
+    Object? end = _undefined,
     Object? $__typename = _undefined,
   }) =>
       _then(Fragment$CalendarEntry$$SimpleCalendarEntry$buffer(
@@ -1579,6 +1663,10 @@ class _CopyWithImpl$Fragment$CalendarEntry$$SimpleCalendarEntry$buffer<TRes>
         availableUntil: availableUntil == _undefined || availableUntil == null
             ? _instance.availableUntil
             : (availableUntil as String),
+        start: start == _undefined || start == null
+            ? _instance.start
+            : (start as String),
+        end: end == _undefined || end == null ? _instance.end : (end as String),
         $__typename: $__typename == _undefined || $__typename == null
             ? _instance.$__typename
             : ($__typename as String),
@@ -1596,6 +1684,8 @@ class _CopyWithStubImpl$Fragment$CalendarEntry$$SimpleCalendarEntry$buffer<TRes>
   call({
     String? url,
     String? availableUntil,
+    String? start,
+    String? end,
     String? $__typename,
   }) =>
       _res;
@@ -1606,6 +1696,8 @@ class Fragment$CalendarEntry$$EpisodeCalendarEntry$buffer
   Fragment$CalendarEntry$$EpisodeCalendarEntry$buffer({
     required this.url,
     required this.availableUntil,
+    required this.start,
+    required this.end,
     this.$__typename = 'CalendarEntryBuffer',
   });
 
@@ -1613,10 +1705,14 @@ class Fragment$CalendarEntry$$EpisodeCalendarEntry$buffer
       Map<String, dynamic> json) {
     final l$url = json['url'];
     final l$availableUntil = json['availableUntil'];
+    final l$start = json['start'];
+    final l$end = json['end'];
     final l$$__typename = json['__typename'];
     return Fragment$CalendarEntry$$EpisodeCalendarEntry$buffer(
       url: (l$url as String),
       availableUntil: (l$availableUntil as String),
+      start: (l$start as String),
+      end: (l$end as String),
       $__typename: (l$$__typename as String),
     );
   }
@@ -1624,6 +1720,10 @@ class Fragment$CalendarEntry$$EpisodeCalendarEntry$buffer
   final String url;
 
   final String availableUntil;
+
+  final String start;
+
+  final String end;
 
   final String $__typename;
 
@@ -1633,6 +1733,10 @@ class Fragment$CalendarEntry$$EpisodeCalendarEntry$buffer
     _resultData['url'] = l$url;
     final l$availableUntil = availableUntil;
     _resultData['availableUntil'] = l$availableUntil;
+    final l$start = start;
+    _resultData['start'] = l$start;
+    final l$end = end;
+    _resultData['end'] = l$end;
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
     return _resultData;
@@ -1642,10 +1746,14 @@ class Fragment$CalendarEntry$$EpisodeCalendarEntry$buffer
   int get hashCode {
     final l$url = url;
     final l$availableUntil = availableUntil;
+    final l$start = start;
+    final l$end = end;
     final l$$__typename = $__typename;
     return Object.hashAll([
       l$url,
       l$availableUntil,
+      l$start,
+      l$end,
       l$$__typename,
     ]);
   }
@@ -1667,6 +1775,16 @@ class Fragment$CalendarEntry$$EpisodeCalendarEntry$buffer
     final l$availableUntil = availableUntil;
     final lOther$availableUntil = other.availableUntil;
     if (l$availableUntil != lOther$availableUntil) {
+      return false;
+    }
+    final l$start = start;
+    final lOther$start = other.start;
+    if (l$start != lOther$start) {
+      return false;
+    }
+    final l$end = end;
+    final lOther$end = other.end;
+    if (l$end != lOther$end) {
       return false;
     }
     final l$$__typename = $__typename;
@@ -1703,6 +1821,8 @@ abstract class CopyWith$Fragment$CalendarEntry$$EpisodeCalendarEntry$buffer<
   TRes call({
     String? url,
     String? availableUntil,
+    String? start,
+    String? end,
     String? $__typename,
   });
 }
@@ -1725,6 +1845,8 @@ class _CopyWithImpl$Fragment$CalendarEntry$$EpisodeCalendarEntry$buffer<TRes>
   TRes call({
     Object? url = _undefined,
     Object? availableUntil = _undefined,
+    Object? start = _undefined,
+    Object? end = _undefined,
     Object? $__typename = _undefined,
   }) =>
       _then(Fragment$CalendarEntry$$EpisodeCalendarEntry$buffer(
@@ -1732,6 +1854,10 @@ class _CopyWithImpl$Fragment$CalendarEntry$$EpisodeCalendarEntry$buffer<TRes>
         availableUntil: availableUntil == _undefined || availableUntil == null
             ? _instance.availableUntil
             : (availableUntil as String),
+        start: start == _undefined || start == null
+            ? _instance.start
+            : (start as String),
+        end: end == _undefined || end == null ? _instance.end : (end as String),
         $__typename: $__typename == _undefined || $__typename == null
             ? _instance.$__typename
             : ($__typename as String),
@@ -1750,6 +1876,8 @@ class _CopyWithStubImpl$Fragment$CalendarEntry$$EpisodeCalendarEntry$buffer<
   call({
     String? url,
     String? availableUntil,
+    String? start,
+    String? end,
     String? $__typename,
   }) =>
       _res;
@@ -2022,6 +2150,8 @@ class Fragment$CalendarEntry$$SeasonCalendarEntry$buffer
   Fragment$CalendarEntry$$SeasonCalendarEntry$buffer({
     required this.url,
     required this.availableUntil,
+    required this.start,
+    required this.end,
     this.$__typename = 'CalendarEntryBuffer',
   });
 
@@ -2029,10 +2159,14 @@ class Fragment$CalendarEntry$$SeasonCalendarEntry$buffer
       Map<String, dynamic> json) {
     final l$url = json['url'];
     final l$availableUntil = json['availableUntil'];
+    final l$start = json['start'];
+    final l$end = json['end'];
     final l$$__typename = json['__typename'];
     return Fragment$CalendarEntry$$SeasonCalendarEntry$buffer(
       url: (l$url as String),
       availableUntil: (l$availableUntil as String),
+      start: (l$start as String),
+      end: (l$end as String),
       $__typename: (l$$__typename as String),
     );
   }
@@ -2040,6 +2174,10 @@ class Fragment$CalendarEntry$$SeasonCalendarEntry$buffer
   final String url;
 
   final String availableUntil;
+
+  final String start;
+
+  final String end;
 
   final String $__typename;
 
@@ -2049,6 +2187,10 @@ class Fragment$CalendarEntry$$SeasonCalendarEntry$buffer
     _resultData['url'] = l$url;
     final l$availableUntil = availableUntil;
     _resultData['availableUntil'] = l$availableUntil;
+    final l$start = start;
+    _resultData['start'] = l$start;
+    final l$end = end;
+    _resultData['end'] = l$end;
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
     return _resultData;
@@ -2058,10 +2200,14 @@ class Fragment$CalendarEntry$$SeasonCalendarEntry$buffer
   int get hashCode {
     final l$url = url;
     final l$availableUntil = availableUntil;
+    final l$start = start;
+    final l$end = end;
     final l$$__typename = $__typename;
     return Object.hashAll([
       l$url,
       l$availableUntil,
+      l$start,
+      l$end,
       l$$__typename,
     ]);
   }
@@ -2083,6 +2229,16 @@ class Fragment$CalendarEntry$$SeasonCalendarEntry$buffer
     final l$availableUntil = availableUntil;
     final lOther$availableUntil = other.availableUntil;
     if (l$availableUntil != lOther$availableUntil) {
+      return false;
+    }
+    final l$start = start;
+    final lOther$start = other.start;
+    if (l$start != lOther$start) {
+      return false;
+    }
+    final l$end = end;
+    final lOther$end = other.end;
+    if (l$end != lOther$end) {
       return false;
     }
     final l$$__typename = $__typename;
@@ -2119,6 +2275,8 @@ abstract class CopyWith$Fragment$CalendarEntry$$SeasonCalendarEntry$buffer<
   TRes call({
     String? url,
     String? availableUntil,
+    String? start,
+    String? end,
     String? $__typename,
   });
 }
@@ -2140,6 +2298,8 @@ class _CopyWithImpl$Fragment$CalendarEntry$$SeasonCalendarEntry$buffer<TRes>
   TRes call({
     Object? url = _undefined,
     Object? availableUntil = _undefined,
+    Object? start = _undefined,
+    Object? end = _undefined,
     Object? $__typename = _undefined,
   }) =>
       _then(Fragment$CalendarEntry$$SeasonCalendarEntry$buffer(
@@ -2147,6 +2307,10 @@ class _CopyWithImpl$Fragment$CalendarEntry$$SeasonCalendarEntry$buffer<TRes>
         availableUntil: availableUntil == _undefined || availableUntil == null
             ? _instance.availableUntil
             : (availableUntil as String),
+        start: start == _undefined || start == null
+            ? _instance.start
+            : (start as String),
+        end: end == _undefined || end == null ? _instance.end : (end as String),
         $__typename: $__typename == _undefined || $__typename == null
             ? _instance.$__typename
             : ($__typename as String),
@@ -2164,6 +2328,8 @@ class _CopyWithStubImpl$Fragment$CalendarEntry$$SeasonCalendarEntry$buffer<TRes>
   call({
     String? url,
     String? availableUntil,
+    String? start,
+    String? end,
     String? $__typename,
   }) =>
       _res;
@@ -2434,6 +2600,8 @@ class Fragment$CalendarEntry$$ShowCalendarEntry$buffer
   Fragment$CalendarEntry$$ShowCalendarEntry$buffer({
     required this.url,
     required this.availableUntil,
+    required this.start,
+    required this.end,
     this.$__typename = 'CalendarEntryBuffer',
   });
 
@@ -2441,10 +2609,14 @@ class Fragment$CalendarEntry$$ShowCalendarEntry$buffer
       Map<String, dynamic> json) {
     final l$url = json['url'];
     final l$availableUntil = json['availableUntil'];
+    final l$start = json['start'];
+    final l$end = json['end'];
     final l$$__typename = json['__typename'];
     return Fragment$CalendarEntry$$ShowCalendarEntry$buffer(
       url: (l$url as String),
       availableUntil: (l$availableUntil as String),
+      start: (l$start as String),
+      end: (l$end as String),
       $__typename: (l$$__typename as String),
     );
   }
@@ -2452,6 +2624,10 @@ class Fragment$CalendarEntry$$ShowCalendarEntry$buffer
   final String url;
 
   final String availableUntil;
+
+  final String start;
+
+  final String end;
 
   final String $__typename;
 
@@ -2461,6 +2637,10 @@ class Fragment$CalendarEntry$$ShowCalendarEntry$buffer
     _resultData['url'] = l$url;
     final l$availableUntil = availableUntil;
     _resultData['availableUntil'] = l$availableUntil;
+    final l$start = start;
+    _resultData['start'] = l$start;
+    final l$end = end;
+    _resultData['end'] = l$end;
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
     return _resultData;
@@ -2470,10 +2650,14 @@ class Fragment$CalendarEntry$$ShowCalendarEntry$buffer
   int get hashCode {
     final l$url = url;
     final l$availableUntil = availableUntil;
+    final l$start = start;
+    final l$end = end;
     final l$$__typename = $__typename;
     return Object.hashAll([
       l$url,
       l$availableUntil,
+      l$start,
+      l$end,
       l$$__typename,
     ]);
   }
@@ -2495,6 +2679,16 @@ class Fragment$CalendarEntry$$ShowCalendarEntry$buffer
     final l$availableUntil = availableUntil;
     final lOther$availableUntil = other.availableUntil;
     if (l$availableUntil != lOther$availableUntil) {
+      return false;
+    }
+    final l$start = start;
+    final lOther$start = other.start;
+    if (l$start != lOther$start) {
+      return false;
+    }
+    final l$end = end;
+    final lOther$end = other.end;
+    if (l$end != lOther$end) {
       return false;
     }
     final l$$__typename = $__typename;
@@ -2529,6 +2723,8 @@ abstract class CopyWith$Fragment$CalendarEntry$$ShowCalendarEntry$buffer<TRes> {
   TRes call({
     String? url,
     String? availableUntil,
+    String? start,
+    String? end,
     String? $__typename,
   });
 }
@@ -2549,6 +2745,8 @@ class _CopyWithImpl$Fragment$CalendarEntry$$ShowCalendarEntry$buffer<TRes>
   TRes call({
     Object? url = _undefined,
     Object? availableUntil = _undefined,
+    Object? start = _undefined,
+    Object? end = _undefined,
     Object? $__typename = _undefined,
   }) =>
       _then(Fragment$CalendarEntry$$ShowCalendarEntry$buffer(
@@ -2556,6 +2754,10 @@ class _CopyWithImpl$Fragment$CalendarEntry$$ShowCalendarEntry$buffer<TRes>
         availableUntil: availableUntil == _undefined || availableUntil == null
             ? _instance.availableUntil
             : (availableUntil as String),
+        start: start == _undefined || start == null
+            ? _instance.start
+            : (start as String),
+        end: end == _undefined || end == null ? _instance.end : (end as String),
         $__typename: $__typename == _undefined || $__typename == null
             ? _instance.$__typename
             : ($__typename as String),
@@ -2571,6 +2773,8 @@ class _CopyWithStubImpl$Fragment$CalendarEntry$$ShowCalendarEntry$buffer<TRes>
   call({
     String? url,
     String? availableUntil,
+    String? start,
+    String? end,
     String? $__typename,
   }) =>
       _res;
