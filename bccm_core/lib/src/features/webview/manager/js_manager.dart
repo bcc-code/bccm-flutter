@@ -27,10 +27,7 @@ class WebViewJsManager {
         },
       ),
     );
-    controller.addJavaScriptChannel(
-      'flutter_channel',
-      onMessageReceived: handleMessage,
-    );
+    controller.addJavaScriptChannel('flutter_channel', onMessageReceived: handleMessage);
   }
 
   final WebViewController controller;
@@ -80,11 +77,11 @@ window.dispatchEvent(new Event("app_webview_ready"))
   }
 
   void _respond(String requestId, dynamic result) {
-    controller.runJavaScript('window.flutter_webview_manager.respond("$requestId", ${jsonEncode(result)})');
+    controller.runJavaScript('window.flutter_webview_manager.respond(${jsonEncode(requestId)}, ${jsonEncode(result)})');
   }
 
   void _respondError(String requestId, Object error) {
-    controller.runJavaScript('window.flutter_webview_manager.respondError("$requestId", {error: "${error.toString()}"})');
+    controller.runJavaScript('window.flutter_webview_manager.respondError(${jsonEncode(requestId)}, ${jsonEncode({'error': error.toString()})})');
   }
 
   void handleMessage(JavaScriptMessage message) async {
