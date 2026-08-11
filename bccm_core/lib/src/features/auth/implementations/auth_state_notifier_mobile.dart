@@ -78,21 +78,26 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
       return null;
     }
     if (state.expiresAt!.difference(DateTime.now().toUtc()) < kMinimumCredentialsTTL) {
+      debugPrint('auth: Auth state is close to expiry. Trying to renew.');
       await _refresh();
-      debugPrint('auth: Auth state is expired. Trying to renew.');
     }
-    if (state.expiresAt!.difference(DateTime.now().toUtc()) < kMinimumCredentialsTTL) {
-      logout();
+
+    // Only give up if the token is genuinely unusable. Being inside the renewal window is not
+    // enough on its own: a token with e.g. 30 minutes left still works, and signing the user out
+    // because the renewal failed (offline, flaky network) is worse than using what we have.
+    if (state.expiresAt == null || !state.expiresAt!.isAfter(DateTime.now().toUtc())) {
       ref.read(analyticsProvider).log(LogEvent(
             name: 'auth state is expired',
             message: 'auth state is expired after attempting to renew',
             meta: {
               'expiresAt': state.expiresAt.toString(),
               'now': DateTime.now().toString(),
-              'diff': state.expiresAt!.difference(DateTime.now().toUtc()).toString(),
+              'diff': state.expiresAt?.difference(DateTime.now().toUtc()).toString(),
             },
           ));
       debugPrint('auth: Auth state is still expired after attempting to renew.');
+      await logout();
+      return null;
     }
     return state;
   }
@@ -155,6 +160,11 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
 
     final PackageInfo info = await PackageInfo.fromPlatform();
     try {
+      // Both steps below swallow their errors so that a failed renewal doesn't take down the
+      // caller, but the failure still has to be reported back: callers use the return value to
+      // decide whether the existing (stored) credentials should be kept.
+      var failed = false;
+
       final TokenResponse result = await _syncAppAuth(
         () => _appAuth.token(
           TokenRequest(
@@ -166,18 +176,23 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
           ),
         ),
       ).catchError((e) {
+        failed = true;
         ref.read(analyticsProvider).log(LogEvent(
               name: 'refresh request for access token failed',
               message: e.toString(),
             ));
         return TokenResponse(null, null, null, null, null, null, null);
       });
+      if (failed) return false;
+
       await _setStateBasedOnResponse(result).catchError((e) {
+        failed = true;
         ref.read(analyticsProvider).log(LogEvent(
               name: 'failed to set auth state based on refresh request response',
               message: e.toString(),
             ));
       });
+      if (failed) return false;
     } catch (e, s) {
       FlutterError.reportError(FlutterErrorDetails(
         exception: e,
