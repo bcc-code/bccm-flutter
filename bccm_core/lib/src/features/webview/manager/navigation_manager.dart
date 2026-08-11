@@ -32,8 +32,8 @@ class WebviewNavigationManager extends NavigationDelegate {
 
   @override
   PageEventCallback? get onPageFinished {
-    initialLoadDone.value = true;
     return (url) {
+      initialLoadDone.value = true;
       for (final delegate in _delegates) {
         delegate.onPageFinished?.call(url);
       }
