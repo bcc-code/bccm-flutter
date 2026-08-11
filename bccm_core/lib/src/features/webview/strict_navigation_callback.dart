@@ -6,30 +6,34 @@ import 'package:webview_flutter/webview_flutter.dart';
 ///
 /// Restricts opening URLs with a different host than the original.
 /// - If the URL has a query parameter `load_in_app` set to `true`, it should open in the app.
+///   This only relaxes [strictUriCheck]; it can never allow a different host, because the
+///   webview's javascript bridge is re-injected into every page that loads.
 /// - If the URL has a query parameter `launch_url` set to `true`, it should open in an external application.
 NavigationRequestCallback strictNavigationCallback(Uri originalUri, {required bool Function(Uri)? strictUriCheck}) => (request) async {
-      var navigationUri = Uri.tryParse(request.url);
-      if (navigationUri == null) {
-        return NavigationDecision.prevent;
-      }
+  var navigationUri = Uri.tryParse(request.url);
+  if (navigationUri == null) {
+    return NavigationDecision.prevent;
+  }
 
-      if (navigationUri.queryParameters['launch_url'] == 'true' && await canLaunchUrl(navigationUri)) {
-        await launchUrl(navigationUri, mode: LaunchMode.externalApplication);
-        return NavigationDecision.prevent;
-      }
+  if (navigationUri.queryParameters['launch_url'] == 'true' && await canLaunchUrl(navigationUri)) {
+    await launchUrl(navigationUri, mode: LaunchMode.externalApplication);
+    return NavigationDecision.prevent;
+  }
 
-      if (navigationUri.queryParameters['load_in_app']?.toLowerCase() == 'true') {
-        return NavigationDecision.navigate;
-      }
+  final sameHost = navigationUri.host == originalUri.host;
 
-      if (strictUriCheck != null && !strictUriCheck(navigationUri)) {
-        return NavigationDecision.prevent;
-      }
+  if (navigationUri.queryParameters['load_in_app']?.toLowerCase() == 'true' && sameHost) {
+    return NavigationDecision.navigate;
+  }
 
-      if (navigationUri.host == originalUri.host) {
-        return NavigationDecision.navigate;
-      }
+  if (strictUriCheck != null && !strictUriCheck(navigationUri)) {
+    return NavigationDecision.prevent;
+  }
 
-      debugPrint("Error: Couldn't open URL as it didnt pass the security check (shouldOverrideUrlLoading): ${navigationUri.toString()}");
-      return NavigationDecision.prevent;
-    };
+  if (sameHost) {
+    return NavigationDecision.navigate;
+  }
+
+  debugPrint("Error: Couldn't open URL as it didnt pass the security check (shouldOverrideUrlLoading): ${navigationUri.toString()}");
+  return NavigationDecision.prevent;
+};
