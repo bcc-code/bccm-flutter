@@ -6,14 +6,23 @@ import 'package:graphql_flutter/graphql_flutter.dart' as graphql_flutter;
 
 class Fragment$MyListEntry {
   Fragment$MyListEntry({
+    required this.id,
+    this.title,
+    required this.available,
     this.item,
     this.$__typename = 'UserCollectionEntry',
   });
 
   factory Fragment$MyListEntry.fromJson(Map<String, dynamic> json) {
+    final l$id = json['id'];
+    final l$title = json['title'];
+    final l$available = json['available'];
     final l$item = json['item'];
     final l$$__typename = json['__typename'];
     return Fragment$MyListEntry(
+      id: (l$id as String),
+      title: (l$title as String?),
+      available: (l$available as bool),
       item: l$item == null
           ? null
           : Fragment$MyListEntry$item.fromJson(
@@ -22,12 +31,24 @@ class Fragment$MyListEntry {
     );
   }
 
+  final String id;
+
+  final String? title;
+
+  final bool available;
+
   final Fragment$MyListEntry$item? item;
 
   final String $__typename;
 
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
+    final l$id = id;
+    _resultData['id'] = l$id;
+    final l$title = title;
+    _resultData['title'] = l$title;
+    final l$available = available;
+    _resultData['available'] = l$available;
     final l$item = item;
     _resultData['item'] = l$item?.toJson();
     final l$$__typename = $__typename;
@@ -37,9 +58,15 @@ class Fragment$MyListEntry {
 
   @override
   int get hashCode {
+    final l$id = id;
+    final l$title = title;
+    final l$available = available;
     final l$item = item;
     final l$$__typename = $__typename;
     return Object.hashAll([
+      l$id,
+      l$title,
+      l$available,
       l$item,
       l$$__typename,
     ]);
@@ -51,6 +78,21 @@ class Fragment$MyListEntry {
       return true;
     }
     if (other is! Fragment$MyListEntry || runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$id = id;
+    final lOther$id = other.id;
+    if (l$id != lOther$id) {
+      return false;
+    }
+    final l$title = title;
+    final lOther$title = other.title;
+    if (l$title != lOther$title) {
+      return false;
+    }
+    final l$available = available;
+    final lOther$available = other.available;
+    if (l$available != lOther$available) {
       return false;
     }
     final l$item = item;
@@ -85,6 +127,9 @@ abstract class CopyWith$Fragment$MyListEntry<TRes> {
       _CopyWithStubImpl$Fragment$MyListEntry;
 
   TRes call({
+    String? id,
+    String? title,
+    bool? available,
     Fragment$MyListEntry$item? item,
     String? $__typename,
   });
@@ -105,10 +150,18 @@ class _CopyWithImpl$Fragment$MyListEntry<TRes>
   static const _undefined = <dynamic, dynamic>{};
 
   TRes call({
+    Object? id = _undefined,
+    Object? title = _undefined,
+    Object? available = _undefined,
     Object? item = _undefined,
     Object? $__typename = _undefined,
   }) =>
       _then(Fragment$MyListEntry(
+        id: id == _undefined || id == null ? _instance.id : (id as String),
+        title: title == _undefined ? _instance.title : (title as String?),
+        available: available == _undefined || available == null
+            ? _instance.available
+            : (available as bool),
         item: item == _undefined
             ? _instance.item
             : (item as Fragment$MyListEntry$item?),
@@ -132,6 +185,9 @@ class _CopyWithStubImpl$Fragment$MyListEntry<TRes>
   TRes _res;
 
   call({
+    String? id,
+    String? title,
+    bool? available,
     Fragment$MyListEntry$item? item,
     String? $__typename,
   }) =>
@@ -150,6 +206,27 @@ const fragmentDefinitionMyListEntry = FragmentDefinitionNode(
   )),
   directives: [],
   selectionSet: SelectionSetNode(selections: [
+    FieldNode(
+      name: NameNode(value: 'id'),
+      alias: null,
+      arguments: [],
+      directives: [],
+      selectionSet: null,
+    ),
+    FieldNode(
+      name: NameNode(value: 'title'),
+      alias: null,
+      arguments: [],
+      directives: [],
+      selectionSet: null,
+    ),
+    FieldNode(
+      name: NameNode(value: 'available'),
+      alias: null,
+      arguments: [],
+      directives: [],
+      selectionSet: null,
+    ),
     FieldNode(
       name: NameNode(value: 'item'),
       alias: null,

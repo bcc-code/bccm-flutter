@@ -1,4 +1,7 @@
 fragment MyListEntry on UserCollectionEntry {
+  id
+  title
+  available
   item {
     ... on Episode {
       id
