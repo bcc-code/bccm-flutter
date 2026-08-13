@@ -7,43 +7,43 @@ part of 'shorts.dart';
 // **************************************************************************
 
 _$ShortStartedEventImpl _$$ShortStartedEventImplFromJson(
-        Map<String, dynamic> json) =>
-    _$ShortStartedEventImpl(
-      shortId: json['shortId'] as String,
-      shortTitle: json['shortTitle'] as String,
-      replayCount: (json['replayCount'] as num).toInt(),
-      resumed: json['resumed'] as bool,
-      positionFraction: (json['positionFraction'] as num).toDouble(),
-      positionSeconds: (json['positionSeconds'] as num).toInt(),
-    );
+  Map<String, dynamic> json,
+) => _$ShortStartedEventImpl(
+  shortId: json['shortId'] as String,
+  shortTitle: json['shortTitle'] as String,
+  replayCount: (json['replayCount'] as num).toInt(),
+  resumed: json['resumed'] as bool,
+  positionFraction: (json['positionFraction'] as num).toDouble(),
+  positionSeconds: (json['positionSeconds'] as num).toInt(),
+);
 
 Map<String, dynamic> _$$ShortStartedEventImplToJson(
-        _$ShortStartedEventImpl instance) =>
-    <String, dynamic>{
-      'shortId': instance.shortId,
-      'shortTitle': instance.shortTitle,
-      'replayCount': instance.replayCount,
-      'resumed': instance.resumed,
-      'positionFraction': instance.positionFraction,
-      'positionSeconds': instance.positionSeconds,
-    };
+  _$ShortStartedEventImpl instance,
+) => <String, dynamic>{
+  'shortId': instance.shortId,
+  'shortTitle': instance.shortTitle,
+  'replayCount': instance.replayCount,
+  'resumed': instance.resumed,
+  'positionFraction': instance.positionFraction,
+  'positionSeconds': instance.positionSeconds,
+};
 
 _$ShortStoppedEventImpl _$$ShortStoppedEventImplFromJson(
-        Map<String, dynamic> json) =>
-    _$ShortStoppedEventImpl(
-      shortId: json['shortId'] as String,
-      shortTitle: json['shortTitle'] as String?,
-      positionFraction: (json['positionFraction'] as num).toDouble(),
-      positionSeconds: (json['positionSeconds'] as num).toInt(),
-      replayCount: (json['replayCount'] as num).toInt(),
-    );
+  Map<String, dynamic> json,
+) => _$ShortStoppedEventImpl(
+  shortId: json['shortId'] as String,
+  shortTitle: json['shortTitle'] as String?,
+  positionFraction: (json['positionFraction'] as num).toDouble(),
+  positionSeconds: (json['positionSeconds'] as num).toInt(),
+  replayCount: (json['replayCount'] as num).toInt(),
+);
 
 Map<String, dynamic> _$$ShortStoppedEventImplToJson(
-        _$ShortStoppedEventImpl instance) =>
-    <String, dynamic>{
-      'shortId': instance.shortId,
-      'shortTitle': instance.shortTitle,
-      'positionFraction': instance.positionFraction,
-      'positionSeconds': instance.positionSeconds,
-      'replayCount': instance.replayCount,
-    };
+  _$ShortStoppedEventImpl instance,
+) => <String, dynamic>{
+  'shortId': instance.shortId,
+  'shortTitle': instance.shortTitle,
+  'positionFraction': instance.positionFraction,
+  'positionSeconds': instance.positionSeconds,
+  'replayCount': instance.replayCount,
+};

@@ -12,10 +12,12 @@ part of 'auth0_api.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 Auth0SignupRequestBody _$Auth0SignupRequestBodyFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _Auth0SignupRequestBody.fromJson(json);
 }
 
@@ -45,27 +47,31 @@ mixin _$Auth0SignupRequestBody {
 
 /// @nodoc
 abstract class $Auth0SignupRequestBodyCopyWith<$Res> {
-  factory $Auth0SignupRequestBodyCopyWith(Auth0SignupRequestBody value,
-          $Res Function(Auth0SignupRequestBody) then) =
-      _$Auth0SignupRequestBodyCopyWithImpl<$Res, Auth0SignupRequestBody>;
+  factory $Auth0SignupRequestBodyCopyWith(
+    Auth0SignupRequestBody value,
+    $Res Function(Auth0SignupRequestBody) then,
+  ) = _$Auth0SignupRequestBodyCopyWithImpl<$Res, Auth0SignupRequestBody>;
   @useResult
-  $Res call(
-      {String clientId,
-      String email,
-      String password,
-      String connection,
-      String? username,
-      String? givenName,
-      String? familyName,
-      String? name,
-      String? nickname,
-      String? pictureUrl,
-      Map<String, String>? userMetadata});
+  $Res call({
+    String clientId,
+    String email,
+    String password,
+    String connection,
+    String? username,
+    String? givenName,
+    String? familyName,
+    String? name,
+    String? nickname,
+    String? pictureUrl,
+    Map<String, String>? userMetadata,
+  });
 }
 
 /// @nodoc
-class _$Auth0SignupRequestBodyCopyWithImpl<$Res,
-        $Val extends Auth0SignupRequestBody>
+class _$Auth0SignupRequestBodyCopyWithImpl<
+  $Res,
+  $Val extends Auth0SignupRequestBody
+>
     implements $Auth0SignupRequestBodyCopyWith<$Res> {
   _$Auth0SignupRequestBodyCopyWithImpl(this._value, this._then);
 
@@ -91,52 +97,55 @@ class _$Auth0SignupRequestBodyCopyWithImpl<$Res,
     Object? pictureUrl = freezed,
     Object? userMetadata = freezed,
   }) {
-    return _then(_value.copyWith(
-      clientId: null == clientId
-          ? _value.clientId
-          : clientId // ignore: cast_nullable_to_non_nullable
-              as String,
-      email: null == email
-          ? _value.email
-          : email // ignore: cast_nullable_to_non_nullable
-              as String,
-      password: null == password
-          ? _value.password
-          : password // ignore: cast_nullable_to_non_nullable
-              as String,
-      connection: null == connection
-          ? _value.connection
-          : connection // ignore: cast_nullable_to_non_nullable
-              as String,
-      username: freezed == username
-          ? _value.username
-          : username // ignore: cast_nullable_to_non_nullable
-              as String?,
-      givenName: freezed == givenName
-          ? _value.givenName
-          : givenName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      familyName: freezed == familyName
-          ? _value.familyName
-          : familyName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      nickname: freezed == nickname
-          ? _value.nickname
-          : nickname // ignore: cast_nullable_to_non_nullable
-              as String?,
-      pictureUrl: freezed == pictureUrl
-          ? _value.pictureUrl
-          : pictureUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
-      userMetadata: freezed == userMetadata
-          ? _value.userMetadata
-          : userMetadata // ignore: cast_nullable_to_non_nullable
-              as Map<String, String>?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            clientId: null == clientId
+                ? _value.clientId
+                : clientId // ignore: cast_nullable_to_non_nullable
+                      as String,
+            email: null == email
+                ? _value.email
+                : email // ignore: cast_nullable_to_non_nullable
+                      as String,
+            password: null == password
+                ? _value.password
+                : password // ignore: cast_nullable_to_non_nullable
+                      as String,
+            connection: null == connection
+                ? _value.connection
+                : connection // ignore: cast_nullable_to_non_nullable
+                      as String,
+            username: freezed == username
+                ? _value.username
+                : username // ignore: cast_nullable_to_non_nullable
+                      as String?,
+            givenName: freezed == givenName
+                ? _value.givenName
+                : givenName // ignore: cast_nullable_to_non_nullable
+                      as String?,
+            familyName: freezed == familyName
+                ? _value.familyName
+                : familyName // ignore: cast_nullable_to_non_nullable
+                      as String?,
+            name: freezed == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                      as String?,
+            nickname: freezed == nickname
+                ? _value.nickname
+                : nickname // ignore: cast_nullable_to_non_nullable
+                      as String?,
+            pictureUrl: freezed == pictureUrl
+                ? _value.pictureUrl
+                : pictureUrl // ignore: cast_nullable_to_non_nullable
+                      as String?,
+            userMetadata: freezed == userMetadata
+                ? _value.userMetadata
+                : userMetadata // ignore: cast_nullable_to_non_nullable
+                      as Map<String, String>?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -144,34 +153,35 @@ class _$Auth0SignupRequestBodyCopyWithImpl<$Res,
 abstract class _$$Auth0SignupRequestBodyImplCopyWith<$Res>
     implements $Auth0SignupRequestBodyCopyWith<$Res> {
   factory _$$Auth0SignupRequestBodyImplCopyWith(
-          _$Auth0SignupRequestBodyImpl value,
-          $Res Function(_$Auth0SignupRequestBodyImpl) then) =
-      __$$Auth0SignupRequestBodyImplCopyWithImpl<$Res>;
+    _$Auth0SignupRequestBodyImpl value,
+    $Res Function(_$Auth0SignupRequestBodyImpl) then,
+  ) = __$$Auth0SignupRequestBodyImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String clientId,
-      String email,
-      String password,
-      String connection,
-      String? username,
-      String? givenName,
-      String? familyName,
-      String? name,
-      String? nickname,
-      String? pictureUrl,
-      Map<String, String>? userMetadata});
+  $Res call({
+    String clientId,
+    String email,
+    String password,
+    String connection,
+    String? username,
+    String? givenName,
+    String? familyName,
+    String? name,
+    String? nickname,
+    String? pictureUrl,
+    Map<String, String>? userMetadata,
+  });
 }
 
 /// @nodoc
 class __$$Auth0SignupRequestBodyImplCopyWithImpl<$Res>
-    extends _$Auth0SignupRequestBodyCopyWithImpl<$Res,
-        _$Auth0SignupRequestBodyImpl>
+    extends
+        _$Auth0SignupRequestBodyCopyWithImpl<$Res, _$Auth0SignupRequestBodyImpl>
     implements _$$Auth0SignupRequestBodyImplCopyWith<$Res> {
   __$$Auth0SignupRequestBodyImplCopyWithImpl(
-      _$Auth0SignupRequestBodyImpl _value,
-      $Res Function(_$Auth0SignupRequestBodyImpl) _then)
-      : super(_value, _then);
+    _$Auth0SignupRequestBodyImpl _value,
+    $Res Function(_$Auth0SignupRequestBodyImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of Auth0SignupRequestBody
   /// with the given fields replaced by the non-null parameter values.
@@ -190,52 +200,54 @@ class __$$Auth0SignupRequestBodyImplCopyWithImpl<$Res>
     Object? pictureUrl = freezed,
     Object? userMetadata = freezed,
   }) {
-    return _then(_$Auth0SignupRequestBodyImpl(
-      clientId: null == clientId
-          ? _value.clientId
-          : clientId // ignore: cast_nullable_to_non_nullable
-              as String,
-      email: null == email
-          ? _value.email
-          : email // ignore: cast_nullable_to_non_nullable
-              as String,
-      password: null == password
-          ? _value.password
-          : password // ignore: cast_nullable_to_non_nullable
-              as String,
-      connection: null == connection
-          ? _value.connection
-          : connection // ignore: cast_nullable_to_non_nullable
-              as String,
-      username: freezed == username
-          ? _value.username
-          : username // ignore: cast_nullable_to_non_nullable
-              as String?,
-      givenName: freezed == givenName
-          ? _value.givenName
-          : givenName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      familyName: freezed == familyName
-          ? _value.familyName
-          : familyName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      nickname: freezed == nickname
-          ? _value.nickname
-          : nickname // ignore: cast_nullable_to_non_nullable
-              as String?,
-      pictureUrl: freezed == pictureUrl
-          ? _value.pictureUrl
-          : pictureUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
-      userMetadata: freezed == userMetadata
-          ? _value._userMetadata
-          : userMetadata // ignore: cast_nullable_to_non_nullable
-              as Map<String, String>?,
-    ));
+    return _then(
+      _$Auth0SignupRequestBodyImpl(
+        clientId: null == clientId
+            ? _value.clientId
+            : clientId // ignore: cast_nullable_to_non_nullable
+                  as String,
+        email: null == email
+            ? _value.email
+            : email // ignore: cast_nullable_to_non_nullable
+                  as String,
+        password: null == password
+            ? _value.password
+            : password // ignore: cast_nullable_to_non_nullable
+                  as String,
+        connection: null == connection
+            ? _value.connection
+            : connection // ignore: cast_nullable_to_non_nullable
+                  as String,
+        username: freezed == username
+            ? _value.username
+            : username // ignore: cast_nullable_to_non_nullable
+                  as String?,
+        givenName: freezed == givenName
+            ? _value.givenName
+            : givenName // ignore: cast_nullable_to_non_nullable
+                  as String?,
+        familyName: freezed == familyName
+            ? _value.familyName
+            : familyName // ignore: cast_nullable_to_non_nullable
+                  as String?,
+        name: freezed == name
+            ? _value.name
+            : name // ignore: cast_nullable_to_non_nullable
+                  as String?,
+        nickname: freezed == nickname
+            ? _value.nickname
+            : nickname // ignore: cast_nullable_to_non_nullable
+                  as String?,
+        pictureUrl: freezed == pictureUrl
+            ? _value.pictureUrl
+            : pictureUrl // ignore: cast_nullable_to_non_nullable
+                  as String?,
+        userMetadata: freezed == userMetadata
+            ? _value._userMetadata
+            : userMetadata // ignore: cast_nullable_to_non_nullable
+                  as Map<String, String>?,
+      ),
+    );
   }
 }
 
@@ -245,19 +257,19 @@ class __$$Auth0SignupRequestBodyImplCopyWithImpl<$Res>
 class _$Auth0SignupRequestBodyImpl
     with DiagnosticableTreeMixin
     implements _Auth0SignupRequestBody {
-  _$Auth0SignupRequestBodyImpl(
-      {required this.clientId,
-      required this.email,
-      required this.password,
-      required this.connection,
-      this.username,
-      this.givenName,
-      this.familyName,
-      this.name,
-      this.nickname,
-      this.pictureUrl,
-      final Map<String, String>? userMetadata})
-      : _userMetadata = userMetadata;
+  _$Auth0SignupRequestBodyImpl({
+    required this.clientId,
+    required this.email,
+    required this.password,
+    required this.connection,
+    this.username,
+    this.givenName,
+    this.familyName,
+    this.name,
+    this.nickname,
+    this.pictureUrl,
+    final Map<String, String>? userMetadata,
+  }) : _userMetadata = userMetadata;
 
   factory _$Auth0SignupRequestBodyImpl.fromJson(Map<String, dynamic> json) =>
       _$$Auth0SignupRequestBodyImplFromJson(json);
@@ -338,25 +350,28 @@ class _$Auth0SignupRequestBodyImpl
                 other.nickname == nickname) &&
             (identical(other.pictureUrl, pictureUrl) ||
                 other.pictureUrl == pictureUrl) &&
-            const DeepCollectionEquality()
-                .equals(other._userMetadata, _userMetadata));
+            const DeepCollectionEquality().equals(
+              other._userMetadata,
+              _userMetadata,
+            ));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      clientId,
-      email,
-      password,
-      connection,
-      username,
-      givenName,
-      familyName,
-      name,
-      nickname,
-      pictureUrl,
-      const DeepCollectionEquality().hash(_userMetadata));
+    runtimeType,
+    clientId,
+    email,
+    password,
+    connection,
+    username,
+    givenName,
+    familyName,
+    name,
+    nickname,
+    pictureUrl,
+    const DeepCollectionEquality().hash(_userMetadata),
+  );
 
   /// Create a copy of Auth0SignupRequestBody
   /// with the given fields replaced by the non-null parameter values.
@@ -364,30 +379,32 @@ class _$Auth0SignupRequestBodyImpl
   @override
   @pragma('vm:prefer-inline')
   _$$Auth0SignupRequestBodyImplCopyWith<_$Auth0SignupRequestBodyImpl>
-      get copyWith => __$$Auth0SignupRequestBodyImplCopyWithImpl<
-          _$Auth0SignupRequestBodyImpl>(this, _$identity);
+  get copyWith =>
+      __$$Auth0SignupRequestBodyImplCopyWithImpl<_$Auth0SignupRequestBodyImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$Auth0SignupRequestBodyImplToJson(
-      this,
-    );
+    return _$$Auth0SignupRequestBodyImplToJson(this);
   }
 }
 
 abstract class _Auth0SignupRequestBody implements Auth0SignupRequestBody {
-  factory _Auth0SignupRequestBody(
-      {required final String clientId,
-      required final String email,
-      required final String password,
-      required final String connection,
-      final String? username,
-      final String? givenName,
-      final String? familyName,
-      final String? name,
-      final String? nickname,
-      final String? pictureUrl,
-      final Map<String, String>? userMetadata}) = _$Auth0SignupRequestBodyImpl;
+  factory _Auth0SignupRequestBody({
+    required final String clientId,
+    required final String email,
+    required final String password,
+    required final String connection,
+    final String? username,
+    final String? givenName,
+    final String? familyName,
+    final String? name,
+    final String? nickname,
+    final String? pictureUrl,
+    final Map<String, String>? userMetadata,
+  }) = _$Auth0SignupRequestBodyImpl;
 
   factory _Auth0SignupRequestBody.fromJson(Map<String, dynamic> json) =
       _$Auth0SignupRequestBodyImpl.fromJson;
@@ -420,7 +437,7 @@ abstract class _Auth0SignupRequestBody implements Auth0SignupRequestBody {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$Auth0SignupRequestBodyImplCopyWith<_$Auth0SignupRequestBodyImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 Auth0SignupResponse _$Auth0SignupResponseFromJson(Map<String, dynamic> json) {
@@ -448,13 +465,15 @@ mixin _$Auth0SignupResponse {
 /// @nodoc
 abstract class $Auth0SignupResponseCopyWith<$Res> {
   factory $Auth0SignupResponseCopyWith(
-          Auth0SignupResponse value, $Res Function(Auth0SignupResponse) then) =
-      _$Auth0SignupResponseCopyWithImpl<$Res, Auth0SignupResponse>;
+    Auth0SignupResponse value,
+    $Res Function(Auth0SignupResponse) then,
+  ) = _$Auth0SignupResponseCopyWithImpl<$Res, Auth0SignupResponse>;
   @useResult
-  $Res call(
-      {@JsonKey(name: 'user_id') String user_id,
-      @JsonKey(name: 'email_verified') bool emailVerified,
-      String email});
+  $Res call({
+    @JsonKey(name: 'user_id') String user_id,
+    @JsonKey(name: 'email_verified') bool emailVerified,
+    String email,
+  });
 }
 
 /// @nodoc
@@ -476,44 +495,50 @@ class _$Auth0SignupResponseCopyWithImpl<$Res, $Val extends Auth0SignupResponse>
     Object? emailVerified = null,
     Object? email = null,
   }) {
-    return _then(_value.copyWith(
-      user_id: null == user_id
-          ? _value.user_id
-          : user_id // ignore: cast_nullable_to_non_nullable
-              as String,
-      emailVerified: null == emailVerified
-          ? _value.emailVerified
-          : emailVerified // ignore: cast_nullable_to_non_nullable
-              as bool,
-      email: null == email
-          ? _value.email
-          : email // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            user_id: null == user_id
+                ? _value.user_id
+                : user_id // ignore: cast_nullable_to_non_nullable
+                      as String,
+            emailVerified: null == emailVerified
+                ? _value.emailVerified
+                : emailVerified // ignore: cast_nullable_to_non_nullable
+                      as bool,
+            email: null == email
+                ? _value.email
+                : email // ignore: cast_nullable_to_non_nullable
+                      as String,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$Auth0SignupResponseImplCopyWith<$Res>
     implements $Auth0SignupResponseCopyWith<$Res> {
-  factory _$$Auth0SignupResponseImplCopyWith(_$Auth0SignupResponseImpl value,
-          $Res Function(_$Auth0SignupResponseImpl) then) =
-      __$$Auth0SignupResponseImplCopyWithImpl<$Res>;
+  factory _$$Auth0SignupResponseImplCopyWith(
+    _$Auth0SignupResponseImpl value,
+    $Res Function(_$Auth0SignupResponseImpl) then,
+  ) = __$$Auth0SignupResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {@JsonKey(name: 'user_id') String user_id,
-      @JsonKey(name: 'email_verified') bool emailVerified,
-      String email});
+  $Res call({
+    @JsonKey(name: 'user_id') String user_id,
+    @JsonKey(name: 'email_verified') bool emailVerified,
+    String email,
+  });
 }
 
 /// @nodoc
 class __$$Auth0SignupResponseImplCopyWithImpl<$Res>
     extends _$Auth0SignupResponseCopyWithImpl<$Res, _$Auth0SignupResponseImpl>
     implements _$$Auth0SignupResponseImplCopyWith<$Res> {
-  __$$Auth0SignupResponseImplCopyWithImpl(_$Auth0SignupResponseImpl _value,
-      $Res Function(_$Auth0SignupResponseImpl) _then)
-      : super(_value, _then);
+  __$$Auth0SignupResponseImplCopyWithImpl(
+    _$Auth0SignupResponseImpl _value,
+    $Res Function(_$Auth0SignupResponseImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of Auth0SignupResponse
   /// with the given fields replaced by the non-null parameter values.
@@ -524,20 +549,22 @@ class __$$Auth0SignupResponseImplCopyWithImpl<$Res>
     Object? emailVerified = null,
     Object? email = null,
   }) {
-    return _then(_$Auth0SignupResponseImpl(
-      user_id: null == user_id
-          ? _value.user_id
-          : user_id // ignore: cast_nullable_to_non_nullable
-              as String,
-      emailVerified: null == emailVerified
-          ? _value.emailVerified
-          : emailVerified // ignore: cast_nullable_to_non_nullable
-              as bool,
-      email: null == email
-          ? _value.email
-          : email // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+    return _then(
+      _$Auth0SignupResponseImpl(
+        user_id: null == user_id
+            ? _value.user_id
+            : user_id // ignore: cast_nullable_to_non_nullable
+                  as String,
+        emailVerified: null == emailVerified
+            ? _value.emailVerified
+            : emailVerified // ignore: cast_nullable_to_non_nullable
+                  as bool,
+        email: null == email
+            ? _value.email
+            : email // ignore: cast_nullable_to_non_nullable
+                  as String,
+      ),
+    );
   }
 }
 
@@ -546,10 +573,11 @@ class __$$Auth0SignupResponseImplCopyWithImpl<$Res>
 class _$Auth0SignupResponseImpl
     with DiagnosticableTreeMixin
     implements _Auth0SignupResponse {
-  const _$Auth0SignupResponseImpl(
-      {@JsonKey(name: 'user_id') required this.user_id,
-      @JsonKey(name: 'email_verified') required this.emailVerified,
-      required this.email});
+  const _$Auth0SignupResponseImpl({
+    @JsonKey(name: 'user_id') required this.user_id,
+    @JsonKey(name: 'email_verified') required this.emailVerified,
+    required this.email,
+  });
 
   factory _$Auth0SignupResponseImpl.fromJson(Map<String, dynamic> json) =>
       _$$Auth0SignupResponseImplFromJson(json);
@@ -600,21 +628,22 @@ class _$Auth0SignupResponseImpl
   @pragma('vm:prefer-inline')
   _$$Auth0SignupResponseImplCopyWith<_$Auth0SignupResponseImpl> get copyWith =>
       __$$Auth0SignupResponseImplCopyWithImpl<_$Auth0SignupResponseImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$Auth0SignupResponseImplToJson(
-      this,
-    );
+    return _$$Auth0SignupResponseImplToJson(this);
   }
 }
 
 abstract class _Auth0SignupResponse implements Auth0SignupResponse {
-  const factory _Auth0SignupResponse(
-      {@JsonKey(name: 'user_id') required final String user_id,
-      @JsonKey(name: 'email_verified') required final bool emailVerified,
-      required final String email}) = _$Auth0SignupResponseImpl;
+  const factory _Auth0SignupResponse({
+    @JsonKey(name: 'user_id') required final String user_id,
+    @JsonKey(name: 'email_verified') required final bool emailVerified,
+    required final String email,
+  }) = _$Auth0SignupResponseImpl;
 
   factory _Auth0SignupResponse.fromJson(Map<String, dynamic> json) =
       _$Auth0SignupResponseImpl.fromJson;
@@ -660,8 +689,9 @@ mixin _$Auth0ApiException {
 /// @nodoc
 abstract class $Auth0ApiExceptionCopyWith<$Res> {
   factory $Auth0ApiExceptionCopyWith(
-          Auth0ApiException value, $Res Function(Auth0ApiException) then) =
-      _$Auth0ApiExceptionCopyWithImpl<$Res, Auth0ApiException>;
+    Auth0ApiException value,
+    $Res Function(Auth0ApiException) then,
+  ) = _$Auth0ApiExceptionCopyWithImpl<$Res, Auth0ApiException>;
   @useResult
   $Res call({String? name, String? code, String? description, int? statusCode});
 }
@@ -686,33 +716,37 @@ class _$Auth0ApiExceptionCopyWithImpl<$Res, $Val extends Auth0ApiException>
     Object? description = freezed,
     Object? statusCode = freezed,
   }) {
-    return _then(_value.copyWith(
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      code: freezed == code
-          ? _value.code
-          : code // ignore: cast_nullable_to_non_nullable
-              as String?,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      statusCode: freezed == statusCode
-          ? _value.statusCode
-          : statusCode // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            name: freezed == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                      as String?,
+            code: freezed == code
+                ? _value.code
+                : code // ignore: cast_nullable_to_non_nullable
+                      as String?,
+            description: freezed == description
+                ? _value.description
+                : description // ignore: cast_nullable_to_non_nullable
+                      as String?,
+            statusCode: freezed == statusCode
+                ? _value.statusCode
+                : statusCode // ignore: cast_nullable_to_non_nullable
+                      as int?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$Auth0ApiExceptionImplCopyWith<$Res>
     implements $Auth0ApiExceptionCopyWith<$Res> {
-  factory _$$Auth0ApiExceptionImplCopyWith(_$Auth0ApiExceptionImpl value,
-          $Res Function(_$Auth0ApiExceptionImpl) then) =
-      __$$Auth0ApiExceptionImplCopyWithImpl<$Res>;
+  factory _$$Auth0ApiExceptionImplCopyWith(
+    _$Auth0ApiExceptionImpl value,
+    $Res Function(_$Auth0ApiExceptionImpl) then,
+  ) = __$$Auth0ApiExceptionImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String? name, String? code, String? description, int? statusCode});
@@ -722,9 +756,10 @@ abstract class _$$Auth0ApiExceptionImplCopyWith<$Res>
 class __$$Auth0ApiExceptionImplCopyWithImpl<$Res>
     extends _$Auth0ApiExceptionCopyWithImpl<$Res, _$Auth0ApiExceptionImpl>
     implements _$$Auth0ApiExceptionImplCopyWith<$Res> {
-  __$$Auth0ApiExceptionImplCopyWithImpl(_$Auth0ApiExceptionImpl _value,
-      $Res Function(_$Auth0ApiExceptionImpl) _then)
-      : super(_value, _then);
+  __$$Auth0ApiExceptionImplCopyWithImpl(
+    _$Auth0ApiExceptionImpl _value,
+    $Res Function(_$Auth0ApiExceptionImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of Auth0ApiException
   /// with the given fields replaced by the non-null parameter values.
@@ -736,24 +771,26 @@ class __$$Auth0ApiExceptionImplCopyWithImpl<$Res>
     Object? description = freezed,
     Object? statusCode = freezed,
   }) {
-    return _then(_$Auth0ApiExceptionImpl(
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      code: freezed == code
-          ? _value.code
-          : code // ignore: cast_nullable_to_non_nullable
-              as String?,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      statusCode: freezed == statusCode
-          ? _value.statusCode
-          : statusCode // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ));
+    return _then(
+      _$Auth0ApiExceptionImpl(
+        name: freezed == name
+            ? _value.name
+            : name // ignore: cast_nullable_to_non_nullable
+                  as String?,
+        code: freezed == code
+            ? _value.code
+            : code // ignore: cast_nullable_to_non_nullable
+                  as String?,
+        description: freezed == description
+            ? _value.description
+            : description // ignore: cast_nullable_to_non_nullable
+                  as String?,
+        statusCode: freezed == statusCode
+            ? _value.statusCode
+            : statusCode // ignore: cast_nullable_to_non_nullable
+                  as int?,
+      ),
+    );
   }
 }
 
@@ -762,8 +799,12 @@ class __$$Auth0ApiExceptionImplCopyWithImpl<$Res>
 class _$Auth0ApiExceptionImpl
     with DiagnosticableTreeMixin
     implements _Auth0ApiException {
-  const _$Auth0ApiExceptionImpl(
-      {this.name, this.code, this.description, this.statusCode});
+  const _$Auth0ApiExceptionImpl({
+    this.name,
+    this.code,
+    this.description,
+    this.statusCode,
+  });
 
   factory _$Auth0ApiExceptionImpl.fromJson(Map<String, dynamic> json) =>
       _$$Auth0ApiExceptionImplFromJson(json);
@@ -818,22 +859,23 @@ class _$Auth0ApiExceptionImpl
   @pragma('vm:prefer-inline')
   _$$Auth0ApiExceptionImplCopyWith<_$Auth0ApiExceptionImpl> get copyWith =>
       __$$Auth0ApiExceptionImplCopyWithImpl<_$Auth0ApiExceptionImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$Auth0ApiExceptionImplToJson(
-      this,
-    );
+    return _$$Auth0ApiExceptionImplToJson(this);
   }
 }
 
 abstract class _Auth0ApiException implements Auth0ApiException {
-  const factory _Auth0ApiException(
-      {final String? name,
-      final String? code,
-      final String? description,
-      final int? statusCode}) = _$Auth0ApiExceptionImpl;
+  const factory _Auth0ApiException({
+    final String? name,
+    final String? code,
+    final String? description,
+    final int? statusCode,
+  }) = _$Auth0ApiExceptionImpl;
 
   factory _Auth0ApiException.fromJson(Map<String, dynamic> json) =
       _$Auth0ApiExceptionImpl.fromJson;

@@ -12,10 +12,12 @@ part of 'downloads.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 VideoDownloadStartedEvent _$VideoDownloadStartedEventFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _VideoDownloadStartedEvent.fromJson(json);
 }
 
@@ -38,20 +40,24 @@ mixin _$VideoDownloadStartedEvent {
 
 /// @nodoc
 abstract class $VideoDownloadStartedEventCopyWith<$Res> {
-  factory $VideoDownloadStartedEventCopyWith(VideoDownloadStartedEvent value,
-          $Res Function(VideoDownloadStartedEvent) then) =
-      _$VideoDownloadStartedEventCopyWithImpl<$Res, VideoDownloadStartedEvent>;
+  factory $VideoDownloadStartedEventCopyWith(
+    VideoDownloadStartedEvent value,
+    $Res Function(VideoDownloadStartedEvent) then,
+  ) = _$VideoDownloadStartedEventCopyWithImpl<$Res, VideoDownloadStartedEvent>;
   @useResult
-  $Res call(
-      {String downloadId,
-      String episodeId,
-      String? quality,
-      String? audioLanguage});
+  $Res call({
+    String downloadId,
+    String episodeId,
+    String? quality,
+    String? audioLanguage,
+  });
 }
 
 /// @nodoc
-class _$VideoDownloadStartedEventCopyWithImpl<$Res,
-        $Val extends VideoDownloadStartedEvent>
+class _$VideoDownloadStartedEventCopyWithImpl<
+  $Res,
+  $Val extends VideoDownloadStartedEvent
+>
     implements $VideoDownloadStartedEventCopyWith<$Res> {
   _$VideoDownloadStartedEventCopyWithImpl(this._value, this._then);
 
@@ -70,24 +76,27 @@ class _$VideoDownloadStartedEventCopyWithImpl<$Res,
     Object? quality = freezed,
     Object? audioLanguage = freezed,
   }) {
-    return _then(_value.copyWith(
-      downloadId: null == downloadId
-          ? _value.downloadId
-          : downloadId // ignore: cast_nullable_to_non_nullable
-              as String,
-      episodeId: null == episodeId
-          ? _value.episodeId
-          : episodeId // ignore: cast_nullable_to_non_nullable
-              as String,
-      quality: freezed == quality
-          ? _value.quality
-          : quality // ignore: cast_nullable_to_non_nullable
-              as String?,
-      audioLanguage: freezed == audioLanguage
-          ? _value.audioLanguage
-          : audioLanguage // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            downloadId: null == downloadId
+                ? _value.downloadId
+                : downloadId // ignore: cast_nullable_to_non_nullable
+                      as String,
+            episodeId: null == episodeId
+                ? _value.episodeId
+                : episodeId // ignore: cast_nullable_to_non_nullable
+                      as String,
+            quality: freezed == quality
+                ? _value.quality
+                : quality // ignore: cast_nullable_to_non_nullable
+                      as String?,
+            audioLanguage: freezed == audioLanguage
+                ? _value.audioLanguage
+                : audioLanguage // ignore: cast_nullable_to_non_nullable
+                      as String?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -95,27 +104,31 @@ class _$VideoDownloadStartedEventCopyWithImpl<$Res,
 abstract class _$$VideoDownloadStartedEventImplCopyWith<$Res>
     implements $VideoDownloadStartedEventCopyWith<$Res> {
   factory _$$VideoDownloadStartedEventImplCopyWith(
-          _$VideoDownloadStartedEventImpl value,
-          $Res Function(_$VideoDownloadStartedEventImpl) then) =
-      __$$VideoDownloadStartedEventImplCopyWithImpl<$Res>;
+    _$VideoDownloadStartedEventImpl value,
+    $Res Function(_$VideoDownloadStartedEventImpl) then,
+  ) = __$$VideoDownloadStartedEventImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String downloadId,
-      String episodeId,
-      String? quality,
-      String? audioLanguage});
+  $Res call({
+    String downloadId,
+    String episodeId,
+    String? quality,
+    String? audioLanguage,
+  });
 }
 
 /// @nodoc
 class __$$VideoDownloadStartedEventImplCopyWithImpl<$Res>
-    extends _$VideoDownloadStartedEventCopyWithImpl<$Res,
-        _$VideoDownloadStartedEventImpl>
+    extends
+        _$VideoDownloadStartedEventCopyWithImpl<
+          $Res,
+          _$VideoDownloadStartedEventImpl
+        >
     implements _$$VideoDownloadStartedEventImplCopyWith<$Res> {
   __$$VideoDownloadStartedEventImplCopyWithImpl(
-      _$VideoDownloadStartedEventImpl _value,
-      $Res Function(_$VideoDownloadStartedEventImpl) _then)
-      : super(_value, _then);
+    _$VideoDownloadStartedEventImpl _value,
+    $Res Function(_$VideoDownloadStartedEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of VideoDownloadStartedEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -127,35 +140,38 @@ class __$$VideoDownloadStartedEventImplCopyWithImpl<$Res>
     Object? quality = freezed,
     Object? audioLanguage = freezed,
   }) {
-    return _then(_$VideoDownloadStartedEventImpl(
-      downloadId: null == downloadId
-          ? _value.downloadId
-          : downloadId // ignore: cast_nullable_to_non_nullable
-              as String,
-      episodeId: null == episodeId
-          ? _value.episodeId
-          : episodeId // ignore: cast_nullable_to_non_nullable
-              as String,
-      quality: freezed == quality
-          ? _value.quality
-          : quality // ignore: cast_nullable_to_non_nullable
-              as String?,
-      audioLanguage: freezed == audioLanguage
-          ? _value.audioLanguage
-          : audioLanguage // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$VideoDownloadStartedEventImpl(
+        downloadId: null == downloadId
+            ? _value.downloadId
+            : downloadId // ignore: cast_nullable_to_non_nullable
+                  as String,
+        episodeId: null == episodeId
+            ? _value.episodeId
+            : episodeId // ignore: cast_nullable_to_non_nullable
+                  as String,
+        quality: freezed == quality
+            ? _value.quality
+            : quality // ignore: cast_nullable_to_non_nullable
+                  as String?,
+        audioLanguage: freezed == audioLanguage
+            ? _value.audioLanguage
+            : audioLanguage // ignore: cast_nullable_to_non_nullable
+                  as String?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$VideoDownloadStartedEventImpl implements _VideoDownloadStartedEvent {
-  const _$VideoDownloadStartedEventImpl(
-      {required this.downloadId,
-      required this.episodeId,
-      required this.quality,
-      required this.audioLanguage});
+  const _$VideoDownloadStartedEventImpl({
+    required this.downloadId,
+    required this.episodeId,
+    required this.quality,
+    required this.audioLanguage,
+  });
 
   factory _$VideoDownloadStartedEventImpl.fromJson(Map<String, dynamic> json) =>
       _$$VideoDownloadStartedEventImplFromJson(json);
@@ -199,23 +215,24 @@ class _$VideoDownloadStartedEventImpl implements _VideoDownloadStartedEvent {
   @override
   @pragma('vm:prefer-inline')
   _$$VideoDownloadStartedEventImplCopyWith<_$VideoDownloadStartedEventImpl>
-      get copyWith => __$$VideoDownloadStartedEventImplCopyWithImpl<
-          _$VideoDownloadStartedEventImpl>(this, _$identity);
+  get copyWith =>
+      __$$VideoDownloadStartedEventImplCopyWithImpl<
+        _$VideoDownloadStartedEventImpl
+      >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$VideoDownloadStartedEventImplToJson(
-      this,
-    );
+    return _$$VideoDownloadStartedEventImplToJson(this);
   }
 }
 
 abstract class _VideoDownloadStartedEvent implements VideoDownloadStartedEvent {
-  const factory _VideoDownloadStartedEvent(
-      {required final String downloadId,
-      required final String episodeId,
-      required final String? quality,
-      required final String? audioLanguage}) = _$VideoDownloadStartedEventImpl;
+  const factory _VideoDownloadStartedEvent({
+    required final String downloadId,
+    required final String episodeId,
+    required final String? quality,
+    required final String? audioLanguage,
+  }) = _$VideoDownloadStartedEventImpl;
 
   factory _VideoDownloadStartedEvent.fromJson(Map<String, dynamic> json) =
       _$VideoDownloadStartedEventImpl.fromJson;
@@ -234,11 +251,12 @@ abstract class _VideoDownloadStartedEvent implements VideoDownloadStartedEvent {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$VideoDownloadStartedEventImplCopyWith<_$VideoDownloadStartedEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 VideoDownloadRemovedEvent _$VideoDownloadRemovedEventFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _VideoDownloadRemovedEvent.fromJson(json);
 }
 
@@ -259,16 +277,19 @@ mixin _$VideoDownloadRemovedEvent {
 
 /// @nodoc
 abstract class $VideoDownloadRemovedEventCopyWith<$Res> {
-  factory $VideoDownloadRemovedEventCopyWith(VideoDownloadRemovedEvent value,
-          $Res Function(VideoDownloadRemovedEvent) then) =
-      _$VideoDownloadRemovedEventCopyWithImpl<$Res, VideoDownloadRemovedEvent>;
+  factory $VideoDownloadRemovedEventCopyWith(
+    VideoDownloadRemovedEvent value,
+    $Res Function(VideoDownloadRemovedEvent) then,
+  ) = _$VideoDownloadRemovedEventCopyWithImpl<$Res, VideoDownloadRemovedEvent>;
   @useResult
   $Res call({String downloadId, String? episodeId});
 }
 
 /// @nodoc
-class _$VideoDownloadRemovedEventCopyWithImpl<$Res,
-        $Val extends VideoDownloadRemovedEvent>
+class _$VideoDownloadRemovedEventCopyWithImpl<
+  $Res,
+  $Val extends VideoDownloadRemovedEvent
+>
     implements $VideoDownloadRemovedEventCopyWith<$Res> {
   _$VideoDownloadRemovedEventCopyWithImpl(this._value, this._then);
 
@@ -281,20 +302,20 @@ class _$VideoDownloadRemovedEventCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? downloadId = null,
-    Object? episodeId = freezed,
-  }) {
-    return _then(_value.copyWith(
-      downloadId: null == downloadId
-          ? _value.downloadId
-          : downloadId // ignore: cast_nullable_to_non_nullable
-              as String,
-      episodeId: freezed == episodeId
-          ? _value.episodeId
-          : episodeId // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+  $Res call({Object? downloadId = null, Object? episodeId = freezed}) {
+    return _then(
+      _value.copyWith(
+            downloadId: null == downloadId
+                ? _value.downloadId
+                : downloadId // ignore: cast_nullable_to_non_nullable
+                      as String,
+            episodeId: freezed == episodeId
+                ? _value.episodeId
+                : episodeId // ignore: cast_nullable_to_non_nullable
+                      as String?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -302,9 +323,9 @@ class _$VideoDownloadRemovedEventCopyWithImpl<$Res,
 abstract class _$$VideoDownloadRemovedEventImplCopyWith<$Res>
     implements $VideoDownloadRemovedEventCopyWith<$Res> {
   factory _$$VideoDownloadRemovedEventImplCopyWith(
-          _$VideoDownloadRemovedEventImpl value,
-          $Res Function(_$VideoDownloadRemovedEventImpl) then) =
-      __$$VideoDownloadRemovedEventImplCopyWithImpl<$Res>;
+    _$VideoDownloadRemovedEventImpl value,
+    $Res Function(_$VideoDownloadRemovedEventImpl) then,
+  ) = __$$VideoDownloadRemovedEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String downloadId, String? episodeId});
@@ -312,40 +333,44 @@ abstract class _$$VideoDownloadRemovedEventImplCopyWith<$Res>
 
 /// @nodoc
 class __$$VideoDownloadRemovedEventImplCopyWithImpl<$Res>
-    extends _$VideoDownloadRemovedEventCopyWithImpl<$Res,
-        _$VideoDownloadRemovedEventImpl>
+    extends
+        _$VideoDownloadRemovedEventCopyWithImpl<
+          $Res,
+          _$VideoDownloadRemovedEventImpl
+        >
     implements _$$VideoDownloadRemovedEventImplCopyWith<$Res> {
   __$$VideoDownloadRemovedEventImplCopyWithImpl(
-      _$VideoDownloadRemovedEventImpl _value,
-      $Res Function(_$VideoDownloadRemovedEventImpl) _then)
-      : super(_value, _then);
+    _$VideoDownloadRemovedEventImpl _value,
+    $Res Function(_$VideoDownloadRemovedEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of VideoDownloadRemovedEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? downloadId = null,
-    Object? episodeId = freezed,
-  }) {
-    return _then(_$VideoDownloadRemovedEventImpl(
-      downloadId: null == downloadId
-          ? _value.downloadId
-          : downloadId // ignore: cast_nullable_to_non_nullable
-              as String,
-      episodeId: freezed == episodeId
-          ? _value.episodeId
-          : episodeId // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+  $Res call({Object? downloadId = null, Object? episodeId = freezed}) {
+    return _then(
+      _$VideoDownloadRemovedEventImpl(
+        downloadId: null == downloadId
+            ? _value.downloadId
+            : downloadId // ignore: cast_nullable_to_non_nullable
+                  as String,
+        episodeId: freezed == episodeId
+            ? _value.episodeId
+            : episodeId // ignore: cast_nullable_to_non_nullable
+                  as String?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$VideoDownloadRemovedEventImpl implements _VideoDownloadRemovedEvent {
-  const _$VideoDownloadRemovedEventImpl(
-      {required this.downloadId, required this.episodeId});
+  const _$VideoDownloadRemovedEventImpl({
+    required this.downloadId,
+    required this.episodeId,
+  });
 
   factory _$VideoDownloadRemovedEventImpl.fromJson(Map<String, dynamic> json) =>
       _$$VideoDownloadRemovedEventImplFromJson(json);
@@ -381,21 +406,22 @@ class _$VideoDownloadRemovedEventImpl implements _VideoDownloadRemovedEvent {
   @override
   @pragma('vm:prefer-inline')
   _$$VideoDownloadRemovedEventImplCopyWith<_$VideoDownloadRemovedEventImpl>
-      get copyWith => __$$VideoDownloadRemovedEventImplCopyWithImpl<
-          _$VideoDownloadRemovedEventImpl>(this, _$identity);
+  get copyWith =>
+      __$$VideoDownloadRemovedEventImplCopyWithImpl<
+        _$VideoDownloadRemovedEventImpl
+      >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$VideoDownloadRemovedEventImplToJson(
-      this,
-    );
+    return _$$VideoDownloadRemovedEventImplToJson(this);
   }
 }
 
 abstract class _VideoDownloadRemovedEvent implements VideoDownloadRemovedEvent {
-  const factory _VideoDownloadRemovedEvent(
-      {required final String downloadId,
-      required final String? episodeId}) = _$VideoDownloadRemovedEventImpl;
+  const factory _VideoDownloadRemovedEvent({
+    required final String downloadId,
+    required final String? episodeId,
+  }) = _$VideoDownloadRemovedEventImpl;
 
   factory _VideoDownloadRemovedEvent.fromJson(Map<String, dynamic> json) =
       _$VideoDownloadRemovedEventImpl.fromJson;
@@ -410,11 +436,12 @@ abstract class _VideoDownloadRemovedEvent implements VideoDownloadRemovedEvent {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$VideoDownloadRemovedEventImplCopyWith<_$VideoDownloadRemovedEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 VideoDownloadPlayedEvent _$VideoDownloadPlayedEventFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _VideoDownloadPlayedEvent.fromJson(json);
 }
 
@@ -435,16 +462,19 @@ mixin _$VideoDownloadPlayedEvent {
 
 /// @nodoc
 abstract class $VideoDownloadPlayedEventCopyWith<$Res> {
-  factory $VideoDownloadPlayedEventCopyWith(VideoDownloadPlayedEvent value,
-          $Res Function(VideoDownloadPlayedEvent) then) =
-      _$VideoDownloadPlayedEventCopyWithImpl<$Res, VideoDownloadPlayedEvent>;
+  factory $VideoDownloadPlayedEventCopyWith(
+    VideoDownloadPlayedEvent value,
+    $Res Function(VideoDownloadPlayedEvent) then,
+  ) = _$VideoDownloadPlayedEventCopyWithImpl<$Res, VideoDownloadPlayedEvent>;
   @useResult
   $Res call({String downloadId, String? episodeId});
 }
 
 /// @nodoc
-class _$VideoDownloadPlayedEventCopyWithImpl<$Res,
-        $Val extends VideoDownloadPlayedEvent>
+class _$VideoDownloadPlayedEventCopyWithImpl<
+  $Res,
+  $Val extends VideoDownloadPlayedEvent
+>
     implements $VideoDownloadPlayedEventCopyWith<$Res> {
   _$VideoDownloadPlayedEventCopyWithImpl(this._value, this._then);
 
@@ -457,20 +487,20 @@ class _$VideoDownloadPlayedEventCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? downloadId = null,
-    Object? episodeId = freezed,
-  }) {
-    return _then(_value.copyWith(
-      downloadId: null == downloadId
-          ? _value.downloadId
-          : downloadId // ignore: cast_nullable_to_non_nullable
-              as String,
-      episodeId: freezed == episodeId
-          ? _value.episodeId
-          : episodeId // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+  $Res call({Object? downloadId = null, Object? episodeId = freezed}) {
+    return _then(
+      _value.copyWith(
+            downloadId: null == downloadId
+                ? _value.downloadId
+                : downloadId // ignore: cast_nullable_to_non_nullable
+                      as String,
+            episodeId: freezed == episodeId
+                ? _value.episodeId
+                : episodeId // ignore: cast_nullable_to_non_nullable
+                      as String?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -478,9 +508,9 @@ class _$VideoDownloadPlayedEventCopyWithImpl<$Res,
 abstract class _$$VideoDownloadPlayedEventImplCopyWith<$Res>
     implements $VideoDownloadPlayedEventCopyWith<$Res> {
   factory _$$VideoDownloadPlayedEventImplCopyWith(
-          _$VideoDownloadPlayedEventImpl value,
-          $Res Function(_$VideoDownloadPlayedEventImpl) then) =
-      __$$VideoDownloadPlayedEventImplCopyWithImpl<$Res>;
+    _$VideoDownloadPlayedEventImpl value,
+    $Res Function(_$VideoDownloadPlayedEventImpl) then,
+  ) = __$$VideoDownloadPlayedEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String downloadId, String? episodeId});
@@ -488,40 +518,44 @@ abstract class _$$VideoDownloadPlayedEventImplCopyWith<$Res>
 
 /// @nodoc
 class __$$VideoDownloadPlayedEventImplCopyWithImpl<$Res>
-    extends _$VideoDownloadPlayedEventCopyWithImpl<$Res,
-        _$VideoDownloadPlayedEventImpl>
+    extends
+        _$VideoDownloadPlayedEventCopyWithImpl<
+          $Res,
+          _$VideoDownloadPlayedEventImpl
+        >
     implements _$$VideoDownloadPlayedEventImplCopyWith<$Res> {
   __$$VideoDownloadPlayedEventImplCopyWithImpl(
-      _$VideoDownloadPlayedEventImpl _value,
-      $Res Function(_$VideoDownloadPlayedEventImpl) _then)
-      : super(_value, _then);
+    _$VideoDownloadPlayedEventImpl _value,
+    $Res Function(_$VideoDownloadPlayedEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of VideoDownloadPlayedEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? downloadId = null,
-    Object? episodeId = freezed,
-  }) {
-    return _then(_$VideoDownloadPlayedEventImpl(
-      downloadId: null == downloadId
-          ? _value.downloadId
-          : downloadId // ignore: cast_nullable_to_non_nullable
-              as String,
-      episodeId: freezed == episodeId
-          ? _value.episodeId
-          : episodeId // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+  $Res call({Object? downloadId = null, Object? episodeId = freezed}) {
+    return _then(
+      _$VideoDownloadPlayedEventImpl(
+        downloadId: null == downloadId
+            ? _value.downloadId
+            : downloadId // ignore: cast_nullable_to_non_nullable
+                  as String,
+        episodeId: freezed == episodeId
+            ? _value.episodeId
+            : episodeId // ignore: cast_nullable_to_non_nullable
+                  as String?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$VideoDownloadPlayedEventImpl implements _VideoDownloadPlayedEvent {
-  const _$VideoDownloadPlayedEventImpl(
-      {required this.downloadId, required this.episodeId});
+  const _$VideoDownloadPlayedEventImpl({
+    required this.downloadId,
+    required this.episodeId,
+  });
 
   factory _$VideoDownloadPlayedEventImpl.fromJson(Map<String, dynamic> json) =>
       _$$VideoDownloadPlayedEventImplFromJson(json);
@@ -557,21 +591,22 @@ class _$VideoDownloadPlayedEventImpl implements _VideoDownloadPlayedEvent {
   @override
   @pragma('vm:prefer-inline')
   _$$VideoDownloadPlayedEventImplCopyWith<_$VideoDownloadPlayedEventImpl>
-      get copyWith => __$$VideoDownloadPlayedEventImplCopyWithImpl<
-          _$VideoDownloadPlayedEventImpl>(this, _$identity);
+  get copyWith =>
+      __$$VideoDownloadPlayedEventImplCopyWithImpl<
+        _$VideoDownloadPlayedEventImpl
+      >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$VideoDownloadPlayedEventImplToJson(
-      this,
-    );
+    return _$$VideoDownloadPlayedEventImplToJson(this);
   }
 }
 
 abstract class _VideoDownloadPlayedEvent implements VideoDownloadPlayedEvent {
-  const factory _VideoDownloadPlayedEvent(
-      {required final String downloadId,
-      required final String? episodeId}) = _$VideoDownloadPlayedEventImpl;
+  const factory _VideoDownloadPlayedEvent({
+    required final String downloadId,
+    required final String? episodeId,
+  }) = _$VideoDownloadPlayedEventImpl;
 
   factory _VideoDownloadPlayedEvent.fromJson(Map<String, dynamic> json) =
       _$VideoDownloadPlayedEventImpl.fromJson;
@@ -586,5 +621,5 @@ abstract class _VideoDownloadPlayedEvent implements VideoDownloadPlayedEvent {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$VideoDownloadPlayedEventImplCopyWith<_$VideoDownloadPlayedEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

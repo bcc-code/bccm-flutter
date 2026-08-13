@@ -7,13 +7,9 @@ part of 'achievement_shared.dart';
 // **************************************************************************
 
 _$AchievementSharedEventImpl _$$AchievementSharedEventImplFromJson(
-        Map<String, dynamic> json) =>
-    _$AchievementSharedEventImpl(
-      elementTitle: json['elementTitle'] as String,
-    );
+  Map<String, dynamic> json,
+) => _$AchievementSharedEventImpl(elementTitle: json['elementTitle'] as String);
 
 Map<String, dynamic> _$$AchievementSharedEventImplToJson(
-        _$AchievementSharedEventImpl instance) =>
-    <String, dynamic>{
-      'elementTitle': instance.elementTitle,
-    };
+  _$AchievementSharedEventImpl instance,
+) => <String, dynamic>{'elementTitle': instance.elementTitle};

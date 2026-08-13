@@ -7,15 +7,15 @@ part of 'achievement_clicked.dart';
 // **************************************************************************
 
 _$AchievementClickedEventImpl _$$AchievementClickedEventImplFromJson(
-        Map<String, dynamic> json) =>
-    _$AchievementClickedEventImpl(
-      elementPosition: (json['elementPosition'] as num).toInt(),
-      elementTitle: json['elementTitle'] as String,
-    );
+  Map<String, dynamic> json,
+) => _$AchievementClickedEventImpl(
+  elementPosition: (json['elementPosition'] as num).toInt(),
+  elementTitle: json['elementTitle'] as String,
+);
 
 Map<String, dynamic> _$$AchievementClickedEventImplToJson(
-        _$AchievementClickedEventImpl instance) =>
-    <String, dynamic>{
-      'elementPosition': instance.elementPosition,
-      'elementTitle': instance.elementTitle,
-    };
+  _$AchievementClickedEventImpl instance,
+) => <String, dynamic>{
+  'elementPosition': instance.elementPosition,
+  'elementTitle': instance.elementTitle,
+};

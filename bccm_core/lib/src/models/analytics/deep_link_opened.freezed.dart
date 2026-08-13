@@ -12,7 +12,8 @@ part of 'deep_link_opened.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 DeepLinkOpenedEvent _$DeepLinkOpenedEventFromJson(Map<String, dynamic> json) {
   return _DeepLinkOpenedEvent.fromJson(json);
@@ -37,8 +38,9 @@ mixin _$DeepLinkOpenedEvent {
 /// @nodoc
 abstract class $DeepLinkOpenedEventCopyWith<$Res> {
   factory $DeepLinkOpenedEventCopyWith(
-          DeepLinkOpenedEvent value, $Res Function(DeepLinkOpenedEvent) then) =
-      _$DeepLinkOpenedEventCopyWithImpl<$Res, DeepLinkOpenedEvent>;
+    DeepLinkOpenedEvent value,
+    $Res Function(DeepLinkOpenedEvent) then,
+  ) = _$DeepLinkOpenedEventCopyWithImpl<$Res, DeepLinkOpenedEvent>;
   @useResult
   $Res call({String url, String source, String campaignId});
 }
@@ -62,29 +64,33 @@ class _$DeepLinkOpenedEventCopyWithImpl<$Res, $Val extends DeepLinkOpenedEvent>
     Object? source = null,
     Object? campaignId = null,
   }) {
-    return _then(_value.copyWith(
-      url: null == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String,
-      source: null == source
-          ? _value.source
-          : source // ignore: cast_nullable_to_non_nullable
-              as String,
-      campaignId: null == campaignId
-          ? _value.campaignId
-          : campaignId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            url: null == url
+                ? _value.url
+                : url // ignore: cast_nullable_to_non_nullable
+                      as String,
+            source: null == source
+                ? _value.source
+                : source // ignore: cast_nullable_to_non_nullable
+                      as String,
+            campaignId: null == campaignId
+                ? _value.campaignId
+                : campaignId // ignore: cast_nullable_to_non_nullable
+                      as String,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$DeepLinkOpenedEventImplCopyWith<$Res>
     implements $DeepLinkOpenedEventCopyWith<$Res> {
-  factory _$$DeepLinkOpenedEventImplCopyWith(_$DeepLinkOpenedEventImpl value,
-          $Res Function(_$DeepLinkOpenedEventImpl) then) =
-      __$$DeepLinkOpenedEventImplCopyWithImpl<$Res>;
+  factory _$$DeepLinkOpenedEventImplCopyWith(
+    _$DeepLinkOpenedEventImpl value,
+    $Res Function(_$DeepLinkOpenedEventImpl) then,
+  ) = __$$DeepLinkOpenedEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String url, String source, String campaignId});
@@ -94,9 +100,10 @@ abstract class _$$DeepLinkOpenedEventImplCopyWith<$Res>
 class __$$DeepLinkOpenedEventImplCopyWithImpl<$Res>
     extends _$DeepLinkOpenedEventCopyWithImpl<$Res, _$DeepLinkOpenedEventImpl>
     implements _$$DeepLinkOpenedEventImplCopyWith<$Res> {
-  __$$DeepLinkOpenedEventImplCopyWithImpl(_$DeepLinkOpenedEventImpl _value,
-      $Res Function(_$DeepLinkOpenedEventImpl) _then)
-      : super(_value, _then);
+  __$$DeepLinkOpenedEventImplCopyWithImpl(
+    _$DeepLinkOpenedEventImpl _value,
+    $Res Function(_$DeepLinkOpenedEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of DeepLinkOpenedEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -107,28 +114,33 @@ class __$$DeepLinkOpenedEventImplCopyWithImpl<$Res>
     Object? source = null,
     Object? campaignId = null,
   }) {
-    return _then(_$DeepLinkOpenedEventImpl(
-      url: null == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String,
-      source: null == source
-          ? _value.source
-          : source // ignore: cast_nullable_to_non_nullable
-              as String,
-      campaignId: null == campaignId
-          ? _value.campaignId
-          : campaignId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+    return _then(
+      _$DeepLinkOpenedEventImpl(
+        url: null == url
+            ? _value.url
+            : url // ignore: cast_nullable_to_non_nullable
+                  as String,
+        source: null == source
+            ? _value.source
+            : source // ignore: cast_nullable_to_non_nullable
+                  as String,
+        campaignId: null == campaignId
+            ? _value.campaignId
+            : campaignId // ignore: cast_nullable_to_non_nullable
+                  as String,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$DeepLinkOpenedEventImpl implements _DeepLinkOpenedEvent {
-  const _$DeepLinkOpenedEventImpl(
-      {required this.url, required this.source, required this.campaignId});
+  const _$DeepLinkOpenedEventImpl({
+    required this.url,
+    required this.source,
+    required this.campaignId,
+  });
 
   factory _$DeepLinkOpenedEventImpl.fromJson(Map<String, dynamic> json) =>
       _$$DeepLinkOpenedEventImplFromJson(json);
@@ -167,21 +179,22 @@ class _$DeepLinkOpenedEventImpl implements _DeepLinkOpenedEvent {
   @pragma('vm:prefer-inline')
   _$$DeepLinkOpenedEventImplCopyWith<_$DeepLinkOpenedEventImpl> get copyWith =>
       __$$DeepLinkOpenedEventImplCopyWithImpl<_$DeepLinkOpenedEventImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$DeepLinkOpenedEventImplToJson(
-      this,
-    );
+    return _$$DeepLinkOpenedEventImplToJson(this);
   }
 }
 
 abstract class _DeepLinkOpenedEvent implements DeepLinkOpenedEvent {
-  const factory _DeepLinkOpenedEvent(
-      {required final String url,
-      required final String source,
-      required final String campaignId}) = _$DeepLinkOpenedEventImpl;
+  const factory _DeepLinkOpenedEvent({
+    required final String url,
+    required final String source,
+    required final String campaignId,
+  }) = _$DeepLinkOpenedEventImpl;
 
   factory _DeepLinkOpenedEvent.fromJson(Map<String, dynamic> json) =
       _$DeepLinkOpenedEventImpl.fromJson;

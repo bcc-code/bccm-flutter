@@ -12,7 +12,8 @@ part of 'game_closed.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 GameClosedEvent _$GameClosedEventFromJson(Map<String, dynamic> json) {
   return _GameClosedEvent.fromJson(json);
@@ -37,8 +38,9 @@ mixin _$GameClosedEvent {
 /// @nodoc
 abstract class $GameClosedEventCopyWith<$Res> {
   factory $GameClosedEventCopyWith(
-          GameClosedEvent value, $Res Function(GameClosedEvent) then) =
-      _$GameClosedEventCopyWithImpl<$Res, GameClosedEvent>;
+    GameClosedEvent value,
+    $Res Function(GameClosedEvent) then,
+  ) = _$GameClosedEventCopyWithImpl<$Res, GameClosedEvent>;
   @useResult
   $Res call({String gameId, int timeSpent, int? position});
 }
@@ -62,29 +64,33 @@ class _$GameClosedEventCopyWithImpl<$Res, $Val extends GameClosedEvent>
     Object? timeSpent = null,
     Object? position = freezed,
   }) {
-    return _then(_value.copyWith(
-      gameId: null == gameId
-          ? _value.gameId
-          : gameId // ignore: cast_nullable_to_non_nullable
-              as String,
-      timeSpent: null == timeSpent
-          ? _value.timeSpent
-          : timeSpent // ignore: cast_nullable_to_non_nullable
-              as int,
-      position: freezed == position
-          ? _value.position
-          : position // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            gameId: null == gameId
+                ? _value.gameId
+                : gameId // ignore: cast_nullable_to_non_nullable
+                      as String,
+            timeSpent: null == timeSpent
+                ? _value.timeSpent
+                : timeSpent // ignore: cast_nullable_to_non_nullable
+                      as int,
+            position: freezed == position
+                ? _value.position
+                : position // ignore: cast_nullable_to_non_nullable
+                      as int?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$GameClosedEventImplCopyWith<$Res>
     implements $GameClosedEventCopyWith<$Res> {
-  factory _$$GameClosedEventImplCopyWith(_$GameClosedEventImpl value,
-          $Res Function(_$GameClosedEventImpl) then) =
-      __$$GameClosedEventImplCopyWithImpl<$Res>;
+  factory _$$GameClosedEventImplCopyWith(
+    _$GameClosedEventImpl value,
+    $Res Function(_$GameClosedEventImpl) then,
+  ) = __$$GameClosedEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String gameId, int timeSpent, int? position});
@@ -95,8 +101,9 @@ class __$$GameClosedEventImplCopyWithImpl<$Res>
     extends _$GameClosedEventCopyWithImpl<$Res, _$GameClosedEventImpl>
     implements _$$GameClosedEventImplCopyWith<$Res> {
   __$$GameClosedEventImplCopyWithImpl(
-      _$GameClosedEventImpl _value, $Res Function(_$GameClosedEventImpl) _then)
-      : super(_value, _then);
+    _$GameClosedEventImpl _value,
+    $Res Function(_$GameClosedEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of GameClosedEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -107,28 +114,33 @@ class __$$GameClosedEventImplCopyWithImpl<$Res>
     Object? timeSpent = null,
     Object? position = freezed,
   }) {
-    return _then(_$GameClosedEventImpl(
-      gameId: null == gameId
-          ? _value.gameId
-          : gameId // ignore: cast_nullable_to_non_nullable
-              as String,
-      timeSpent: null == timeSpent
-          ? _value.timeSpent
-          : timeSpent // ignore: cast_nullable_to_non_nullable
-              as int,
-      position: freezed == position
-          ? _value.position
-          : position // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ));
+    return _then(
+      _$GameClosedEventImpl(
+        gameId: null == gameId
+            ? _value.gameId
+            : gameId // ignore: cast_nullable_to_non_nullable
+                  as String,
+        timeSpent: null == timeSpent
+            ? _value.timeSpent
+            : timeSpent // ignore: cast_nullable_to_non_nullable
+                  as int,
+        position: freezed == position
+            ? _value.position
+            : position // ignore: cast_nullable_to_non_nullable
+                  as int?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$GameClosedEventImpl implements _GameClosedEvent {
-  const _$GameClosedEventImpl(
-      {required this.gameId, required this.timeSpent, this.position});
+  const _$GameClosedEventImpl({
+    required this.gameId,
+    required this.timeSpent,
+    this.position,
+  });
 
   factory _$GameClosedEventImpl.fromJson(Map<String, dynamic> json) =>
       _$$GameClosedEventImplFromJson(json);
@@ -168,21 +180,22 @@ class _$GameClosedEventImpl implements _GameClosedEvent {
   @pragma('vm:prefer-inline')
   _$$GameClosedEventImplCopyWith<_$GameClosedEventImpl> get copyWith =>
       __$$GameClosedEventImplCopyWithImpl<_$GameClosedEventImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GameClosedEventImplToJson(
-      this,
-    );
+    return _$$GameClosedEventImplToJson(this);
   }
 }
 
 abstract class _GameClosedEvent implements GameClosedEvent {
-  const factory _GameClosedEvent(
-      {required final String gameId,
-      required final int timeSpent,
-      final int? position}) = _$GameClosedEventImpl;
+  const factory _GameClosedEvent({
+    required final String gameId,
+    required final int timeSpent,
+    final int? position,
+  }) = _$GameClosedEventImpl;
 
   factory _GameClosedEvent.fromJson(Map<String, dynamic> json) =
       _$GameClosedEventImpl.fromJson;

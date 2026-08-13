@@ -12,7 +12,8 @@ part of 'content_shared.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 ContentSharedEvent _$ContentSharedEventFromJson(Map<String, dynamic> json) {
   return _ContentSharedEvent.fromJson(json);
@@ -38,11 +39,16 @@ mixin _$ContentSharedEvent {
 /// @nodoc
 abstract class $ContentSharedEventCopyWith<$Res> {
   factory $ContentSharedEventCopyWith(
-          ContentSharedEvent value, $Res Function(ContentSharedEvent) then) =
-      _$ContentSharedEventCopyWithImpl<$Res, ContentSharedEvent>;
+    ContentSharedEvent value,
+    $Res Function(ContentSharedEvent) then,
+  ) = _$ContentSharedEventCopyWithImpl<$Res, ContentSharedEvent>;
   @useResult
-  $Res call(
-      {String pageCode, String elementType, String elementId, int? position});
+  $Res call({
+    String pageCode,
+    String elementType,
+    String elementId,
+    int? position,
+  });
 }
 
 /// @nodoc
@@ -65,46 +71,55 @@ class _$ContentSharedEventCopyWithImpl<$Res, $Val extends ContentSharedEvent>
     Object? elementId = null,
     Object? position = freezed,
   }) {
-    return _then(_value.copyWith(
-      pageCode: null == pageCode
-          ? _value.pageCode
-          : pageCode // ignore: cast_nullable_to_non_nullable
-              as String,
-      elementType: null == elementType
-          ? _value.elementType
-          : elementType // ignore: cast_nullable_to_non_nullable
-              as String,
-      elementId: null == elementId
-          ? _value.elementId
-          : elementId // ignore: cast_nullable_to_non_nullable
-              as String,
-      position: freezed == position
-          ? _value.position
-          : position // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            pageCode: null == pageCode
+                ? _value.pageCode
+                : pageCode // ignore: cast_nullable_to_non_nullable
+                      as String,
+            elementType: null == elementType
+                ? _value.elementType
+                : elementType // ignore: cast_nullable_to_non_nullable
+                      as String,
+            elementId: null == elementId
+                ? _value.elementId
+                : elementId // ignore: cast_nullable_to_non_nullable
+                      as String,
+            position: freezed == position
+                ? _value.position
+                : position // ignore: cast_nullable_to_non_nullable
+                      as int?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$ContentSharedEventImplCopyWith<$Res>
     implements $ContentSharedEventCopyWith<$Res> {
-  factory _$$ContentSharedEventImplCopyWith(_$ContentSharedEventImpl value,
-          $Res Function(_$ContentSharedEventImpl) then) =
-      __$$ContentSharedEventImplCopyWithImpl<$Res>;
+  factory _$$ContentSharedEventImplCopyWith(
+    _$ContentSharedEventImpl value,
+    $Res Function(_$ContentSharedEventImpl) then,
+  ) = __$$ContentSharedEventImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String pageCode, String elementType, String elementId, int? position});
+  $Res call({
+    String pageCode,
+    String elementType,
+    String elementId,
+    int? position,
+  });
 }
 
 /// @nodoc
 class __$$ContentSharedEventImplCopyWithImpl<$Res>
     extends _$ContentSharedEventCopyWithImpl<$Res, _$ContentSharedEventImpl>
     implements _$$ContentSharedEventImplCopyWith<$Res> {
-  __$$ContentSharedEventImplCopyWithImpl(_$ContentSharedEventImpl _value,
-      $Res Function(_$ContentSharedEventImpl) _then)
-      : super(_value, _then);
+  __$$ContentSharedEventImplCopyWithImpl(
+    _$ContentSharedEventImpl _value,
+    $Res Function(_$ContentSharedEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ContentSharedEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -116,35 +131,38 @@ class __$$ContentSharedEventImplCopyWithImpl<$Res>
     Object? elementId = null,
     Object? position = freezed,
   }) {
-    return _then(_$ContentSharedEventImpl(
-      pageCode: null == pageCode
-          ? _value.pageCode
-          : pageCode // ignore: cast_nullable_to_non_nullable
-              as String,
-      elementType: null == elementType
-          ? _value.elementType
-          : elementType // ignore: cast_nullable_to_non_nullable
-              as String,
-      elementId: null == elementId
-          ? _value.elementId
-          : elementId // ignore: cast_nullable_to_non_nullable
-              as String,
-      position: freezed == position
-          ? _value.position
-          : position // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ));
+    return _then(
+      _$ContentSharedEventImpl(
+        pageCode: null == pageCode
+            ? _value.pageCode
+            : pageCode // ignore: cast_nullable_to_non_nullable
+                  as String,
+        elementType: null == elementType
+            ? _value.elementType
+            : elementType // ignore: cast_nullable_to_non_nullable
+                  as String,
+        elementId: null == elementId
+            ? _value.elementId
+            : elementId // ignore: cast_nullable_to_non_nullable
+                  as String,
+        position: freezed == position
+            ? _value.position
+            : position // ignore: cast_nullable_to_non_nullable
+                  as int?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$ContentSharedEventImpl implements _ContentSharedEvent {
-  const _$ContentSharedEventImpl(
-      {required this.pageCode,
-      required this.elementType,
-      required this.elementId,
-      this.position});
+  const _$ContentSharedEventImpl({
+    required this.pageCode,
+    required this.elementType,
+    required this.elementId,
+    this.position,
+  });
 
   factory _$ContentSharedEventImpl.fromJson(Map<String, dynamic> json) =>
       _$$ContentSharedEventImplFromJson(json);
@@ -190,22 +208,23 @@ class _$ContentSharedEventImpl implements _ContentSharedEvent {
   @pragma('vm:prefer-inline')
   _$$ContentSharedEventImplCopyWith<_$ContentSharedEventImpl> get copyWith =>
       __$$ContentSharedEventImplCopyWithImpl<_$ContentSharedEventImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ContentSharedEventImplToJson(
-      this,
-    );
+    return _$$ContentSharedEventImplToJson(this);
   }
 }
 
 abstract class _ContentSharedEvent implements ContentSharedEvent {
-  const factory _ContentSharedEvent(
-      {required final String pageCode,
-      required final String elementType,
-      required final String elementId,
-      final int? position}) = _$ContentSharedEventImpl;
+  const factory _ContentSharedEvent({
+    required final String pageCode,
+    required final String elementType,
+    required final String elementId,
+    final int? position,
+  }) = _$ContentSharedEventImpl;
 
   factory _ContentSharedEvent.fromJson(Map<String, dynamic> json) =
       _$ContentSharedEventImpl.fromJson;

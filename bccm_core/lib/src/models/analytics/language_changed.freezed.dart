@@ -12,7 +12,8 @@ part of 'language_changed.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 LanguageChangedEvent _$LanguageChangedEventFromJson(Map<String, dynamic> json) {
   return _LanguageChangedEvent.fromJson(json);
@@ -36,17 +37,23 @@ mixin _$LanguageChangedEvent {
 
 /// @nodoc
 abstract class $LanguageChangedEventCopyWith<$Res> {
-  factory $LanguageChangedEventCopyWith(LanguageChangedEvent value,
-          $Res Function(LanguageChangedEvent) then) =
-      _$LanguageChangedEventCopyWithImpl<$Res, LanguageChangedEvent>;
+  factory $LanguageChangedEventCopyWith(
+    LanguageChangedEvent value,
+    $Res Function(LanguageChangedEvent) then,
+  ) = _$LanguageChangedEventCopyWithImpl<$Res, LanguageChangedEvent>;
   @useResult
-  $Res call(
-      {String? languageFrom, String languageTo, String languageChangeType});
+  $Res call({
+    String? languageFrom,
+    String languageTo,
+    String languageChangeType,
+  });
 }
 
 /// @nodoc
-class _$LanguageChangedEventCopyWithImpl<$Res,
-        $Val extends LanguageChangedEvent>
+class _$LanguageChangedEventCopyWithImpl<
+  $Res,
+  $Val extends LanguageChangedEvent
+>
     implements $LanguageChangedEventCopyWith<$Res> {
   _$LanguageChangedEventCopyWithImpl(this._value, this._then);
 
@@ -64,42 +71,50 @@ class _$LanguageChangedEventCopyWithImpl<$Res,
     Object? languageTo = null,
     Object? languageChangeType = null,
   }) {
-    return _then(_value.copyWith(
-      languageFrom: freezed == languageFrom
-          ? _value.languageFrom
-          : languageFrom // ignore: cast_nullable_to_non_nullable
-              as String?,
-      languageTo: null == languageTo
-          ? _value.languageTo
-          : languageTo // ignore: cast_nullable_to_non_nullable
-              as String,
-      languageChangeType: null == languageChangeType
-          ? _value.languageChangeType
-          : languageChangeType // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            languageFrom: freezed == languageFrom
+                ? _value.languageFrom
+                : languageFrom // ignore: cast_nullable_to_non_nullable
+                      as String?,
+            languageTo: null == languageTo
+                ? _value.languageTo
+                : languageTo // ignore: cast_nullable_to_non_nullable
+                      as String,
+            languageChangeType: null == languageChangeType
+                ? _value.languageChangeType
+                : languageChangeType // ignore: cast_nullable_to_non_nullable
+                      as String,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$LanguageChangedEventImplCopyWith<$Res>
     implements $LanguageChangedEventCopyWith<$Res> {
-  factory _$$LanguageChangedEventImplCopyWith(_$LanguageChangedEventImpl value,
-          $Res Function(_$LanguageChangedEventImpl) then) =
-      __$$LanguageChangedEventImplCopyWithImpl<$Res>;
+  factory _$$LanguageChangedEventImplCopyWith(
+    _$LanguageChangedEventImpl value,
+    $Res Function(_$LanguageChangedEventImpl) then,
+  ) = __$$LanguageChangedEventImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String? languageFrom, String languageTo, String languageChangeType});
+  $Res call({
+    String? languageFrom,
+    String languageTo,
+    String languageChangeType,
+  });
 }
 
 /// @nodoc
 class __$$LanguageChangedEventImplCopyWithImpl<$Res>
     extends _$LanguageChangedEventCopyWithImpl<$Res, _$LanguageChangedEventImpl>
     implements _$$LanguageChangedEventImplCopyWith<$Res> {
-  __$$LanguageChangedEventImplCopyWithImpl(_$LanguageChangedEventImpl _value,
-      $Res Function(_$LanguageChangedEventImpl) _then)
-      : super(_value, _then);
+  __$$LanguageChangedEventImplCopyWithImpl(
+    _$LanguageChangedEventImpl _value,
+    $Res Function(_$LanguageChangedEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of LanguageChangedEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -110,30 +125,33 @@ class __$$LanguageChangedEventImplCopyWithImpl<$Res>
     Object? languageTo = null,
     Object? languageChangeType = null,
   }) {
-    return _then(_$LanguageChangedEventImpl(
-      languageFrom: freezed == languageFrom
-          ? _value.languageFrom
-          : languageFrom // ignore: cast_nullable_to_non_nullable
-              as String?,
-      languageTo: null == languageTo
-          ? _value.languageTo
-          : languageTo // ignore: cast_nullable_to_non_nullable
-              as String,
-      languageChangeType: null == languageChangeType
-          ? _value.languageChangeType
-          : languageChangeType // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+    return _then(
+      _$LanguageChangedEventImpl(
+        languageFrom: freezed == languageFrom
+            ? _value.languageFrom
+            : languageFrom // ignore: cast_nullable_to_non_nullable
+                  as String?,
+        languageTo: null == languageTo
+            ? _value.languageTo
+            : languageTo // ignore: cast_nullable_to_non_nullable
+                  as String,
+        languageChangeType: null == languageChangeType
+            ? _value.languageChangeType
+            : languageChangeType // ignore: cast_nullable_to_non_nullable
+                  as String,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$LanguageChangedEventImpl implements _LanguageChangedEvent {
-  const _$LanguageChangedEventImpl(
-      {required this.languageFrom,
-      required this.languageTo,
-      required this.languageChangeType});
+  const _$LanguageChangedEventImpl({
+    required this.languageFrom,
+    required this.languageTo,
+    required this.languageChangeType,
+  });
 
   factory _$LanguageChangedEventImpl.fromJson(Map<String, dynamic> json) =>
       _$$LanguageChangedEventImplFromJson(json);
@@ -174,23 +192,24 @@ class _$LanguageChangedEventImpl implements _LanguageChangedEvent {
   @override
   @pragma('vm:prefer-inline')
   _$$LanguageChangedEventImplCopyWith<_$LanguageChangedEventImpl>
-      get copyWith =>
-          __$$LanguageChangedEventImplCopyWithImpl<_$LanguageChangedEventImpl>(
-              this, _$identity);
+  get copyWith =>
+      __$$LanguageChangedEventImplCopyWithImpl<_$LanguageChangedEventImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$LanguageChangedEventImplToJson(
-      this,
-    );
+    return _$$LanguageChangedEventImplToJson(this);
   }
 }
 
 abstract class _LanguageChangedEvent implements LanguageChangedEvent {
-  const factory _LanguageChangedEvent(
-      {required final String? languageFrom,
-      required final String languageTo,
-      required final String languageChangeType}) = _$LanguageChangedEventImpl;
+  const factory _LanguageChangedEvent({
+    required final String? languageFrom,
+    required final String languageTo,
+    required final String languageChangeType,
+  }) = _$LanguageChangedEventImpl;
 
   factory _LanguageChangedEvent.fromJson(Map<String, dynamic> json) =
       _$LanguageChangedEventImpl.fromJson;
@@ -207,5 +226,5 @@ abstract class _LanguageChangedEvent implements LanguageChangedEvent {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LanguageChangedEventImplCopyWith<_$LanguageChangedEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

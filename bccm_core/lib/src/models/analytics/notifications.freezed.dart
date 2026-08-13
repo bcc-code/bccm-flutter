@@ -12,10 +12,12 @@ part of 'notifications.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 NotificationReceivedEvent _$NotificationReceivedEventFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _NotificationReceivedEvent.fromJson(json);
 }
 
@@ -37,16 +39,19 @@ mixin _$NotificationReceivedEvent {
 
 /// @nodoc
 abstract class $NotificationReceivedEventCopyWith<$Res> {
-  factory $NotificationReceivedEventCopyWith(NotificationReceivedEvent value,
-          $Res Function(NotificationReceivedEvent) then) =
-      _$NotificationReceivedEventCopyWithImpl<$Res, NotificationReceivedEvent>;
+  factory $NotificationReceivedEventCopyWith(
+    NotificationReceivedEvent value,
+    $Res Function(NotificationReceivedEvent) then,
+  ) = _$NotificationReceivedEventCopyWithImpl<$Res, NotificationReceivedEvent>;
   @useResult
   $Res call({String? notificationId, String? action, String? deeplink});
 }
 
 /// @nodoc
-class _$NotificationReceivedEventCopyWithImpl<$Res,
-        $Val extends NotificationReceivedEvent>
+class _$NotificationReceivedEventCopyWithImpl<
+  $Res,
+  $Val extends NotificationReceivedEvent
+>
     implements $NotificationReceivedEventCopyWith<$Res> {
   _$NotificationReceivedEventCopyWithImpl(this._value, this._then);
 
@@ -64,20 +69,23 @@ class _$NotificationReceivedEventCopyWithImpl<$Res,
     Object? action = freezed,
     Object? deeplink = freezed,
   }) {
-    return _then(_value.copyWith(
-      notificationId: freezed == notificationId
-          ? _value.notificationId
-          : notificationId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      action: freezed == action
-          ? _value.action
-          : action // ignore: cast_nullable_to_non_nullable
-              as String?,
-      deeplink: freezed == deeplink
-          ? _value.deeplink
-          : deeplink // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            notificationId: freezed == notificationId
+                ? _value.notificationId
+                : notificationId // ignore: cast_nullable_to_non_nullable
+                      as String?,
+            action: freezed == action
+                ? _value.action
+                : action // ignore: cast_nullable_to_non_nullable
+                      as String?,
+            deeplink: freezed == deeplink
+                ? _value.deeplink
+                : deeplink // ignore: cast_nullable_to_non_nullable
+                      as String?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -85,9 +93,9 @@ class _$NotificationReceivedEventCopyWithImpl<$Res,
 abstract class _$$NotificationReceivedEventImplCopyWith<$Res>
     implements $NotificationReceivedEventCopyWith<$Res> {
   factory _$$NotificationReceivedEventImplCopyWith(
-          _$NotificationReceivedEventImpl value,
-          $Res Function(_$NotificationReceivedEventImpl) then) =
-      __$$NotificationReceivedEventImplCopyWithImpl<$Res>;
+    _$NotificationReceivedEventImpl value,
+    $Res Function(_$NotificationReceivedEventImpl) then,
+  ) = __$$NotificationReceivedEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String? notificationId, String? action, String? deeplink});
@@ -95,13 +103,16 @@ abstract class _$$NotificationReceivedEventImplCopyWith<$Res>
 
 /// @nodoc
 class __$$NotificationReceivedEventImplCopyWithImpl<$Res>
-    extends _$NotificationReceivedEventCopyWithImpl<$Res,
-        _$NotificationReceivedEventImpl>
+    extends
+        _$NotificationReceivedEventCopyWithImpl<
+          $Res,
+          _$NotificationReceivedEventImpl
+        >
     implements _$$NotificationReceivedEventImplCopyWith<$Res> {
   __$$NotificationReceivedEventImplCopyWithImpl(
-      _$NotificationReceivedEventImpl _value,
-      $Res Function(_$NotificationReceivedEventImpl) _then)
-      : super(_value, _then);
+    _$NotificationReceivedEventImpl _value,
+    $Res Function(_$NotificationReceivedEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of NotificationReceivedEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -112,28 +123,33 @@ class __$$NotificationReceivedEventImplCopyWithImpl<$Res>
     Object? action = freezed,
     Object? deeplink = freezed,
   }) {
-    return _then(_$NotificationReceivedEventImpl(
-      notificationId: freezed == notificationId
-          ? _value.notificationId
-          : notificationId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      action: freezed == action
-          ? _value.action
-          : action // ignore: cast_nullable_to_non_nullable
-              as String?,
-      deeplink: freezed == deeplink
-          ? _value.deeplink
-          : deeplink // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$NotificationReceivedEventImpl(
+        notificationId: freezed == notificationId
+            ? _value.notificationId
+            : notificationId // ignore: cast_nullable_to_non_nullable
+                  as String?,
+        action: freezed == action
+            ? _value.action
+            : action // ignore: cast_nullable_to_non_nullable
+                  as String?,
+        deeplink: freezed == deeplink
+            ? _value.deeplink
+            : deeplink // ignore: cast_nullable_to_non_nullable
+                  as String?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$NotificationReceivedEventImpl implements _NotificationReceivedEvent {
-  const _$NotificationReceivedEventImpl(
-      {this.notificationId, this.action, this.deeplink});
+  const _$NotificationReceivedEventImpl({
+    this.notificationId,
+    this.action,
+    this.deeplink,
+  });
 
   factory _$NotificationReceivedEventImpl.fromJson(Map<String, dynamic> json) =>
       _$$NotificationReceivedEventImplFromJson(json);
@@ -173,22 +189,23 @@ class _$NotificationReceivedEventImpl implements _NotificationReceivedEvent {
   @override
   @pragma('vm:prefer-inline')
   _$$NotificationReceivedEventImplCopyWith<_$NotificationReceivedEventImpl>
-      get copyWith => __$$NotificationReceivedEventImplCopyWithImpl<
-          _$NotificationReceivedEventImpl>(this, _$identity);
+  get copyWith =>
+      __$$NotificationReceivedEventImplCopyWithImpl<
+        _$NotificationReceivedEventImpl
+      >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$NotificationReceivedEventImplToJson(
-      this,
-    );
+    return _$$NotificationReceivedEventImplToJson(this);
   }
 }
 
 abstract class _NotificationReceivedEvent implements NotificationReceivedEvent {
-  const factory _NotificationReceivedEvent(
-      {final String? notificationId,
-      final String? action,
-      final String? deeplink}) = _$NotificationReceivedEventImpl;
+  const factory _NotificationReceivedEvent({
+    final String? notificationId,
+    final String? action,
+    final String? deeplink,
+  }) = _$NotificationReceivedEventImpl;
 
   factory _NotificationReceivedEvent.fromJson(Map<String, dynamic> json) =
       _$NotificationReceivedEventImpl.fromJson;
@@ -205,11 +222,12 @@ abstract class _NotificationReceivedEvent implements NotificationReceivedEvent {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotificationReceivedEventImplCopyWith<_$NotificationReceivedEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 NotificationOpenedEvent _$NotificationOpenedEventFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _NotificationOpenedEvent.fromJson(json);
 }
 
@@ -229,16 +247,19 @@ mixin _$NotificationOpenedEvent {
 
 /// @nodoc
 abstract class $NotificationOpenedEventCopyWith<$Res> {
-  factory $NotificationOpenedEventCopyWith(NotificationOpenedEvent value,
-          $Res Function(NotificationOpenedEvent) then) =
-      _$NotificationOpenedEventCopyWithImpl<$Res, NotificationOpenedEvent>;
+  factory $NotificationOpenedEventCopyWith(
+    NotificationOpenedEvent value,
+    $Res Function(NotificationOpenedEvent) then,
+  ) = _$NotificationOpenedEventCopyWithImpl<$Res, NotificationOpenedEvent>;
   @useResult
   $Res call({String? notificationId});
 }
 
 /// @nodoc
-class _$NotificationOpenedEventCopyWithImpl<$Res,
-        $Val extends NotificationOpenedEvent>
+class _$NotificationOpenedEventCopyWithImpl<
+  $Res,
+  $Val extends NotificationOpenedEvent
+>
     implements $NotificationOpenedEventCopyWith<$Res> {
   _$NotificationOpenedEventCopyWithImpl(this._value, this._then);
 
@@ -251,15 +272,16 @@ class _$NotificationOpenedEventCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? notificationId = freezed,
-  }) {
-    return _then(_value.copyWith(
-      notificationId: freezed == notificationId
-          ? _value.notificationId
-          : notificationId // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+  $Res call({Object? notificationId = freezed}) {
+    return _then(
+      _value.copyWith(
+            notificationId: freezed == notificationId
+                ? _value.notificationId
+                : notificationId // ignore: cast_nullable_to_non_nullable
+                      as String?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -267,9 +289,9 @@ class _$NotificationOpenedEventCopyWithImpl<$Res,
 abstract class _$$NotificationOpenedEventImplCopyWith<$Res>
     implements $NotificationOpenedEventCopyWith<$Res> {
   factory _$$NotificationOpenedEventImplCopyWith(
-          _$NotificationOpenedEventImpl value,
-          $Res Function(_$NotificationOpenedEventImpl) then) =
-      __$$NotificationOpenedEventImplCopyWithImpl<$Res>;
+    _$NotificationOpenedEventImpl value,
+    $Res Function(_$NotificationOpenedEventImpl) then,
+  ) = __$$NotificationOpenedEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String? notificationId});
@@ -277,27 +299,30 @@ abstract class _$$NotificationOpenedEventImplCopyWith<$Res>
 
 /// @nodoc
 class __$$NotificationOpenedEventImplCopyWithImpl<$Res>
-    extends _$NotificationOpenedEventCopyWithImpl<$Res,
-        _$NotificationOpenedEventImpl>
+    extends
+        _$NotificationOpenedEventCopyWithImpl<
+          $Res,
+          _$NotificationOpenedEventImpl
+        >
     implements _$$NotificationOpenedEventImplCopyWith<$Res> {
   __$$NotificationOpenedEventImplCopyWithImpl(
-      _$NotificationOpenedEventImpl _value,
-      $Res Function(_$NotificationOpenedEventImpl) _then)
-      : super(_value, _then);
+    _$NotificationOpenedEventImpl _value,
+    $Res Function(_$NotificationOpenedEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of NotificationOpenedEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? notificationId = freezed,
-  }) {
-    return _then(_$NotificationOpenedEventImpl(
-      notificationId: freezed == notificationId
-          ? _value.notificationId
-          : notificationId // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+  $Res call({Object? notificationId = freezed}) {
+    return _then(
+      _$NotificationOpenedEventImpl(
+        notificationId: freezed == notificationId
+            ? _value.notificationId
+            : notificationId // ignore: cast_nullable_to_non_nullable
+                  as String?,
+      ),
+    );
   }
 }
 
@@ -336,14 +361,14 @@ class _$NotificationOpenedEventImpl implements _NotificationOpenedEvent {
   @override
   @pragma('vm:prefer-inline')
   _$$NotificationOpenedEventImplCopyWith<_$NotificationOpenedEventImpl>
-      get copyWith => __$$NotificationOpenedEventImplCopyWithImpl<
-          _$NotificationOpenedEventImpl>(this, _$identity);
+  get copyWith =>
+      __$$NotificationOpenedEventImplCopyWithImpl<
+        _$NotificationOpenedEventImpl
+      >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$NotificationOpenedEventImplToJson(
-      this,
-    );
+    return _$$NotificationOpenedEventImplToJson(this);
   }
 }
 
@@ -362,11 +387,11 @@ abstract class _NotificationOpenedEvent implements NotificationOpenedEvent {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotificationOpenedEventImplCopyWith<_$NotificationOpenedEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 NotificationDeviceTokenUpdatedEvent
-    _$NotificationDeviceTokenUpdatedEventFromJson(Map<String, dynamic> json) {
+_$NotificationDeviceTokenUpdatedEventFromJson(Map<String, dynamic> json) {
   return _NotificationDeviceTokenUpdatedEvent.fromJson(json);
 }
 
@@ -379,15 +404,20 @@ mixin _$NotificationDeviceTokenUpdatedEvent {
 /// @nodoc
 abstract class $NotificationDeviceTokenUpdatedEventCopyWith<$Res> {
   factory $NotificationDeviceTokenUpdatedEventCopyWith(
-          NotificationDeviceTokenUpdatedEvent value,
-          $Res Function(NotificationDeviceTokenUpdatedEvent) then) =
-      _$NotificationDeviceTokenUpdatedEventCopyWithImpl<$Res,
-          NotificationDeviceTokenUpdatedEvent>;
+    NotificationDeviceTokenUpdatedEvent value,
+    $Res Function(NotificationDeviceTokenUpdatedEvent) then,
+  ) =
+      _$NotificationDeviceTokenUpdatedEventCopyWithImpl<
+        $Res,
+        NotificationDeviceTokenUpdatedEvent
+      >;
 }
 
 /// @nodoc
-class _$NotificationDeviceTokenUpdatedEventCopyWithImpl<$Res,
-        $Val extends NotificationDeviceTokenUpdatedEvent>
+class _$NotificationDeviceTokenUpdatedEventCopyWithImpl<
+  $Res,
+  $Val extends NotificationDeviceTokenUpdatedEvent
+>
     implements $NotificationDeviceTokenUpdatedEventCopyWith<$Res> {
   _$NotificationDeviceTokenUpdatedEventCopyWithImpl(this._value, this._then);
 
@@ -403,20 +433,23 @@ class _$NotificationDeviceTokenUpdatedEventCopyWithImpl<$Res,
 /// @nodoc
 abstract class _$$NotificationDeviceTokenUpdatedEventImplCopyWith<$Res> {
   factory _$$NotificationDeviceTokenUpdatedEventImplCopyWith(
-          _$NotificationDeviceTokenUpdatedEventImpl value,
-          $Res Function(_$NotificationDeviceTokenUpdatedEventImpl) then) =
-      __$$NotificationDeviceTokenUpdatedEventImplCopyWithImpl<$Res>;
+    _$NotificationDeviceTokenUpdatedEventImpl value,
+    $Res Function(_$NotificationDeviceTokenUpdatedEventImpl) then,
+  ) = __$$NotificationDeviceTokenUpdatedEventImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
 class __$$NotificationDeviceTokenUpdatedEventImplCopyWithImpl<$Res>
-    extends _$NotificationDeviceTokenUpdatedEventCopyWithImpl<$Res,
-        _$NotificationDeviceTokenUpdatedEventImpl>
+    extends
+        _$NotificationDeviceTokenUpdatedEventCopyWithImpl<
+          $Res,
+          _$NotificationDeviceTokenUpdatedEventImpl
+        >
     implements _$$NotificationDeviceTokenUpdatedEventImplCopyWith<$Res> {
   __$$NotificationDeviceTokenUpdatedEventImplCopyWithImpl(
-      _$NotificationDeviceTokenUpdatedEventImpl _value,
-      $Res Function(_$NotificationDeviceTokenUpdatedEventImpl) _then)
-      : super(_value, _then);
+    _$NotificationDeviceTokenUpdatedEventImpl _value,
+    $Res Function(_$NotificationDeviceTokenUpdatedEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of NotificationDeviceTokenUpdatedEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -429,8 +462,8 @@ class _$NotificationDeviceTokenUpdatedEventImpl
   const _$NotificationDeviceTokenUpdatedEventImpl();
 
   factory _$NotificationDeviceTokenUpdatedEventImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$NotificationDeviceTokenUpdatedEventImplFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$$NotificationDeviceTokenUpdatedEventImplFromJson(json);
 
   @override
   String toString() {
@@ -450,9 +483,7 @@ class _$NotificationDeviceTokenUpdatedEventImpl
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$NotificationDeviceTokenUpdatedEventImplToJson(
-      this,
-    );
+    return _$$NotificationDeviceTokenUpdatedEventImplToJson(this);
   }
 }
 
@@ -462,12 +493,13 @@ abstract class _NotificationDeviceTokenUpdatedEvent
       _$NotificationDeviceTokenUpdatedEventImpl;
 
   factory _NotificationDeviceTokenUpdatedEvent.fromJson(
-          Map<String, dynamic> json) =
-      _$NotificationDeviceTokenUpdatedEventImpl.fromJson;
+    Map<String, dynamic> json,
+  ) = _$NotificationDeviceTokenUpdatedEventImpl.fromJson;
 }
 
 NotificationsStatusEvent _$NotificationsStatusEventFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _NotificationsStatusEvent.fromJson(json);
 }
 
@@ -488,16 +520,19 @@ mixin _$NotificationsStatusEvent {
 
 /// @nodoc
 abstract class $NotificationsStatusEventCopyWith<$Res> {
-  factory $NotificationsStatusEventCopyWith(NotificationsStatusEvent value,
-          $Res Function(NotificationsStatusEvent) then) =
-      _$NotificationsStatusEventCopyWithImpl<$Res, NotificationsStatusEvent>;
+  factory $NotificationsStatusEventCopyWith(
+    NotificationsStatusEvent value,
+    $Res Function(NotificationsStatusEvent) then,
+  ) = _$NotificationsStatusEventCopyWithImpl<$Res, NotificationsStatusEvent>;
   @useResult
   $Res call({String? recipientId, bool? enabled});
 }
 
 /// @nodoc
-class _$NotificationsStatusEventCopyWithImpl<$Res,
-        $Val extends NotificationsStatusEvent>
+class _$NotificationsStatusEventCopyWithImpl<
+  $Res,
+  $Val extends NotificationsStatusEvent
+>
     implements $NotificationsStatusEventCopyWith<$Res> {
   _$NotificationsStatusEventCopyWithImpl(this._value, this._then);
 
@@ -510,20 +545,20 @@ class _$NotificationsStatusEventCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? recipientId = freezed,
-    Object? enabled = freezed,
-  }) {
-    return _then(_value.copyWith(
-      recipientId: freezed == recipientId
-          ? _value.recipientId
-          : recipientId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      enabled: freezed == enabled
-          ? _value.enabled
-          : enabled // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ) as $Val);
+  $Res call({Object? recipientId = freezed, Object? enabled = freezed}) {
+    return _then(
+      _value.copyWith(
+            recipientId: freezed == recipientId
+                ? _value.recipientId
+                : recipientId // ignore: cast_nullable_to_non_nullable
+                      as String?,
+            enabled: freezed == enabled
+                ? _value.enabled
+                : enabled // ignore: cast_nullable_to_non_nullable
+                      as bool?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -531,9 +566,9 @@ class _$NotificationsStatusEventCopyWithImpl<$Res,
 abstract class _$$NotificationsStatusEventImplCopyWith<$Res>
     implements $NotificationsStatusEventCopyWith<$Res> {
   factory _$$NotificationsStatusEventImplCopyWith(
-          _$NotificationsStatusEventImpl value,
-          $Res Function(_$NotificationsStatusEventImpl) then) =
-      __$$NotificationsStatusEventImplCopyWithImpl<$Res>;
+    _$NotificationsStatusEventImpl value,
+    $Res Function(_$NotificationsStatusEventImpl) then,
+  ) = __$$NotificationsStatusEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String? recipientId, bool? enabled});
@@ -541,32 +576,34 @@ abstract class _$$NotificationsStatusEventImplCopyWith<$Res>
 
 /// @nodoc
 class __$$NotificationsStatusEventImplCopyWithImpl<$Res>
-    extends _$NotificationsStatusEventCopyWithImpl<$Res,
-        _$NotificationsStatusEventImpl>
+    extends
+        _$NotificationsStatusEventCopyWithImpl<
+          $Res,
+          _$NotificationsStatusEventImpl
+        >
     implements _$$NotificationsStatusEventImplCopyWith<$Res> {
   __$$NotificationsStatusEventImplCopyWithImpl(
-      _$NotificationsStatusEventImpl _value,
-      $Res Function(_$NotificationsStatusEventImpl) _then)
-      : super(_value, _then);
+    _$NotificationsStatusEventImpl _value,
+    $Res Function(_$NotificationsStatusEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of NotificationsStatusEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? recipientId = freezed,
-    Object? enabled = freezed,
-  }) {
-    return _then(_$NotificationsStatusEventImpl(
-      recipientId: freezed == recipientId
-          ? _value.recipientId
-          : recipientId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      enabled: freezed == enabled
-          ? _value.enabled
-          : enabled // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ));
+  $Res call({Object? recipientId = freezed, Object? enabled = freezed}) {
+    return _then(
+      _$NotificationsStatusEventImpl(
+        recipientId: freezed == recipientId
+            ? _value.recipientId
+            : recipientId // ignore: cast_nullable_to_non_nullable
+                  as String?,
+        enabled: freezed == enabled
+            ? _value.enabled
+            : enabled // ignore: cast_nullable_to_non_nullable
+                  as bool?,
+      ),
+    );
   }
 }
 
@@ -608,21 +645,22 @@ class _$NotificationsStatusEventImpl implements _NotificationsStatusEvent {
   @override
   @pragma('vm:prefer-inline')
   _$$NotificationsStatusEventImplCopyWith<_$NotificationsStatusEventImpl>
-      get copyWith => __$$NotificationsStatusEventImplCopyWithImpl<
-          _$NotificationsStatusEventImpl>(this, _$identity);
+  get copyWith =>
+      __$$NotificationsStatusEventImplCopyWithImpl<
+        _$NotificationsStatusEventImpl
+      >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$NotificationsStatusEventImplToJson(
-      this,
-    );
+    return _$$NotificationsStatusEventImplToJson(this);
   }
 }
 
 abstract class _NotificationsStatusEvent implements NotificationsStatusEvent {
-  const factory _NotificationsStatusEvent(
-      {final String? recipientId,
-      final bool? enabled}) = _$NotificationsStatusEventImpl;
+  const factory _NotificationsStatusEvent({
+    final String? recipientId,
+    final bool? enabled,
+  }) = _$NotificationsStatusEventImpl;
 
   factory _NotificationsStatusEvent.fromJson(Map<String, dynamic> json) =
       _$NotificationsStatusEventImpl.fromJson;
@@ -637,5 +675,5 @@ abstract class _NotificationsStatusEvent implements NotificationsStatusEvent {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotificationsStatusEventImplCopyWith<_$NotificationsStatusEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

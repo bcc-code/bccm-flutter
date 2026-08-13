@@ -7,13 +7,9 @@ part of 'audio_only_clicked.dart';
 // **************************************************************************
 
 _$AudioOnlyClickedEventImpl _$$AudioOnlyClickedEventImplFromJson(
-        Map<String, dynamic> json) =>
-    _$AudioOnlyClickedEventImpl(
-      audioOnly: json['audioOnly'] as bool,
-    );
+  Map<String, dynamic> json,
+) => _$AudioOnlyClickedEventImpl(audioOnly: json['audioOnly'] as bool);
 
 Map<String, dynamic> _$$AudioOnlyClickedEventImplToJson(
-        _$AudioOnlyClickedEventImpl instance) =>
-    <String, dynamic>{
-      'audioOnly': instance.audioOnly,
-    };
+  _$AudioOnlyClickedEventImpl instance,
+) => <String, dynamic>{'audioOnly': instance.audioOnly};

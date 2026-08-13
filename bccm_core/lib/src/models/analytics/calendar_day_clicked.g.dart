@@ -7,17 +7,17 @@ part of 'calendar_day_clicked.dart';
 // **************************************************************************
 
 _$CalendarDayClickedEventImpl _$$CalendarDayClickedEventImplFromJson(
-        Map<String, dynamic> json) =>
-    _$CalendarDayClickedEventImpl(
-      pageCode: json['pageCode'] as String,
-      calendarView: json['calendarView'] as String,
-      calendarDate: json['calendarDate'] as String,
-    );
+  Map<String, dynamic> json,
+) => _$CalendarDayClickedEventImpl(
+  pageCode: json['pageCode'] as String,
+  calendarView: json['calendarView'] as String,
+  calendarDate: json['calendarDate'] as String,
+);
 
 Map<String, dynamic> _$$CalendarDayClickedEventImplToJson(
-        _$CalendarDayClickedEventImpl instance) =>
-    <String, dynamic>{
-      'pageCode': instance.pageCode,
-      'calendarView': instance.calendarView,
-      'calendarDate': instance.calendarDate,
-    };
+  _$CalendarDayClickedEventImpl instance,
+) => <String, dynamic>{
+  'pageCode': instance.pageCode,
+  'calendarView': instance.calendarView,
+  'calendarDate': instance.calendarDate,
+};

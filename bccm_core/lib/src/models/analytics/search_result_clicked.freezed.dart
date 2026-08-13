@@ -12,10 +12,12 @@ part of 'search_result_clicked.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 SearchResultClickedEvent _$SearchResultClickedEventFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _SectionClickedEvent.fromJson(json);
 }
 
@@ -39,21 +41,25 @@ mixin _$SearchResultClickedEvent {
 
 /// @nodoc
 abstract class $SearchResultClickedEventCopyWith<$Res> {
-  factory $SearchResultClickedEventCopyWith(SearchResultClickedEvent value,
-          $Res Function(SearchResultClickedEvent) then) =
-      _$SearchResultClickedEventCopyWithImpl<$Res, SearchResultClickedEvent>;
+  factory $SearchResultClickedEventCopyWith(
+    SearchResultClickedEvent value,
+    $Res Function(SearchResultClickedEvent) then,
+  ) = _$SearchResultClickedEventCopyWithImpl<$Res, SearchResultClickedEvent>;
   @useResult
-  $Res call(
-      {String searchText,
-      int elementPosition,
-      String elementType,
-      String elementId,
-      String group});
+  $Res call({
+    String searchText,
+    int elementPosition,
+    String elementType,
+    String elementId,
+    String group,
+  });
 }
 
 /// @nodoc
-class _$SearchResultClickedEventCopyWithImpl<$Res,
-        $Val extends SearchResultClickedEvent>
+class _$SearchResultClickedEventCopyWithImpl<
+  $Res,
+  $Val extends SearchResultClickedEvent
+>
     implements $SearchResultClickedEventCopyWith<$Res> {
   _$SearchResultClickedEventCopyWithImpl(this._value, this._then);
 
@@ -73,55 +79,61 @@ class _$SearchResultClickedEventCopyWithImpl<$Res,
     Object? elementId = null,
     Object? group = null,
   }) {
-    return _then(_value.copyWith(
-      searchText: null == searchText
-          ? _value.searchText
-          : searchText // ignore: cast_nullable_to_non_nullable
-              as String,
-      elementPosition: null == elementPosition
-          ? _value.elementPosition
-          : elementPosition // ignore: cast_nullable_to_non_nullable
-              as int,
-      elementType: null == elementType
-          ? _value.elementType
-          : elementType // ignore: cast_nullable_to_non_nullable
-              as String,
-      elementId: null == elementId
-          ? _value.elementId
-          : elementId // ignore: cast_nullable_to_non_nullable
-              as String,
-      group: null == group
-          ? _value.group
-          : group // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            searchText: null == searchText
+                ? _value.searchText
+                : searchText // ignore: cast_nullable_to_non_nullable
+                      as String,
+            elementPosition: null == elementPosition
+                ? _value.elementPosition
+                : elementPosition // ignore: cast_nullable_to_non_nullable
+                      as int,
+            elementType: null == elementType
+                ? _value.elementType
+                : elementType // ignore: cast_nullable_to_non_nullable
+                      as String,
+            elementId: null == elementId
+                ? _value.elementId
+                : elementId // ignore: cast_nullable_to_non_nullable
+                      as String,
+            group: null == group
+                ? _value.group
+                : group // ignore: cast_nullable_to_non_nullable
+                      as String,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$SectionClickedEventImplCopyWith<$Res>
     implements $SearchResultClickedEventCopyWith<$Res> {
-  factory _$$SectionClickedEventImplCopyWith(_$SectionClickedEventImpl value,
-          $Res Function(_$SectionClickedEventImpl) then) =
-      __$$SectionClickedEventImplCopyWithImpl<$Res>;
+  factory _$$SectionClickedEventImplCopyWith(
+    _$SectionClickedEventImpl value,
+    $Res Function(_$SectionClickedEventImpl) then,
+  ) = __$$SectionClickedEventImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String searchText,
-      int elementPosition,
-      String elementType,
-      String elementId,
-      String group});
+  $Res call({
+    String searchText,
+    int elementPosition,
+    String elementType,
+    String elementId,
+    String group,
+  });
 }
 
 /// @nodoc
 class __$$SectionClickedEventImplCopyWithImpl<$Res>
-    extends _$SearchResultClickedEventCopyWithImpl<$Res,
-        _$SectionClickedEventImpl>
+    extends
+        _$SearchResultClickedEventCopyWithImpl<$Res, _$SectionClickedEventImpl>
     implements _$$SectionClickedEventImplCopyWith<$Res> {
-  __$$SectionClickedEventImplCopyWithImpl(_$SectionClickedEventImpl _value,
-      $Res Function(_$SectionClickedEventImpl) _then)
-      : super(_value, _then);
+  __$$SectionClickedEventImplCopyWithImpl(
+    _$SectionClickedEventImpl _value,
+    $Res Function(_$SectionClickedEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of SearchResultClickedEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -134,40 +146,43 @@ class __$$SectionClickedEventImplCopyWithImpl<$Res>
     Object? elementId = null,
     Object? group = null,
   }) {
-    return _then(_$SectionClickedEventImpl(
-      searchText: null == searchText
-          ? _value.searchText
-          : searchText // ignore: cast_nullable_to_non_nullable
-              as String,
-      elementPosition: null == elementPosition
-          ? _value.elementPosition
-          : elementPosition // ignore: cast_nullable_to_non_nullable
-              as int,
-      elementType: null == elementType
-          ? _value.elementType
-          : elementType // ignore: cast_nullable_to_non_nullable
-              as String,
-      elementId: null == elementId
-          ? _value.elementId
-          : elementId // ignore: cast_nullable_to_non_nullable
-              as String,
-      group: null == group
-          ? _value.group
-          : group // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+    return _then(
+      _$SectionClickedEventImpl(
+        searchText: null == searchText
+            ? _value.searchText
+            : searchText // ignore: cast_nullable_to_non_nullable
+                  as String,
+        elementPosition: null == elementPosition
+            ? _value.elementPosition
+            : elementPosition // ignore: cast_nullable_to_non_nullable
+                  as int,
+        elementType: null == elementType
+            ? _value.elementType
+            : elementType // ignore: cast_nullable_to_non_nullable
+                  as String,
+        elementId: null == elementId
+            ? _value.elementId
+            : elementId // ignore: cast_nullable_to_non_nullable
+                  as String,
+        group: null == group
+            ? _value.group
+            : group // ignore: cast_nullable_to_non_nullable
+                  as String,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$SectionClickedEventImpl implements _SectionClickedEvent {
-  const _$SectionClickedEventImpl(
-      {required this.searchText,
-      required this.elementPosition,
-      required this.elementType,
-      required this.elementId,
-      required this.group});
+  const _$SectionClickedEventImpl({
+    required this.searchText,
+    required this.elementPosition,
+    required this.elementType,
+    required this.elementId,
+    required this.group,
+  });
 
   factory _$SectionClickedEventImpl.fromJson(Map<String, dynamic> json) =>
       _$$SectionClickedEventImplFromJson(json);
@@ -207,7 +222,13 @@ class _$SectionClickedEventImpl implements _SectionClickedEvent {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType, searchText, elementPosition, elementType, elementId, group);
+    runtimeType,
+    searchText,
+    elementPosition,
+    elementType,
+    elementId,
+    group,
+  );
 
   /// Create a copy of SearchResultClickedEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -216,23 +237,24 @@ class _$SectionClickedEventImpl implements _SectionClickedEvent {
   @pragma('vm:prefer-inline')
   _$$SectionClickedEventImplCopyWith<_$SectionClickedEventImpl> get copyWith =>
       __$$SectionClickedEventImplCopyWithImpl<_$SectionClickedEventImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SectionClickedEventImplToJson(
-      this,
-    );
+    return _$$SectionClickedEventImplToJson(this);
   }
 }
 
 abstract class _SectionClickedEvent implements SearchResultClickedEvent {
-  const factory _SectionClickedEvent(
-      {required final String searchText,
-      required final int elementPosition,
-      required final String elementType,
-      required final String elementId,
-      required final String group}) = _$SectionClickedEventImpl;
+  const factory _SectionClickedEvent({
+    required final String searchText,
+    required final int elementPosition,
+    required final String elementType,
+    required final String elementId,
+    required final String group,
+  }) = _$SectionClickedEventImpl;
 
   factory _SectionClickedEvent.fromJson(Map<String, dynamic> json) =
       _$SectionClickedEventImpl.fromJson;
@@ -270,8 +292,9 @@ mixin _$SearchAnalytics {
 /// @nodoc
 abstract class $SearchAnalyticsCopyWith<$Res> {
   factory $SearchAnalyticsCopyWith(
-          SearchAnalytics value, $Res Function(SearchAnalytics) then) =
-      _$SearchAnalyticsCopyWithImpl<$Res, SearchAnalytics>;
+    SearchAnalytics value,
+    $Res Function(SearchAnalytics) then,
+  ) = _$SearchAnalyticsCopyWithImpl<$Res, SearchAnalytics>;
   @useResult
   $Res call({String searchText});
 }
@@ -290,24 +313,26 @@ class _$SearchAnalyticsCopyWithImpl<$Res, $Val extends SearchAnalytics>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? searchText = null,
-  }) {
-    return _then(_value.copyWith(
-      searchText: null == searchText
-          ? _value.searchText
-          : searchText // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? searchText = null}) {
+    return _then(
+      _value.copyWith(
+            searchText: null == searchText
+                ? _value.searchText
+                : searchText // ignore: cast_nullable_to_non_nullable
+                      as String,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$SearchAnalyticsImplCopyWith<$Res>
     implements $SearchAnalyticsCopyWith<$Res> {
-  factory _$$SearchAnalyticsImplCopyWith(_$SearchAnalyticsImpl value,
-          $Res Function(_$SearchAnalyticsImpl) then) =
-      __$$SearchAnalyticsImplCopyWithImpl<$Res>;
+  factory _$$SearchAnalyticsImplCopyWith(
+    _$SearchAnalyticsImpl value,
+    $Res Function(_$SearchAnalyticsImpl) then,
+  ) = __$$SearchAnalyticsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String searchText});
@@ -318,22 +343,23 @@ class __$$SearchAnalyticsImplCopyWithImpl<$Res>
     extends _$SearchAnalyticsCopyWithImpl<$Res, _$SearchAnalyticsImpl>
     implements _$$SearchAnalyticsImplCopyWith<$Res> {
   __$$SearchAnalyticsImplCopyWithImpl(
-      _$SearchAnalyticsImpl _value, $Res Function(_$SearchAnalyticsImpl) _then)
-      : super(_value, _then);
+    _$SearchAnalyticsImpl _value,
+    $Res Function(_$SearchAnalyticsImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of SearchAnalytics
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? searchText = null,
-  }) {
-    return _then(_$SearchAnalyticsImpl(
-      searchText: null == searchText
-          ? _value.searchText
-          : searchText // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? searchText = null}) {
+    return _then(
+      _$SearchAnalyticsImpl(
+        searchText: null == searchText
+            ? _value.searchText
+            : searchText // ignore: cast_nullable_to_non_nullable
+                  as String,
+      ),
+    );
   }
 }
 
@@ -369,7 +395,9 @@ class _$SearchAnalyticsImpl implements _SearchAnalytics {
   @pragma('vm:prefer-inline')
   _$$SearchAnalyticsImplCopyWith<_$SearchAnalyticsImpl> get copyWith =>
       __$$SearchAnalyticsImplCopyWithImpl<_$SearchAnalyticsImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 }
 
 abstract class _SearchAnalytics implements SearchAnalytics {
@@ -404,8 +432,9 @@ mixin _$SearchItemAnalytics {
 /// @nodoc
 abstract class $SearchItemAnalyticsCopyWith<$Res> {
   factory $SearchItemAnalyticsCopyWith(
-          SearchItemAnalytics value, $Res Function(SearchItemAnalytics) then) =
-      _$SearchItemAnalyticsCopyWithImpl<$Res, SearchItemAnalytics>;
+    SearchItemAnalytics value,
+    $Res Function(SearchItemAnalytics) then,
+  ) = _$SearchItemAnalyticsCopyWithImpl<$Res, SearchItemAnalytics>;
   @useResult
   $Res call({int position, String type, String id, String group});
 }
@@ -430,33 +459,37 @@ class _$SearchItemAnalyticsCopyWithImpl<$Res, $Val extends SearchItemAnalytics>
     Object? id = null,
     Object? group = null,
   }) {
-    return _then(_value.copyWith(
-      position: null == position
-          ? _value.position
-          : position // ignore: cast_nullable_to_non_nullable
-              as int,
-      type: null == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as String,
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      group: null == group
-          ? _value.group
-          : group // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            position: null == position
+                ? _value.position
+                : position // ignore: cast_nullable_to_non_nullable
+                      as int,
+            type: null == type
+                ? _value.type
+                : type // ignore: cast_nullable_to_non_nullable
+                      as String,
+            id: null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                      as String,
+            group: null == group
+                ? _value.group
+                : group // ignore: cast_nullable_to_non_nullable
+                      as String,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$SearchItemAnalyticsImplCopyWith<$Res>
     implements $SearchItemAnalyticsCopyWith<$Res> {
-  factory _$$SearchItemAnalyticsImplCopyWith(_$SearchItemAnalyticsImpl value,
-          $Res Function(_$SearchItemAnalyticsImpl) then) =
-      __$$SearchItemAnalyticsImplCopyWithImpl<$Res>;
+  factory _$$SearchItemAnalyticsImplCopyWith(
+    _$SearchItemAnalyticsImpl value,
+    $Res Function(_$SearchItemAnalyticsImpl) then,
+  ) = __$$SearchItemAnalyticsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int position, String type, String id, String group});
@@ -466,9 +499,10 @@ abstract class _$$SearchItemAnalyticsImplCopyWith<$Res>
 class __$$SearchItemAnalyticsImplCopyWithImpl<$Res>
     extends _$SearchItemAnalyticsCopyWithImpl<$Res, _$SearchItemAnalyticsImpl>
     implements _$$SearchItemAnalyticsImplCopyWith<$Res> {
-  __$$SearchItemAnalyticsImplCopyWithImpl(_$SearchItemAnalyticsImpl _value,
-      $Res Function(_$SearchItemAnalyticsImpl) _then)
-      : super(_value, _then);
+  __$$SearchItemAnalyticsImplCopyWithImpl(
+    _$SearchItemAnalyticsImpl _value,
+    $Res Function(_$SearchItemAnalyticsImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of SearchItemAnalytics
   /// with the given fields replaced by the non-null parameter values.
@@ -480,35 +514,38 @@ class __$$SearchItemAnalyticsImplCopyWithImpl<$Res>
     Object? id = null,
     Object? group = null,
   }) {
-    return _then(_$SearchItemAnalyticsImpl(
-      position: null == position
-          ? _value.position
-          : position // ignore: cast_nullable_to_non_nullable
-              as int,
-      type: null == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as String,
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      group: null == group
-          ? _value.group
-          : group // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+    return _then(
+      _$SearchItemAnalyticsImpl(
+        position: null == position
+            ? _value.position
+            : position // ignore: cast_nullable_to_non_nullable
+                  as int,
+        type: null == type
+            ? _value.type
+            : type // ignore: cast_nullable_to_non_nullable
+                  as String,
+        id: null == id
+            ? _value.id
+            : id // ignore: cast_nullable_to_non_nullable
+                  as String,
+        group: null == group
+            ? _value.group
+            : group // ignore: cast_nullable_to_non_nullable
+                  as String,
+      ),
+    );
   }
 }
 
 /// @nodoc
 
 class _$SearchItemAnalyticsImpl implements _SearchItemAnalytics {
-  const _$SearchItemAnalyticsImpl(
-      {required this.position,
-      required this.type,
-      required this.id,
-      required this.group});
+  const _$SearchItemAnalyticsImpl({
+    required this.position,
+    required this.type,
+    required this.id,
+    required this.group,
+  });
 
   @override
   final int position;
@@ -546,15 +583,18 @@ class _$SearchItemAnalyticsImpl implements _SearchItemAnalytics {
   @pragma('vm:prefer-inline')
   _$$SearchItemAnalyticsImplCopyWith<_$SearchItemAnalyticsImpl> get copyWith =>
       __$$SearchItemAnalyticsImplCopyWithImpl<_$SearchItemAnalyticsImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 }
 
 abstract class _SearchItemAnalytics implements SearchItemAnalytics {
-  const factory _SearchItemAnalytics(
-      {required final int position,
-      required final String type,
-      required final String id,
-      required final String group}) = _$SearchItemAnalyticsImpl;
+  const factory _SearchItemAnalytics({
+    required final int position,
+    required final String type,
+    required final String id,
+    required final String group,
+  }) = _$SearchItemAnalyticsImpl;
 
   @override
   int get position;

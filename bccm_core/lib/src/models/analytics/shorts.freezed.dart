@@ -12,7 +12,8 @@ part of 'shorts.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 ShortStartedEvent _$ShortStartedEventFromJson(Map<String, dynamic> json) {
   return _ShortStartedEvent.fromJson(json);
@@ -40,16 +41,18 @@ mixin _$ShortStartedEvent {
 /// @nodoc
 abstract class $ShortStartedEventCopyWith<$Res> {
   factory $ShortStartedEventCopyWith(
-          ShortStartedEvent value, $Res Function(ShortStartedEvent) then) =
-      _$ShortStartedEventCopyWithImpl<$Res, ShortStartedEvent>;
+    ShortStartedEvent value,
+    $Res Function(ShortStartedEvent) then,
+  ) = _$ShortStartedEventCopyWithImpl<$Res, ShortStartedEvent>;
   @useResult
-  $Res call(
-      {String shortId,
-      String shortTitle,
-      int replayCount,
-      bool resumed,
-      double positionFraction,
-      int positionSeconds});
+  $Res call({
+    String shortId,
+    String shortTitle,
+    int replayCount,
+    bool resumed,
+    double positionFraction,
+    int positionSeconds,
+  });
 }
 
 /// @nodoc
@@ -74,59 +77,65 @@ class _$ShortStartedEventCopyWithImpl<$Res, $Val extends ShortStartedEvent>
     Object? positionFraction = null,
     Object? positionSeconds = null,
   }) {
-    return _then(_value.copyWith(
-      shortId: null == shortId
-          ? _value.shortId
-          : shortId // ignore: cast_nullable_to_non_nullable
-              as String,
-      shortTitle: null == shortTitle
-          ? _value.shortTitle
-          : shortTitle // ignore: cast_nullable_to_non_nullable
-              as String,
-      replayCount: null == replayCount
-          ? _value.replayCount
-          : replayCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      resumed: null == resumed
-          ? _value.resumed
-          : resumed // ignore: cast_nullable_to_non_nullable
-              as bool,
-      positionFraction: null == positionFraction
-          ? _value.positionFraction
-          : positionFraction // ignore: cast_nullable_to_non_nullable
-              as double,
-      positionSeconds: null == positionSeconds
-          ? _value.positionSeconds
-          : positionSeconds // ignore: cast_nullable_to_non_nullable
-              as int,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            shortId: null == shortId
+                ? _value.shortId
+                : shortId // ignore: cast_nullable_to_non_nullable
+                      as String,
+            shortTitle: null == shortTitle
+                ? _value.shortTitle
+                : shortTitle // ignore: cast_nullable_to_non_nullable
+                      as String,
+            replayCount: null == replayCount
+                ? _value.replayCount
+                : replayCount // ignore: cast_nullable_to_non_nullable
+                      as int,
+            resumed: null == resumed
+                ? _value.resumed
+                : resumed // ignore: cast_nullable_to_non_nullable
+                      as bool,
+            positionFraction: null == positionFraction
+                ? _value.positionFraction
+                : positionFraction // ignore: cast_nullable_to_non_nullable
+                      as double,
+            positionSeconds: null == positionSeconds
+                ? _value.positionSeconds
+                : positionSeconds // ignore: cast_nullable_to_non_nullable
+                      as int,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$ShortStartedEventImplCopyWith<$Res>
     implements $ShortStartedEventCopyWith<$Res> {
-  factory _$$ShortStartedEventImplCopyWith(_$ShortStartedEventImpl value,
-          $Res Function(_$ShortStartedEventImpl) then) =
-      __$$ShortStartedEventImplCopyWithImpl<$Res>;
+  factory _$$ShortStartedEventImplCopyWith(
+    _$ShortStartedEventImpl value,
+    $Res Function(_$ShortStartedEventImpl) then,
+  ) = __$$ShortStartedEventImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String shortId,
-      String shortTitle,
-      int replayCount,
-      bool resumed,
-      double positionFraction,
-      int positionSeconds});
+  $Res call({
+    String shortId,
+    String shortTitle,
+    int replayCount,
+    bool resumed,
+    double positionFraction,
+    int positionSeconds,
+  });
 }
 
 /// @nodoc
 class __$$ShortStartedEventImplCopyWithImpl<$Res>
     extends _$ShortStartedEventCopyWithImpl<$Res, _$ShortStartedEventImpl>
     implements _$$ShortStartedEventImplCopyWith<$Res> {
-  __$$ShortStartedEventImplCopyWithImpl(_$ShortStartedEventImpl _value,
-      $Res Function(_$ShortStartedEventImpl) _then)
-      : super(_value, _then);
+  __$$ShortStartedEventImplCopyWithImpl(
+    _$ShortStartedEventImpl _value,
+    $Res Function(_$ShortStartedEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ShortStartedEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -140,45 +149,48 @@ class __$$ShortStartedEventImplCopyWithImpl<$Res>
     Object? positionFraction = null,
     Object? positionSeconds = null,
   }) {
-    return _then(_$ShortStartedEventImpl(
-      shortId: null == shortId
-          ? _value.shortId
-          : shortId // ignore: cast_nullable_to_non_nullable
-              as String,
-      shortTitle: null == shortTitle
-          ? _value.shortTitle
-          : shortTitle // ignore: cast_nullable_to_non_nullable
-              as String,
-      replayCount: null == replayCount
-          ? _value.replayCount
-          : replayCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      resumed: null == resumed
-          ? _value.resumed
-          : resumed // ignore: cast_nullable_to_non_nullable
-              as bool,
-      positionFraction: null == positionFraction
-          ? _value.positionFraction
-          : positionFraction // ignore: cast_nullable_to_non_nullable
-              as double,
-      positionSeconds: null == positionSeconds
-          ? _value.positionSeconds
-          : positionSeconds // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
+    return _then(
+      _$ShortStartedEventImpl(
+        shortId: null == shortId
+            ? _value.shortId
+            : shortId // ignore: cast_nullable_to_non_nullable
+                  as String,
+        shortTitle: null == shortTitle
+            ? _value.shortTitle
+            : shortTitle // ignore: cast_nullable_to_non_nullable
+                  as String,
+        replayCount: null == replayCount
+            ? _value.replayCount
+            : replayCount // ignore: cast_nullable_to_non_nullable
+                  as int,
+        resumed: null == resumed
+            ? _value.resumed
+            : resumed // ignore: cast_nullable_to_non_nullable
+                  as bool,
+        positionFraction: null == positionFraction
+            ? _value.positionFraction
+            : positionFraction // ignore: cast_nullable_to_non_nullable
+                  as double,
+        positionSeconds: null == positionSeconds
+            ? _value.positionSeconds
+            : positionSeconds // ignore: cast_nullable_to_non_nullable
+                  as int,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$ShortStartedEventImpl implements _ShortStartedEvent {
-  const _$ShortStartedEventImpl(
-      {required this.shortId,
-      required this.shortTitle,
-      required this.replayCount,
-      required this.resumed,
-      required this.positionFraction,
-      required this.positionSeconds});
+  const _$ShortStartedEventImpl({
+    required this.shortId,
+    required this.shortTitle,
+    required this.replayCount,
+    required this.resumed,
+    required this.positionFraction,
+    required this.positionSeconds,
+  });
 
   factory _$ShortStartedEventImpl.fromJson(Map<String, dynamic> json) =>
       _$$ShortStartedEventImplFromJson(json);
@@ -220,8 +232,15 @@ class _$ShortStartedEventImpl implements _ShortStartedEvent {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, shortId, shortTitle, replayCount,
-      resumed, positionFraction, positionSeconds);
+  int get hashCode => Object.hash(
+    runtimeType,
+    shortId,
+    shortTitle,
+    replayCount,
+    resumed,
+    positionFraction,
+    positionSeconds,
+  );
 
   /// Create a copy of ShortStartedEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -230,24 +249,25 @@ class _$ShortStartedEventImpl implements _ShortStartedEvent {
   @pragma('vm:prefer-inline')
   _$$ShortStartedEventImplCopyWith<_$ShortStartedEventImpl> get copyWith =>
       __$$ShortStartedEventImplCopyWithImpl<_$ShortStartedEventImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ShortStartedEventImplToJson(
-      this,
-    );
+    return _$$ShortStartedEventImplToJson(this);
   }
 }
 
 abstract class _ShortStartedEvent implements ShortStartedEvent {
-  const factory _ShortStartedEvent(
-      {required final String shortId,
-      required final String shortTitle,
-      required final int replayCount,
-      required final bool resumed,
-      required final double positionFraction,
-      required final int positionSeconds}) = _$ShortStartedEventImpl;
+  const factory _ShortStartedEvent({
+    required final String shortId,
+    required final String shortTitle,
+    required final int replayCount,
+    required final bool resumed,
+    required final double positionFraction,
+    required final int positionSeconds,
+  }) = _$ShortStartedEventImpl;
 
   factory _ShortStartedEvent.fromJson(Map<String, dynamic> json) =
       _$ShortStartedEventImpl.fromJson;
@@ -298,15 +318,17 @@ mixin _$ShortStoppedEvent {
 /// @nodoc
 abstract class $ShortStoppedEventCopyWith<$Res> {
   factory $ShortStoppedEventCopyWith(
-          ShortStoppedEvent value, $Res Function(ShortStoppedEvent) then) =
-      _$ShortStoppedEventCopyWithImpl<$Res, ShortStoppedEvent>;
+    ShortStoppedEvent value,
+    $Res Function(ShortStoppedEvent) then,
+  ) = _$ShortStoppedEventCopyWithImpl<$Res, ShortStoppedEvent>;
   @useResult
-  $Res call(
-      {String shortId,
-      String? shortTitle,
-      double positionFraction,
-      int positionSeconds,
-      int replayCount});
+  $Res call({
+    String shortId,
+    String? shortTitle,
+    double positionFraction,
+    int positionSeconds,
+    int replayCount,
+  });
 }
 
 /// @nodoc
@@ -330,54 +352,60 @@ class _$ShortStoppedEventCopyWithImpl<$Res, $Val extends ShortStoppedEvent>
     Object? positionSeconds = null,
     Object? replayCount = null,
   }) {
-    return _then(_value.copyWith(
-      shortId: null == shortId
-          ? _value.shortId
-          : shortId // ignore: cast_nullable_to_non_nullable
-              as String,
-      shortTitle: freezed == shortTitle
-          ? _value.shortTitle
-          : shortTitle // ignore: cast_nullable_to_non_nullable
-              as String?,
-      positionFraction: null == positionFraction
-          ? _value.positionFraction
-          : positionFraction // ignore: cast_nullable_to_non_nullable
-              as double,
-      positionSeconds: null == positionSeconds
-          ? _value.positionSeconds
-          : positionSeconds // ignore: cast_nullable_to_non_nullable
-              as int,
-      replayCount: null == replayCount
-          ? _value.replayCount
-          : replayCount // ignore: cast_nullable_to_non_nullable
-              as int,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            shortId: null == shortId
+                ? _value.shortId
+                : shortId // ignore: cast_nullable_to_non_nullable
+                      as String,
+            shortTitle: freezed == shortTitle
+                ? _value.shortTitle
+                : shortTitle // ignore: cast_nullable_to_non_nullable
+                      as String?,
+            positionFraction: null == positionFraction
+                ? _value.positionFraction
+                : positionFraction // ignore: cast_nullable_to_non_nullable
+                      as double,
+            positionSeconds: null == positionSeconds
+                ? _value.positionSeconds
+                : positionSeconds // ignore: cast_nullable_to_non_nullable
+                      as int,
+            replayCount: null == replayCount
+                ? _value.replayCount
+                : replayCount // ignore: cast_nullable_to_non_nullable
+                      as int,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$ShortStoppedEventImplCopyWith<$Res>
     implements $ShortStoppedEventCopyWith<$Res> {
-  factory _$$ShortStoppedEventImplCopyWith(_$ShortStoppedEventImpl value,
-          $Res Function(_$ShortStoppedEventImpl) then) =
-      __$$ShortStoppedEventImplCopyWithImpl<$Res>;
+  factory _$$ShortStoppedEventImplCopyWith(
+    _$ShortStoppedEventImpl value,
+    $Res Function(_$ShortStoppedEventImpl) then,
+  ) = __$$ShortStoppedEventImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String shortId,
-      String? shortTitle,
-      double positionFraction,
-      int positionSeconds,
-      int replayCount});
+  $Res call({
+    String shortId,
+    String? shortTitle,
+    double positionFraction,
+    int positionSeconds,
+    int replayCount,
+  });
 }
 
 /// @nodoc
 class __$$ShortStoppedEventImplCopyWithImpl<$Res>
     extends _$ShortStoppedEventCopyWithImpl<$Res, _$ShortStoppedEventImpl>
     implements _$$ShortStoppedEventImplCopyWith<$Res> {
-  __$$ShortStoppedEventImplCopyWithImpl(_$ShortStoppedEventImpl _value,
-      $Res Function(_$ShortStoppedEventImpl) _then)
-      : super(_value, _then);
+  __$$ShortStoppedEventImplCopyWithImpl(
+    _$ShortStoppedEventImpl _value,
+    $Res Function(_$ShortStoppedEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ShortStoppedEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -390,40 +418,43 @@ class __$$ShortStoppedEventImplCopyWithImpl<$Res>
     Object? positionSeconds = null,
     Object? replayCount = null,
   }) {
-    return _then(_$ShortStoppedEventImpl(
-      shortId: null == shortId
-          ? _value.shortId
-          : shortId // ignore: cast_nullable_to_non_nullable
-              as String,
-      shortTitle: freezed == shortTitle
-          ? _value.shortTitle
-          : shortTitle // ignore: cast_nullable_to_non_nullable
-              as String?,
-      positionFraction: null == positionFraction
-          ? _value.positionFraction
-          : positionFraction // ignore: cast_nullable_to_non_nullable
-              as double,
-      positionSeconds: null == positionSeconds
-          ? _value.positionSeconds
-          : positionSeconds // ignore: cast_nullable_to_non_nullable
-              as int,
-      replayCount: null == replayCount
-          ? _value.replayCount
-          : replayCount // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
+    return _then(
+      _$ShortStoppedEventImpl(
+        shortId: null == shortId
+            ? _value.shortId
+            : shortId // ignore: cast_nullable_to_non_nullable
+                  as String,
+        shortTitle: freezed == shortTitle
+            ? _value.shortTitle
+            : shortTitle // ignore: cast_nullable_to_non_nullable
+                  as String?,
+        positionFraction: null == positionFraction
+            ? _value.positionFraction
+            : positionFraction // ignore: cast_nullable_to_non_nullable
+                  as double,
+        positionSeconds: null == positionSeconds
+            ? _value.positionSeconds
+            : positionSeconds // ignore: cast_nullable_to_non_nullable
+                  as int,
+        replayCount: null == replayCount
+            ? _value.replayCount
+            : replayCount // ignore: cast_nullable_to_non_nullable
+                  as int,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$ShortStoppedEventImpl implements _ShortStoppedEvent {
-  const _$ShortStoppedEventImpl(
-      {required this.shortId,
-      required this.shortTitle,
-      required this.positionFraction,
-      required this.positionSeconds,
-      required this.replayCount});
+  const _$ShortStoppedEventImpl({
+    required this.shortId,
+    required this.shortTitle,
+    required this.positionFraction,
+    required this.positionSeconds,
+    required this.replayCount,
+  });
 
   factory _$ShortStoppedEventImpl.fromJson(Map<String, dynamic> json) =>
       _$$ShortStoppedEventImplFromJson(json);
@@ -462,8 +493,14 @@ class _$ShortStoppedEventImpl implements _ShortStoppedEvent {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, shortId, shortTitle,
-      positionFraction, positionSeconds, replayCount);
+  int get hashCode => Object.hash(
+    runtimeType,
+    shortId,
+    shortTitle,
+    positionFraction,
+    positionSeconds,
+    replayCount,
+  );
 
   /// Create a copy of ShortStoppedEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -472,23 +509,24 @@ class _$ShortStoppedEventImpl implements _ShortStoppedEvent {
   @pragma('vm:prefer-inline')
   _$$ShortStoppedEventImplCopyWith<_$ShortStoppedEventImpl> get copyWith =>
       __$$ShortStoppedEventImplCopyWithImpl<_$ShortStoppedEventImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ShortStoppedEventImplToJson(
-      this,
-    );
+    return _$$ShortStoppedEventImplToJson(this);
   }
 }
 
 abstract class _ShortStoppedEvent implements ShortStoppedEvent {
-  const factory _ShortStoppedEvent(
-      {required final String shortId,
-      required final String? shortTitle,
-      required final double positionFraction,
-      required final int positionSeconds,
-      required final int replayCount}) = _$ShortStoppedEventImpl;
+  const factory _ShortStoppedEvent({
+    required final String shortId,
+    required final String? shortTitle,
+    required final double positionFraction,
+    required final int positionSeconds,
+    required final int replayCount,
+  }) = _$ShortStoppedEventImpl;
 
   factory _ShortStoppedEvent.fromJson(Map<String, dynamic> json) =
       _$ShortStoppedEventImpl.fromJson;

@@ -12,10 +12,12 @@ part of 'achievement_clicked.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 AchievementClickedEvent _$AchievementClickedEventFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _AchievementClickedEvent.fromJson(json);
 }
 
@@ -36,16 +38,19 @@ mixin _$AchievementClickedEvent {
 
 /// @nodoc
 abstract class $AchievementClickedEventCopyWith<$Res> {
-  factory $AchievementClickedEventCopyWith(AchievementClickedEvent value,
-          $Res Function(AchievementClickedEvent) then) =
-      _$AchievementClickedEventCopyWithImpl<$Res, AchievementClickedEvent>;
+  factory $AchievementClickedEventCopyWith(
+    AchievementClickedEvent value,
+    $Res Function(AchievementClickedEvent) then,
+  ) = _$AchievementClickedEventCopyWithImpl<$Res, AchievementClickedEvent>;
   @useResult
   $Res call({int elementPosition, String elementTitle});
 }
 
 /// @nodoc
-class _$AchievementClickedEventCopyWithImpl<$Res,
-        $Val extends AchievementClickedEvent>
+class _$AchievementClickedEventCopyWithImpl<
+  $Res,
+  $Val extends AchievementClickedEvent
+>
     implements $AchievementClickedEventCopyWith<$Res> {
   _$AchievementClickedEventCopyWithImpl(this._value, this._then);
 
@@ -58,20 +63,20 @@ class _$AchievementClickedEventCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? elementPosition = null,
-    Object? elementTitle = null,
-  }) {
-    return _then(_value.copyWith(
-      elementPosition: null == elementPosition
-          ? _value.elementPosition
-          : elementPosition // ignore: cast_nullable_to_non_nullable
-              as int,
-      elementTitle: null == elementTitle
-          ? _value.elementTitle
-          : elementTitle // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? elementPosition = null, Object? elementTitle = null}) {
+    return _then(
+      _value.copyWith(
+            elementPosition: null == elementPosition
+                ? _value.elementPosition
+                : elementPosition // ignore: cast_nullable_to_non_nullable
+                      as int,
+            elementTitle: null == elementTitle
+                ? _value.elementTitle
+                : elementTitle // ignore: cast_nullable_to_non_nullable
+                      as String,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -79,9 +84,9 @@ class _$AchievementClickedEventCopyWithImpl<$Res,
 abstract class _$$AchievementClickedEventImplCopyWith<$Res>
     implements $AchievementClickedEventCopyWith<$Res> {
   factory _$$AchievementClickedEventImplCopyWith(
-          _$AchievementClickedEventImpl value,
-          $Res Function(_$AchievementClickedEventImpl) then) =
-      __$$AchievementClickedEventImplCopyWithImpl<$Res>;
+    _$AchievementClickedEventImpl value,
+    $Res Function(_$AchievementClickedEventImpl) then,
+  ) = __$$AchievementClickedEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int elementPosition, String elementTitle});
@@ -89,40 +94,44 @@ abstract class _$$AchievementClickedEventImplCopyWith<$Res>
 
 /// @nodoc
 class __$$AchievementClickedEventImplCopyWithImpl<$Res>
-    extends _$AchievementClickedEventCopyWithImpl<$Res,
-        _$AchievementClickedEventImpl>
+    extends
+        _$AchievementClickedEventCopyWithImpl<
+          $Res,
+          _$AchievementClickedEventImpl
+        >
     implements _$$AchievementClickedEventImplCopyWith<$Res> {
   __$$AchievementClickedEventImplCopyWithImpl(
-      _$AchievementClickedEventImpl _value,
-      $Res Function(_$AchievementClickedEventImpl) _then)
-      : super(_value, _then);
+    _$AchievementClickedEventImpl _value,
+    $Res Function(_$AchievementClickedEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of AchievementClickedEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? elementPosition = null,
-    Object? elementTitle = null,
-  }) {
-    return _then(_$AchievementClickedEventImpl(
-      elementPosition: null == elementPosition
-          ? _value.elementPosition
-          : elementPosition // ignore: cast_nullable_to_non_nullable
-              as int,
-      elementTitle: null == elementTitle
-          ? _value.elementTitle
-          : elementTitle // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? elementPosition = null, Object? elementTitle = null}) {
+    return _then(
+      _$AchievementClickedEventImpl(
+        elementPosition: null == elementPosition
+            ? _value.elementPosition
+            : elementPosition // ignore: cast_nullable_to_non_nullable
+                  as int,
+        elementTitle: null == elementTitle
+            ? _value.elementTitle
+            : elementTitle // ignore: cast_nullable_to_non_nullable
+                  as String,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AchievementClickedEventImpl implements _AchievementClickedEvent {
-  const _$AchievementClickedEventImpl(
-      {required this.elementPosition, required this.elementTitle});
+  const _$AchievementClickedEventImpl({
+    required this.elementPosition,
+    required this.elementTitle,
+  });
 
   factory _$AchievementClickedEventImpl.fromJson(Map<String, dynamic> json) =>
       _$$AchievementClickedEventImplFromJson(json);
@@ -158,21 +167,22 @@ class _$AchievementClickedEventImpl implements _AchievementClickedEvent {
   @override
   @pragma('vm:prefer-inline')
   _$$AchievementClickedEventImplCopyWith<_$AchievementClickedEventImpl>
-      get copyWith => __$$AchievementClickedEventImplCopyWithImpl<
-          _$AchievementClickedEventImpl>(this, _$identity);
+  get copyWith =>
+      __$$AchievementClickedEventImplCopyWithImpl<
+        _$AchievementClickedEventImpl
+      >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$AchievementClickedEventImplToJson(
-      this,
-    );
+    return _$$AchievementClickedEventImplToJson(this);
   }
 }
 
 abstract class _AchievementClickedEvent implements AchievementClickedEvent {
-  const factory _AchievementClickedEvent(
-      {required final int elementPosition,
-      required final String elementTitle}) = _$AchievementClickedEventImpl;
+  const factory _AchievementClickedEvent({
+    required final int elementPosition,
+    required final String elementTitle,
+  }) = _$AchievementClickedEventImpl;
 
   factory _AchievementClickedEvent.fromJson(Map<String, dynamic> json) =
       _$AchievementClickedEventImpl.fromJson;
@@ -187,5 +197,5 @@ abstract class _AchievementClickedEvent implements AchievementClickedEvent {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AchievementClickedEventImplCopyWith<_$AchievementClickedEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

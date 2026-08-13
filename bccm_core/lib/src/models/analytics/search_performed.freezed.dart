@@ -12,7 +12,8 @@ part of 'search_performed.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 SearchPerformedEvent _$SearchPerformedEventFromJson(Map<String, dynamic> json) {
   return _SearchPerformedEvent.fromJson(json);
@@ -36,16 +37,19 @@ mixin _$SearchPerformedEvent {
 
 /// @nodoc
 abstract class $SearchPerformedEventCopyWith<$Res> {
-  factory $SearchPerformedEventCopyWith(SearchPerformedEvent value,
-          $Res Function(SearchPerformedEvent) then) =
-      _$SearchPerformedEventCopyWithImpl<$Res, SearchPerformedEvent>;
+  factory $SearchPerformedEventCopyWith(
+    SearchPerformedEvent value,
+    $Res Function(SearchPerformedEvent) then,
+  ) = _$SearchPerformedEventCopyWithImpl<$Res, SearchPerformedEvent>;
   @useResult
   $Res call({String searchText, int searchLatency, int searchResultCount});
 }
 
 /// @nodoc
-class _$SearchPerformedEventCopyWithImpl<$Res,
-        $Val extends SearchPerformedEvent>
+class _$SearchPerformedEventCopyWithImpl<
+  $Res,
+  $Val extends SearchPerformedEvent
+>
     implements $SearchPerformedEventCopyWith<$Res> {
   _$SearchPerformedEventCopyWithImpl(this._value, this._then);
 
@@ -63,29 +67,33 @@ class _$SearchPerformedEventCopyWithImpl<$Res,
     Object? searchLatency = null,
     Object? searchResultCount = null,
   }) {
-    return _then(_value.copyWith(
-      searchText: null == searchText
-          ? _value.searchText
-          : searchText // ignore: cast_nullable_to_non_nullable
-              as String,
-      searchLatency: null == searchLatency
-          ? _value.searchLatency
-          : searchLatency // ignore: cast_nullable_to_non_nullable
-              as int,
-      searchResultCount: null == searchResultCount
-          ? _value.searchResultCount
-          : searchResultCount // ignore: cast_nullable_to_non_nullable
-              as int,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            searchText: null == searchText
+                ? _value.searchText
+                : searchText // ignore: cast_nullable_to_non_nullable
+                      as String,
+            searchLatency: null == searchLatency
+                ? _value.searchLatency
+                : searchLatency // ignore: cast_nullable_to_non_nullable
+                      as int,
+            searchResultCount: null == searchResultCount
+                ? _value.searchResultCount
+                : searchResultCount // ignore: cast_nullable_to_non_nullable
+                      as int,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$SearchPerformedEventImplCopyWith<$Res>
     implements $SearchPerformedEventCopyWith<$Res> {
-  factory _$$SearchPerformedEventImplCopyWith(_$SearchPerformedEventImpl value,
-          $Res Function(_$SearchPerformedEventImpl) then) =
-      __$$SearchPerformedEventImplCopyWithImpl<$Res>;
+  factory _$$SearchPerformedEventImplCopyWith(
+    _$SearchPerformedEventImpl value,
+    $Res Function(_$SearchPerformedEventImpl) then,
+  ) = __$$SearchPerformedEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String searchText, int searchLatency, int searchResultCount});
@@ -95,9 +103,10 @@ abstract class _$$SearchPerformedEventImplCopyWith<$Res>
 class __$$SearchPerformedEventImplCopyWithImpl<$Res>
     extends _$SearchPerformedEventCopyWithImpl<$Res, _$SearchPerformedEventImpl>
     implements _$$SearchPerformedEventImplCopyWith<$Res> {
-  __$$SearchPerformedEventImplCopyWithImpl(_$SearchPerformedEventImpl _value,
-      $Res Function(_$SearchPerformedEventImpl) _then)
-      : super(_value, _then);
+  __$$SearchPerformedEventImplCopyWithImpl(
+    _$SearchPerformedEventImpl _value,
+    $Res Function(_$SearchPerformedEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of SearchPerformedEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -108,30 +117,33 @@ class __$$SearchPerformedEventImplCopyWithImpl<$Res>
     Object? searchLatency = null,
     Object? searchResultCount = null,
   }) {
-    return _then(_$SearchPerformedEventImpl(
-      searchText: null == searchText
-          ? _value.searchText
-          : searchText // ignore: cast_nullable_to_non_nullable
-              as String,
-      searchLatency: null == searchLatency
-          ? _value.searchLatency
-          : searchLatency // ignore: cast_nullable_to_non_nullable
-              as int,
-      searchResultCount: null == searchResultCount
-          ? _value.searchResultCount
-          : searchResultCount // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
+    return _then(
+      _$SearchPerformedEventImpl(
+        searchText: null == searchText
+            ? _value.searchText
+            : searchText // ignore: cast_nullable_to_non_nullable
+                  as String,
+        searchLatency: null == searchLatency
+            ? _value.searchLatency
+            : searchLatency // ignore: cast_nullable_to_non_nullable
+                  as int,
+        searchResultCount: null == searchResultCount
+            ? _value.searchResultCount
+            : searchResultCount // ignore: cast_nullable_to_non_nullable
+                  as int,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$SearchPerformedEventImpl implements _SearchPerformedEvent {
-  const _$SearchPerformedEventImpl(
-      {required this.searchText,
-      required this.searchLatency,
-      required this.searchResultCount});
+  const _$SearchPerformedEventImpl({
+    required this.searchText,
+    required this.searchLatency,
+    required this.searchResultCount,
+  });
 
   factory _$SearchPerformedEventImpl.fromJson(Map<String, dynamic> json) =>
       _$$SearchPerformedEventImplFromJson(json);
@@ -172,23 +184,24 @@ class _$SearchPerformedEventImpl implements _SearchPerformedEvent {
   @override
   @pragma('vm:prefer-inline')
   _$$SearchPerformedEventImplCopyWith<_$SearchPerformedEventImpl>
-      get copyWith =>
-          __$$SearchPerformedEventImplCopyWithImpl<_$SearchPerformedEventImpl>(
-              this, _$identity);
+  get copyWith =>
+      __$$SearchPerformedEventImplCopyWithImpl<_$SearchPerformedEventImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SearchPerformedEventImplToJson(
-      this,
-    );
+    return _$$SearchPerformedEventImplToJson(this);
   }
 }
 
 abstract class _SearchPerformedEvent implements SearchPerformedEvent {
-  const factory _SearchPerformedEvent(
-      {required final String searchText,
-      required final int searchLatency,
-      required final int searchResultCount}) = _$SearchPerformedEventImpl;
+  const factory _SearchPerformedEvent({
+    required final String searchText,
+    required final int searchLatency,
+    required final int searchResultCount,
+  }) = _$SearchPerformedEventImpl;
 
   factory _SearchPerformedEvent.fromJson(Map<String, dynamic> json) =
       _$SearchPerformedEventImpl.fromJson;
@@ -205,5 +218,5 @@ abstract class _SearchPerformedEvent implements SearchPerformedEvent {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SearchPerformedEventImplCopyWith<_$SearchPerformedEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

@@ -12,10 +12,12 @@ part of 'audio_only_clicked.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 AudioOnlyClickedEvent _$AudioOnlyClickedEventFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _AudioOnlyClickedEvent.fromJson(json);
 }
 
@@ -35,16 +37,19 @@ mixin _$AudioOnlyClickedEvent {
 
 /// @nodoc
 abstract class $AudioOnlyClickedEventCopyWith<$Res> {
-  factory $AudioOnlyClickedEventCopyWith(AudioOnlyClickedEvent value,
-          $Res Function(AudioOnlyClickedEvent) then) =
-      _$AudioOnlyClickedEventCopyWithImpl<$Res, AudioOnlyClickedEvent>;
+  factory $AudioOnlyClickedEventCopyWith(
+    AudioOnlyClickedEvent value,
+    $Res Function(AudioOnlyClickedEvent) then,
+  ) = _$AudioOnlyClickedEventCopyWithImpl<$Res, AudioOnlyClickedEvent>;
   @useResult
   $Res call({bool audioOnly});
 }
 
 /// @nodoc
-class _$AudioOnlyClickedEventCopyWithImpl<$Res,
-        $Val extends AudioOnlyClickedEvent>
+class _$AudioOnlyClickedEventCopyWithImpl<
+  $Res,
+  $Val extends AudioOnlyClickedEvent
+>
     implements $AudioOnlyClickedEventCopyWith<$Res> {
   _$AudioOnlyClickedEventCopyWithImpl(this._value, this._then);
 
@@ -57,15 +62,16 @@ class _$AudioOnlyClickedEventCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? audioOnly = null,
-  }) {
-    return _then(_value.copyWith(
-      audioOnly: null == audioOnly
-          ? _value.audioOnly
-          : audioOnly // ignore: cast_nullable_to_non_nullable
-              as bool,
-    ) as $Val);
+  $Res call({Object? audioOnly = null}) {
+    return _then(
+      _value.copyWith(
+            audioOnly: null == audioOnly
+                ? _value.audioOnly
+                : audioOnly // ignore: cast_nullable_to_non_nullable
+                      as bool,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -73,9 +79,9 @@ class _$AudioOnlyClickedEventCopyWithImpl<$Res,
 abstract class _$$AudioOnlyClickedEventImplCopyWith<$Res>
     implements $AudioOnlyClickedEventCopyWith<$Res> {
   factory _$$AudioOnlyClickedEventImplCopyWith(
-          _$AudioOnlyClickedEventImpl value,
-          $Res Function(_$AudioOnlyClickedEventImpl) then) =
-      __$$AudioOnlyClickedEventImplCopyWithImpl<$Res>;
+    _$AudioOnlyClickedEventImpl value,
+    $Res Function(_$AudioOnlyClickedEventImpl) then,
+  ) = __$$AudioOnlyClickedEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({bool audioOnly});
@@ -83,26 +89,27 @@ abstract class _$$AudioOnlyClickedEventImplCopyWith<$Res>
 
 /// @nodoc
 class __$$AudioOnlyClickedEventImplCopyWithImpl<$Res>
-    extends _$AudioOnlyClickedEventCopyWithImpl<$Res,
-        _$AudioOnlyClickedEventImpl>
+    extends
+        _$AudioOnlyClickedEventCopyWithImpl<$Res, _$AudioOnlyClickedEventImpl>
     implements _$$AudioOnlyClickedEventImplCopyWith<$Res> {
-  __$$AudioOnlyClickedEventImplCopyWithImpl(_$AudioOnlyClickedEventImpl _value,
-      $Res Function(_$AudioOnlyClickedEventImpl) _then)
-      : super(_value, _then);
+  __$$AudioOnlyClickedEventImplCopyWithImpl(
+    _$AudioOnlyClickedEventImpl _value,
+    $Res Function(_$AudioOnlyClickedEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of AudioOnlyClickedEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? audioOnly = null,
-  }) {
-    return _then(_$AudioOnlyClickedEventImpl(
-      audioOnly: null == audioOnly
-          ? _value.audioOnly
-          : audioOnly // ignore: cast_nullable_to_non_nullable
-              as bool,
-    ));
+  $Res call({Object? audioOnly = null}) {
+    return _then(
+      _$AudioOnlyClickedEventImpl(
+        audioOnly: null == audioOnly
+            ? _value.audioOnly
+            : audioOnly // ignore: cast_nullable_to_non_nullable
+                  as bool,
+      ),
+    );
   }
 }
 
@@ -141,14 +148,15 @@ class _$AudioOnlyClickedEventImpl implements _AudioOnlyClickedEvent {
   @override
   @pragma('vm:prefer-inline')
   _$$AudioOnlyClickedEventImplCopyWith<_$AudioOnlyClickedEventImpl>
-      get copyWith => __$$AudioOnlyClickedEventImplCopyWithImpl<
-          _$AudioOnlyClickedEventImpl>(this, _$identity);
+  get copyWith =>
+      __$$AudioOnlyClickedEventImplCopyWithImpl<_$AudioOnlyClickedEventImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$AudioOnlyClickedEventImplToJson(
-      this,
-    );
+    return _$$AudioOnlyClickedEventImplToJson(this);
   }
 }
 
@@ -167,5 +175,5 @@ abstract class _AudioOnlyClickedEvent implements AudioOnlyClickedEvent {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AudioOnlyClickedEventImplCopyWith<_$AudioOnlyClickedEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

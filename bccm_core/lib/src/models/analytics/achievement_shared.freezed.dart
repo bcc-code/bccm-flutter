@@ -12,10 +12,12 @@ part of 'achievement_shared.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 AchievementSharedEvent _$AchievementSharedEventFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _AchievementSharedEvent.fromJson(json);
 }
 
@@ -35,16 +37,19 @@ mixin _$AchievementSharedEvent {
 
 /// @nodoc
 abstract class $AchievementSharedEventCopyWith<$Res> {
-  factory $AchievementSharedEventCopyWith(AchievementSharedEvent value,
-          $Res Function(AchievementSharedEvent) then) =
-      _$AchievementSharedEventCopyWithImpl<$Res, AchievementSharedEvent>;
+  factory $AchievementSharedEventCopyWith(
+    AchievementSharedEvent value,
+    $Res Function(AchievementSharedEvent) then,
+  ) = _$AchievementSharedEventCopyWithImpl<$Res, AchievementSharedEvent>;
   @useResult
   $Res call({String elementTitle});
 }
 
 /// @nodoc
-class _$AchievementSharedEventCopyWithImpl<$Res,
-        $Val extends AchievementSharedEvent>
+class _$AchievementSharedEventCopyWithImpl<
+  $Res,
+  $Val extends AchievementSharedEvent
+>
     implements $AchievementSharedEventCopyWith<$Res> {
   _$AchievementSharedEventCopyWithImpl(this._value, this._then);
 
@@ -57,15 +62,16 @@ class _$AchievementSharedEventCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? elementTitle = null,
-  }) {
-    return _then(_value.copyWith(
-      elementTitle: null == elementTitle
-          ? _value.elementTitle
-          : elementTitle // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? elementTitle = null}) {
+    return _then(
+      _value.copyWith(
+            elementTitle: null == elementTitle
+                ? _value.elementTitle
+                : elementTitle // ignore: cast_nullable_to_non_nullable
+                      as String,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -73,9 +79,9 @@ class _$AchievementSharedEventCopyWithImpl<$Res,
 abstract class _$$AchievementSharedEventImplCopyWith<$Res>
     implements $AchievementSharedEventCopyWith<$Res> {
   factory _$$AchievementSharedEventImplCopyWith(
-          _$AchievementSharedEventImpl value,
-          $Res Function(_$AchievementSharedEventImpl) then) =
-      __$$AchievementSharedEventImplCopyWithImpl<$Res>;
+    _$AchievementSharedEventImpl value,
+    $Res Function(_$AchievementSharedEventImpl) then,
+  ) = __$$AchievementSharedEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String elementTitle});
@@ -83,27 +89,27 @@ abstract class _$$AchievementSharedEventImplCopyWith<$Res>
 
 /// @nodoc
 class __$$AchievementSharedEventImplCopyWithImpl<$Res>
-    extends _$AchievementSharedEventCopyWithImpl<$Res,
-        _$AchievementSharedEventImpl>
+    extends
+        _$AchievementSharedEventCopyWithImpl<$Res, _$AchievementSharedEventImpl>
     implements _$$AchievementSharedEventImplCopyWith<$Res> {
   __$$AchievementSharedEventImplCopyWithImpl(
-      _$AchievementSharedEventImpl _value,
-      $Res Function(_$AchievementSharedEventImpl) _then)
-      : super(_value, _then);
+    _$AchievementSharedEventImpl _value,
+    $Res Function(_$AchievementSharedEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of AchievementSharedEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? elementTitle = null,
-  }) {
-    return _then(_$AchievementSharedEventImpl(
-      elementTitle: null == elementTitle
-          ? _value.elementTitle
-          : elementTitle // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? elementTitle = null}) {
+    return _then(
+      _$AchievementSharedEventImpl(
+        elementTitle: null == elementTitle
+            ? _value.elementTitle
+            : elementTitle // ignore: cast_nullable_to_non_nullable
+                  as String,
+      ),
+    );
   }
 }
 
@@ -142,14 +148,15 @@ class _$AchievementSharedEventImpl implements _AchievementSharedEvent {
   @override
   @pragma('vm:prefer-inline')
   _$$AchievementSharedEventImplCopyWith<_$AchievementSharedEventImpl>
-      get copyWith => __$$AchievementSharedEventImplCopyWithImpl<
-          _$AchievementSharedEventImpl>(this, _$identity);
+  get copyWith =>
+      __$$AchievementSharedEventImplCopyWithImpl<_$AchievementSharedEventImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$AchievementSharedEventImplToJson(
-      this,
-    );
+    return _$$AchievementSharedEventImplToJson(this);
   }
 }
 
@@ -168,5 +175,5 @@ abstract class _AchievementSharedEvent implements AchievementSharedEvent {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AchievementSharedEventImplCopyWith<_$AchievementSharedEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

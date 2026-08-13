@@ -12,7 +12,8 @@ part of 'chapter_clicked.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 ChapterClickedEvent _$ChapterClickedEventFromJson(Map<String, dynamic> json) {
   return _ChapterClickedEvent.fromJson(json);
@@ -38,14 +39,16 @@ mixin _$ChapterClickedEvent {
 /// @nodoc
 abstract class $ChapterClickedEventCopyWith<$Res> {
   factory $ChapterClickedEventCopyWith(
-          ChapterClickedEvent value, $Res Function(ChapterClickedEvent) then) =
-      _$ChapterClickedEventCopyWithImpl<$Res, ChapterClickedEvent>;
+    ChapterClickedEvent value,
+    $Res Function(ChapterClickedEvent) then,
+  ) = _$ChapterClickedEventCopyWithImpl<$Res, ChapterClickedEvent>;
   @useResult
-  $Res call(
-      {String elementType,
-      String elementId,
-      String chapterId,
-      int chapterStart});
+  $Res call({
+    String elementType,
+    String elementId,
+    String chapterId,
+    int chapterStart,
+  });
 }
 
 /// @nodoc
@@ -68,49 +71,55 @@ class _$ChapterClickedEventCopyWithImpl<$Res, $Val extends ChapterClickedEvent>
     Object? chapterId = null,
     Object? chapterStart = null,
   }) {
-    return _then(_value.copyWith(
-      elementType: null == elementType
-          ? _value.elementType
-          : elementType // ignore: cast_nullable_to_non_nullable
-              as String,
-      elementId: null == elementId
-          ? _value.elementId
-          : elementId // ignore: cast_nullable_to_non_nullable
-              as String,
-      chapterId: null == chapterId
-          ? _value.chapterId
-          : chapterId // ignore: cast_nullable_to_non_nullable
-              as String,
-      chapterStart: null == chapterStart
-          ? _value.chapterStart
-          : chapterStart // ignore: cast_nullable_to_non_nullable
-              as int,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            elementType: null == elementType
+                ? _value.elementType
+                : elementType // ignore: cast_nullable_to_non_nullable
+                      as String,
+            elementId: null == elementId
+                ? _value.elementId
+                : elementId // ignore: cast_nullable_to_non_nullable
+                      as String,
+            chapterId: null == chapterId
+                ? _value.chapterId
+                : chapterId // ignore: cast_nullable_to_non_nullable
+                      as String,
+            chapterStart: null == chapterStart
+                ? _value.chapterStart
+                : chapterStart // ignore: cast_nullable_to_non_nullable
+                      as int,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$ChapterClickedEventImplCopyWith<$Res>
     implements $ChapterClickedEventCopyWith<$Res> {
-  factory _$$ChapterClickedEventImplCopyWith(_$ChapterClickedEventImpl value,
-          $Res Function(_$ChapterClickedEventImpl) then) =
-      __$$ChapterClickedEventImplCopyWithImpl<$Res>;
+  factory _$$ChapterClickedEventImplCopyWith(
+    _$ChapterClickedEventImpl value,
+    $Res Function(_$ChapterClickedEventImpl) then,
+  ) = __$$ChapterClickedEventImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String elementType,
-      String elementId,
-      String chapterId,
-      int chapterStart});
+  $Res call({
+    String elementType,
+    String elementId,
+    String chapterId,
+    int chapterStart,
+  });
 }
 
 /// @nodoc
 class __$$ChapterClickedEventImplCopyWithImpl<$Res>
     extends _$ChapterClickedEventCopyWithImpl<$Res, _$ChapterClickedEventImpl>
     implements _$$ChapterClickedEventImplCopyWith<$Res> {
-  __$$ChapterClickedEventImplCopyWithImpl(_$ChapterClickedEventImpl _value,
-      $Res Function(_$ChapterClickedEventImpl) _then)
-      : super(_value, _then);
+  __$$ChapterClickedEventImplCopyWithImpl(
+    _$ChapterClickedEventImpl _value,
+    $Res Function(_$ChapterClickedEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ChapterClickedEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -122,35 +131,38 @@ class __$$ChapterClickedEventImplCopyWithImpl<$Res>
     Object? chapterId = null,
     Object? chapterStart = null,
   }) {
-    return _then(_$ChapterClickedEventImpl(
-      elementType: null == elementType
-          ? _value.elementType
-          : elementType // ignore: cast_nullable_to_non_nullable
-              as String,
-      elementId: null == elementId
-          ? _value.elementId
-          : elementId // ignore: cast_nullable_to_non_nullable
-              as String,
-      chapterId: null == chapterId
-          ? _value.chapterId
-          : chapterId // ignore: cast_nullable_to_non_nullable
-              as String,
-      chapterStart: null == chapterStart
-          ? _value.chapterStart
-          : chapterStart // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
+    return _then(
+      _$ChapterClickedEventImpl(
+        elementType: null == elementType
+            ? _value.elementType
+            : elementType // ignore: cast_nullable_to_non_nullable
+                  as String,
+        elementId: null == elementId
+            ? _value.elementId
+            : elementId // ignore: cast_nullable_to_non_nullable
+                  as String,
+        chapterId: null == chapterId
+            ? _value.chapterId
+            : chapterId // ignore: cast_nullable_to_non_nullable
+                  as String,
+        chapterStart: null == chapterStart
+            ? _value.chapterStart
+            : chapterStart // ignore: cast_nullable_to_non_nullable
+                  as int,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$ChapterClickedEventImpl implements _ChapterClickedEvent {
-  const _$ChapterClickedEventImpl(
-      {required this.elementType,
-      required this.elementId,
-      required this.chapterId,
-      required this.chapterStart});
+  const _$ChapterClickedEventImpl({
+    required this.elementType,
+    required this.elementId,
+    required this.chapterId,
+    required this.chapterStart,
+  });
 
   factory _$ChapterClickedEventImpl.fromJson(Map<String, dynamic> json) =>
       _$$ChapterClickedEventImplFromJson(json);
@@ -196,22 +208,23 @@ class _$ChapterClickedEventImpl implements _ChapterClickedEvent {
   @pragma('vm:prefer-inline')
   _$$ChapterClickedEventImplCopyWith<_$ChapterClickedEventImpl> get copyWith =>
       __$$ChapterClickedEventImplCopyWithImpl<_$ChapterClickedEventImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ChapterClickedEventImplToJson(
-      this,
-    );
+    return _$$ChapterClickedEventImplToJson(this);
   }
 }
 
 abstract class _ChapterClickedEvent implements ChapterClickedEvent {
-  const factory _ChapterClickedEvent(
-      {required final String elementType,
-      required final String elementId,
-      required final String chapterId,
-      required final int chapterStart}) = _$ChapterClickedEventImpl;
+  const factory _ChapterClickedEvent({
+    required final String elementType,
+    required final String elementId,
+    required final String chapterId,
+    required final int chapterStart,
+  }) = _$ChapterClickedEventImpl;
 
   factory _ChapterClickedEvent.fromJson(Map<String, dynamic> json) =
       _$ChapterClickedEventImpl.fromJson;

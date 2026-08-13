@@ -12,10 +12,12 @@ part of 'notification_prompt.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 NotificationPromptDismissedEvent _$NotificationPromptDismissedEventFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _NotificationPromptDismissedEvent.fromJson(json);
 }
 
@@ -30,23 +32,28 @@ mixin _$NotificationPromptDismissedEvent {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   $NotificationPromptDismissedEventCopyWith<NotificationPromptDismissedEvent>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $NotificationPromptDismissedEventCopyWith<$Res> {
   factory $NotificationPromptDismissedEventCopyWith(
-          NotificationPromptDismissedEvent value,
-          $Res Function(NotificationPromptDismissedEvent) then) =
-      _$NotificationPromptDismissedEventCopyWithImpl<$Res,
-          NotificationPromptDismissedEvent>;
+    NotificationPromptDismissedEvent value,
+    $Res Function(NotificationPromptDismissedEvent) then,
+  ) =
+      _$NotificationPromptDismissedEventCopyWithImpl<
+        $Res,
+        NotificationPromptDismissedEvent
+      >;
   @useResult
   $Res call({int timesDismissed});
 }
 
 /// @nodoc
-class _$NotificationPromptDismissedEventCopyWithImpl<$Res,
-        $Val extends NotificationPromptDismissedEvent>
+class _$NotificationPromptDismissedEventCopyWithImpl<
+  $Res,
+  $Val extends NotificationPromptDismissedEvent
+>
     implements $NotificationPromptDismissedEventCopyWith<$Res> {
   _$NotificationPromptDismissedEventCopyWithImpl(this._value, this._then);
 
@@ -59,15 +66,16 @@ class _$NotificationPromptDismissedEventCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? timesDismissed = null,
-  }) {
-    return _then(_value.copyWith(
-      timesDismissed: null == timesDismissed
-          ? _value.timesDismissed
-          : timesDismissed // ignore: cast_nullable_to_non_nullable
-              as int,
-    ) as $Val);
+  $Res call({Object? timesDismissed = null}) {
+    return _then(
+      _value.copyWith(
+            timesDismissed: null == timesDismissed
+                ? _value.timesDismissed
+                : timesDismissed // ignore: cast_nullable_to_non_nullable
+                      as int,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -75,9 +83,9 @@ class _$NotificationPromptDismissedEventCopyWithImpl<$Res,
 abstract class _$$NotificationPromptDismissedEventImplCopyWith<$Res>
     implements $NotificationPromptDismissedEventCopyWith<$Res> {
   factory _$$NotificationPromptDismissedEventImplCopyWith(
-          _$NotificationPromptDismissedEventImpl value,
-          $Res Function(_$NotificationPromptDismissedEventImpl) then) =
-      __$$NotificationPromptDismissedEventImplCopyWithImpl<$Res>;
+    _$NotificationPromptDismissedEventImpl value,
+    $Res Function(_$NotificationPromptDismissedEventImpl) then,
+  ) = __$$NotificationPromptDismissedEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int timesDismissed});
@@ -85,27 +93,30 @@ abstract class _$$NotificationPromptDismissedEventImplCopyWith<$Res>
 
 /// @nodoc
 class __$$NotificationPromptDismissedEventImplCopyWithImpl<$Res>
-    extends _$NotificationPromptDismissedEventCopyWithImpl<$Res,
-        _$NotificationPromptDismissedEventImpl>
+    extends
+        _$NotificationPromptDismissedEventCopyWithImpl<
+          $Res,
+          _$NotificationPromptDismissedEventImpl
+        >
     implements _$$NotificationPromptDismissedEventImplCopyWith<$Res> {
   __$$NotificationPromptDismissedEventImplCopyWithImpl(
-      _$NotificationPromptDismissedEventImpl _value,
-      $Res Function(_$NotificationPromptDismissedEventImpl) _then)
-      : super(_value, _then);
+    _$NotificationPromptDismissedEventImpl _value,
+    $Res Function(_$NotificationPromptDismissedEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of NotificationPromptDismissedEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? timesDismissed = null,
-  }) {
-    return _then(_$NotificationPromptDismissedEventImpl(
-      timesDismissed: null == timesDismissed
-          ? _value.timesDismissed
-          : timesDismissed // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
+  $Res call({Object? timesDismissed = null}) {
+    return _then(
+      _$NotificationPromptDismissedEventImpl(
+        timesDismissed: null == timesDismissed
+            ? _value.timesDismissed
+            : timesDismissed // ignore: cast_nullable_to_non_nullable
+                  as int,
+      ),
+    );
   }
 }
 
@@ -116,8 +127,8 @@ class _$NotificationPromptDismissedEventImpl
   const _$NotificationPromptDismissedEventImpl({required this.timesDismissed});
 
   factory _$NotificationPromptDismissedEventImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$NotificationPromptDismissedEventImplFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$$NotificationPromptDismissedEventImplFromJson(json);
 
   @override
   final int timesDismissed;
@@ -146,27 +157,28 @@ class _$NotificationPromptDismissedEventImpl
   @override
   @pragma('vm:prefer-inline')
   _$$NotificationPromptDismissedEventImplCopyWith<
-          _$NotificationPromptDismissedEventImpl>
-      get copyWith => __$$NotificationPromptDismissedEventImplCopyWithImpl<
-          _$NotificationPromptDismissedEventImpl>(this, _$identity);
+    _$NotificationPromptDismissedEventImpl
+  >
+  get copyWith =>
+      __$$NotificationPromptDismissedEventImplCopyWithImpl<
+        _$NotificationPromptDismissedEventImpl
+      >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$NotificationPromptDismissedEventImplToJson(
-      this,
-    );
+    return _$$NotificationPromptDismissedEventImplToJson(this);
   }
 }
 
 abstract class _NotificationPromptDismissedEvent
     implements NotificationPromptDismissedEvent {
-  const factory _NotificationPromptDismissedEvent(
-          {required final int timesDismissed}) =
-      _$NotificationPromptDismissedEventImpl;
+  const factory _NotificationPromptDismissedEvent({
+    required final int timesDismissed,
+  }) = _$NotificationPromptDismissedEventImpl;
 
   factory _NotificationPromptDismissedEvent.fromJson(
-          Map<String, dynamic> json) =
-      _$NotificationPromptDismissedEventImpl.fromJson;
+    Map<String, dynamic> json,
+  ) = _$NotificationPromptDismissedEventImpl.fromJson;
 
   @override
   int get timesDismissed;
@@ -176,12 +188,14 @@ abstract class _NotificationPromptDismissedEvent
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotificationPromptDismissedEventImplCopyWith<
-          _$NotificationPromptDismissedEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
+    _$NotificationPromptDismissedEventImpl
+  >
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 NotificationPromptClickedEvent _$NotificationPromptClickedEventFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _NotificationPromptClickedEvent.fromJson(json);
 }
 
@@ -194,15 +208,20 @@ mixin _$NotificationPromptClickedEvent {
 /// @nodoc
 abstract class $NotificationPromptClickedEventCopyWith<$Res> {
   factory $NotificationPromptClickedEventCopyWith(
-          NotificationPromptClickedEvent value,
-          $Res Function(NotificationPromptClickedEvent) then) =
-      _$NotificationPromptClickedEventCopyWithImpl<$Res,
-          NotificationPromptClickedEvent>;
+    NotificationPromptClickedEvent value,
+    $Res Function(NotificationPromptClickedEvent) then,
+  ) =
+      _$NotificationPromptClickedEventCopyWithImpl<
+        $Res,
+        NotificationPromptClickedEvent
+      >;
 }
 
 /// @nodoc
-class _$NotificationPromptClickedEventCopyWithImpl<$Res,
-        $Val extends NotificationPromptClickedEvent>
+class _$NotificationPromptClickedEventCopyWithImpl<
+  $Res,
+  $Val extends NotificationPromptClickedEvent
+>
     implements $NotificationPromptClickedEventCopyWith<$Res> {
   _$NotificationPromptClickedEventCopyWithImpl(this._value, this._then);
 
@@ -218,20 +237,23 @@ class _$NotificationPromptClickedEventCopyWithImpl<$Res,
 /// @nodoc
 abstract class _$$NotificationPromptClickedEventImplCopyWith<$Res> {
   factory _$$NotificationPromptClickedEventImplCopyWith(
-          _$NotificationPromptClickedEventImpl value,
-          $Res Function(_$NotificationPromptClickedEventImpl) then) =
-      __$$NotificationPromptClickedEventImplCopyWithImpl<$Res>;
+    _$NotificationPromptClickedEventImpl value,
+    $Res Function(_$NotificationPromptClickedEventImpl) then,
+  ) = __$$NotificationPromptClickedEventImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
 class __$$NotificationPromptClickedEventImplCopyWithImpl<$Res>
-    extends _$NotificationPromptClickedEventCopyWithImpl<$Res,
-        _$NotificationPromptClickedEventImpl>
+    extends
+        _$NotificationPromptClickedEventCopyWithImpl<
+          $Res,
+          _$NotificationPromptClickedEventImpl
+        >
     implements _$$NotificationPromptClickedEventImplCopyWith<$Res> {
   __$$NotificationPromptClickedEventImplCopyWithImpl(
-      _$NotificationPromptClickedEventImpl _value,
-      $Res Function(_$NotificationPromptClickedEventImpl) _then)
-      : super(_value, _then);
+    _$NotificationPromptClickedEventImpl _value,
+    $Res Function(_$NotificationPromptClickedEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of NotificationPromptClickedEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -244,8 +266,8 @@ class _$NotificationPromptClickedEventImpl
   const _$NotificationPromptClickedEventImpl();
 
   factory _$NotificationPromptClickedEventImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$NotificationPromptClickedEventImplFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$$NotificationPromptClickedEventImplFromJson(json);
 
   @override
   String toString() {
@@ -265,9 +287,7 @@ class _$NotificationPromptClickedEventImpl
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$NotificationPromptClickedEventImplToJson(
-      this,
-    );
+    return _$$NotificationPromptClickedEventImplToJson(this);
   }
 }
 
@@ -281,7 +301,8 @@ abstract class _NotificationPromptClickedEvent
 }
 
 NotificationPromptDeniedEvent _$NotificationPromptDeniedEventFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _NotificationPromptDeniedEvent.fromJson(json);
 }
 
@@ -294,15 +315,20 @@ mixin _$NotificationPromptDeniedEvent {
 /// @nodoc
 abstract class $NotificationPromptDeniedEventCopyWith<$Res> {
   factory $NotificationPromptDeniedEventCopyWith(
-          NotificationPromptDeniedEvent value,
-          $Res Function(NotificationPromptDeniedEvent) then) =
-      _$NotificationPromptDeniedEventCopyWithImpl<$Res,
-          NotificationPromptDeniedEvent>;
+    NotificationPromptDeniedEvent value,
+    $Res Function(NotificationPromptDeniedEvent) then,
+  ) =
+      _$NotificationPromptDeniedEventCopyWithImpl<
+        $Res,
+        NotificationPromptDeniedEvent
+      >;
 }
 
 /// @nodoc
-class _$NotificationPromptDeniedEventCopyWithImpl<$Res,
-        $Val extends NotificationPromptDeniedEvent>
+class _$NotificationPromptDeniedEventCopyWithImpl<
+  $Res,
+  $Val extends NotificationPromptDeniedEvent
+>
     implements $NotificationPromptDeniedEventCopyWith<$Res> {
   _$NotificationPromptDeniedEventCopyWithImpl(this._value, this._then);
 
@@ -318,20 +344,23 @@ class _$NotificationPromptDeniedEventCopyWithImpl<$Res,
 /// @nodoc
 abstract class _$$NotificationPromptDeniedEventImplCopyWith<$Res> {
   factory _$$NotificationPromptDeniedEventImplCopyWith(
-          _$NotificationPromptDeniedEventImpl value,
-          $Res Function(_$NotificationPromptDeniedEventImpl) then) =
-      __$$NotificationPromptDeniedEventImplCopyWithImpl<$Res>;
+    _$NotificationPromptDeniedEventImpl value,
+    $Res Function(_$NotificationPromptDeniedEventImpl) then,
+  ) = __$$NotificationPromptDeniedEventImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
 class __$$NotificationPromptDeniedEventImplCopyWithImpl<$Res>
-    extends _$NotificationPromptDeniedEventCopyWithImpl<$Res,
-        _$NotificationPromptDeniedEventImpl>
+    extends
+        _$NotificationPromptDeniedEventCopyWithImpl<
+          $Res,
+          _$NotificationPromptDeniedEventImpl
+        >
     implements _$$NotificationPromptDeniedEventImplCopyWith<$Res> {
   __$$NotificationPromptDeniedEventImplCopyWithImpl(
-      _$NotificationPromptDeniedEventImpl _value,
-      $Res Function(_$NotificationPromptDeniedEventImpl) _then)
-      : super(_value, _then);
+    _$NotificationPromptDeniedEventImpl _value,
+    $Res Function(_$NotificationPromptDeniedEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of NotificationPromptDeniedEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -344,8 +373,8 @@ class _$NotificationPromptDeniedEventImpl
   const _$NotificationPromptDeniedEventImpl();
 
   factory _$NotificationPromptDeniedEventImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$NotificationPromptDeniedEventImplFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$$NotificationPromptDeniedEventImplFromJson(json);
 
   @override
   String toString() {
@@ -365,9 +394,7 @@ class _$NotificationPromptDeniedEventImpl
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$NotificationPromptDeniedEventImplToJson(
-      this,
-    );
+    return _$$NotificationPromptDeniedEventImplToJson(this);
   }
 }
 
@@ -381,7 +408,8 @@ abstract class _NotificationPromptDeniedEvent
 }
 
 NotificationPromptAcceptedEvent _$NotificationPromptAcceptedEventFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _NotificationPromptAcceptedEvent.fromJson(json);
 }
 
@@ -394,15 +422,20 @@ mixin _$NotificationPromptAcceptedEvent {
 /// @nodoc
 abstract class $NotificationPromptAcceptedEventCopyWith<$Res> {
   factory $NotificationPromptAcceptedEventCopyWith(
-          NotificationPromptAcceptedEvent value,
-          $Res Function(NotificationPromptAcceptedEvent) then) =
-      _$NotificationPromptAcceptedEventCopyWithImpl<$Res,
-          NotificationPromptAcceptedEvent>;
+    NotificationPromptAcceptedEvent value,
+    $Res Function(NotificationPromptAcceptedEvent) then,
+  ) =
+      _$NotificationPromptAcceptedEventCopyWithImpl<
+        $Res,
+        NotificationPromptAcceptedEvent
+      >;
 }
 
 /// @nodoc
-class _$NotificationPromptAcceptedEventCopyWithImpl<$Res,
-        $Val extends NotificationPromptAcceptedEvent>
+class _$NotificationPromptAcceptedEventCopyWithImpl<
+  $Res,
+  $Val extends NotificationPromptAcceptedEvent
+>
     implements $NotificationPromptAcceptedEventCopyWith<$Res> {
   _$NotificationPromptAcceptedEventCopyWithImpl(this._value, this._then);
 
@@ -418,20 +451,23 @@ class _$NotificationPromptAcceptedEventCopyWithImpl<$Res,
 /// @nodoc
 abstract class _$$NotificationPromptAcceptedEventImplCopyWith<$Res> {
   factory _$$NotificationPromptAcceptedEventImplCopyWith(
-          _$NotificationPromptAcceptedEventImpl value,
-          $Res Function(_$NotificationPromptAcceptedEventImpl) then) =
-      __$$NotificationPromptAcceptedEventImplCopyWithImpl<$Res>;
+    _$NotificationPromptAcceptedEventImpl value,
+    $Res Function(_$NotificationPromptAcceptedEventImpl) then,
+  ) = __$$NotificationPromptAcceptedEventImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
 class __$$NotificationPromptAcceptedEventImplCopyWithImpl<$Res>
-    extends _$NotificationPromptAcceptedEventCopyWithImpl<$Res,
-        _$NotificationPromptAcceptedEventImpl>
+    extends
+        _$NotificationPromptAcceptedEventCopyWithImpl<
+          $Res,
+          _$NotificationPromptAcceptedEventImpl
+        >
     implements _$$NotificationPromptAcceptedEventImplCopyWith<$Res> {
   __$$NotificationPromptAcceptedEventImplCopyWithImpl(
-      _$NotificationPromptAcceptedEventImpl _value,
-      $Res Function(_$NotificationPromptAcceptedEventImpl) _then)
-      : super(_value, _then);
+    _$NotificationPromptAcceptedEventImpl _value,
+    $Res Function(_$NotificationPromptAcceptedEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of NotificationPromptAcceptedEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -444,8 +480,8 @@ class _$NotificationPromptAcceptedEventImpl
   const _$NotificationPromptAcceptedEventImpl();
 
   factory _$NotificationPromptAcceptedEventImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$NotificationPromptAcceptedEventImplFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$$NotificationPromptAcceptedEventImplFromJson(json);
 
   @override
   String toString() {
@@ -465,9 +501,7 @@ class _$NotificationPromptAcceptedEventImpl
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$NotificationPromptAcceptedEventImplToJson(
-      this,
-    );
+    return _$$NotificationPromptAcceptedEventImplToJson(this);
   }
 }
 
@@ -481,7 +515,8 @@ abstract class _NotificationPromptAcceptedEvent
 }
 
 NotificationsSettingToggledEvent _$NotificationsSettingToggledEventFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _NotificationsSettingToggledEvent.fromJson(json);
 }
 
@@ -496,23 +531,28 @@ mixin _$NotificationsSettingToggledEvent {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   $NotificationsSettingToggledEventCopyWith<NotificationsSettingToggledEvent>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $NotificationsSettingToggledEventCopyWith<$Res> {
   factory $NotificationsSettingToggledEventCopyWith(
-          NotificationsSettingToggledEvent value,
-          $Res Function(NotificationsSettingToggledEvent) then) =
-      _$NotificationsSettingToggledEventCopyWithImpl<$Res,
-          NotificationsSettingToggledEvent>;
+    NotificationsSettingToggledEvent value,
+    $Res Function(NotificationsSettingToggledEvent) then,
+  ) =
+      _$NotificationsSettingToggledEventCopyWithImpl<
+        $Res,
+        NotificationsSettingToggledEvent
+      >;
   @useResult
   $Res call({bool enabled});
 }
 
 /// @nodoc
-class _$NotificationsSettingToggledEventCopyWithImpl<$Res,
-        $Val extends NotificationsSettingToggledEvent>
+class _$NotificationsSettingToggledEventCopyWithImpl<
+  $Res,
+  $Val extends NotificationsSettingToggledEvent
+>
     implements $NotificationsSettingToggledEventCopyWith<$Res> {
   _$NotificationsSettingToggledEventCopyWithImpl(this._value, this._then);
 
@@ -525,15 +565,16 @@ class _$NotificationsSettingToggledEventCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? enabled = null,
-  }) {
-    return _then(_value.copyWith(
-      enabled: null == enabled
-          ? _value.enabled
-          : enabled // ignore: cast_nullable_to_non_nullable
-              as bool,
-    ) as $Val);
+  $Res call({Object? enabled = null}) {
+    return _then(
+      _value.copyWith(
+            enabled: null == enabled
+                ? _value.enabled
+                : enabled // ignore: cast_nullable_to_non_nullable
+                      as bool,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -541,9 +582,9 @@ class _$NotificationsSettingToggledEventCopyWithImpl<$Res,
 abstract class _$$NotificationsSettingToggledEventImplCopyWith<$Res>
     implements $NotificationsSettingToggledEventCopyWith<$Res> {
   factory _$$NotificationsSettingToggledEventImplCopyWith(
-          _$NotificationsSettingToggledEventImpl value,
-          $Res Function(_$NotificationsSettingToggledEventImpl) then) =
-      __$$NotificationsSettingToggledEventImplCopyWithImpl<$Res>;
+    _$NotificationsSettingToggledEventImpl value,
+    $Res Function(_$NotificationsSettingToggledEventImpl) then,
+  ) = __$$NotificationsSettingToggledEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({bool enabled});
@@ -551,27 +592,30 @@ abstract class _$$NotificationsSettingToggledEventImplCopyWith<$Res>
 
 /// @nodoc
 class __$$NotificationsSettingToggledEventImplCopyWithImpl<$Res>
-    extends _$NotificationsSettingToggledEventCopyWithImpl<$Res,
-        _$NotificationsSettingToggledEventImpl>
+    extends
+        _$NotificationsSettingToggledEventCopyWithImpl<
+          $Res,
+          _$NotificationsSettingToggledEventImpl
+        >
     implements _$$NotificationsSettingToggledEventImplCopyWith<$Res> {
   __$$NotificationsSettingToggledEventImplCopyWithImpl(
-      _$NotificationsSettingToggledEventImpl _value,
-      $Res Function(_$NotificationsSettingToggledEventImpl) _then)
-      : super(_value, _then);
+    _$NotificationsSettingToggledEventImpl _value,
+    $Res Function(_$NotificationsSettingToggledEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of NotificationsSettingToggledEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? enabled = null,
-  }) {
-    return _then(_$NotificationsSettingToggledEventImpl(
-      enabled: null == enabled
-          ? _value.enabled
-          : enabled // ignore: cast_nullable_to_non_nullable
-              as bool,
-    ));
+  $Res call({Object? enabled = null}) {
+    return _then(
+      _$NotificationsSettingToggledEventImpl(
+        enabled: null == enabled
+            ? _value.enabled
+            : enabled // ignore: cast_nullable_to_non_nullable
+                  as bool,
+      ),
+    );
   }
 }
 
@@ -582,8 +626,8 @@ class _$NotificationsSettingToggledEventImpl
   const _$NotificationsSettingToggledEventImpl({required this.enabled});
 
   factory _$NotificationsSettingToggledEventImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$NotificationsSettingToggledEventImplFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$$NotificationsSettingToggledEventImplFromJson(json);
 
   @override
   final bool enabled;
@@ -611,26 +655,28 @@ class _$NotificationsSettingToggledEventImpl
   @override
   @pragma('vm:prefer-inline')
   _$$NotificationsSettingToggledEventImplCopyWith<
-          _$NotificationsSettingToggledEventImpl>
-      get copyWith => __$$NotificationsSettingToggledEventImplCopyWithImpl<
-          _$NotificationsSettingToggledEventImpl>(this, _$identity);
+    _$NotificationsSettingToggledEventImpl
+  >
+  get copyWith =>
+      __$$NotificationsSettingToggledEventImplCopyWithImpl<
+        _$NotificationsSettingToggledEventImpl
+      >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$NotificationsSettingToggledEventImplToJson(
-      this,
-    );
+    return _$$NotificationsSettingToggledEventImplToJson(this);
   }
 }
 
 abstract class _NotificationsSettingToggledEvent
     implements NotificationsSettingToggledEvent {
-  const factory _NotificationsSettingToggledEvent(
-      {required final bool enabled}) = _$NotificationsSettingToggledEventImpl;
+  const factory _NotificationsSettingToggledEvent({
+    required final bool enabled,
+  }) = _$NotificationsSettingToggledEventImpl;
 
   factory _NotificationsSettingToggledEvent.fromJson(
-          Map<String, dynamic> json) =
-      _$NotificationsSettingToggledEventImpl.fromJson;
+    Map<String, dynamic> json,
+  ) = _$NotificationsSettingToggledEventImpl.fromJson;
 
   @override
   bool get enabled;
@@ -640,6 +686,7 @@ abstract class _NotificationsSettingToggledEvent
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotificationsSettingToggledEventImplCopyWith<
-          _$NotificationsSettingToggledEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
+    _$NotificationsSettingToggledEventImpl
+  >
+  get copyWith => throw _privateConstructorUsedError;
 }
