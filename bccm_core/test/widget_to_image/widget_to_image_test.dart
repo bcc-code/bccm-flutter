@@ -1,12 +1,37 @@
-// ignore_for_file: avoid_print
-
-import 'dart:io';
 import 'dart:typed_data';
+import 'dart:ui' as ui;
 import 'package:bccm_core/src/utils/widget_to_image/widget_to_image.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter/material.dart';
+import 'package:universal_io/io.dart';
 
 import '../utils/fonts.dart';
+
+const _goldenFilePath = 'test_data/golden_files/widget_to_image.png';
+
+class _Decoded {
+  _Decoded(this.width, this.height, this.rgba);
+  final int width;
+  final int height;
+  final Uint8List rgba;
+}
+
+Future<_Decoded> _decode(Uint8List bytes) async {
+  final codec = await ui.instantiateImageCodec(bytes);
+  final frame = await codec.getNextFrame();
+  final image = frame.image;
+  final data = await image.toByteData(format: ui.ImageByteFormat.rawRgba);
+  return _Decoded(image.width, image.height, data!.buffer.asUint8List());
+}
+
+/// Share of channel samples differing by more than [tolerance].
+double _fractionDiffering(Uint8List a, Uint8List b, {int tolerance = 8}) {
+  var differing = 0;
+  for (var i = 0; i < a.length; i++) {
+    if ((a[i] - b[i]).abs() > tolerance) differing++;
+  }
+  return differing / a.length;
+}
 
 void main() {
   testWidgets('createImageFromWidget should match golden file', (WidgetTester tester) async {
@@ -44,26 +69,30 @@ void main() {
         logicalSize: const Size(400, 300),
       );
 
-      // Path to the golden file
-      const goldenFilePath = 'test_data/golden_files/widget_to_image.png';
-      final goldenFile = File(goldenFilePath);
+      expect(imageBytes, isNotNull);
 
-      // Check if the golden file exists, if not create it
+      final goldenFile = File(_goldenFilePath);
       if (!goldenFile.existsSync()) {
-        print('Golden file does not exist. Creating one at $goldenFilePath');
         await goldenFile.create(recursive: true);
         await goldenFile.writeAsBytes(imageBytes!);
-        print('Golden image generated at $goldenFilePath. Please re-run the test.');
-        return;
+        fail('Golden file did not exist. Wrote one to $_goldenFilePath — re-run the test.');
       }
 
-      // Save the generated image to a file (for debugging purposes)
-      final generatedImageFile = File('test_data/golden_files/widget_to_image_generated.png');
-      await generatedImageFile.writeAsBytes(imageBytes!);
+      // Compare decoded pixels, not encoded bytes: the PNG encoding shifts by a
+      // few bytes across Flutter/Skia versions while every pixel stays the same,
+      // which made this test fail for reasons unrelated to createImageFromWidget.
+      // The tolerance absorbs antialiasing drift but still catches real changes.
+      final actual = await _decode(imageBytes!);
+      final expected = await _decode(await goldenFile.readAsBytes());
 
-      // Compare the generated image with the golden file
-      expect(await generatedImageFile.readAsBytes(), await goldenFile.readAsBytes());
-      generatedImageFile.deleteSync();
+      expect(actual.width, expected.width, reason: 'rendered width changed');
+      expect(actual.height, expected.height, reason: 'rendered height changed');
+      expect(
+        _fractionDiffering(actual.rgba, expected.rgba),
+        lessThan(0.005),
+        reason: 'rendered image differs from the golden by more than antialiasing noise. '
+            'If this change is intended, delete $_goldenFilePath and re-run to regenerate it.',
+      );
     });
   });
 }

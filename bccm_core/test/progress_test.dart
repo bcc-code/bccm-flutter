@@ -15,13 +15,19 @@ void main() {
     debugPrint('Update progress for section took: ${stopwatch.elapsedMilliseconds}ms');
 
     final itemSection = section as Fragment$ItemSection;
+    // updateProgressForItemsInSection matches on the *episode* id, not the
+    // wrapping section-item id, so assert against the same thing it keys on.
+    var sawTarget = false;
     for (final item in itemSection.items.items) {
-      if (item.id == targetId) {
-        expect(item.item.asOrNull<Fragment$ItemSectionItem$item$$Episode>()?.progress, targetProgress);
+      final episode = item.item.asOrNull<Fragment$ItemSectionItem$item$$Episode>();
+      if (episode?.id == targetId) {
+        sawTarget = true;
+        expect(episode?.progress, targetProgress);
       } else {
-        expect(item.item.asOrNull<Fragment$ItemSectionItem$item$$Episode>()?.progress, isNot(targetProgress));
+        expect(episode?.progress, isNot(targetProgress));
       }
     }
+    expect(sawTarget, isTrue, reason: 'fixture must contain the target episode for this test to mean anything');
   });
 }
 

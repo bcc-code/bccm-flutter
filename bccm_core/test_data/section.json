@@ -33,7 +33,37 @@
             },
             "__typename": "Season"
           },
-          "__typename": "Episode"
+          "__typename": "Episode",
+          "contributors": [],
+          "description": "Episode description 1"
+        },
+        "__typename": "SectionItem",
+        "description": "Look back over an unforgettable summer camp with excerpts of the theme evening about \"The Spirit of Expectation\", from the revival meeting and from a message from Aksel J. Smith about waking up to seriousness in the short time we have to live. "
+      },
+      {
+        "id": "6410",
+        "title": "Are you awake? Are you ready?",
+        "image": "",
+        "item": {
+          "id": "6410",
+          "title": "Second episode",
+          "duration": 386,
+          "locked": false,
+          "progress": 3,
+          "image": "",
+          "publishDate": "2022-02-10T21:49:00Z",
+          "number": null,
+          "season": {
+            "number": 2,
+            "show": {
+              "title": "Keep your power in everyday life",
+              "__typename": "Show"
+            },
+            "__typename": "Season"
+          },
+          "__typename": "Episode",
+          "contributors": [],
+          "description": "Episode description 2"
         },
         "__typename": "SectionItem",
         "description": "Look back over an unforgettable summer camp with excerpts of the theme evening about \"The Spirit of Expectation\", from the revival meeting and from a message from Aksel J. Smith about waking up to seriousness in the short time we have to live. "

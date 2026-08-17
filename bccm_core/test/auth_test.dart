@@ -10,6 +10,7 @@
 import 'dart:convert';
 
 import 'package:bccm_core/bccm_core.dart';
+import 'package:bccm_core/platform.dart';
 import 'package:bccm_core/src/features/auth/implementations/auth_state_notifier_mobile.dart';
 import 'package:bccm_core/src/utils/constants.dart';
 import 'package:flutter_appauth/flutter_appauth.dart';
@@ -47,14 +48,31 @@ TokenResponse mockTokenResponse({required DateTime expiresAt}) {
   );
 }
 
-class MockRef extends Mock implements Ref {}
+class MockRef extends Mock implements Ref {
+  /// AuthStateNotifierMobile logs secure-storage diagnostics through
+  /// `ref.read(analyticsProvider)`. Mock's noSuchMethod would hand back null
+  /// for that non-nullable Analytics, so serve the same no-op instance the
+  /// un-overridden provider does. (A `when(...)` stub can't work here: setting
+  /// one up calls read() itself and trips over the null before it registers.)
+  @override
+  T read<T>(ProviderListenable<T> provider) {
+    if (identical(provider, analyticsProvider)) return Analytics() as T;
+    throw UnimplementedError('MockRef.read got an unstubbed provider: $provider');
+  }
+}
 
 void main() {
   group('Mobile authentication (AuthStateNotifierMobile)', () {
     test('Dont refresh when not old', () async {
       basicInit();
       final secureStorage = MockFlutterSecureStorage();
-      when(secureStorage.read(key: SecureStorageKeys.refreshToken)).thenAnswer((_) async => 'refresh token');
+      // Production reads with iOptions/aOptions; mockito matches named args
+      // exactly, so the stub has to accept them or it silently never fires.
+      when(secureStorage.read(
+        key: SecureStorageKeys.refreshToken,
+        iOptions: anyNamed('iOptions'),
+        aOptions: anyNamed('aOptions'),
+      )).thenAnswer((_) async => 'refresh token');
 
       final mockAppAuth = MockFlutterAppAuth();
       final mockRef = MockRef();
@@ -83,7 +101,13 @@ void main() {
     test('Refresh when old', () async {
       basicInit();
       final secureStorage = MockFlutterSecureStorage();
-      when(secureStorage.read(key: SecureStorageKeys.refreshToken)).thenAnswer((_) async => 'refresh token');
+      // Production reads with iOptions/aOptions; mockito matches named args
+      // exactly, so the stub has to accept them or it silently never fires.
+      when(secureStorage.read(
+        key: SecureStorageKeys.refreshToken,
+        iOptions: anyNamed('iOptions'),
+        aOptions: anyNamed('aOptions'),
+      )).thenAnswer((_) async => 'refresh token');
 
       final mockAppAuth = MockFlutterAppAuth();
       when(mockAppAuth.token(any)).thenAnswer((_) async => mockTokenResponse(expiresAt: DateTime.now().add(const Duration(days: 1))));

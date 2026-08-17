@@ -52,14 +52,36 @@ Uri? getImageUri(String image, {int? width, int? height, ImageCropMode cropMode 
       queryParameters: newQueryParams);
 }
 
-Widget simpleFadeInImage({required String url, Duration? duration}) => LayoutBuilder(
+/// A network image that fades in, sized to the box it is given.
+///
+/// The target height drives two separate things:
+///  - [getImageUri], so the CDN serves an appropriately sized asset instead of
+///    the full-resolution original. Without this a 48px-tall thumbnail
+///    downloads the same bytes as a full-screen hero image.
+///  - `cacheHeight`, so the decoded bitmap doesn't blow up the image cache.
+///
+/// Falls back to the untouched [url] when the box height is unbounded or
+/// collapsed (nothing sane to size by), or when [url] can't be parsed.
+Widget simpleFadeInImage({
+  required String url,
+  Duration? duration,
+  ImageCropMode cropMode = ImageCropMode.faces,
+}) =>
+    LayoutBuilder(
       builder: (context, constraints) {
+        final maxHeight = constraints.maxHeight;
+        final scaledHeight =
+            maxHeight.isFinite ? (maxHeight * MediaQuery.devicePixelRatioOf(context)).round() : 0;
+        final targetHeight = scaledHeight > 0 ? scaledHeight : null;
+        final resolvedUrl = targetHeight != null
+            ? getImageUri(url, height: targetHeight, cropMode: cropMode)?.toString() ?? url
+            : url;
         return FadeInImage(
           fit: BoxFit.cover,
           placeholder: MemoryImage(kTransparentImage),
           image: networkImageWithRetryAndResize(
-            imageUrl: url,
-            cacheHeight: (constraints.maxHeight * MediaQuery.devicePixelRatioOf(context)).round(),
+            imageUrl: resolvedUrl,
+            cacheHeight: targetHeight,
           ),
           imageErrorBuilder: imageErrorBuilder,
           fadeInDuration: duration ?? const Duration(milliseconds: 400),
