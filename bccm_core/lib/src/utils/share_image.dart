@@ -13,7 +13,7 @@ Future<void> downloadAndShareImage(String url, {required Rect sharePositionOrigi
     throw Exception('shareImageFromUrl: Invalid mime type: ${response.headers[HttpHeaders.contentTypeHeader]}');
   }
   final file = XFile.fromData(response.bodyBytes, mimeType: response.headers[HttpHeaders.contentTypeHeader]);
-  Share.shareXFiles([file], sharePositionOrigin: sharePositionOrigin);
+  SharePlus.instance.share(ShareParams(files: [file], sharePositionOrigin: sharePositionOrigin));
 }
 
 Future<Response> downloadImage(String url) async {
