@@ -19,8 +19,7 @@ class CustomHapticFeedback {
       return Future.value(_overrideCache);
     }
     if (Platform.isAndroid) {
-      final hasVibrator = await Vibration.hasVibrator();
-      return _overrideCache = hasVibrator ?? false;
+      return _overrideCache = await Vibration.hasVibrator();
     }
     return _overrideCache = false;
   }
