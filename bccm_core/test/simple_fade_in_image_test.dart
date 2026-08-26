@@ -103,4 +103,25 @@ void main() {
     expect(uri.queryParameters['v'], '2');
     expect(uri.queryParameters['h'], '240');
   });
+
+  testWidgets('replaces sizing the source url already asked for', (tester) async {
+    await _pump(tester, SizedBox(height: 48, child: simpleFadeInImage(url: '$_url?w=100')));
+
+    // Asking for both dimensions makes fit=crop reshape the image to 100x240
+    // rather than resize it, and BoxFit.cover then crops that again.
+    final uri = Uri.parse(_requestedUrl(tester));
+    expect(uri.queryParameters.containsKey('w'), isFalse);
+    expect(uri.queryParameters['h'], '240');
+  });
+
+  test('a width request replaces a height the source url already asked for', () {
+    final uri = getImageUri('$_url?h=100&fit=crop&crop=center', width: 200);
+
+    expect(uri?.queryParameters.containsKey('h'), isFalse);
+    expect(uri?.queryParameters['w'], '240');
+  });
+
+  test('does not leave an empty fragment on the url', () {
+    expect(getImageUri(_url, height: 100).toString(), isNot(contains('#')));
+  });
 }

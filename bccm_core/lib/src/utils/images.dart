@@ -35,7 +35,13 @@ Uri? getImageUri(String image, {int? width, int? height, ImageCropMode cropMode 
     targetHeight = imageHeights.firstWhere((h) => h >= height, orElse: () => imageHeights.last);
   }
 
-  var newQueryParams = Uri.splitQueryString(originalUri.query);
+  // Drop the sizing the caller of the API already put on the url. Keeping it means asking for
+  // both dimensions at once, and `fit=crop` then reshapes the image instead of just resizing it.
+  var newQueryParams = Uri.splitQueryString(originalUri.query)
+    ..remove('w')
+    ..remove('h')
+    ..remove('fit')
+    ..remove('crop');
   if (targetWidth != null) newQueryParams['w'] = targetWidth.toString();
   if (targetHeight != null) newQueryParams['h'] = targetHeight.toString();
   newQueryParams['fit'] = 'crop';
@@ -44,7 +50,7 @@ Uri? getImageUri(String image, {int? width, int? height, ImageCropMode cropMode 
   if (cropModeString != null) newQueryParams['crop'] = cropModeString;
 
   return Uri(
-      fragment: originalUri.fragment,
+      fragment: originalUri.hasFragment ? originalUri.fragment : null,
       host: originalUri.host,
       path: originalUri.path,
       port: originalUri.port,
