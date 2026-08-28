@@ -20,10 +20,31 @@ AndroidOptions _getAndroidSecureStorageOptions() => const AndroidOptions(
       sharedPreferencesName: 'auth',
     );
 
+/// Deliberately *not* `synchronizable`.
+///
+/// flutter_secure_storage's iOS read ignores these options entirely: it always
+/// looks for the non-synchronizable keychain item first and only falls back to
+/// the iCloud one. Write and delete, on the other hand, pin whatever is set
+/// here. So with `synchronizable: true`, any device that still held a
+/// non-synchronizable item — every device whose tokens were last written by the
+/// legacy storage that was removed in April 2025 — read that stale copy on every
+/// launch: writes landed on the iCloud item, and delete could never reach the
+/// stale one. Those users had to log in again every single launch.
 IOSOptions _getIOSSecureStorageOptions() => const IOSOptions(
       accessibility: KeychainAccessibility.first_unlock_this_device, // https://github.com/juliansteenbakker/flutter_secure_storage/issues/743
-      synchronizable: true,
     );
+
+/// Every keychain variant this app has written credentials under.
+///
+/// Deletes only. `synchronizable` and `accessibility` are part of the delete
+/// query, so a delete that doesn't match the stored item silently leaves it
+/// behind — and because reads prefer the non-synchronizable item, whatever is
+/// left behind resurfaces on the next launch instead of the fresh credentials.
+const _iosCredentialVariants = [
+  IOSOptions(accessibility: KeychainAccessibility.first_unlock_this_device),
+  IOSOptions(accessibility: KeychainAccessibility.first_unlock_this_device, synchronizable: true),
+  IOSOptions(), // the pre-April-2025 legacy storage used the plugin defaults
+];
 
 // Careful. The function naming here is very important,
 // but because it's conditionally imported (see auth_state_notifier_interface.dart)
@@ -41,6 +62,27 @@ AuthStateNotifier getPlatformSpecificAuthStateNotifier(AuthConfig config, Ref re
 }
 
 const kMinimumCredentialsTTL = Duration(hours: 1);
+
+/// Past this, stored credentials can't be revived: no refresh token outlives it,
+/// so a renewal that fails against credentials this old is not a temporary
+/// problem and they may be thrown away. Seen in the wild: a keychain item from
+/// 2024 that the app could read but never overwrite, leaving the user with a
+/// permanently dead token and no way back except a fresh login every launch.
+const kUnrecoverableCredentialsAge = Duration(days: 180);
+
+/// Why a renewal ended the way it did. The distinction matters because only a
+/// definitive rejection may clear credentials: on a transient failure the stored
+/// refresh token is still the user's way back in.
+enum _RefreshResult {
+  /// Renewed, or someone else renewed while we waited.
+  success,
+
+  /// Auth0 will not accept this refresh token again. A login is required.
+  rejected,
+
+  /// Network, timeout, or anything else worth retrying later.
+  failed,
+}
 
 class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthStateNotifier {
   AuthStateNotifierMobile({
@@ -64,6 +106,10 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
   final Auth0Api _auth0Api;
   final Ref ref;
 
+  Future<_RefreshResult>? _refreshInFlight;
+
+  /// The timeout is on acquiring the lock, not on the work itself, so a slow
+  /// token request won't trip it.
   Future<T> _syncAppAuth<T>(Future<T> Function() call) {
     return appAuthLock.synchronized(
       () => call(),
@@ -73,13 +119,19 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
 
   @override
   Future<AuthState?> getExistingAndEnsureNotExpired() async {
-    if (state.expiresAt == null || state.auth0AccessToken == null) {
+    final expiresAt = state.expiresAt;
+    if (expiresAt == null || state.auth0AccessToken == null) {
       debugPrint('auth: Either auth0AccessToken or expiresAt is null');
       return null;
     }
-    if (state.expiresAt!.difference(DateTime.now().toUtc()) < kMinimumCredentialsTTL) {
+    if (expiresAt.difference(DateTime.now().toUtc()) < kMinimumCredentialsTTL) {
       debugPrint('auth: Auth state is close to expiry. Trying to renew.');
-      await _refresh();
+      final result = await _refresh();
+      if (_shouldSignOut(result, expiresAt)) {
+        debugPrint('auth: Refresh token is not usable anymore. Signing out.');
+        await logout(manual: false);
+        return null;
+      }
     }
 
     // Only give up if the token is genuinely unusable. Being inside the renewal window is not
@@ -95,11 +147,26 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
               'diff': state.expiresAt?.difference(DateTime.now().toUtc()).toString(),
             },
           ));
-      debugPrint('auth: Auth state is still expired after attempting to renew.');
-      await logout();
+      // Deliberately no logout: the renewal failed for a reason we expect to go
+      // away (Auth0 rejections are handled above). Requests go out unauthorized
+      // until the next attempt succeeds, which beats destroying a refresh token
+      // that still works the moment the network comes back.
+      debugPrint('auth: Auth state is still expired after attempting to renew. Keeping credentials for a later retry.');
       return null;
     }
     return state;
+  }
+
+  /// Whether a failed renewal means the user is signed out for good.
+  bool _shouldSignOut(_RefreshResult result, DateTime? expiresAt) {
+    switch (result) {
+      case _RefreshResult.success:
+        return false;
+      case _RefreshResult.rejected:
+        return true;
+      case _RefreshResult.failed:
+        return expiresAt != null && DateTime.now().toUtc().difference(expiresAt) > kUnrecoverableCredentialsAge;
+    }
   }
 
   @override
@@ -130,10 +197,18 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
 
     final userProfile = UserProfile.fromJson(jsonDecode(userProfileRaw));
 
-    DateTime? expiry = _getAccessTokenExpiry(accessToken);
+    final DateTime expiry = _getAccessTokenExpiry(accessToken);
     if (expiry.difference(DateTime.now().toUtc()) < kMinimumCredentialsTTL) {
-      debugPrint('auth: Access token is expired. Trying to renew.');
-      if (await _refresh()) return;
+      debugPrint('auth: Access token is expired. Trying to renew. $expiry');
+      final result = await _refresh();
+      if (result == _RefreshResult.success) return;
+      if (_shouldSignOut(result, expiry)) {
+        debugPrint('auth: Stored credentials are not usable anymore. Signing out.');
+        await logout(manual: false);
+        return;
+      }
+      // Otherwise keep what we have: the renewal may just have hit a flaky
+      // network, and the token can still have enough life left to be useful.
     }
     state = state.copyWith(
       user: userProfile,
@@ -146,73 +221,128 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
   }
 
   @override
-  Future<bool> forceRefresh() {
-    return _refresh();
+  Future<bool> forceRefresh() async {
+    return (await _refresh()) == _RefreshResult.success;
   }
 
-  Future<bool> _refresh() async {
-    final refreshToken = await _readFromSecureStorage(key: SecureStorageKeys.refreshToken);
+  /// Renews the access token, joining an already running renewal instead of
+  /// starting a second one.
+  ///
+  /// Auth0 rotates refresh tokens and a rotated token can only be exchanged
+  /// once. Every GraphQL request goes through [getExistingAndEnsureNotExpired],
+  /// so several callers entering the renewal window at the same time is the
+  /// normal case rather than an edge case — and if they each exchanged the token
+  /// they read, every request after the first would look like a replay to Auth0,
+  /// which then revokes the whole grant family and signs the user out for good.
+  Future<_RefreshResult> _refresh() {
+    return _refreshInFlight ??= _exchangeRefreshToken().whenComplete(() => _refreshInFlight = null);
+  }
 
-    if (refreshToken == null) {
-      debugPrint('auth: Refresh token is null');
-      return false;
-    }
-
+  Future<_RefreshResult> _exchangeRefreshToken() async {
     final PackageInfo info = await PackageInfo.fromPlatform();
     try {
-      // Both steps below swallow their errors so that a failed renewal doesn't take down the
-      // caller, but the failure still has to be reported back: callers use the return value to
-      // decide whether the existing (stored) credentials should be kept.
-      var failed = false;
+      return await _syncAppAuth(() async {
+        // Read inside the lock: an exchange (or a login) that finished while we
+        // were queued has already rotated the stored token, which makes the one
+        // we would have read before queueing a replay.
+        final refreshToken = await _readFromSecureStorage(key: SecureStorageKeys.refreshToken);
+        if (refreshToken == null) {
+          // Null means either "the item is gone" or "the keychain refused us",
+          // because reads swallow their errors. Only the first one means the user
+          // has to log in again; clearing credentials over a storage hiccup can't
+          // be undone.
+          final absent = await _refreshTokenIsAbsent();
+          debugPrint('auth: Refresh token is null. absent: $absent');
+          return absent ? _RefreshResult.rejected : _RefreshResult.failed;
+        }
+        if (_hasUsableAccessToken()) {
+          debugPrint('auth: Token was renewed while waiting. Skipping.');
+          return _RefreshResult.success;
+        }
 
-      final TokenResponse result = await _syncAppAuth(
-        () => _appAuth.token(
-          TokenRequest(
-            config.auth0ClientId,
-            '${info.packageName}://login-callback',
-            issuer: 'https://${config.auth0Domain}',
-            refreshToken: refreshToken,
-            additionalParameters: {'audience': config.auth0Audience, 'custom_scope': config.scopes.join(' ')},
-          ),
-        ),
-      ).catchError((e) {
-        failed = true;
-        ref.read(analyticsProvider).log(LogEvent(
-              name: 'refresh request for access token failed',
-              message: e.toString(),
-            ));
-        return TokenResponse(null, null, null, null, null, null, null);
-      });
-      if (failed) return false;
+        final TokenResponse result;
+        try {
+          result = await _appAuth.token(
+            TokenRequest(
+              config.auth0ClientId,
+              '${info.packageName}://login-callback',
+              issuer: 'https://${config.auth0Domain}',
+              refreshToken: refreshToken,
+              additionalParameters: {'audience': config.auth0Audience, 'custom_scope': config.scopes.join(' ')},
+            ),
+          );
+        } on FlutterAppAuthPlatformException catch (e) {
+          final details = e.platformErrorDetails;
+          // invalid_grant is Auth0 saying this refresh token is gone for good:
+          // expired, revoked, or already rotated. Anything else (no network,
+          // captive portal, 5xx, rate limit) is worth another attempt later.
+          final rejected = details.error == FlutterAppAuthOAuthError.invalidGrant;
+          debugPrint('auth: Refresh request failed. error: ${details.error}, rejected: $rejected');
+          ref.read(analyticsProvider).log(LogEvent(
+                name: 'refresh request for access token failed',
+                message: e.toString(),
+                meta: {
+                  'oauthError': details.error,
+                  'errorDescription': details.errorDescription,
+                  'code': details.code,
+                  'type': details.type,
+                  'rejected': rejected,
+                },
+              ));
+          return rejected ? _RefreshResult.rejected : _RefreshResult.failed;
+        }
 
-      await _setStateBasedOnResponse(result).catchError((e) {
-        failed = true;
-        ref.read(analyticsProvider).log(LogEvent(
-              name: 'failed to set auth state based on refresh request response',
-              message: e.toString(),
-            ));
+        try {
+          await _setStateBasedOnResponse(result);
+        } catch (e, st) {
+          FlutterError.reportError(FlutterErrorDetails(
+            exception: e,
+            stack: st,
+            library: 'bccm_core',
+            context: ErrorDescription('while applying a refreshed access token'),
+          ));
+          ref.read(analyticsProvider).log(LogEvent(
+                name: 'failed to set auth state based on refresh request response',
+                message: e.toString(),
+              ));
+          return _RefreshResult.failed;
+        }
+        return _RefreshResult.success;
       });
-      if (failed) return false;
-    } catch (e, s) {
+    } catch (e, st) {
+      // Includes the lock timeout, which only means an interactive login is
+      // holding it. Never clear credentials here: an unrecognized failure is not
+      // evidence that the refresh token is dead.
       FlutterError.reportError(FlutterErrorDetails(
         exception: e,
-        stack: s,
+        stack: st,
         library: 'bccm_core',
         context: ErrorDescription('while attempting to refresh access token'),
       ));
-      debugPrint('error on Refresh Token: $e - stack: $s');
-      if (kDebugMode) {
-        print('bccm: auth refresh token: $refreshToken');
-      }
-
-      if (ref.read(isOfflineProvider) != true) {
-        await _clearCredentials();
-      }
-
-      // logOut() possibly
-      return false;
+      ref.read(analyticsProvider).log(LogEvent(
+            name: 'refresh request for access token failed',
+            message: e.toString(),
+          ));
+      return _RefreshResult.failed;
     }
-    return true;
+  }
+
+  /// Whether the refresh token is really gone, as opposed to unreadable. Errs
+  /// towards "still there": that only costs a retry, the other way costs a login.
+  Future<bool> _refreshTokenIsAbsent() {
+    return _secureStorage
+        .containsKey(
+          key: SecureStorageKeys.refreshToken,
+          iOptions: _getIOSSecureStorageOptions(),
+          aOptions: _getAndroidSecureStorageOptions(),
+        )
+        .then((exists) => !exists)
+        .catchError((_) => false);
+  }
+
+  bool _hasUsableAccessToken() {
+    final expiresAt = state.expiresAt;
+    return state.auth0AccessToken != null && expiresAt != null && expiresAt.difference(DateTime.now().toUtc()) >= kMinimumCredentialsTTL;
   }
 
   Future _clearCredentials() async {
@@ -378,6 +508,15 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
           ),
       ]);
     } catch (e, st) {
+      // Reported, not swallowed: the session still works in memory, but nothing
+      // was persisted, so the user is silently facing a fresh login on the next
+      // launch. That silence is what made this hard to track down before.
+      FlutterError.reportError(FlutterErrorDetails(
+        exception: e,
+        stack: st,
+        library: 'bccm_core',
+        context: ErrorDescription('while writing credentials to secure storage'),
+      ));
       ref.read(analyticsProvider).log(LogEvent(
             name: 'writing credentials to storage failed',
             message: e.toString(),
@@ -396,6 +535,8 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
 
   Future<String?> _readFromSecureStorage({required String key}) async {
     final callId = generateId();
+
+    debugPrint('read from secure storage: $key');
 
     await checkIfSecureStorageIsAvailableAndHasKey('_secureStorage', _secureStorage, key, callId);
     var result = await _secureStorage
@@ -422,6 +563,7 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
   }
 
   Future<void> _writeToSecureStorage({required String key, required String value}) async {
+    debugPrint('writing $key to secure storage');
     await _secureStorage.write(
       key: key,
       value: value,
@@ -430,12 +572,18 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
     );
   }
 
+  /// Deletes the key under every variant it may have been written with, see
+  /// [_iosCredentialVariants].
   Future<void> _deleteFromSecureStorage({required String key}) async {
-    await _secureStorage.delete(
-      key: key,
-      iOptions: _getIOSSecureStorageOptions(),
-      aOptions: _getAndroidSecureStorageOptions(),
-    );
+    debugPrint('delete from secure storage: $key');
+    final variants = defaultTargetPlatform == TargetPlatform.iOS ? _iosCredentialVariants : [_getIOSSecureStorageOptions()];
+    for (final iOptions in variants) {
+      await _secureStorage.delete(
+        key: key,
+        iOptions: iOptions,
+        aOptions: _getAndroidSecureStorageOptions(),
+      );
+    }
   }
 
   Future<void> checkIfSecureStorageIsAvailableAndHasKey(String storageName, FlutterSecureStorage storage, String key, String uid) async {
