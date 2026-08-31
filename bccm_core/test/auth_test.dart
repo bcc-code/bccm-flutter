@@ -12,6 +12,7 @@ import 'dart:convert';
 import 'package:bccm_core/bccm_core.dart';
 import 'package:bccm_core/platform.dart';
 import 'package:bccm_core/src/features/auth/implementations/auth_state_notifier_mobile.dart';
+import 'package:bccm_core/src/models/user_profile.dart';
 import 'package:bccm_core/src/utils/constants.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_appauth/flutter_appauth.dart';
@@ -74,7 +75,12 @@ MockFlutterSecureStorage storageWithRefreshToken() {
   return secureStorage;
 }
 
-AuthStateNotifierMobile notifier({required FlutterAppAuth appAuth, required FlutterSecureStorage secureStorage}) {
+AuthStateNotifierMobile notifier({
+  required FlutterAppAuth appAuth,
+  required FlutterSecureStorage secureStorage,
+  VoidCallback? onSignIn,
+  VoidCallback? onSignout,
+}) {
   return AuthStateNotifierMobile(
     appAuth: appAuth,
     secureStorage: secureStorage,
@@ -84,6 +90,8 @@ AuthStateNotifierMobile notifier({required FlutterAppAuth appAuth, required Flut
       auth0Domain: 'domain',
       scopes: ['scope'],
       isTv: false,
+      onSignIn: onSignIn,
+      onSignout: onSignout,
     ),
     ref: MockRef(),
   );
@@ -93,6 +101,39 @@ FlutterAppAuthPlatformException appAuthError(String error) => FlutterAppAuthPlat
       code: 'token_request_failed',
       platformErrorDetails: FlutterAppAuthPlatformErrorDetails(error: error),
     );
+
+AuthorizationTokenResponse mockAuthorizationResponse({required DateTime expiresAt}) {
+  final token = mockTokenResponse(expiresAt: expiresAt);
+  return AuthorizationTokenResponse(
+    token.accessToken,
+    token.refreshToken,
+    token.accessTokenExpirationDateTime,
+    token.idToken,
+    token.tokenType,
+    token.scopes,
+    null,
+    null,
+  );
+}
+
+/// Storage holding a complete, valid session, as it looks on a normal launch.
+MockFlutterSecureStorage storageWithSession({String? accessToken, String? userProfile}) {
+  final secureStorage = MockFlutterSecureStorage();
+  final stored = {
+    SecureStorageKeys.accessToken: accessToken ?? mockTokenResponse(expiresAt: DateTime.now().add(const Duration(days: 1))).accessToken,
+    SecureStorageKeys.idToken: fakeIdTokenJwt,
+    SecureStorageKeys.userProfile: userProfile ?? jsonEncode(UserProfile.mergeWithIdToken(fakeIdToken, null).toJson()),
+    SecureStorageKeys.refreshToken: 'refresh token',
+  };
+  for (final entry in stored.entries) {
+    when(secureStorage.read(
+      key: entry.key,
+      iOptions: anyNamed('iOptions'),
+      aOptions: anyNamed('aOptions'),
+    )).thenAnswer((_) async => entry.value);
+  }
+  return secureStorage;
+}
 
 /// The one keychain variant credentials may be read and written under:
 /// device-local, available after first unlock, and *not* synchronizable.
@@ -324,6 +365,145 @@ void main() {
       expect(auth.state.auth0AccessToken, isNull, reason: 'there is nothing left to renew with');
     });
 
+  });
+
+  /// [AuthStateNotifierMobile.login]'s return value is what callers navigate on
+  /// (see onboarding.dart), so "did it work" has to be the truth and not just
+  /// "did we reach the end of the method".
+  group('Login', () {
+    test('A successful login reports success and signs the user in', () async {
+      basicInit();
+      final mockAppAuth = MockFlutterAppAuth();
+      when(mockAppAuth.authorizeAndExchangeCode(any))
+          .thenAnswer((_) async => mockAuthorizationResponse(expiresAt: DateTime.now().add(const Duration(days: 1))));
+
+      var signedIn = 0;
+      final auth = notifier(appAuth: mockAppAuth, secureStorage: MockFlutterSecureStorage(), onSignIn: () => signedIn++);
+
+      expect(await auth.login(), isTrue);
+      expect(auth.state.auth0AccessToken, isNotNull);
+      expect(auth.state.signedOutManually, isFalse);
+      expect(signedIn, 1);
+    });
+
+    test('A login the user cancels reports failure', () async {
+      basicInit();
+      final mockAppAuth = MockFlutterAppAuth();
+      when(mockAppAuth.authorizeAndExchangeCode(any)).thenThrow(FlutterAppAuthUserCancelledException(
+        code: 'cancelled',
+        platformErrorDetails: FlutterAppAuthPlatformErrorDetails(error: 'user_cancelled'),
+      ));
+
+      var signedIn = 0;
+      final auth = notifier(appAuth: mockAppAuth, secureStorage: MockFlutterSecureStorage(), onSignIn: () => signedIn++);
+
+      // Callers replace the whole route stack on `true`, so reporting success
+      // here dropped the user into the app shell while signed out.
+      expect(await auth.login(), isFalse);
+      expect(auth.state.auth0AccessToken, isNull);
+      expect(signedIn, 0, reason: 'nobody signed in');
+    });
+
+    test('A login that fails on the platform reports failure', () async {
+      basicInit();
+      final mockAppAuth = MockFlutterAppAuth();
+      when(mockAppAuth.authorizeAndExchangeCode(any)).thenThrow(appAuthError('access_denied'));
+
+      var signedIn = 0;
+      final auth = notifier(appAuth: mockAppAuth, secureStorage: MockFlutterSecureStorage(), onSignIn: () => signedIn++);
+
+      expect(await auth.login(), isFalse);
+      expect(auth.state.auth0AccessToken, isNull);
+      expect(signedIn, 0);
+    });
+
+    test('A login answered with unusable tokens reports failure', () async {
+      basicInit();
+      final mockAppAuth = MockFlutterAppAuth();
+      // Auth0 answered, but there is nothing here to build a session from.
+      when(mockAppAuth.authorizeAndExchangeCode(any))
+          .thenAnswer((_) async => AuthorizationTokenResponse(null, null, null, null, null, null, null, null));
+
+      var signedIn = 0;
+      final auth = notifier(appAuth: mockAppAuth, secureStorage: MockFlutterSecureStorage(), onSignIn: () => signedIn++);
+
+      expect(await auth.login(), isFalse);
+      expect(auth.state.auth0AccessToken, isNull);
+      expect(signedIn, 0);
+    });
+  });
+
+  /// [AuthStateNotifierMobile.initialize] runs on every launch and the init
+  /// screen renders a blocking error screen if it throws, so it must not.
+  group('Initialize', () {
+    test('A stored session is restored', () async {
+      basicInit();
+      final auth = notifier(appAuth: MockFlutterAppAuth(), secureStorage: storageWithSession());
+
+      await auth.initialize();
+
+      expect(auth.state.auth0AccessToken, isNotNull);
+      expect(auth.state.user?.id, fakeIdToken.sub);
+    });
+
+    test('Nothing stored leaves the user signed out, without clearing anything', () async {
+      basicInit();
+      final secureStorage = MockFlutterSecureStorage();
+      when(secureStorage.read(key: anyNamed('key'), iOptions: anyNamed('iOptions'), aOptions: anyNamed('aOptions')))
+          .thenAnswer((_) async => null);
+
+      final auth = notifier(appAuth: MockFlutterAppAuth(), secureStorage: secureStorage);
+
+      await auth.initialize();
+
+      expect(auth.state.auth0AccessToken, isNull);
+      verifyNever(secureStorage.delete(key: anyNamed('key'), iOptions: anyNamed('iOptions'), aOptions: anyNamed('aOptions')));
+    });
+
+    test('A stored access token that is not a JWT does not brick the launch', () async {
+      basicInit();
+      // _getAccessTokenExpiry throws on this. It used to escape initialize(),
+      // and the init screen turns that into an error screen with "log out" as
+      // the only way forward — on every single launch.
+      final secureStorage = storageWithSession(accessToken: 'not-a-jwt');
+
+      final auth = notifier(appAuth: MockFlutterAppAuth(), secureStorage: secureStorage);
+
+      await expectLater(auth.initialize(), completes);
+      expect(auth.state.auth0AccessToken, isNull, reason: 'unparseable credentials are dropped so the next login fixes it');
+      expect(auth.state.signedOutManually, isFalse, reason: 'the user did not ask to be signed out');
+      verify(secureStorage.delete(
+        key: SecureStorageKeys.accessToken,
+        iOptions: anyNamed('iOptions'),
+        aOptions: anyNamed('aOptions'),
+      )).called(greaterThanOrEqualTo(1));
+    });
+
+    test('A stored user profile that is not valid JSON does not brick the launch', () async {
+      basicInit();
+      final secureStorage = storageWithSession(userProfile: '{ this is not json');
+
+      final auth = notifier(appAuth: MockFlutterAppAuth(), secureStorage: secureStorage);
+
+      await expectLater(auth.initialize(), completes);
+      expect(auth.state.auth0AccessToken, isNull);
+    });
+
+    test('Storage that refuses to delete still leaves the user signed out', () async {
+      basicInit();
+      final secureStorage = storageWithSession(accessToken: 'not-a-jwt');
+      when(secureStorage.delete(key: anyNamed('key'), iOptions: anyNamed('iOptions'), aOptions: anyNamed('aOptions')))
+          .thenThrow(Exception('keychain unavailable'));
+
+      var signedOut = 0;
+      final auth = notifier(appAuth: MockFlutterAppAuth(), secureStorage: secureStorage, onSignout: () => signedOut++);
+
+      // A throwing delete used to abort logout() before it cleared the state, so
+      // the user looked signed in with credentials that were already half gone.
+      await expectLater(auth.initialize(), completes);
+      expect(auth.state.auth0AccessToken, isNull);
+      expect(signedOut, 1);
+    });
   });
 
   /// These pin the storage options themselves. The bug they guard against was a

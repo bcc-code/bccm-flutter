@@ -174,13 +174,28 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
     try {
       await _initialize();
     } catch (e, st) {
+      // Never rethrown. The init screen turns a thrown error into a blocking
+      // error screen whose only way out is "log out", so anything unparseable in
+      // storage — a stored access token that isn't a JWT, a user profile that
+      // isn't valid JSON — used to lock the user out of the app on *every*
+      // launch rather than just sending them to the login screen.
+      //
+      // What we could not make sense of now won't parse on the next launch
+      // either, so drop it: the user logs in once and it is fixed, instead of
+      // being stuck forever. Signing out with `manual: false` so the next login
+      // may still go through silently on the Auth0 session.
       FlutterError.reportError(FlutterErrorDetails(
         exception: e,
         stack: st,
         library: 'bccm_core',
-        context: ErrorDescription('during init/login'),
+        context: ErrorDescription('while restoring the stored session'),
       ));
-      rethrow;
+      ref.read(analyticsProvider).log(LogEvent(
+            name: 'restoring stored session failed',
+            message: e.toString(),
+            meta: {'stack': st.toString()},
+          ));
+      await logout(manual: false);
     }
   }
 
@@ -379,7 +394,9 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
         null,
       ));
     } catch (e) {
-      logout(manual: false);
+      // Awaited: an unawaited logout can land after a later successful login and
+      // wipe the credentials it just stored.
+      await logout(manual: false);
       rethrow;
     }
   }
@@ -401,25 +418,32 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
         additionalParameters: additionalParameters,
       );
 
+      // Deliberately unguarded. Substituting an empty response for a failure —
+      // which is what the `catchError` here used to do — made *every* login
+      // report success: the empty response made [_setStateBasedOnResponse]
+      // throw, that throw was swallowed too, and the method fell through to
+      // `return true` with onSignIn called and the state untouched. Callers
+      // navigate on that return value, so cancelling the Auth0 sheet landed the
+      // user in the app shell while signed out. It also made the two handlers
+      // below dead code.
       final AuthorizationTokenResponse result = await _syncAppAuth(
         () => _appAuth.authorizeAndExchangeCode(authorizationTokenRequest),
-      ).catchError((e) {
-        ref.read(analyticsProvider).log(LogEvent(
-              name: 'authorization and token exchange request failed',
-              message: e.toString(),
-            ));
-        return AuthorizationTokenResponse(null, null, null, null, null, null, null, null);
-      });
+      );
 
-      await _setStateBasedOnResponse(result, isLogin: true).catchError((e) {
+      try {
+        await _setStateBasedOnResponse(result, isLogin: true);
+      } catch (e) {
+        // Its own event because it means Auth0 answered and the answer was
+        // unusable, which is a different problem from the request failing.
         ref.read(analyticsProvider).log(LogEvent(
               name: 'failed to set auth state based on response from token exchange request',
               message: e.toString(),
             ));
-      });
+        rethrow;
+      }
       config.onSignIn?.call();
     } on FlutterAppAuthUserCancelledException catch (e) {
-      logout(manual: false);
+      await logout(manual: false);
       final details = e.platformErrorDetails;
       ref.read(analyticsProvider).log(LogEvent(
             name: 'login cancelled by user',
@@ -433,7 +457,7 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
           ));
       return false;
     } on FlutterAppAuthPlatformException catch (e) {
-      logout(manual: false);
+      await logout(manual: false);
       final details = e.platformErrorDetails;
       ref.read(analyticsProvider).log(LogEvent(
             name: 'login failed because of flutter_appauth platform exception',
@@ -447,7 +471,7 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
           ));
       return false;
     } catch (e, st) {
-      logout(manual: false);
+      await logout(manual: false);
       ref.read(analyticsProvider).log(LogEvent(
             name: 'login failed',
             message: e.toString(),
@@ -574,15 +598,28 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
 
   /// Deletes the key under every variant it may have been written with, see
   /// [_iosCredentialVariants].
+  ///
+  /// Never throws. A delete that fails must not stop the remaining variants — a
+  /// variant left behind is a credential that resurfaces on the next launch — and
+  /// must not stop [logout] from clearing the in-memory state either, or the user
+  /// stays signed in with credentials that are already half gone.
   Future<void> _deleteFromSecureStorage({required String key}) async {
     debugPrint('delete from secure storage: $key');
     final variants = defaultTargetPlatform == TargetPlatform.iOS ? _iosCredentialVariants : [_getIOSSecureStorageOptions()];
     for (final iOptions in variants) {
-      await _secureStorage.delete(
-        key: key,
-        iOptions: iOptions,
-        aOptions: _getAndroidSecureStorageOptions(),
-      );
+      try {
+        await _secureStorage.delete(
+          key: key,
+          iOptions: iOptions,
+          aOptions: _getAndroidSecureStorageOptions(),
+        );
+      } catch (e) {
+        debugPrint('auth: failed deleting $key from secure storage: $e');
+        ref.read(analyticsProvider).log(LogEvent(
+              name: 'failed deleting $key from secure storage',
+              message: e.toString(),
+            ));
+      }
     }
   }
 
