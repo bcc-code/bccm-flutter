@@ -4,4 +4,8 @@ include: package:flutter_lints/flutter.yaml
 # https://dart.dev/guides/language/analysis-options
 
 analyzer:
-  exclude: [lib/**.freezed.dart, lib/**.g.dart, lib/**.graphql.dart]
+  exclude:
+    - lib/**.freezed.dart
+    - lib/**.g.dart
+    - lib/**.graphql.dart
+    - build/**
