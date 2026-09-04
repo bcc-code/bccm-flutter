@@ -1,4 +1,4 @@
-library bccm_core;
+library;
 
 export 'src/setup.dart';
 export 'src/features/globals/globals.dart';

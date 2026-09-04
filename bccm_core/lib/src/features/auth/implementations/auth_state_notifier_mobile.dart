@@ -86,13 +86,11 @@ enum _RefreshResult {
 
 class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthStateNotifier {
   AuthStateNotifierMobile({
-    required FlutterAppAuth appAuth,
-    required FlutterSecureStorage secureStorage,
+    required this._appAuth,
+    required this._secureStorage,
     required this.config,
     required this.ref,
-  })  : _appAuth = appAuth,
-        _secureStorage = secureStorage,
-        _auth0Api = Auth0Api(
+  })  : _auth0Api = Auth0Api(
           audience: config.auth0Audience,
           domain: config.auth0Domain,
           clientId: config.auth0ClientId,

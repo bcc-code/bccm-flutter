@@ -119,7 +119,8 @@ class RudderAnalytics extends Analytics {
     final shouldRefreshSession = now.difference(_lastAlive) > kMinimumSessionTimeout;
 
     if (shouldRefreshSession) {
-      print('Analytics: Session dead, refreshing sessionId. Now: ${now.toIso8601String()}, lastAlive: ${_lastAlive.toIso8601String()}.');
+      debugPrint(
+          'Analytics: Session dead, refreshing sessionId. Now: ${now.toIso8601String()}, lastAlive: ${_lastAlive.toIso8601String()}.');
       onShouldRefreshSessionId();
     }
     _lastAlive = now;

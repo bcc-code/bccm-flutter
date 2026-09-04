@@ -54,7 +54,7 @@ class EventBus {
 
   /// Listens for events of Type [T] and its subtypes.
   ///
-  /// The method is called like this: myEventBus.on<MyType>();
+  /// The method is called like this: `myEventBus.on<MyType>()`.
   ///
   /// If the method is called without a type parameter, the [Stream] contains every
   /// event of this [EventBus].
@@ -77,7 +77,9 @@ class EventBus {
 
   /// Fires a new event on the event bus with the specified [event].
   ///
-  void fire(event) {
+  // Explicitly dynamic rather than Object: this is a vendored copy of the
+  // event_bus package, and narrowing its public API is not our call to make.
+  void fire(dynamic event) {
     streamController.add(event);
   }
 

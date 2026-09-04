@@ -28,6 +28,10 @@ class Auth0SignupRequestBody with _$Auth0SignupRequestBody {
 @freezed
 class Auth0SignupResponse with _$Auth0SignupResponse {
   const factory Auth0SignupResponse({
+    // Named after the wire format on purpose. Renaming it to userId is a
+    // one-line change here but forces every generated file in the package to be
+    // rebuilt, and nothing reads this field yet to benefit.
+    // ignore: non_constant_identifier_names
     @JsonKey(name: 'user_id') required String user_id,
     @JsonKey(name: 'email_verified') required bool emailVerified,
     required String email,

@@ -1,4 +1,4 @@
-library bccm_core;
+library;
 
 export 'package:bccm_core/src/features/graphql/queries/kids/episodes.graphql.dart';
 export 'package:bccm_core/src/features/graphql/queries/kids/show.graphql.dart';

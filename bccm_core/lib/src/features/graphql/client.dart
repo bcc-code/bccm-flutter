@@ -190,8 +190,8 @@ class BccmGraphqlHeaders {
       'X-Only-Preferred-Languages-Content': onlyPreferredLanguagesContent == true ? 'true' : 'false',
       if (featureFlags?.isNotEmpty == true) 'X-Feature-Flags': featureFlags!.join(','),
       if (extraUsergroups.isNotEmpty) 'x-explicit-roles': extraUsergroups.join(','),
-      if (sessionId != null) 'X-Session-ID': sessionId!,
-      if (searchSessionId != null) 'X-Search-Session-ID': searchSessionId!,
+      'X-Session-ID': ?sessionId,
+      'X-Search-Session-ID': ?searchSessionId,
     };
   }
 }

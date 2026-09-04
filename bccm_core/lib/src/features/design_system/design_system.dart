@@ -1,4 +1,4 @@
-library bccm_core;
+library;
 
 import '../../utils/primitive_extensions.dart';
 import 'package:flutter/material.dart';

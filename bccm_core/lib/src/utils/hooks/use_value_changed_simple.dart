@@ -13,7 +13,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 //
 // This is a workaround for that.
 void useValueChangedSimple<T>(T value, void Function(T oldValue) valueChange) {
-  return useValueChanged(value, (prev, __) {
+  return useValueChanged(value, (prev, _) {
     valueChange(prev);
   });
 }

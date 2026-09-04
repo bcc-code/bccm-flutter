@@ -26,11 +26,11 @@ UnleashContext getStandardUnleashContext({
   return UnleashContext(userId: userId, properties: {
     if (ageGroup != null) 'ageGroupStart': ageGroup.start.toString(),
     if (ageGroup != null) 'ageGroup': ageGroup.name,
-    if (gender != null) 'gender': gender,
+    'gender': ?gender,
     if (isBetaTester != null) 'isBetaTester': isBetaTester.toString(),
-    if (appVersion != null) 'appVersion': appVersion,
-    if (appBuildNumber != null) 'appBuildNumber': appBuildNumber,
-    if (appLanguage != null) 'appLanguage': appLanguage,
+    'appVersion': ?appVersion,
+    'appBuildNumber': ?appBuildNumber,
+    'appLanguage': ?appLanguage,
     'os': Platform.operatingSystem,
     'isAndroidTv': androidTv.toString(),
   });
