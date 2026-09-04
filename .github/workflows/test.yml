@@ -1,0 +1,34 @@
+name: test
+
+# Consuming apps run their own test suites, not this package's, so without this
+# workflow nothing enforces them. That matters most for the shared GraphQL
+# client, whose tests guard against a crash that only reproduces on a timeout.
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  bccm_core:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: bccm_core
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          # Matches the `flutter: ">=3.44.0"` constraint in bccm_core/pubspec.yaml.
+          flutter-version: 3.44.0
+          channel: stable
+          cache: true
+
+      - run: flutter pub get
+
+      # --no-fatal-infos: the package still carries pre-existing lint infos, and
+      # a workflow that is red on arrival gets ignored. Warnings and errors
+      # still fail. Drop the flag once those are cleaned up.
+      - run: flutter analyze --no-fatal-infos
+
+      - run: flutter test

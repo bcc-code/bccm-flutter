@@ -1,6 +1,6 @@
 name: bccm_core
 description: Contains core functionality, etc
-version: 1.1.2
+version: 1.2.0
 homepage:
 
 environment:
@@ -61,6 +61,7 @@ dev_dependencies:
   json_serializable: ^6.8.0
   # 5.5.1+ needs build >=3.0.0, which freezed 2.x caps at ^2.3.1. Bump with the codegen cluster.
   mockito: ^5.4.4
+  fake_async: ^1.3.2
   graphql_codegen: ^1.0.1
   flutter_appauth_platform_interface: ^7.0.1
 
