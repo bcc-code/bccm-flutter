@@ -4,7 +4,7 @@ part 'deep_link_opened.freezed.dart';
 part 'deep_link_opened.g.dart';
 
 @freezed
-class DeepLinkOpenedEvent with _$DeepLinkOpenedEvent {
+abstract class DeepLinkOpenedEvent with _$DeepLinkOpenedEvent {
   const factory DeepLinkOpenedEvent({
     required String url,
     required String source,

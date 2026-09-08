@@ -4,7 +4,7 @@ part 'game_closed.freezed.dart';
 part 'game_closed.g.dart';
 
 @freezed
-class GameClosedEvent with _$GameClosedEvent {
+abstract class GameClosedEvent with _$GameClosedEvent {
   const factory GameClosedEvent({
     required String gameId,
     required int timeSpent,

@@ -4,7 +4,7 @@ part 'shorts.freezed.dart';
 part 'shorts.g.dart';
 
 @freezed
-class ShortStartedEvent with _$ShortStartedEvent {
+abstract class ShortStartedEvent with _$ShortStartedEvent {
   const factory ShortStartedEvent({
     required String shortId,
     required String shortTitle,
@@ -18,7 +18,7 @@ class ShortStartedEvent with _$ShortStartedEvent {
 }
 
 @freezed
-class ShortStoppedEvent with _$ShortStoppedEvent {
+abstract class ShortStoppedEvent with _$ShortStoppedEvent {
   const factory ShortStoppedEvent({
     required String shortId,
     required String? shortTitle,

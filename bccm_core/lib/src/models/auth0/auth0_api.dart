@@ -6,7 +6,7 @@ part 'auth0_api.freezed.dart';
 part 'auth0_api.g.dart';
 
 @freezed
-class Auth0SignupRequestBody with _$Auth0SignupRequestBody {
+abstract class Auth0SignupRequestBody with _$Auth0SignupRequestBody {
   @JsonSerializable(includeIfNull: false, fieldRename: FieldRename.snake)
   factory Auth0SignupRequestBody({
     required String clientId,
@@ -26,7 +26,7 @@ class Auth0SignupRequestBody with _$Auth0SignupRequestBody {
 }
 
 @freezed
-class Auth0SignupResponse with _$Auth0SignupResponse {
+abstract class Auth0SignupResponse with _$Auth0SignupResponse {
   const factory Auth0SignupResponse({
     // Named after the wire format on purpose. Renaming it to userId is a
     // one-line change here but forces every generated file in the package to be
@@ -41,7 +41,7 @@ class Auth0SignupResponse with _$Auth0SignupResponse {
 }
 
 @freezed
-class Auth0ApiException with _$Auth0ApiException implements Exception {
+abstract class Auth0ApiException with _$Auth0ApiException implements Exception {
   const factory Auth0ApiException({
     String? name,
     String? code,

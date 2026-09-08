@@ -4,7 +4,7 @@ part 'audio_only_clicked.freezed.dart';
 part 'audio_only_clicked.g.dart';
 
 @freezed
-class AudioOnlyClickedEvent with _$AudioOnlyClickedEvent {
+abstract class AudioOnlyClickedEvent with _$AudioOnlyClickedEvent {
   const factory AudioOnlyClickedEvent({
     required bool audioOnly,
   }) = _AudioOnlyClickedEvent;
