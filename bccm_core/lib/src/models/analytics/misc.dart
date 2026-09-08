@@ -4,7 +4,7 @@ part 'misc.freezed.dart';
 part 'misc.g.dart';
 
 @freezed
-class InteractionEvent with _$InteractionEvent {
+abstract class InteractionEvent with _$InteractionEvent {
   const factory InteractionEvent({
     String? interaction,
     String? pageCode,
@@ -17,7 +17,7 @@ class InteractionEvent with _$InteractionEvent {
 }
 
 @freezed
-class ImpressionEvent with _$ImpressionEvent {
+abstract class ImpressionEvent with _$ImpressionEvent {
   const factory ImpressionEvent({
     String? name,
     String? pageCode,
@@ -30,7 +30,7 @@ class ImpressionEvent with _$ImpressionEvent {
 }
 
 @freezed
-class GuideShownEvent with _$GuideShownEvent {
+abstract class GuideShownEvent with _$GuideShownEvent {
   const factory GuideShownEvent({
     String? guide,
     Map<String, dynamic>? meta,
@@ -40,7 +40,7 @@ class GuideShownEvent with _$GuideShownEvent {
 }
 
 @freezed
-class TimeMeasurementEvent with _$TimeMeasurementEvent {
+abstract class TimeMeasurementEvent with _$TimeMeasurementEvent {
   const factory TimeMeasurementEvent({
     String? key,
     double? seconds,
@@ -51,7 +51,7 @@ class TimeMeasurementEvent with _$TimeMeasurementEvent {
 }
 
 @freezed
-class LogEvent with _$LogEvent {
+abstract class LogEvent with _$LogEvent {
   const factory LogEvent({
     String? name,
     String? message,
@@ -63,7 +63,7 @@ class LogEvent with _$LogEvent {
 }
 
 @freezed
-class VideoPlayedEvent with _$VideoPlayedEvent {
+abstract class VideoPlayedEvent with _$VideoPlayedEvent {
   const factory VideoPlayedEvent({
     String? videoId,
     String? referenceId,

@@ -4,7 +4,7 @@ part 'notifications.freezed.dart';
 part 'notifications.g.dart';
 
 @freezed
-class NotificationReceivedEvent with _$NotificationReceivedEvent {
+abstract class NotificationReceivedEvent with _$NotificationReceivedEvent {
   const factory NotificationReceivedEvent({
     String? notificationId,
     String? action,
@@ -15,7 +15,7 @@ class NotificationReceivedEvent with _$NotificationReceivedEvent {
 }
 
 @freezed
-class NotificationOpenedEvent with _$NotificationOpenedEvent {
+abstract class NotificationOpenedEvent with _$NotificationOpenedEvent {
   const factory NotificationOpenedEvent({
     String? notificationId,
   }) = _NotificationOpenedEvent;
@@ -24,13 +24,13 @@ class NotificationOpenedEvent with _$NotificationOpenedEvent {
 }
 
 @freezed
-class NotificationDeviceTokenUpdatedEvent with _$NotificationDeviceTokenUpdatedEvent {
+abstract class NotificationDeviceTokenUpdatedEvent with _$NotificationDeviceTokenUpdatedEvent {
   const factory NotificationDeviceTokenUpdatedEvent() = _NotificationDeviceTokenUpdatedEvent;
   factory NotificationDeviceTokenUpdatedEvent.fromJson(Map<String, dynamic> json) => _$NotificationDeviceTokenUpdatedEventFromJson(json);
 }
 
 @freezed
-class NotificationsStatusEvent with _$NotificationsStatusEvent {
+abstract class NotificationsStatusEvent with _$NotificationsStatusEvent {
   const factory NotificationsStatusEvent({
     String? recipientId,
     bool? enabled,

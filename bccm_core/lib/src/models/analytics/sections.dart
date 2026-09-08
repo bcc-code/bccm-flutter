@@ -6,7 +6,7 @@ part 'sections.freezed.dart';
 part 'sections.g.dart';
 
 @freezed
-class SectionClickedEvent with _$SectionClickedEvent {
+abstract class SectionClickedEvent with _$SectionClickedEvent {
   const factory SectionClickedEvent({
     required String sectionId,
     String? sectionName,
@@ -24,7 +24,7 @@ class SectionClickedEvent with _$SectionClickedEvent {
 }
 
 @freezed
-class SectionAnalyticsData with _$SectionAnalyticsData {
+abstract class SectionAnalyticsData with _$SectionAnalyticsData {
   const factory SectionAnalyticsData({
     String? pageCode,
     required String id,
@@ -36,7 +36,7 @@ class SectionAnalyticsData with _$SectionAnalyticsData {
 }
 
 @freezed
-class SectionItemAnalyticsData with _$SectionItemAnalyticsData {
+abstract class SectionItemAnalyticsData with _$SectionItemAnalyticsData {
   const factory SectionItemAnalyticsData({
     required int position,
     required String type,

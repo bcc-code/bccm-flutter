@@ -4,7 +4,7 @@ part 'language_changed.freezed.dart';
 part 'language_changed.g.dart';
 
 @freezed
-class LanguageChangedEvent with _$LanguageChangedEvent {
+abstract class LanguageChangedEvent with _$LanguageChangedEvent {
   const factory LanguageChangedEvent({
     required String? languageFrom,
     required String languageTo,

@@ -4,7 +4,7 @@ part 'notification_prompt.freezed.dart';
 part 'notification_prompt.g.dart';
 
 @freezed
-class NotificationPromptDismissedEvent with _$NotificationPromptDismissedEvent {
+abstract class NotificationPromptDismissedEvent with _$NotificationPromptDismissedEvent {
   const factory NotificationPromptDismissedEvent({
     required int timesDismissed,
   }) = _NotificationPromptDismissedEvent;
@@ -13,25 +13,25 @@ class NotificationPromptDismissedEvent with _$NotificationPromptDismissedEvent {
 }
 
 @freezed
-class NotificationPromptClickedEvent with _$NotificationPromptClickedEvent {
+abstract class NotificationPromptClickedEvent with _$NotificationPromptClickedEvent {
   const factory NotificationPromptClickedEvent() = _NotificationPromptClickedEvent;
   factory NotificationPromptClickedEvent.fromJson(Map<String, dynamic> json) => _$NotificationPromptClickedEventFromJson(json);
 }
 
 @freezed
-class NotificationPromptDeniedEvent with _$NotificationPromptDeniedEvent {
+abstract class NotificationPromptDeniedEvent with _$NotificationPromptDeniedEvent {
   const factory NotificationPromptDeniedEvent() = _NotificationPromptDeniedEvent;
   factory NotificationPromptDeniedEvent.fromJson(Map<String, dynamic> json) => _$NotificationPromptDeniedEventFromJson(json);
 }
 
 @freezed
-class NotificationPromptAcceptedEvent with _$NotificationPromptAcceptedEvent {
+abstract class NotificationPromptAcceptedEvent with _$NotificationPromptAcceptedEvent {
   const factory NotificationPromptAcceptedEvent() = _NotificationPromptAcceptedEvent;
   factory NotificationPromptAcceptedEvent.fromJson(Map<String, dynamic> json) => _$NotificationPromptAcceptedEventFromJson(json);
 }
 
 @freezed
-class NotificationsSettingToggledEvent with _$NotificationsSettingToggledEvent {
+abstract class NotificationsSettingToggledEvent with _$NotificationsSettingToggledEvent {
   const factory NotificationsSettingToggledEvent({
     required bool enabled,
   }) = _NotificationsSettingToggledEvent;

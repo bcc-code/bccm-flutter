@@ -4,7 +4,7 @@ part 'downloads.freezed.dart';
 part 'downloads.g.dart';
 
 @freezed
-class VideoDownloadStartedEvent with _$VideoDownloadStartedEvent {
+abstract class VideoDownloadStartedEvent with _$VideoDownloadStartedEvent {
   const factory VideoDownloadStartedEvent({
     required String downloadId,
     required String episodeId,
@@ -16,7 +16,7 @@ class VideoDownloadStartedEvent with _$VideoDownloadStartedEvent {
 }
 
 @freezed
-class VideoDownloadRemovedEvent with _$VideoDownloadRemovedEvent {
+abstract class VideoDownloadRemovedEvent with _$VideoDownloadRemovedEvent {
   const factory VideoDownloadRemovedEvent({
     required String downloadId,
     required String? episodeId,
@@ -26,7 +26,7 @@ class VideoDownloadRemovedEvent with _$VideoDownloadRemovedEvent {
 }
 
 @freezed
-class VideoDownloadPlayedEvent with _$VideoDownloadPlayedEvent {
+abstract class VideoDownloadPlayedEvent with _$VideoDownloadPlayedEvent {
   const factory VideoDownloadPlayedEvent({
     required String downloadId,
     required String? episodeId,

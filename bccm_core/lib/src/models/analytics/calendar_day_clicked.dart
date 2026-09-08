@@ -4,7 +4,7 @@ part 'calendar_day_clicked.freezed.dart';
 part 'calendar_day_clicked.g.dart';
 
 @freezed
-class CalendarDayClickedEvent with _$CalendarDayClickedEvent {
+abstract class CalendarDayClickedEvent with _$CalendarDayClickedEvent {
   const factory CalendarDayClickedEvent({
     required String pageCode,
     required String calendarView,

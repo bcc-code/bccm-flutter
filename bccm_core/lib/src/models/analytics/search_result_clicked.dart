@@ -4,7 +4,7 @@ part 'search_result_clicked.freezed.dart';
 part 'search_result_clicked.g.dart';
 
 @freezed
-class SearchResultClickedEvent with _$SearchResultClickedEvent {
+abstract class SearchResultClickedEvent with _$SearchResultClickedEvent {
   const factory SearchResultClickedEvent({
     required String searchText,
     required int elementPosition,
@@ -17,14 +17,14 @@ class SearchResultClickedEvent with _$SearchResultClickedEvent {
 }
 
 @freezed
-class SearchAnalytics with _$SearchAnalytics {
+abstract class SearchAnalytics with _$SearchAnalytics {
   const factory SearchAnalytics({
     required String searchText,
   }) = _SearchAnalytics;
 }
 
 @freezed
-class SearchItemAnalytics with _$SearchItemAnalytics {
+abstract class SearchItemAnalytics with _$SearchItemAnalytics {
   const factory SearchItemAnalytics({
     required int position,
     required String type,

@@ -4,7 +4,7 @@ part 'search_performed.freezed.dart';
 part 'search_performed.g.dart';
 
 @freezed
-class SearchPerformedEvent with _$SearchPerformedEvent {
+abstract class SearchPerformedEvent with _$SearchPerformedEvent {
   const factory SearchPerformedEvent({
     required String searchText,
     required int searchLatency,

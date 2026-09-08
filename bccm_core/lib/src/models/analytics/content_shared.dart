@@ -4,7 +4,7 @@ part 'content_shared.freezed.dart';
 part 'content_shared.g.dart';
 
 @freezed
-class ContentSharedEvent with _$ContentSharedEvent {
+abstract class ContentSharedEvent with _$ContentSharedEvent {
   const factory ContentSharedEvent({
     required String pageCode,
     required String elementType,
