@@ -1,6 +1,8 @@
 import '../episode.graphql.dart';
 import '../page.graphql.dart';
+
 import 'dart:async';
+
 import 'package:flutter/widgets.dart' as widgets;
 import 'package:gql/ast.dart';
 import 'package:graphql/client.dart' as graphql;
@@ -8,9 +10,7 @@ import 'package:graphql_flutter/graphql_flutter.dart' as graphql_flutter;
 
 class Variables$Query$GetShow {
   factory Variables$Query$GetShow({required String id}) =>
-      Variables$Query$GetShow._({
-        r'id': id,
-      });
+      Variables$Query$GetShow._({r'id': id});
 
   Variables$Query$GetShow._(this._$data);
 
@@ -33,10 +33,7 @@ class Variables$Query$GetShow {
   }
 
   CopyWith$Variables$Query$GetShow<Variables$Query$GetShow> get copyWith =>
-      CopyWith$Variables$Query$GetShow(
-        this,
-        (i) => i,
-      );
+      CopyWith$Variables$Query$GetShow(this, (i) => i);
 
   @override
   bool operator ==(Object other) {
@@ -75,10 +72,7 @@ abstract class CopyWith$Variables$Query$GetShow<TRes> {
 
 class _CopyWithImpl$Variables$Query$GetShow<TRes>
     implements CopyWith$Variables$Query$GetShow<TRes> {
-  _CopyWithImpl$Variables$Query$GetShow(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Variables$Query$GetShow(this._instance, this._then);
 
   final Variables$Query$GetShow _instance;
 
@@ -86,10 +80,12 @@ class _CopyWithImpl$Variables$Query$GetShow<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({Object? id = _undefined}) => _then(Variables$Query$GetShow._({
-        ..._instance._$data,
-        if (id != _undefined && id != null) 'id': (id as String),
-      }));
+  TRes call({Object? id = _undefined}) => _then(
+    Variables$Query$GetShow._({
+      ..._instance._$data,
+      if (id != _undefined && id != null) 'id': (id as String),
+    }),
+  );
 }
 
 class _CopyWithStubImpl$Variables$Query$GetShow<TRes>
@@ -102,10 +98,7 @@ class _CopyWithStubImpl$Variables$Query$GetShow<TRes>
 }
 
 class Query$GetShow {
-  Query$GetShow({
-    required this.$show,
-    this.$__typename = 'QueryRoot',
-  });
+  Query$GetShow({required this.$show, this.$__typename = 'QueryRoot'});
 
   factory Query$GetShow.fromJson(Map<String, dynamic> json) {
     final l$$show = json['show'];
@@ -133,10 +126,7 @@ class Query$GetShow {
   int get hashCode {
     final l$$show = $show;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$$show,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$$show, l$$__typename]);
   }
 
   @override
@@ -162,10 +152,8 @@ class Query$GetShow {
 }
 
 extension UtilityExtension$Query$GetShow on Query$GetShow {
-  CopyWith$Query$GetShow<Query$GetShow> get copyWith => CopyWith$Query$GetShow(
-        this,
-        (i) => i,
-      );
+  CopyWith$Query$GetShow<Query$GetShow> get copyWith =>
+      CopyWith$Query$GetShow(this, (i) => i);
 }
 
 abstract class CopyWith$Query$GetShow<TRes> {
@@ -177,19 +165,13 @@ abstract class CopyWith$Query$GetShow<TRes> {
   factory CopyWith$Query$GetShow.stub(TRes res) =
       _CopyWithStubImpl$Query$GetShow;
 
-  TRes call({
-    Query$GetShow$show? $show,
-    String? $__typename,
-  });
+  TRes call({Query$GetShow$show? $show, String? $__typename});
   CopyWith$Query$GetShow$show<TRes> get $show;
 }
 
 class _CopyWithImpl$Query$GetShow<TRes>
     implements CopyWith$Query$GetShow<TRes> {
-  _CopyWithImpl$Query$GetShow(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Query$GetShow(this._instance, this._then);
 
   final Query$GetShow _instance;
 
@@ -197,18 +179,17 @@ class _CopyWithImpl$Query$GetShow<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({
-    Object? $show = _undefined,
-    Object? $__typename = _undefined,
-  }) =>
-      _then(Query$GetShow(
-        $show: $show == _undefined || $show == null
-            ? _instance.$show
-            : ($show as Query$GetShow$show),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  TRes call({Object? $show = _undefined, Object? $__typename = _undefined}) =>
+      _then(
+        Query$GetShow(
+          $show: $show == _undefined || $show == null
+              ? _instance.$show
+              : ($show as Query$GetShow$show),
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String),
+        ),
+      );
 
   CopyWith$Query$GetShow$show<TRes> get $show {
     final local$$show = _instance.$show;
@@ -222,154 +203,179 @@ class _CopyWithStubImpl$Query$GetShow<TRes>
 
   TRes _res;
 
-  call({
-    Query$GetShow$show? $show,
-    String? $__typename,
-  }) =>
-      _res;
+  call({Query$GetShow$show? $show, String? $__typename}) => _res;
 
   CopyWith$Query$GetShow$show<TRes> get $show =>
       CopyWith$Query$GetShow$show.stub(_res);
 }
 
-const documentNodeQueryGetShow = DocumentNode(definitions: [
-  OperationDefinitionNode(
-    type: OperationType.query,
-    name: NameNode(value: 'GetShow'),
-    variableDefinitions: [
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'id')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'ID'),
-          isNonNull: true,
+const documentNodeQueryGetShow = DocumentNode(
+  definitions: [
+    OperationDefinitionNode(
+      type: OperationType.query,
+      name: NameNode(value: 'GetShow'),
+      variableDefinitions: [
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'id')),
+          type: NamedTypeNode(name: NameNode(value: 'ID'), isNonNull: true),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      )
-    ],
-    directives: [],
-    selectionSet: SelectionSetNode(selections: [
-      FieldNode(
-        name: NameNode(value: 'show'),
-        alias: null,
-        arguments: [
-          ArgumentNode(
-            name: NameNode(value: 'id'),
-            value: VariableNode(name: NameNode(value: 'id')),
-          )
-        ],
-        directives: [],
-        selectionSet: SelectionSetNode(selections: [
+      ],
+      directives: [],
+      selectionSet: SelectionSetNode(
+        selections: [
           FieldNode(
-            name: NameNode(value: 'id'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'title'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'description'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'image'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'seasons'),
+            name: NameNode(value: 'show'),
             alias: null,
             arguments: [
               ArgumentNode(
-                name: NameNode(value: 'dir'),
-                value: StringValueNode(
-                  value: 'desc',
-                  isBlock: false,
-                ),
-              )
+                name: NameNode(value: 'id'),
+                value: VariableNode(name: NameNode(value: 'id')),
+              ),
             ],
             directives: [],
-            selectionSet: SelectionSetNode(selections: [
-              FieldNode(
-                name: NameNode(value: 'items'),
-                alias: null,
-                arguments: [],
-                directives: [],
-                selectionSet: SelectionSetNode(selections: [
-                  FieldNode(
-                    name: NameNode(value: 'id'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null,
-                  ),
-                  FieldNode(
-                    name: NameNode(value: 'title'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null,
-                  ),
-                  FieldNode(
-                    name: NameNode(value: 'number'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null,
-                  ),
-                  FieldNode(
-                    name: NameNode(value: 'episodes'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: SelectionSetNode(selections: [
+            selectionSet: SelectionSetNode(
+              selections: [
+                FieldNode(
+                  name: NameNode(value: 'id'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'title'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'description'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'image'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'seasons'),
+                  alias: null,
+                  arguments: [
+                    ArgumentNode(
+                      name: NameNode(value: 'dir'),
+                      value: StringValueNode(value: 'desc', isBlock: false),
+                    ),
+                  ],
+                  directives: [],
+                  selectionSet: SelectionSetNode(
+                    selections: [
                       FieldNode(
                         name: NameNode(value: 'items'),
                         alias: null,
                         arguments: [],
                         directives: [],
-                        selectionSet: SelectionSetNode(selections: [
-                          InlineFragmentNode(
-                            typeCondition: TypeConditionNode(
-                                on: NamedTypeNode(
-                              name: NameNode(value: 'Episode'),
-                              isNonNull: false,
-                            )),
-                            directives: [],
-                            selectionSet: SelectionSetNode(selections: [
-                              FragmentSpreadNode(
-                                name: NameNode(value: 'SeasonListEpisode'),
-                                directives: [],
+                        selectionSet: SelectionSetNode(
+                          selections: [
+                            FieldNode(
+                              name: NameNode(value: 'id'),
+                              alias: null,
+                              arguments: [],
+                              directives: [],
+                              selectionSet: null,
+                            ),
+                            FieldNode(
+                              name: NameNode(value: 'title'),
+                              alias: null,
+                              arguments: [],
+                              directives: [],
+                              selectionSet: null,
+                            ),
+                            FieldNode(
+                              name: NameNode(value: 'number'),
+                              alias: null,
+                              arguments: [],
+                              directives: [],
+                              selectionSet: null,
+                            ),
+                            FieldNode(
+                              name: NameNode(value: 'episodes'),
+                              alias: null,
+                              arguments: [],
+                              directives: [],
+                              selectionSet: SelectionSetNode(
+                                selections: [
+                                  FieldNode(
+                                    name: NameNode(value: 'items'),
+                                    alias: null,
+                                    arguments: [],
+                                    directives: [],
+                                    selectionSet: SelectionSetNode(
+                                      selections: [
+                                        InlineFragmentNode(
+                                          typeCondition: TypeConditionNode(
+                                            on: NamedTypeNode(
+                                              name: NameNode(value: 'Episode'),
+                                              isNonNull: false,
+                                            ),
+                                          ),
+                                          directives: [],
+                                          selectionSet: SelectionSetNode(
+                                            selections: [
+                                              FragmentSpreadNode(
+                                                name: NameNode(
+                                                  value: 'SeasonListEpisode',
+                                                ),
+                                                directives: [],
+                                              ),
+                                              FieldNode(
+                                                name: NameNode(
+                                                  value: '__typename',
+                                                ),
+                                                alias: null,
+                                                arguments: [],
+                                                directives: [],
+                                                selectionSet: null,
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                        FieldNode(
+                                          name: NameNode(value: '__typename'),
+                                          alias: null,
+                                          arguments: [],
+                                          directives: [],
+                                          selectionSet: null,
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  FieldNode(
+                                    name: NameNode(value: '__typename'),
+                                    alias: null,
+                                    arguments: [],
+                                    directives: [],
+                                    selectionSet: null,
+                                  ),
+                                ],
                               ),
-                              FieldNode(
-                                name: NameNode(value: '__typename'),
-                                alias: null,
-                                arguments: [],
-                                directives: [],
-                                selectionSet: null,
-                              ),
-                            ]),
-                          ),
-                          FieldNode(
-                            name: NameNode(value: '__typename'),
-                            alias: null,
-                            arguments: [],
-                            directives: [],
-                            selectionSet: null,
-                          ),
-                        ]),
+                            ),
+                            FieldNode(
+                              name: NameNode(value: '__typename'),
+                              alias: null,
+                              arguments: [],
+                              directives: [],
+                              selectionSet: null,
+                            ),
+                          ],
+                        ),
                       ),
                       FieldNode(
                         name: NameNode(value: '__typename'),
@@ -378,25 +384,18 @@ const documentNodeQueryGetShow = DocumentNode(definitions: [
                         directives: [],
                         selectionSet: null,
                       ),
-                    ]),
+                    ],
                   ),
-                  FieldNode(
-                    name: NameNode(value: '__typename'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null,
-                  ),
-                ]),
-              ),
-              FieldNode(
-                name: NameNode(value: '__typename'),
-                alias: null,
-                arguments: [],
-                directives: [],
-                selectionSet: null,
-              ),
-            ]),
+                ),
+                FieldNode(
+                  name: NameNode(value: '__typename'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+              ],
+            ),
           ),
           FieldNode(
             name: NameNode(value: '__typename'),
@@ -405,20 +404,13 @@ const documentNodeQueryGetShow = DocumentNode(definitions: [
             directives: [],
             selectionSet: null,
           ),
-        ]),
+        ],
       ),
-      FieldNode(
-        name: NameNode(value: '__typename'),
-        alias: null,
-        arguments: [],
-        directives: [],
-        selectionSet: null,
-      ),
-    ]),
-  ),
-  fragmentDefinitionSeasonListEpisode,
-  fragmentDefinitionEpisodeThumbnail,
-]);
+    ),
+    fragmentDefinitionSeasonListEpisode,
+    fragmentDefinitionEpisodeThumbnail,
+  ],
+);
 Query$GetShow _parserFn$Query$GetShow(Map<String, dynamic> data) =>
     Query$GetShow.fromJson(data);
 typedef OnQueryComplete$Query$GetShow = FutureOr<void> Function(
@@ -439,36 +431,36 @@ class Options$Query$GetShow extends graphql.QueryOptions<Query$GetShow> {
     graphql.Context? context,
     OnQueryComplete$Query$GetShow? onComplete,
     graphql.OnQueryError? onError,
-  })  : onCompleteWithParsed = onComplete,
-        super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          pollInterval: pollInterval,
-          context: context,
-          onComplete: onComplete == null
-              ? null
-              : (data) => onComplete(
-                    data,
-                    data == null ? null : _parserFn$Query$GetShow(data),
-                  ),
-          onError: onError,
-          document: documentNodeQueryGetShow,
-          parserFn: _parserFn$Query$GetShow,
-        );
+  }) : onCompleteWithParsed = onComplete,
+       super(
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         pollInterval: pollInterval,
+         context: context,
+         onComplete: onComplete == null
+             ? null
+             : (data) => onComplete(
+                 data,
+                 data == null ? null : _parserFn$Query$GetShow(data),
+               ),
+         onError: onError,
+         document: documentNodeQueryGetShow,
+         parserFn: _parserFn$Query$GetShow,
+       );
 
   final OnQueryComplete$Query$GetShow? onCompleteWithParsed;
 
   @override
   List<Object?> get properties => [
-        ...super.onComplete == null
-            ? super.properties
-            : super.properties.where((property) => property != onComplete),
-        onCompleteWithParsed,
-      ];
+    ...super.onComplete == null
+        ? super.properties
+        : super.properties.where((property) => property != onComplete),
+    onCompleteWithParsed,
+  ];
 }
 
 class WatchOptions$Query$GetShow
@@ -487,20 +479,20 @@ class WatchOptions$Query$GetShow
     bool carryForwardDataOnException = true,
     bool fetchResults = false,
   }) : super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          document: documentNodeQueryGetShow,
-          pollInterval: pollInterval,
-          eagerlyFetchResults: eagerlyFetchResults,
-          carryForwardDataOnException: carryForwardDataOnException,
-          fetchResults: fetchResults,
-          parserFn: _parserFn$Query$GetShow,
-        );
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         document: documentNodeQueryGetShow,
+         pollInterval: pollInterval,
+         eagerlyFetchResults: eagerlyFetchResults,
+         carryForwardDataOnException: carryForwardDataOnException,
+         fetchResults: fetchResults,
+         parserFn: _parserFn$Query$GetShow,
+       );
 }
 
 class FetchMoreOptions$Query$GetShow extends graphql.FetchMoreOptions {
@@ -508,34 +500,33 @@ class FetchMoreOptions$Query$GetShow extends graphql.FetchMoreOptions {
     required graphql.UpdateQuery updateQuery,
     required Variables$Query$GetShow variables,
   }) : super(
-          updateQuery: updateQuery,
-          variables: variables.toJson(),
-          document: documentNodeQueryGetShow,
-        );
+         updateQuery: updateQuery,
+         variables: variables.toJson(),
+         document: documentNodeQueryGetShow,
+       );
 }
 
 extension ClientExtension$Query$GetShow on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$GetShow>> query$GetShow(
-          Options$Query$GetShow options) async =>
-      await this.query(options);
+    Options$Query$GetShow options,
+  ) async => await this.query(options);
 
   graphql.ObservableQuery<Query$GetShow> watchQuery$GetShow(
-          WatchOptions$Query$GetShow options) =>
-      this.watchQuery(options);
+    WatchOptions$Query$GetShow options,
+  ) => this.watchQuery(options);
 
   void writeQuery$GetShow({
     required Query$GetShow data,
     required Variables$Query$GetShow variables,
     bool broadcast = true,
-  }) =>
-      this.writeQuery(
-        graphql.Request(
-          operation: graphql.Operation(document: documentNodeQueryGetShow),
-          variables: variables.toJson(),
-        ),
-        data: data.toJson(),
-        broadcast: broadcast,
-      );
+  }) => this.writeQuery(
+    graphql.Request(
+      operation: graphql.Operation(document: documentNodeQueryGetShow),
+      variables: variables.toJson(),
+    ),
+    data: data.toJson(),
+    broadcast: broadcast,
+  );
 
   Query$GetShow? readQuery$GetShow({
     required Variables$Query$GetShow variables,
@@ -553,22 +544,18 @@ extension ClientExtension$Query$GetShow on graphql.GraphQLClient {
 }
 
 graphql_flutter.QueryHookResult<Query$GetShow> useQuery$GetShow(
-        Options$Query$GetShow options) =>
-    graphql_flutter.useQuery(options);
+  Options$Query$GetShow options,
+) => graphql_flutter.useQuery(options);
 graphql.ObservableQuery<Query$GetShow> useWatchQuery$GetShow(
-        WatchOptions$Query$GetShow options) =>
-    graphql_flutter.useWatchQuery(options);
+  WatchOptions$Query$GetShow options,
+) => graphql_flutter.useWatchQuery(options);
 
 class Query$GetShow$Widget extends graphql_flutter.Query<Query$GetShow> {
   Query$GetShow$Widget({
     widgets.Key? key,
     required Options$Query$GetShow options,
     required graphql_flutter.QueryBuilder<Query$GetShow> builder,
-  }) : super(
-          key: key,
-          options: options,
-          builder: builder,
-        );
+  }) : super(key: key, options: options, builder: builder);
 }
 
 class Query$GetShow$show {
@@ -594,7 +581,8 @@ class Query$GetShow$show {
       description: (l$description as String),
       image: (l$image as String?),
       seasons: Query$GetShow$show$seasons.fromJson(
-          (l$seasons as Map<String, dynamic>)),
+        (l$seasons as Map<String, dynamic>),
+      ),
       $__typename: (l$$__typename as String),
     );
   }
@@ -690,10 +678,7 @@ class Query$GetShow$show {
 
 extension UtilityExtension$Query$GetShow$show on Query$GetShow$show {
   CopyWith$Query$GetShow$show<Query$GetShow$show> get copyWith =>
-      CopyWith$Query$GetShow$show(
-        this,
-        (i) => i,
-      );
+      CopyWith$Query$GetShow$show(this, (i) => i);
 }
 
 abstract class CopyWith$Query$GetShow$show<TRes> {
@@ -718,10 +703,7 @@ abstract class CopyWith$Query$GetShow$show<TRes> {
 
 class _CopyWithImpl$Query$GetShow$show<TRes>
     implements CopyWith$Query$GetShow$show<TRes> {
-  _CopyWithImpl$Query$GetShow$show(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Query$GetShow$show(this._instance, this._then);
 
   final Query$GetShow$show _instance;
 
@@ -736,28 +718,31 @@ class _CopyWithImpl$Query$GetShow$show<TRes>
     Object? image = _undefined,
     Object? seasons = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Query$GetShow$show(
-        id: id == _undefined || id == null ? _instance.id : (id as String),
-        title: title == _undefined || title == null
-            ? _instance.title
-            : (title as String),
-        description: description == _undefined || description == null
-            ? _instance.description
-            : (description as String),
-        image: image == _undefined ? _instance.image : (image as String?),
-        seasons: seasons == _undefined || seasons == null
-            ? _instance.seasons
-            : (seasons as Query$GetShow$show$seasons),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  }) => _then(
+    Query$GetShow$show(
+      id: id == _undefined || id == null ? _instance.id : (id as String),
+      title: title == _undefined || title == null
+          ? _instance.title
+          : (title as String),
+      description: description == _undefined || description == null
+          ? _instance.description
+          : (description as String),
+      image: image == _undefined ? _instance.image : (image as String?),
+      seasons: seasons == _undefined || seasons == null
+          ? _instance.seasons
+          : (seasons as Query$GetShow$show$seasons),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 
   CopyWith$Query$GetShow$show$seasons<TRes> get seasons {
     final local$seasons = _instance.seasons;
     return CopyWith$Query$GetShow$show$seasons(
-        local$seasons, (e) => call(seasons: e));
+      local$seasons,
+      (e) => call(seasons: e),
+    );
   }
 }
 
@@ -774,8 +759,7 @@ class _CopyWithStubImpl$Query$GetShow$show<TRes>
     String? image,
     Query$GetShow$show$seasons? seasons,
     String? $__typename,
-  }) =>
-      _res;
+  }) => _res;
 
   CopyWith$Query$GetShow$show$seasons<TRes> get seasons =>
       CopyWith$Query$GetShow$show$seasons.stub(_res);
@@ -792,8 +776,11 @@ class Query$GetShow$show$seasons {
     final l$$__typename = json['__typename'];
     return Query$GetShow$show$seasons(
       items: (l$items as List<dynamic>)
-          .map((e) => Query$GetShow$show$seasons$items.fromJson(
-              (e as Map<String, dynamic>)))
+          .map(
+            (e) => Query$GetShow$show$seasons$items.fromJson(
+              (e as Map<String, dynamic>),
+            ),
+          )
           .toList(),
       $__typename: (l$$__typename as String),
     );
@@ -855,10 +842,7 @@ class Query$GetShow$show$seasons {
 extension UtilityExtension$Query$GetShow$show$seasons
     on Query$GetShow$show$seasons {
   CopyWith$Query$GetShow$show$seasons<Query$GetShow$show$seasons>
-      get copyWith => CopyWith$Query$GetShow$show$seasons(
-            this,
-            (i) => i,
-          );
+  get copyWith => CopyWith$Query$GetShow$show$seasons(this, (i) => i);
 }
 
 abstract class CopyWith$Query$GetShow$show$seasons<TRes> {
@@ -875,19 +859,20 @@ abstract class CopyWith$Query$GetShow$show$seasons<TRes> {
     String? $__typename,
   });
   TRes items(
-      Iterable<Query$GetShow$show$seasons$items> Function(
-              Iterable<
-                  CopyWith$Query$GetShow$show$seasons$items<
-                      Query$GetShow$show$seasons$items>>)
-          _fn);
+    Iterable<Query$GetShow$show$seasons$items> Function(
+      Iterable<
+        CopyWith$Query$GetShow$show$seasons$items<
+          Query$GetShow$show$seasons$items
+        >
+      >,
+    )
+    _fn,
+  );
 }
 
 class _CopyWithImpl$Query$GetShow$show$seasons<TRes>
     implements CopyWith$Query$GetShow$show$seasons<TRes> {
-  _CopyWithImpl$Query$GetShow$show$seasons(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Query$GetShow$show$seasons(this._instance, this._then);
 
   final Query$GetShow$show$seasons _instance;
 
@@ -895,31 +880,34 @@ class _CopyWithImpl$Query$GetShow$show$seasons<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({
-    Object? items = _undefined,
-    Object? $__typename = _undefined,
-  }) =>
-      _then(Query$GetShow$show$seasons(
-        items: items == _undefined || items == null
-            ? _instance.items
-            : (items as List<Query$GetShow$show$seasons$items>),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  TRes call({Object? items = _undefined, Object? $__typename = _undefined}) =>
+      _then(
+        Query$GetShow$show$seasons(
+          items: items == _undefined || items == null
+              ? _instance.items
+              : (items as List<Query$GetShow$show$seasons$items>),
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String),
+        ),
+      );
 
   TRes items(
-          Iterable<Query$GetShow$show$seasons$items> Function(
-                  Iterable<
-                      CopyWith$Query$GetShow$show$seasons$items<
-                          Query$GetShow$show$seasons$items>>)
-              _fn) =>
-      call(
-          items: _fn(_instance.items
-              .map((e) => CopyWith$Query$GetShow$show$seasons$items(
-                    e,
-                    (i) => i,
-                  ))).toList());
+    Iterable<Query$GetShow$show$seasons$items> Function(
+      Iterable<
+        CopyWith$Query$GetShow$show$seasons$items<
+          Query$GetShow$show$seasons$items
+        >
+      >,
+    )
+    _fn,
+  ) => call(
+    items: _fn(
+      _instance.items.map(
+        (e) => CopyWith$Query$GetShow$show$seasons$items(e, (i) => i),
+      ),
+    ).toList(),
+  );
 }
 
 class _CopyWithStubImpl$Query$GetShow$show$seasons<TRes>
@@ -928,10 +916,7 @@ class _CopyWithStubImpl$Query$GetShow$show$seasons<TRes>
 
   TRes _res;
 
-  call({
-    List<Query$GetShow$show$seasons$items>? items,
-    String? $__typename,
-  }) =>
+  call({List<Query$GetShow$show$seasons$items>? items, String? $__typename}) =>
       _res;
 
   items(_fn) => _res;
@@ -957,7 +942,8 @@ class Query$GetShow$show$seasons$items {
       title: (l$title as String),
       number: (l$number as int),
       episodes: Query$GetShow$show$seasons$items$episodes.fromJson(
-          (l$episodes as Map<String, dynamic>)),
+        (l$episodes as Map<String, dynamic>),
+      ),
       $__typename: (l$$__typename as String),
     );
   }
@@ -994,13 +980,7 @@ class Query$GetShow$show$seasons$items {
     final l$number = number;
     final l$episodes = episodes;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$id,
-      l$title,
-      l$number,
-      l$episodes,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$id, l$title, l$number, l$episodes, l$$__typename]);
   }
 
   @override
@@ -1044,10 +1024,7 @@ class Query$GetShow$show$seasons$items {
 extension UtilityExtension$Query$GetShow$show$seasons$items
     on Query$GetShow$show$seasons$items {
   CopyWith$Query$GetShow$show$seasons$items<Query$GetShow$show$seasons$items>
-      get copyWith => CopyWith$Query$GetShow$show$seasons$items(
-            this,
-            (i) => i,
-          );
+  get copyWith => CopyWith$Query$GetShow$show$seasons$items(this, (i) => i);
 }
 
 abstract class CopyWith$Query$GetShow$show$seasons$items<TRes> {
@@ -1071,10 +1048,7 @@ abstract class CopyWith$Query$GetShow$show$seasons$items<TRes> {
 
 class _CopyWithImpl$Query$GetShow$show$seasons$items<TRes>
     implements CopyWith$Query$GetShow$show$seasons$items<TRes> {
-  _CopyWithImpl$Query$GetShow$show$seasons$items(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Query$GetShow$show$seasons$items(this._instance, this._then);
 
   final Query$GetShow$show$seasons$items _instance;
 
@@ -1088,27 +1062,30 @@ class _CopyWithImpl$Query$GetShow$show$seasons$items<TRes>
     Object? number = _undefined,
     Object? episodes = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Query$GetShow$show$seasons$items(
-        id: id == _undefined || id == null ? _instance.id : (id as String),
-        title: title == _undefined || title == null
-            ? _instance.title
-            : (title as String),
-        number: number == _undefined || number == null
-            ? _instance.number
-            : (number as int),
-        episodes: episodes == _undefined || episodes == null
-            ? _instance.episodes
-            : (episodes as Query$GetShow$show$seasons$items$episodes),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  }) => _then(
+    Query$GetShow$show$seasons$items(
+      id: id == _undefined || id == null ? _instance.id : (id as String),
+      title: title == _undefined || title == null
+          ? _instance.title
+          : (title as String),
+      number: number == _undefined || number == null
+          ? _instance.number
+          : (number as int),
+      episodes: episodes == _undefined || episodes == null
+          ? _instance.episodes
+          : (episodes as Query$GetShow$show$seasons$items$episodes),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 
   CopyWith$Query$GetShow$show$seasons$items$episodes<TRes> get episodes {
     final local$episodes = _instance.episodes;
     return CopyWith$Query$GetShow$show$seasons$items$episodes(
-        local$episodes, (e) => call(episodes: e));
+      local$episodes,
+      (e) => call(episodes: e),
+    );
   }
 }
 
@@ -1124,8 +1101,7 @@ class _CopyWithStubImpl$Query$GetShow$show$seasons$items<TRes>
     int? number,
     Query$GetShow$show$seasons$items$episodes? episodes,
     String? $__typename,
-  }) =>
-      _res;
+  }) => _res;
 
   CopyWith$Query$GetShow$show$seasons$items$episodes<TRes> get episodes =>
       CopyWith$Query$GetShow$show$seasons$items$episodes.stub(_res);
@@ -1138,13 +1114,17 @@ class Query$GetShow$show$seasons$items$episodes {
   });
 
   factory Query$GetShow$show$seasons$items$episodes.fromJson(
-      Map<String, dynamic> json) {
+    Map<String, dynamic> json,
+  ) {
     final l$items = json['items'];
     final l$$__typename = json['__typename'];
     return Query$GetShow$show$seasons$items$episodes(
       items: (l$items as List<dynamic>)
-          .map((e) => Query$GetShow$show$seasons$items$episodes$items.fromJson(
-              (e as Map<String, dynamic>)))
+          .map(
+            (e) => Query$GetShow$show$seasons$items$episodes$items.fromJson(
+              (e as Map<String, dynamic>),
+            ),
+          )
           .toList(),
       $__typename: (l$$__typename as String),
     );
@@ -1206,11 +1186,10 @@ class Query$GetShow$show$seasons$items$episodes {
 extension UtilityExtension$Query$GetShow$show$seasons$items$episodes
     on Query$GetShow$show$seasons$items$episodes {
   CopyWith$Query$GetShow$show$seasons$items$episodes<
-          Query$GetShow$show$seasons$items$episodes>
-      get copyWith => CopyWith$Query$GetShow$show$seasons$items$episodes(
-            this,
-            (i) => i,
-          );
+    Query$GetShow$show$seasons$items$episodes
+  >
+  get copyWith =>
+      CopyWith$Query$GetShow$show$seasons$items$episodes(this, (i) => i);
 }
 
 abstract class CopyWith$Query$GetShow$show$seasons$items$episodes<TRes> {
@@ -1227,11 +1206,15 @@ abstract class CopyWith$Query$GetShow$show$seasons$items$episodes<TRes> {
     String? $__typename,
   });
   TRes items(
-      Iterable<Query$GetShow$show$seasons$items$episodes$items> Function(
-              Iterable<
-                  CopyWith$Query$GetShow$show$seasons$items$episodes$items<
-                      Query$GetShow$show$seasons$items$episodes$items>>)
-          _fn);
+    Iterable<Query$GetShow$show$seasons$items$episodes$items> Function(
+      Iterable<
+        CopyWith$Query$GetShow$show$seasons$items$episodes$items<
+          Query$GetShow$show$seasons$items$episodes$items
+        >
+      >,
+    )
+    _fn,
+  );
 }
 
 class _CopyWithImpl$Query$GetShow$show$seasons$items$episodes<TRes>
@@ -1247,31 +1230,38 @@ class _CopyWithImpl$Query$GetShow$show$seasons$items$episodes<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({
-    Object? items = _undefined,
-    Object? $__typename = _undefined,
-  }) =>
-      _then(Query$GetShow$show$seasons$items$episodes(
-        items: items == _undefined || items == null
-            ? _instance.items
-            : (items as List<Query$GetShow$show$seasons$items$episodes$items>),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  TRes call({Object? items = _undefined, Object? $__typename = _undefined}) =>
+      _then(
+        Query$GetShow$show$seasons$items$episodes(
+          items: items == _undefined || items == null
+              ? _instance.items
+              : (items
+                    as List<Query$GetShow$show$seasons$items$episodes$items>),
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String),
+        ),
+      );
 
   TRes items(
-          Iterable<Query$GetShow$show$seasons$items$episodes$items> Function(
-                  Iterable<
-                      CopyWith$Query$GetShow$show$seasons$items$episodes$items<
-                          Query$GetShow$show$seasons$items$episodes$items>>)
-              _fn) =>
-      call(
-          items: _fn(_instance.items.map(
-              (e) => CopyWith$Query$GetShow$show$seasons$items$episodes$items(
-                    e,
-                    (i) => i,
-                  ))).toList());
+    Iterable<Query$GetShow$show$seasons$items$episodes$items> Function(
+      Iterable<
+        CopyWith$Query$GetShow$show$seasons$items$episodes$items<
+          Query$GetShow$show$seasons$items$episodes$items
+        >
+      >,
+    )
+    _fn,
+  ) => call(
+    items: _fn(
+      _instance.items.map(
+        (e) => CopyWith$Query$GetShow$show$seasons$items$episodes$items(
+          e,
+          (i) => i,
+        ),
+      ),
+    ).toList(),
+  );
 }
 
 class _CopyWithStubImpl$Query$GetShow$show$seasons$items$episodes<TRes>
@@ -1283,8 +1273,7 @@ class _CopyWithStubImpl$Query$GetShow$show$seasons$items$episodes<TRes>
   call({
     List<Query$GetShow$show$seasons$items$episodes$items>? items,
     String? $__typename,
-  }) =>
-      _res;
+  }) => _res;
 
   items(_fn) => _res;
 }
@@ -1307,7 +1296,8 @@ class Query$GetShow$show$seasons$items$episodes$items
   });
 
   factory Query$GetShow$show$seasons$items$episodes$items.fromJson(
-      Map<String, dynamic> json) {
+    Map<String, dynamic> json,
+  ) {
     final l$id = json['id'];
     final l$image = json['image'];
     final l$number = json['number'];
@@ -1330,12 +1320,14 @@ class Query$GetShow$show$seasons$items$episodes$items
       duration: (l$duration as int),
       locked: (l$locked as bool),
       lessons: Query$GetShow$show$seasons$items$episodes$items$lessons.fromJson(
-          (l$lessons as Map<String, dynamic>)),
+        (l$lessons as Map<String, dynamic>),
+      ),
       progress: (l$progress as int?),
       season: l$season == null
           ? null
           : Query$GetShow$show$seasons$items$episodes$items$season.fromJson(
-              (l$season as Map<String, dynamic>)),
+              (l$season as Map<String, dynamic>),
+            ),
       $__typename: (l$$__typename as String),
     );
   }
@@ -1499,11 +1491,10 @@ class Query$GetShow$show$seasons$items$episodes$items
 extension UtilityExtension$Query$GetShow$show$seasons$items$episodes$items
     on Query$GetShow$show$seasons$items$episodes$items {
   CopyWith$Query$GetShow$show$seasons$items$episodes$items<
-          Query$GetShow$show$seasons$items$episodes$items>
-      get copyWith => CopyWith$Query$GetShow$show$seasons$items$episodes$items(
-            this,
-            (i) => i,
-          );
+    Query$GetShow$show$seasons$items$episodes$items
+  >
+  get copyWith =>
+      CopyWith$Query$GetShow$show$seasons$items$episodes$items(this, (i) => i);
 }
 
 abstract class CopyWith$Query$GetShow$show$seasons$items$episodes$items<TRes> {
@@ -1513,8 +1504,8 @@ abstract class CopyWith$Query$GetShow$show$seasons$items$episodes$items<TRes> {
   ) = _CopyWithImpl$Query$GetShow$show$seasons$items$episodes$items;
 
   factory CopyWith$Query$GetShow$show$seasons$items$episodes$items.stub(
-          TRes res) =
-      _CopyWithStubImpl$Query$GetShow$show$seasons$items$episodes$items;
+    TRes res,
+  ) = _CopyWithStubImpl$Query$GetShow$show$seasons$items$episodes$items;
 
   TRes call({
     String? id,
@@ -1531,9 +1522,9 @@ abstract class CopyWith$Query$GetShow$show$seasons$items$episodes$items<TRes> {
     String? $__typename,
   });
   CopyWith$Query$GetShow$show$seasons$items$episodes$items$lessons<TRes>
-      get lessons;
+  get lessons;
   CopyWith$Query$GetShow$show$seasons$items$episodes$items$season<TRes>
-      get season;
+  get season;
 }
 
 class _CopyWithImpl$Query$GetShow$show$seasons$items$episodes$items<TRes>
@@ -1562,56 +1553,62 @@ class _CopyWithImpl$Query$GetShow$show$seasons$items$episodes$items<TRes>
     Object? progress = _undefined,
     Object? season = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Query$GetShow$show$seasons$items$episodes$items(
-        id: id == _undefined || id == null ? _instance.id : (id as String),
-        image: image == _undefined ? _instance.image : (image as String?),
-        number: number == _undefined ? _instance.number : (number as int?),
-        title: title == _undefined || title == null
-            ? _instance.title
-            : (title as String),
-        publishDate: publishDate == _undefined || publishDate == null
-            ? _instance.publishDate
-            : (publishDate as String),
-        ageRating: ageRating == _undefined || ageRating == null
-            ? _instance.ageRating
-            : (ageRating as String),
-        duration: duration == _undefined || duration == null
-            ? _instance.duration
-            : (duration as int),
-        locked: locked == _undefined || locked == null
-            ? _instance.locked
-            : (locked as bool),
-        lessons: lessons == _undefined || lessons == null
-            ? _instance.lessons
-            : (lessons
+  }) => _then(
+    Query$GetShow$show$seasons$items$episodes$items(
+      id: id == _undefined || id == null ? _instance.id : (id as String),
+      image: image == _undefined ? _instance.image : (image as String?),
+      number: number == _undefined ? _instance.number : (number as int?),
+      title: title == _undefined || title == null
+          ? _instance.title
+          : (title as String),
+      publishDate: publishDate == _undefined || publishDate == null
+          ? _instance.publishDate
+          : (publishDate as String),
+      ageRating: ageRating == _undefined || ageRating == null
+          ? _instance.ageRating
+          : (ageRating as String),
+      duration: duration == _undefined || duration == null
+          ? _instance.duration
+          : (duration as int),
+      locked: locked == _undefined || locked == null
+          ? _instance.locked
+          : (locked as bool),
+      lessons: lessons == _undefined || lessons == null
+          ? _instance.lessons
+          : (lessons
                 as Query$GetShow$show$seasons$items$episodes$items$lessons),
-        progress:
-            progress == _undefined ? _instance.progress : (progress as int?),
-        season: season == _undefined
-            ? _instance.season
-            : (season
-                as Query$GetShow$show$seasons$items$episodes$items$season?),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+      progress: progress == _undefined
+          ? _instance.progress
+          : (progress as int?),
+      season: season == _undefined
+          ? _instance.season
+          : (season as Query$GetShow$show$seasons$items$episodes$items$season?),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 
   CopyWith$Query$GetShow$show$seasons$items$episodes$items$lessons<TRes>
-      get lessons {
+  get lessons {
     final local$lessons = _instance.lessons;
     return CopyWith$Query$GetShow$show$seasons$items$episodes$items$lessons(
-        local$lessons, (e) => call(lessons: e));
+      local$lessons,
+      (e) => call(lessons: e),
+    );
   }
 
   CopyWith$Query$GetShow$show$seasons$items$episodes$items$season<TRes>
-      get season {
+  get season {
     final local$season = _instance.season;
     return local$season == null
         ? CopyWith$Query$GetShow$show$seasons$items$episodes$items$season.stub(
-            _then(_instance))
+            _then(_instance),
+          )
         : CopyWith$Query$GetShow$show$seasons$items$episodes$items$season(
-            local$season, (e) => call(season: e));
+            local$season,
+            (e) => call(season: e),
+          );
   }
 }
 
@@ -1634,18 +1631,19 @@ class _CopyWithStubImpl$Query$GetShow$show$seasons$items$episodes$items<TRes>
     int? progress,
     Query$GetShow$show$seasons$items$episodes$items$season? season,
     String? $__typename,
-  }) =>
-      _res;
+  }) => _res;
 
   CopyWith$Query$GetShow$show$seasons$items$episodes$items$lessons<TRes>
-      get lessons =>
-          CopyWith$Query$GetShow$show$seasons$items$episodes$items$lessons.stub(
-              _res);
+  get lessons =>
+      CopyWith$Query$GetShow$show$seasons$items$episodes$items$lessons.stub(
+        _res,
+      );
 
   CopyWith$Query$GetShow$show$seasons$items$episodes$items$season<TRes>
-      get season =>
-          CopyWith$Query$GetShow$show$seasons$items$episodes$items$season.stub(
-              _res);
+  get season =>
+      CopyWith$Query$GetShow$show$seasons$items$episodes$items$season.stub(
+        _res,
+      );
 }
 
 class Query$GetShow$show$seasons$items$episodes$items$lessons
@@ -1656,7 +1654,8 @@ class Query$GetShow$show$seasons$items$episodes$items$lessons
   });
 
   factory Query$GetShow$show$seasons$items$episodes$items$lessons.fromJson(
-      Map<String, dynamic> json) {
+    Map<String, dynamic> json,
+  ) {
     final l$total = json['total'];
     final l$$__typename = json['__typename'];
     return Query$GetShow$show$seasons$items$episodes$items$lessons(
@@ -1682,10 +1681,7 @@ class Query$GetShow$show$seasons$items$episodes$items$lessons
   int get hashCode {
     final l$total = total;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$total,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$total, l$$__typename]);
   }
 
   @override
@@ -1714,33 +1710,33 @@ class Query$GetShow$show$seasons$items$episodes$items$lessons
 extension UtilityExtension$Query$GetShow$show$seasons$items$episodes$items$lessons
     on Query$GetShow$show$seasons$items$episodes$items$lessons {
   CopyWith$Query$GetShow$show$seasons$items$episodes$items$lessons<
-          Query$GetShow$show$seasons$items$episodes$items$lessons>
-      get copyWith =>
-          CopyWith$Query$GetShow$show$seasons$items$episodes$items$lessons(
-            this,
-            (i) => i,
-          );
+    Query$GetShow$show$seasons$items$episodes$items$lessons
+  >
+  get copyWith =>
+      CopyWith$Query$GetShow$show$seasons$items$episodes$items$lessons(
+        this,
+        (i) => i,
+      );
 }
 
 abstract class CopyWith$Query$GetShow$show$seasons$items$episodes$items$lessons<
-    TRes> {
+  TRes
+> {
   factory CopyWith$Query$GetShow$show$seasons$items$episodes$items$lessons(
     Query$GetShow$show$seasons$items$episodes$items$lessons instance,
     TRes Function(Query$GetShow$show$seasons$items$episodes$items$lessons) then,
   ) = _CopyWithImpl$Query$GetShow$show$seasons$items$episodes$items$lessons;
 
   factory CopyWith$Query$GetShow$show$seasons$items$episodes$items$lessons.stub(
-          TRes res) =
-      _CopyWithStubImpl$Query$GetShow$show$seasons$items$episodes$items$lessons;
+    TRes res,
+  ) = _CopyWithStubImpl$Query$GetShow$show$seasons$items$episodes$items$lessons;
 
-  TRes call({
-    int? total,
-    String? $__typename,
-  });
+  TRes call({int? total, String? $__typename});
 }
 
 class _CopyWithImpl$Query$GetShow$show$seasons$items$episodes$items$lessons<
-        TRes>
+  TRes
+>
     implements
         CopyWith$Query$GetShow$show$seasons$items$episodes$items$lessons<TRes> {
   _CopyWithImpl$Query$GetShow$show$seasons$items$episodes$items$lessons(
@@ -1751,38 +1747,35 @@ class _CopyWithImpl$Query$GetShow$show$seasons$items$episodes$items$lessons<
   final Query$GetShow$show$seasons$items$episodes$items$lessons _instance;
 
   final TRes Function(Query$GetShow$show$seasons$items$episodes$items$lessons)
-      _then;
+  _then;
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({
-    Object? total = _undefined,
-    Object? $__typename = _undefined,
-  }) =>
-      _then(Query$GetShow$show$seasons$items$episodes$items$lessons(
-        total: total == _undefined || total == null
-            ? _instance.total
-            : (total as int),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  TRes call({Object? total = _undefined, Object? $__typename = _undefined}) =>
+      _then(
+        Query$GetShow$show$seasons$items$episodes$items$lessons(
+          total: total == _undefined || total == null
+              ? _instance.total
+              : (total as int),
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String),
+        ),
+      );
 }
 
 class _CopyWithStubImpl$Query$GetShow$show$seasons$items$episodes$items$lessons<
-        TRes>
+  TRes
+>
     implements
         CopyWith$Query$GetShow$show$seasons$items$episodes$items$lessons<TRes> {
   _CopyWithStubImpl$Query$GetShow$show$seasons$items$episodes$items$lessons(
-      this._res);
+    this._res,
+  );
 
   TRes _res;
 
-  call({
-    int? total,
-    String? $__typename,
-  }) =>
-      _res;
+  call({int? total, String? $__typename}) => _res;
 }
 
 class Query$GetShow$show$seasons$items$episodes$items$season
@@ -1796,7 +1789,8 @@ class Query$GetShow$show$seasons$items$episodes$items$season
   });
 
   factory Query$GetShow$show$seasons$items$episodes$items$season.fromJson(
-      Map<String, dynamic> json) {
+    Map<String, dynamic> json,
+  ) {
     final l$number = json['number'];
     final l$$show = json['show'];
     final l$$__typename = json['__typename'];
@@ -1804,7 +1798,8 @@ class Query$GetShow$show$seasons$items$episodes$items$season
       number: (l$number as int),
       $show:
           Query$GetShow$show$seasons$items$episodes$items$season$show.fromJson(
-              (l$$show as Map<String, dynamic>)),
+            (l$$show as Map<String, dynamic>),
+          ),
       $__typename: (l$$__typename as String),
     );
   }
@@ -1831,11 +1826,7 @@ class Query$GetShow$show$seasons$items$episodes$items$season
     final l$number = number;
     final l$$show = $show;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$number,
-      l$$show,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$number, l$$show, l$$__typename]);
   }
 
   @override
@@ -1869,24 +1860,26 @@ class Query$GetShow$show$seasons$items$episodes$items$season
 extension UtilityExtension$Query$GetShow$show$seasons$items$episodes$items$season
     on Query$GetShow$show$seasons$items$episodes$items$season {
   CopyWith$Query$GetShow$show$seasons$items$episodes$items$season<
-          Query$GetShow$show$seasons$items$episodes$items$season>
-      get copyWith =>
-          CopyWith$Query$GetShow$show$seasons$items$episodes$items$season(
-            this,
-            (i) => i,
-          );
+    Query$GetShow$show$seasons$items$episodes$items$season
+  >
+  get copyWith =>
+      CopyWith$Query$GetShow$show$seasons$items$episodes$items$season(
+        this,
+        (i) => i,
+      );
 }
 
 abstract class CopyWith$Query$GetShow$show$seasons$items$episodes$items$season<
-    TRes> {
+  TRes
+> {
   factory CopyWith$Query$GetShow$show$seasons$items$episodes$items$season(
     Query$GetShow$show$seasons$items$episodes$items$season instance,
     TRes Function(Query$GetShow$show$seasons$items$episodes$items$season) then,
   ) = _CopyWithImpl$Query$GetShow$show$seasons$items$episodes$items$season;
 
   factory CopyWith$Query$GetShow$show$seasons$items$episodes$items$season.stub(
-          TRes res) =
-      _CopyWithStubImpl$Query$GetShow$show$seasons$items$episodes$items$season;
+    TRes res,
+  ) = _CopyWithStubImpl$Query$GetShow$show$seasons$items$episodes$items$season;
 
   TRes call({
     int? number,
@@ -1894,7 +1887,7 @@ abstract class CopyWith$Query$GetShow$show$seasons$items$episodes$items$season<
     String? $__typename,
   });
   CopyWith$Query$GetShow$show$seasons$items$episodes$items$season$show<TRes>
-      get $show;
+  get $show;
 }
 
 class _CopyWithImpl$Query$GetShow$show$seasons$items$episodes$items$season<TRes>
@@ -1908,7 +1901,7 @@ class _CopyWithImpl$Query$GetShow$show$seasons$items$episodes$items$season<TRes>
   final Query$GetShow$show$seasons$items$episodes$items$season _instance;
 
   final TRes Function(Query$GetShow$show$seasons$items$episodes$items$season)
-      _then;
+  _then;
 
   static const _undefined = <dynamic, dynamic>{};
 
@@ -1916,34 +1909,39 @@ class _CopyWithImpl$Query$GetShow$show$seasons$items$episodes$items$season<TRes>
     Object? number = _undefined,
     Object? $show = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Query$GetShow$show$seasons$items$episodes$items$season(
-        number: number == _undefined || number == null
-            ? _instance.number
-            : (number as int),
-        $show: $show == _undefined || $show == null
-            ? _instance.$show
-            : ($show
+  }) => _then(
+    Query$GetShow$show$seasons$items$episodes$items$season(
+      number: number == _undefined || number == null
+          ? _instance.number
+          : (number as int),
+      $show: $show == _undefined || $show == null
+          ? _instance.$show
+          : ($show
                 as Query$GetShow$show$seasons$items$episodes$items$season$show),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 
   CopyWith$Query$GetShow$show$seasons$items$episodes$items$season$show<TRes>
-      get $show {
+  get $show {
     final local$$show = _instance.$show;
     return CopyWith$Query$GetShow$show$seasons$items$episodes$items$season$show(
-        local$$show, (e) => call($show: e));
+      local$$show,
+      (e) => call($show: e),
+    );
   }
 }
 
 class _CopyWithStubImpl$Query$GetShow$show$seasons$items$episodes$items$season<
-        TRes>
+  TRes
+>
     implements
         CopyWith$Query$GetShow$show$seasons$items$episodes$items$season<TRes> {
   _CopyWithStubImpl$Query$GetShow$show$seasons$items$episodes$items$season(
-      this._res);
+    this._res,
+  );
 
   TRes _res;
 
@@ -1951,13 +1949,13 @@ class _CopyWithStubImpl$Query$GetShow$show$seasons$items$episodes$items$season<
     int? number,
     Query$GetShow$show$seasons$items$episodes$items$season$show? $show,
     String? $__typename,
-  }) =>
-      _res;
+  }) => _res;
 
   CopyWith$Query$GetShow$show$seasons$items$episodes$items$season$show<TRes>
-      get $show =>
-          CopyWith$Query$GetShow$show$seasons$items$episodes$items$season$show
-              .stub(_res);
+  get $show =>
+      CopyWith$Query$GetShow$show$seasons$items$episodes$items$season$show.stub(
+        _res,
+      );
 }
 
 class Query$GetShow$show$seasons$items$episodes$items$season$show
@@ -1970,7 +1968,8 @@ class Query$GetShow$show$seasons$items$episodes$items$season$show
   });
 
   factory Query$GetShow$show$seasons$items$episodes$items$season$show.fromJson(
-      Map<String, dynamic> json) {
+    Map<String, dynamic> json,
+  ) {
     final l$title = json['title'];
     final l$$__typename = json['__typename'];
     return Query$GetShow$show$seasons$items$episodes$items$season$show(
@@ -1996,10 +1995,7 @@ class Query$GetShow$show$seasons$items$episodes$items$season$show
   int get hashCode {
     final l$title = title;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$title,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$title, l$$__typename]);
   }
 
   @override
@@ -2028,37 +2024,38 @@ class Query$GetShow$show$seasons$items$episodes$items$season$show
 extension UtilityExtension$Query$GetShow$show$seasons$items$episodes$items$season$show
     on Query$GetShow$show$seasons$items$episodes$items$season$show {
   CopyWith$Query$GetShow$show$seasons$items$episodes$items$season$show<
-          Query$GetShow$show$seasons$items$episodes$items$season$show>
-      get copyWith =>
-          CopyWith$Query$GetShow$show$seasons$items$episodes$items$season$show(
-            this,
-            (i) => i,
-          );
+    Query$GetShow$show$seasons$items$episodes$items$season$show
+  >
+  get copyWith =>
+      CopyWith$Query$GetShow$show$seasons$items$episodes$items$season$show(
+        this,
+        (i) => i,
+      );
 }
 
 abstract class CopyWith$Query$GetShow$show$seasons$items$episodes$items$season$show<
-    TRes> {
+  TRes
+> {
   factory CopyWith$Query$GetShow$show$seasons$items$episodes$items$season$show(
     Query$GetShow$show$seasons$items$episodes$items$season$show instance,
     TRes Function(Query$GetShow$show$seasons$items$episodes$items$season$show)
-        then,
+    then,
   ) = _CopyWithImpl$Query$GetShow$show$seasons$items$episodes$items$season$show;
 
   factory CopyWith$Query$GetShow$show$seasons$items$episodes$items$season$show.stub(
-          TRes res) =
-      _CopyWithStubImpl$Query$GetShow$show$seasons$items$episodes$items$season$show;
+    TRes res,
+  ) = _CopyWithStubImpl$Query$GetShow$show$seasons$items$episodes$items$season$show;
 
-  TRes call({
-    String? title,
-    String? $__typename,
-  });
+  TRes call({String? title, String? $__typename});
 }
 
 class _CopyWithImpl$Query$GetShow$show$seasons$items$episodes$items$season$show<
-        TRes>
+  TRes
+>
     implements
         CopyWith$Query$GetShow$show$seasons$items$episodes$items$season$show<
-            TRes> {
+          TRes
+        > {
   _CopyWithImpl$Query$GetShow$show$seasons$items$episodes$items$season$show(
     this._instance,
     this._then,
@@ -2067,37 +2064,37 @@ class _CopyWithImpl$Query$GetShow$show$seasons$items$episodes$items$season$show<
   final Query$GetShow$show$seasons$items$episodes$items$season$show _instance;
 
   final TRes Function(
-      Query$GetShow$show$seasons$items$episodes$items$season$show) _then;
+    Query$GetShow$show$seasons$items$episodes$items$season$show,
+  )
+  _then;
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({
-    Object? title = _undefined,
-    Object? $__typename = _undefined,
-  }) =>
-      _then(Query$GetShow$show$seasons$items$episodes$items$season$show(
-        title: title == _undefined || title == null
-            ? _instance.title
-            : (title as String),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  TRes call({Object? title = _undefined, Object? $__typename = _undefined}) =>
+      _then(
+        Query$GetShow$show$seasons$items$episodes$items$season$show(
+          title: title == _undefined || title == null
+              ? _instance.title
+              : (title as String),
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String),
+        ),
+      );
 }
 
 class _CopyWithStubImpl$Query$GetShow$show$seasons$items$episodes$items$season$show<
-        TRes>
+  TRes
+>
     implements
         CopyWith$Query$GetShow$show$seasons$items$episodes$items$season$show<
-            TRes> {
+          TRes
+        > {
   _CopyWithStubImpl$Query$GetShow$show$seasons$items$episodes$items$season$show(
-      this._res);
+    this._res,
+  );
 
   TRes _res;
 
-  call({
-    String? title,
-    String? $__typename,
-  }) =>
-      _res;
+  call({String? title, String? $__typename}) => _res;
 }

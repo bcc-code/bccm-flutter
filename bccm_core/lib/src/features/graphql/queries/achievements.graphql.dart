@@ -1,4 +1,5 @@
 import 'dart:async';
+
 import 'package:flutter/widgets.dart' as widgets;
 import 'package:gql/ast.dart';
 import 'package:graphql/client.dart' as graphql;
@@ -136,10 +137,7 @@ class Fragment$Achievement {
 
 extension UtilityExtension$Fragment$Achievement on Fragment$Achievement {
   CopyWith$Fragment$Achievement<Fragment$Achievement> get copyWith =>
-      CopyWith$Fragment$Achievement(
-        this,
-        (i) => i,
-      );
+      CopyWith$Fragment$Achievement(this, (i) => i);
 }
 
 abstract class CopyWith$Fragment$Achievement<TRes> {
@@ -164,10 +162,7 @@ abstract class CopyWith$Fragment$Achievement<TRes> {
 
 class _CopyWithImpl$Fragment$Achievement<TRes>
     implements CopyWith$Fragment$Achievement<TRes> {
-  _CopyWithImpl$Fragment$Achievement(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Fragment$Achievement(this._instance, this._then);
 
   final Fragment$Achievement _instance;
 
@@ -183,26 +178,27 @@ class _CopyWithImpl$Fragment$Achievement<TRes>
     Object? image = _undefined,
     Object? achievedAt = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Fragment$Achievement(
-        id: id == _undefined || id == null ? _instance.id : (id as String),
-        title: title == _undefined || title == null
-            ? _instance.title
-            : (title as String),
-        description: description == _undefined
-            ? _instance.description
-            : (description as String?),
-        achieved: achieved == _undefined || achieved == null
-            ? _instance.achieved
-            : (achieved as bool),
-        image: image == _undefined ? _instance.image : (image as String?),
-        achievedAt: achievedAt == _undefined
-            ? _instance.achievedAt
-            : (achievedAt as String?),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  }) => _then(
+    Fragment$Achievement(
+      id: id == _undefined || id == null ? _instance.id : (id as String),
+      title: title == _undefined || title == null
+          ? _instance.title
+          : (title as String),
+      description: description == _undefined
+          ? _instance.description
+          : (description as String?),
+      achieved: achieved == _undefined || achieved == null
+          ? _instance.achieved
+          : (achieved as bool),
+      image: image == _undefined ? _instance.image : (image as String?),
+      achievedAt: achievedAt == _undefined
+          ? _instance.achievedAt
+          : (achievedAt as String?),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 }
 
 class _CopyWithStubImpl$Fragment$Achievement<TRes>
@@ -219,91 +215,89 @@ class _CopyWithStubImpl$Fragment$Achievement<TRes>
     String? image,
     String? achievedAt,
     String? $__typename,
-  }) =>
-      _res;
+  }) => _res;
 }
 
 const fragmentDefinitionAchievement = FragmentDefinitionNode(
   name: NameNode(value: 'Achievement'),
   typeCondition: TypeConditionNode(
-      on: NamedTypeNode(
-    name: NameNode(value: 'Achievement'),
-    isNonNull: false,
-  )),
+    on: NamedTypeNode(name: NameNode(value: 'Achievement'), isNonNull: false),
+  ),
   directives: [],
-  selectionSet: SelectionSetNode(selections: [
-    FieldNode(
-      name: NameNode(value: 'id'),
-      alias: null,
-      arguments: [],
-      directives: [],
-      selectionSet: null,
-    ),
-    FieldNode(
-      name: NameNode(value: 'title'),
-      alias: null,
-      arguments: [],
-      directives: [],
-      selectionSet: null,
-    ),
-    FieldNode(
-      name: NameNode(value: 'description'),
-      alias: null,
-      arguments: [],
-      directives: [],
-      selectionSet: null,
-    ),
-    FieldNode(
-      name: NameNode(value: 'achieved'),
-      alias: null,
-      arguments: [],
-      directives: [],
-      selectionSet: null,
-    ),
-    FieldNode(
-      name: NameNode(value: 'image'),
-      alias: null,
-      arguments: [],
-      directives: [],
-      selectionSet: null,
-    ),
-    FieldNode(
-      name: NameNode(value: 'achievedAt'),
-      alias: null,
-      arguments: [],
-      directives: [],
-      selectionSet: null,
-    ),
-    FieldNode(
-      name: NameNode(value: '__typename'),
-      alias: null,
-      arguments: [],
-      directives: [],
-      selectionSet: null,
-    ),
-  ]),
+  selectionSet: SelectionSetNode(
+    selections: [
+      FieldNode(
+        name: NameNode(value: 'id'),
+        alias: null,
+        arguments: [],
+        directives: [],
+        selectionSet: null,
+      ),
+      FieldNode(
+        name: NameNode(value: 'title'),
+        alias: null,
+        arguments: [],
+        directives: [],
+        selectionSet: null,
+      ),
+      FieldNode(
+        name: NameNode(value: 'description'),
+        alias: null,
+        arguments: [],
+        directives: [],
+        selectionSet: null,
+      ),
+      FieldNode(
+        name: NameNode(value: 'achieved'),
+        alias: null,
+        arguments: [],
+        directives: [],
+        selectionSet: null,
+      ),
+      FieldNode(
+        name: NameNode(value: 'image'),
+        alias: null,
+        arguments: [],
+        directives: [],
+        selectionSet: null,
+      ),
+      FieldNode(
+        name: NameNode(value: 'achievedAt'),
+        alias: null,
+        arguments: [],
+        directives: [],
+        selectionSet: null,
+      ),
+      FieldNode(
+        name: NameNode(value: '__typename'),
+        alias: null,
+        arguments: [],
+        directives: [],
+        selectionSet: null,
+      ),
+    ],
+  ),
 );
-const documentNodeFragmentAchievement = DocumentNode(definitions: [
-  fragmentDefinitionAchievement,
-]);
+const documentNodeFragmentAchievement = DocumentNode(
+  definitions: [fragmentDefinitionAchievement],
+);
 
 extension ClientExtension$Fragment$Achievement on graphql.GraphQLClient {
   void writeFragment$Achievement({
     required Fragment$Achievement data,
     required Map<String, dynamic> idFields,
     bool broadcast = true,
-  }) =>
-      this.writeFragment(
-        graphql.FragmentRequest(
-          idFields: idFields,
-          fragment: const graphql.Fragment(
-            fragmentName: 'Achievement',
-            document: documentNodeFragmentAchievement,
-          ),
-        ),
-        data: data.toJson(),
-        broadcast: broadcast,
-      );
+  }) => this.writeFragment(
+    graphql.FragmentRequest(
+      idFields: idFields,
+      fragment: const graphql.Fragment(
+        fragmentName: 'Achievement',
+        document: documentNodeFragmentAchievement,
+      ),
+    ),
+    data: data.toJson(),
+    broadcast: broadcast,
+  );
 
   Fragment$Achievement? readFragment$Achievement({
     required Map<String, dynamic> idFields,
@@ -332,7 +326,8 @@ class Variables$Fragment$AchievementGroup {
   Variables$Fragment$AchievementGroup._(this._$data);
 
   factory Variables$Fragment$AchievementGroup.fromJson(
-      Map<String, dynamic> data) {
+    Map<String, dynamic> data,
+  ) {
     final result$data = <String, dynamic>{};
     if (data.containsKey('achievementsFirst')) {
       final l$achievementsFirst = data['achievementsFirst'];
@@ -355,11 +350,9 @@ class Variables$Fragment$AchievementGroup {
   }
 
   CopyWith$Variables$Fragment$AchievementGroup<
-          Variables$Fragment$AchievementGroup>
-      get copyWith => CopyWith$Variables$Fragment$AchievementGroup(
-            this,
-            (i) => i,
-          );
+    Variables$Fragment$AchievementGroup
+  >
+  get copyWith => CopyWith$Variables$Fragment$AchievementGroup(this, (i) => i);
 
   @override
   bool operator ==(Object other) {
@@ -386,7 +379,7 @@ class Variables$Fragment$AchievementGroup {
   int get hashCode {
     final l$achievementsFirst = achievementsFirst;
     return Object.hashAll([
-      _$data.containsKey('achievementsFirst') ? l$achievementsFirst : const {}
+      _$data.containsKey('achievementsFirst') ? l$achievementsFirst : const {},
     ]);
   }
 }
@@ -405,10 +398,7 @@ abstract class CopyWith$Variables$Fragment$AchievementGroup<TRes> {
 
 class _CopyWithImpl$Variables$Fragment$AchievementGroup<TRes>
     implements CopyWith$Variables$Fragment$AchievementGroup<TRes> {
-  _CopyWithImpl$Variables$Fragment$AchievementGroup(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Variables$Fragment$AchievementGroup(this._instance, this._then);
 
   final Variables$Fragment$AchievementGroup _instance;
 
@@ -416,12 +406,13 @@ class _CopyWithImpl$Variables$Fragment$AchievementGroup<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({Object? achievementsFirst = _undefined}) =>
-      _then(Variables$Fragment$AchievementGroup._({
-        ..._instance._$data,
-        if (achievementsFirst != _undefined)
-          'achievementsFirst': (achievementsFirst as int?),
-      }));
+  TRes call({Object? achievementsFirst = _undefined}) => _then(
+    Variables$Fragment$AchievementGroup._({
+      ..._instance._$data,
+      if (achievementsFirst != _undefined)
+        'achievementsFirst': (achievementsFirst as int?),
+    }),
+  );
 }
 
 class _CopyWithStubImpl$Variables$Fragment$AchievementGroup<TRes>
@@ -450,7 +441,8 @@ class Fragment$AchievementGroup {
       id: (l$id as String),
       title: (l$title as String),
       achievements: Fragment$AchievementGroup$achievements.fromJson(
-          (l$achievements as Map<String, dynamic>)),
+        (l$achievements as Map<String, dynamic>),
+      ),
       $__typename: (l$$__typename as String),
     );
   }
@@ -482,12 +474,7 @@ class Fragment$AchievementGroup {
     final l$title = title;
     final l$achievements = achievements;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$id,
-      l$title,
-      l$achievements,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$id, l$title, l$achievements, l$$__typename]);
   }
 
   @override
@@ -526,10 +513,7 @@ class Fragment$AchievementGroup {
 extension UtilityExtension$Fragment$AchievementGroup
     on Fragment$AchievementGroup {
   CopyWith$Fragment$AchievementGroup<Fragment$AchievementGroup> get copyWith =>
-      CopyWith$Fragment$AchievementGroup(
-        this,
-        (i) => i,
-      );
+      CopyWith$Fragment$AchievementGroup(this, (i) => i);
 }
 
 abstract class CopyWith$Fragment$AchievementGroup<TRes> {
@@ -552,10 +536,7 @@ abstract class CopyWith$Fragment$AchievementGroup<TRes> {
 
 class _CopyWithImpl$Fragment$AchievementGroup<TRes>
     implements CopyWith$Fragment$AchievementGroup<TRes> {
-  _CopyWithImpl$Fragment$AchievementGroup(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Fragment$AchievementGroup(this._instance, this._then);
 
   final Fragment$AchievementGroup _instance;
 
@@ -568,24 +549,27 @@ class _CopyWithImpl$Fragment$AchievementGroup<TRes>
     Object? title = _undefined,
     Object? achievements = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Fragment$AchievementGroup(
-        id: id == _undefined || id == null ? _instance.id : (id as String),
-        title: title == _undefined || title == null
-            ? _instance.title
-            : (title as String),
-        achievements: achievements == _undefined || achievements == null
-            ? _instance.achievements
-            : (achievements as Fragment$AchievementGroup$achievements),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  }) => _then(
+    Fragment$AchievementGroup(
+      id: id == _undefined || id == null ? _instance.id : (id as String),
+      title: title == _undefined || title == null
+          ? _instance.title
+          : (title as String),
+      achievements: achievements == _undefined || achievements == null
+          ? _instance.achievements
+          : (achievements as Fragment$AchievementGroup$achievements),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 
   CopyWith$Fragment$AchievementGroup$achievements<TRes> get achievements {
     final local$achievements = _instance.achievements;
     return CopyWith$Fragment$AchievementGroup$achievements(
-        local$achievements, (e) => call(achievements: e));
+      local$achievements,
+      (e) => call(achievements: e),
+    );
   }
 }
 
@@ -600,8 +584,7 @@ class _CopyWithStubImpl$Fragment$AchievementGroup<TRes>
     String? title,
     Fragment$AchievementGroup$achievements? achievements,
     String? $__typename,
-  }) =>
-      _res;
+  }) => _res;
 
   CopyWith$Fragment$AchievementGroup$achievements<TRes> get achievements =>
       CopyWith$Fragment$AchievementGroup$achievements.stub(_res);
@@ -610,46 +593,60 @@ class _CopyWithStubImpl$Fragment$AchievementGroup<TRes>
 const fragmentDefinitionAchievementGroup = FragmentDefinitionNode(
   name: NameNode(value: 'AchievementGroup'),
   typeCondition: TypeConditionNode(
-      on: NamedTypeNode(
-    name: NameNode(value: 'AchievementGroup'),
-    isNonNull: false,
-  )),
+    on: NamedTypeNode(
+      name: NameNode(value: 'AchievementGroup'),
+      isNonNull: false,
+    ),
+  ),
   directives: [],
-  selectionSet: SelectionSetNode(selections: [
-    FieldNode(
-      name: NameNode(value: 'id'),
-      alias: null,
-      arguments: [],
-      directives: [],
-      selectionSet: null,
-    ),
-    FieldNode(
-      name: NameNode(value: 'title'),
-      alias: null,
-      arguments: [],
-      directives: [],
-      selectionSet: null,
-    ),
-    FieldNode(
-      name: NameNode(value: 'achievements'),
-      alias: null,
-      arguments: [
-        ArgumentNode(
-          name: NameNode(value: 'first'),
-          value: VariableNode(name: NameNode(value: 'achievementsFirst')),
-        )
-      ],
-      directives: [],
-      selectionSet: SelectionSetNode(selections: [
-        FieldNode(
-          name: NameNode(value: 'items'),
-          alias: null,
-          arguments: [],
-          directives: [],
-          selectionSet: SelectionSetNode(selections: [
-            FragmentSpreadNode(
-              name: NameNode(value: 'Achievement'),
+  selectionSet: SelectionSetNode(
+    selections: [
+      FieldNode(
+        name: NameNode(value: 'id'),
+        alias: null,
+        arguments: [],
+        directives: [],
+        selectionSet: null,
+      ),
+      FieldNode(
+        name: NameNode(value: 'title'),
+        alias: null,
+        arguments: [],
+        directives: [],
+        selectionSet: null,
+      ),
+      FieldNode(
+        name: NameNode(value: 'achievements'),
+        alias: null,
+        arguments: [
+          ArgumentNode(
+            name: NameNode(value: 'first'),
+            value: VariableNode(name: NameNode(value: 'achievementsFirst')),
+          ),
+        ],
+        directives: [],
+        selectionSet: SelectionSetNode(
+          selections: [
+            FieldNode(
+              name: NameNode(value: 'items'),
+              alias: null,
+              arguments: [],
               directives: [],
+              selectionSet: SelectionSetNode(
+                selections: [
+                  FragmentSpreadNode(
+                    name: NameNode(value: 'Achievement'),
+                    directives: [],
+                  ),
+                  FieldNode(
+                    name: NameNode(value: '__typename'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null,
+                  ),
+                ],
+              ),
             ),
             FieldNode(
               name: NameNode(value: '__typename'),
@@ -658,30 +655,25 @@ const fragmentDefinitionAchievementGroup = FragmentDefinitionNode(
               directives: [],
               selectionSet: null,
             ),
-          ]),
+          ],
         ),
-        FieldNode(
-          name: NameNode(value: '__typename'),
-          alias: null,
-          arguments: [],
-          directives: [],
-          selectionSet: null,
-        ),
-      ]),
-    ),
-    FieldNode(
-      name: NameNode(value: '__typename'),
-      alias: null,
-      arguments: [],
-      directives: [],
-      selectionSet: null,
-    ),
-  ]),
+      ),
+      FieldNode(
+        name: NameNode(value: '__typename'),
+        alias: null,
+        arguments: [],
+        directives: [],
+        selectionSet: null,
+      ),
+    ],
+  ),
 );
-const documentNodeFragmentAchievementGroup = DocumentNode(definitions: [
-  fragmentDefinitionAchievementGroup,
-  fragmentDefinitionAchievement,
-]);
+const documentNodeFragmentAchievementGroup = DocumentNode(
+  definitions: [
+    fragmentDefinitionAchievementGroup,
+    fragmentDefinitionAchievement,
+  ],
+);
 
 extension ClientExtension$Fragment$AchievementGroup on graphql.GraphQLClient {
   void writeFragment$AchievementGroup({
@@ -689,19 +681,18 @@ extension ClientExtension$Fragment$AchievementGroup on graphql.GraphQLClient {
     required Map<String, dynamic> idFields,
     Variables$Fragment$AchievementGroup? variables,
     bool broadcast = true,
-  }) =>
-      this.writeFragment(
-        graphql.FragmentRequest(
-          idFields: idFields,
-          fragment: const graphql.Fragment(
-            fragmentName: 'AchievementGroup',
-            document: documentNodeFragmentAchievementGroup,
-          ),
-          variables: variables?.toJson() ?? const {},
-        ),
-        data: data.toJson(),
-        broadcast: broadcast,
-      );
+  }) => this.writeFragment(
+    graphql.FragmentRequest(
+      idFields: idFields,
+      fragment: const graphql.Fragment(
+        fragmentName: 'AchievementGroup',
+        document: documentNodeFragmentAchievementGroup,
+      ),
+      variables: variables?.toJson() ?? const {},
+    ),
+    data: data.toJson(),
+    broadcast: broadcast,
+  );
 
   Fragment$AchievementGroup? readFragment$AchievementGroup({
     required Map<String, dynamic> idFields,
@@ -730,13 +721,15 @@ class Fragment$AchievementGroup$achievements {
   });
 
   factory Fragment$AchievementGroup$achievements.fromJson(
-      Map<String, dynamic> json) {
+    Map<String, dynamic> json,
+  ) {
     final l$items = json['items'];
     final l$$__typename = json['__typename'];
     return Fragment$AchievementGroup$achievements(
       items: (l$items as List<dynamic>)
           .map(
-              (e) => Fragment$Achievement.fromJson((e as Map<String, dynamic>)))
+            (e) => Fragment$Achievement.fromJson((e as Map<String, dynamic>)),
+          )
           .toList(),
       $__typename: (l$$__typename as String),
     );
@@ -798,11 +791,10 @@ class Fragment$AchievementGroup$achievements {
 extension UtilityExtension$Fragment$AchievementGroup$achievements
     on Fragment$AchievementGroup$achievements {
   CopyWith$Fragment$AchievementGroup$achievements<
-          Fragment$AchievementGroup$achievements>
-      get copyWith => CopyWith$Fragment$AchievementGroup$achievements(
-            this,
-            (i) => i,
-          );
+    Fragment$AchievementGroup$achievements
+  >
+  get copyWith =>
+      CopyWith$Fragment$AchievementGroup$achievements(this, (i) => i);
 }
 
 abstract class CopyWith$Fragment$AchievementGroup$achievements<TRes> {
@@ -814,14 +806,13 @@ abstract class CopyWith$Fragment$AchievementGroup$achievements<TRes> {
   factory CopyWith$Fragment$AchievementGroup$achievements.stub(TRes res) =
       _CopyWithStubImpl$Fragment$AchievementGroup$achievements;
 
-  TRes call({
-    List<Fragment$Achievement>? items,
-    String? $__typename,
-  });
+  TRes call({List<Fragment$Achievement>? items, String? $__typename});
   TRes items(
-      Iterable<Fragment$Achievement> Function(
-              Iterable<CopyWith$Fragment$Achievement<Fragment$Achievement>>)
-          _fn);
+    Iterable<Fragment$Achievement> Function(
+      Iterable<CopyWith$Fragment$Achievement<Fragment$Achievement>>,
+    )
+    _fn,
+  );
 }
 
 class _CopyWithImpl$Fragment$AchievementGroup$achievements<TRes>
@@ -837,28 +828,28 @@ class _CopyWithImpl$Fragment$AchievementGroup$achievements<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({
-    Object? items = _undefined,
-    Object? $__typename = _undefined,
-  }) =>
-      _then(Fragment$AchievementGroup$achievements(
-        items: items == _undefined || items == null
-            ? _instance.items
-            : (items as List<Fragment$Achievement>),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  TRes call({Object? items = _undefined, Object? $__typename = _undefined}) =>
+      _then(
+        Fragment$AchievementGroup$achievements(
+          items: items == _undefined || items == null
+              ? _instance.items
+              : (items as List<Fragment$Achievement>),
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String),
+        ),
+      );
 
   TRes items(
-          Iterable<Fragment$Achievement> Function(
-                  Iterable<CopyWith$Fragment$Achievement<Fragment$Achievement>>)
-              _fn) =>
-      call(
-          items: _fn(_instance.items.map((e) => CopyWith$Fragment$Achievement(
-                e,
-                (i) => i,
-              ))).toList());
+    Iterable<Fragment$Achievement> Function(
+      Iterable<CopyWith$Fragment$Achievement<Fragment$Achievement>>,
+    )
+    _fn,
+  ) => call(
+    items: _fn(
+      _instance.items.map((e) => CopyWith$Fragment$Achievement(e, (i) => i)),
+    ).toList(),
+  );
 }
 
 class _CopyWithStubImpl$Fragment$AchievementGroup$achievements<TRes>
@@ -867,11 +858,7 @@ class _CopyWithStubImpl$Fragment$AchievementGroup$achievements<TRes>
 
   TRes _res;
 
-  call({
-    List<Fragment$Achievement>? items,
-    String? $__typename,
-  }) =>
-      _res;
+  call({List<Fragment$Achievement>? items, String? $__typename}) => _res;
 
   items(_fn) => _res;
 }
@@ -880,16 +867,16 @@ class Variables$Query$getAchievementGroups {
   factory Variables$Query$getAchievementGroups({
     required int first,
     required int achievementsFirst,
-  }) =>
-      Variables$Query$getAchievementGroups._({
-        r'first': first,
-        r'achievementsFirst': achievementsFirst,
-      });
+  }) => Variables$Query$getAchievementGroups._({
+    r'first': first,
+    r'achievementsFirst': achievementsFirst,
+  });
 
   Variables$Query$getAchievementGroups._(this._$data);
 
   factory Variables$Query$getAchievementGroups.fromJson(
-      Map<String, dynamic> data) {
+    Map<String, dynamic> data,
+  ) {
     final result$data = <String, dynamic>{};
     final l$first = data['first'];
     result$data['first'] = (l$first as int);
@@ -914,11 +901,9 @@ class Variables$Query$getAchievementGroups {
   }
 
   CopyWith$Variables$Query$getAchievementGroups<
-          Variables$Query$getAchievementGroups>
-      get copyWith => CopyWith$Variables$Query$getAchievementGroups(
-            this,
-            (i) => i,
-          );
+    Variables$Query$getAchievementGroups
+  >
+  get copyWith => CopyWith$Variables$Query$getAchievementGroups(this, (i) => i);
 
   @override
   bool operator ==(Object other) {
@@ -946,10 +931,7 @@ class Variables$Query$getAchievementGroups {
   int get hashCode {
     final l$first = first;
     final l$achievementsFirst = achievementsFirst;
-    return Object.hashAll([
-      l$first,
-      l$achievementsFirst,
-    ]);
+    return Object.hashAll([l$first, l$achievementsFirst]);
   }
 }
 
@@ -962,10 +944,7 @@ abstract class CopyWith$Variables$Query$getAchievementGroups<TRes> {
   factory CopyWith$Variables$Query$getAchievementGroups.stub(TRes res) =
       _CopyWithStubImpl$Variables$Query$getAchievementGroups;
 
-  TRes call({
-    int? first,
-    int? achievementsFirst,
-  });
+  TRes call({int? first, int? achievementsFirst});
 }
 
 class _CopyWithImpl$Variables$Query$getAchievementGroups<TRes>
@@ -984,13 +963,14 @@ class _CopyWithImpl$Variables$Query$getAchievementGroups<TRes>
   TRes call({
     Object? first = _undefined,
     Object? achievementsFirst = _undefined,
-  }) =>
-      _then(Variables$Query$getAchievementGroups._({
-        ..._instance._$data,
-        if (first != _undefined && first != null) 'first': (first as int),
-        if (achievementsFirst != _undefined && achievementsFirst != null)
-          'achievementsFirst': (achievementsFirst as int),
-      }));
+  }) => _then(
+    Variables$Query$getAchievementGroups._({
+      ..._instance._$data,
+      if (first != _undefined && first != null) 'first': (first as int),
+      if (achievementsFirst != _undefined && achievementsFirst != null)
+        'achievementsFirst': (achievementsFirst as int),
+    }),
+  );
 }
 
 class _CopyWithStubImpl$Variables$Query$getAchievementGroups<TRes>
@@ -999,11 +979,7 @@ class _CopyWithStubImpl$Variables$Query$getAchievementGroups<TRes>
 
   TRes _res;
 
-  call({
-    int? first,
-    int? achievementsFirst,
-  }) =>
-      _res;
+  call({int? first, int? achievementsFirst}) => _res;
 }
 
 class Query$getAchievementGroups {
@@ -1017,7 +993,8 @@ class Query$getAchievementGroups {
     final l$$__typename = json['__typename'];
     return Query$getAchievementGroups(
       achievementGroups: Query$getAchievementGroups$achievementGroups.fromJson(
-          (l$achievementGroups as Map<String, dynamic>)),
+        (l$achievementGroups as Map<String, dynamic>),
+      ),
       $__typename: (l$$__typename as String),
     );
   }
@@ -1039,10 +1016,7 @@ class Query$getAchievementGroups {
   int get hashCode {
     final l$achievementGroups = achievementGroups;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$achievementGroups,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$achievementGroups, l$$__typename]);
   }
 
   @override
@@ -1071,10 +1045,7 @@ class Query$getAchievementGroups {
 extension UtilityExtension$Query$getAchievementGroups
     on Query$getAchievementGroups {
   CopyWith$Query$getAchievementGroups<Query$getAchievementGroups>
-      get copyWith => CopyWith$Query$getAchievementGroups(
-            this,
-            (i) => i,
-          );
+  get copyWith => CopyWith$Query$getAchievementGroups(this, (i) => i);
 }
 
 abstract class CopyWith$Query$getAchievementGroups<TRes> {
@@ -1091,15 +1062,12 @@ abstract class CopyWith$Query$getAchievementGroups<TRes> {
     String? $__typename,
   });
   CopyWith$Query$getAchievementGroups$achievementGroups<TRes>
-      get achievementGroups;
+  get achievementGroups;
 }
 
 class _CopyWithImpl$Query$getAchievementGroups<TRes>
     implements CopyWith$Query$getAchievementGroups<TRes> {
-  _CopyWithImpl$Query$getAchievementGroups(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Query$getAchievementGroups(this._instance, this._then);
 
   final Query$getAchievementGroups _instance;
 
@@ -1110,23 +1078,25 @@ class _CopyWithImpl$Query$getAchievementGroups<TRes>
   TRes call({
     Object? achievementGroups = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Query$getAchievementGroups(
-        achievementGroups:
-            achievementGroups == _undefined || achievementGroups == null
-                ? _instance.achievementGroups
-                : (achievementGroups
-                    as Query$getAchievementGroups$achievementGroups),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  }) => _then(
+    Query$getAchievementGroups(
+      achievementGroups:
+          achievementGroups == _undefined || achievementGroups == null
+          ? _instance.achievementGroups
+          : (achievementGroups as Query$getAchievementGroups$achievementGroups),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 
   CopyWith$Query$getAchievementGroups$achievementGroups<TRes>
-      get achievementGroups {
+  get achievementGroups {
     final local$achievementGroups = _instance.achievementGroups;
     return CopyWith$Query$getAchievementGroups$achievementGroups(
-        local$achievementGroups, (e) => call(achievementGroups: e));
+      local$achievementGroups,
+      (e) => call(achievementGroups: e),
+    );
   }
 }
 
@@ -1139,69 +1109,77 @@ class _CopyWithStubImpl$Query$getAchievementGroups<TRes>
   call({
     Query$getAchievementGroups$achievementGroups? achievementGroups,
     String? $__typename,
-  }) =>
-      _res;
+  }) => _res;
 
   CopyWith$Query$getAchievementGroups$achievementGroups<TRes>
-      get achievementGroups =>
-          CopyWith$Query$getAchievementGroups$achievementGroups.stub(_res);
+  get achievementGroups =>
+      CopyWith$Query$getAchievementGroups$achievementGroups.stub(_res);
 }
 
-const documentNodeQuerygetAchievementGroups = DocumentNode(definitions: [
-  OperationDefinitionNode(
-    type: OperationType.query,
-    name: NameNode(value: 'getAchievementGroups'),
-    variableDefinitions: [
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'first')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'Int'),
-          isNonNull: true,
+const documentNodeQuerygetAchievementGroups = DocumentNode(
+  definitions: [
+    OperationDefinitionNode(
+      type: OperationType.query,
+      name: NameNode(value: 'getAchievementGroups'),
+      variableDefinitions: [
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'first')),
+          type: NamedTypeNode(name: NameNode(value: 'Int'), isNonNull: true),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'achievementsFirst')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'Int'),
-          isNonNull: true,
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'achievementsFirst')),
+          type: NamedTypeNode(name: NameNode(value: 'Int'), isNonNull: true),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-    ],
-    directives: [],
-    selectionSet: SelectionSetNode(selections: [
-      FieldNode(
-        name: NameNode(value: 'achievementGroups'),
-        alias: null,
-        arguments: [
-          ArgumentNode(
-            name: NameNode(value: 'first'),
-            value: VariableNode(name: NameNode(value: 'first')),
-          )
-        ],
-        directives: [],
-        selectionSet: SelectionSetNode(selections: [
+      ],
+      directives: [],
+      selectionSet: SelectionSetNode(
+        selections: [
           FieldNode(
-            name: NameNode(value: 'items'),
+            name: NameNode(value: 'achievementGroups'),
             alias: null,
-            arguments: [],
+            arguments: [
+              ArgumentNode(
+                name: NameNode(value: 'first'),
+                value: VariableNode(name: NameNode(value: 'first')),
+              ),
+            ],
             directives: [],
-            selectionSet: SelectionSetNode(selections: [
-              FragmentSpreadNode(
-                name: NameNode(value: 'AchievementGroup'),
-                directives: [],
-              ),
-              FieldNode(
-                name: NameNode(value: '__typename'),
-                alias: null,
-                arguments: [],
-                directives: [],
-                selectionSet: null,
-              ),
-            ]),
+            selectionSet: SelectionSetNode(
+              selections: [
+                FieldNode(
+                  name: NameNode(value: 'items'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: SelectionSetNode(
+                    selections: [
+                      FragmentSpreadNode(
+                        name: NameNode(value: 'AchievementGroup'),
+                        directives: [],
+                      ),
+                      FieldNode(
+                        name: NameNode(value: '__typename'),
+                        alias: null,
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null,
+                      ),
+                    ],
+                  ),
+                ),
+                FieldNode(
+                  name: NameNode(value: '__typename'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+              ],
+            ),
           ),
           FieldNode(
             name: NameNode(value: '__typename'),
@@ -1210,23 +1188,16 @@ const documentNodeQuerygetAchievementGroups = DocumentNode(definitions: [
             directives: [],
             selectionSet: null,
           ),
-        ]),
+        ],
       ),
-      FieldNode(
-        name: NameNode(value: '__typename'),
-        alias: null,
-        arguments: [],
-        directives: [],
-        selectionSet: null,
-      ),
-    ]),
-  ),
-  fragmentDefinitionAchievementGroup,
-  fragmentDefinitionAchievement,
-]);
+    ),
+    fragmentDefinitionAchievementGroup,
+    fragmentDefinitionAchievement,
+  ],
+);
 Query$getAchievementGroups _parserFn$Query$getAchievementGroups(
-        Map<String, dynamic> data) =>
-    Query$getAchievementGroups.fromJson(data);
+  Map<String, dynamic> data,
+) => Query$getAchievementGroups.fromJson(data);
 typedef OnQueryComplete$Query$getAchievementGroups = FutureOr<void> Function(
   Map<String, dynamic>?,
   Query$getAchievementGroups?,
@@ -1246,38 +1217,38 @@ class Options$Query$getAchievementGroups
     graphql.Context? context,
     OnQueryComplete$Query$getAchievementGroups? onComplete,
     graphql.OnQueryError? onError,
-  })  : onCompleteWithParsed = onComplete,
-        super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          pollInterval: pollInterval,
-          context: context,
-          onComplete: onComplete == null
-              ? null
-              : (data) => onComplete(
-                    data,
-                    data == null
-                        ? null
-                        : _parserFn$Query$getAchievementGroups(data),
-                  ),
-          onError: onError,
-          document: documentNodeQuerygetAchievementGroups,
-          parserFn: _parserFn$Query$getAchievementGroups,
-        );
+  }) : onCompleteWithParsed = onComplete,
+       super(
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         pollInterval: pollInterval,
+         context: context,
+         onComplete: onComplete == null
+             ? null
+             : (data) => onComplete(
+                 data,
+                 data == null
+                     ? null
+                     : _parserFn$Query$getAchievementGroups(data),
+               ),
+         onError: onError,
+         document: documentNodeQuerygetAchievementGroups,
+         parserFn: _parserFn$Query$getAchievementGroups,
+       );
 
   final OnQueryComplete$Query$getAchievementGroups? onCompleteWithParsed;
 
   @override
   List<Object?> get properties => [
-        ...super.onComplete == null
-            ? super.properties
-            : super.properties.where((property) => property != onComplete),
-        onCompleteWithParsed,
-      ];
+    ...super.onComplete == null
+        ? super.properties
+        : super.properties.where((property) => property != onComplete),
+    onCompleteWithParsed,
+  ];
 }
 
 class WatchOptions$Query$getAchievementGroups
@@ -1296,20 +1267,20 @@ class WatchOptions$Query$getAchievementGroups
     bool carryForwardDataOnException = true,
     bool fetchResults = false,
   }) : super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          document: documentNodeQuerygetAchievementGroups,
-          pollInterval: pollInterval,
-          eagerlyFetchResults: eagerlyFetchResults,
-          carryForwardDataOnException: carryForwardDataOnException,
-          fetchResults: fetchResults,
-          parserFn: _parserFn$Query$getAchievementGroups,
-        );
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         document: documentNodeQuerygetAchievementGroups,
+         pollInterval: pollInterval,
+         eagerlyFetchResults: eagerlyFetchResults,
+         carryForwardDataOnException: carryForwardDataOnException,
+         fetchResults: fetchResults,
+         parserFn: _parserFn$Query$getAchievementGroups,
+       );
 }
 
 class FetchMoreOptions$Query$getAchievementGroups
@@ -1318,37 +1289,37 @@ class FetchMoreOptions$Query$getAchievementGroups
     required graphql.UpdateQuery updateQuery,
     required Variables$Query$getAchievementGroups variables,
   }) : super(
-          updateQuery: updateQuery,
-          variables: variables.toJson(),
-          document: documentNodeQuerygetAchievementGroups,
-        );
+         updateQuery: updateQuery,
+         variables: variables.toJson(),
+         document: documentNodeQuerygetAchievementGroups,
+       );
 }
 
 extension ClientExtension$Query$getAchievementGroups on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$getAchievementGroups>>
-      query$getAchievementGroups(
-              Options$Query$getAchievementGroups options) async =>
-          await this.query(options);
+  query$getAchievementGroups(
+    Options$Query$getAchievementGroups options,
+  ) async => await this.query(options);
 
   graphql.ObservableQuery<Query$getAchievementGroups>
-      watchQuery$getAchievementGroups(
-              WatchOptions$Query$getAchievementGroups options) =>
-          this.watchQuery(options);
+  watchQuery$getAchievementGroups(
+    WatchOptions$Query$getAchievementGroups options,
+  ) => this.watchQuery(options);
 
   void writeQuery$getAchievementGroups({
     required Query$getAchievementGroups data,
     required Variables$Query$getAchievementGroups variables,
     bool broadcast = true,
-  }) =>
-      this.writeQuery(
-        graphql.Request(
-          operation: graphql.Operation(
-              document: documentNodeQuerygetAchievementGroups),
-          variables: variables.toJson(),
-        ),
-        data: data.toJson(),
-        broadcast: broadcast,
-      );
+  }) => this.writeQuery(
+    graphql.Request(
+      operation: graphql.Operation(
+        document: documentNodeQuerygetAchievementGroups,
+      ),
+      variables: variables.toJson(),
+    ),
+    data: data.toJson(),
+    broadcast: broadcast,
+  );
 
   Query$getAchievementGroups? readQuery$getAchievementGroups({
     required Variables$Query$getAchievementGroups variables,
@@ -1356,8 +1327,9 @@ extension ClientExtension$Query$getAchievementGroups on graphql.GraphQLClient {
   }) {
     final result = this.readQuery(
       graphql.Request(
-        operation:
-            graphql.Operation(document: documentNodeQuerygetAchievementGroups),
+        operation: graphql.Operation(
+          document: documentNodeQuerygetAchievementGroups,
+        ),
         variables: variables.toJson(),
       ),
       optimistic: optimistic,
@@ -1367,12 +1339,12 @@ extension ClientExtension$Query$getAchievementGroups on graphql.GraphQLClient {
 }
 
 graphql_flutter.QueryHookResult<Query$getAchievementGroups>
-    useQuery$getAchievementGroups(Options$Query$getAchievementGroups options) =>
-        graphql_flutter.useQuery(options);
+useQuery$getAchievementGroups(Options$Query$getAchievementGroups options) =>
+    graphql_flutter.useQuery(options);
 graphql.ObservableQuery<Query$getAchievementGroups>
-    useWatchQuery$getAchievementGroups(
-            WatchOptions$Query$getAchievementGroups options) =>
-        graphql_flutter.useWatchQuery(options);
+useWatchQuery$getAchievementGroups(
+  WatchOptions$Query$getAchievementGroups options,
+) => graphql_flutter.useWatchQuery(options);
 
 class Query$getAchievementGroups$Widget
     extends graphql_flutter.Query<Query$getAchievementGroups> {
@@ -1380,11 +1352,7 @@ class Query$getAchievementGroups$Widget
     widgets.Key? key,
     required Options$Query$getAchievementGroups options,
     required graphql_flutter.QueryBuilder<Query$getAchievementGroups> builder,
-  }) : super(
-          key: key,
-          options: options,
-          builder: builder,
-        );
+  }) : super(key: key, options: options, builder: builder);
 }
 
 class Query$getAchievementGroups$achievementGroups {
@@ -1394,13 +1362,16 @@ class Query$getAchievementGroups$achievementGroups {
   });
 
   factory Query$getAchievementGroups$achievementGroups.fromJson(
-      Map<String, dynamic> json) {
+    Map<String, dynamic> json,
+  ) {
     final l$items = json['items'];
     final l$$__typename = json['__typename'];
     return Query$getAchievementGroups$achievementGroups(
       items: (l$items as List<dynamic>)
-          .map((e) =>
-              Fragment$AchievementGroup.fromJson((e as Map<String, dynamic>)))
+          .map(
+            (e) =>
+                Fragment$AchievementGroup.fromJson((e as Map<String, dynamic>)),
+          )
           .toList(),
       $__typename: (l$$__typename as String),
     );
@@ -1462,11 +1433,10 @@ class Query$getAchievementGroups$achievementGroups {
 extension UtilityExtension$Query$getAchievementGroups$achievementGroups
     on Query$getAchievementGroups$achievementGroups {
   CopyWith$Query$getAchievementGroups$achievementGroups<
-          Query$getAchievementGroups$achievementGroups>
-      get copyWith => CopyWith$Query$getAchievementGroups$achievementGroups(
-            this,
-            (i) => i,
-          );
+    Query$getAchievementGroups$achievementGroups
+  >
+  get copyWith =>
+      CopyWith$Query$getAchievementGroups$achievementGroups(this, (i) => i);
 }
 
 abstract class CopyWith$Query$getAchievementGroups$achievementGroups<TRes> {
@@ -1478,16 +1448,13 @@ abstract class CopyWith$Query$getAchievementGroups$achievementGroups<TRes> {
   factory CopyWith$Query$getAchievementGroups$achievementGroups.stub(TRes res) =
       _CopyWithStubImpl$Query$getAchievementGroups$achievementGroups;
 
-  TRes call({
-    List<Fragment$AchievementGroup>? items,
-    String? $__typename,
-  });
+  TRes call({List<Fragment$AchievementGroup>? items, String? $__typename});
   TRes items(
-      Iterable<Fragment$AchievementGroup> Function(
-              Iterable<
-                  CopyWith$Fragment$AchievementGroup<
-                      Fragment$AchievementGroup>>)
-          _fn);
+    Iterable<Fragment$AchievementGroup> Function(
+      Iterable<CopyWith$Fragment$AchievementGroup<Fragment$AchievementGroup>>,
+    )
+    _fn,
+  );
 }
 
 class _CopyWithImpl$Query$getAchievementGroups$achievementGroups<TRes>
@@ -1503,31 +1470,30 @@ class _CopyWithImpl$Query$getAchievementGroups$achievementGroups<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({
-    Object? items = _undefined,
-    Object? $__typename = _undefined,
-  }) =>
-      _then(Query$getAchievementGroups$achievementGroups(
-        items: items == _undefined || items == null
-            ? _instance.items
-            : (items as List<Fragment$AchievementGroup>),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  TRes call({Object? items = _undefined, Object? $__typename = _undefined}) =>
+      _then(
+        Query$getAchievementGroups$achievementGroups(
+          items: items == _undefined || items == null
+              ? _instance.items
+              : (items as List<Fragment$AchievementGroup>),
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String),
+        ),
+      );
 
   TRes items(
-          Iterable<Fragment$AchievementGroup> Function(
-                  Iterable<
-                      CopyWith$Fragment$AchievementGroup<
-                          Fragment$AchievementGroup>>)
-              _fn) =>
-      call(
-          items:
-              _fn(_instance.items.map((e) => CopyWith$Fragment$AchievementGroup(
-                    e,
-                    (i) => i,
-                  ))).toList());
+    Iterable<Fragment$AchievementGroup> Function(
+      Iterable<CopyWith$Fragment$AchievementGroup<Fragment$AchievementGroup>>,
+    )
+    _fn,
+  ) => call(
+    items: _fn(
+      _instance.items.map(
+        (e) => CopyWith$Fragment$AchievementGroup(e, (i) => i),
+      ),
+    ).toList(),
+  );
 }
 
 class _CopyWithStubImpl$Query$getAchievementGroups$achievementGroups<TRes>
@@ -1536,11 +1502,7 @@ class _CopyWithStubImpl$Query$getAchievementGroups$achievementGroups<TRes>
 
   TRes _res;
 
-  call({
-    List<Fragment$AchievementGroup>? items,
-    String? $__typename,
-  }) =>
-      _res;
+  call({List<Fragment$AchievementGroup>? items, String? $__typename}) => _res;
 
   items(_fn) => _res;
 }
@@ -1549,16 +1511,16 @@ class Variables$Query$getAchievementGroup {
   factory Variables$Query$getAchievementGroup({
     required String id,
     required int achievementsFirst,
-  }) =>
-      Variables$Query$getAchievementGroup._({
-        r'id': id,
-        r'achievementsFirst': achievementsFirst,
-      });
+  }) => Variables$Query$getAchievementGroup._({
+    r'id': id,
+    r'achievementsFirst': achievementsFirst,
+  });
 
   Variables$Query$getAchievementGroup._(this._$data);
 
   factory Variables$Query$getAchievementGroup.fromJson(
-      Map<String, dynamic> data) {
+    Map<String, dynamic> data,
+  ) {
     final result$data = <String, dynamic>{};
     final l$id = data['id'];
     result$data['id'] = (l$id as String);
@@ -1583,11 +1545,9 @@ class Variables$Query$getAchievementGroup {
   }
 
   CopyWith$Variables$Query$getAchievementGroup<
-          Variables$Query$getAchievementGroup>
-      get copyWith => CopyWith$Variables$Query$getAchievementGroup(
-            this,
-            (i) => i,
-          );
+    Variables$Query$getAchievementGroup
+  >
+  get copyWith => CopyWith$Variables$Query$getAchievementGroup(this, (i) => i);
 
   @override
   bool operator ==(Object other) {
@@ -1615,10 +1575,7 @@ class Variables$Query$getAchievementGroup {
   int get hashCode {
     final l$id = id;
     final l$achievementsFirst = achievementsFirst;
-    return Object.hashAll([
-      l$id,
-      l$achievementsFirst,
-    ]);
+    return Object.hashAll([l$id, l$achievementsFirst]);
   }
 }
 
@@ -1631,18 +1588,12 @@ abstract class CopyWith$Variables$Query$getAchievementGroup<TRes> {
   factory CopyWith$Variables$Query$getAchievementGroup.stub(TRes res) =
       _CopyWithStubImpl$Variables$Query$getAchievementGroup;
 
-  TRes call({
-    String? id,
-    int? achievementsFirst,
-  });
+  TRes call({String? id, int? achievementsFirst});
 }
 
 class _CopyWithImpl$Variables$Query$getAchievementGroup<TRes>
     implements CopyWith$Variables$Query$getAchievementGroup<TRes> {
-  _CopyWithImpl$Variables$Query$getAchievementGroup(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Variables$Query$getAchievementGroup(this._instance, this._then);
 
   final Variables$Query$getAchievementGroup _instance;
 
@@ -1653,13 +1604,14 @@ class _CopyWithImpl$Variables$Query$getAchievementGroup<TRes>
   TRes call({
     Object? id = _undefined,
     Object? achievementsFirst = _undefined,
-  }) =>
-      _then(Variables$Query$getAchievementGroup._({
-        ..._instance._$data,
-        if (id != _undefined && id != null) 'id': (id as String),
-        if (achievementsFirst != _undefined && achievementsFirst != null)
-          'achievementsFirst': (achievementsFirst as int),
-      }));
+  }) => _then(
+    Variables$Query$getAchievementGroup._({
+      ..._instance._$data,
+      if (id != _undefined && id != null) 'id': (id as String),
+      if (achievementsFirst != _undefined && achievementsFirst != null)
+        'achievementsFirst': (achievementsFirst as int),
+    }),
+  );
 }
 
 class _CopyWithStubImpl$Variables$Query$getAchievementGroup<TRes>
@@ -1668,11 +1620,7 @@ class _CopyWithStubImpl$Variables$Query$getAchievementGroup<TRes>
 
   TRes _res;
 
-  call({
-    String? id,
-    int? achievementsFirst,
-  }) =>
-      _res;
+  call({String? id, int? achievementsFirst}) => _res;
 }
 
 class Query$getAchievementGroup {
@@ -1686,7 +1634,8 @@ class Query$getAchievementGroup {
     final l$$__typename = json['__typename'];
     return Query$getAchievementGroup(
       achievementGroup: Fragment$AchievementGroup.fromJson(
-          (l$achievementGroup as Map<String, dynamic>)),
+        (l$achievementGroup as Map<String, dynamic>),
+      ),
       $__typename: (l$$__typename as String),
     );
   }
@@ -1708,10 +1657,7 @@ class Query$getAchievementGroup {
   int get hashCode {
     final l$achievementGroup = achievementGroup;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$achievementGroup,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$achievementGroup, l$$__typename]);
   }
 
   @override
@@ -1740,10 +1686,7 @@ class Query$getAchievementGroup {
 extension UtilityExtension$Query$getAchievementGroup
     on Query$getAchievementGroup {
   CopyWith$Query$getAchievementGroup<Query$getAchievementGroup> get copyWith =>
-      CopyWith$Query$getAchievementGroup(
-        this,
-        (i) => i,
-      );
+      CopyWith$Query$getAchievementGroup(this, (i) => i);
 }
 
 abstract class CopyWith$Query$getAchievementGroup<TRes> {
@@ -1755,19 +1698,13 @@ abstract class CopyWith$Query$getAchievementGroup<TRes> {
   factory CopyWith$Query$getAchievementGroup.stub(TRes res) =
       _CopyWithStubImpl$Query$getAchievementGroup;
 
-  TRes call({
-    Fragment$AchievementGroup? achievementGroup,
-    String? $__typename,
-  });
+  TRes call({Fragment$AchievementGroup? achievementGroup, String? $__typename});
   CopyWith$Fragment$AchievementGroup<TRes> get achievementGroup;
 }
 
 class _CopyWithImpl$Query$getAchievementGroup<TRes>
     implements CopyWith$Query$getAchievementGroup<TRes> {
-  _CopyWithImpl$Query$getAchievementGroup(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Query$getAchievementGroup(this._instance, this._then);
 
   final Query$getAchievementGroup _instance;
 
@@ -1778,21 +1715,24 @@ class _CopyWithImpl$Query$getAchievementGroup<TRes>
   TRes call({
     Object? achievementGroup = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Query$getAchievementGroup(
-        achievementGroup:
-            achievementGroup == _undefined || achievementGroup == null
-                ? _instance.achievementGroup
-                : (achievementGroup as Fragment$AchievementGroup),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  }) => _then(
+    Query$getAchievementGroup(
+      achievementGroup:
+          achievementGroup == _undefined || achievementGroup == null
+          ? _instance.achievementGroup
+          : (achievementGroup as Fragment$AchievementGroup),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 
   CopyWith$Fragment$AchievementGroup<TRes> get achievementGroup {
     final local$achievementGroup = _instance.achievementGroup;
     return CopyWith$Fragment$AchievementGroup(
-        local$achievementGroup, (e) => call(achievementGroup: e));
+      local$achievementGroup,
+      (e) => call(achievementGroup: e),
+    );
   }
 }
 
@@ -1802,56 +1742,60 @@ class _CopyWithStubImpl$Query$getAchievementGroup<TRes>
 
   TRes _res;
 
-  call({
-    Fragment$AchievementGroup? achievementGroup,
-    String? $__typename,
-  }) =>
+  call({Fragment$AchievementGroup? achievementGroup, String? $__typename}) =>
       _res;
 
   CopyWith$Fragment$AchievementGroup<TRes> get achievementGroup =>
       CopyWith$Fragment$AchievementGroup.stub(_res);
 }
 
-const documentNodeQuerygetAchievementGroup = DocumentNode(definitions: [
-  OperationDefinitionNode(
-    type: OperationType.query,
-    name: NameNode(value: 'getAchievementGroup'),
-    variableDefinitions: [
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'id')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'ID'),
-          isNonNull: true,
+const documentNodeQuerygetAchievementGroup = DocumentNode(
+  definitions: [
+    OperationDefinitionNode(
+      type: OperationType.query,
+      name: NameNode(value: 'getAchievementGroup'),
+      variableDefinitions: [
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'id')),
+          type: NamedTypeNode(name: NameNode(value: 'ID'), isNonNull: true),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'achievementsFirst')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'Int'),
-          isNonNull: true,
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'achievementsFirst')),
+          type: NamedTypeNode(name: NameNode(value: 'Int'), isNonNull: true),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-    ],
-    directives: [],
-    selectionSet: SelectionSetNode(selections: [
-      FieldNode(
-        name: NameNode(value: 'achievementGroup'),
-        alias: null,
-        arguments: [
-          ArgumentNode(
-            name: NameNode(value: 'id'),
-            value: VariableNode(name: NameNode(value: 'id')),
-          )
-        ],
-        directives: [],
-        selectionSet: SelectionSetNode(selections: [
-          FragmentSpreadNode(
-            name: NameNode(value: 'AchievementGroup'),
+      ],
+      directives: [],
+      selectionSet: SelectionSetNode(
+        selections: [
+          FieldNode(
+            name: NameNode(value: 'achievementGroup'),
+            alias: null,
+            arguments: [
+              ArgumentNode(
+                name: NameNode(value: 'id'),
+                value: VariableNode(name: NameNode(value: 'id')),
+              ),
+            ],
             directives: [],
+            selectionSet: SelectionSetNode(
+              selections: [
+                FragmentSpreadNode(
+                  name: NameNode(value: 'AchievementGroup'),
+                  directives: [],
+                ),
+                FieldNode(
+                  name: NameNode(value: '__typename'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+              ],
+            ),
           ),
           FieldNode(
             name: NameNode(value: '__typename'),
@@ -1860,23 +1804,16 @@ const documentNodeQuerygetAchievementGroup = DocumentNode(definitions: [
             directives: [],
             selectionSet: null,
           ),
-        ]),
+        ],
       ),
-      FieldNode(
-        name: NameNode(value: '__typename'),
-        alias: null,
-        arguments: [],
-        directives: [],
-        selectionSet: null,
-      ),
-    ]),
-  ),
-  fragmentDefinitionAchievementGroup,
-  fragmentDefinitionAchievement,
-]);
+    ),
+    fragmentDefinitionAchievementGroup,
+    fragmentDefinitionAchievement,
+  ],
+);
 Query$getAchievementGroup _parserFn$Query$getAchievementGroup(
-        Map<String, dynamic> data) =>
-    Query$getAchievementGroup.fromJson(data);
+  Map<String, dynamic> data,
+) => Query$getAchievementGroup.fromJson(data);
 typedef OnQueryComplete$Query$getAchievementGroup = FutureOr<void> Function(
   Map<String, dynamic>?,
   Query$getAchievementGroup?,
@@ -1896,38 +1833,38 @@ class Options$Query$getAchievementGroup
     graphql.Context? context,
     OnQueryComplete$Query$getAchievementGroup? onComplete,
     graphql.OnQueryError? onError,
-  })  : onCompleteWithParsed = onComplete,
-        super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          pollInterval: pollInterval,
-          context: context,
-          onComplete: onComplete == null
-              ? null
-              : (data) => onComplete(
-                    data,
-                    data == null
-                        ? null
-                        : _parserFn$Query$getAchievementGroup(data),
-                  ),
-          onError: onError,
-          document: documentNodeQuerygetAchievementGroup,
-          parserFn: _parserFn$Query$getAchievementGroup,
-        );
+  }) : onCompleteWithParsed = onComplete,
+       super(
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         pollInterval: pollInterval,
+         context: context,
+         onComplete: onComplete == null
+             ? null
+             : (data) => onComplete(
+                 data,
+                 data == null
+                     ? null
+                     : _parserFn$Query$getAchievementGroup(data),
+               ),
+         onError: onError,
+         document: documentNodeQuerygetAchievementGroup,
+         parserFn: _parserFn$Query$getAchievementGroup,
+       );
 
   final OnQueryComplete$Query$getAchievementGroup? onCompleteWithParsed;
 
   @override
   List<Object?> get properties => [
-        ...super.onComplete == null
-            ? super.properties
-            : super.properties.where((property) => property != onComplete),
-        onCompleteWithParsed,
-      ];
+    ...super.onComplete == null
+        ? super.properties
+        : super.properties.where((property) => property != onComplete),
+    onCompleteWithParsed,
+  ];
 }
 
 class WatchOptions$Query$getAchievementGroup
@@ -1946,20 +1883,20 @@ class WatchOptions$Query$getAchievementGroup
     bool carryForwardDataOnException = true,
     bool fetchResults = false,
   }) : super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          document: documentNodeQuerygetAchievementGroup,
-          pollInterval: pollInterval,
-          eagerlyFetchResults: eagerlyFetchResults,
-          carryForwardDataOnException: carryForwardDataOnException,
-          fetchResults: fetchResults,
-          parserFn: _parserFn$Query$getAchievementGroup,
-        );
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         document: documentNodeQuerygetAchievementGroup,
+         pollInterval: pollInterval,
+         eagerlyFetchResults: eagerlyFetchResults,
+         carryForwardDataOnException: carryForwardDataOnException,
+         fetchResults: fetchResults,
+         parserFn: _parserFn$Query$getAchievementGroup,
+       );
 }
 
 class FetchMoreOptions$Query$getAchievementGroup
@@ -1968,37 +1905,36 @@ class FetchMoreOptions$Query$getAchievementGroup
     required graphql.UpdateQuery updateQuery,
     required Variables$Query$getAchievementGroup variables,
   }) : super(
-          updateQuery: updateQuery,
-          variables: variables.toJson(),
-          document: documentNodeQuerygetAchievementGroup,
-        );
+         updateQuery: updateQuery,
+         variables: variables.toJson(),
+         document: documentNodeQuerygetAchievementGroup,
+       );
 }
 
 extension ClientExtension$Query$getAchievementGroup on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$getAchievementGroup>>
-      query$getAchievementGroup(
-              Options$Query$getAchievementGroup options) async =>
-          await this.query(options);
+  query$getAchievementGroup(Options$Query$getAchievementGroup options) async =>
+      await this.query(options);
 
   graphql.ObservableQuery<Query$getAchievementGroup>
-      watchQuery$getAchievementGroup(
-              WatchOptions$Query$getAchievementGroup options) =>
-          this.watchQuery(options);
+  watchQuery$getAchievementGroup(
+    WatchOptions$Query$getAchievementGroup options,
+  ) => this.watchQuery(options);
 
   void writeQuery$getAchievementGroup({
     required Query$getAchievementGroup data,
     required Variables$Query$getAchievementGroup variables,
     bool broadcast = true,
-  }) =>
-      this.writeQuery(
-        graphql.Request(
-          operation:
-              graphql.Operation(document: documentNodeQuerygetAchievementGroup),
-          variables: variables.toJson(),
-        ),
-        data: data.toJson(),
-        broadcast: broadcast,
-      );
+  }) => this.writeQuery(
+    graphql.Request(
+      operation: graphql.Operation(
+        document: documentNodeQuerygetAchievementGroup,
+      ),
+      variables: variables.toJson(),
+    ),
+    data: data.toJson(),
+    broadcast: broadcast,
+  );
 
   Query$getAchievementGroup? readQuery$getAchievementGroup({
     required Variables$Query$getAchievementGroup variables,
@@ -2006,8 +1942,9 @@ extension ClientExtension$Query$getAchievementGroup on graphql.GraphQLClient {
   }) {
     final result = this.readQuery(
       graphql.Request(
-        operation:
-            graphql.Operation(document: documentNodeQuerygetAchievementGroup),
+        operation: graphql.Operation(
+          document: documentNodeQuerygetAchievementGroup,
+        ),
         variables: variables.toJson(),
       ),
       optimistic: optimistic,
@@ -2017,12 +1954,12 @@ extension ClientExtension$Query$getAchievementGroup on graphql.GraphQLClient {
 }
 
 graphql_flutter.QueryHookResult<Query$getAchievementGroup>
-    useQuery$getAchievementGroup(Options$Query$getAchievementGroup options) =>
-        graphql_flutter.useQuery(options);
+useQuery$getAchievementGroup(Options$Query$getAchievementGroup options) =>
+    graphql_flutter.useQuery(options);
 graphql.ObservableQuery<Query$getAchievementGroup>
-    useWatchQuery$getAchievementGroup(
-            WatchOptions$Query$getAchievementGroup options) =>
-        graphql_flutter.useWatchQuery(options);
+useWatchQuery$getAchievementGroup(
+  WatchOptions$Query$getAchievementGroup options,
+) => graphql_flutter.useWatchQuery(options);
 
 class Query$getAchievementGroup$Widget
     extends graphql_flutter.Query<Query$getAchievementGroup> {
@@ -2030,11 +1967,7 @@ class Query$getAchievementGroup$Widget
     widgets.Key? key,
     required Options$Query$getAchievementGroup options,
     required graphql_flutter.QueryBuilder<Query$getAchievementGroup> builder,
-  }) : super(
-          key: key,
-          options: options,
-          builder: builder,
-        );
+  }) : super(key: key, options: options, builder: builder);
 }
 
 class Query$getPendingAchievements {
@@ -2049,7 +1982,8 @@ class Query$getPendingAchievements {
     return Query$getPendingAchievements(
       pendingAchievements: (l$pendingAchievements as List<dynamic>)
           .map(
-              (e) => Fragment$Achievement.fromJson((e as Map<String, dynamic>)))
+            (e) => Fragment$Achievement.fromJson((e as Map<String, dynamic>)),
+          )
           .toList(),
       $__typename: (l$$__typename as String),
     );
@@ -2062,8 +1996,9 @@ class Query$getPendingAchievements {
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
     final l$pendingAchievements = pendingAchievements;
-    _resultData['pendingAchievements'] =
-        l$pendingAchievements.map((e) => e.toJson()).toList();
+    _resultData['pendingAchievements'] = l$pendingAchievements
+        .map((e) => e.toJson())
+        .toList();
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
     return _resultData;
@@ -2112,10 +2047,7 @@ class Query$getPendingAchievements {
 extension UtilityExtension$Query$getPendingAchievements
     on Query$getPendingAchievements {
   CopyWith$Query$getPendingAchievements<Query$getPendingAchievements>
-      get copyWith => CopyWith$Query$getPendingAchievements(
-            this,
-            (i) => i,
-          );
+  get copyWith => CopyWith$Query$getPendingAchievements(this, (i) => i);
 }
 
 abstract class CopyWith$Query$getPendingAchievements<TRes> {
@@ -2132,17 +2064,16 @@ abstract class CopyWith$Query$getPendingAchievements<TRes> {
     String? $__typename,
   });
   TRes pendingAchievements(
-      Iterable<Fragment$Achievement> Function(
-              Iterable<CopyWith$Fragment$Achievement<Fragment$Achievement>>)
-          _fn);
+    Iterable<Fragment$Achievement> Function(
+      Iterable<CopyWith$Fragment$Achievement<Fragment$Achievement>>,
+    )
+    _fn,
+  );
 }
 
 class _CopyWithImpl$Query$getPendingAchievements<TRes>
     implements CopyWith$Query$getPendingAchievements<TRes> {
-  _CopyWithImpl$Query$getPendingAchievements(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Query$getPendingAchievements(this._instance, this._then);
 
   final Query$getPendingAchievements _instance;
 
@@ -2153,27 +2084,30 @@ class _CopyWithImpl$Query$getPendingAchievements<TRes>
   TRes call({
     Object? pendingAchievements = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Query$getPendingAchievements(
-        pendingAchievements:
-            pendingAchievements == _undefined || pendingAchievements == null
-                ? _instance.pendingAchievements
-                : (pendingAchievements as List<Fragment$Achievement>),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  }) => _then(
+    Query$getPendingAchievements(
+      pendingAchievements:
+          pendingAchievements == _undefined || pendingAchievements == null
+          ? _instance.pendingAchievements
+          : (pendingAchievements as List<Fragment$Achievement>),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 
   TRes pendingAchievements(
-          Iterable<Fragment$Achievement> Function(
-                  Iterable<CopyWith$Fragment$Achievement<Fragment$Achievement>>)
-              _fn) =>
-      call(
-          pendingAchievements: _fn(_instance.pendingAchievements
-              .map((e) => CopyWith$Fragment$Achievement(
-                    e,
-                    (i) => i,
-                  ))).toList());
+    Iterable<Fragment$Achievement> Function(
+      Iterable<CopyWith$Fragment$Achievement<Fragment$Achievement>>,
+    )
+    _fn,
+  ) => call(
+    pendingAchievements: _fn(
+      _instance.pendingAchievements.map(
+        (e) => CopyWith$Fragment$Achievement(e, (i) => i),
+      ),
+    ).toList(),
+  );
 }
 
 class _CopyWithStubImpl$Query$getPendingAchievements<TRes>
@@ -2185,28 +2119,40 @@ class _CopyWithStubImpl$Query$getPendingAchievements<TRes>
   call({
     List<Fragment$Achievement>? pendingAchievements,
     String? $__typename,
-  }) =>
-      _res;
+  }) => _res;
 
   pendingAchievements(_fn) => _res;
 }
 
-const documentNodeQuerygetPendingAchievements = DocumentNode(definitions: [
-  OperationDefinitionNode(
-    type: OperationType.query,
-    name: NameNode(value: 'getPendingAchievements'),
-    variableDefinitions: [],
-    directives: [],
-    selectionSet: SelectionSetNode(selections: [
-      FieldNode(
-        name: NameNode(value: 'pendingAchievements'),
-        alias: null,
-        arguments: [],
-        directives: [],
-        selectionSet: SelectionSetNode(selections: [
-          FragmentSpreadNode(
-            name: NameNode(value: 'Achievement'),
+const documentNodeQuerygetPendingAchievements = DocumentNode(
+  definitions: [
+    OperationDefinitionNode(
+      type: OperationType.query,
+      name: NameNode(value: 'getPendingAchievements'),
+      variableDefinitions: [],
+      directives: [],
+      selectionSet: SelectionSetNode(
+        selections: [
+          FieldNode(
+            name: NameNode(value: 'pendingAchievements'),
+            alias: null,
+            arguments: [],
             directives: [],
+            selectionSet: SelectionSetNode(
+              selections: [
+                FragmentSpreadNode(
+                  name: NameNode(value: 'Achievement'),
+                  directives: [],
+                ),
+                FieldNode(
+                  name: NameNode(value: '__typename'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+              ],
+            ),
           ),
           FieldNode(
             name: NameNode(value: '__typename'),
@@ -2215,22 +2161,15 @@ const documentNodeQuerygetPendingAchievements = DocumentNode(definitions: [
             directives: [],
             selectionSet: null,
           ),
-        ]),
+        ],
       ),
-      FieldNode(
-        name: NameNode(value: '__typename'),
-        alias: null,
-        arguments: [],
-        directives: [],
-        selectionSet: null,
-      ),
-    ]),
-  ),
-  fragmentDefinitionAchievement,
-]);
+    ),
+    fragmentDefinitionAchievement,
+  ],
+);
 Query$getPendingAchievements _parserFn$Query$getPendingAchievements(
-        Map<String, dynamic> data) =>
-    Query$getPendingAchievements.fromJson(data);
+  Map<String, dynamic> data,
+) => Query$getPendingAchievements.fromJson(data);
 typedef OnQueryComplete$Query$getPendingAchievements = FutureOr<void> Function(
   Map<String, dynamic>?,
   Query$getPendingAchievements?,
@@ -2249,37 +2188,37 @@ class Options$Query$getPendingAchievements
     graphql.Context? context,
     OnQueryComplete$Query$getPendingAchievements? onComplete,
     graphql.OnQueryError? onError,
-  })  : onCompleteWithParsed = onComplete,
-        super(
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          pollInterval: pollInterval,
-          context: context,
-          onComplete: onComplete == null
-              ? null
-              : (data) => onComplete(
-                    data,
-                    data == null
-                        ? null
-                        : _parserFn$Query$getPendingAchievements(data),
-                  ),
-          onError: onError,
-          document: documentNodeQuerygetPendingAchievements,
-          parserFn: _parserFn$Query$getPendingAchievements,
-        );
+  }) : onCompleteWithParsed = onComplete,
+       super(
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         pollInterval: pollInterval,
+         context: context,
+         onComplete: onComplete == null
+             ? null
+             : (data) => onComplete(
+                 data,
+                 data == null
+                     ? null
+                     : _parserFn$Query$getPendingAchievements(data),
+               ),
+         onError: onError,
+         document: documentNodeQuerygetPendingAchievements,
+         parserFn: _parserFn$Query$getPendingAchievements,
+       );
 
   final OnQueryComplete$Query$getPendingAchievements? onCompleteWithParsed;
 
   @override
   List<Object?> get properties => [
-        ...super.onComplete == null
-            ? super.properties
-            : super.properties.where((property) => property != onComplete),
-        onCompleteWithParsed,
-      ];
+    ...super.onComplete == null
+        ? super.properties
+        : super.properties.where((property) => property != onComplete),
+    onCompleteWithParsed,
+  ];
 }
 
 class WatchOptions$Query$getPendingAchievements
@@ -2297,61 +2236,66 @@ class WatchOptions$Query$getPendingAchievements
     bool carryForwardDataOnException = true,
     bool fetchResults = false,
   }) : super(
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          document: documentNodeQuerygetPendingAchievements,
-          pollInterval: pollInterval,
-          eagerlyFetchResults: eagerlyFetchResults,
-          carryForwardDataOnException: carryForwardDataOnException,
-          fetchResults: fetchResults,
-          parserFn: _parserFn$Query$getPendingAchievements,
-        );
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         document: documentNodeQuerygetPendingAchievements,
+         pollInterval: pollInterval,
+         eagerlyFetchResults: eagerlyFetchResults,
+         carryForwardDataOnException: carryForwardDataOnException,
+         fetchResults: fetchResults,
+         parserFn: _parserFn$Query$getPendingAchievements,
+       );
 }
 
 class FetchMoreOptions$Query$getPendingAchievements
     extends graphql.FetchMoreOptions {
-  FetchMoreOptions$Query$getPendingAchievements(
-      {required graphql.UpdateQuery updateQuery})
-      : super(
-          updateQuery: updateQuery,
-          document: documentNodeQuerygetPendingAchievements,
-        );
+  FetchMoreOptions$Query$getPendingAchievements({
+    required graphql.UpdateQuery updateQuery,
+  }) : super(
+         updateQuery: updateQuery,
+         document: documentNodeQuerygetPendingAchievements,
+       );
 }
 
 extension ClientExtension$Query$getPendingAchievements
     on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$getPendingAchievements>>
-      query$getPendingAchievements(
-              [Options$Query$getPendingAchievements? options]) async =>
-          await this.query(options ?? Options$Query$getPendingAchievements());
+  query$getPendingAchievements([
+    Options$Query$getPendingAchievements? options,
+  ]) async =>
+      await this.query(options ?? Options$Query$getPendingAchievements());
 
-  graphql.ObservableQuery<
-      Query$getPendingAchievements> watchQuery$getPendingAchievements(
-          [WatchOptions$Query$getPendingAchievements? options]) =>
-      this.watchQuery(options ?? WatchOptions$Query$getPendingAchievements());
+  graphql.ObservableQuery<Query$getPendingAchievements>
+  watchQuery$getPendingAchievements([
+    WatchOptions$Query$getPendingAchievements? options,
+  ]) => this.watchQuery(options ?? WatchOptions$Query$getPendingAchievements());
 
   void writeQuery$getPendingAchievements({
     required Query$getPendingAchievements data,
     bool broadcast = true,
-  }) =>
-      this.writeQuery(
-        graphql.Request(
-            operation: graphql.Operation(
-                document: documentNodeQuerygetPendingAchievements)),
-        data: data.toJson(),
-        broadcast: broadcast,
-      );
+  }) => this.writeQuery(
+    graphql.Request(
+      operation: graphql.Operation(
+        document: documentNodeQuerygetPendingAchievements,
+      ),
+    ),
+    data: data.toJson(),
+    broadcast: broadcast,
+  );
 
-  Query$getPendingAchievements? readQuery$getPendingAchievements(
-      {bool optimistic = true}) {
+  Query$getPendingAchievements? readQuery$getPendingAchievements({
+    bool optimistic = true,
+  }) {
     final result = this.readQuery(
       graphql.Request(
-          operation: graphql.Operation(
-              document: documentNodeQuerygetPendingAchievements)),
+        operation: graphql.Operation(
+          document: documentNodeQuerygetPendingAchievements,
+        ),
+      ),
       optimistic: optimistic,
     );
     return result == null
@@ -2361,15 +2305,16 @@ extension ClientExtension$Query$getPendingAchievements
 }
 
 graphql_flutter.QueryHookResult<Query$getPendingAchievements>
-    useQuery$getPendingAchievements(
-            [Options$Query$getPendingAchievements? options]) =>
-        graphql_flutter
-            .useQuery(options ?? Options$Query$getPendingAchievements());
+useQuery$getPendingAchievements([
+  Options$Query$getPendingAchievements? options,
+]) =>
+    graphql_flutter.useQuery(options ?? Options$Query$getPendingAchievements());
 graphql.ObservableQuery<Query$getPendingAchievements>
-    useWatchQuery$getPendingAchievements(
-            [WatchOptions$Query$getPendingAchievements? options]) =>
-        graphql_flutter.useWatchQuery(
-            options ?? WatchOptions$Query$getPendingAchievements());
+useWatchQuery$getPendingAchievements([
+  WatchOptions$Query$getPendingAchievements? options,
+]) => graphql_flutter.useWatchQuery(
+  options ?? WatchOptions$Query$getPendingAchievements(),
+);
 
 class Query$getPendingAchievements$Widget
     extends graphql_flutter.Query<Query$getPendingAchievements> {
@@ -2378,22 +2323,21 @@ class Query$getPendingAchievements$Widget
     Options$Query$getPendingAchievements? options,
     required graphql_flutter.QueryBuilder<Query$getPendingAchievements> builder,
   }) : super(
-          key: key,
-          options: options ?? Options$Query$getPendingAchievements(),
-          builder: builder,
-        );
+         key: key,
+         options: options ?? Options$Query$getPendingAchievements(),
+         builder: builder,
+       );
 }
 
 class Variables$Mutation$confirmAchievement {
   factory Variables$Mutation$confirmAchievement({required String id}) =>
-      Variables$Mutation$confirmAchievement._({
-        r'id': id,
-      });
+      Variables$Mutation$confirmAchievement._({r'id': id});
 
   Variables$Mutation$confirmAchievement._(this._$data);
 
   factory Variables$Mutation$confirmAchievement.fromJson(
-      Map<String, dynamic> data) {
+    Map<String, dynamic> data,
+  ) {
     final result$data = <String, dynamic>{};
     final l$id = data['id'];
     result$data['id'] = (l$id as String);
@@ -2412,11 +2356,10 @@ class Variables$Mutation$confirmAchievement {
   }
 
   CopyWith$Variables$Mutation$confirmAchievement<
-          Variables$Mutation$confirmAchievement>
-      get copyWith => CopyWith$Variables$Mutation$confirmAchievement(
-            this,
-            (i) => i,
-          );
+    Variables$Mutation$confirmAchievement
+  >
+  get copyWith =>
+      CopyWith$Variables$Mutation$confirmAchievement(this, (i) => i);
 
   @override
   bool operator ==(Object other) {
@@ -2467,11 +2410,12 @@ class _CopyWithImpl$Variables$Mutation$confirmAchievement<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({Object? id = _undefined}) =>
-      _then(Variables$Mutation$confirmAchievement._({
-        ..._instance._$data,
-        if (id != _undefined && id != null) 'id': (id as String),
-      }));
+  TRes call({Object? id = _undefined}) => _then(
+    Variables$Mutation$confirmAchievement._({
+      ..._instance._$data,
+      if (id != _undefined && id != null) 'id': (id as String),
+    }),
+  );
 }
 
 class _CopyWithStubImpl$Variables$Mutation$confirmAchievement<TRes>
@@ -2495,7 +2439,8 @@ class Mutation$confirmAchievement {
     return Mutation$confirmAchievement(
       confirmAchievement:
           Mutation$confirmAchievement$confirmAchievement.fromJson(
-              (l$confirmAchievement as Map<String, dynamic>)),
+            (l$confirmAchievement as Map<String, dynamic>),
+          ),
       $__typename: (l$$__typename as String),
     );
   }
@@ -2517,10 +2462,7 @@ class Mutation$confirmAchievement {
   int get hashCode {
     final l$confirmAchievement = confirmAchievement;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$confirmAchievement,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$confirmAchievement, l$$__typename]);
   }
 
   @override
@@ -2549,10 +2491,7 @@ class Mutation$confirmAchievement {
 extension UtilityExtension$Mutation$confirmAchievement
     on Mutation$confirmAchievement {
   CopyWith$Mutation$confirmAchievement<Mutation$confirmAchievement>
-      get copyWith => CopyWith$Mutation$confirmAchievement(
-            this,
-            (i) => i,
-          );
+  get copyWith => CopyWith$Mutation$confirmAchievement(this, (i) => i);
 }
 
 abstract class CopyWith$Mutation$confirmAchievement<TRes> {
@@ -2569,15 +2508,12 @@ abstract class CopyWith$Mutation$confirmAchievement<TRes> {
     String? $__typename,
   });
   CopyWith$Mutation$confirmAchievement$confirmAchievement<TRes>
-      get confirmAchievement;
+  get confirmAchievement;
 }
 
 class _CopyWithImpl$Mutation$confirmAchievement<TRes>
     implements CopyWith$Mutation$confirmAchievement<TRes> {
-  _CopyWithImpl$Mutation$confirmAchievement(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Mutation$confirmAchievement(this._instance, this._then);
 
   final Mutation$confirmAchievement _instance;
 
@@ -2588,23 +2524,26 @@ class _CopyWithImpl$Mutation$confirmAchievement<TRes>
   TRes call({
     Object? confirmAchievement = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Mutation$confirmAchievement(
-        confirmAchievement:
-            confirmAchievement == _undefined || confirmAchievement == null
-                ? _instance.confirmAchievement
-                : (confirmAchievement
-                    as Mutation$confirmAchievement$confirmAchievement),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  }) => _then(
+    Mutation$confirmAchievement(
+      confirmAchievement:
+          confirmAchievement == _undefined || confirmAchievement == null
+          ? _instance.confirmAchievement
+          : (confirmAchievement
+                as Mutation$confirmAchievement$confirmAchievement),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 
   CopyWith$Mutation$confirmAchievement$confirmAchievement<TRes>
-      get confirmAchievement {
+  get confirmAchievement {
     final local$confirmAchievement = _instance.confirmAchievement;
     return CopyWith$Mutation$confirmAchievement$confirmAchievement(
-        local$confirmAchievement, (e) => call(confirmAchievement: e));
+      local$confirmAchievement,
+      (e) => call(confirmAchievement: e),
+    );
   }
 }
 
@@ -2617,48 +2556,57 @@ class _CopyWithStubImpl$Mutation$confirmAchievement<TRes>
   call({
     Mutation$confirmAchievement$confirmAchievement? confirmAchievement,
     String? $__typename,
-  }) =>
-      _res;
+  }) => _res;
 
   CopyWith$Mutation$confirmAchievement$confirmAchievement<TRes>
-      get confirmAchievement =>
-          CopyWith$Mutation$confirmAchievement$confirmAchievement.stub(_res);
+  get confirmAchievement =>
+      CopyWith$Mutation$confirmAchievement$confirmAchievement.stub(_res);
 }
 
-const documentNodeMutationconfirmAchievement = DocumentNode(definitions: [
-  OperationDefinitionNode(
-    type: OperationType.mutation,
-    name: NameNode(value: 'confirmAchievement'),
-    variableDefinitions: [
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'id')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'ID'),
-          isNonNull: true,
+const documentNodeMutationconfirmAchievement = DocumentNode(
+  definitions: [
+    OperationDefinitionNode(
+      type: OperationType.mutation,
+      name: NameNode(value: 'confirmAchievement'),
+      variableDefinitions: [
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'id')),
+          type: NamedTypeNode(name: NameNode(value: 'ID'), isNonNull: true),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      )
-    ],
-    directives: [],
-    selectionSet: SelectionSetNode(selections: [
-      FieldNode(
-        name: NameNode(value: 'confirmAchievement'),
-        alias: null,
-        arguments: [
-          ArgumentNode(
-            name: NameNode(value: 'id'),
-            value: VariableNode(name: NameNode(value: 'id')),
-          )
-        ],
-        directives: [],
-        selectionSet: SelectionSetNode(selections: [
+      ],
+      directives: [],
+      selectionSet: SelectionSetNode(
+        selections: [
           FieldNode(
-            name: NameNode(value: 'success'),
+            name: NameNode(value: 'confirmAchievement'),
             alias: null,
-            arguments: [],
+            arguments: [
+              ArgumentNode(
+                name: NameNode(value: 'id'),
+                value: VariableNode(name: NameNode(value: 'id')),
+              ),
+            ],
             directives: [],
-            selectionSet: null,
+            selectionSet: SelectionSetNode(
+              selections: [
+                FieldNode(
+                  name: NameNode(value: 'success'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: '__typename'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+              ],
+            ),
           ),
           FieldNode(
             name: NameNode(value: '__typename'),
@@ -2667,26 +2615,19 @@ const documentNodeMutationconfirmAchievement = DocumentNode(definitions: [
             directives: [],
             selectionSet: null,
           ),
-        ]),
+        ],
       ),
-      FieldNode(
-        name: NameNode(value: '__typename'),
-        alias: null,
-        arguments: [],
-        directives: [],
-        selectionSet: null,
-      ),
-    ]),
-  ),
-]);
-Mutation$confirmAchievement _parserFn$Mutation$confirmAchievement(
-        Map<String, dynamic> data) =>
-    Mutation$confirmAchievement.fromJson(data);
-typedef OnMutationCompleted$Mutation$confirmAchievement = FutureOr<void>
-    Function(
-  Map<String, dynamic>?,
-  Mutation$confirmAchievement?,
+    ),
+  ],
 );
+Mutation$confirmAchievement _parserFn$Mutation$confirmAchievement(
+  Map<String, dynamic> data,
+) => Mutation$confirmAchievement.fromJson(data);
+typedef OnMutationCompleted$Mutation$confirmAchievement =
+    FutureOr<void> Function(
+      Map<String, dynamic>?,
+      Mutation$confirmAchievement?,
+    );
 
 class Options$Mutation$confirmAchievement
     extends graphql.MutationOptions<Mutation$confirmAchievement> {
@@ -2702,38 +2643,38 @@ class Options$Mutation$confirmAchievement
     OnMutationCompleted$Mutation$confirmAchievement? onCompleted,
     graphql.OnMutationUpdate<Mutation$confirmAchievement>? update,
     graphql.OnError? onError,
-  })  : onCompletedWithParsed = onCompleted,
-        super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          onCompleted: onCompleted == null
-              ? null
-              : (data) => onCompleted(
-                    data,
-                    data == null
-                        ? null
-                        : _parserFn$Mutation$confirmAchievement(data),
-                  ),
-          update: update,
-          onError: onError,
-          document: documentNodeMutationconfirmAchievement,
-          parserFn: _parserFn$Mutation$confirmAchievement,
-        );
+  }) : onCompletedWithParsed = onCompleted,
+       super(
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         onCompleted: onCompleted == null
+             ? null
+             : (data) => onCompleted(
+                 data,
+                 data == null
+                     ? null
+                     : _parserFn$Mutation$confirmAchievement(data),
+               ),
+         update: update,
+         onError: onError,
+         document: documentNodeMutationconfirmAchievement,
+         parserFn: _parserFn$Mutation$confirmAchievement,
+       );
 
   final OnMutationCompleted$Mutation$confirmAchievement? onCompletedWithParsed;
 
   @override
   List<Object?> get properties => [
-        ...super.onCompleted == null
-            ? super.properties
-            : super.properties.where((property) => property != onCompleted),
-        onCompletedWithParsed,
-      ];
+    ...super.onCompleted == null
+        ? super.properties
+        : super.properties.where((property) => property != onCompleted),
+    onCompletedWithParsed,
+  ];
 }
 
 class WatchOptions$Mutation$confirmAchievement
@@ -2752,63 +2693,62 @@ class WatchOptions$Mutation$confirmAchievement
     bool carryForwardDataOnException = true,
     bool fetchResults = false,
   }) : super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          document: documentNodeMutationconfirmAchievement,
-          pollInterval: pollInterval,
-          eagerlyFetchResults: eagerlyFetchResults,
-          carryForwardDataOnException: carryForwardDataOnException,
-          fetchResults: fetchResults,
-          parserFn: _parserFn$Mutation$confirmAchievement,
-        );
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         document: documentNodeMutationconfirmAchievement,
+         pollInterval: pollInterval,
+         eagerlyFetchResults: eagerlyFetchResults,
+         carryForwardDataOnException: carryForwardDataOnException,
+         fetchResults: fetchResults,
+         parserFn: _parserFn$Mutation$confirmAchievement,
+       );
 }
 
 extension ClientExtension$Mutation$confirmAchievement on graphql.GraphQLClient {
   Future<graphql.QueryResult<Mutation$confirmAchievement>>
-      mutate$confirmAchievement(
-              Options$Mutation$confirmAchievement options) async =>
-          await this.mutate(options);
+  mutate$confirmAchievement(
+    Options$Mutation$confirmAchievement options,
+  ) async => await this.mutate(options);
 
   graphql.ObservableQuery<Mutation$confirmAchievement>
-      watchMutation$confirmAchievement(
-              WatchOptions$Mutation$confirmAchievement options) =>
-          this.watchMutation(options);
+  watchMutation$confirmAchievement(
+    WatchOptions$Mutation$confirmAchievement options,
+  ) => this.watchMutation(options);
 }
 
 class Mutation$confirmAchievement$HookResult {
-  Mutation$confirmAchievement$HookResult(
-    this.runMutation,
-    this.result,
-  );
+  Mutation$confirmAchievement$HookResult(this.runMutation, this.result);
 
   final RunMutation$Mutation$confirmAchievement runMutation;
 
   final graphql.QueryResult<Mutation$confirmAchievement> result;
 }
 
-Mutation$confirmAchievement$HookResult useMutation$confirmAchievement(
-    [WidgetOptions$Mutation$confirmAchievement? options]) {
-  final result = graphql_flutter
-      .useMutation(options ?? WidgetOptions$Mutation$confirmAchievement());
+Mutation$confirmAchievement$HookResult useMutation$confirmAchievement([
+  WidgetOptions$Mutation$confirmAchievement? options,
+]) {
+  final result = graphql_flutter.useMutation(
+    options ?? WidgetOptions$Mutation$confirmAchievement(),
+  );
   return Mutation$confirmAchievement$HookResult(
     (variables, {optimisticResult, typedOptimisticResult}) =>
         result.runMutation(
-      variables.toJson(),
-      optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-    ),
+          variables.toJson(),
+          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+        ),
     result.result,
   );
 }
 
 graphql.ObservableQuery<Mutation$confirmAchievement>
-    useWatchMutation$confirmAchievement(
-            WatchOptions$Mutation$confirmAchievement options) =>
-        graphql_flutter.useWatchMutation(options);
+useWatchMutation$confirmAchievement(
+  WatchOptions$Mutation$confirmAchievement options,
+) => graphql_flutter.useWatchMutation(options);
 
 class WidgetOptions$Mutation$confirmAchievement
     extends graphql.MutationOptions<Mutation$confirmAchievement> {
@@ -2823,45 +2763,45 @@ class WidgetOptions$Mutation$confirmAchievement
     OnMutationCompleted$Mutation$confirmAchievement? onCompleted,
     graphql.OnMutationUpdate<Mutation$confirmAchievement>? update,
     graphql.OnError? onError,
-  })  : onCompletedWithParsed = onCompleted,
-        super(
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          onCompleted: onCompleted == null
-              ? null
-              : (data) => onCompleted(
-                    data,
-                    data == null
-                        ? null
-                        : _parserFn$Mutation$confirmAchievement(data),
-                  ),
-          update: update,
-          onError: onError,
-          document: documentNodeMutationconfirmAchievement,
-          parserFn: _parserFn$Mutation$confirmAchievement,
-        );
+  }) : onCompletedWithParsed = onCompleted,
+       super(
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         onCompleted: onCompleted == null
+             ? null
+             : (data) => onCompleted(
+                 data,
+                 data == null
+                     ? null
+                     : _parserFn$Mutation$confirmAchievement(data),
+               ),
+         update: update,
+         onError: onError,
+         document: documentNodeMutationconfirmAchievement,
+         parserFn: _parserFn$Mutation$confirmAchievement,
+       );
 
   final OnMutationCompleted$Mutation$confirmAchievement? onCompletedWithParsed;
 
   @override
   List<Object?> get properties => [
-        ...super.onCompleted == null
-            ? super.properties
-            : super.properties.where((property) => property != onCompleted),
-        onCompletedWithParsed,
-      ];
+    ...super.onCompleted == null
+        ? super.properties
+        : super.properties.where((property) => property != onCompleted),
+    onCompletedWithParsed,
+  ];
 }
 
-typedef RunMutation$Mutation$confirmAchievement
-    = graphql.MultiSourceResult<Mutation$confirmAchievement> Function(
-  Variables$Mutation$confirmAchievement, {
-  Object? optimisticResult,
-  Mutation$confirmAchievement? typedOptimisticResult,
-});
+typedef RunMutation$Mutation$confirmAchievement =
+    graphql.MultiSourceResult<Mutation$confirmAchievement> Function(
+      Variables$Mutation$confirmAchievement, {
+      Object? optimisticResult,
+      Mutation$confirmAchievement? typedOptimisticResult,
+    });
 typedef Builder$Mutation$confirmAchievement = widgets.Widget Function(
   RunMutation$Mutation$confirmAchievement,
   graphql.QueryResult<Mutation$confirmAchievement>?,
@@ -2874,26 +2814,17 @@ class Mutation$confirmAchievement$Widget
     WidgetOptions$Mutation$confirmAchievement? options,
     required Builder$Mutation$confirmAchievement builder,
   }) : super(
-          key: key,
-          options: options ?? WidgetOptions$Mutation$confirmAchievement(),
-          builder: (
-            run,
-            result,
-          ) =>
-              builder(
-            (
-              variables, {
-              optimisticResult,
-              typedOptimisticResult,
-            }) =>
-                run(
-              variables.toJson(),
-              optimisticResult:
-                  optimisticResult ?? typedOptimisticResult?.toJson(),
-            ),
-            result,
-          ),
-        );
+         key: key,
+         options: options ?? WidgetOptions$Mutation$confirmAchievement(),
+         builder: (run, result) => builder(
+           (variables, {optimisticResult, typedOptimisticResult}) => run(
+             variables.toJson(),
+             optimisticResult:
+                 optimisticResult ?? typedOptimisticResult?.toJson(),
+           ),
+           result,
+         ),
+       );
 }
 
 class Mutation$confirmAchievement$confirmAchievement {
@@ -2903,7 +2834,8 @@ class Mutation$confirmAchievement$confirmAchievement {
   });
 
   factory Mutation$confirmAchievement$confirmAchievement.fromJson(
-      Map<String, dynamic> json) {
+    Map<String, dynamic> json,
+  ) {
     final l$success = json['success'];
     final l$$__typename = json['__typename'];
     return Mutation$confirmAchievement$confirmAchievement(
@@ -2929,10 +2861,7 @@ class Mutation$confirmAchievement$confirmAchievement {
   int get hashCode {
     final l$success = success;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$success,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$success, l$$__typename]);
   }
 
   @override
@@ -2961,11 +2890,10 @@ class Mutation$confirmAchievement$confirmAchievement {
 extension UtilityExtension$Mutation$confirmAchievement$confirmAchievement
     on Mutation$confirmAchievement$confirmAchievement {
   CopyWith$Mutation$confirmAchievement$confirmAchievement<
-          Mutation$confirmAchievement$confirmAchievement>
-      get copyWith => CopyWith$Mutation$confirmAchievement$confirmAchievement(
-            this,
-            (i) => i,
-          );
+    Mutation$confirmAchievement$confirmAchievement
+  >
+  get copyWith =>
+      CopyWith$Mutation$confirmAchievement$confirmAchievement(this, (i) => i);
 }
 
 abstract class CopyWith$Mutation$confirmAchievement$confirmAchievement<TRes> {
@@ -2975,13 +2903,10 @@ abstract class CopyWith$Mutation$confirmAchievement$confirmAchievement<TRes> {
   ) = _CopyWithImpl$Mutation$confirmAchievement$confirmAchievement;
 
   factory CopyWith$Mutation$confirmAchievement$confirmAchievement.stub(
-          TRes res) =
-      _CopyWithStubImpl$Mutation$confirmAchievement$confirmAchievement;
+    TRes res,
+  ) = _CopyWithStubImpl$Mutation$confirmAchievement$confirmAchievement;
 
-  TRes call({
-    bool? success,
-    String? $__typename,
-  });
+  TRes call({bool? success, String? $__typename});
 }
 
 class _CopyWithImpl$Mutation$confirmAchievement$confirmAchievement<TRes>
@@ -2997,18 +2922,17 @@ class _CopyWithImpl$Mutation$confirmAchievement$confirmAchievement<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({
-    Object? success = _undefined,
-    Object? $__typename = _undefined,
-  }) =>
-      _then(Mutation$confirmAchievement$confirmAchievement(
-        success: success == _undefined || success == null
-            ? _instance.success
-            : (success as bool),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  TRes call({Object? success = _undefined, Object? $__typename = _undefined}) =>
+      _then(
+        Mutation$confirmAchievement$confirmAchievement(
+          success: success == _undefined || success == null
+              ? _instance.success
+              : (success as bool),
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String),
+        ),
+      );
 }
 
 class _CopyWithStubImpl$Mutation$confirmAchievement$confirmAchievement<TRes>
@@ -3017,9 +2941,5 @@ class _CopyWithStubImpl$Mutation$confirmAchievement$confirmAchievement<TRes>
 
   TRes _res;
 
-  call({
-    bool? success,
-    String? $__typename,
-  }) =>
-      _res;
+  call({bool? success, String? $__typename}) => _res;
 }

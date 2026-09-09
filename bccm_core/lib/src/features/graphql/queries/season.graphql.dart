@@ -1,25 +1,28 @@
 import 'dart:async';
+
 import 'episode.graphql.dart';
+
 import 'package:flutter/widgets.dart' as widgets;
 import 'package:gql/ast.dart';
 import 'package:graphql/client.dart' as graphql;
 import 'package:graphql_flutter/graphql_flutter.dart' as graphql_flutter;
+
 import 'page.graphql.dart';
 
 class Variables$Query$GetSeasonEpisodes {
   factory Variables$Query$GetSeasonEpisodes({
     required String id,
     String? dir,
-  }) =>
-      Variables$Query$GetSeasonEpisodes._({
-        r'id': id,
-        if (dir != null) r'dir': dir,
-      });
+  }) => Variables$Query$GetSeasonEpisodes._({
+    r'id': id,
+    if (dir != null) r'dir': dir,
+  });
 
   Variables$Query$GetSeasonEpisodes._(this._$data);
 
   factory Variables$Query$GetSeasonEpisodes.fromJson(
-      Map<String, dynamic> data) {
+    Map<String, dynamic> data,
+  ) {
     final result$data = <String, dynamic>{};
     final l$id = data['id'];
     result$data['id'] = (l$id as String);
@@ -48,10 +51,7 @@ class Variables$Query$GetSeasonEpisodes {
   }
 
   CopyWith$Variables$Query$GetSeasonEpisodes<Variables$Query$GetSeasonEpisodes>
-      get copyWith => CopyWith$Variables$Query$GetSeasonEpisodes(
-            this,
-            (i) => i,
-          );
+  get copyWith => CopyWith$Variables$Query$GetSeasonEpisodes(this, (i) => i);
 
   @override
   bool operator ==(Object other) {
@@ -82,10 +82,7 @@ class Variables$Query$GetSeasonEpisodes {
   int get hashCode {
     final l$id = id;
     final l$dir = dir;
-    return Object.hashAll([
-      l$id,
-      _$data.containsKey('dir') ? l$dir : const {},
-    ]);
+    return Object.hashAll([l$id, _$data.containsKey('dir') ? l$dir : const {}]);
   }
 }
 
@@ -98,18 +95,12 @@ abstract class CopyWith$Variables$Query$GetSeasonEpisodes<TRes> {
   factory CopyWith$Variables$Query$GetSeasonEpisodes.stub(TRes res) =
       _CopyWithStubImpl$Variables$Query$GetSeasonEpisodes;
 
-  TRes call({
-    String? id,
-    String? dir,
-  });
+  TRes call({String? id, String? dir});
 }
 
 class _CopyWithImpl$Variables$Query$GetSeasonEpisodes<TRes>
     implements CopyWith$Variables$Query$GetSeasonEpisodes<TRes> {
-  _CopyWithImpl$Variables$Query$GetSeasonEpisodes(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Variables$Query$GetSeasonEpisodes(this._instance, this._then);
 
   final Variables$Query$GetSeasonEpisodes _instance;
 
@@ -117,15 +108,13 @@ class _CopyWithImpl$Variables$Query$GetSeasonEpisodes<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({
-    Object? id = _undefined,
-    Object? dir = _undefined,
-  }) =>
-      _then(Variables$Query$GetSeasonEpisodes._({
-        ..._instance._$data,
-        if (id != _undefined && id != null) 'id': (id as String),
-        if (dir != _undefined) 'dir': (dir as String?),
-      }));
+  TRes call({Object? id = _undefined, Object? dir = _undefined}) => _then(
+    Variables$Query$GetSeasonEpisodes._({
+      ..._instance._$data,
+      if (id != _undefined && id != null) 'id': (id as String),
+      if (dir != _undefined) 'dir': (dir as String?),
+    }),
+  );
 }
 
 class _CopyWithStubImpl$Variables$Query$GetSeasonEpisodes<TRes>
@@ -134,11 +123,7 @@ class _CopyWithStubImpl$Variables$Query$GetSeasonEpisodes<TRes>
 
   TRes _res;
 
-  call({
-    String? id,
-    String? dir,
-  }) =>
-      _res;
+  call({String? id, String? dir}) => _res;
 }
 
 class Query$GetSeasonEpisodes {
@@ -152,7 +137,8 @@ class Query$GetSeasonEpisodes {
     final l$$__typename = json['__typename'];
     return Query$GetSeasonEpisodes(
       season: Query$GetSeasonEpisodes$season.fromJson(
-          (l$season as Map<String, dynamic>)),
+        (l$season as Map<String, dynamic>),
+      ),
       $__typename: (l$$__typename as String),
     );
   }
@@ -174,10 +160,7 @@ class Query$GetSeasonEpisodes {
   int get hashCode {
     final l$season = season;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$season,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$season, l$$__typename]);
   }
 
   @override
@@ -204,10 +187,7 @@ class Query$GetSeasonEpisodes {
 
 extension UtilityExtension$Query$GetSeasonEpisodes on Query$GetSeasonEpisodes {
   CopyWith$Query$GetSeasonEpisodes<Query$GetSeasonEpisodes> get copyWith =>
-      CopyWith$Query$GetSeasonEpisodes(
-        this,
-        (i) => i,
-      );
+      CopyWith$Query$GetSeasonEpisodes(this, (i) => i);
 }
 
 abstract class CopyWith$Query$GetSeasonEpisodes<TRes> {
@@ -219,19 +199,13 @@ abstract class CopyWith$Query$GetSeasonEpisodes<TRes> {
   factory CopyWith$Query$GetSeasonEpisodes.stub(TRes res) =
       _CopyWithStubImpl$Query$GetSeasonEpisodes;
 
-  TRes call({
-    Query$GetSeasonEpisodes$season? season,
-    String? $__typename,
-  });
+  TRes call({Query$GetSeasonEpisodes$season? season, String? $__typename});
   CopyWith$Query$GetSeasonEpisodes$season<TRes> get season;
 }
 
 class _CopyWithImpl$Query$GetSeasonEpisodes<TRes>
     implements CopyWith$Query$GetSeasonEpisodes<TRes> {
-  _CopyWithImpl$Query$GetSeasonEpisodes(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Query$GetSeasonEpisodes(this._instance, this._then);
 
   final Query$GetSeasonEpisodes _instance;
 
@@ -239,23 +213,24 @@ class _CopyWithImpl$Query$GetSeasonEpisodes<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({
-    Object? season = _undefined,
-    Object? $__typename = _undefined,
-  }) =>
-      _then(Query$GetSeasonEpisodes(
-        season: season == _undefined || season == null
-            ? _instance.season
-            : (season as Query$GetSeasonEpisodes$season),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  TRes call({Object? season = _undefined, Object? $__typename = _undefined}) =>
+      _then(
+        Query$GetSeasonEpisodes(
+          season: season == _undefined || season == null
+              ? _instance.season
+              : (season as Query$GetSeasonEpisodes$season),
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String),
+        ),
+      );
 
   CopyWith$Query$GetSeasonEpisodes$season<TRes> get season {
     final local$season = _instance.season;
     return CopyWith$Query$GetSeasonEpisodes$season(
-        local$season, (e) => call(season: e));
+      local$season,
+      (e) => call(season: e),
+    );
   }
 }
 
@@ -265,105 +240,115 @@ class _CopyWithStubImpl$Query$GetSeasonEpisodes<TRes>
 
   TRes _res;
 
-  call({
-    Query$GetSeasonEpisodes$season? season,
-    String? $__typename,
-  }) =>
-      _res;
+  call({Query$GetSeasonEpisodes$season? season, String? $__typename}) => _res;
 
   CopyWith$Query$GetSeasonEpisodes$season<TRes> get season =>
       CopyWith$Query$GetSeasonEpisodes$season.stub(_res);
 }
 
-const documentNodeQueryGetSeasonEpisodes = DocumentNode(definitions: [
-  OperationDefinitionNode(
-    type: OperationType.query,
-    name: NameNode(value: 'GetSeasonEpisodes'),
-    variableDefinitions: [
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'id')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'ID'),
-          isNonNull: true,
+const documentNodeQueryGetSeasonEpisodes = DocumentNode(
+  definitions: [
+    OperationDefinitionNode(
+      type: OperationType.query,
+      name: NameNode(value: 'GetSeasonEpisodes'),
+      variableDefinitions: [
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'id')),
+          type: NamedTypeNode(name: NameNode(value: 'ID'), isNonNull: true),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'dir')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'String'),
-          isNonNull: false,
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'dir')),
+          type: NamedTypeNode(
+            name: NameNode(value: 'String'),
+            isNonNull: false,
+          ),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-    ],
-    directives: [],
-    selectionSet: SelectionSetNode(selections: [
-      FieldNode(
-        name: NameNode(value: 'season'),
-        alias: null,
-        arguments: [
-          ArgumentNode(
-            name: NameNode(value: 'id'),
-            value: VariableNode(name: NameNode(value: 'id')),
-          )
-        ],
-        directives: [],
-        selectionSet: SelectionSetNode(selections: [
+      ],
+      directives: [],
+      selectionSet: SelectionSetNode(
+        selections: [
           FieldNode(
-            name: NameNode(value: 'id'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'number'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'episodes'),
+            name: NameNode(value: 'season'),
             alias: null,
             arguments: [
               ArgumentNode(
-                name: NameNode(value: 'dir'),
-                value: VariableNode(name: NameNode(value: 'dir')),
-              )
+                name: NameNode(value: 'id'),
+                value: VariableNode(name: NameNode(value: 'id')),
+              ),
             ],
             directives: [],
-            selectionSet: SelectionSetNode(selections: [
-              FieldNode(
-                name: NameNode(value: 'items'),
-                alias: null,
-                arguments: [],
-                directives: [],
-                selectionSet: SelectionSetNode(selections: [
-                  FragmentSpreadNode(
-                    name: NameNode(value: 'SeasonListEpisode'),
-                    directives: [],
+            selectionSet: SelectionSetNode(
+              selections: [
+                FieldNode(
+                  name: NameNode(value: 'id'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'number'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'episodes'),
+                  alias: null,
+                  arguments: [
+                    ArgumentNode(
+                      name: NameNode(value: 'dir'),
+                      value: VariableNode(name: NameNode(value: 'dir')),
+                    ),
+                  ],
+                  directives: [],
+                  selectionSet: SelectionSetNode(
+                    selections: [
+                      FieldNode(
+                        name: NameNode(value: 'items'),
+                        alias: null,
+                        arguments: [],
+                        directives: [],
+                        selectionSet: SelectionSetNode(
+                          selections: [
+                            FragmentSpreadNode(
+                              name: NameNode(value: 'SeasonListEpisode'),
+                              directives: [],
+                            ),
+                            FieldNode(
+                              name: NameNode(value: '__typename'),
+                              alias: null,
+                              arguments: [],
+                              directives: [],
+                              selectionSet: null,
+                            ),
+                          ],
+                        ),
+                      ),
+                      FieldNode(
+                        name: NameNode(value: '__typename'),
+                        alias: null,
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null,
+                      ),
+                    ],
                   ),
-                  FieldNode(
-                    name: NameNode(value: '__typename'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null,
-                  ),
-                ]),
-              ),
-              FieldNode(
-                name: NameNode(value: '__typename'),
-                alias: null,
-                arguments: [],
-                directives: [],
-                selectionSet: null,
-              ),
-            ]),
+                ),
+                FieldNode(
+                  name: NameNode(value: '__typename'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+              ],
+            ),
           ),
           FieldNode(
             name: NameNode(value: '__typename'),
@@ -372,23 +357,16 @@ const documentNodeQueryGetSeasonEpisodes = DocumentNode(definitions: [
             directives: [],
             selectionSet: null,
           ),
-        ]),
+        ],
       ),
-      FieldNode(
-        name: NameNode(value: '__typename'),
-        alias: null,
-        arguments: [],
-        directives: [],
-        selectionSet: null,
-      ),
-    ]),
-  ),
-  fragmentDefinitionSeasonListEpisode,
-  fragmentDefinitionEpisodeThumbnail,
-]);
+    ),
+    fragmentDefinitionSeasonListEpisode,
+    fragmentDefinitionEpisodeThumbnail,
+  ],
+);
 Query$GetSeasonEpisodes _parserFn$Query$GetSeasonEpisodes(
-        Map<String, dynamic> data) =>
-    Query$GetSeasonEpisodes.fromJson(data);
+  Map<String, dynamic> data,
+) => Query$GetSeasonEpisodes.fromJson(data);
 typedef OnQueryComplete$Query$GetSeasonEpisodes = FutureOr<void> Function(
   Map<String, dynamic>?,
   Query$GetSeasonEpisodes?,
@@ -408,38 +386,36 @@ class Options$Query$GetSeasonEpisodes
     graphql.Context? context,
     OnQueryComplete$Query$GetSeasonEpisodes? onComplete,
     graphql.OnQueryError? onError,
-  })  : onCompleteWithParsed = onComplete,
-        super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          pollInterval: pollInterval,
-          context: context,
-          onComplete: onComplete == null
-              ? null
-              : (data) => onComplete(
-                    data,
-                    data == null
-                        ? null
-                        : _parserFn$Query$GetSeasonEpisodes(data),
-                  ),
-          onError: onError,
-          document: documentNodeQueryGetSeasonEpisodes,
-          parserFn: _parserFn$Query$GetSeasonEpisodes,
-        );
+  }) : onCompleteWithParsed = onComplete,
+       super(
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         pollInterval: pollInterval,
+         context: context,
+         onComplete: onComplete == null
+             ? null
+             : (data) => onComplete(
+                 data,
+                 data == null ? null : _parserFn$Query$GetSeasonEpisodes(data),
+               ),
+         onError: onError,
+         document: documentNodeQueryGetSeasonEpisodes,
+         parserFn: _parserFn$Query$GetSeasonEpisodes,
+       );
 
   final OnQueryComplete$Query$GetSeasonEpisodes? onCompleteWithParsed;
 
   @override
   List<Object?> get properties => [
-        ...super.onComplete == null
-            ? super.properties
-            : super.properties.where((property) => property != onComplete),
-        onCompleteWithParsed,
-      ];
+    ...super.onComplete == null
+        ? super.properties
+        : super.properties.where((property) => property != onComplete),
+    onCompleteWithParsed,
+  ];
 }
 
 class WatchOptions$Query$GetSeasonEpisodes
@@ -458,20 +434,20 @@ class WatchOptions$Query$GetSeasonEpisodes
     bool carryForwardDataOnException = true,
     bool fetchResults = false,
   }) : super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          document: documentNodeQueryGetSeasonEpisodes,
-          pollInterval: pollInterval,
-          eagerlyFetchResults: eagerlyFetchResults,
-          carryForwardDataOnException: carryForwardDataOnException,
-          fetchResults: fetchResults,
-          parserFn: _parserFn$Query$GetSeasonEpisodes,
-        );
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         document: documentNodeQueryGetSeasonEpisodes,
+         pollInterval: pollInterval,
+         eagerlyFetchResults: eagerlyFetchResults,
+         carryForwardDataOnException: carryForwardDataOnException,
+         fetchResults: fetchResults,
+         parserFn: _parserFn$Query$GetSeasonEpisodes,
+       );
 }
 
 class FetchMoreOptions$Query$GetSeasonEpisodes
@@ -480,35 +456,35 @@ class FetchMoreOptions$Query$GetSeasonEpisodes
     required graphql.UpdateQuery updateQuery,
     required Variables$Query$GetSeasonEpisodes variables,
   }) : super(
-          updateQuery: updateQuery,
-          variables: variables.toJson(),
-          document: documentNodeQueryGetSeasonEpisodes,
-        );
+         updateQuery: updateQuery,
+         variables: variables.toJson(),
+         document: documentNodeQueryGetSeasonEpisodes,
+       );
 }
 
 extension ClientExtension$Query$GetSeasonEpisodes on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$GetSeasonEpisodes>> query$GetSeasonEpisodes(
-          Options$Query$GetSeasonEpisodes options) async =>
-      await this.query(options);
+    Options$Query$GetSeasonEpisodes options,
+  ) async => await this.query(options);
 
   graphql.ObservableQuery<Query$GetSeasonEpisodes> watchQuery$GetSeasonEpisodes(
-          WatchOptions$Query$GetSeasonEpisodes options) =>
-      this.watchQuery(options);
+    WatchOptions$Query$GetSeasonEpisodes options,
+  ) => this.watchQuery(options);
 
   void writeQuery$GetSeasonEpisodes({
     required Query$GetSeasonEpisodes data,
     required Variables$Query$GetSeasonEpisodes variables,
     bool broadcast = true,
-  }) =>
-      this.writeQuery(
-        graphql.Request(
-          operation:
-              graphql.Operation(document: documentNodeQueryGetSeasonEpisodes),
-          variables: variables.toJson(),
-        ),
-        data: data.toJson(),
-        broadcast: broadcast,
-      );
+  }) => this.writeQuery(
+    graphql.Request(
+      operation: graphql.Operation(
+        document: documentNodeQueryGetSeasonEpisodes,
+      ),
+      variables: variables.toJson(),
+    ),
+    data: data.toJson(),
+    broadcast: broadcast,
+  );
 
   Query$GetSeasonEpisodes? readQuery$GetSeasonEpisodes({
     required Variables$Query$GetSeasonEpisodes variables,
@@ -516,8 +492,9 @@ extension ClientExtension$Query$GetSeasonEpisodes on graphql.GraphQLClient {
   }) {
     final result = this.readQuery(
       graphql.Request(
-        operation:
-            graphql.Operation(document: documentNodeQueryGetSeasonEpisodes),
+        operation: graphql.Operation(
+          document: documentNodeQueryGetSeasonEpisodes,
+        ),
         variables: variables.toJson(),
       ),
       optimistic: optimistic,
@@ -527,12 +504,11 @@ extension ClientExtension$Query$GetSeasonEpisodes on graphql.GraphQLClient {
 }
 
 graphql_flutter.QueryHookResult<Query$GetSeasonEpisodes>
-    useQuery$GetSeasonEpisodes(Options$Query$GetSeasonEpisodes options) =>
-        graphql_flutter.useQuery(options);
+useQuery$GetSeasonEpisodes(Options$Query$GetSeasonEpisodes options) =>
+    graphql_flutter.useQuery(options);
 graphql.ObservableQuery<Query$GetSeasonEpisodes>
-    useWatchQuery$GetSeasonEpisodes(
-            WatchOptions$Query$GetSeasonEpisodes options) =>
-        graphql_flutter.useWatchQuery(options);
+useWatchQuery$GetSeasonEpisodes(WatchOptions$Query$GetSeasonEpisodes options) =>
+    graphql_flutter.useWatchQuery(options);
 
 class Query$GetSeasonEpisodes$Widget
     extends graphql_flutter.Query<Query$GetSeasonEpisodes> {
@@ -540,11 +516,7 @@ class Query$GetSeasonEpisodes$Widget
     widgets.Key? key,
     required Options$Query$GetSeasonEpisodes options,
     required graphql_flutter.QueryBuilder<Query$GetSeasonEpisodes> builder,
-  }) : super(
-          key: key,
-          options: options,
-          builder: builder,
-        );
+  }) : super(key: key, options: options, builder: builder);
 }
 
 class Query$GetSeasonEpisodes$season {
@@ -564,7 +536,8 @@ class Query$GetSeasonEpisodes$season {
       id: (l$id as String),
       number: (l$number as int),
       episodes: Query$GetSeasonEpisodes$season$episodes.fromJson(
-          (l$episodes as Map<String, dynamic>)),
+        (l$episodes as Map<String, dynamic>),
+      ),
       $__typename: (l$$__typename as String),
     );
   }
@@ -596,12 +569,7 @@ class Query$GetSeasonEpisodes$season {
     final l$number = number;
     final l$episodes = episodes;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$id,
-      l$number,
-      l$episodes,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$id, l$number, l$episodes, l$$__typename]);
   }
 
   @override
@@ -640,10 +608,7 @@ class Query$GetSeasonEpisodes$season {
 extension UtilityExtension$Query$GetSeasonEpisodes$season
     on Query$GetSeasonEpisodes$season {
   CopyWith$Query$GetSeasonEpisodes$season<Query$GetSeasonEpisodes$season>
-      get copyWith => CopyWith$Query$GetSeasonEpisodes$season(
-            this,
-            (i) => i,
-          );
+  get copyWith => CopyWith$Query$GetSeasonEpisodes$season(this, (i) => i);
 }
 
 abstract class CopyWith$Query$GetSeasonEpisodes$season<TRes> {
@@ -666,10 +631,7 @@ abstract class CopyWith$Query$GetSeasonEpisodes$season<TRes> {
 
 class _CopyWithImpl$Query$GetSeasonEpisodes$season<TRes>
     implements CopyWith$Query$GetSeasonEpisodes$season<TRes> {
-  _CopyWithImpl$Query$GetSeasonEpisodes$season(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Query$GetSeasonEpisodes$season(this._instance, this._then);
 
   final Query$GetSeasonEpisodes$season _instance;
 
@@ -682,24 +644,27 @@ class _CopyWithImpl$Query$GetSeasonEpisodes$season<TRes>
     Object? number = _undefined,
     Object? episodes = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Query$GetSeasonEpisodes$season(
-        id: id == _undefined || id == null ? _instance.id : (id as String),
-        number: number == _undefined || number == null
-            ? _instance.number
-            : (number as int),
-        episodes: episodes == _undefined || episodes == null
-            ? _instance.episodes
-            : (episodes as Query$GetSeasonEpisodes$season$episodes),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  }) => _then(
+    Query$GetSeasonEpisodes$season(
+      id: id == _undefined || id == null ? _instance.id : (id as String),
+      number: number == _undefined || number == null
+          ? _instance.number
+          : (number as int),
+      episodes: episodes == _undefined || episodes == null
+          ? _instance.episodes
+          : (episodes as Query$GetSeasonEpisodes$season$episodes),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 
   CopyWith$Query$GetSeasonEpisodes$season$episodes<TRes> get episodes {
     final local$episodes = _instance.episodes;
     return CopyWith$Query$GetSeasonEpisodes$season$episodes(
-        local$episodes, (e) => call(episodes: e));
+      local$episodes,
+      (e) => call(episodes: e),
+    );
   }
 }
 
@@ -714,8 +679,7 @@ class _CopyWithStubImpl$Query$GetSeasonEpisodes$season<TRes>
     int? number,
     Query$GetSeasonEpisodes$season$episodes? episodes,
     String? $__typename,
-  }) =>
-      _res;
+  }) => _res;
 
   CopyWith$Query$GetSeasonEpisodes$season$episodes<TRes> get episodes =>
       CopyWith$Query$GetSeasonEpisodes$season$episodes.stub(_res);
@@ -728,13 +692,17 @@ class Query$GetSeasonEpisodes$season$episodes {
   });
 
   factory Query$GetSeasonEpisodes$season$episodes.fromJson(
-      Map<String, dynamic> json) {
+    Map<String, dynamic> json,
+  ) {
     final l$items = json['items'];
     final l$$__typename = json['__typename'];
     return Query$GetSeasonEpisodes$season$episodes(
       items: (l$items as List<dynamic>)
-          .map((e) =>
-              Fragment$SeasonListEpisode.fromJson((e as Map<String, dynamic>)))
+          .map(
+            (e) => Fragment$SeasonListEpisode.fromJson(
+              (e as Map<String, dynamic>),
+            ),
+          )
           .toList(),
       $__typename: (l$$__typename as String),
     );
@@ -796,11 +764,10 @@ class Query$GetSeasonEpisodes$season$episodes {
 extension UtilityExtension$Query$GetSeasonEpisodes$season$episodes
     on Query$GetSeasonEpisodes$season$episodes {
   CopyWith$Query$GetSeasonEpisodes$season$episodes<
-          Query$GetSeasonEpisodes$season$episodes>
-      get copyWith => CopyWith$Query$GetSeasonEpisodes$season$episodes(
-            this,
-            (i) => i,
-          );
+    Query$GetSeasonEpisodes$season$episodes
+  >
+  get copyWith =>
+      CopyWith$Query$GetSeasonEpisodes$season$episodes(this, (i) => i);
 }
 
 abstract class CopyWith$Query$GetSeasonEpisodes$season$episodes<TRes> {
@@ -812,16 +779,13 @@ abstract class CopyWith$Query$GetSeasonEpisodes$season$episodes<TRes> {
   factory CopyWith$Query$GetSeasonEpisodes$season$episodes.stub(TRes res) =
       _CopyWithStubImpl$Query$GetSeasonEpisodes$season$episodes;
 
-  TRes call({
-    List<Fragment$SeasonListEpisode>? items,
-    String? $__typename,
-  });
+  TRes call({List<Fragment$SeasonListEpisode>? items, String? $__typename});
   TRes items(
-      Iterable<Fragment$SeasonListEpisode> Function(
-              Iterable<
-                  CopyWith$Fragment$SeasonListEpisode<
-                      Fragment$SeasonListEpisode>>)
-          _fn);
+    Iterable<Fragment$SeasonListEpisode> Function(
+      Iterable<CopyWith$Fragment$SeasonListEpisode<Fragment$SeasonListEpisode>>,
+    )
+    _fn,
+  );
 }
 
 class _CopyWithImpl$Query$GetSeasonEpisodes$season$episodes<TRes>
@@ -837,31 +801,30 @@ class _CopyWithImpl$Query$GetSeasonEpisodes$season$episodes<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({
-    Object? items = _undefined,
-    Object? $__typename = _undefined,
-  }) =>
-      _then(Query$GetSeasonEpisodes$season$episodes(
-        items: items == _undefined || items == null
-            ? _instance.items
-            : (items as List<Fragment$SeasonListEpisode>),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  TRes call({Object? items = _undefined, Object? $__typename = _undefined}) =>
+      _then(
+        Query$GetSeasonEpisodes$season$episodes(
+          items: items == _undefined || items == null
+              ? _instance.items
+              : (items as List<Fragment$SeasonListEpisode>),
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String),
+        ),
+      );
 
   TRes items(
-          Iterable<Fragment$SeasonListEpisode> Function(
-                  Iterable<
-                      CopyWith$Fragment$SeasonListEpisode<
-                          Fragment$SeasonListEpisode>>)
-              _fn) =>
-      call(
-          items: _fn(
-              _instance.items.map((e) => CopyWith$Fragment$SeasonListEpisode(
-                    e,
-                    (i) => i,
-                  ))).toList());
+    Iterable<Fragment$SeasonListEpisode> Function(
+      Iterable<CopyWith$Fragment$SeasonListEpisode<Fragment$SeasonListEpisode>>,
+    )
+    _fn,
+  ) => call(
+    items: _fn(
+      _instance.items.map(
+        (e) => CopyWith$Fragment$SeasonListEpisode(e, (i) => i),
+      ),
+    ).toList(),
+  );
 }
 
 class _CopyWithStubImpl$Query$GetSeasonEpisodes$season$episodes<TRes>
@@ -870,11 +833,7 @@ class _CopyWithStubImpl$Query$GetSeasonEpisodes$season$episodes<TRes>
 
   TRes _res;
 
-  call({
-    List<Fragment$SeasonListEpisode>? items,
-    String? $__typename,
-  }) =>
-      _res;
+  call({List<Fragment$SeasonListEpisode>? items, String? $__typename}) => _res;
 
   items(_fn) => _res;
 }

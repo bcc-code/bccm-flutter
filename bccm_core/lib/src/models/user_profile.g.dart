@@ -6,26 +6,25 @@ part of 'user_profile.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$UserProfileImpl _$$UserProfileImplFromJson(Map<String, dynamic> json) =>
-    _$UserProfileImpl(
-      id: json['id'] as String,
-      name: json['name'] as String,
-      nickname: json['nickname'] as String?,
-      picture: json['picture'] as String?,
-      updatedAt: json['updatedAt'] as String?,
-      countryIso2Code: json['countryIso2Code'] as String?,
-      churchId: (json['churchId'] as num?)?.toInt(),
-      birthdate: json['birthdate'] as String?,
-      email: json['email'] as String?,
-      gender: json['gender'] as String?,
-      givenName: json['givenName'] as String?,
-      familyName: json['familyName'] as String?,
-      mediaSubscriber: json['mediaSubscriber'] as bool?,
-      hasMembership: json['hasMembership'] as bool?,
-      bccPersonId: json['bccPersonId'] as String?,
-    );
+_UserProfile _$UserProfileFromJson(Map<String, dynamic> json) => _UserProfile(
+  id: json['id'] as String,
+  name: json['name'] as String,
+  nickname: json['nickname'] as String?,
+  picture: json['picture'] as String?,
+  updatedAt: json['updatedAt'] as String?,
+  countryIso2Code: json['countryIso2Code'] as String?,
+  churchId: (json['churchId'] as num?)?.toInt(),
+  birthdate: json['birthdate'] as String?,
+  email: json['email'] as String?,
+  gender: json['gender'] as String?,
+  givenName: json['givenName'] as String?,
+  familyName: json['familyName'] as String?,
+  mediaSubscriber: json['mediaSubscriber'] as bool?,
+  hasMembership: json['hasMembership'] as bool?,
+  bccPersonId: json['bccPersonId'] as String?,
+);
 
-Map<String, dynamic> _$$UserProfileImplToJson(_$UserProfileImpl instance) =>
+Map<String, dynamic> _$UserProfileToJson(_UserProfile instance) =>
     <String, dynamic>{
       'id': instance.id,
       'name': instance.name,

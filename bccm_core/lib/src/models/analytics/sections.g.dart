@@ -6,23 +6,22 @@ part of 'sections.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$SectionClickedEventImpl _$$SectionClickedEventImplFromJson(
-  Map<String, dynamic> json,
-) => _$SectionClickedEventImpl(
-  sectionId: json['sectionId'] as String,
-  sectionName: json['sectionName'] as String?,
-  sectionPosition: (json['sectionPosition'] as num).toInt(),
-  sectionType: json['sectionType'] as String,
-  elementName: json['elementName'] as String?,
-  elementPosition: (json['elementPosition'] as num).toInt(),
-  elementType: json['elementType'] as String,
-  elementId: json['elementId'] as String,
-  pageCode: json['pageCode'] as String?,
-  meta: json['meta'] as Map<String, dynamic>?,
-);
+_SectionClickedEvent _$SectionClickedEventFromJson(Map<String, dynamic> json) =>
+    _SectionClickedEvent(
+      sectionId: json['sectionId'] as String,
+      sectionName: json['sectionName'] as String?,
+      sectionPosition: (json['sectionPosition'] as num).toInt(),
+      sectionType: json['sectionType'] as String,
+      elementName: json['elementName'] as String?,
+      elementPosition: (json['elementPosition'] as num).toInt(),
+      elementType: json['elementType'] as String,
+      elementId: json['elementId'] as String,
+      pageCode: json['pageCode'] as String?,
+      meta: json['meta'] as Map<String, dynamic>?,
+    );
 
-Map<String, dynamic> _$$SectionClickedEventImplToJson(
-  _$SectionClickedEventImpl instance,
+Map<String, dynamic> _$SectionClickedEventToJson(
+  _SectionClickedEvent instance,
 ) => <String, dynamic>{
   'sectionId': instance.sectionId,
   'sectionName': instance.sectionName,

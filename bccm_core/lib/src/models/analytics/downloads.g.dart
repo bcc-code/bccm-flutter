@@ -6,17 +6,17 @@ part of 'downloads.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$VideoDownloadStartedEventImpl _$$VideoDownloadStartedEventImplFromJson(
+_VideoDownloadStartedEvent _$VideoDownloadStartedEventFromJson(
   Map<String, dynamic> json,
-) => _$VideoDownloadStartedEventImpl(
+) => _VideoDownloadStartedEvent(
   downloadId: json['downloadId'] as String,
   episodeId: json['episodeId'] as String,
   quality: json['quality'] as String?,
   audioLanguage: json['audioLanguage'] as String?,
 );
 
-Map<String, dynamic> _$$VideoDownloadStartedEventImplToJson(
-  _$VideoDownloadStartedEventImpl instance,
+Map<String, dynamic> _$VideoDownloadStartedEventToJson(
+  _VideoDownloadStartedEvent instance,
 ) => <String, dynamic>{
   'downloadId': instance.downloadId,
   'episodeId': instance.episodeId,
@@ -24,29 +24,29 @@ Map<String, dynamic> _$$VideoDownloadStartedEventImplToJson(
   'audioLanguage': instance.audioLanguage,
 };
 
-_$VideoDownloadRemovedEventImpl _$$VideoDownloadRemovedEventImplFromJson(
+_VideoDownloadRemovedEvent _$VideoDownloadRemovedEventFromJson(
   Map<String, dynamic> json,
-) => _$VideoDownloadRemovedEventImpl(
+) => _VideoDownloadRemovedEvent(
   downloadId: json['downloadId'] as String,
   episodeId: json['episodeId'] as String?,
 );
 
-Map<String, dynamic> _$$VideoDownloadRemovedEventImplToJson(
-  _$VideoDownloadRemovedEventImpl instance,
+Map<String, dynamic> _$VideoDownloadRemovedEventToJson(
+  _VideoDownloadRemovedEvent instance,
 ) => <String, dynamic>{
   'downloadId': instance.downloadId,
   'episodeId': instance.episodeId,
 };
 
-_$VideoDownloadPlayedEventImpl _$$VideoDownloadPlayedEventImplFromJson(
+_VideoDownloadPlayedEvent _$VideoDownloadPlayedEventFromJson(
   Map<String, dynamic> json,
-) => _$VideoDownloadPlayedEventImpl(
+) => _VideoDownloadPlayedEvent(
   downloadId: json['downloadId'] as String,
   episodeId: json['episodeId'] as String?,
 );
 
-Map<String, dynamic> _$$VideoDownloadPlayedEventImplToJson(
-  _$VideoDownloadPlayedEventImpl instance,
+Map<String, dynamic> _$VideoDownloadPlayedEventToJson(
+  _VideoDownloadPlayedEvent instance,
 ) => <String, dynamic>{
   'downloadId': instance.downloadId,
   'episodeId': instance.episodeId,

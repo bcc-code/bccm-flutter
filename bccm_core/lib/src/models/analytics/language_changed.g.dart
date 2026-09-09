@@ -6,16 +6,16 @@ part of 'language_changed.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$LanguageChangedEventImpl _$$LanguageChangedEventImplFromJson(
+_LanguageChangedEvent _$LanguageChangedEventFromJson(
   Map<String, dynamic> json,
-) => _$LanguageChangedEventImpl(
+) => _LanguageChangedEvent(
   languageFrom: json['languageFrom'] as String?,
   languageTo: json['languageTo'] as String,
   languageChangeType: json['languageChangeType'] as String,
 );
 
-Map<String, dynamic> _$$LanguageChangedEventImplToJson(
-  _$LanguageChangedEventImpl instance,
+Map<String, dynamic> _$LanguageChangedEventToJson(
+  _LanguageChangedEvent instance,
 ) => <String, dynamic>{
   'languageFrom': instance.languageFrom,
   'languageTo': instance.languageTo,

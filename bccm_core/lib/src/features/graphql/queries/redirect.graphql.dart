@@ -1,4 +1,5 @@
 import 'dart:async';
+
 import 'package:flutter/widgets.dart' as widgets;
 import 'package:gql/ast.dart';
 import 'package:graphql/client.dart' as graphql;
@@ -6,9 +7,7 @@ import 'package:graphql_flutter/graphql_flutter.dart' as graphql_flutter;
 
 class Variables$Query$GetRedirectUrl {
   factory Variables$Query$GetRedirectUrl({required String id}) =>
-      Variables$Query$GetRedirectUrl._({
-        r'id': id,
-      });
+      Variables$Query$GetRedirectUrl._({r'id': id});
 
   Variables$Query$GetRedirectUrl._(this._$data);
 
@@ -31,10 +30,7 @@ class Variables$Query$GetRedirectUrl {
   }
 
   CopyWith$Variables$Query$GetRedirectUrl<Variables$Query$GetRedirectUrl>
-      get copyWith => CopyWith$Variables$Query$GetRedirectUrl(
-            this,
-            (i) => i,
-          );
+  get copyWith => CopyWith$Variables$Query$GetRedirectUrl(this, (i) => i);
 
   @override
   bool operator ==(Object other) {
@@ -74,10 +70,7 @@ abstract class CopyWith$Variables$Query$GetRedirectUrl<TRes> {
 
 class _CopyWithImpl$Variables$Query$GetRedirectUrl<TRes>
     implements CopyWith$Variables$Query$GetRedirectUrl<TRes> {
-  _CopyWithImpl$Variables$Query$GetRedirectUrl(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Variables$Query$GetRedirectUrl(this._instance, this._then);
 
   final Variables$Query$GetRedirectUrl _instance;
 
@@ -85,11 +78,12 @@ class _CopyWithImpl$Variables$Query$GetRedirectUrl<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({Object? id = _undefined}) =>
-      _then(Variables$Query$GetRedirectUrl._({
-        ..._instance._$data,
-        if (id != _undefined && id != null) 'id': (id as String),
-      }));
+  TRes call({Object? id = _undefined}) => _then(
+    Variables$Query$GetRedirectUrl._({
+      ..._instance._$data,
+      if (id != _undefined && id != null) 'id': (id as String),
+    }),
+  );
 }
 
 class _CopyWithStubImpl$Variables$Query$GetRedirectUrl<TRes>
@@ -112,7 +106,8 @@ class Query$GetRedirectUrl {
     final l$$__typename = json['__typename'];
     return Query$GetRedirectUrl(
       redirect: Query$GetRedirectUrl$redirect.fromJson(
-          (l$redirect as Map<String, dynamic>)),
+        (l$redirect as Map<String, dynamic>),
+      ),
       $__typename: (l$$__typename as String),
     );
   }
@@ -134,10 +129,7 @@ class Query$GetRedirectUrl {
   int get hashCode {
     final l$redirect = redirect;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$redirect,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$redirect, l$$__typename]);
   }
 
   @override
@@ -164,10 +156,7 @@ class Query$GetRedirectUrl {
 
 extension UtilityExtension$Query$GetRedirectUrl on Query$GetRedirectUrl {
   CopyWith$Query$GetRedirectUrl<Query$GetRedirectUrl> get copyWith =>
-      CopyWith$Query$GetRedirectUrl(
-        this,
-        (i) => i,
-      );
+      CopyWith$Query$GetRedirectUrl(this, (i) => i);
 }
 
 abstract class CopyWith$Query$GetRedirectUrl<TRes> {
@@ -179,19 +168,13 @@ abstract class CopyWith$Query$GetRedirectUrl<TRes> {
   factory CopyWith$Query$GetRedirectUrl.stub(TRes res) =
       _CopyWithStubImpl$Query$GetRedirectUrl;
 
-  TRes call({
-    Query$GetRedirectUrl$redirect? redirect,
-    String? $__typename,
-  });
+  TRes call({Query$GetRedirectUrl$redirect? redirect, String? $__typename});
   CopyWith$Query$GetRedirectUrl$redirect<TRes> get redirect;
 }
 
 class _CopyWithImpl$Query$GetRedirectUrl<TRes>
     implements CopyWith$Query$GetRedirectUrl<TRes> {
-  _CopyWithImpl$Query$GetRedirectUrl(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Query$GetRedirectUrl(this._instance, this._then);
 
   final Query$GetRedirectUrl _instance;
 
@@ -202,20 +185,23 @@ class _CopyWithImpl$Query$GetRedirectUrl<TRes>
   TRes call({
     Object? redirect = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Query$GetRedirectUrl(
-        redirect: redirect == _undefined || redirect == null
-            ? _instance.redirect
-            : (redirect as Query$GetRedirectUrl$redirect),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  }) => _then(
+    Query$GetRedirectUrl(
+      redirect: redirect == _undefined || redirect == null
+          ? _instance.redirect
+          : (redirect as Query$GetRedirectUrl$redirect),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 
   CopyWith$Query$GetRedirectUrl$redirect<TRes> get redirect {
     final local$redirect = _instance.redirect;
     return CopyWith$Query$GetRedirectUrl$redirect(
-        local$redirect, (e) => call(redirect: e));
+      local$redirect,
+      (e) => call(redirect: e),
+    );
   }
 }
 
@@ -225,57 +211,63 @@ class _CopyWithStubImpl$Query$GetRedirectUrl<TRes>
 
   TRes _res;
 
-  call({
-    Query$GetRedirectUrl$redirect? redirect,
-    String? $__typename,
-  }) =>
-      _res;
+  call({Query$GetRedirectUrl$redirect? redirect, String? $__typename}) => _res;
 
   CopyWith$Query$GetRedirectUrl$redirect<TRes> get redirect =>
       CopyWith$Query$GetRedirectUrl$redirect.stub(_res);
 }
 
-const documentNodeQueryGetRedirectUrl = DocumentNode(definitions: [
-  OperationDefinitionNode(
-    type: OperationType.query,
-    name: NameNode(value: 'GetRedirectUrl'),
-    variableDefinitions: [
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'id')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'String'),
-          isNonNull: true,
+const documentNodeQueryGetRedirectUrl = DocumentNode(
+  definitions: [
+    OperationDefinitionNode(
+      type: OperationType.query,
+      name: NameNode(value: 'GetRedirectUrl'),
+      variableDefinitions: [
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'id')),
+          type: NamedTypeNode(name: NameNode(value: 'String'), isNonNull: true),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      )
-    ],
-    directives: [],
-    selectionSet: SelectionSetNode(selections: [
-      FieldNode(
-        name: NameNode(value: 'redirect'),
-        alias: null,
-        arguments: [
-          ArgumentNode(
-            name: NameNode(value: 'id'),
-            value: VariableNode(name: NameNode(value: 'id')),
-          )
-        ],
-        directives: [],
-        selectionSet: SelectionSetNode(selections: [
+      ],
+      directives: [],
+      selectionSet: SelectionSetNode(
+        selections: [
           FieldNode(
-            name: NameNode(value: 'url'),
+            name: NameNode(value: 'redirect'),
             alias: null,
-            arguments: [],
+            arguments: [
+              ArgumentNode(
+                name: NameNode(value: 'id'),
+                value: VariableNode(name: NameNode(value: 'id')),
+              ),
+            ],
             directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'requiresAuthentication'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
+            selectionSet: SelectionSetNode(
+              selections: [
+                FieldNode(
+                  name: NameNode(value: 'url'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'requiresAuthentication'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: '__typename'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+              ],
+            ),
           ),
           FieldNode(
             name: NameNode(value: '__typename'),
@@ -284,21 +276,14 @@ const documentNodeQueryGetRedirectUrl = DocumentNode(definitions: [
             directives: [],
             selectionSet: null,
           ),
-        ]),
+        ],
       ),
-      FieldNode(
-        name: NameNode(value: '__typename'),
-        alias: null,
-        arguments: [],
-        directives: [],
-        selectionSet: null,
-      ),
-    ]),
-  ),
-]);
+    ),
+  ],
+);
 Query$GetRedirectUrl _parserFn$Query$GetRedirectUrl(
-        Map<String, dynamic> data) =>
-    Query$GetRedirectUrl.fromJson(data);
+  Map<String, dynamic> data,
+) => Query$GetRedirectUrl.fromJson(data);
 typedef OnQueryComplete$Query$GetRedirectUrl = FutureOr<void> Function(
   Map<String, dynamic>?,
   Query$GetRedirectUrl?,
@@ -318,36 +303,36 @@ class Options$Query$GetRedirectUrl
     graphql.Context? context,
     OnQueryComplete$Query$GetRedirectUrl? onComplete,
     graphql.OnQueryError? onError,
-  })  : onCompleteWithParsed = onComplete,
-        super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          pollInterval: pollInterval,
-          context: context,
-          onComplete: onComplete == null
-              ? null
-              : (data) => onComplete(
-                    data,
-                    data == null ? null : _parserFn$Query$GetRedirectUrl(data),
-                  ),
-          onError: onError,
-          document: documentNodeQueryGetRedirectUrl,
-          parserFn: _parserFn$Query$GetRedirectUrl,
-        );
+  }) : onCompleteWithParsed = onComplete,
+       super(
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         pollInterval: pollInterval,
+         context: context,
+         onComplete: onComplete == null
+             ? null
+             : (data) => onComplete(
+                 data,
+                 data == null ? null : _parserFn$Query$GetRedirectUrl(data),
+               ),
+         onError: onError,
+         document: documentNodeQueryGetRedirectUrl,
+         parserFn: _parserFn$Query$GetRedirectUrl,
+       );
 
   final OnQueryComplete$Query$GetRedirectUrl? onCompleteWithParsed;
 
   @override
   List<Object?> get properties => [
-        ...super.onComplete == null
-            ? super.properties
-            : super.properties.where((property) => property != onComplete),
-        onCompleteWithParsed,
-      ];
+    ...super.onComplete == null
+        ? super.properties
+        : super.properties.where((property) => property != onComplete),
+    onCompleteWithParsed,
+  ];
 }
 
 class WatchOptions$Query$GetRedirectUrl
@@ -366,20 +351,20 @@ class WatchOptions$Query$GetRedirectUrl
     bool carryForwardDataOnException = true,
     bool fetchResults = false,
   }) : super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          document: documentNodeQueryGetRedirectUrl,
-          pollInterval: pollInterval,
-          eagerlyFetchResults: eagerlyFetchResults,
-          carryForwardDataOnException: carryForwardDataOnException,
-          fetchResults: fetchResults,
-          parserFn: _parserFn$Query$GetRedirectUrl,
-        );
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         document: documentNodeQueryGetRedirectUrl,
+         pollInterval: pollInterval,
+         eagerlyFetchResults: eagerlyFetchResults,
+         carryForwardDataOnException: carryForwardDataOnException,
+         fetchResults: fetchResults,
+         parserFn: _parserFn$Query$GetRedirectUrl,
+       );
 }
 
 class FetchMoreOptions$Query$GetRedirectUrl extends graphql.FetchMoreOptions {
@@ -387,35 +372,33 @@ class FetchMoreOptions$Query$GetRedirectUrl extends graphql.FetchMoreOptions {
     required graphql.UpdateQuery updateQuery,
     required Variables$Query$GetRedirectUrl variables,
   }) : super(
-          updateQuery: updateQuery,
-          variables: variables.toJson(),
-          document: documentNodeQueryGetRedirectUrl,
-        );
+         updateQuery: updateQuery,
+         variables: variables.toJson(),
+         document: documentNodeQueryGetRedirectUrl,
+       );
 }
 
 extension ClientExtension$Query$GetRedirectUrl on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$GetRedirectUrl>> query$GetRedirectUrl(
-          Options$Query$GetRedirectUrl options) async =>
-      await this.query(options);
+    Options$Query$GetRedirectUrl options,
+  ) async => await this.query(options);
 
   graphql.ObservableQuery<Query$GetRedirectUrl> watchQuery$GetRedirectUrl(
-          WatchOptions$Query$GetRedirectUrl options) =>
-      this.watchQuery(options);
+    WatchOptions$Query$GetRedirectUrl options,
+  ) => this.watchQuery(options);
 
   void writeQuery$GetRedirectUrl({
     required Query$GetRedirectUrl data,
     required Variables$Query$GetRedirectUrl variables,
     bool broadcast = true,
-  }) =>
-      this.writeQuery(
-        graphql.Request(
-          operation:
-              graphql.Operation(document: documentNodeQueryGetRedirectUrl),
-          variables: variables.toJson(),
-        ),
-        data: data.toJson(),
-        broadcast: broadcast,
-      );
+  }) => this.writeQuery(
+    graphql.Request(
+      operation: graphql.Operation(document: documentNodeQueryGetRedirectUrl),
+      variables: variables.toJson(),
+    ),
+    data: data.toJson(),
+    broadcast: broadcast,
+  );
 
   Query$GetRedirectUrl? readQuery$GetRedirectUrl({
     required Variables$Query$GetRedirectUrl variables,
@@ -433,11 +416,11 @@ extension ClientExtension$Query$GetRedirectUrl on graphql.GraphQLClient {
 }
 
 graphql_flutter.QueryHookResult<Query$GetRedirectUrl> useQuery$GetRedirectUrl(
-        Options$Query$GetRedirectUrl options) =>
-    graphql_flutter.useQuery(options);
+  Options$Query$GetRedirectUrl options,
+) => graphql_flutter.useQuery(options);
 graphql.ObservableQuery<Query$GetRedirectUrl> useWatchQuery$GetRedirectUrl(
-        WatchOptions$Query$GetRedirectUrl options) =>
-    graphql_flutter.useWatchQuery(options);
+  WatchOptions$Query$GetRedirectUrl options,
+) => graphql_flutter.useWatchQuery(options);
 
 class Query$GetRedirectUrl$Widget
     extends graphql_flutter.Query<Query$GetRedirectUrl> {
@@ -445,11 +428,7 @@ class Query$GetRedirectUrl$Widget
     widgets.Key? key,
     required Options$Query$GetRedirectUrl options,
     required graphql_flutter.QueryBuilder<Query$GetRedirectUrl> builder,
-  }) : super(
-          key: key,
-          options: options,
-          builder: builder,
-        );
+  }) : super(key: key, options: options, builder: builder);
 }
 
 class Query$GetRedirectUrl$redirect {
@@ -492,11 +471,7 @@ class Query$GetRedirectUrl$redirect {
     final l$url = url;
     final l$requiresAuthentication = requiresAuthentication;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$url,
-      l$requiresAuthentication,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$url, l$requiresAuthentication, l$$__typename]);
   }
 
   @override
@@ -530,10 +505,7 @@ class Query$GetRedirectUrl$redirect {
 extension UtilityExtension$Query$GetRedirectUrl$redirect
     on Query$GetRedirectUrl$redirect {
   CopyWith$Query$GetRedirectUrl$redirect<Query$GetRedirectUrl$redirect>
-      get copyWith => CopyWith$Query$GetRedirectUrl$redirect(
-            this,
-            (i) => i,
-          );
+  get copyWith => CopyWith$Query$GetRedirectUrl$redirect(this, (i) => i);
 }
 
 abstract class CopyWith$Query$GetRedirectUrl$redirect<TRes> {
@@ -545,19 +517,12 @@ abstract class CopyWith$Query$GetRedirectUrl$redirect<TRes> {
   factory CopyWith$Query$GetRedirectUrl$redirect.stub(TRes res) =
       _CopyWithStubImpl$Query$GetRedirectUrl$redirect;
 
-  TRes call({
-    String? url,
-    bool? requiresAuthentication,
-    String? $__typename,
-  });
+  TRes call({String? url, bool? requiresAuthentication, String? $__typename});
 }
 
 class _CopyWithImpl$Query$GetRedirectUrl$redirect<TRes>
     implements CopyWith$Query$GetRedirectUrl$redirect<TRes> {
-  _CopyWithImpl$Query$GetRedirectUrl$redirect(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Query$GetRedirectUrl$redirect(this._instance, this._then);
 
   final Query$GetRedirectUrl$redirect _instance;
 
@@ -569,17 +534,18 @@ class _CopyWithImpl$Query$GetRedirectUrl$redirect<TRes>
     Object? url = _undefined,
     Object? requiresAuthentication = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Query$GetRedirectUrl$redirect(
-        url: url == _undefined || url == null ? _instance.url : (url as String),
-        requiresAuthentication: requiresAuthentication == _undefined ||
-                requiresAuthentication == null
-            ? _instance.requiresAuthentication
-            : (requiresAuthentication as bool),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  }) => _then(
+    Query$GetRedirectUrl$redirect(
+      url: url == _undefined || url == null ? _instance.url : (url as String),
+      requiresAuthentication:
+          requiresAuthentication == _undefined || requiresAuthentication == null
+          ? _instance.requiresAuthentication
+          : (requiresAuthentication as bool),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 }
 
 class _CopyWithStubImpl$Query$GetRedirectUrl$redirect<TRes>
@@ -588,10 +554,6 @@ class _CopyWithStubImpl$Query$GetRedirectUrl$redirect<TRes>
 
   TRes _res;
 
-  call({
-    String? url,
-    bool? requiresAuthentication,
-    String? $__typename,
-  }) =>
+  call({String? url, bool? requiresAuthentication, String? $__typename}) =>
       _res;
 }

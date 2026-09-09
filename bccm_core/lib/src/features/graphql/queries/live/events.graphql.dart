@@ -1,5 +1,7 @@
 import 'calendar_days.graphql.dart';
+
 import 'dart:async';
+
 import 'package:flutter/widgets.dart' as widgets;
 import 'package:gql/ast.dart';
 import 'package:graphql/client.dart' as graphql;
@@ -16,7 +18,8 @@ class Fragment$CalendarEventWithEntries {
   });
 
   factory Fragment$CalendarEventWithEntries.fromJson(
-      Map<String, dynamic> json) {
+    Map<String, dynamic> json,
+  ) {
     final l$id = json['id'];
     final l$title = json['title'];
     final l$start = json['start'];
@@ -29,8 +32,9 @@ class Fragment$CalendarEventWithEntries {
       start: (l$start as String),
       end: (l$end as String),
       entries: (l$entries as List<dynamic>)
-          .map((e) =>
-              Fragment$CalendarEntry.fromJson((e as Map<String, dynamic>)))
+          .map(
+            (e) => Fragment$CalendarEntry.fromJson((e as Map<String, dynamic>)),
+          )
           .toList(),
       $__typename: (l$$__typename as String),
     );
@@ -136,10 +140,7 @@ class Fragment$CalendarEventWithEntries {
 extension UtilityExtension$Fragment$CalendarEventWithEntries
     on Fragment$CalendarEventWithEntries {
   CopyWith$Fragment$CalendarEventWithEntries<Fragment$CalendarEventWithEntries>
-      get copyWith => CopyWith$Fragment$CalendarEventWithEntries(
-            this,
-            (i) => i,
-          );
+  get copyWith => CopyWith$Fragment$CalendarEventWithEntries(this, (i) => i);
 }
 
 abstract class CopyWith$Fragment$CalendarEventWithEntries<TRes> {
@@ -160,17 +161,16 @@ abstract class CopyWith$Fragment$CalendarEventWithEntries<TRes> {
     String? $__typename,
   });
   TRes entries(
-      Iterable<Fragment$CalendarEntry> Function(
-              Iterable<CopyWith$Fragment$CalendarEntry<Fragment$CalendarEntry>>)
-          _fn);
+    Iterable<Fragment$CalendarEntry> Function(
+      Iterable<CopyWith$Fragment$CalendarEntry<Fragment$CalendarEntry>>,
+    )
+    _fn,
+  );
 }
 
 class _CopyWithImpl$Fragment$CalendarEventWithEntries<TRes>
     implements CopyWith$Fragment$CalendarEventWithEntries<TRes> {
-  _CopyWithImpl$Fragment$CalendarEventWithEntries(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Fragment$CalendarEventWithEntries(this._instance, this._then);
 
   final Fragment$CalendarEventWithEntries _instance;
 
@@ -185,35 +185,37 @@ class _CopyWithImpl$Fragment$CalendarEventWithEntries<TRes>
     Object? end = _undefined,
     Object? entries = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Fragment$CalendarEventWithEntries(
-        id: id == _undefined || id == null ? _instance.id : (id as String),
-        title: title == _undefined || title == null
-            ? _instance.title
-            : (title as String),
-        start: start == _undefined || start == null
-            ? _instance.start
-            : (start as String),
-        end: end == _undefined || end == null ? _instance.end : (end as String),
-        entries: entries == _undefined || entries == null
-            ? _instance.entries
-            : (entries as List<Fragment$CalendarEntry>),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  }) => _then(
+    Fragment$CalendarEventWithEntries(
+      id: id == _undefined || id == null ? _instance.id : (id as String),
+      title: title == _undefined || title == null
+          ? _instance.title
+          : (title as String),
+      start: start == _undefined || start == null
+          ? _instance.start
+          : (start as String),
+      end: end == _undefined || end == null ? _instance.end : (end as String),
+      entries: entries == _undefined || entries == null
+          ? _instance.entries
+          : (entries as List<Fragment$CalendarEntry>),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 
   TRes entries(
-          Iterable<Fragment$CalendarEntry> Function(
-                  Iterable<
-                      CopyWith$Fragment$CalendarEntry<Fragment$CalendarEntry>>)
-              _fn) =>
-      call(
-          entries:
-              _fn(_instance.entries.map((e) => CopyWith$Fragment$CalendarEntry(
-                    e,
-                    (i) => i,
-                  ))).toList());
+    Iterable<Fragment$CalendarEntry> Function(
+      Iterable<CopyWith$Fragment$CalendarEntry<Fragment$CalendarEntry>>,
+    )
+    _fn,
+  ) => call(
+    entries: _fn(
+      _instance.entries.map(
+        (e) => CopyWith$Fragment$CalendarEntry(e, (i) => i),
+      ),
+    ).toList(),
+  );
 }
 
 class _CopyWithStubImpl$Fragment$CalendarEventWithEntries<TRes>
@@ -229,8 +231,7 @@ class _CopyWithStubImpl$Fragment$CalendarEventWithEntries<TRes>
     String? end,
     List<Fragment$CalendarEntry>? entries,
     String? $__typename,
-  }) =>
-      _res;
+  }) => _res;
 
   entries(_fn) => _res;
 }
@@ -238,72 +239,76 @@ class _CopyWithStubImpl$Fragment$CalendarEventWithEntries<TRes>
 const fragmentDefinitionCalendarEventWithEntries = FragmentDefinitionNode(
   name: NameNode(value: 'CalendarEventWithEntries'),
   typeCondition: TypeConditionNode(
-      on: NamedTypeNode(
-    name: NameNode(value: 'Event'),
-    isNonNull: false,
-  )),
+    on: NamedTypeNode(name: NameNode(value: 'Event'), isNonNull: false),
+  ),
   directives: [],
-  selectionSet: SelectionSetNode(selections: [
-    FieldNode(
-      name: NameNode(value: 'id'),
-      alias: null,
-      arguments: [],
-      directives: [],
-      selectionSet: null,
-    ),
-    FieldNode(
-      name: NameNode(value: 'title'),
-      alias: null,
-      arguments: [],
-      directives: [],
-      selectionSet: null,
-    ),
-    FieldNode(
-      name: NameNode(value: 'start'),
-      alias: null,
-      arguments: [],
-      directives: [],
-      selectionSet: null,
-    ),
-    FieldNode(
-      name: NameNode(value: 'end'),
-      alias: null,
-      arguments: [],
-      directives: [],
-      selectionSet: null,
-    ),
-    FieldNode(
-      name: NameNode(value: 'entries'),
-      alias: null,
-      arguments: [],
-      directives: [],
-      selectionSet: SelectionSetNode(selections: [
-        FragmentSpreadNode(
-          name: NameNode(value: 'CalendarEntry'),
-          directives: [],
+  selectionSet: SelectionSetNode(
+    selections: [
+      FieldNode(
+        name: NameNode(value: 'id'),
+        alias: null,
+        arguments: [],
+        directives: [],
+        selectionSet: null,
+      ),
+      FieldNode(
+        name: NameNode(value: 'title'),
+        alias: null,
+        arguments: [],
+        directives: [],
+        selectionSet: null,
+      ),
+      FieldNode(
+        name: NameNode(value: 'start'),
+        alias: null,
+        arguments: [],
+        directives: [],
+        selectionSet: null,
+      ),
+      FieldNode(
+        name: NameNode(value: 'end'),
+        alias: null,
+        arguments: [],
+        directives: [],
+        selectionSet: null,
+      ),
+      FieldNode(
+        name: NameNode(value: 'entries'),
+        alias: null,
+        arguments: [],
+        directives: [],
+        selectionSet: SelectionSetNode(
+          selections: [
+            FragmentSpreadNode(
+              name: NameNode(value: 'CalendarEntry'),
+              directives: [],
+            ),
+            FieldNode(
+              name: NameNode(value: '__typename'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null,
+            ),
+          ],
         ),
-        FieldNode(
-          name: NameNode(value: '__typename'),
-          alias: null,
-          arguments: [],
-          directives: [],
-          selectionSet: null,
-        ),
-      ]),
-    ),
-    FieldNode(
-      name: NameNode(value: '__typename'),
-      alias: null,
-      arguments: [],
-      directives: [],
-      selectionSet: null,
-    ),
-  ]),
+      ),
+      FieldNode(
+        name: NameNode(value: '__typename'),
+        alias: null,
+        arguments: [],
+        directives: [],
+        selectionSet: null,
+      ),
+    ],
+  ),
 );
-const documentNodeFragmentCalendarEventWithEntries = DocumentNode(definitions: [
-  fragmentDefinitionCalendarEventWithEntries,
-  fragmentDefinitionCalendarEntry,
-]);
+const documentNodeFragmentCalendarEventWithEntries = DocumentNode(
+  definitions: [
+    fragmentDefinitionCalendarEventWithEntries,
+    fragmentDefinitionCalendarEntry,
+  ],
+);
 
 extension ClientExtension$Fragment$CalendarEventWithEntries
     on graphql.GraphQLClient {
@@ -311,18 +316,17 @@ extension ClientExtension$Fragment$CalendarEventWithEntries
     required Fragment$CalendarEventWithEntries data,
     required Map<String, dynamic> idFields,
     bool broadcast = true,
-  }) =>
-      this.writeFragment(
-        graphql.FragmentRequest(
-          idFields: idFields,
-          fragment: const graphql.Fragment(
-            fragmentName: 'CalendarEventWithEntries',
-            document: documentNodeFragmentCalendarEventWithEntries,
-          ),
-        ),
-        data: data.toJson(),
-        broadcast: broadcast,
-      );
+  }) => this.writeFragment(
+    graphql.FragmentRequest(
+      idFields: idFields,
+      fragment: const graphql.Fragment(
+        fragmentName: 'CalendarEventWithEntries',
+        document: documentNodeFragmentCalendarEventWithEntries,
+      ),
+    ),
+    data: data.toJson(),
+    broadcast: broadcast,
+  );
 
   Fragment$CalendarEventWithEntries? readFragment$CalendarEventWithEntries({
     required Map<String, dynamic> idFields,
@@ -346,9 +350,7 @@ extension ClientExtension$Fragment$CalendarEventWithEntries
 
 class Variables$Query$GetEvent {
   factory Variables$Query$GetEvent({required String id}) =>
-      Variables$Query$GetEvent._({
-        r'id': id,
-      });
+      Variables$Query$GetEvent._({r'id': id});
 
   Variables$Query$GetEvent._(this._$data);
 
@@ -371,10 +373,7 @@ class Variables$Query$GetEvent {
   }
 
   CopyWith$Variables$Query$GetEvent<Variables$Query$GetEvent> get copyWith =>
-      CopyWith$Variables$Query$GetEvent(
-        this,
-        (i) => i,
-      );
+      CopyWith$Variables$Query$GetEvent(this, (i) => i);
 
   @override
   bool operator ==(Object other) {
@@ -414,10 +413,7 @@ abstract class CopyWith$Variables$Query$GetEvent<TRes> {
 
 class _CopyWithImpl$Variables$Query$GetEvent<TRes>
     implements CopyWith$Variables$Query$GetEvent<TRes> {
-  _CopyWithImpl$Variables$Query$GetEvent(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Variables$Query$GetEvent(this._instance, this._then);
 
   final Variables$Query$GetEvent _instance;
 
@@ -425,10 +421,12 @@ class _CopyWithImpl$Variables$Query$GetEvent<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({Object? id = _undefined}) => _then(Variables$Query$GetEvent._({
-        ..._instance._$data,
-        if (id != _undefined && id != null) 'id': (id as String),
-      }));
+  TRes call({Object? id = _undefined}) => _then(
+    Variables$Query$GetEvent._({
+      ..._instance._$data,
+      if (id != _undefined && id != null) 'id': (id as String),
+    }),
+  );
 }
 
 class _CopyWithStubImpl$Variables$Query$GetEvent<TRes>
@@ -441,10 +439,7 @@ class _CopyWithStubImpl$Variables$Query$GetEvent<TRes>
 }
 
 class Query$GetEvent {
-  Query$GetEvent({
-    this.event,
-    this.$__typename = 'QueryRoot',
-  });
+  Query$GetEvent({this.event, this.$__typename = 'QueryRoot'});
 
   factory Query$GetEvent.fromJson(Map<String, dynamic> json) {
     final l$event = json['event'];
@@ -453,7 +448,8 @@ class Query$GetEvent {
       event: l$event == null
           ? null
           : Fragment$CalendarEventWithEntries.fromJson(
-              (l$event as Map<String, dynamic>)),
+              (l$event as Map<String, dynamic>),
+            ),
       $__typename: (l$$__typename as String),
     );
   }
@@ -475,10 +471,7 @@ class Query$GetEvent {
   int get hashCode {
     final l$event = event;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$event,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$event, l$$__typename]);
   }
 
   @override
@@ -505,10 +498,7 @@ class Query$GetEvent {
 
 extension UtilityExtension$Query$GetEvent on Query$GetEvent {
   CopyWith$Query$GetEvent<Query$GetEvent> get copyWith =>
-      CopyWith$Query$GetEvent(
-        this,
-        (i) => i,
-      );
+      CopyWith$Query$GetEvent(this, (i) => i);
 }
 
 abstract class CopyWith$Query$GetEvent<TRes> {
@@ -520,19 +510,13 @@ abstract class CopyWith$Query$GetEvent<TRes> {
   factory CopyWith$Query$GetEvent.stub(TRes res) =
       _CopyWithStubImpl$Query$GetEvent;
 
-  TRes call({
-    Fragment$CalendarEventWithEntries? event,
-    String? $__typename,
-  });
+  TRes call({Fragment$CalendarEventWithEntries? event, String? $__typename});
   CopyWith$Fragment$CalendarEventWithEntries<TRes> get event;
 }
 
 class _CopyWithImpl$Query$GetEvent<TRes>
     implements CopyWith$Query$GetEvent<TRes> {
-  _CopyWithImpl$Query$GetEvent(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Query$GetEvent(this._instance, this._then);
 
   final Query$GetEvent _instance;
 
@@ -540,25 +524,26 @@ class _CopyWithImpl$Query$GetEvent<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({
-    Object? event = _undefined,
-    Object? $__typename = _undefined,
-  }) =>
-      _then(Query$GetEvent(
-        event: event == _undefined
-            ? _instance.event
-            : (event as Fragment$CalendarEventWithEntries?),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  TRes call({Object? event = _undefined, Object? $__typename = _undefined}) =>
+      _then(
+        Query$GetEvent(
+          event: event == _undefined
+              ? _instance.event
+              : (event as Fragment$CalendarEventWithEntries?),
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String),
+        ),
+      );
 
   CopyWith$Fragment$CalendarEventWithEntries<TRes> get event {
     final local$event = _instance.event;
     return local$event == null
         ? CopyWith$Fragment$CalendarEventWithEntries.stub(_then(_instance))
         : CopyWith$Fragment$CalendarEventWithEntries(
-            local$event, (e) => call(event: e));
+            local$event,
+            (e) => call(event: e),
+          );
   }
 }
 
@@ -568,47 +553,53 @@ class _CopyWithStubImpl$Query$GetEvent<TRes>
 
   TRes _res;
 
-  call({
-    Fragment$CalendarEventWithEntries? event,
-    String? $__typename,
-  }) =>
-      _res;
+  call({Fragment$CalendarEventWithEntries? event, String? $__typename}) => _res;
 
   CopyWith$Fragment$CalendarEventWithEntries<TRes> get event =>
       CopyWith$Fragment$CalendarEventWithEntries.stub(_res);
 }
 
-const documentNodeQueryGetEvent = DocumentNode(definitions: [
-  OperationDefinitionNode(
-    type: OperationType.query,
-    name: NameNode(value: 'GetEvent'),
-    variableDefinitions: [
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'id')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'ID'),
-          isNonNull: true,
+const documentNodeQueryGetEvent = DocumentNode(
+  definitions: [
+    OperationDefinitionNode(
+      type: OperationType.query,
+      name: NameNode(value: 'GetEvent'),
+      variableDefinitions: [
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'id')),
+          type: NamedTypeNode(name: NameNode(value: 'ID'), isNonNull: true),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      )
-    ],
-    directives: [],
-    selectionSet: SelectionSetNode(selections: [
-      FieldNode(
-        name: NameNode(value: 'event'),
-        alias: null,
-        arguments: [
-          ArgumentNode(
-            name: NameNode(value: 'id'),
-            value: VariableNode(name: NameNode(value: 'id')),
-          )
-        ],
-        directives: [],
-        selectionSet: SelectionSetNode(selections: [
-          FragmentSpreadNode(
-            name: NameNode(value: 'CalendarEventWithEntries'),
+      ],
+      directives: [],
+      selectionSet: SelectionSetNode(
+        selections: [
+          FieldNode(
+            name: NameNode(value: 'event'),
+            alias: null,
+            arguments: [
+              ArgumentNode(
+                name: NameNode(value: 'id'),
+                value: VariableNode(name: NameNode(value: 'id')),
+              ),
+            ],
             directives: [],
+            selectionSet: SelectionSetNode(
+              selections: [
+                FragmentSpreadNode(
+                  name: NameNode(value: 'CalendarEventWithEntries'),
+                  directives: [],
+                ),
+                FieldNode(
+                  name: NameNode(value: '__typename'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+              ],
+            ),
           ),
           FieldNode(
             name: NameNode(value: '__typename'),
@@ -617,20 +608,13 @@ const documentNodeQueryGetEvent = DocumentNode(definitions: [
             directives: [],
             selectionSet: null,
           ),
-        ]),
+        ],
       ),
-      FieldNode(
-        name: NameNode(value: '__typename'),
-        alias: null,
-        arguments: [],
-        directives: [],
-        selectionSet: null,
-      ),
-    ]),
-  ),
-  fragmentDefinitionCalendarEventWithEntries,
-  fragmentDefinitionCalendarEntry,
-]);
+    ),
+    fragmentDefinitionCalendarEventWithEntries,
+    fragmentDefinitionCalendarEntry,
+  ],
+);
 Query$GetEvent _parserFn$Query$GetEvent(Map<String, dynamic> data) =>
     Query$GetEvent.fromJson(data);
 typedef OnQueryComplete$Query$GetEvent = FutureOr<void> Function(
@@ -651,36 +635,36 @@ class Options$Query$GetEvent extends graphql.QueryOptions<Query$GetEvent> {
     graphql.Context? context,
     OnQueryComplete$Query$GetEvent? onComplete,
     graphql.OnQueryError? onError,
-  })  : onCompleteWithParsed = onComplete,
-        super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          pollInterval: pollInterval,
-          context: context,
-          onComplete: onComplete == null
-              ? null
-              : (data) => onComplete(
-                    data,
-                    data == null ? null : _parserFn$Query$GetEvent(data),
-                  ),
-          onError: onError,
-          document: documentNodeQueryGetEvent,
-          parserFn: _parserFn$Query$GetEvent,
-        );
+  }) : onCompleteWithParsed = onComplete,
+       super(
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         pollInterval: pollInterval,
+         context: context,
+         onComplete: onComplete == null
+             ? null
+             : (data) => onComplete(
+                 data,
+                 data == null ? null : _parserFn$Query$GetEvent(data),
+               ),
+         onError: onError,
+         document: documentNodeQueryGetEvent,
+         parserFn: _parserFn$Query$GetEvent,
+       );
 
   final OnQueryComplete$Query$GetEvent? onCompleteWithParsed;
 
   @override
   List<Object?> get properties => [
-        ...super.onComplete == null
-            ? super.properties
-            : super.properties.where((property) => property != onComplete),
-        onCompleteWithParsed,
-      ];
+    ...super.onComplete == null
+        ? super.properties
+        : super.properties.where((property) => property != onComplete),
+    onCompleteWithParsed,
+  ];
 }
 
 class WatchOptions$Query$GetEvent
@@ -699,20 +683,20 @@ class WatchOptions$Query$GetEvent
     bool carryForwardDataOnException = true,
     bool fetchResults = false,
   }) : super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          document: documentNodeQueryGetEvent,
-          pollInterval: pollInterval,
-          eagerlyFetchResults: eagerlyFetchResults,
-          carryForwardDataOnException: carryForwardDataOnException,
-          fetchResults: fetchResults,
-          parserFn: _parserFn$Query$GetEvent,
-        );
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         document: documentNodeQueryGetEvent,
+         pollInterval: pollInterval,
+         eagerlyFetchResults: eagerlyFetchResults,
+         carryForwardDataOnException: carryForwardDataOnException,
+         fetchResults: fetchResults,
+         parserFn: _parserFn$Query$GetEvent,
+       );
 }
 
 class FetchMoreOptions$Query$GetEvent extends graphql.FetchMoreOptions {
@@ -720,34 +704,33 @@ class FetchMoreOptions$Query$GetEvent extends graphql.FetchMoreOptions {
     required graphql.UpdateQuery updateQuery,
     required Variables$Query$GetEvent variables,
   }) : super(
-          updateQuery: updateQuery,
-          variables: variables.toJson(),
-          document: documentNodeQueryGetEvent,
-        );
+         updateQuery: updateQuery,
+         variables: variables.toJson(),
+         document: documentNodeQueryGetEvent,
+       );
 }
 
 extension ClientExtension$Query$GetEvent on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$GetEvent>> query$GetEvent(
-          Options$Query$GetEvent options) async =>
-      await this.query(options);
+    Options$Query$GetEvent options,
+  ) async => await this.query(options);
 
   graphql.ObservableQuery<Query$GetEvent> watchQuery$GetEvent(
-          WatchOptions$Query$GetEvent options) =>
-      this.watchQuery(options);
+    WatchOptions$Query$GetEvent options,
+  ) => this.watchQuery(options);
 
   void writeQuery$GetEvent({
     required Query$GetEvent data,
     required Variables$Query$GetEvent variables,
     bool broadcast = true,
-  }) =>
-      this.writeQuery(
-        graphql.Request(
-          operation: graphql.Operation(document: documentNodeQueryGetEvent),
-          variables: variables.toJson(),
-        ),
-        data: data.toJson(),
-        broadcast: broadcast,
-      );
+  }) => this.writeQuery(
+    graphql.Request(
+      operation: graphql.Operation(document: documentNodeQueryGetEvent),
+      variables: variables.toJson(),
+    ),
+    data: data.toJson(),
+    broadcast: broadcast,
+  );
 
   Query$GetEvent? readQuery$GetEvent({
     required Variables$Query$GetEvent variables,
@@ -765,29 +748,23 @@ extension ClientExtension$Query$GetEvent on graphql.GraphQLClient {
 }
 
 graphql_flutter.QueryHookResult<Query$GetEvent> useQuery$GetEvent(
-        Options$Query$GetEvent options) =>
-    graphql_flutter.useQuery(options);
+  Options$Query$GetEvent options,
+) => graphql_flutter.useQuery(options);
 graphql.ObservableQuery<Query$GetEvent> useWatchQuery$GetEvent(
-        WatchOptions$Query$GetEvent options) =>
-    graphql_flutter.useWatchQuery(options);
+  WatchOptions$Query$GetEvent options,
+) => graphql_flutter.useWatchQuery(options);
 
 class Query$GetEvent$Widget extends graphql_flutter.Query<Query$GetEvent> {
   Query$GetEvent$Widget({
     widgets.Key? key,
     required Options$Query$GetEvent options,
     required graphql_flutter.QueryBuilder<Query$GetEvent> builder,
-  }) : super(
-          key: key,
-          options: options,
-          builder: builder,
-        );
+  }) : super(key: key, options: options, builder: builder);
 }
 
 class Variables$Query$ListEvents {
   factory Variables$Query$ListEvents({String? from}) =>
-      Variables$Query$ListEvents._({
-        if (from != null) r'from': from,
-      });
+      Variables$Query$ListEvents._({if (from != null) r'from': from});
 
   Variables$Query$ListEvents._(this._$data);
 
@@ -814,10 +791,7 @@ class Variables$Query$ListEvents {
   }
 
   CopyWith$Variables$Query$ListEvents<Variables$Query$ListEvents>
-      get copyWith => CopyWith$Variables$Query$ListEvents(
-            this,
-            (i) => i,
-          );
+  get copyWith => CopyWith$Variables$Query$ListEvents(this, (i) => i);
 
   @override
   bool operator ==(Object other) {
@@ -860,10 +834,7 @@ abstract class CopyWith$Variables$Query$ListEvents<TRes> {
 
 class _CopyWithImpl$Variables$Query$ListEvents<TRes>
     implements CopyWith$Variables$Query$ListEvents<TRes> {
-  _CopyWithImpl$Variables$Query$ListEvents(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Variables$Query$ListEvents(this._instance, this._then);
 
   final Variables$Query$ListEvents _instance;
 
@@ -871,10 +842,12 @@ class _CopyWithImpl$Variables$Query$ListEvents<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({Object? from = _undefined}) => _then(Variables$Query$ListEvents._({
-        ..._instance._$data,
-        if (from != _undefined) 'from': (from as String?),
-      }));
+  TRes call({Object? from = _undefined}) => _then(
+    Variables$Query$ListEvents._({
+      ..._instance._$data,
+      if (from != _undefined) 'from': (from as String?),
+    }),
+  );
 }
 
 class _CopyWithStubImpl$Variables$Query$ListEvents<TRes>
@@ -887,10 +860,7 @@ class _CopyWithStubImpl$Variables$Query$ListEvents<TRes>
 }
 
 class Query$ListEvents {
-  Query$ListEvents({
-    this.calendar,
-    this.$__typename = 'QueryRoot',
-  });
+  Query$ListEvents({this.calendar, this.$__typename = 'QueryRoot'});
 
   factory Query$ListEvents.fromJson(Map<String, dynamic> json) {
     final l$calendar = json['calendar'];
@@ -899,7 +869,8 @@ class Query$ListEvents {
       calendar: l$calendar == null
           ? null
           : Query$ListEvents$calendar.fromJson(
-              (l$calendar as Map<String, dynamic>)),
+              (l$calendar as Map<String, dynamic>),
+            ),
       $__typename: (l$$__typename as String),
     );
   }
@@ -921,10 +892,7 @@ class Query$ListEvents {
   int get hashCode {
     final l$calendar = calendar;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$calendar,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$calendar, l$$__typename]);
   }
 
   @override
@@ -951,10 +919,7 @@ class Query$ListEvents {
 
 extension UtilityExtension$Query$ListEvents on Query$ListEvents {
   CopyWith$Query$ListEvents<Query$ListEvents> get copyWith =>
-      CopyWith$Query$ListEvents(
-        this,
-        (i) => i,
-      );
+      CopyWith$Query$ListEvents(this, (i) => i);
 }
 
 abstract class CopyWith$Query$ListEvents<TRes> {
@@ -966,19 +931,13 @@ abstract class CopyWith$Query$ListEvents<TRes> {
   factory CopyWith$Query$ListEvents.stub(TRes res) =
       _CopyWithStubImpl$Query$ListEvents;
 
-  TRes call({
-    Query$ListEvents$calendar? calendar,
-    String? $__typename,
-  });
+  TRes call({Query$ListEvents$calendar? calendar, String? $__typename});
   CopyWith$Query$ListEvents$calendar<TRes> get calendar;
 }
 
 class _CopyWithImpl$Query$ListEvents<TRes>
     implements CopyWith$Query$ListEvents<TRes> {
-  _CopyWithImpl$Query$ListEvents(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Query$ListEvents(this._instance, this._then);
 
   final Query$ListEvents _instance;
 
@@ -989,22 +948,25 @@ class _CopyWithImpl$Query$ListEvents<TRes>
   TRes call({
     Object? calendar = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Query$ListEvents(
-        calendar: calendar == _undefined
-            ? _instance.calendar
-            : (calendar as Query$ListEvents$calendar?),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  }) => _then(
+    Query$ListEvents(
+      calendar: calendar == _undefined
+          ? _instance.calendar
+          : (calendar as Query$ListEvents$calendar?),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 
   CopyWith$Query$ListEvents$calendar<TRes> get calendar {
     final local$calendar = _instance.calendar;
     return local$calendar == null
         ? CopyWith$Query$ListEvents$calendar.stub(_then(_instance))
         : CopyWith$Query$ListEvents$calendar(
-            local$calendar, (e) => call(calendar: e));
+            local$calendar,
+            (e) => call(calendar: e),
+          );
   }
 }
 
@@ -1014,62 +976,70 @@ class _CopyWithStubImpl$Query$ListEvents<TRes>
 
   TRes _res;
 
-  call({
-    Query$ListEvents$calendar? calendar,
-    String? $__typename,
-  }) =>
-      _res;
+  call({Query$ListEvents$calendar? calendar, String? $__typename}) => _res;
 
   CopyWith$Query$ListEvents$calendar<TRes> get calendar =>
       CopyWith$Query$ListEvents$calendar.stub(_res);
 }
 
-const documentNodeQueryListEvents = DocumentNode(definitions: [
-  OperationDefinitionNode(
-    type: OperationType.query,
-    name: NameNode(value: 'ListEvents'),
-    variableDefinitions: [
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'from')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'Date'),
-          isNonNull: false,
+const documentNodeQueryListEvents = DocumentNode(
+  definitions: [
+    OperationDefinitionNode(
+      type: OperationType.query,
+      name: NameNode(value: 'ListEvents'),
+      variableDefinitions: [
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'from')),
+          type: NamedTypeNode(name: NameNode(value: 'Date'), isNonNull: false),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      )
-    ],
-    directives: [],
-    selectionSet: SelectionSetNode(selections: [
-      FieldNode(
-        name: NameNode(value: 'calendar'),
-        alias: null,
-        arguments: [],
-        directives: [],
-        selectionSet: SelectionSetNode(selections: [
+      ],
+      directives: [],
+      selectionSet: SelectionSetNode(
+        selections: [
           FieldNode(
-            name: NameNode(value: 'events'),
+            name: NameNode(value: 'calendar'),
             alias: null,
-            arguments: [
-              ArgumentNode(
-                name: NameNode(value: 'from'),
-                value: VariableNode(name: NameNode(value: 'from')),
-              )
-            ],
+            arguments: [],
             directives: [],
-            selectionSet: SelectionSetNode(selections: [
-              FragmentSpreadNode(
-                name: NameNode(value: 'CalendarEventWithEntries'),
-                directives: [],
-              ),
-              FieldNode(
-                name: NameNode(value: '__typename'),
-                alias: null,
-                arguments: [],
-                directives: [],
-                selectionSet: null,
-              ),
-            ]),
+            selectionSet: SelectionSetNode(
+              selections: [
+                FieldNode(
+                  name: NameNode(value: 'events'),
+                  alias: null,
+                  arguments: [
+                    ArgumentNode(
+                      name: NameNode(value: 'from'),
+                      value: VariableNode(name: NameNode(value: 'from')),
+                    ),
+                  ],
+                  directives: [],
+                  selectionSet: SelectionSetNode(
+                    selections: [
+                      FragmentSpreadNode(
+                        name: NameNode(value: 'CalendarEventWithEntries'),
+                        directives: [],
+                      ),
+                      FieldNode(
+                        name: NameNode(value: '__typename'),
+                        alias: null,
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null,
+                      ),
+                    ],
+                  ),
+                ),
+                FieldNode(
+                  name: NameNode(value: '__typename'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+              ],
+            ),
           ),
           FieldNode(
             name: NameNode(value: '__typename'),
@@ -1078,20 +1048,13 @@ const documentNodeQueryListEvents = DocumentNode(definitions: [
             directives: [],
             selectionSet: null,
           ),
-        ]),
+        ],
       ),
-      FieldNode(
-        name: NameNode(value: '__typename'),
-        alias: null,
-        arguments: [],
-        directives: [],
-        selectionSet: null,
-      ),
-    ]),
-  ),
-  fragmentDefinitionCalendarEventWithEntries,
-  fragmentDefinitionCalendarEntry,
-]);
+    ),
+    fragmentDefinitionCalendarEventWithEntries,
+    fragmentDefinitionCalendarEntry,
+  ],
+);
 Query$ListEvents _parserFn$Query$ListEvents(Map<String, dynamic> data) =>
     Query$ListEvents.fromJson(data);
 typedef OnQueryComplete$Query$ListEvents = FutureOr<void> Function(
@@ -1112,36 +1075,36 @@ class Options$Query$ListEvents extends graphql.QueryOptions<Query$ListEvents> {
     graphql.Context? context,
     OnQueryComplete$Query$ListEvents? onComplete,
     graphql.OnQueryError? onError,
-  })  : onCompleteWithParsed = onComplete,
-        super(
-          variables: variables?.toJson() ?? {},
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          pollInterval: pollInterval,
-          context: context,
-          onComplete: onComplete == null
-              ? null
-              : (data) => onComplete(
-                    data,
-                    data == null ? null : _parserFn$Query$ListEvents(data),
-                  ),
-          onError: onError,
-          document: documentNodeQueryListEvents,
-          parserFn: _parserFn$Query$ListEvents,
-        );
+  }) : onCompleteWithParsed = onComplete,
+       super(
+         variables: variables?.toJson() ?? {},
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         pollInterval: pollInterval,
+         context: context,
+         onComplete: onComplete == null
+             ? null
+             : (data) => onComplete(
+                 data,
+                 data == null ? null : _parserFn$Query$ListEvents(data),
+               ),
+         onError: onError,
+         document: documentNodeQueryListEvents,
+         parserFn: _parserFn$Query$ListEvents,
+       );
 
   final OnQueryComplete$Query$ListEvents? onCompleteWithParsed;
 
   @override
   List<Object?> get properties => [
-        ...super.onComplete == null
-            ? super.properties
-            : super.properties.where((property) => property != onComplete),
-        onCompleteWithParsed,
-      ];
+    ...super.onComplete == null
+        ? super.properties
+        : super.properties.where((property) => property != onComplete),
+    onCompleteWithParsed,
+  ];
 }
 
 class WatchOptions$Query$ListEvents
@@ -1160,20 +1123,20 @@ class WatchOptions$Query$ListEvents
     bool carryForwardDataOnException = true,
     bool fetchResults = false,
   }) : super(
-          variables: variables?.toJson() ?? {},
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          document: documentNodeQueryListEvents,
-          pollInterval: pollInterval,
-          eagerlyFetchResults: eagerlyFetchResults,
-          carryForwardDataOnException: carryForwardDataOnException,
-          fetchResults: fetchResults,
-          parserFn: _parserFn$Query$ListEvents,
-        );
+         variables: variables?.toJson() ?? {},
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         document: documentNodeQueryListEvents,
+         pollInterval: pollInterval,
+         eagerlyFetchResults: eagerlyFetchResults,
+         carryForwardDataOnException: carryForwardDataOnException,
+         fetchResults: fetchResults,
+         parserFn: _parserFn$Query$ListEvents,
+       );
 }
 
 class FetchMoreOptions$Query$ListEvents extends graphql.FetchMoreOptions {
@@ -1181,34 +1144,33 @@ class FetchMoreOptions$Query$ListEvents extends graphql.FetchMoreOptions {
     required graphql.UpdateQuery updateQuery,
     Variables$Query$ListEvents? variables,
   }) : super(
-          updateQuery: updateQuery,
-          variables: variables?.toJson() ?? {},
-          document: documentNodeQueryListEvents,
-        );
+         updateQuery: updateQuery,
+         variables: variables?.toJson() ?? {},
+         document: documentNodeQueryListEvents,
+       );
 }
 
 extension ClientExtension$Query$ListEvents on graphql.GraphQLClient {
-  Future<graphql.QueryResult<Query$ListEvents>> query$ListEvents(
-          [Options$Query$ListEvents? options]) async =>
-      await this.query(options ?? Options$Query$ListEvents());
+  Future<graphql.QueryResult<Query$ListEvents>> query$ListEvents([
+    Options$Query$ListEvents? options,
+  ]) async => await this.query(options ?? Options$Query$ListEvents());
 
-  graphql.ObservableQuery<Query$ListEvents> watchQuery$ListEvents(
-          [WatchOptions$Query$ListEvents? options]) =>
-      this.watchQuery(options ?? WatchOptions$Query$ListEvents());
+  graphql.ObservableQuery<Query$ListEvents> watchQuery$ListEvents([
+    WatchOptions$Query$ListEvents? options,
+  ]) => this.watchQuery(options ?? WatchOptions$Query$ListEvents());
 
   void writeQuery$ListEvents({
     required Query$ListEvents data,
     Variables$Query$ListEvents? variables,
     bool broadcast = true,
-  }) =>
-      this.writeQuery(
-        graphql.Request(
-          operation: graphql.Operation(document: documentNodeQueryListEvents),
-          variables: variables?.toJson() ?? const {},
-        ),
-        data: data.toJson(),
-        broadcast: broadcast,
-      );
+  }) => this.writeQuery(
+    graphql.Request(
+      operation: graphql.Operation(document: documentNodeQueryListEvents),
+      variables: variables?.toJson() ?? const {},
+    ),
+    data: data.toJson(),
+    broadcast: broadcast,
+  );
 
   Query$ListEvents? readQuery$ListEvents({
     Variables$Query$ListEvents? variables,
@@ -1225,12 +1187,12 @@ extension ClientExtension$Query$ListEvents on graphql.GraphQLClient {
   }
 }
 
-graphql_flutter.QueryHookResult<Query$ListEvents> useQuery$ListEvents(
-        [Options$Query$ListEvents? options]) =>
-    graphql_flutter.useQuery(options ?? Options$Query$ListEvents());
-graphql.ObservableQuery<Query$ListEvents> useWatchQuery$ListEvents(
-        [WatchOptions$Query$ListEvents? options]) =>
-    graphql_flutter.useWatchQuery(options ?? WatchOptions$Query$ListEvents());
+graphql_flutter.QueryHookResult<Query$ListEvents> useQuery$ListEvents([
+  Options$Query$ListEvents? options,
+]) => graphql_flutter.useQuery(options ?? Options$Query$ListEvents());
+graphql.ObservableQuery<Query$ListEvents> useWatchQuery$ListEvents([
+  WatchOptions$Query$ListEvents? options,
+]) => graphql_flutter.useWatchQuery(options ?? WatchOptions$Query$ListEvents());
 
 class Query$ListEvents$Widget extends graphql_flutter.Query<Query$ListEvents> {
   Query$ListEvents$Widget({
@@ -1238,10 +1200,10 @@ class Query$ListEvents$Widget extends graphql_flutter.Query<Query$ListEvents> {
     Options$Query$ListEvents? options,
     required graphql_flutter.QueryBuilder<Query$ListEvents> builder,
   }) : super(
-          key: key,
-          options: options ?? Options$Query$ListEvents(),
-          builder: builder,
-        );
+         key: key,
+         options: options ?? Options$Query$ListEvents(),
+         builder: builder,
+       );
 }
 
 class Query$ListEvents$calendar {
@@ -1255,8 +1217,11 @@ class Query$ListEvents$calendar {
     final l$$__typename = json['__typename'];
     return Query$ListEvents$calendar(
       events: (l$events as List<dynamic>)
-          .map((e) => Fragment$CalendarEventWithEntries.fromJson(
-              (e as Map<String, dynamic>)))
+          .map(
+            (e) => Fragment$CalendarEventWithEntries.fromJson(
+              (e as Map<String, dynamic>),
+            ),
+          )
           .toList(),
       $__typename: (l$$__typename as String),
     );
@@ -1318,10 +1283,7 @@ class Query$ListEvents$calendar {
 extension UtilityExtension$Query$ListEvents$calendar
     on Query$ListEvents$calendar {
   CopyWith$Query$ListEvents$calendar<Query$ListEvents$calendar> get copyWith =>
-      CopyWith$Query$ListEvents$calendar(
-        this,
-        (i) => i,
-      );
+      CopyWith$Query$ListEvents$calendar(this, (i) => i);
 }
 
 abstract class CopyWith$Query$ListEvents$calendar<TRes> {
@@ -1338,19 +1300,20 @@ abstract class CopyWith$Query$ListEvents$calendar<TRes> {
     String? $__typename,
   });
   TRes events(
-      Iterable<Fragment$CalendarEventWithEntries> Function(
-              Iterable<
-                  CopyWith$Fragment$CalendarEventWithEntries<
-                      Fragment$CalendarEventWithEntries>>)
-          _fn);
+    Iterable<Fragment$CalendarEventWithEntries> Function(
+      Iterable<
+        CopyWith$Fragment$CalendarEventWithEntries<
+          Fragment$CalendarEventWithEntries
+        >
+      >,
+    )
+    _fn,
+  );
 }
 
 class _CopyWithImpl$Query$ListEvents$calendar<TRes>
     implements CopyWith$Query$ListEvents$calendar<TRes> {
-  _CopyWithImpl$Query$ListEvents$calendar(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Query$ListEvents$calendar(this._instance, this._then);
 
   final Query$ListEvents$calendar _instance;
 
@@ -1358,31 +1321,34 @@ class _CopyWithImpl$Query$ListEvents$calendar<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({
-    Object? events = _undefined,
-    Object? $__typename = _undefined,
-  }) =>
-      _then(Query$ListEvents$calendar(
-        events: events == _undefined || events == null
-            ? _instance.events
-            : (events as List<Fragment$CalendarEventWithEntries>),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  TRes call({Object? events = _undefined, Object? $__typename = _undefined}) =>
+      _then(
+        Query$ListEvents$calendar(
+          events: events == _undefined || events == null
+              ? _instance.events
+              : (events as List<Fragment$CalendarEventWithEntries>),
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String),
+        ),
+      );
 
   TRes events(
-          Iterable<Fragment$CalendarEventWithEntries> Function(
-                  Iterable<
-                      CopyWith$Fragment$CalendarEventWithEntries<
-                          Fragment$CalendarEventWithEntries>>)
-              _fn) =>
-      call(
-          events: _fn(_instance.events
-              .map((e) => CopyWith$Fragment$CalendarEventWithEntries(
-                    e,
-                    (i) => i,
-                  ))).toList());
+    Iterable<Fragment$CalendarEventWithEntries> Function(
+      Iterable<
+        CopyWith$Fragment$CalendarEventWithEntries<
+          Fragment$CalendarEventWithEntries
+        >
+      >,
+    )
+    _fn,
+  ) => call(
+    events: _fn(
+      _instance.events.map(
+        (e) => CopyWith$Fragment$CalendarEventWithEntries(e, (i) => i),
+      ),
+    ).toList(),
+  );
 }
 
 class _CopyWithStubImpl$Query$ListEvents$calendar<TRes>
@@ -1394,8 +1360,7 @@ class _CopyWithStubImpl$Query$ListEvents$calendar<TRes>
   call({
     List<Fragment$CalendarEventWithEntries>? events,
     String? $__typename,
-  }) =>
-      _res;
+  }) => _res;
 
   events(_fn) => _res;
 }

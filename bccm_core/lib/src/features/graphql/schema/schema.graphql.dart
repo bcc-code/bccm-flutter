@@ -1,8 +1,5 @@
 class Input$LegacyIDLookupOptions {
-  factory Input$LegacyIDLookupOptions({
-    int? episodeID,
-    int? programID,
-  }) =>
+  factory Input$LegacyIDLookupOptions({int? episodeID, int? programID}) =>
       Input$LegacyIDLookupOptions._({
         if (episodeID != null) r'episodeID': episodeID,
         if (programID != null) r'programID': programID,
@@ -43,10 +40,7 @@ class Input$LegacyIDLookupOptions {
   }
 
   CopyWith$Input$LegacyIDLookupOptions<Input$LegacyIDLookupOptions>
-      get copyWith => CopyWith$Input$LegacyIDLookupOptions(
-            this,
-            (i) => i,
-          );
+  get copyWith => CopyWith$Input$LegacyIDLookupOptions(this, (i) => i);
 
   @override
   bool operator ==(Object other) {
@@ -98,18 +92,12 @@ abstract class CopyWith$Input$LegacyIDLookupOptions<TRes> {
   factory CopyWith$Input$LegacyIDLookupOptions.stub(TRes res) =
       _CopyWithStubImpl$Input$LegacyIDLookupOptions;
 
-  TRes call({
-    int? episodeID,
-    int? programID,
-  });
+  TRes call({int? episodeID, int? programID});
 }
 
 class _CopyWithImpl$Input$LegacyIDLookupOptions<TRes>
     implements CopyWith$Input$LegacyIDLookupOptions<TRes> {
-  _CopyWithImpl$Input$LegacyIDLookupOptions(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Input$LegacyIDLookupOptions(this._instance, this._then);
 
   final Input$LegacyIDLookupOptions _instance;
 
@@ -117,15 +105,14 @@ class _CopyWithImpl$Input$LegacyIDLookupOptions<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({
-    Object? episodeID = _undefined,
-    Object? programID = _undefined,
-  }) =>
-      _then(Input$LegacyIDLookupOptions._({
-        ..._instance._$data,
-        if (episodeID != _undefined) 'episodeID': (episodeID as int?),
-        if (programID != _undefined) 'programID': (programID as int?),
-      }));
+  TRes call({Object? episodeID = _undefined, Object? programID = _undefined}) =>
+      _then(
+        Input$LegacyIDLookupOptions._({
+          ..._instance._$data,
+          if (episodeID != _undefined) 'episodeID': (episodeID as int?),
+          if (programID != _undefined) 'programID': (programID as int?),
+        }),
+      );
 }
 
 class _CopyWithStubImpl$Input$LegacyIDLookupOptions<TRes>
@@ -134,11 +121,7 @@ class _CopyWithStubImpl$Input$LegacyIDLookupOptions<TRes>
 
   TRes _res;
 
-  call({
-    int? episodeID,
-    int? programID,
-  }) =>
-      _res;
+  call({int? episodeID, int? programID}) => _res;
 }
 
 class Input$EpisodeContext {
@@ -147,13 +130,12 @@ class Input$EpisodeContext {
     String? playlistId,
     bool? shuffle,
     String? cursor,
-  }) =>
-      Input$EpisodeContext._({
-        if (collectionId != null) r'collectionId': collectionId,
-        if (playlistId != null) r'playlistId': playlistId,
-        if (shuffle != null) r'shuffle': shuffle,
-        if (cursor != null) r'cursor': cursor,
-      });
+  }) => Input$EpisodeContext._({
+    if (collectionId != null) r'collectionId': collectionId,
+    if (playlistId != null) r'playlistId': playlistId,
+    if (shuffle != null) r'shuffle': shuffle,
+    if (cursor != null) r'cursor': cursor,
+  });
 
   Input$EpisodeContext._(this._$data);
 
@@ -210,10 +192,7 @@ class Input$EpisodeContext {
   }
 
   CopyWith$Input$EpisodeContext<Input$EpisodeContext> get copyWith =>
-      CopyWith$Input$EpisodeContext(
-        this,
-        (i) => i,
-      );
+      CopyWith$Input$EpisodeContext(this, (i) => i);
 
   @override
   bool operator ==(Object other) {
@@ -294,10 +273,7 @@ abstract class CopyWith$Input$EpisodeContext<TRes> {
 
 class _CopyWithImpl$Input$EpisodeContext<TRes>
     implements CopyWith$Input$EpisodeContext<TRes> {
-  _CopyWithImpl$Input$EpisodeContext(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Input$EpisodeContext(this._instance, this._then);
 
   final Input$EpisodeContext _instance;
 
@@ -310,15 +286,15 @@ class _CopyWithImpl$Input$EpisodeContext<TRes>
     Object? playlistId = _undefined,
     Object? shuffle = _undefined,
     Object? cursor = _undefined,
-  }) =>
-      _then(Input$EpisodeContext._({
-        ..._instance._$data,
-        if (collectionId != _undefined)
-          'collectionId': (collectionId as String?),
-        if (playlistId != _undefined) 'playlistId': (playlistId as String?),
-        if (shuffle != _undefined) 'shuffle': (shuffle as bool?),
-        if (cursor != _undefined) 'cursor': (cursor as String?),
-      }));
+  }) => _then(
+    Input$EpisodeContext._({
+      ..._instance._$data,
+      if (collectionId != _undefined) 'collectionId': (collectionId as String?),
+      if (playlistId != _undefined) 'playlistId': (playlistId as String?),
+      if (shuffle != _undefined) 'shuffle': (shuffle as bool?),
+      if (cursor != _undefined) 'cursor': (cursor as String?),
+    }),
+  );
 }
 
 class _CopyWithStubImpl$Input$EpisodeContext<TRes>
@@ -332,8 +308,7 @@ class _CopyWithStubImpl$Input$EpisodeContext<TRes>
     String? playlistId,
     bool? shuffle,
     String? cursor,
-  }) =>
-      _res;
+  }) => _res;
 }
 
 enum Enum$ImageStyle {
@@ -589,31 +564,47 @@ Enum$__DirectiveLocation fromJson$Enum$__DirectiveLocation(String value) {
 
 const possibleTypesMap = <String, Set<String>>{
   'Pagination': {
-    'SurveyQuestionPagination',
-    'LinkPagination',
-    'UserCollectionEntryPagination',
-    'SectionPagination',
-    'SectionItemPagination',
-    'PlaylistItemPagination',
-    'ContributionsPagination',
-    'SeasonPagination',
-    'QuestionPagination',
-    'FAQCategoryPagination',
-    'LessonPagination',
-    'TaskPagination',
     'AchievementPagination',
     'AchievementGroupPagination',
     'EpisodePagination',
+    'QuestionPagination',
+    'FAQCategoryPagination',
+    'LinkPagination',
+    'ContributionsPagination',
+    'PlaylistItemPagination',
+    'SeasonPagination',
+    'SectionPagination',
+    'SectionItemPagination',
+    'LessonPagination',
+    'TaskPagination',
+    'SurveyQuestionPagination',
+    'UserCollectionEntryPagination',
   },
-  'SurveyQuestion': {
-    'SurveyTextQuestion',
-    'SurveyRatingQuestion',
-    'SurveyLinkQuestion',
+  'CalendarEntry': {
+    'SimpleCalendarEntry',
+    'EpisodeCalendarEntry',
+    'SeasonCalendarEntry',
+    'ShowCalendarEntry',
   },
-  'UserCollectionEntryItem': {
-    'Show',
+  'EpisodeContextUnion': {'Season', 'ContextCollection', 'Playlist'},
+  'CollectionItem': {
     'Episode',
+    'Chapter',
+    'Game',
+    'Playlist',
+    'Season',
     'Short',
+    'Show',
+    'StudyTopic',
+  },
+  'PlaylistItem': {'Episode', 'Short'},
+  'MediaItem': {'Episode', 'Short'},
+  'ContributionItem': {'Episode', 'Chapter'},
+  'Prompt': {'SurveyPrompt'},
+  'SearchResultItem': {
+    'EpisodeSearchItem',
+    'SeasonSearchItem',
+    'ShowSearchItem',
   },
   'Section': {
     'PosterSection',
@@ -647,11 +638,7 @@ const possibleTypesMap = <String, Set<String>>{
     'LabelSection',
     'AvatarSection',
   },
-  'GridSection': {
-    'DefaultGridSection',
-    'PosterGridSection',
-    'IconGridSection',
-  },
+  'GridSection': {'DefaultGridSection', 'PosterGridSection', 'IconGridSection'},
   'SectionItemType': {
     'Show',
     'Season',
@@ -664,32 +651,7 @@ const possibleTypesMap = <String, Set<String>>{
     'Short',
     'Person',
   },
-  'CollectionItem': {
-    'Playlist',
-    'Game',
-    'Season',
-    'StudyTopic',
-    'Short',
-    'Episode',
-    'Chapter',
-    'Show',
-  },
-  'CalendarEntry': {
-    'SimpleCalendarEntry',
-    'EpisodeCalendarEntry',
-    'SeasonCalendarEntry',
-    'ShowCalendarEntry',
-  },
-  'ContributionItem': {
-    'Episode',
-    'Chapter',
-  },
-  'SearchResultItem': {
-    'EpisodeSearchItem',
-    'SeasonSearchItem',
-    'ShowSearchItem',
-  },
-  'Prompt': {'SurveyPrompt'},
+  'SubclipSourceItem': {'Episode'},
   'Task': {
     'AlternativesTask',
     'TextTask',
@@ -698,18 +660,10 @@ const possibleTypesMap = <String, Set<String>>{
     'VideoTask',
     'LinkTask',
   },
-  'PlaylistItem': {
-    'Short',
-    'Episode',
+  'SurveyQuestion': {
+    'SurveyTextQuestion',
+    'SurveyRatingQuestion',
+    'SurveyLinkQuestion',
   },
-  'MediaItem': {
-    'Short',
-    'Episode',
-  },
-  'SubclipSourceItem': {'Episode'},
-  'EpisodeContextUnion': {
-    'Season',
-    'ContextCollection',
-    'Playlist',
-  },
+  'UserCollectionEntryItem': {'Show', 'Episode', 'Short'},
 };

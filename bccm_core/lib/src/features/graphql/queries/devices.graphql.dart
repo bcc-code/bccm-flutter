@@ -1,5 +1,7 @@
 import '../schema/mutations.graphql.dart';
+
 import 'dart:async';
+
 import 'package:flutter/widgets.dart' as widgets;
 import 'package:gql/ast.dart';
 import 'package:graphql/client.dart' as graphql;
@@ -9,22 +11,23 @@ class Variables$Mutation$SetDeviceToken {
   factory Variables$Mutation$SetDeviceToken({
     required String token,
     required List<String> languages,
-  }) =>
-      Variables$Mutation$SetDeviceToken._({
-        r'token': token,
-        r'languages': languages,
-      });
+  }) => Variables$Mutation$SetDeviceToken._({
+    r'token': token,
+    r'languages': languages,
+  });
 
   Variables$Mutation$SetDeviceToken._(this._$data);
 
   factory Variables$Mutation$SetDeviceToken.fromJson(
-      Map<String, dynamic> data) {
+    Map<String, dynamic> data,
+  ) {
     final result$data = <String, dynamic>{};
     final l$token = data['token'];
     result$data['token'] = (l$token as String);
     final l$languages = data['languages'];
-    result$data['languages'] =
-        (l$languages as List<dynamic>).map((e) => (e as String)).toList();
+    result$data['languages'] = (l$languages as List<dynamic>)
+        .map((e) => (e as String))
+        .toList();
     return Variables$Mutation$SetDeviceToken._(result$data);
   }
 
@@ -44,10 +47,7 @@ class Variables$Mutation$SetDeviceToken {
   }
 
   CopyWith$Variables$Mutation$SetDeviceToken<Variables$Mutation$SetDeviceToken>
-      get copyWith => CopyWith$Variables$Mutation$SetDeviceToken(
-            this,
-            (i) => i,
-          );
+  get copyWith => CopyWith$Variables$Mutation$SetDeviceToken(this, (i) => i);
 
   @override
   bool operator ==(Object other) {
@@ -82,10 +82,7 @@ class Variables$Mutation$SetDeviceToken {
   int get hashCode {
     final l$token = token;
     final l$languages = languages;
-    return Object.hashAll([
-      l$token,
-      Object.hashAll(l$languages.map((v) => v)),
-    ]);
+    return Object.hashAll([l$token, Object.hashAll(l$languages.map((v) => v))]);
   }
 }
 
@@ -98,18 +95,12 @@ abstract class CopyWith$Variables$Mutation$SetDeviceToken<TRes> {
   factory CopyWith$Variables$Mutation$SetDeviceToken.stub(TRes res) =
       _CopyWithStubImpl$Variables$Mutation$SetDeviceToken;
 
-  TRes call({
-    String? token,
-    List<String>? languages,
-  });
+  TRes call({String? token, List<String>? languages});
 }
 
 class _CopyWithImpl$Variables$Mutation$SetDeviceToken<TRes>
     implements CopyWith$Variables$Mutation$SetDeviceToken<TRes> {
-  _CopyWithImpl$Variables$Mutation$SetDeviceToken(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Variables$Mutation$SetDeviceToken(this._instance, this._then);
 
   final Variables$Mutation$SetDeviceToken _instance;
 
@@ -117,16 +108,15 @@ class _CopyWithImpl$Variables$Mutation$SetDeviceToken<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({
-    Object? token = _undefined,
-    Object? languages = _undefined,
-  }) =>
-      _then(Variables$Mutation$SetDeviceToken._({
-        ..._instance._$data,
-        if (token != _undefined && token != null) 'token': (token as String),
-        if (languages != _undefined && languages != null)
-          'languages': (languages as List<String>),
-      }));
+  TRes call({Object? token = _undefined, Object? languages = _undefined}) =>
+      _then(
+        Variables$Mutation$SetDeviceToken._({
+          ..._instance._$data,
+          if (token != _undefined && token != null) 'token': (token as String),
+          if (languages != _undefined && languages != null)
+            'languages': (languages as List<String>),
+        }),
+      );
 }
 
 class _CopyWithStubImpl$Variables$Mutation$SetDeviceToken<TRes>
@@ -135,11 +125,7 @@ class _CopyWithStubImpl$Variables$Mutation$SetDeviceToken<TRes>
 
   TRes _res;
 
-  call({
-    String? token,
-    List<String>? languages,
-  }) =>
-      _res;
+  call({String? token, List<String>? languages}) => _res;
 }
 
 class Mutation$SetDeviceToken {
@@ -155,7 +141,8 @@ class Mutation$SetDeviceToken {
       setDevicePushToken: l$setDevicePushToken == null
           ? null
           : Mutation$SetDeviceToken$setDevicePushToken.fromJson(
-              (l$setDevicePushToken as Map<String, dynamic>)),
+              (l$setDevicePushToken as Map<String, dynamic>),
+            ),
       $__typename: (l$$__typename as String),
     );
   }
@@ -178,10 +165,7 @@ class Mutation$SetDeviceToken {
   int get hashCode {
     final l$setDevicePushToken = setDevicePushToken;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$setDevicePushToken,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$setDevicePushToken, l$$__typename]);
   }
 
   @override
@@ -208,10 +192,7 @@ class Mutation$SetDeviceToken {
 
 extension UtilityExtension$Mutation$SetDeviceToken on Mutation$SetDeviceToken {
   CopyWith$Mutation$SetDeviceToken<Mutation$SetDeviceToken> get copyWith =>
-      CopyWith$Mutation$SetDeviceToken(
-        this,
-        (i) => i,
-      );
+      CopyWith$Mutation$SetDeviceToken(this, (i) => i);
 }
 
 abstract class CopyWith$Mutation$SetDeviceToken<TRes> {
@@ -228,15 +209,12 @@ abstract class CopyWith$Mutation$SetDeviceToken<TRes> {
     String? $__typename,
   });
   CopyWith$Mutation$SetDeviceToken$setDevicePushToken<TRes>
-      get setDevicePushToken;
+  get setDevicePushToken;
 }
 
 class _CopyWithImpl$Mutation$SetDeviceToken<TRes>
     implements CopyWith$Mutation$SetDeviceToken<TRes> {
-  _CopyWithImpl$Mutation$SetDeviceToken(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Mutation$SetDeviceToken(this._instance, this._then);
 
   final Mutation$SetDeviceToken _instance;
 
@@ -247,25 +225,28 @@ class _CopyWithImpl$Mutation$SetDeviceToken<TRes>
   TRes call({
     Object? setDevicePushToken = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Mutation$SetDeviceToken(
-        setDevicePushToken: setDevicePushToken == _undefined
-            ? _instance.setDevicePushToken
-            : (setDevicePushToken
-                as Mutation$SetDeviceToken$setDevicePushToken?),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  }) => _then(
+    Mutation$SetDeviceToken(
+      setDevicePushToken: setDevicePushToken == _undefined
+          ? _instance.setDevicePushToken
+          : (setDevicePushToken as Mutation$SetDeviceToken$setDevicePushToken?),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 
   CopyWith$Mutation$SetDeviceToken$setDevicePushToken<TRes>
-      get setDevicePushToken {
+  get setDevicePushToken {
     final local$setDevicePushToken = _instance.setDevicePushToken;
     return local$setDevicePushToken == null
         ? CopyWith$Mutation$SetDeviceToken$setDevicePushToken.stub(
-            _then(_instance))
+            _then(_instance),
+          )
         : CopyWith$Mutation$SetDeviceToken$setDevicePushToken(
-            local$setDevicePushToken, (e) => call(setDevicePushToken: e));
+            local$setDevicePushToken,
+            (e) => call(setDevicePushToken: e),
+          );
   }
 }
 
@@ -278,58 +259,81 @@ class _CopyWithStubImpl$Mutation$SetDeviceToken<TRes>
   call({
     Mutation$SetDeviceToken$setDevicePushToken? setDevicePushToken,
     String? $__typename,
-  }) =>
-      _res;
+  }) => _res;
 
   CopyWith$Mutation$SetDeviceToken$setDevicePushToken<TRes>
-      get setDevicePushToken =>
-          CopyWith$Mutation$SetDeviceToken$setDevicePushToken.stub(_res);
+  get setDevicePushToken =>
+      CopyWith$Mutation$SetDeviceToken$setDevicePushToken.stub(_res);
 }
 
-const documentNodeMutationSetDeviceToken = DocumentNode(definitions: [
-  OperationDefinitionNode(
-    type: OperationType.mutation,
-    name: NameNode(value: 'SetDeviceToken'),
-    variableDefinitions: [
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'token')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'String'),
-          isNonNull: true,
+const documentNodeMutationSetDeviceToken = DocumentNode(
+  definitions: [
+    OperationDefinitionNode(
+      type: OperationType.mutation,
+      name: NameNode(value: 'SetDeviceToken'),
+      variableDefinitions: [
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'token')),
+          type: NamedTypeNode(name: NameNode(value: 'String'), isNonNull: true),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'languages')),
-        type: ListTypeNode(
-          type: NamedTypeNode(
-            name: NameNode(value: 'String'),
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'languages')),
+          type: ListTypeNode(
+            type: NamedTypeNode(
+              name: NameNode(value: 'String'),
+              isNonNull: true,
+            ),
             isNonNull: true,
           ),
-          isNonNull: true,
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-    ],
-    directives: [],
-    selectionSet: SelectionSetNode(selections: [
-      FieldNode(
-        name: NameNode(value: 'setDevicePushToken'),
-        alias: null,
-        arguments: [
-          ArgumentNode(
-            name: NameNode(value: 'token'),
-            value: VariableNode(name: NameNode(value: 'token')),
+      ],
+      directives: [],
+      selectionSet: SelectionSetNode(
+        selections: [
+          FieldNode(
+            name: NameNode(value: 'setDevicePushToken'),
+            alias: null,
+            arguments: [
+              ArgumentNode(
+                name: NameNode(value: 'token'),
+                value: VariableNode(name: NameNode(value: 'token')),
+              ),
+              ArgumentNode(
+                name: NameNode(value: 'languages'),
+                value: VariableNode(name: NameNode(value: 'languages')),
+              ),
+            ],
+            directives: [],
+            selectionSet: SelectionSetNode(
+              selections: [
+                FieldNode(
+                  name: NameNode(value: '__typename'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'token'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'updatedAt'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+              ],
+            ),
           ),
-          ArgumentNode(
-            name: NameNode(value: 'languages'),
-            value: VariableNode(name: NameNode(value: 'languages')),
-          ),
-        ],
-        directives: [],
-        selectionSet: SelectionSetNode(selections: [
           FieldNode(
             name: NameNode(value: '__typename'),
             alias: null,
@@ -337,35 +341,14 @@ const documentNodeMutationSetDeviceToken = DocumentNode(definitions: [
             directives: [],
             selectionSet: null,
           ),
-          FieldNode(
-            name: NameNode(value: 'token'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'updatedAt'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
-        ]),
+        ],
       ),
-      FieldNode(
-        name: NameNode(value: '__typename'),
-        alias: null,
-        arguments: [],
-        directives: [],
-        selectionSet: null,
-      ),
-    ]),
-  ),
-]);
+    ),
+  ],
+);
 Mutation$SetDeviceToken _parserFn$Mutation$SetDeviceToken(
-        Map<String, dynamic> data) =>
-    Mutation$SetDeviceToken.fromJson(data);
+  Map<String, dynamic> data,
+) => Mutation$SetDeviceToken.fromJson(data);
 typedef OnMutationCompleted$Mutation$SetDeviceToken = FutureOr<void> Function(
   Map<String, dynamic>?,
   Mutation$SetDeviceToken?,
@@ -385,38 +368,36 @@ class Options$Mutation$SetDeviceToken
     OnMutationCompleted$Mutation$SetDeviceToken? onCompleted,
     graphql.OnMutationUpdate<Mutation$SetDeviceToken>? update,
     graphql.OnError? onError,
-  })  : onCompletedWithParsed = onCompleted,
-        super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          onCompleted: onCompleted == null
-              ? null
-              : (data) => onCompleted(
-                    data,
-                    data == null
-                        ? null
-                        : _parserFn$Mutation$SetDeviceToken(data),
-                  ),
-          update: update,
-          onError: onError,
-          document: documentNodeMutationSetDeviceToken,
-          parserFn: _parserFn$Mutation$SetDeviceToken,
-        );
+  }) : onCompletedWithParsed = onCompleted,
+       super(
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         onCompleted: onCompleted == null
+             ? null
+             : (data) => onCompleted(
+                 data,
+                 data == null ? null : _parserFn$Mutation$SetDeviceToken(data),
+               ),
+         update: update,
+         onError: onError,
+         document: documentNodeMutationSetDeviceToken,
+         parserFn: _parserFn$Mutation$SetDeviceToken,
+       );
 
   final OnMutationCompleted$Mutation$SetDeviceToken? onCompletedWithParsed;
 
   @override
   List<Object?> get properties => [
-        ...super.onCompleted == null
-            ? super.properties
-            : super.properties.where((property) => property != onCompleted),
-        onCompletedWithParsed,
-      ];
+    ...super.onCompleted == null
+        ? super.properties
+        : super.properties.where((property) => property != onCompleted),
+    onCompletedWithParsed,
+  ];
 }
 
 class WatchOptions$Mutation$SetDeviceToken
@@ -435,61 +416,59 @@ class WatchOptions$Mutation$SetDeviceToken
     bool carryForwardDataOnException = true,
     bool fetchResults = false,
   }) : super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          document: documentNodeMutationSetDeviceToken,
-          pollInterval: pollInterval,
-          eagerlyFetchResults: eagerlyFetchResults,
-          carryForwardDataOnException: carryForwardDataOnException,
-          fetchResults: fetchResults,
-          parserFn: _parserFn$Mutation$SetDeviceToken,
-        );
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         document: documentNodeMutationSetDeviceToken,
+         pollInterval: pollInterval,
+         eagerlyFetchResults: eagerlyFetchResults,
+         carryForwardDataOnException: carryForwardDataOnException,
+         fetchResults: fetchResults,
+         parserFn: _parserFn$Mutation$SetDeviceToken,
+       );
 }
 
 extension ClientExtension$Mutation$SetDeviceToken on graphql.GraphQLClient {
   Future<graphql.QueryResult<Mutation$SetDeviceToken>> mutate$SetDeviceToken(
-          Options$Mutation$SetDeviceToken options) async =>
-      await this.mutate(options);
+    Options$Mutation$SetDeviceToken options,
+  ) async => await this.mutate(options);
 
   graphql.ObservableQuery<Mutation$SetDeviceToken> watchMutation$SetDeviceToken(
-          WatchOptions$Mutation$SetDeviceToken options) =>
-      this.watchMutation(options);
+    WatchOptions$Mutation$SetDeviceToken options,
+  ) => this.watchMutation(options);
 }
 
 class Mutation$SetDeviceToken$HookResult {
-  Mutation$SetDeviceToken$HookResult(
-    this.runMutation,
-    this.result,
-  );
+  Mutation$SetDeviceToken$HookResult(this.runMutation, this.result);
 
   final RunMutation$Mutation$SetDeviceToken runMutation;
 
   final graphql.QueryResult<Mutation$SetDeviceToken> result;
 }
 
-Mutation$SetDeviceToken$HookResult useMutation$SetDeviceToken(
-    [WidgetOptions$Mutation$SetDeviceToken? options]) {
-  final result = graphql_flutter
-      .useMutation(options ?? WidgetOptions$Mutation$SetDeviceToken());
+Mutation$SetDeviceToken$HookResult useMutation$SetDeviceToken([
+  WidgetOptions$Mutation$SetDeviceToken? options,
+]) {
+  final result = graphql_flutter.useMutation(
+    options ?? WidgetOptions$Mutation$SetDeviceToken(),
+  );
   return Mutation$SetDeviceToken$HookResult(
     (variables, {optimisticResult, typedOptimisticResult}) =>
         result.runMutation(
-      variables.toJson(),
-      optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-    ),
+          variables.toJson(),
+          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+        ),
     result.result,
   );
 }
 
 graphql.ObservableQuery<Mutation$SetDeviceToken>
-    useWatchMutation$SetDeviceToken(
-            WatchOptions$Mutation$SetDeviceToken options) =>
-        graphql_flutter.useWatchMutation(options);
+useWatchMutation$SetDeviceToken(WatchOptions$Mutation$SetDeviceToken options) =>
+    graphql_flutter.useWatchMutation(options);
 
 class WidgetOptions$Mutation$SetDeviceToken
     extends graphql.MutationOptions<Mutation$SetDeviceToken> {
@@ -504,45 +483,43 @@ class WidgetOptions$Mutation$SetDeviceToken
     OnMutationCompleted$Mutation$SetDeviceToken? onCompleted,
     graphql.OnMutationUpdate<Mutation$SetDeviceToken>? update,
     graphql.OnError? onError,
-  })  : onCompletedWithParsed = onCompleted,
-        super(
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          onCompleted: onCompleted == null
-              ? null
-              : (data) => onCompleted(
-                    data,
-                    data == null
-                        ? null
-                        : _parserFn$Mutation$SetDeviceToken(data),
-                  ),
-          update: update,
-          onError: onError,
-          document: documentNodeMutationSetDeviceToken,
-          parserFn: _parserFn$Mutation$SetDeviceToken,
-        );
+  }) : onCompletedWithParsed = onCompleted,
+       super(
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         onCompleted: onCompleted == null
+             ? null
+             : (data) => onCompleted(
+                 data,
+                 data == null ? null : _parserFn$Mutation$SetDeviceToken(data),
+               ),
+         update: update,
+         onError: onError,
+         document: documentNodeMutationSetDeviceToken,
+         parserFn: _parserFn$Mutation$SetDeviceToken,
+       );
 
   final OnMutationCompleted$Mutation$SetDeviceToken? onCompletedWithParsed;
 
   @override
   List<Object?> get properties => [
-        ...super.onCompleted == null
-            ? super.properties
-            : super.properties.where((property) => property != onCompleted),
-        onCompletedWithParsed,
-      ];
+    ...super.onCompleted == null
+        ? super.properties
+        : super.properties.where((property) => property != onCompleted),
+    onCompletedWithParsed,
+  ];
 }
 
-typedef RunMutation$Mutation$SetDeviceToken
-    = graphql.MultiSourceResult<Mutation$SetDeviceToken> Function(
-  Variables$Mutation$SetDeviceToken, {
-  Object? optimisticResult,
-  Mutation$SetDeviceToken? typedOptimisticResult,
-});
+typedef RunMutation$Mutation$SetDeviceToken =
+    graphql.MultiSourceResult<Mutation$SetDeviceToken> Function(
+      Variables$Mutation$SetDeviceToken, {
+      Object? optimisticResult,
+      Mutation$SetDeviceToken? typedOptimisticResult,
+    });
 typedef Builder$Mutation$SetDeviceToken = widgets.Widget Function(
   RunMutation$Mutation$SetDeviceToken,
   graphql.QueryResult<Mutation$SetDeviceToken>?,
@@ -555,26 +532,17 @@ class Mutation$SetDeviceToken$Widget
     WidgetOptions$Mutation$SetDeviceToken? options,
     required Builder$Mutation$SetDeviceToken builder,
   }) : super(
-          key: key,
-          options: options ?? WidgetOptions$Mutation$SetDeviceToken(),
-          builder: (
-            run,
-            result,
-          ) =>
-              builder(
-            (
-              variables, {
-              optimisticResult,
-              typedOptimisticResult,
-            }) =>
-                run(
-              variables.toJson(),
-              optimisticResult:
-                  optimisticResult ?? typedOptimisticResult?.toJson(),
-            ),
-            result,
-          ),
-        );
+         key: key,
+         options: options ?? WidgetOptions$Mutation$SetDeviceToken(),
+         builder: (run, result) => builder(
+           (variables, {optimisticResult, typedOptimisticResult}) => run(
+             variables.toJson(),
+             optimisticResult:
+                 optimisticResult ?? typedOptimisticResult?.toJson(),
+           ),
+           result,
+         ),
+       );
 }
 
 class Mutation$SetDeviceToken$setDevicePushToken {
@@ -585,7 +553,8 @@ class Mutation$SetDeviceToken$setDevicePushToken {
   });
 
   factory Mutation$SetDeviceToken$setDevicePushToken.fromJson(
-      Map<String, dynamic> json) {
+    Map<String, dynamic> json,
+  ) {
     final l$$__typename = json['__typename'];
     final l$token = json['token'];
     final l$updatedAt = json['updatedAt'];
@@ -618,11 +587,7 @@ class Mutation$SetDeviceToken$setDevicePushToken {
     final l$$__typename = $__typename;
     final l$token = token;
     final l$updatedAt = updatedAt;
-    return Object.hashAll([
-      l$$__typename,
-      l$token,
-      l$updatedAt,
-    ]);
+    return Object.hashAll([l$$__typename, l$token, l$updatedAt]);
   }
 
   @override
@@ -656,11 +621,10 @@ class Mutation$SetDeviceToken$setDevicePushToken {
 extension UtilityExtension$Mutation$SetDeviceToken$setDevicePushToken
     on Mutation$SetDeviceToken$setDevicePushToken {
   CopyWith$Mutation$SetDeviceToken$setDevicePushToken<
-          Mutation$SetDeviceToken$setDevicePushToken>
-      get copyWith => CopyWith$Mutation$SetDeviceToken$setDevicePushToken(
-            this,
-            (i) => i,
-          );
+    Mutation$SetDeviceToken$setDevicePushToken
+  >
+  get copyWith =>
+      CopyWith$Mutation$SetDeviceToken$setDevicePushToken(this, (i) => i);
 }
 
 abstract class CopyWith$Mutation$SetDeviceToken$setDevicePushToken<TRes> {
@@ -672,11 +636,7 @@ abstract class CopyWith$Mutation$SetDeviceToken$setDevicePushToken<TRes> {
   factory CopyWith$Mutation$SetDeviceToken$setDevicePushToken.stub(TRes res) =
       _CopyWithStubImpl$Mutation$SetDeviceToken$setDevicePushToken;
 
-  TRes call({
-    String? $__typename,
-    String? token,
-    String? updatedAt,
-  });
+  TRes call({String? $__typename, String? token, String? updatedAt});
 }
 
 class _CopyWithImpl$Mutation$SetDeviceToken$setDevicePushToken<TRes>
@@ -696,18 +656,19 @@ class _CopyWithImpl$Mutation$SetDeviceToken$setDevicePushToken<TRes>
     Object? $__typename = _undefined,
     Object? token = _undefined,
     Object? updatedAt = _undefined,
-  }) =>
-      _then(Mutation$SetDeviceToken$setDevicePushToken(
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-        token: token == _undefined || token == null
-            ? _instance.token
-            : (token as String),
-        updatedAt: updatedAt == _undefined || updatedAt == null
-            ? _instance.updatedAt
-            : (updatedAt as String),
-      ));
+  }) => _then(
+    Mutation$SetDeviceToken$setDevicePushToken(
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+      token: token == _undefined || token == null
+          ? _instance.token
+          : (token as String),
+      updatedAt: updatedAt == _undefined || updatedAt == null
+          ? _instance.updatedAt
+          : (updatedAt as String),
+    ),
+  );
 }
 
 class _CopyWithStubImpl$Mutation$SetDeviceToken$setDevicePushToken<TRes>
@@ -716,12 +677,7 @@ class _CopyWithStubImpl$Mutation$SetDeviceToken$setDevicePushToken<TRes>
 
   TRes _res;
 
-  call({
-    String? $__typename,
-    String? token,
-    String? updatedAt,
-  }) =>
-      _res;
+  call({String? $__typename, String? token, String? updatedAt}) => _res;
 }
 
 class Variables$Mutation$SetDeviceTokenV2 {
@@ -730,24 +686,25 @@ class Variables$Mutation$SetDeviceTokenV2 {
     required List<String> languages,
     required Enum$OS os,
     required int appBuildNumber,
-  }) =>
-      Variables$Mutation$SetDeviceTokenV2._({
-        r'token': token,
-        r'languages': languages,
-        r'os': os,
-        r'appBuildNumber': appBuildNumber,
-      });
+  }) => Variables$Mutation$SetDeviceTokenV2._({
+    r'token': token,
+    r'languages': languages,
+    r'os': os,
+    r'appBuildNumber': appBuildNumber,
+  });
 
   Variables$Mutation$SetDeviceTokenV2._(this._$data);
 
   factory Variables$Mutation$SetDeviceTokenV2.fromJson(
-      Map<String, dynamic> data) {
+    Map<String, dynamic> data,
+  ) {
     final result$data = <String, dynamic>{};
     final l$token = data['token'];
     result$data['token'] = (l$token as String);
     final l$languages = data['languages'];
-    result$data['languages'] =
-        (l$languages as List<dynamic>).map((e) => (e as String)).toList();
+    result$data['languages'] = (l$languages as List<dynamic>)
+        .map((e) => (e as String))
+        .toList();
     final l$os = data['os'];
     result$data['os'] = fromJson$Enum$OS((l$os as String));
     final l$appBuildNumber = data['appBuildNumber'];
@@ -779,11 +736,9 @@ class Variables$Mutation$SetDeviceTokenV2 {
   }
 
   CopyWith$Variables$Mutation$SetDeviceTokenV2<
-          Variables$Mutation$SetDeviceTokenV2>
-      get copyWith => CopyWith$Variables$Mutation$SetDeviceTokenV2(
-            this,
-            (i) => i,
-          );
+    Variables$Mutation$SetDeviceTokenV2
+  >
+  get copyWith => CopyWith$Variables$Mutation$SetDeviceTokenV2(this, (i) => i);
 
   @override
   bool operator ==(Object other) {
@@ -858,10 +813,7 @@ abstract class CopyWith$Variables$Mutation$SetDeviceTokenV2<TRes> {
 
 class _CopyWithImpl$Variables$Mutation$SetDeviceTokenV2<TRes>
     implements CopyWith$Variables$Mutation$SetDeviceTokenV2<TRes> {
-  _CopyWithImpl$Variables$Mutation$SetDeviceTokenV2(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Variables$Mutation$SetDeviceTokenV2(this._instance, this._then);
 
   final Variables$Mutation$SetDeviceTokenV2 _instance;
 
@@ -874,16 +826,17 @@ class _CopyWithImpl$Variables$Mutation$SetDeviceTokenV2<TRes>
     Object? languages = _undefined,
     Object? os = _undefined,
     Object? appBuildNumber = _undefined,
-  }) =>
-      _then(Variables$Mutation$SetDeviceTokenV2._({
-        ..._instance._$data,
-        if (token != _undefined && token != null) 'token': (token as String),
-        if (languages != _undefined && languages != null)
-          'languages': (languages as List<String>),
-        if (os != _undefined && os != null) 'os': (os as Enum$OS),
-        if (appBuildNumber != _undefined && appBuildNumber != null)
-          'appBuildNumber': (appBuildNumber as int),
-      }));
+  }) => _then(
+    Variables$Mutation$SetDeviceTokenV2._({
+      ..._instance._$data,
+      if (token != _undefined && token != null) 'token': (token as String),
+      if (languages != _undefined && languages != null)
+        'languages': (languages as List<String>),
+      if (os != _undefined && os != null) 'os': (os as Enum$OS),
+      if (appBuildNumber != _undefined && appBuildNumber != null)
+        'appBuildNumber': (appBuildNumber as int),
+    }),
+  );
 }
 
 class _CopyWithStubImpl$Variables$Mutation$SetDeviceTokenV2<TRes>
@@ -897,8 +850,7 @@ class _CopyWithStubImpl$Variables$Mutation$SetDeviceTokenV2<TRes>
     List<String>? languages,
     Enum$OS? os,
     int? appBuildNumber,
-  }) =>
-      _res;
+  }) => _res;
 }
 
 class Mutation$SetDeviceTokenV2 {
@@ -914,7 +866,8 @@ class Mutation$SetDeviceTokenV2 {
       setDevicePushTokenV2: l$setDevicePushTokenV2 == null
           ? null
           : Mutation$SetDeviceTokenV2$setDevicePushTokenV2.fromJson(
-              (l$setDevicePushTokenV2 as Map<String, dynamic>)),
+              (l$setDevicePushTokenV2 as Map<String, dynamic>),
+            ),
       $__typename: (l$$__typename as String),
     );
   }
@@ -936,10 +889,7 @@ class Mutation$SetDeviceTokenV2 {
   int get hashCode {
     final l$setDevicePushTokenV2 = setDevicePushTokenV2;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$setDevicePushTokenV2,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$setDevicePushTokenV2, l$$__typename]);
   }
 
   @override
@@ -968,10 +918,7 @@ class Mutation$SetDeviceTokenV2 {
 extension UtilityExtension$Mutation$SetDeviceTokenV2
     on Mutation$SetDeviceTokenV2 {
   CopyWith$Mutation$SetDeviceTokenV2<Mutation$SetDeviceTokenV2> get copyWith =>
-      CopyWith$Mutation$SetDeviceTokenV2(
-        this,
-        (i) => i,
-      );
+      CopyWith$Mutation$SetDeviceTokenV2(this, (i) => i);
 }
 
 abstract class CopyWith$Mutation$SetDeviceTokenV2<TRes> {
@@ -988,15 +935,12 @@ abstract class CopyWith$Mutation$SetDeviceTokenV2<TRes> {
     String? $__typename,
   });
   CopyWith$Mutation$SetDeviceTokenV2$setDevicePushTokenV2<TRes>
-      get setDevicePushTokenV2;
+  get setDevicePushTokenV2;
 }
 
 class _CopyWithImpl$Mutation$SetDeviceTokenV2<TRes>
     implements CopyWith$Mutation$SetDeviceTokenV2<TRes> {
-  _CopyWithImpl$Mutation$SetDeviceTokenV2(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Mutation$SetDeviceTokenV2(this._instance, this._then);
 
   final Mutation$SetDeviceTokenV2 _instance;
 
@@ -1007,25 +951,29 @@ class _CopyWithImpl$Mutation$SetDeviceTokenV2<TRes>
   TRes call({
     Object? setDevicePushTokenV2 = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Mutation$SetDeviceTokenV2(
-        setDevicePushTokenV2: setDevicePushTokenV2 == _undefined
-            ? _instance.setDevicePushTokenV2
-            : (setDevicePushTokenV2
+  }) => _then(
+    Mutation$SetDeviceTokenV2(
+      setDevicePushTokenV2: setDevicePushTokenV2 == _undefined
+          ? _instance.setDevicePushTokenV2
+          : (setDevicePushTokenV2
                 as Mutation$SetDeviceTokenV2$setDevicePushTokenV2?),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 
   CopyWith$Mutation$SetDeviceTokenV2$setDevicePushTokenV2<TRes>
-      get setDevicePushTokenV2 {
+  get setDevicePushTokenV2 {
     final local$setDevicePushTokenV2 = _instance.setDevicePushTokenV2;
     return local$setDevicePushTokenV2 == null
         ? CopyWith$Mutation$SetDeviceTokenV2$setDevicePushTokenV2.stub(
-            _then(_instance))
+            _then(_instance),
+          )
         : CopyWith$Mutation$SetDeviceTokenV2$setDevicePushTokenV2(
-            local$setDevicePushTokenV2, (e) => call(setDevicePushTokenV2: e));
+            local$setDevicePushTokenV2,
+            (e) => call(setDevicePushTokenV2: e),
+          );
   }
 }
 
@@ -1038,84 +986,101 @@ class _CopyWithStubImpl$Mutation$SetDeviceTokenV2<TRes>
   call({
     Mutation$SetDeviceTokenV2$setDevicePushTokenV2? setDevicePushTokenV2,
     String? $__typename,
-  }) =>
-      _res;
+  }) => _res;
 
   CopyWith$Mutation$SetDeviceTokenV2$setDevicePushTokenV2<TRes>
-      get setDevicePushTokenV2 =>
-          CopyWith$Mutation$SetDeviceTokenV2$setDevicePushTokenV2.stub(_res);
+  get setDevicePushTokenV2 =>
+      CopyWith$Mutation$SetDeviceTokenV2$setDevicePushTokenV2.stub(_res);
 }
 
-const documentNodeMutationSetDeviceTokenV2 = DocumentNode(definitions: [
-  OperationDefinitionNode(
-    type: OperationType.mutation,
-    name: NameNode(value: 'SetDeviceTokenV2'),
-    variableDefinitions: [
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'token')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'String'),
-          isNonNull: true,
+const documentNodeMutationSetDeviceTokenV2 = DocumentNode(
+  definitions: [
+    OperationDefinitionNode(
+      type: OperationType.mutation,
+      name: NameNode(value: 'SetDeviceTokenV2'),
+      variableDefinitions: [
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'token')),
+          type: NamedTypeNode(name: NameNode(value: 'String'), isNonNull: true),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'languages')),
-        type: ListTypeNode(
-          type: NamedTypeNode(
-            name: NameNode(value: 'String'),
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'languages')),
+          type: ListTypeNode(
+            type: NamedTypeNode(
+              name: NameNode(value: 'String'),
+              isNonNull: true,
+            ),
             isNonNull: true,
           ),
-          isNonNull: true,
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'os')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'OS'),
-          isNonNull: true,
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'os')),
+          type: NamedTypeNode(name: NameNode(value: 'OS'), isNonNull: true),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'appBuildNumber')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'Int'),
-          isNonNull: true,
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'appBuildNumber')),
+          type: NamedTypeNode(name: NameNode(value: 'Int'), isNonNull: true),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-    ],
-    directives: [],
-    selectionSet: SelectionSetNode(selections: [
-      FieldNode(
-        name: NameNode(value: 'setDevicePushTokenV2'),
-        alias: null,
-        arguments: [
-          ArgumentNode(
-            name: NameNode(value: 'token'),
-            value: VariableNode(name: NameNode(value: 'token')),
+      ],
+      directives: [],
+      selectionSet: SelectionSetNode(
+        selections: [
+          FieldNode(
+            name: NameNode(value: 'setDevicePushTokenV2'),
+            alias: null,
+            arguments: [
+              ArgumentNode(
+                name: NameNode(value: 'token'),
+                value: VariableNode(name: NameNode(value: 'token')),
+              ),
+              ArgumentNode(
+                name: NameNode(value: 'languages'),
+                value: VariableNode(name: NameNode(value: 'languages')),
+              ),
+              ArgumentNode(
+                name: NameNode(value: 'os'),
+                value: VariableNode(name: NameNode(value: 'os')),
+              ),
+              ArgumentNode(
+                name: NameNode(value: 'appBuildNumber'),
+                value: VariableNode(name: NameNode(value: 'appBuildNumber')),
+              ),
+            ],
+            directives: [],
+            selectionSet: SelectionSetNode(
+              selections: [
+                FieldNode(
+                  name: NameNode(value: '__typename'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'token'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'updatedAt'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+              ],
+            ),
           ),
-          ArgumentNode(
-            name: NameNode(value: 'languages'),
-            value: VariableNode(name: NameNode(value: 'languages')),
-          ),
-          ArgumentNode(
-            name: NameNode(value: 'os'),
-            value: VariableNode(name: NameNode(value: 'os')),
-          ),
-          ArgumentNode(
-            name: NameNode(value: 'appBuildNumber'),
-            value: VariableNode(name: NameNode(value: 'appBuildNumber')),
-          ),
-        ],
-        directives: [],
-        selectionSet: SelectionSetNode(selections: [
           FieldNode(
             name: NameNode(value: '__typename'),
             alias: null,
@@ -1123,35 +1088,14 @@ const documentNodeMutationSetDeviceTokenV2 = DocumentNode(definitions: [
             directives: [],
             selectionSet: null,
           ),
-          FieldNode(
-            name: NameNode(value: 'token'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'updatedAt'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
-        ]),
+        ],
       ),
-      FieldNode(
-        name: NameNode(value: '__typename'),
-        alias: null,
-        arguments: [],
-        directives: [],
-        selectionSet: null,
-      ),
-    ]),
-  ),
-]);
+    ),
+  ],
+);
 Mutation$SetDeviceTokenV2 _parserFn$Mutation$SetDeviceTokenV2(
-        Map<String, dynamic> data) =>
-    Mutation$SetDeviceTokenV2.fromJson(data);
+  Map<String, dynamic> data,
+) => Mutation$SetDeviceTokenV2.fromJson(data);
 typedef OnMutationCompleted$Mutation$SetDeviceTokenV2 = FutureOr<void> Function(
   Map<String, dynamic>?,
   Mutation$SetDeviceTokenV2?,
@@ -1171,38 +1115,38 @@ class Options$Mutation$SetDeviceTokenV2
     OnMutationCompleted$Mutation$SetDeviceTokenV2? onCompleted,
     graphql.OnMutationUpdate<Mutation$SetDeviceTokenV2>? update,
     graphql.OnError? onError,
-  })  : onCompletedWithParsed = onCompleted,
-        super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          onCompleted: onCompleted == null
-              ? null
-              : (data) => onCompleted(
-                    data,
-                    data == null
-                        ? null
-                        : _parserFn$Mutation$SetDeviceTokenV2(data),
-                  ),
-          update: update,
-          onError: onError,
-          document: documentNodeMutationSetDeviceTokenV2,
-          parserFn: _parserFn$Mutation$SetDeviceTokenV2,
-        );
+  }) : onCompletedWithParsed = onCompleted,
+       super(
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         onCompleted: onCompleted == null
+             ? null
+             : (data) => onCompleted(
+                 data,
+                 data == null
+                     ? null
+                     : _parserFn$Mutation$SetDeviceTokenV2(data),
+               ),
+         update: update,
+         onError: onError,
+         document: documentNodeMutationSetDeviceTokenV2,
+         parserFn: _parserFn$Mutation$SetDeviceTokenV2,
+       );
 
   final OnMutationCompleted$Mutation$SetDeviceTokenV2? onCompletedWithParsed;
 
   @override
   List<Object?> get properties => [
-        ...super.onCompleted == null
-            ? super.properties
-            : super.properties.where((property) => property != onCompleted),
-        onCompletedWithParsed,
-      ];
+    ...super.onCompleted == null
+        ? super.properties
+        : super.properties.where((property) => property != onCompleted),
+    onCompletedWithParsed,
+  ];
 }
 
 class WatchOptions$Mutation$SetDeviceTokenV2
@@ -1221,63 +1165,61 @@ class WatchOptions$Mutation$SetDeviceTokenV2
     bool carryForwardDataOnException = true,
     bool fetchResults = false,
   }) : super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          document: documentNodeMutationSetDeviceTokenV2,
-          pollInterval: pollInterval,
-          eagerlyFetchResults: eagerlyFetchResults,
-          carryForwardDataOnException: carryForwardDataOnException,
-          fetchResults: fetchResults,
-          parserFn: _parserFn$Mutation$SetDeviceTokenV2,
-        );
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         document: documentNodeMutationSetDeviceTokenV2,
+         pollInterval: pollInterval,
+         eagerlyFetchResults: eagerlyFetchResults,
+         carryForwardDataOnException: carryForwardDataOnException,
+         fetchResults: fetchResults,
+         parserFn: _parserFn$Mutation$SetDeviceTokenV2,
+       );
 }
 
 extension ClientExtension$Mutation$SetDeviceTokenV2 on graphql.GraphQLClient {
   Future<graphql.QueryResult<Mutation$SetDeviceTokenV2>>
-      mutate$SetDeviceTokenV2(
-              Options$Mutation$SetDeviceTokenV2 options) async =>
-          await this.mutate(options);
+  mutate$SetDeviceTokenV2(Options$Mutation$SetDeviceTokenV2 options) async =>
+      await this.mutate(options);
 
   graphql.ObservableQuery<Mutation$SetDeviceTokenV2>
-      watchMutation$SetDeviceTokenV2(
-              WatchOptions$Mutation$SetDeviceTokenV2 options) =>
-          this.watchMutation(options);
+  watchMutation$SetDeviceTokenV2(
+    WatchOptions$Mutation$SetDeviceTokenV2 options,
+  ) => this.watchMutation(options);
 }
 
 class Mutation$SetDeviceTokenV2$HookResult {
-  Mutation$SetDeviceTokenV2$HookResult(
-    this.runMutation,
-    this.result,
-  );
+  Mutation$SetDeviceTokenV2$HookResult(this.runMutation, this.result);
 
   final RunMutation$Mutation$SetDeviceTokenV2 runMutation;
 
   final graphql.QueryResult<Mutation$SetDeviceTokenV2> result;
 }
 
-Mutation$SetDeviceTokenV2$HookResult useMutation$SetDeviceTokenV2(
-    [WidgetOptions$Mutation$SetDeviceTokenV2? options]) {
-  final result = graphql_flutter
-      .useMutation(options ?? WidgetOptions$Mutation$SetDeviceTokenV2());
+Mutation$SetDeviceTokenV2$HookResult useMutation$SetDeviceTokenV2([
+  WidgetOptions$Mutation$SetDeviceTokenV2? options,
+]) {
+  final result = graphql_flutter.useMutation(
+    options ?? WidgetOptions$Mutation$SetDeviceTokenV2(),
+  );
   return Mutation$SetDeviceTokenV2$HookResult(
     (variables, {optimisticResult, typedOptimisticResult}) =>
         result.runMutation(
-      variables.toJson(),
-      optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-    ),
+          variables.toJson(),
+          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+        ),
     result.result,
   );
 }
 
 graphql.ObservableQuery<Mutation$SetDeviceTokenV2>
-    useWatchMutation$SetDeviceTokenV2(
-            WatchOptions$Mutation$SetDeviceTokenV2 options) =>
-        graphql_flutter.useWatchMutation(options);
+useWatchMutation$SetDeviceTokenV2(
+  WatchOptions$Mutation$SetDeviceTokenV2 options,
+) => graphql_flutter.useWatchMutation(options);
 
 class WidgetOptions$Mutation$SetDeviceTokenV2
     extends graphql.MutationOptions<Mutation$SetDeviceTokenV2> {
@@ -1292,45 +1234,45 @@ class WidgetOptions$Mutation$SetDeviceTokenV2
     OnMutationCompleted$Mutation$SetDeviceTokenV2? onCompleted,
     graphql.OnMutationUpdate<Mutation$SetDeviceTokenV2>? update,
     graphql.OnError? onError,
-  })  : onCompletedWithParsed = onCompleted,
-        super(
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          onCompleted: onCompleted == null
-              ? null
-              : (data) => onCompleted(
-                    data,
-                    data == null
-                        ? null
-                        : _parserFn$Mutation$SetDeviceTokenV2(data),
-                  ),
-          update: update,
-          onError: onError,
-          document: documentNodeMutationSetDeviceTokenV2,
-          parserFn: _parserFn$Mutation$SetDeviceTokenV2,
-        );
+  }) : onCompletedWithParsed = onCompleted,
+       super(
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         onCompleted: onCompleted == null
+             ? null
+             : (data) => onCompleted(
+                 data,
+                 data == null
+                     ? null
+                     : _parserFn$Mutation$SetDeviceTokenV2(data),
+               ),
+         update: update,
+         onError: onError,
+         document: documentNodeMutationSetDeviceTokenV2,
+         parserFn: _parserFn$Mutation$SetDeviceTokenV2,
+       );
 
   final OnMutationCompleted$Mutation$SetDeviceTokenV2? onCompletedWithParsed;
 
   @override
   List<Object?> get properties => [
-        ...super.onCompleted == null
-            ? super.properties
-            : super.properties.where((property) => property != onCompleted),
-        onCompletedWithParsed,
-      ];
+    ...super.onCompleted == null
+        ? super.properties
+        : super.properties.where((property) => property != onCompleted),
+    onCompletedWithParsed,
+  ];
 }
 
-typedef RunMutation$Mutation$SetDeviceTokenV2
-    = graphql.MultiSourceResult<Mutation$SetDeviceTokenV2> Function(
-  Variables$Mutation$SetDeviceTokenV2, {
-  Object? optimisticResult,
-  Mutation$SetDeviceTokenV2? typedOptimisticResult,
-});
+typedef RunMutation$Mutation$SetDeviceTokenV2 =
+    graphql.MultiSourceResult<Mutation$SetDeviceTokenV2> Function(
+      Variables$Mutation$SetDeviceTokenV2, {
+      Object? optimisticResult,
+      Mutation$SetDeviceTokenV2? typedOptimisticResult,
+    });
 typedef Builder$Mutation$SetDeviceTokenV2 = widgets.Widget Function(
   RunMutation$Mutation$SetDeviceTokenV2,
   graphql.QueryResult<Mutation$SetDeviceTokenV2>?,
@@ -1343,26 +1285,17 @@ class Mutation$SetDeviceTokenV2$Widget
     WidgetOptions$Mutation$SetDeviceTokenV2? options,
     required Builder$Mutation$SetDeviceTokenV2 builder,
   }) : super(
-          key: key,
-          options: options ?? WidgetOptions$Mutation$SetDeviceTokenV2(),
-          builder: (
-            run,
-            result,
-          ) =>
-              builder(
-            (
-              variables, {
-              optimisticResult,
-              typedOptimisticResult,
-            }) =>
-                run(
-              variables.toJson(),
-              optimisticResult:
-                  optimisticResult ?? typedOptimisticResult?.toJson(),
-            ),
-            result,
-          ),
-        );
+         key: key,
+         options: options ?? WidgetOptions$Mutation$SetDeviceTokenV2(),
+         builder: (run, result) => builder(
+           (variables, {optimisticResult, typedOptimisticResult}) => run(
+             variables.toJson(),
+             optimisticResult:
+                 optimisticResult ?? typedOptimisticResult?.toJson(),
+           ),
+           result,
+         ),
+       );
 }
 
 class Mutation$SetDeviceTokenV2$setDevicePushTokenV2 {
@@ -1373,7 +1306,8 @@ class Mutation$SetDeviceTokenV2$setDevicePushTokenV2 {
   });
 
   factory Mutation$SetDeviceTokenV2$setDevicePushTokenV2.fromJson(
-      Map<String, dynamic> json) {
+    Map<String, dynamic> json,
+  ) {
     final l$$__typename = json['__typename'];
     final l$token = json['token'];
     final l$updatedAt = json['updatedAt'];
@@ -1406,11 +1340,7 @@ class Mutation$SetDeviceTokenV2$setDevicePushTokenV2 {
     final l$$__typename = $__typename;
     final l$token = token;
     final l$updatedAt = updatedAt;
-    return Object.hashAll([
-      l$$__typename,
-      l$token,
-      l$updatedAt,
-    ]);
+    return Object.hashAll([l$$__typename, l$token, l$updatedAt]);
   }
 
   @override
@@ -1444,11 +1374,10 @@ class Mutation$SetDeviceTokenV2$setDevicePushTokenV2 {
 extension UtilityExtension$Mutation$SetDeviceTokenV2$setDevicePushTokenV2
     on Mutation$SetDeviceTokenV2$setDevicePushTokenV2 {
   CopyWith$Mutation$SetDeviceTokenV2$setDevicePushTokenV2<
-          Mutation$SetDeviceTokenV2$setDevicePushTokenV2>
-      get copyWith => CopyWith$Mutation$SetDeviceTokenV2$setDevicePushTokenV2(
-            this,
-            (i) => i,
-          );
+    Mutation$SetDeviceTokenV2$setDevicePushTokenV2
+  >
+  get copyWith =>
+      CopyWith$Mutation$SetDeviceTokenV2$setDevicePushTokenV2(this, (i) => i);
 }
 
 abstract class CopyWith$Mutation$SetDeviceTokenV2$setDevicePushTokenV2<TRes> {
@@ -1458,14 +1387,10 @@ abstract class CopyWith$Mutation$SetDeviceTokenV2$setDevicePushTokenV2<TRes> {
   ) = _CopyWithImpl$Mutation$SetDeviceTokenV2$setDevicePushTokenV2;
 
   factory CopyWith$Mutation$SetDeviceTokenV2$setDevicePushTokenV2.stub(
-          TRes res) =
-      _CopyWithStubImpl$Mutation$SetDeviceTokenV2$setDevicePushTokenV2;
+    TRes res,
+  ) = _CopyWithStubImpl$Mutation$SetDeviceTokenV2$setDevicePushTokenV2;
 
-  TRes call({
-    String? $__typename,
-    String? token,
-    String? updatedAt,
-  });
+  TRes call({String? $__typename, String? token, String? updatedAt});
 }
 
 class _CopyWithImpl$Mutation$SetDeviceTokenV2$setDevicePushTokenV2<TRes>
@@ -1485,18 +1410,19 @@ class _CopyWithImpl$Mutation$SetDeviceTokenV2$setDevicePushTokenV2<TRes>
     Object? $__typename = _undefined,
     Object? token = _undefined,
     Object? updatedAt = _undefined,
-  }) =>
-      _then(Mutation$SetDeviceTokenV2$setDevicePushTokenV2(
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-        token: token == _undefined || token == null
-            ? _instance.token
-            : (token as String),
-        updatedAt: updatedAt == _undefined || updatedAt == null
-            ? _instance.updatedAt
-            : (updatedAt as String),
-      ));
+  }) => _then(
+    Mutation$SetDeviceTokenV2$setDevicePushTokenV2(
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+      token: token == _undefined || token == null
+          ? _instance.token
+          : (token as String),
+      updatedAt: updatedAt == _undefined || updatedAt == null
+          ? _instance.updatedAt
+          : (updatedAt as String),
+    ),
+  );
 }
 
 class _CopyWithStubImpl$Mutation$SetDeviceTokenV2$setDevicePushTokenV2<TRes>
@@ -1505,10 +1431,5 @@ class _CopyWithStubImpl$Mutation$SetDeviceTokenV2$setDevicePushTokenV2<TRes>
 
   TRes _res;
 
-  call({
-    String? $__typename,
-    String? token,
-    String? updatedAt,
-  }) =>
-      _res;
+  call({String? $__typename, String? token, String? updatedAt}) => _res;
 }

@@ -1,9 +1,12 @@
 import 'dart:async';
+
 import 'episode.graphql.dart';
+
 import 'package:flutter/widgets.dart' as widgets;
 import 'package:gql/ast.dart';
 import 'package:graphql/client.dart' as graphql;
 import 'package:graphql_flutter/graphql_flutter.dart' as graphql_flutter;
+
 import 'page.graphql.dart';
 
 class Fragment$Contribution {
@@ -18,10 +21,12 @@ class Fragment$Contribution {
     final l$item = json['item'];
     final l$$__typename = json['__typename'];
     return Fragment$Contribution(
-      type:
-          Fragment$Contribution$type.fromJson((l$type as Map<String, dynamic>)),
-      item:
-          Fragment$Contribution$item.fromJson((l$item as Map<String, dynamic>)),
+      type: Fragment$Contribution$type.fromJson(
+        (l$type as Map<String, dynamic>),
+      ),
+      item: Fragment$Contribution$item.fromJson(
+        (l$item as Map<String, dynamic>),
+      ),
       $__typename: (l$$__typename as String),
     );
   }
@@ -48,11 +53,7 @@ class Fragment$Contribution {
     final l$type = type;
     final l$item = item;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$type,
-      l$item,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$type, l$item, l$$__typename]);
   }
 
   @override
@@ -84,10 +85,7 @@ class Fragment$Contribution {
 
 extension UtilityExtension$Fragment$Contribution on Fragment$Contribution {
   CopyWith$Fragment$Contribution<Fragment$Contribution> get copyWith =>
-      CopyWith$Fragment$Contribution(
-        this,
-        (i) => i,
-      );
+      CopyWith$Fragment$Contribution(this, (i) => i);
 }
 
 abstract class CopyWith$Fragment$Contribution<TRes> {
@@ -110,10 +108,7 @@ abstract class CopyWith$Fragment$Contribution<TRes> {
 
 class _CopyWithImpl$Fragment$Contribution<TRes>
     implements CopyWith$Fragment$Contribution<TRes> {
-  _CopyWithImpl$Fragment$Contribution(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Fragment$Contribution(this._instance, this._then);
 
   final Fragment$Contribution _instance;
 
@@ -125,29 +120,34 @@ class _CopyWithImpl$Fragment$Contribution<TRes>
     Object? type = _undefined,
     Object? item = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Fragment$Contribution(
-        type: type == _undefined || type == null
-            ? _instance.type
-            : (type as Fragment$Contribution$type),
-        item: item == _undefined || item == null
-            ? _instance.item
-            : (item as Fragment$Contribution$item),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  }) => _then(
+    Fragment$Contribution(
+      type: type == _undefined || type == null
+          ? _instance.type
+          : (type as Fragment$Contribution$type),
+      item: item == _undefined || item == null
+          ? _instance.item
+          : (item as Fragment$Contribution$item),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 
   CopyWith$Fragment$Contribution$type<TRes> get type {
     final local$type = _instance.type;
     return CopyWith$Fragment$Contribution$type(
-        local$type, (e) => call(type: e));
+      local$type,
+      (e) => call(type: e),
+    );
   }
 
   CopyWith$Fragment$Contribution$item<TRes> get item {
     final local$item = _instance.item;
     return CopyWith$Fragment$Contribution$item(
-        local$item, (e) => call(item: e));
+      local$item,
+      (e) => call(item: e),
+    );
   }
 }
 
@@ -161,8 +161,7 @@ class _CopyWithStubImpl$Fragment$Contribution<TRes>
     Fragment$Contribution$type? type,
     Fragment$Contribution$item? item,
     String? $__typename,
-  }) =>
-      _res;
+  }) => _res;
 
   CopyWith$Fragment$Contribution$type<TRes> get type =>
       CopyWith$Fragment$Contribution$type.stub(_res);
@@ -174,69 +173,20 @@ class _CopyWithStubImpl$Fragment$Contribution<TRes>
 const fragmentDefinitionContribution = FragmentDefinitionNode(
   name: NameNode(value: 'Contribution'),
   typeCondition: TypeConditionNode(
-      on: NamedTypeNode(
-    name: NameNode(value: 'Contribution'),
-    isNonNull: false,
-  )),
+    on: NamedTypeNode(name: NameNode(value: 'Contribution'), isNonNull: false),
+  ),
   directives: [],
-  selectionSet: SelectionSetNode(selections: [
-    FieldNode(
-      name: NameNode(value: 'type'),
-      alias: null,
-      arguments: [],
-      directives: [],
-      selectionSet: SelectionSetNode(selections: [
-        FieldNode(
-          name: NameNode(value: 'code'),
-          alias: null,
-          arguments: [],
-          directives: [],
-          selectionSet: null,
-        ),
-        FieldNode(
-          name: NameNode(value: '__typename'),
-          alias: null,
-          arguments: [],
-          directives: [],
-          selectionSet: null,
-        ),
-      ]),
-    ),
-    FieldNode(
-      name: NameNode(value: 'item'),
-      alias: null,
-      arguments: [],
-      directives: [],
-      selectionSet: SelectionSetNode(selections: [
-        FragmentSpreadNode(
-          name: NameNode(value: 'ContributionItemId'),
-          directives: [],
-        ),
-        FragmentSpreadNode(
-          name: NameNode(value: 'NavigatableChapter'),
-          directives: [],
-        ),
-        FragmentSpreadNode(
-          name: NameNode(value: 'NavigatableEpisode'),
-          directives: [],
-        ),
-        InlineFragmentNode(
-          typeCondition: TypeConditionNode(
-              on: NamedTypeNode(
-            name: NameNode(value: 'CollectionItem'),
-            isNonNull: false,
-          )),
-          directives: [],
-          selectionSet: SelectionSetNode(selections: [
+  selectionSet: SelectionSetNode(
+    selections: [
+      FieldNode(
+        name: NameNode(value: 'type'),
+        alias: null,
+        arguments: [],
+        directives: [],
+        selectionSet: SelectionSetNode(
+          selections: [
             FieldNode(
-              name: NameNode(value: 'id'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null,
-            ),
-            FieldNode(
-              name: NameNode(value: 'title'),
+              name: NameNode(value: 'code'),
               alias: null,
               arguments: [],
               directives: [],
@@ -249,112 +199,185 @@ const fragmentDefinitionContribution = FragmentDefinitionNode(
               directives: [],
               selectionSet: null,
             ),
-          ]),
+          ],
         ),
-        InlineFragmentNode(
-          typeCondition: TypeConditionNode(
-              on: NamedTypeNode(
-            name: NameNode(value: 'Chapter'),
-            isNonNull: false,
-          )),
-          directives: [],
-          selectionSet: SelectionSetNode(selections: [
-            FieldNode(
-              name: NameNode(value: 'id'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null,
-            ),
-            FieldNode(
-              name: NameNode(value: 'start'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null,
-            ),
-            FieldNode(
-              name: NameNode(value: 'title'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null,
-            ),
-            FieldNode(
-              name: NameNode(value: 'image'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null,
-            ),
-            FieldNode(
-              name: NameNode(value: 'duration'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null,
-            ),
-            FieldNode(
-              name: NameNode(value: 'episode'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FragmentSpreadNode(
-                  name: NameNode(value: 'EpisodeListEpisode'),
-                  directives: [],
-                ),
-                FieldNode(
-                  name: NameNode(value: 'season'),
-                  alias: null,
-                  arguments: [],
-                  directives: [],
-                  selectionSet: SelectionSetNode(selections: [
-                    FieldNode(
-                      name: NameNode(value: 'title'),
-                      alias: null,
-                      arguments: [],
-                      directives: [],
-                      selectionSet: null,
-                    ),
-                    FieldNode(
-                      name: NameNode(value: '__typename'),
-                      alias: null,
-                      arguments: [],
-                      directives: [],
-                      selectionSet: null,
-                    ),
-                  ]),
-                ),
-                FieldNode(
-                  name: NameNode(value: '__typename'),
-                  alias: null,
-                  arguments: [],
-                  directives: [],
-                  selectionSet: null,
-                ),
-              ]),
-            ),
-            FieldNode(
-              name: NameNode(value: '__typename'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null,
-            ),
-          ]),
-        ),
-        InlineFragmentNode(
-          typeCondition: TypeConditionNode(
-              on: NamedTypeNode(
-            name: NameNode(value: 'Episode'),
-            isNonNull: false,
-          )),
-          directives: [],
-          selectionSet: SelectionSetNode(selections: [
+      ),
+      FieldNode(
+        name: NameNode(value: 'item'),
+        alias: null,
+        arguments: [],
+        directives: [],
+        selectionSet: SelectionSetNode(
+          selections: [
             FragmentSpreadNode(
-              name: NameNode(value: 'EpisodeListEpisode'),
+              name: NameNode(value: 'ContributionItemId'),
               directives: [],
+            ),
+            FragmentSpreadNode(
+              name: NameNode(value: 'NavigatableChapter'),
+              directives: [],
+            ),
+            FragmentSpreadNode(
+              name: NameNode(value: 'NavigatableEpisode'),
+              directives: [],
+            ),
+            InlineFragmentNode(
+              typeCondition: TypeConditionNode(
+                on: NamedTypeNode(
+                  name: NameNode(value: 'CollectionItem'),
+                  isNonNull: false,
+                ),
+              ),
+              directives: [],
+              selectionSet: SelectionSetNode(
+                selections: [
+                  FieldNode(
+                    name: NameNode(value: 'id'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null,
+                  ),
+                  FieldNode(
+                    name: NameNode(value: 'title'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null,
+                  ),
+                  FieldNode(
+                    name: NameNode(value: '__typename'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null,
+                  ),
+                ],
+              ),
+            ),
+            InlineFragmentNode(
+              typeCondition: TypeConditionNode(
+                on: NamedTypeNode(
+                  name: NameNode(value: 'Chapter'),
+                  isNonNull: false,
+                ),
+              ),
+              directives: [],
+              selectionSet: SelectionSetNode(
+                selections: [
+                  FieldNode(
+                    name: NameNode(value: 'id'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null,
+                  ),
+                  FieldNode(
+                    name: NameNode(value: 'start'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null,
+                  ),
+                  FieldNode(
+                    name: NameNode(value: 'title'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null,
+                  ),
+                  FieldNode(
+                    name: NameNode(value: 'image'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null,
+                  ),
+                  FieldNode(
+                    name: NameNode(value: 'duration'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null,
+                  ),
+                  FieldNode(
+                    name: NameNode(value: 'episode'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: SelectionSetNode(
+                      selections: [
+                        FragmentSpreadNode(
+                          name: NameNode(value: 'EpisodeListEpisode'),
+                          directives: [],
+                        ),
+                        FieldNode(
+                          name: NameNode(value: 'season'),
+                          alias: null,
+                          arguments: [],
+                          directives: [],
+                          selectionSet: SelectionSetNode(
+                            selections: [
+                              FieldNode(
+                                name: NameNode(value: 'title'),
+                                alias: null,
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null,
+                              ),
+                              FieldNode(
+                                name: NameNode(value: '__typename'),
+                                alias: null,
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null,
+                              ),
+                            ],
+                          ),
+                        ),
+                        FieldNode(
+                          name: NameNode(value: '__typename'),
+                          alias: null,
+                          arguments: [],
+                          directives: [],
+                          selectionSet: null,
+                        ),
+                      ],
+                    ),
+                  ),
+                  FieldNode(
+                    name: NameNode(value: '__typename'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null,
+                  ),
+                ],
+              ),
+            ),
+            InlineFragmentNode(
+              typeCondition: TypeConditionNode(
+                on: NamedTypeNode(
+                  name: NameNode(value: 'Episode'),
+                  isNonNull: false,
+                ),
+              ),
+              directives: [],
+              selectionSet: SelectionSetNode(
+                selections: [
+                  FragmentSpreadNode(
+                    name: NameNode(value: 'EpisodeListEpisode'),
+                    directives: [],
+                  ),
+                  FieldNode(
+                    name: NameNode(value: '__typename'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null,
+                  ),
+                ],
+              ),
             ),
             FieldNode(
               name: NameNode(value: '__typename'),
@@ -363,53 +386,47 @@ const fragmentDefinitionContribution = FragmentDefinitionNode(
               directives: [],
               selectionSet: null,
             ),
-          ]),
+          ],
         ),
-        FieldNode(
-          name: NameNode(value: '__typename'),
-          alias: null,
-          arguments: [],
-          directives: [],
-          selectionSet: null,
-        ),
-      ]),
-    ),
-    FieldNode(
-      name: NameNode(value: '__typename'),
-      alias: null,
-      arguments: [],
-      directives: [],
-      selectionSet: null,
-    ),
-  ]),
+      ),
+      FieldNode(
+        name: NameNode(value: '__typename'),
+        alias: null,
+        arguments: [],
+        directives: [],
+        selectionSet: null,
+      ),
+    ],
+  ),
 );
-const documentNodeFragmentContribution = DocumentNode(definitions: [
-  fragmentDefinitionContribution,
-  fragmentDefinitionContributionItemId,
-  fragmentDefinitionNavigatableChapter,
-  fragmentDefinitionNavigatableEpisode,
-  fragmentDefinitionEpisodeListEpisode,
-  fragmentDefinitionSeasonListEpisode,
-  fragmentDefinitionEpisodeThumbnail,
-]);
+const documentNodeFragmentContribution = DocumentNode(
+  definitions: [
+    fragmentDefinitionContribution,
+    fragmentDefinitionContributionItemId,
+    fragmentDefinitionNavigatableChapter,
+    fragmentDefinitionNavigatableEpisode,
+    fragmentDefinitionEpisodeListEpisode,
+    fragmentDefinitionSeasonListEpisode,
+    fragmentDefinitionEpisodeThumbnail,
+  ],
+);
 
 extension ClientExtension$Fragment$Contribution on graphql.GraphQLClient {
   void writeFragment$Contribution({
     required Fragment$Contribution data,
     required Map<String, dynamic> idFields,
     bool broadcast = true,
-  }) =>
-      this.writeFragment(
-        graphql.FragmentRequest(
-          idFields: idFields,
-          fragment: const graphql.Fragment(
-            fragmentName: 'Contribution',
-            document: documentNodeFragmentContribution,
-          ),
-        ),
-        data: data.toJson(),
-        broadcast: broadcast,
-      );
+  }) => this.writeFragment(
+    graphql.FragmentRequest(
+      idFields: idFields,
+      fragment: const graphql.Fragment(
+        fragmentName: 'Contribution',
+        document: documentNodeFragmentContribution,
+      ),
+    ),
+    data: data.toJson(),
+    broadcast: broadcast,
+  );
 
   Fragment$Contribution? readFragment$Contribution({
     required Map<String, dynamic> idFields,
@@ -461,10 +478,7 @@ class Fragment$Contribution$type {
   int get hashCode {
     final l$code = code;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$code,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$code, l$$__typename]);
   }
 
   @override
@@ -493,10 +507,7 @@ class Fragment$Contribution$type {
 extension UtilityExtension$Fragment$Contribution$type
     on Fragment$Contribution$type {
   CopyWith$Fragment$Contribution$type<Fragment$Contribution$type>
-      get copyWith => CopyWith$Fragment$Contribution$type(
-            this,
-            (i) => i,
-          );
+  get copyWith => CopyWith$Fragment$Contribution$type(this, (i) => i);
 }
 
 abstract class CopyWith$Fragment$Contribution$type<TRes> {
@@ -508,18 +519,12 @@ abstract class CopyWith$Fragment$Contribution$type<TRes> {
   factory CopyWith$Fragment$Contribution$type.stub(TRes res) =
       _CopyWithStubImpl$Fragment$Contribution$type;
 
-  TRes call({
-    String? code,
-    String? $__typename,
-  });
+  TRes call({String? code, String? $__typename});
 }
 
 class _CopyWithImpl$Fragment$Contribution$type<TRes>
     implements CopyWith$Fragment$Contribution$type<TRes> {
-  _CopyWithImpl$Fragment$Contribution$type(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Fragment$Contribution$type(this._instance, this._then);
 
   final Fragment$Contribution$type _instance;
 
@@ -527,18 +532,17 @@ class _CopyWithImpl$Fragment$Contribution$type<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({
-    Object? code = _undefined,
-    Object? $__typename = _undefined,
-  }) =>
-      _then(Fragment$Contribution$type(
-        code: code == _undefined || code == null
-            ? _instance.code
-            : (code as String),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  TRes call({Object? code = _undefined, Object? $__typename = _undefined}) =>
+      _then(
+        Fragment$Contribution$type(
+          code: code == _undefined || code == null
+              ? _instance.code
+              : (code as String),
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String),
+        ),
+      );
 }
 
 class _CopyWithStubImpl$Fragment$Contribution$type<TRes>
@@ -547,11 +551,7 @@ class _CopyWithStubImpl$Fragment$Contribution$type<TRes>
 
   TRes _res;
 
-  call({
-    String? code,
-    String? $__typename,
-  }) =>
-      _res;
+  call({String? code, String? $__typename}) => _res;
 }
 
 class Fragment$Contribution$item {
@@ -568,7 +568,8 @@ class Fragment$Contribution$item {
       default:
         final l$$__typename = json['__typename'];
         return Fragment$Contribution$item(
-            $__typename: (l$$__typename as String));
+          $__typename: (l$$__typename as String),
+        );
     }
   }
 
@@ -608,10 +609,7 @@ class Fragment$Contribution$item {
 extension UtilityExtension$Fragment$Contribution$item
     on Fragment$Contribution$item {
   CopyWith$Fragment$Contribution$item<Fragment$Contribution$item>
-      get copyWith => CopyWith$Fragment$Contribution$item(
-            this,
-            (i) => i,
-          );
+  get copyWith => CopyWith$Fragment$Contribution$item(this, (i) => i);
 
   _T when<_T>({
     required _T Function(Fragment$Contribution$item$$Episode) episode,
@@ -670,10 +668,7 @@ abstract class CopyWith$Fragment$Contribution$item<TRes> {
 
 class _CopyWithImpl$Fragment$Contribution$item<TRes>
     implements CopyWith$Fragment$Contribution$item<TRes> {
-  _CopyWithImpl$Fragment$Contribution$item(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Fragment$Contribution$item(this._instance, this._then);
 
   final Fragment$Contribution$item _instance;
 
@@ -682,10 +677,12 @@ class _CopyWithImpl$Fragment$Contribution$item<TRes>
   static const _undefined = <dynamic, dynamic>{};
 
   TRes call({Object? $__typename = _undefined}) => _then(
-      Fragment$Contribution$item(
-          $__typename: $__typename == _undefined || $__typename == null
-              ? _instance.$__typename
-              : ($__typename as String)));
+    Fragment$Contribution$item(
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 }
 
 class _CopyWithStubImpl$Fragment$Contribution$item<TRes>
@@ -721,7 +718,8 @@ class Fragment$Contribution$item$$Episode
   });
 
   factory Fragment$Contribution$item$$Episode.fromJson(
-      Map<String, dynamic> json) {
+    Map<String, dynamic> json,
+  ) {
     final l$id = json['id'];
     final l$title = json['title'];
     final l$$__typename = json['__typename'];
@@ -745,12 +743,14 @@ class Fragment$Contribution$item$$Episode
       duration: (l$duration as int),
       locked: (l$locked as bool),
       lessons: Fragment$Contribution$item$$Episode$lessons.fromJson(
-          (l$lessons as Map<String, dynamic>)),
+        (l$lessons as Map<String, dynamic>),
+      ),
       progress: (l$progress as int?),
       season: l$season == null
           ? null
           : Fragment$Contribution$item$$Episode$season.fromJson(
-              (l$season as Map<String, dynamic>)),
+              (l$season as Map<String, dynamic>),
+            ),
     );
   }
 
@@ -913,11 +913,9 @@ class Fragment$Contribution$item$$Episode
 extension UtilityExtension$Fragment$Contribution$item$$Episode
     on Fragment$Contribution$item$$Episode {
   CopyWith$Fragment$Contribution$item$$Episode<
-          Fragment$Contribution$item$$Episode>
-      get copyWith => CopyWith$Fragment$Contribution$item$$Episode(
-            this,
-            (i) => i,
-          );
+    Fragment$Contribution$item$$Episode
+  >
+  get copyWith => CopyWith$Fragment$Contribution$item$$Episode(this, (i) => i);
 }
 
 abstract class CopyWith$Fragment$Contribution$item$$Episode<TRes> {
@@ -949,10 +947,7 @@ abstract class CopyWith$Fragment$Contribution$item$$Episode<TRes> {
 
 class _CopyWithImpl$Fragment$Contribution$item$$Episode<TRes>
     implements CopyWith$Fragment$Contribution$item$$Episode<TRes> {
-  _CopyWithImpl$Fragment$Contribution$item$$Episode(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Fragment$Contribution$item$$Episode(this._instance, this._then);
 
   final Fragment$Contribution$item$$Episode _instance;
 
@@ -973,52 +968,59 @@ class _CopyWithImpl$Fragment$Contribution$item$$Episode<TRes>
     Object? lessons = _undefined,
     Object? progress = _undefined,
     Object? season = _undefined,
-  }) =>
-      _then(Fragment$Contribution$item$$Episode(
-        id: id == _undefined || id == null ? _instance.id : (id as String),
-        title: title == _undefined || title == null
-            ? _instance.title
-            : (title as String),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-        image: image == _undefined ? _instance.image : (image as String?),
-        number: number == _undefined ? _instance.number : (number as int?),
-        publishDate: publishDate == _undefined || publishDate == null
-            ? _instance.publishDate
-            : (publishDate as String),
-        ageRating: ageRating == _undefined || ageRating == null
-            ? _instance.ageRating
-            : (ageRating as String),
-        duration: duration == _undefined || duration == null
-            ? _instance.duration
-            : (duration as int),
-        locked: locked == _undefined || locked == null
-            ? _instance.locked
-            : (locked as bool),
-        lessons: lessons == _undefined || lessons == null
-            ? _instance.lessons
-            : (lessons as Fragment$Contribution$item$$Episode$lessons),
-        progress:
-            progress == _undefined ? _instance.progress : (progress as int?),
-        season: season == _undefined
-            ? _instance.season
-            : (season as Fragment$Contribution$item$$Episode$season?),
-      ));
+  }) => _then(
+    Fragment$Contribution$item$$Episode(
+      id: id == _undefined || id == null ? _instance.id : (id as String),
+      title: title == _undefined || title == null
+          ? _instance.title
+          : (title as String),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+      image: image == _undefined ? _instance.image : (image as String?),
+      number: number == _undefined ? _instance.number : (number as int?),
+      publishDate: publishDate == _undefined || publishDate == null
+          ? _instance.publishDate
+          : (publishDate as String),
+      ageRating: ageRating == _undefined || ageRating == null
+          ? _instance.ageRating
+          : (ageRating as String),
+      duration: duration == _undefined || duration == null
+          ? _instance.duration
+          : (duration as int),
+      locked: locked == _undefined || locked == null
+          ? _instance.locked
+          : (locked as bool),
+      lessons: lessons == _undefined || lessons == null
+          ? _instance.lessons
+          : (lessons as Fragment$Contribution$item$$Episode$lessons),
+      progress: progress == _undefined
+          ? _instance.progress
+          : (progress as int?),
+      season: season == _undefined
+          ? _instance.season
+          : (season as Fragment$Contribution$item$$Episode$season?),
+    ),
+  );
 
   CopyWith$Fragment$Contribution$item$$Episode$lessons<TRes> get lessons {
     final local$lessons = _instance.lessons;
     return CopyWith$Fragment$Contribution$item$$Episode$lessons(
-        local$lessons, (e) => call(lessons: e));
+      local$lessons,
+      (e) => call(lessons: e),
+    );
   }
 
   CopyWith$Fragment$Contribution$item$$Episode$season<TRes> get season {
     final local$season = _instance.season;
     return local$season == null
         ? CopyWith$Fragment$Contribution$item$$Episode$season.stub(
-            _then(_instance))
+            _then(_instance),
+          )
         : CopyWith$Fragment$Contribution$item$$Episode$season(
-            local$season, (e) => call(season: e));
+            local$season,
+            (e) => call(season: e),
+          );
   }
 }
 
@@ -1041,8 +1043,7 @@ class _CopyWithStubImpl$Fragment$Contribution$item$$Episode<TRes>
     Fragment$Contribution$item$$Episode$lessons? lessons,
     int? progress,
     Fragment$Contribution$item$$Episode$season? season,
-  }) =>
-      _res;
+  }) => _res;
 
   CopyWith$Fragment$Contribution$item$$Episode$lessons<TRes> get lessons =>
       CopyWith$Fragment$Contribution$item$$Episode$lessons.stub(_res);
@@ -1067,7 +1068,8 @@ class Fragment$Contribution$item$$Chapter
   });
 
   factory Fragment$Contribution$item$$Chapter.fromJson(
-      Map<String, dynamic> json) {
+    Map<String, dynamic> json,
+  ) {
     final l$id = json['id'];
     final l$title = json['title'];
     final l$$__typename = json['__typename'];
@@ -1085,7 +1087,8 @@ class Fragment$Contribution$item$$Chapter
       episode: l$episode == null
           ? null
           : Fragment$Contribution$item$$Chapter$episode.fromJson(
-              (l$episode as Map<String, dynamic>)),
+              (l$episode as Map<String, dynamic>),
+            ),
     );
   }
 
@@ -1193,11 +1196,9 @@ class Fragment$Contribution$item$$Chapter
 extension UtilityExtension$Fragment$Contribution$item$$Chapter
     on Fragment$Contribution$item$$Chapter {
   CopyWith$Fragment$Contribution$item$$Chapter<
-          Fragment$Contribution$item$$Chapter>
-      get copyWith => CopyWith$Fragment$Contribution$item$$Chapter(
-            this,
-            (i) => i,
-          );
+    Fragment$Contribution$item$$Chapter
+  >
+  get copyWith => CopyWith$Fragment$Contribution$item$$Chapter(this, (i) => i);
 }
 
 abstract class CopyWith$Fragment$Contribution$item$$Chapter<TRes> {
@@ -1223,10 +1224,7 @@ abstract class CopyWith$Fragment$Contribution$item$$Chapter<TRes> {
 
 class _CopyWithImpl$Fragment$Contribution$item$$Chapter<TRes>
     implements CopyWith$Fragment$Contribution$item$$Chapter<TRes> {
-  _CopyWithImpl$Fragment$Contribution$item$$Chapter(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Fragment$Contribution$item$$Chapter(this._instance, this._then);
 
   final Fragment$Contribution$item$$Chapter _instance;
 
@@ -1242,34 +1240,38 @@ class _CopyWithImpl$Fragment$Contribution$item$$Chapter<TRes>
     Object? image = _undefined,
     Object? duration = _undefined,
     Object? episode = _undefined,
-  }) =>
-      _then(Fragment$Contribution$item$$Chapter(
-        id: id == _undefined || id == null ? _instance.id : (id as String),
-        title: title == _undefined || title == null
-            ? _instance.title
-            : (title as String),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-        start: start == _undefined || start == null
-            ? _instance.start
-            : (start as int),
-        image: image == _undefined ? _instance.image : (image as String?),
-        duration: duration == _undefined || duration == null
-            ? _instance.duration
-            : (duration as int),
-        episode: episode == _undefined
-            ? _instance.episode
-            : (episode as Fragment$Contribution$item$$Chapter$episode?),
-      ));
+  }) => _then(
+    Fragment$Contribution$item$$Chapter(
+      id: id == _undefined || id == null ? _instance.id : (id as String),
+      title: title == _undefined || title == null
+          ? _instance.title
+          : (title as String),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+      start: start == _undefined || start == null
+          ? _instance.start
+          : (start as int),
+      image: image == _undefined ? _instance.image : (image as String?),
+      duration: duration == _undefined || duration == null
+          ? _instance.duration
+          : (duration as int),
+      episode: episode == _undefined
+          ? _instance.episode
+          : (episode as Fragment$Contribution$item$$Chapter$episode?),
+    ),
+  );
 
   CopyWith$Fragment$Contribution$item$$Chapter$episode<TRes> get episode {
     final local$episode = _instance.episode;
     return local$episode == null
         ? CopyWith$Fragment$Contribution$item$$Chapter$episode.stub(
-            _then(_instance))
+            _then(_instance),
+          )
         : CopyWith$Fragment$Contribution$item$$Chapter$episode(
-            local$episode, (e) => call(episode: e));
+            local$episode,
+            (e) => call(episode: e),
+          );
   }
 }
 
@@ -1287,8 +1289,7 @@ class _CopyWithStubImpl$Fragment$Contribution$item$$Chapter<TRes>
     String? image,
     int? duration,
     Fragment$Contribution$item$$Chapter$episode? episode,
-  }) =>
-      _res;
+  }) => _res;
 
   CopyWith$Fragment$Contribution$item$$Chapter$episode<TRes> get episode =>
       CopyWith$Fragment$Contribution$item$$Chapter$episode.stub(_res);
@@ -1316,7 +1317,8 @@ class Fragment$Contribution$item$$Chapter$episode
   });
 
   factory Fragment$Contribution$item$$Chapter$episode.fromJson(
-      Map<String, dynamic> json) {
+    Map<String, dynamic> json,
+  ) {
     final l$id = json['id'];
     final l$image = json['image'];
     final l$number = json['number'];
@@ -1339,12 +1341,14 @@ class Fragment$Contribution$item$$Chapter$episode
       duration: (l$duration as int),
       locked: (l$locked as bool),
       lessons: Fragment$Contribution$item$$Chapter$episode$lessons.fromJson(
-          (l$lessons as Map<String, dynamic>)),
+        (l$lessons as Map<String, dynamic>),
+      ),
       progress: (l$progress as int?),
       season: l$season == null
           ? null
           : Fragment$Contribution$item$$Chapter$episode$season.fromJson(
-              (l$season as Map<String, dynamic>)),
+              (l$season as Map<String, dynamic>),
+            ),
       $__typename: (l$$__typename as String),
     );
   }
@@ -1508,11 +1512,10 @@ class Fragment$Contribution$item$$Chapter$episode
 extension UtilityExtension$Fragment$Contribution$item$$Chapter$episode
     on Fragment$Contribution$item$$Chapter$episode {
   CopyWith$Fragment$Contribution$item$$Chapter$episode<
-          Fragment$Contribution$item$$Chapter$episode>
-      get copyWith => CopyWith$Fragment$Contribution$item$$Chapter$episode(
-            this,
-            (i) => i,
-          );
+    Fragment$Contribution$item$$Chapter$episode
+  >
+  get copyWith =>
+      CopyWith$Fragment$Contribution$item$$Chapter$episode(this, (i) => i);
 }
 
 abstract class CopyWith$Fragment$Contribution$item$$Chapter$episode<TRes> {
@@ -1539,7 +1542,7 @@ abstract class CopyWith$Fragment$Contribution$item$$Chapter$episode<TRes> {
     String? $__typename,
   });
   CopyWith$Fragment$Contribution$item$$Chapter$episode$lessons<TRes>
-      get lessons;
+  get lessons;
   CopyWith$Fragment$Contribution$item$$Chapter$episode$season<TRes> get season;
 }
 
@@ -1569,53 +1572,60 @@ class _CopyWithImpl$Fragment$Contribution$item$$Chapter$episode<TRes>
     Object? progress = _undefined,
     Object? season = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Fragment$Contribution$item$$Chapter$episode(
-        id: id == _undefined || id == null ? _instance.id : (id as String),
-        image: image == _undefined ? _instance.image : (image as String?),
-        number: number == _undefined ? _instance.number : (number as int?),
-        title: title == _undefined || title == null
-            ? _instance.title
-            : (title as String),
-        publishDate: publishDate == _undefined || publishDate == null
-            ? _instance.publishDate
-            : (publishDate as String),
-        ageRating: ageRating == _undefined || ageRating == null
-            ? _instance.ageRating
-            : (ageRating as String),
-        duration: duration == _undefined || duration == null
-            ? _instance.duration
-            : (duration as int),
-        locked: locked == _undefined || locked == null
-            ? _instance.locked
-            : (locked as bool),
-        lessons: lessons == _undefined || lessons == null
-            ? _instance.lessons
-            : (lessons as Fragment$Contribution$item$$Chapter$episode$lessons),
-        progress:
-            progress == _undefined ? _instance.progress : (progress as int?),
-        season: season == _undefined
-            ? _instance.season
-            : (season as Fragment$Contribution$item$$Chapter$episode$season?),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  }) => _then(
+    Fragment$Contribution$item$$Chapter$episode(
+      id: id == _undefined || id == null ? _instance.id : (id as String),
+      image: image == _undefined ? _instance.image : (image as String?),
+      number: number == _undefined ? _instance.number : (number as int?),
+      title: title == _undefined || title == null
+          ? _instance.title
+          : (title as String),
+      publishDate: publishDate == _undefined || publishDate == null
+          ? _instance.publishDate
+          : (publishDate as String),
+      ageRating: ageRating == _undefined || ageRating == null
+          ? _instance.ageRating
+          : (ageRating as String),
+      duration: duration == _undefined || duration == null
+          ? _instance.duration
+          : (duration as int),
+      locked: locked == _undefined || locked == null
+          ? _instance.locked
+          : (locked as bool),
+      lessons: lessons == _undefined || lessons == null
+          ? _instance.lessons
+          : (lessons as Fragment$Contribution$item$$Chapter$episode$lessons),
+      progress: progress == _undefined
+          ? _instance.progress
+          : (progress as int?),
+      season: season == _undefined
+          ? _instance.season
+          : (season as Fragment$Contribution$item$$Chapter$episode$season?),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 
   CopyWith$Fragment$Contribution$item$$Chapter$episode$lessons<TRes>
-      get lessons {
+  get lessons {
     final local$lessons = _instance.lessons;
     return CopyWith$Fragment$Contribution$item$$Chapter$episode$lessons(
-        local$lessons, (e) => call(lessons: e));
+      local$lessons,
+      (e) => call(lessons: e),
+    );
   }
 
   CopyWith$Fragment$Contribution$item$$Chapter$episode$season<TRes> get season {
     final local$season = _instance.season;
     return local$season == null
         ? CopyWith$Fragment$Contribution$item$$Chapter$episode$season.stub(
-            _then(_instance))
+            _then(_instance),
+          )
         : CopyWith$Fragment$Contribution$item$$Chapter$episode$season(
-            local$season, (e) => call(season: e));
+            local$season,
+            (e) => call(season: e),
+          );
   }
 }
 
@@ -1638,18 +1648,15 @@ class _CopyWithStubImpl$Fragment$Contribution$item$$Chapter$episode<TRes>
     int? progress,
     Fragment$Contribution$item$$Chapter$episode$season? season,
     String? $__typename,
-  }) =>
-      _res;
+  }) => _res;
 
   CopyWith$Fragment$Contribution$item$$Chapter$episode$lessons<TRes>
-      get lessons =>
-          CopyWith$Fragment$Contribution$item$$Chapter$episode$lessons.stub(
-              _res);
+  get lessons =>
+      CopyWith$Fragment$Contribution$item$$Chapter$episode$lessons.stub(_res);
 
   CopyWith$Fragment$Contribution$item$$Chapter$episode$season<TRes>
-      get season =>
-          CopyWith$Fragment$Contribution$item$$Chapter$episode$season.stub(
-              _res);
+  get season =>
+      CopyWith$Fragment$Contribution$item$$Chapter$episode$season.stub(_res);
 }
 
 class Fragment$Contribution$item$$Chapter$episode$lessons
@@ -1662,7 +1669,8 @@ class Fragment$Contribution$item$$Chapter$episode$lessons
   });
 
   factory Fragment$Contribution$item$$Chapter$episode$lessons.fromJson(
-      Map<String, dynamic> json) {
+    Map<String, dynamic> json,
+  ) {
     final l$total = json['total'];
     final l$$__typename = json['__typename'];
     return Fragment$Contribution$item$$Chapter$episode$lessons(
@@ -1688,10 +1696,7 @@ class Fragment$Contribution$item$$Chapter$episode$lessons
   int get hashCode {
     final l$total = total;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$total,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$total, l$$__typename]);
   }
 
   @override
@@ -1720,29 +1725,27 @@ class Fragment$Contribution$item$$Chapter$episode$lessons
 extension UtilityExtension$Fragment$Contribution$item$$Chapter$episode$lessons
     on Fragment$Contribution$item$$Chapter$episode$lessons {
   CopyWith$Fragment$Contribution$item$$Chapter$episode$lessons<
-          Fragment$Contribution$item$$Chapter$episode$lessons>
-      get copyWith =>
-          CopyWith$Fragment$Contribution$item$$Chapter$episode$lessons(
-            this,
-            (i) => i,
-          );
+    Fragment$Contribution$item$$Chapter$episode$lessons
+  >
+  get copyWith => CopyWith$Fragment$Contribution$item$$Chapter$episode$lessons(
+    this,
+    (i) => i,
+  );
 }
 
 abstract class CopyWith$Fragment$Contribution$item$$Chapter$episode$lessons<
-    TRes> {
+  TRes
+> {
   factory CopyWith$Fragment$Contribution$item$$Chapter$episode$lessons(
     Fragment$Contribution$item$$Chapter$episode$lessons instance,
     TRes Function(Fragment$Contribution$item$$Chapter$episode$lessons) then,
   ) = _CopyWithImpl$Fragment$Contribution$item$$Chapter$episode$lessons;
 
   factory CopyWith$Fragment$Contribution$item$$Chapter$episode$lessons.stub(
-          TRes res) =
-      _CopyWithStubImpl$Fragment$Contribution$item$$Chapter$episode$lessons;
+    TRes res,
+  ) = _CopyWithStubImpl$Fragment$Contribution$item$$Chapter$episode$lessons;
 
-  TRes call({
-    int? total,
-    String? $__typename,
-  });
+  TRes call({int? total, String? $__typename});
 }
 
 class _CopyWithImpl$Fragment$Contribution$item$$Chapter$episode$lessons<TRes>
@@ -1756,38 +1759,35 @@ class _CopyWithImpl$Fragment$Contribution$item$$Chapter$episode$lessons<TRes>
   final Fragment$Contribution$item$$Chapter$episode$lessons _instance;
 
   final TRes Function(Fragment$Contribution$item$$Chapter$episode$lessons)
-      _then;
+  _then;
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({
-    Object? total = _undefined,
-    Object? $__typename = _undefined,
-  }) =>
-      _then(Fragment$Contribution$item$$Chapter$episode$lessons(
-        total: total == _undefined || total == null
-            ? _instance.total
-            : (total as int),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  TRes call({Object? total = _undefined, Object? $__typename = _undefined}) =>
+      _then(
+        Fragment$Contribution$item$$Chapter$episode$lessons(
+          total: total == _undefined || total == null
+              ? _instance.total
+              : (total as int),
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String),
+        ),
+      );
 }
 
 class _CopyWithStubImpl$Fragment$Contribution$item$$Chapter$episode$lessons<
-        TRes>
+  TRes
+>
     implements
         CopyWith$Fragment$Contribution$item$$Chapter$episode$lessons<TRes> {
   _CopyWithStubImpl$Fragment$Contribution$item$$Chapter$episode$lessons(
-      this._res);
+    this._res,
+  );
 
   TRes _res;
 
-  call({
-    int? total,
-    String? $__typename,
-  }) =>
-      _res;
+  call({int? total, String? $__typename}) => _res;
 }
 
 class Fragment$Contribution$item$$Chapter$episode$season
@@ -1803,7 +1803,8 @@ class Fragment$Contribution$item$$Chapter$episode$season
   });
 
   factory Fragment$Contribution$item$$Chapter$episode$season.fromJson(
-      Map<String, dynamic> json) {
+    Map<String, dynamic> json,
+  ) {
     final l$number = json['number'];
     final l$$show = json['show'];
     final l$$__typename = json['__typename'];
@@ -1811,7 +1812,8 @@ class Fragment$Contribution$item$$Chapter$episode$season
     return Fragment$Contribution$item$$Chapter$episode$season(
       number: (l$number as int),
       $show: Fragment$Contribution$item$$Chapter$episode$season$show.fromJson(
-          (l$$show as Map<String, dynamic>)),
+        (l$$show as Map<String, dynamic>),
+      ),
       $__typename: (l$$__typename as String),
       title: (l$title as String),
     );
@@ -1844,12 +1846,7 @@ class Fragment$Contribution$item$$Chapter$episode$season
     final l$$show = $show;
     final l$$__typename = $__typename;
     final l$title = title;
-    return Object.hashAll([
-      l$number,
-      l$$show,
-      l$$__typename,
-      l$title,
-    ]);
+    return Object.hashAll([l$number, l$$show, l$$__typename, l$title]);
   }
 
   @override
@@ -1888,24 +1885,25 @@ class Fragment$Contribution$item$$Chapter$episode$season
 extension UtilityExtension$Fragment$Contribution$item$$Chapter$episode$season
     on Fragment$Contribution$item$$Chapter$episode$season {
   CopyWith$Fragment$Contribution$item$$Chapter$episode$season<
-          Fragment$Contribution$item$$Chapter$episode$season>
-      get copyWith =>
-          CopyWith$Fragment$Contribution$item$$Chapter$episode$season(
-            this,
-            (i) => i,
-          );
+    Fragment$Contribution$item$$Chapter$episode$season
+  >
+  get copyWith => CopyWith$Fragment$Contribution$item$$Chapter$episode$season(
+    this,
+    (i) => i,
+  );
 }
 
 abstract class CopyWith$Fragment$Contribution$item$$Chapter$episode$season<
-    TRes> {
+  TRes
+> {
   factory CopyWith$Fragment$Contribution$item$$Chapter$episode$season(
     Fragment$Contribution$item$$Chapter$episode$season instance,
     TRes Function(Fragment$Contribution$item$$Chapter$episode$season) then,
   ) = _CopyWithImpl$Fragment$Contribution$item$$Chapter$episode$season;
 
   factory CopyWith$Fragment$Contribution$item$$Chapter$episode$season.stub(
-          TRes res) =
-      _CopyWithStubImpl$Fragment$Contribution$item$$Chapter$episode$season;
+    TRes res,
+  ) = _CopyWithStubImpl$Fragment$Contribution$item$$Chapter$episode$season;
 
   TRes call({
     int? number,
@@ -1914,7 +1912,7 @@ abstract class CopyWith$Fragment$Contribution$item$$Chapter$episode$season<
     String? title,
   });
   CopyWith$Fragment$Contribution$item$$Chapter$episode$season$show<TRes>
-      get $show;
+  get $show;
 }
 
 class _CopyWithImpl$Fragment$Contribution$item$$Chapter$episode$season<TRes>
@@ -1936,28 +1934,30 @@ class _CopyWithImpl$Fragment$Contribution$item$$Chapter$episode$season<TRes>
     Object? $show = _undefined,
     Object? $__typename = _undefined,
     Object? title = _undefined,
-  }) =>
-      _then(Fragment$Contribution$item$$Chapter$episode$season(
-        number: number == _undefined || number == null
-            ? _instance.number
-            : (number as int),
-        $show: $show == _undefined || $show == null
-            ? _instance.$show
-            : ($show
-                as Fragment$Contribution$item$$Chapter$episode$season$show),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-        title: title == _undefined || title == null
-            ? _instance.title
-            : (title as String),
-      ));
+  }) => _then(
+    Fragment$Contribution$item$$Chapter$episode$season(
+      number: number == _undefined || number == null
+          ? _instance.number
+          : (number as int),
+      $show: $show == _undefined || $show == null
+          ? _instance.$show
+          : ($show as Fragment$Contribution$item$$Chapter$episode$season$show),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+      title: title == _undefined || title == null
+          ? _instance.title
+          : (title as String),
+    ),
+  );
 
   CopyWith$Fragment$Contribution$item$$Chapter$episode$season$show<TRes>
-      get $show {
+  get $show {
     final local$$show = _instance.$show;
     return CopyWith$Fragment$Contribution$item$$Chapter$episode$season$show(
-        local$$show, (e) => call($show: e));
+      local$$show,
+      (e) => call($show: e),
+    );
   }
 }
 
@@ -1965,7 +1965,8 @@ class _CopyWithStubImpl$Fragment$Contribution$item$$Chapter$episode$season<TRes>
     implements
         CopyWith$Fragment$Contribution$item$$Chapter$episode$season<TRes> {
   _CopyWithStubImpl$Fragment$Contribution$item$$Chapter$episode$season(
-      this._res);
+    this._res,
+  );
 
   TRes _res;
 
@@ -1974,13 +1975,13 @@ class _CopyWithStubImpl$Fragment$Contribution$item$$Chapter$episode$season<TRes>
     Fragment$Contribution$item$$Chapter$episode$season$show? $show,
     String? $__typename,
     String? title,
-  }) =>
-      _res;
+  }) => _res;
 
   CopyWith$Fragment$Contribution$item$$Chapter$episode$season$show<TRes>
-      get $show =>
-          CopyWith$Fragment$Contribution$item$$Chapter$episode$season$show.stub(
-              _res);
+  get $show =>
+      CopyWith$Fragment$Contribution$item$$Chapter$episode$season$show.stub(
+        _res,
+      );
 }
 
 class Fragment$Contribution$item$$Chapter$episode$season$show
@@ -1994,7 +1995,8 @@ class Fragment$Contribution$item$$Chapter$episode$season$show
   });
 
   factory Fragment$Contribution$item$$Chapter$episode$season$show.fromJson(
-      Map<String, dynamic> json) {
+    Map<String, dynamic> json,
+  ) {
     final l$title = json['title'];
     final l$$__typename = json['__typename'];
     return Fragment$Contribution$item$$Chapter$episode$season$show(
@@ -2020,10 +2022,7 @@ class Fragment$Contribution$item$$Chapter$episode$season$show
   int get hashCode {
     final l$title = title;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$title,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$title, l$$__typename]);
   }
 
   @override
@@ -2052,33 +2051,33 @@ class Fragment$Contribution$item$$Chapter$episode$season$show
 extension UtilityExtension$Fragment$Contribution$item$$Chapter$episode$season$show
     on Fragment$Contribution$item$$Chapter$episode$season$show {
   CopyWith$Fragment$Contribution$item$$Chapter$episode$season$show<
-          Fragment$Contribution$item$$Chapter$episode$season$show>
-      get copyWith =>
-          CopyWith$Fragment$Contribution$item$$Chapter$episode$season$show(
-            this,
-            (i) => i,
-          );
+    Fragment$Contribution$item$$Chapter$episode$season$show
+  >
+  get copyWith =>
+      CopyWith$Fragment$Contribution$item$$Chapter$episode$season$show(
+        this,
+        (i) => i,
+      );
 }
 
 abstract class CopyWith$Fragment$Contribution$item$$Chapter$episode$season$show<
-    TRes> {
+  TRes
+> {
   factory CopyWith$Fragment$Contribution$item$$Chapter$episode$season$show(
     Fragment$Contribution$item$$Chapter$episode$season$show instance,
     TRes Function(Fragment$Contribution$item$$Chapter$episode$season$show) then,
   ) = _CopyWithImpl$Fragment$Contribution$item$$Chapter$episode$season$show;
 
   factory CopyWith$Fragment$Contribution$item$$Chapter$episode$season$show.stub(
-          TRes res) =
-      _CopyWithStubImpl$Fragment$Contribution$item$$Chapter$episode$season$show;
+    TRes res,
+  ) = _CopyWithStubImpl$Fragment$Contribution$item$$Chapter$episode$season$show;
 
-  TRes call({
-    String? title,
-    String? $__typename,
-  });
+  TRes call({String? title, String? $__typename});
 }
 
 class _CopyWithImpl$Fragment$Contribution$item$$Chapter$episode$season$show<
-        TRes>
+  TRes
+>
     implements
         CopyWith$Fragment$Contribution$item$$Chapter$episode$season$show<TRes> {
   _CopyWithImpl$Fragment$Contribution$item$$Chapter$episode$season$show(
@@ -2089,38 +2088,35 @@ class _CopyWithImpl$Fragment$Contribution$item$$Chapter$episode$season$show<
   final Fragment$Contribution$item$$Chapter$episode$season$show _instance;
 
   final TRes Function(Fragment$Contribution$item$$Chapter$episode$season$show)
-      _then;
+  _then;
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({
-    Object? title = _undefined,
-    Object? $__typename = _undefined,
-  }) =>
-      _then(Fragment$Contribution$item$$Chapter$episode$season$show(
-        title: title == _undefined || title == null
-            ? _instance.title
-            : (title as String),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  TRes call({Object? title = _undefined, Object? $__typename = _undefined}) =>
+      _then(
+        Fragment$Contribution$item$$Chapter$episode$season$show(
+          title: title == _undefined || title == null
+              ? _instance.title
+              : (title as String),
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String),
+        ),
+      );
 }
 
 class _CopyWithStubImpl$Fragment$Contribution$item$$Chapter$episode$season$show<
-        TRes>
+  TRes
+>
     implements
         CopyWith$Fragment$Contribution$item$$Chapter$episode$season$show<TRes> {
   _CopyWithStubImpl$Fragment$Contribution$item$$Chapter$episode$season$show(
-      this._res);
+    this._res,
+  );
 
   TRes _res;
 
-  call({
-    String? title,
-    String? $__typename,
-  }) =>
-      _res;
+  call({String? title, String? $__typename}) => _res;
 }
 
 class Fragment$Contribution$item$$Episode$lessons
@@ -2133,7 +2129,8 @@ class Fragment$Contribution$item$$Episode$lessons
   });
 
   factory Fragment$Contribution$item$$Episode$lessons.fromJson(
-      Map<String, dynamic> json) {
+    Map<String, dynamic> json,
+  ) {
     final l$total = json['total'];
     final l$$__typename = json['__typename'];
     return Fragment$Contribution$item$$Episode$lessons(
@@ -2159,10 +2156,7 @@ class Fragment$Contribution$item$$Episode$lessons
   int get hashCode {
     final l$total = total;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$total,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$total, l$$__typename]);
   }
 
   @override
@@ -2191,11 +2185,10 @@ class Fragment$Contribution$item$$Episode$lessons
 extension UtilityExtension$Fragment$Contribution$item$$Episode$lessons
     on Fragment$Contribution$item$$Episode$lessons {
   CopyWith$Fragment$Contribution$item$$Episode$lessons<
-          Fragment$Contribution$item$$Episode$lessons>
-      get copyWith => CopyWith$Fragment$Contribution$item$$Episode$lessons(
-            this,
-            (i) => i,
-          );
+    Fragment$Contribution$item$$Episode$lessons
+  >
+  get copyWith =>
+      CopyWith$Fragment$Contribution$item$$Episode$lessons(this, (i) => i);
 }
 
 abstract class CopyWith$Fragment$Contribution$item$$Episode$lessons<TRes> {
@@ -2207,10 +2200,7 @@ abstract class CopyWith$Fragment$Contribution$item$$Episode$lessons<TRes> {
   factory CopyWith$Fragment$Contribution$item$$Episode$lessons.stub(TRes res) =
       _CopyWithStubImpl$Fragment$Contribution$item$$Episode$lessons;
 
-  TRes call({
-    int? total,
-    String? $__typename,
-  });
+  TRes call({int? total, String? $__typename});
 }
 
 class _CopyWithImpl$Fragment$Contribution$item$$Episode$lessons<TRes>
@@ -2226,18 +2216,17 @@ class _CopyWithImpl$Fragment$Contribution$item$$Episode$lessons<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({
-    Object? total = _undefined,
-    Object? $__typename = _undefined,
-  }) =>
-      _then(Fragment$Contribution$item$$Episode$lessons(
-        total: total == _undefined || total == null
-            ? _instance.total
-            : (total as int),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  TRes call({Object? total = _undefined, Object? $__typename = _undefined}) =>
+      _then(
+        Fragment$Contribution$item$$Episode$lessons(
+          total: total == _undefined || total == null
+              ? _instance.total
+              : (total as int),
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String),
+        ),
+      );
 }
 
 class _CopyWithStubImpl$Fragment$Contribution$item$$Episode$lessons<TRes>
@@ -2246,11 +2235,7 @@ class _CopyWithStubImpl$Fragment$Contribution$item$$Episode$lessons<TRes>
 
   TRes _res;
 
-  call({
-    int? total,
-    String? $__typename,
-  }) =>
-      _res;
+  call({int? total, String? $__typename}) => _res;
 }
 
 class Fragment$Contribution$item$$Episode$season
@@ -2265,14 +2250,16 @@ class Fragment$Contribution$item$$Episode$season
   });
 
   factory Fragment$Contribution$item$$Episode$season.fromJson(
-      Map<String, dynamic> json) {
+    Map<String, dynamic> json,
+  ) {
     final l$number = json['number'];
     final l$$show = json['show'];
     final l$$__typename = json['__typename'];
     return Fragment$Contribution$item$$Episode$season(
       number: (l$number as int),
       $show: Fragment$Contribution$item$$Episode$season$show.fromJson(
-          (l$$show as Map<String, dynamic>)),
+        (l$$show as Map<String, dynamic>),
+      ),
       $__typename: (l$$__typename as String),
     );
   }
@@ -2299,11 +2286,7 @@ class Fragment$Contribution$item$$Episode$season
     final l$number = number;
     final l$$show = $show;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$number,
-      l$$show,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$number, l$$show, l$$__typename]);
   }
 
   @override
@@ -2337,11 +2320,10 @@ class Fragment$Contribution$item$$Episode$season
 extension UtilityExtension$Fragment$Contribution$item$$Episode$season
     on Fragment$Contribution$item$$Episode$season {
   CopyWith$Fragment$Contribution$item$$Episode$season<
-          Fragment$Contribution$item$$Episode$season>
-      get copyWith => CopyWith$Fragment$Contribution$item$$Episode$season(
-            this,
-            (i) => i,
-          );
+    Fragment$Contribution$item$$Episode$season
+  >
+  get copyWith =>
+      CopyWith$Fragment$Contribution$item$$Episode$season(this, (i) => i);
 }
 
 abstract class CopyWith$Fragment$Contribution$item$$Episode$season<TRes> {
@@ -2378,23 +2360,26 @@ class _CopyWithImpl$Fragment$Contribution$item$$Episode$season<TRes>
     Object? number = _undefined,
     Object? $show = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Fragment$Contribution$item$$Episode$season(
-        number: number == _undefined || number == null
-            ? _instance.number
-            : (number as int),
-        $show: $show == _undefined || $show == null
-            ? _instance.$show
-            : ($show as Fragment$Contribution$item$$Episode$season$show),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  }) => _then(
+    Fragment$Contribution$item$$Episode$season(
+      number: number == _undefined || number == null
+          ? _instance.number
+          : (number as int),
+      $show: $show == _undefined || $show == null
+          ? _instance.$show
+          : ($show as Fragment$Contribution$item$$Episode$season$show),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 
   CopyWith$Fragment$Contribution$item$$Episode$season$show<TRes> get $show {
     final local$$show = _instance.$show;
     return CopyWith$Fragment$Contribution$item$$Episode$season$show(
-        local$$show, (e) => call($show: e));
+      local$$show,
+      (e) => call($show: e),
+    );
   }
 }
 
@@ -2408,8 +2393,7 @@ class _CopyWithStubImpl$Fragment$Contribution$item$$Episode$season<TRes>
     int? number,
     Fragment$Contribution$item$$Episode$season$show? $show,
     String? $__typename,
-  }) =>
-      _res;
+  }) => _res;
 
   CopyWith$Fragment$Contribution$item$$Episode$season$show<TRes> get $show =>
       CopyWith$Fragment$Contribution$item$$Episode$season$show.stub(_res);
@@ -2426,7 +2410,8 @@ class Fragment$Contribution$item$$Episode$season$show
   });
 
   factory Fragment$Contribution$item$$Episode$season$show.fromJson(
-      Map<String, dynamic> json) {
+    Map<String, dynamic> json,
+  ) {
     final l$title = json['title'];
     final l$$__typename = json['__typename'];
     return Fragment$Contribution$item$$Episode$season$show(
@@ -2452,10 +2437,7 @@ class Fragment$Contribution$item$$Episode$season$show
   int get hashCode {
     final l$title = title;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$title,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$title, l$$__typename]);
   }
 
   @override
@@ -2484,11 +2466,10 @@ class Fragment$Contribution$item$$Episode$season$show
 extension UtilityExtension$Fragment$Contribution$item$$Episode$season$show
     on Fragment$Contribution$item$$Episode$season$show {
   CopyWith$Fragment$Contribution$item$$Episode$season$show<
-          Fragment$Contribution$item$$Episode$season$show>
-      get copyWith => CopyWith$Fragment$Contribution$item$$Episode$season$show(
-            this,
-            (i) => i,
-          );
+    Fragment$Contribution$item$$Episode$season$show
+  >
+  get copyWith =>
+      CopyWith$Fragment$Contribution$item$$Episode$season$show(this, (i) => i);
 }
 
 abstract class CopyWith$Fragment$Contribution$item$$Episode$season$show<TRes> {
@@ -2498,13 +2479,10 @@ abstract class CopyWith$Fragment$Contribution$item$$Episode$season$show<TRes> {
   ) = _CopyWithImpl$Fragment$Contribution$item$$Episode$season$show;
 
   factory CopyWith$Fragment$Contribution$item$$Episode$season$show.stub(
-          TRes res) =
-      _CopyWithStubImpl$Fragment$Contribution$item$$Episode$season$show;
+    TRes res,
+  ) = _CopyWithStubImpl$Fragment$Contribution$item$$Episode$season$show;
 
-  TRes call({
-    String? title,
-    String? $__typename,
-  });
+  TRes call({String? title, String? $__typename});
 }
 
 class _CopyWithImpl$Fragment$Contribution$item$$Episode$season$show<TRes>
@@ -2520,18 +2498,17 @@ class _CopyWithImpl$Fragment$Contribution$item$$Episode$season$show<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({
-    Object? title = _undefined,
-    Object? $__typename = _undefined,
-  }) =>
-      _then(Fragment$Contribution$item$$Episode$season$show(
-        title: title == _undefined || title == null
-            ? _instance.title
-            : (title as String),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  TRes call({Object? title = _undefined, Object? $__typename = _undefined}) =>
+      _then(
+        Fragment$Contribution$item$$Episode$season$show(
+          title: title == _undefined || title == null
+              ? _instance.title
+              : (title as String),
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String),
+        ),
+      );
 }
 
 class _CopyWithStubImpl$Fragment$Contribution$item$$Episode$season$show<TRes>
@@ -2540,44 +2517,37 @@ class _CopyWithStubImpl$Fragment$Contribution$item$$Episode$season$show<TRes>
 
   TRes _res;
 
-  call({
-    String? title,
-    String? $__typename,
-  }) =>
-      _res;
+  call({String? title, String? $__typename}) => _res;
 }
 
 class Fragment$ContributionItemId {
-  Fragment$ContributionItemId({
-    required this.id,
-    required this.$__typename,
-  });
+  Fragment$ContributionItemId({required this.id, required this.$__typename});
 
   factory Fragment$ContributionItemId.fromJson(Map<String, dynamic> json) {
     switch (json["__typename"] as String) {
-      case "Playlist":
-        return Fragment$ContributionItemId$$Playlist.fromJson(json);
-
-      case "Game":
-        return Fragment$ContributionItemId$$Game.fromJson(json);
-
-      case "Season":
-        return Fragment$ContributionItemId$$Season.fromJson(json);
-
-      case "StudyTopic":
-        return Fragment$ContributionItemId$$StudyTopic.fromJson(json);
-
-      case "Short":
-        return Fragment$ContributionItemId$$Short.fromJson(json);
-
       case "Episode":
         return Fragment$ContributionItemId$$Episode.fromJson(json);
 
       case "Chapter":
         return Fragment$ContributionItemId$$Chapter.fromJson(json);
 
+      case "Game":
+        return Fragment$ContributionItemId$$Game.fromJson(json);
+
+      case "Playlist":
+        return Fragment$ContributionItemId$$Playlist.fromJson(json);
+
+      case "Season":
+        return Fragment$ContributionItemId$$Season.fromJson(json);
+
+      case "Short":
+        return Fragment$ContributionItemId$$Short.fromJson(json);
+
       case "Show":
         return Fragment$ContributionItemId$$Show.fromJson(json);
+
+      case "StudyTopic":
+        return Fragment$ContributionItemId$$StudyTopic.fromJson(json);
 
       default:
         final l$id = json['id'];
@@ -2606,10 +2576,7 @@ class Fragment$ContributionItemId {
   int get hashCode {
     final l$id = id;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$id,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$id, l$$__typename]);
   }
 
   @override
@@ -2638,46 +2605,43 @@ class Fragment$ContributionItemId {
 extension UtilityExtension$Fragment$ContributionItemId
     on Fragment$ContributionItemId {
   CopyWith$Fragment$ContributionItemId<Fragment$ContributionItemId>
-      get copyWith => CopyWith$Fragment$ContributionItemId(
-            this,
-            (i) => i,
-          );
+  get copyWith => CopyWith$Fragment$ContributionItemId(this, (i) => i);
 
   _T when<_T>({
-    required _T Function(Fragment$ContributionItemId$$Playlist) playlist,
-    required _T Function(Fragment$ContributionItemId$$Game) game,
-    required _T Function(Fragment$ContributionItemId$$Season) season,
-    required _T Function(Fragment$ContributionItemId$$StudyTopic) studyTopic,
-    required _T Function(Fragment$ContributionItemId$$Short) short,
     required _T Function(Fragment$ContributionItemId$$Episode) episode,
     required _T Function(Fragment$ContributionItemId$$Chapter) chapter,
+    required _T Function(Fragment$ContributionItemId$$Game) game,
+    required _T Function(Fragment$ContributionItemId$$Playlist) playlist,
+    required _T Function(Fragment$ContributionItemId$$Season) season,
+    required _T Function(Fragment$ContributionItemId$$Short) short,
     required _T Function(Fragment$ContributionItemId$$Show) show,
+    required _T Function(Fragment$ContributionItemId$$StudyTopic) studyTopic,
     required _T Function() orElse,
   }) {
     switch ($__typename) {
-      case "Playlist":
-        return playlist(this as Fragment$ContributionItemId$$Playlist);
-
-      case "Game":
-        return game(this as Fragment$ContributionItemId$$Game);
-
-      case "Season":
-        return season(this as Fragment$ContributionItemId$$Season);
-
-      case "StudyTopic":
-        return studyTopic(this as Fragment$ContributionItemId$$StudyTopic);
-
-      case "Short":
-        return short(this as Fragment$ContributionItemId$$Short);
-
       case "Episode":
         return episode(this as Fragment$ContributionItemId$$Episode);
 
       case "Chapter":
         return chapter(this as Fragment$ContributionItemId$$Chapter);
 
+      case "Game":
+        return game(this as Fragment$ContributionItemId$$Game);
+
+      case "Playlist":
+        return playlist(this as Fragment$ContributionItemId$$Playlist);
+
+      case "Season":
+        return season(this as Fragment$ContributionItemId$$Season);
+
+      case "Short":
+        return short(this as Fragment$ContributionItemId$$Short);
+
       case "Show":
         return show(this as Fragment$ContributionItemId$$Show);
+
+      case "StudyTopic":
+        return studyTopic(this as Fragment$ContributionItemId$$StudyTopic);
 
       default:
         return orElse();
@@ -2685,52 +2649,17 @@ extension UtilityExtension$Fragment$ContributionItemId
   }
 
   _T maybeWhen<_T>({
-    _T Function(Fragment$ContributionItemId$$Playlist)? playlist,
-    _T Function(Fragment$ContributionItemId$$Game)? game,
-    _T Function(Fragment$ContributionItemId$$Season)? season,
-    _T Function(Fragment$ContributionItemId$$StudyTopic)? studyTopic,
-    _T Function(Fragment$ContributionItemId$$Short)? short,
     _T Function(Fragment$ContributionItemId$$Episode)? episode,
     _T Function(Fragment$ContributionItemId$$Chapter)? chapter,
+    _T Function(Fragment$ContributionItemId$$Game)? game,
+    _T Function(Fragment$ContributionItemId$$Playlist)? playlist,
+    _T Function(Fragment$ContributionItemId$$Season)? season,
+    _T Function(Fragment$ContributionItemId$$Short)? short,
     _T Function(Fragment$ContributionItemId$$Show)? show,
+    _T Function(Fragment$ContributionItemId$$StudyTopic)? studyTopic,
     required _T Function() orElse,
   }) {
     switch ($__typename) {
-      case "Playlist":
-        if (playlist != null) {
-          return playlist(this as Fragment$ContributionItemId$$Playlist);
-        } else {
-          return orElse();
-        }
-
-      case "Game":
-        if (game != null) {
-          return game(this as Fragment$ContributionItemId$$Game);
-        } else {
-          return orElse();
-        }
-
-      case "Season":
-        if (season != null) {
-          return season(this as Fragment$ContributionItemId$$Season);
-        } else {
-          return orElse();
-        }
-
-      case "StudyTopic":
-        if (studyTopic != null) {
-          return studyTopic(this as Fragment$ContributionItemId$$StudyTopic);
-        } else {
-          return orElse();
-        }
-
-      case "Short":
-        if (short != null) {
-          return short(this as Fragment$ContributionItemId$$Short);
-        } else {
-          return orElse();
-        }
-
       case "Episode":
         if (episode != null) {
           return episode(this as Fragment$ContributionItemId$$Episode);
@@ -2745,9 +2674,44 @@ extension UtilityExtension$Fragment$ContributionItemId
           return orElse();
         }
 
+      case "Game":
+        if (game != null) {
+          return game(this as Fragment$ContributionItemId$$Game);
+        } else {
+          return orElse();
+        }
+
+      case "Playlist":
+        if (playlist != null) {
+          return playlist(this as Fragment$ContributionItemId$$Playlist);
+        } else {
+          return orElse();
+        }
+
+      case "Season":
+        if (season != null) {
+          return season(this as Fragment$ContributionItemId$$Season);
+        } else {
+          return orElse();
+        }
+
+      case "Short":
+        if (short != null) {
+          return short(this as Fragment$ContributionItemId$$Short);
+        } else {
+          return orElse();
+        }
+
       case "Show":
         if (show != null) {
           return show(this as Fragment$ContributionItemId$$Show);
+        } else {
+          return orElse();
+        }
+
+      case "StudyTopic":
+        if (studyTopic != null) {
+          return studyTopic(this as Fragment$ContributionItemId$$StudyTopic);
         } else {
           return orElse();
         }
@@ -2767,18 +2731,12 @@ abstract class CopyWith$Fragment$ContributionItemId<TRes> {
   factory CopyWith$Fragment$ContributionItemId.stub(TRes res) =
       _CopyWithStubImpl$Fragment$ContributionItemId;
 
-  TRes call({
-    String? id,
-    String? $__typename,
-  });
+  TRes call({String? id, String? $__typename});
 }
 
 class _CopyWithImpl$Fragment$ContributionItemId<TRes>
     implements CopyWith$Fragment$ContributionItemId<TRes> {
-  _CopyWithImpl$Fragment$ContributionItemId(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Fragment$ContributionItemId(this._instance, this._then);
 
   final Fragment$ContributionItemId _instance;
 
@@ -2786,16 +2744,15 @@ class _CopyWithImpl$Fragment$ContributionItemId<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({
-    Object? id = _undefined,
-    Object? $__typename = _undefined,
-  }) =>
-      _then(Fragment$ContributionItemId(
-        id: id == _undefined || id == null ? _instance.id : (id as String),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  TRes call({Object? id = _undefined, Object? $__typename = _undefined}) =>
+      _then(
+        Fragment$ContributionItemId(
+          id: id == _undefined || id == null ? _instance.id : (id as String),
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String),
+        ),
+      );
 }
 
 class _CopyWithStubImpl$Fragment$ContributionItemId<TRes>
@@ -2804,59 +2761,57 @@ class _CopyWithStubImpl$Fragment$ContributionItemId<TRes>
 
   TRes _res;
 
-  call({
-    String? id,
-    String? $__typename,
-  }) =>
-      _res;
+  call({String? id, String? $__typename}) => _res;
 }
 
 const fragmentDefinitionContributionItemId = FragmentDefinitionNode(
   name: NameNode(value: 'ContributionItemId'),
   typeCondition: TypeConditionNode(
-      on: NamedTypeNode(
-    name: NameNode(value: 'CollectionItem'),
-    isNonNull: false,
-  )),
+    on: NamedTypeNode(
+      name: NameNode(value: 'CollectionItem'),
+      isNonNull: false,
+    ),
+  ),
   directives: [],
-  selectionSet: SelectionSetNode(selections: [
-    FieldNode(
-      name: NameNode(value: 'id'),
-      alias: null,
-      arguments: [],
-      directives: [],
-      selectionSet: null,
-    ),
-    FieldNode(
-      name: NameNode(value: '__typename'),
-      alias: null,
-      arguments: [],
-      directives: [],
-      selectionSet: null,
-    ),
-  ]),
+  selectionSet: SelectionSetNode(
+    selections: [
+      FieldNode(
+        name: NameNode(value: 'id'),
+        alias: null,
+        arguments: [],
+        directives: [],
+        selectionSet: null,
+      ),
+      FieldNode(
+        name: NameNode(value: '__typename'),
+        alias: null,
+        arguments: [],
+        directives: [],
+        selectionSet: null,
+      ),
+    ],
+  ),
 );
-const documentNodeFragmentContributionItemId = DocumentNode(definitions: [
-  fragmentDefinitionContributionItemId,
-]);
+const documentNodeFragmentContributionItemId = DocumentNode(
+  definitions: [fragmentDefinitionContributionItemId],
+);
 
 extension ClientExtension$Fragment$ContributionItemId on graphql.GraphQLClient {
   void writeFragment$ContributionItemId({
     required Fragment$ContributionItemId data,
     required Map<String, dynamic> idFields,
     bool broadcast = true,
-  }) =>
-      this.writeFragment(
-        graphql.FragmentRequest(
-          idFields: idFields,
-          fragment: const graphql.Fragment(
-            fragmentName: 'ContributionItemId',
-            document: documentNodeFragmentContributionItemId,
-          ),
-        ),
-        data: data.toJson(),
-        broadcast: broadcast,
-      );
+  }) => this.writeFragment(
+    graphql.FragmentRequest(
+      idFields: idFields,
+      fragment: const graphql.Fragment(
+        fragmentName: 'ContributionItemId',
+        document: documentNodeFragmentContributionItemId,
+      ),
+    ),
+    data: data.toJson(),
+    broadcast: broadcast,
+  );
 
   Fragment$ContributionItemId? readFragment$ContributionItemId({
     required Map<String, dynamic> idFields,
@@ -2876,634 +2831,6 @@ extension ClientExtension$Fragment$ContributionItemId on graphql.GraphQLClient {
   }
 }
 
-class Fragment$ContributionItemId$$Playlist
-    implements Fragment$ContributionItemId {
-  Fragment$ContributionItemId$$Playlist({
-    required this.id,
-    this.$__typename = 'Playlist',
-  });
-
-  factory Fragment$ContributionItemId$$Playlist.fromJson(
-      Map<String, dynamic> json) {
-    final l$id = json['id'];
-    final l$$__typename = json['__typename'];
-    return Fragment$ContributionItemId$$Playlist(
-      id: (l$id as String),
-      $__typename: (l$$__typename as String),
-    );
-  }
-
-  final String id;
-
-  final String $__typename;
-
-  Map<String, dynamic> toJson() {
-    final _resultData = <String, dynamic>{};
-    final l$id = id;
-    _resultData['id'] = l$id;
-    final l$$__typename = $__typename;
-    _resultData['__typename'] = l$$__typename;
-    return _resultData;
-  }
-
-  @override
-  int get hashCode {
-    final l$id = id;
-    final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$id,
-      l$$__typename,
-    ]);
-  }
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) {
-      return true;
-    }
-    if (other is! Fragment$ContributionItemId$$Playlist ||
-        runtimeType != other.runtimeType) {
-      return false;
-    }
-    final l$id = id;
-    final lOther$id = other.id;
-    if (l$id != lOther$id) {
-      return false;
-    }
-    final l$$__typename = $__typename;
-    final lOther$$__typename = other.$__typename;
-    if (l$$__typename != lOther$$__typename) {
-      return false;
-    }
-    return true;
-  }
-}
-
-extension UtilityExtension$Fragment$ContributionItemId$$Playlist
-    on Fragment$ContributionItemId$$Playlist {
-  CopyWith$Fragment$ContributionItemId$$Playlist<
-          Fragment$ContributionItemId$$Playlist>
-      get copyWith => CopyWith$Fragment$ContributionItemId$$Playlist(
-            this,
-            (i) => i,
-          );
-}
-
-abstract class CopyWith$Fragment$ContributionItemId$$Playlist<TRes> {
-  factory CopyWith$Fragment$ContributionItemId$$Playlist(
-    Fragment$ContributionItemId$$Playlist instance,
-    TRes Function(Fragment$ContributionItemId$$Playlist) then,
-  ) = _CopyWithImpl$Fragment$ContributionItemId$$Playlist;
-
-  factory CopyWith$Fragment$ContributionItemId$$Playlist.stub(TRes res) =
-      _CopyWithStubImpl$Fragment$ContributionItemId$$Playlist;
-
-  TRes call({
-    String? id,
-    String? $__typename,
-  });
-}
-
-class _CopyWithImpl$Fragment$ContributionItemId$$Playlist<TRes>
-    implements CopyWith$Fragment$ContributionItemId$$Playlist<TRes> {
-  _CopyWithImpl$Fragment$ContributionItemId$$Playlist(
-    this._instance,
-    this._then,
-  );
-
-  final Fragment$ContributionItemId$$Playlist _instance;
-
-  final TRes Function(Fragment$ContributionItemId$$Playlist) _then;
-
-  static const _undefined = <dynamic, dynamic>{};
-
-  TRes call({
-    Object? id = _undefined,
-    Object? $__typename = _undefined,
-  }) =>
-      _then(Fragment$ContributionItemId$$Playlist(
-        id: id == _undefined || id == null ? _instance.id : (id as String),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
-}
-
-class _CopyWithStubImpl$Fragment$ContributionItemId$$Playlist<TRes>
-    implements CopyWith$Fragment$ContributionItemId$$Playlist<TRes> {
-  _CopyWithStubImpl$Fragment$ContributionItemId$$Playlist(this._res);
-
-  TRes _res;
-
-  call({
-    String? id,
-    String? $__typename,
-  }) =>
-      _res;
-}
-
-class Fragment$ContributionItemId$$Game implements Fragment$ContributionItemId {
-  Fragment$ContributionItemId$$Game({
-    required this.id,
-    this.$__typename = 'Game',
-  });
-
-  factory Fragment$ContributionItemId$$Game.fromJson(
-      Map<String, dynamic> json) {
-    final l$id = json['id'];
-    final l$$__typename = json['__typename'];
-    return Fragment$ContributionItemId$$Game(
-      id: (l$id as String),
-      $__typename: (l$$__typename as String),
-    );
-  }
-
-  final String id;
-
-  final String $__typename;
-
-  Map<String, dynamic> toJson() {
-    final _resultData = <String, dynamic>{};
-    final l$id = id;
-    _resultData['id'] = l$id;
-    final l$$__typename = $__typename;
-    _resultData['__typename'] = l$$__typename;
-    return _resultData;
-  }
-
-  @override
-  int get hashCode {
-    final l$id = id;
-    final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$id,
-      l$$__typename,
-    ]);
-  }
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) {
-      return true;
-    }
-    if (other is! Fragment$ContributionItemId$$Game ||
-        runtimeType != other.runtimeType) {
-      return false;
-    }
-    final l$id = id;
-    final lOther$id = other.id;
-    if (l$id != lOther$id) {
-      return false;
-    }
-    final l$$__typename = $__typename;
-    final lOther$$__typename = other.$__typename;
-    if (l$$__typename != lOther$$__typename) {
-      return false;
-    }
-    return true;
-  }
-}
-
-extension UtilityExtension$Fragment$ContributionItemId$$Game
-    on Fragment$ContributionItemId$$Game {
-  CopyWith$Fragment$ContributionItemId$$Game<Fragment$ContributionItemId$$Game>
-      get copyWith => CopyWith$Fragment$ContributionItemId$$Game(
-            this,
-            (i) => i,
-          );
-}
-
-abstract class CopyWith$Fragment$ContributionItemId$$Game<TRes> {
-  factory CopyWith$Fragment$ContributionItemId$$Game(
-    Fragment$ContributionItemId$$Game instance,
-    TRes Function(Fragment$ContributionItemId$$Game) then,
-  ) = _CopyWithImpl$Fragment$ContributionItemId$$Game;
-
-  factory CopyWith$Fragment$ContributionItemId$$Game.stub(TRes res) =
-      _CopyWithStubImpl$Fragment$ContributionItemId$$Game;
-
-  TRes call({
-    String? id,
-    String? $__typename,
-  });
-}
-
-class _CopyWithImpl$Fragment$ContributionItemId$$Game<TRes>
-    implements CopyWith$Fragment$ContributionItemId$$Game<TRes> {
-  _CopyWithImpl$Fragment$ContributionItemId$$Game(
-    this._instance,
-    this._then,
-  );
-
-  final Fragment$ContributionItemId$$Game _instance;
-
-  final TRes Function(Fragment$ContributionItemId$$Game) _then;
-
-  static const _undefined = <dynamic, dynamic>{};
-
-  TRes call({
-    Object? id = _undefined,
-    Object? $__typename = _undefined,
-  }) =>
-      _then(Fragment$ContributionItemId$$Game(
-        id: id == _undefined || id == null ? _instance.id : (id as String),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
-}
-
-class _CopyWithStubImpl$Fragment$ContributionItemId$$Game<TRes>
-    implements CopyWith$Fragment$ContributionItemId$$Game<TRes> {
-  _CopyWithStubImpl$Fragment$ContributionItemId$$Game(this._res);
-
-  TRes _res;
-
-  call({
-    String? id,
-    String? $__typename,
-  }) =>
-      _res;
-}
-
-class Fragment$ContributionItemId$$Season
-    implements Fragment$ContributionItemId {
-  Fragment$ContributionItemId$$Season({
-    required this.id,
-    this.$__typename = 'Season',
-  });
-
-  factory Fragment$ContributionItemId$$Season.fromJson(
-      Map<String, dynamic> json) {
-    final l$id = json['id'];
-    final l$$__typename = json['__typename'];
-    return Fragment$ContributionItemId$$Season(
-      id: (l$id as String),
-      $__typename: (l$$__typename as String),
-    );
-  }
-
-  final String id;
-
-  final String $__typename;
-
-  Map<String, dynamic> toJson() {
-    final _resultData = <String, dynamic>{};
-    final l$id = id;
-    _resultData['id'] = l$id;
-    final l$$__typename = $__typename;
-    _resultData['__typename'] = l$$__typename;
-    return _resultData;
-  }
-
-  @override
-  int get hashCode {
-    final l$id = id;
-    final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$id,
-      l$$__typename,
-    ]);
-  }
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) {
-      return true;
-    }
-    if (other is! Fragment$ContributionItemId$$Season ||
-        runtimeType != other.runtimeType) {
-      return false;
-    }
-    final l$id = id;
-    final lOther$id = other.id;
-    if (l$id != lOther$id) {
-      return false;
-    }
-    final l$$__typename = $__typename;
-    final lOther$$__typename = other.$__typename;
-    if (l$$__typename != lOther$$__typename) {
-      return false;
-    }
-    return true;
-  }
-}
-
-extension UtilityExtension$Fragment$ContributionItemId$$Season
-    on Fragment$ContributionItemId$$Season {
-  CopyWith$Fragment$ContributionItemId$$Season<
-          Fragment$ContributionItemId$$Season>
-      get copyWith => CopyWith$Fragment$ContributionItemId$$Season(
-            this,
-            (i) => i,
-          );
-}
-
-abstract class CopyWith$Fragment$ContributionItemId$$Season<TRes> {
-  factory CopyWith$Fragment$ContributionItemId$$Season(
-    Fragment$ContributionItemId$$Season instance,
-    TRes Function(Fragment$ContributionItemId$$Season) then,
-  ) = _CopyWithImpl$Fragment$ContributionItemId$$Season;
-
-  factory CopyWith$Fragment$ContributionItemId$$Season.stub(TRes res) =
-      _CopyWithStubImpl$Fragment$ContributionItemId$$Season;
-
-  TRes call({
-    String? id,
-    String? $__typename,
-  });
-}
-
-class _CopyWithImpl$Fragment$ContributionItemId$$Season<TRes>
-    implements CopyWith$Fragment$ContributionItemId$$Season<TRes> {
-  _CopyWithImpl$Fragment$ContributionItemId$$Season(
-    this._instance,
-    this._then,
-  );
-
-  final Fragment$ContributionItemId$$Season _instance;
-
-  final TRes Function(Fragment$ContributionItemId$$Season) _then;
-
-  static const _undefined = <dynamic, dynamic>{};
-
-  TRes call({
-    Object? id = _undefined,
-    Object? $__typename = _undefined,
-  }) =>
-      _then(Fragment$ContributionItemId$$Season(
-        id: id == _undefined || id == null ? _instance.id : (id as String),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
-}
-
-class _CopyWithStubImpl$Fragment$ContributionItemId$$Season<TRes>
-    implements CopyWith$Fragment$ContributionItemId$$Season<TRes> {
-  _CopyWithStubImpl$Fragment$ContributionItemId$$Season(this._res);
-
-  TRes _res;
-
-  call({
-    String? id,
-    String? $__typename,
-  }) =>
-      _res;
-}
-
-class Fragment$ContributionItemId$$StudyTopic
-    implements Fragment$ContributionItemId {
-  Fragment$ContributionItemId$$StudyTopic({
-    required this.id,
-    this.$__typename = 'StudyTopic',
-  });
-
-  factory Fragment$ContributionItemId$$StudyTopic.fromJson(
-      Map<String, dynamic> json) {
-    final l$id = json['id'];
-    final l$$__typename = json['__typename'];
-    return Fragment$ContributionItemId$$StudyTopic(
-      id: (l$id as String),
-      $__typename: (l$$__typename as String),
-    );
-  }
-
-  final String id;
-
-  final String $__typename;
-
-  Map<String, dynamic> toJson() {
-    final _resultData = <String, dynamic>{};
-    final l$id = id;
-    _resultData['id'] = l$id;
-    final l$$__typename = $__typename;
-    _resultData['__typename'] = l$$__typename;
-    return _resultData;
-  }
-
-  @override
-  int get hashCode {
-    final l$id = id;
-    final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$id,
-      l$$__typename,
-    ]);
-  }
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) {
-      return true;
-    }
-    if (other is! Fragment$ContributionItemId$$StudyTopic ||
-        runtimeType != other.runtimeType) {
-      return false;
-    }
-    final l$id = id;
-    final lOther$id = other.id;
-    if (l$id != lOther$id) {
-      return false;
-    }
-    final l$$__typename = $__typename;
-    final lOther$$__typename = other.$__typename;
-    if (l$$__typename != lOther$$__typename) {
-      return false;
-    }
-    return true;
-  }
-}
-
-extension UtilityExtension$Fragment$ContributionItemId$$StudyTopic
-    on Fragment$ContributionItemId$$StudyTopic {
-  CopyWith$Fragment$ContributionItemId$$StudyTopic<
-          Fragment$ContributionItemId$$StudyTopic>
-      get copyWith => CopyWith$Fragment$ContributionItemId$$StudyTopic(
-            this,
-            (i) => i,
-          );
-}
-
-abstract class CopyWith$Fragment$ContributionItemId$$StudyTopic<TRes> {
-  factory CopyWith$Fragment$ContributionItemId$$StudyTopic(
-    Fragment$ContributionItemId$$StudyTopic instance,
-    TRes Function(Fragment$ContributionItemId$$StudyTopic) then,
-  ) = _CopyWithImpl$Fragment$ContributionItemId$$StudyTopic;
-
-  factory CopyWith$Fragment$ContributionItemId$$StudyTopic.stub(TRes res) =
-      _CopyWithStubImpl$Fragment$ContributionItemId$$StudyTopic;
-
-  TRes call({
-    String? id,
-    String? $__typename,
-  });
-}
-
-class _CopyWithImpl$Fragment$ContributionItemId$$StudyTopic<TRes>
-    implements CopyWith$Fragment$ContributionItemId$$StudyTopic<TRes> {
-  _CopyWithImpl$Fragment$ContributionItemId$$StudyTopic(
-    this._instance,
-    this._then,
-  );
-
-  final Fragment$ContributionItemId$$StudyTopic _instance;
-
-  final TRes Function(Fragment$ContributionItemId$$StudyTopic) _then;
-
-  static const _undefined = <dynamic, dynamic>{};
-
-  TRes call({
-    Object? id = _undefined,
-    Object? $__typename = _undefined,
-  }) =>
-      _then(Fragment$ContributionItemId$$StudyTopic(
-        id: id == _undefined || id == null ? _instance.id : (id as String),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
-}
-
-class _CopyWithStubImpl$Fragment$ContributionItemId$$StudyTopic<TRes>
-    implements CopyWith$Fragment$ContributionItemId$$StudyTopic<TRes> {
-  _CopyWithStubImpl$Fragment$ContributionItemId$$StudyTopic(this._res);
-
-  TRes _res;
-
-  call({
-    String? id,
-    String? $__typename,
-  }) =>
-      _res;
-}
-
-class Fragment$ContributionItemId$$Short
-    implements Fragment$ContributionItemId {
-  Fragment$ContributionItemId$$Short({
-    required this.id,
-    this.$__typename = 'Short',
-  });
-
-  factory Fragment$ContributionItemId$$Short.fromJson(
-      Map<String, dynamic> json) {
-    final l$id = json['id'];
-    final l$$__typename = json['__typename'];
-    return Fragment$ContributionItemId$$Short(
-      id: (l$id as String),
-      $__typename: (l$$__typename as String),
-    );
-  }
-
-  final String id;
-
-  final String $__typename;
-
-  Map<String, dynamic> toJson() {
-    final _resultData = <String, dynamic>{};
-    final l$id = id;
-    _resultData['id'] = l$id;
-    final l$$__typename = $__typename;
-    _resultData['__typename'] = l$$__typename;
-    return _resultData;
-  }
-
-  @override
-  int get hashCode {
-    final l$id = id;
-    final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$id,
-      l$$__typename,
-    ]);
-  }
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) {
-      return true;
-    }
-    if (other is! Fragment$ContributionItemId$$Short ||
-        runtimeType != other.runtimeType) {
-      return false;
-    }
-    final l$id = id;
-    final lOther$id = other.id;
-    if (l$id != lOther$id) {
-      return false;
-    }
-    final l$$__typename = $__typename;
-    final lOther$$__typename = other.$__typename;
-    if (l$$__typename != lOther$$__typename) {
-      return false;
-    }
-    return true;
-  }
-}
-
-extension UtilityExtension$Fragment$ContributionItemId$$Short
-    on Fragment$ContributionItemId$$Short {
-  CopyWith$Fragment$ContributionItemId$$Short<
-          Fragment$ContributionItemId$$Short>
-      get copyWith => CopyWith$Fragment$ContributionItemId$$Short(
-            this,
-            (i) => i,
-          );
-}
-
-abstract class CopyWith$Fragment$ContributionItemId$$Short<TRes> {
-  factory CopyWith$Fragment$ContributionItemId$$Short(
-    Fragment$ContributionItemId$$Short instance,
-    TRes Function(Fragment$ContributionItemId$$Short) then,
-  ) = _CopyWithImpl$Fragment$ContributionItemId$$Short;
-
-  factory CopyWith$Fragment$ContributionItemId$$Short.stub(TRes res) =
-      _CopyWithStubImpl$Fragment$ContributionItemId$$Short;
-
-  TRes call({
-    String? id,
-    String? $__typename,
-  });
-}
-
-class _CopyWithImpl$Fragment$ContributionItemId$$Short<TRes>
-    implements CopyWith$Fragment$ContributionItemId$$Short<TRes> {
-  _CopyWithImpl$Fragment$ContributionItemId$$Short(
-    this._instance,
-    this._then,
-  );
-
-  final Fragment$ContributionItemId$$Short _instance;
-
-  final TRes Function(Fragment$ContributionItemId$$Short) _then;
-
-  static const _undefined = <dynamic, dynamic>{};
-
-  TRes call({
-    Object? id = _undefined,
-    Object? $__typename = _undefined,
-  }) =>
-      _then(Fragment$ContributionItemId$$Short(
-        id: id == _undefined || id == null ? _instance.id : (id as String),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
-}
-
-class _CopyWithStubImpl$Fragment$ContributionItemId$$Short<TRes>
-    implements CopyWith$Fragment$ContributionItemId$$Short<TRes> {
-  _CopyWithStubImpl$Fragment$ContributionItemId$$Short(this._res);
-
-  TRes _res;
-
-  call({
-    String? id,
-    String? $__typename,
-  }) =>
-      _res;
-}
-
 class Fragment$ContributionItemId$$Episode
     implements Fragment$ContributionItemId {
   Fragment$ContributionItemId$$Episode({
@@ -3512,7 +2839,8 @@ class Fragment$ContributionItemId$$Episode
   });
 
   factory Fragment$ContributionItemId$$Episode.fromJson(
-      Map<String, dynamic> json) {
+    Map<String, dynamic> json,
+  ) {
     final l$id = json['id'];
     final l$$__typename = json['__typename'];
     return Fragment$ContributionItemId$$Episode(
@@ -3538,10 +2866,7 @@ class Fragment$ContributionItemId$$Episode
   int get hashCode {
     final l$id = id;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$id,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$id, l$$__typename]);
   }
 
   @override
@@ -3570,11 +2895,9 @@ class Fragment$ContributionItemId$$Episode
 extension UtilityExtension$Fragment$ContributionItemId$$Episode
     on Fragment$ContributionItemId$$Episode {
   CopyWith$Fragment$ContributionItemId$$Episode<
-          Fragment$ContributionItemId$$Episode>
-      get copyWith => CopyWith$Fragment$ContributionItemId$$Episode(
-            this,
-            (i) => i,
-          );
+    Fragment$ContributionItemId$$Episode
+  >
+  get copyWith => CopyWith$Fragment$ContributionItemId$$Episode(this, (i) => i);
 }
 
 abstract class CopyWith$Fragment$ContributionItemId$$Episode<TRes> {
@@ -3586,10 +2909,7 @@ abstract class CopyWith$Fragment$ContributionItemId$$Episode<TRes> {
   factory CopyWith$Fragment$ContributionItemId$$Episode.stub(TRes res) =
       _CopyWithStubImpl$Fragment$ContributionItemId$$Episode;
 
-  TRes call({
-    String? id,
-    String? $__typename,
-  });
+  TRes call({String? id, String? $__typename});
 }
 
 class _CopyWithImpl$Fragment$ContributionItemId$$Episode<TRes>
@@ -3605,16 +2925,15 @@ class _CopyWithImpl$Fragment$ContributionItemId$$Episode<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({
-    Object? id = _undefined,
-    Object? $__typename = _undefined,
-  }) =>
-      _then(Fragment$ContributionItemId$$Episode(
-        id: id == _undefined || id == null ? _instance.id : (id as String),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  TRes call({Object? id = _undefined, Object? $__typename = _undefined}) =>
+      _then(
+        Fragment$ContributionItemId$$Episode(
+          id: id == _undefined || id == null ? _instance.id : (id as String),
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String),
+        ),
+      );
 }
 
 class _CopyWithStubImpl$Fragment$ContributionItemId$$Episode<TRes>
@@ -3623,11 +2942,7 @@ class _CopyWithStubImpl$Fragment$ContributionItemId$$Episode<TRes>
 
   TRes _res;
 
-  call({
-    String? id,
-    String? $__typename,
-  }) =>
-      _res;
+  call({String? id, String? $__typename}) => _res;
 }
 
 class Fragment$ContributionItemId$$Chapter
@@ -3638,7 +2953,8 @@ class Fragment$ContributionItemId$$Chapter
   });
 
   factory Fragment$ContributionItemId$$Chapter.fromJson(
-      Map<String, dynamic> json) {
+    Map<String, dynamic> json,
+  ) {
     final l$id = json['id'];
     final l$$__typename = json['__typename'];
     return Fragment$ContributionItemId$$Chapter(
@@ -3664,10 +2980,7 @@ class Fragment$ContributionItemId$$Chapter
   int get hashCode {
     final l$id = id;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$id,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$id, l$$__typename]);
   }
 
   @override
@@ -3696,11 +3009,9 @@ class Fragment$ContributionItemId$$Chapter
 extension UtilityExtension$Fragment$ContributionItemId$$Chapter
     on Fragment$ContributionItemId$$Chapter {
   CopyWith$Fragment$ContributionItemId$$Chapter<
-          Fragment$ContributionItemId$$Chapter>
-      get copyWith => CopyWith$Fragment$ContributionItemId$$Chapter(
-            this,
-            (i) => i,
-          );
+    Fragment$ContributionItemId$$Chapter
+  >
+  get copyWith => CopyWith$Fragment$ContributionItemId$$Chapter(this, (i) => i);
 }
 
 abstract class CopyWith$Fragment$ContributionItemId$$Chapter<TRes> {
@@ -3712,10 +3023,7 @@ abstract class CopyWith$Fragment$ContributionItemId$$Chapter<TRes> {
   factory CopyWith$Fragment$ContributionItemId$$Chapter.stub(TRes res) =
       _CopyWithStubImpl$Fragment$ContributionItemId$$Chapter;
 
-  TRes call({
-    String? id,
-    String? $__typename,
-  });
+  TRes call({String? id, String? $__typename});
 }
 
 class _CopyWithImpl$Fragment$ContributionItemId$$Chapter<TRes>
@@ -3731,16 +3039,15 @@ class _CopyWithImpl$Fragment$ContributionItemId$$Chapter<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({
-    Object? id = _undefined,
-    Object? $__typename = _undefined,
-  }) =>
-      _then(Fragment$ContributionItemId$$Chapter(
-        id: id == _undefined || id == null ? _instance.id : (id as String),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  TRes call({Object? id = _undefined, Object? $__typename = _undefined}) =>
+      _then(
+        Fragment$ContributionItemId$$Chapter(
+          id: id == _undefined || id == null ? _instance.id : (id as String),
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String),
+        ),
+      );
 }
 
 class _CopyWithStubImpl$Fragment$ContributionItemId$$Chapter<TRes>
@@ -3749,11 +3056,452 @@ class _CopyWithStubImpl$Fragment$ContributionItemId$$Chapter<TRes>
 
   TRes _res;
 
-  call({
-    String? id,
-    String? $__typename,
-  }) =>
-      _res;
+  call({String? id, String? $__typename}) => _res;
+}
+
+class Fragment$ContributionItemId$$Game implements Fragment$ContributionItemId {
+  Fragment$ContributionItemId$$Game({
+    required this.id,
+    this.$__typename = 'Game',
+  });
+
+  factory Fragment$ContributionItemId$$Game.fromJson(
+    Map<String, dynamic> json,
+  ) {
+    final l$id = json['id'];
+    final l$$__typename = json['__typename'];
+    return Fragment$ContributionItemId$$Game(
+      id: (l$id as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String id;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$id = id;
+    _resultData['id'] = l$id;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$id = id;
+    final l$$__typename = $__typename;
+    return Object.hashAll([l$id, l$$__typename]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (other is! Fragment$ContributionItemId$$Game ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$id = id;
+    final lOther$id = other.id;
+    if (l$id != lOther$id) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$ContributionItemId$$Game
+    on Fragment$ContributionItemId$$Game {
+  CopyWith$Fragment$ContributionItemId$$Game<Fragment$ContributionItemId$$Game>
+  get copyWith => CopyWith$Fragment$ContributionItemId$$Game(this, (i) => i);
+}
+
+abstract class CopyWith$Fragment$ContributionItemId$$Game<TRes> {
+  factory CopyWith$Fragment$ContributionItemId$$Game(
+    Fragment$ContributionItemId$$Game instance,
+    TRes Function(Fragment$ContributionItemId$$Game) then,
+  ) = _CopyWithImpl$Fragment$ContributionItemId$$Game;
+
+  factory CopyWith$Fragment$ContributionItemId$$Game.stub(TRes res) =
+      _CopyWithStubImpl$Fragment$ContributionItemId$$Game;
+
+  TRes call({String? id, String? $__typename});
+}
+
+class _CopyWithImpl$Fragment$ContributionItemId$$Game<TRes>
+    implements CopyWith$Fragment$ContributionItemId$$Game<TRes> {
+  _CopyWithImpl$Fragment$ContributionItemId$$Game(this._instance, this._then);
+
+  final Fragment$ContributionItemId$$Game _instance;
+
+  final TRes Function(Fragment$ContributionItemId$$Game) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({Object? id = _undefined, Object? $__typename = _undefined}) =>
+      _then(
+        Fragment$ContributionItemId$$Game(
+          id: id == _undefined || id == null ? _instance.id : (id as String),
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String),
+        ),
+      );
+}
+
+class _CopyWithStubImpl$Fragment$ContributionItemId$$Game<TRes>
+    implements CopyWith$Fragment$ContributionItemId$$Game<TRes> {
+  _CopyWithStubImpl$Fragment$ContributionItemId$$Game(this._res);
+
+  TRes _res;
+
+  call({String? id, String? $__typename}) => _res;
+}
+
+class Fragment$ContributionItemId$$Playlist
+    implements Fragment$ContributionItemId {
+  Fragment$ContributionItemId$$Playlist({
+    required this.id,
+    this.$__typename = 'Playlist',
+  });
+
+  factory Fragment$ContributionItemId$$Playlist.fromJson(
+    Map<String, dynamic> json,
+  ) {
+    final l$id = json['id'];
+    final l$$__typename = json['__typename'];
+    return Fragment$ContributionItemId$$Playlist(
+      id: (l$id as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String id;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$id = id;
+    _resultData['id'] = l$id;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$id = id;
+    final l$$__typename = $__typename;
+    return Object.hashAll([l$id, l$$__typename]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (other is! Fragment$ContributionItemId$$Playlist ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$id = id;
+    final lOther$id = other.id;
+    if (l$id != lOther$id) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$ContributionItemId$$Playlist
+    on Fragment$ContributionItemId$$Playlist {
+  CopyWith$Fragment$ContributionItemId$$Playlist<
+    Fragment$ContributionItemId$$Playlist
+  >
+  get copyWith =>
+      CopyWith$Fragment$ContributionItemId$$Playlist(this, (i) => i);
+}
+
+abstract class CopyWith$Fragment$ContributionItemId$$Playlist<TRes> {
+  factory CopyWith$Fragment$ContributionItemId$$Playlist(
+    Fragment$ContributionItemId$$Playlist instance,
+    TRes Function(Fragment$ContributionItemId$$Playlist) then,
+  ) = _CopyWithImpl$Fragment$ContributionItemId$$Playlist;
+
+  factory CopyWith$Fragment$ContributionItemId$$Playlist.stub(TRes res) =
+      _CopyWithStubImpl$Fragment$ContributionItemId$$Playlist;
+
+  TRes call({String? id, String? $__typename});
+}
+
+class _CopyWithImpl$Fragment$ContributionItemId$$Playlist<TRes>
+    implements CopyWith$Fragment$ContributionItemId$$Playlist<TRes> {
+  _CopyWithImpl$Fragment$ContributionItemId$$Playlist(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$ContributionItemId$$Playlist _instance;
+
+  final TRes Function(Fragment$ContributionItemId$$Playlist) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({Object? id = _undefined, Object? $__typename = _undefined}) =>
+      _then(
+        Fragment$ContributionItemId$$Playlist(
+          id: id == _undefined || id == null ? _instance.id : (id as String),
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String),
+        ),
+      );
+}
+
+class _CopyWithStubImpl$Fragment$ContributionItemId$$Playlist<TRes>
+    implements CopyWith$Fragment$ContributionItemId$$Playlist<TRes> {
+  _CopyWithStubImpl$Fragment$ContributionItemId$$Playlist(this._res);
+
+  TRes _res;
+
+  call({String? id, String? $__typename}) => _res;
+}
+
+class Fragment$ContributionItemId$$Season
+    implements Fragment$ContributionItemId {
+  Fragment$ContributionItemId$$Season({
+    required this.id,
+    this.$__typename = 'Season',
+  });
+
+  factory Fragment$ContributionItemId$$Season.fromJson(
+    Map<String, dynamic> json,
+  ) {
+    final l$id = json['id'];
+    final l$$__typename = json['__typename'];
+    return Fragment$ContributionItemId$$Season(
+      id: (l$id as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String id;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$id = id;
+    _resultData['id'] = l$id;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$id = id;
+    final l$$__typename = $__typename;
+    return Object.hashAll([l$id, l$$__typename]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (other is! Fragment$ContributionItemId$$Season ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$id = id;
+    final lOther$id = other.id;
+    if (l$id != lOther$id) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$ContributionItemId$$Season
+    on Fragment$ContributionItemId$$Season {
+  CopyWith$Fragment$ContributionItemId$$Season<
+    Fragment$ContributionItemId$$Season
+  >
+  get copyWith => CopyWith$Fragment$ContributionItemId$$Season(this, (i) => i);
+}
+
+abstract class CopyWith$Fragment$ContributionItemId$$Season<TRes> {
+  factory CopyWith$Fragment$ContributionItemId$$Season(
+    Fragment$ContributionItemId$$Season instance,
+    TRes Function(Fragment$ContributionItemId$$Season) then,
+  ) = _CopyWithImpl$Fragment$ContributionItemId$$Season;
+
+  factory CopyWith$Fragment$ContributionItemId$$Season.stub(TRes res) =
+      _CopyWithStubImpl$Fragment$ContributionItemId$$Season;
+
+  TRes call({String? id, String? $__typename});
+}
+
+class _CopyWithImpl$Fragment$ContributionItemId$$Season<TRes>
+    implements CopyWith$Fragment$ContributionItemId$$Season<TRes> {
+  _CopyWithImpl$Fragment$ContributionItemId$$Season(this._instance, this._then);
+
+  final Fragment$ContributionItemId$$Season _instance;
+
+  final TRes Function(Fragment$ContributionItemId$$Season) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({Object? id = _undefined, Object? $__typename = _undefined}) =>
+      _then(
+        Fragment$ContributionItemId$$Season(
+          id: id == _undefined || id == null ? _instance.id : (id as String),
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String),
+        ),
+      );
+}
+
+class _CopyWithStubImpl$Fragment$ContributionItemId$$Season<TRes>
+    implements CopyWith$Fragment$ContributionItemId$$Season<TRes> {
+  _CopyWithStubImpl$Fragment$ContributionItemId$$Season(this._res);
+
+  TRes _res;
+
+  call({String? id, String? $__typename}) => _res;
+}
+
+class Fragment$ContributionItemId$$Short
+    implements Fragment$ContributionItemId {
+  Fragment$ContributionItemId$$Short({
+    required this.id,
+    this.$__typename = 'Short',
+  });
+
+  factory Fragment$ContributionItemId$$Short.fromJson(
+    Map<String, dynamic> json,
+  ) {
+    final l$id = json['id'];
+    final l$$__typename = json['__typename'];
+    return Fragment$ContributionItemId$$Short(
+      id: (l$id as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String id;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$id = id;
+    _resultData['id'] = l$id;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$id = id;
+    final l$$__typename = $__typename;
+    return Object.hashAll([l$id, l$$__typename]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (other is! Fragment$ContributionItemId$$Short ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$id = id;
+    final lOther$id = other.id;
+    if (l$id != lOther$id) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$ContributionItemId$$Short
+    on Fragment$ContributionItemId$$Short {
+  CopyWith$Fragment$ContributionItemId$$Short<
+    Fragment$ContributionItemId$$Short
+  >
+  get copyWith => CopyWith$Fragment$ContributionItemId$$Short(this, (i) => i);
+}
+
+abstract class CopyWith$Fragment$ContributionItemId$$Short<TRes> {
+  factory CopyWith$Fragment$ContributionItemId$$Short(
+    Fragment$ContributionItemId$$Short instance,
+    TRes Function(Fragment$ContributionItemId$$Short) then,
+  ) = _CopyWithImpl$Fragment$ContributionItemId$$Short;
+
+  factory CopyWith$Fragment$ContributionItemId$$Short.stub(TRes res) =
+      _CopyWithStubImpl$Fragment$ContributionItemId$$Short;
+
+  TRes call({String? id, String? $__typename});
+}
+
+class _CopyWithImpl$Fragment$ContributionItemId$$Short<TRes>
+    implements CopyWith$Fragment$ContributionItemId$$Short<TRes> {
+  _CopyWithImpl$Fragment$ContributionItemId$$Short(this._instance, this._then);
+
+  final Fragment$ContributionItemId$$Short _instance;
+
+  final TRes Function(Fragment$ContributionItemId$$Short) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({Object? id = _undefined, Object? $__typename = _undefined}) =>
+      _then(
+        Fragment$ContributionItemId$$Short(
+          id: id == _undefined || id == null ? _instance.id : (id as String),
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String),
+        ),
+      );
+}
+
+class _CopyWithStubImpl$Fragment$ContributionItemId$$Short<TRes>
+    implements CopyWith$Fragment$ContributionItemId$$Short<TRes> {
+  _CopyWithStubImpl$Fragment$ContributionItemId$$Short(this._res);
+
+  TRes _res;
+
+  call({String? id, String? $__typename}) => _res;
 }
 
 class Fragment$ContributionItemId$$Show implements Fragment$ContributionItemId {
@@ -3763,7 +3511,8 @@ class Fragment$ContributionItemId$$Show implements Fragment$ContributionItemId {
   });
 
   factory Fragment$ContributionItemId$$Show.fromJson(
-      Map<String, dynamic> json) {
+    Map<String, dynamic> json,
+  ) {
     final l$id = json['id'];
     final l$$__typename = json['__typename'];
     return Fragment$ContributionItemId$$Show(
@@ -3789,10 +3538,7 @@ class Fragment$ContributionItemId$$Show implements Fragment$ContributionItemId {
   int get hashCode {
     final l$id = id;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$id,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$id, l$$__typename]);
   }
 
   @override
@@ -3821,10 +3567,7 @@ class Fragment$ContributionItemId$$Show implements Fragment$ContributionItemId {
 extension UtilityExtension$Fragment$ContributionItemId$$Show
     on Fragment$ContributionItemId$$Show {
   CopyWith$Fragment$ContributionItemId$$Show<Fragment$ContributionItemId$$Show>
-      get copyWith => CopyWith$Fragment$ContributionItemId$$Show(
-            this,
-            (i) => i,
-          );
+  get copyWith => CopyWith$Fragment$ContributionItemId$$Show(this, (i) => i);
 }
 
 abstract class CopyWith$Fragment$ContributionItemId$$Show<TRes> {
@@ -3836,18 +3579,12 @@ abstract class CopyWith$Fragment$ContributionItemId$$Show<TRes> {
   factory CopyWith$Fragment$ContributionItemId$$Show.stub(TRes res) =
       _CopyWithStubImpl$Fragment$ContributionItemId$$Show;
 
-  TRes call({
-    String? id,
-    String? $__typename,
-  });
+  TRes call({String? id, String? $__typename});
 }
 
 class _CopyWithImpl$Fragment$ContributionItemId$$Show<TRes>
     implements CopyWith$Fragment$ContributionItemId$$Show<TRes> {
-  _CopyWithImpl$Fragment$ContributionItemId$$Show(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Fragment$ContributionItemId$$Show(this._instance, this._then);
 
   final Fragment$ContributionItemId$$Show _instance;
 
@@ -3855,16 +3592,15 @@ class _CopyWithImpl$Fragment$ContributionItemId$$Show<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({
-    Object? id = _undefined,
-    Object? $__typename = _undefined,
-  }) =>
-      _then(Fragment$ContributionItemId$$Show(
-        id: id == _undefined || id == null ? _instance.id : (id as String),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  TRes call({Object? id = _undefined, Object? $__typename = _undefined}) =>
+      _then(
+        Fragment$ContributionItemId$$Show(
+          id: id == _undefined || id == null ? _instance.id : (id as String),
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String),
+        ),
+      );
 }
 
 class _CopyWithStubImpl$Fragment$ContributionItemId$$Show<TRes>
@@ -3873,18 +3609,127 @@ class _CopyWithStubImpl$Fragment$ContributionItemId$$Show<TRes>
 
   TRes _res;
 
-  call({
-    String? id,
-    String? $__typename,
-  }) =>
-      _res;
+  call({String? id, String? $__typename}) => _res;
+}
+
+class Fragment$ContributionItemId$$StudyTopic
+    implements Fragment$ContributionItemId {
+  Fragment$ContributionItemId$$StudyTopic({
+    required this.id,
+    this.$__typename = 'StudyTopic',
+  });
+
+  factory Fragment$ContributionItemId$$StudyTopic.fromJson(
+    Map<String, dynamic> json,
+  ) {
+    final l$id = json['id'];
+    final l$$__typename = json['__typename'];
+    return Fragment$ContributionItemId$$StudyTopic(
+      id: (l$id as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String id;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$id = id;
+    _resultData['id'] = l$id;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$id = id;
+    final l$$__typename = $__typename;
+    return Object.hashAll([l$id, l$$__typename]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (other is! Fragment$ContributionItemId$$StudyTopic ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$id = id;
+    final lOther$id = other.id;
+    if (l$id != lOther$id) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Fragment$ContributionItemId$$StudyTopic
+    on Fragment$ContributionItemId$$StudyTopic {
+  CopyWith$Fragment$ContributionItemId$$StudyTopic<
+    Fragment$ContributionItemId$$StudyTopic
+  >
+  get copyWith =>
+      CopyWith$Fragment$ContributionItemId$$StudyTopic(this, (i) => i);
+}
+
+abstract class CopyWith$Fragment$ContributionItemId$$StudyTopic<TRes> {
+  factory CopyWith$Fragment$ContributionItemId$$StudyTopic(
+    Fragment$ContributionItemId$$StudyTopic instance,
+    TRes Function(Fragment$ContributionItemId$$StudyTopic) then,
+  ) = _CopyWithImpl$Fragment$ContributionItemId$$StudyTopic;
+
+  factory CopyWith$Fragment$ContributionItemId$$StudyTopic.stub(TRes res) =
+      _CopyWithStubImpl$Fragment$ContributionItemId$$StudyTopic;
+
+  TRes call({String? id, String? $__typename});
+}
+
+class _CopyWithImpl$Fragment$ContributionItemId$$StudyTopic<TRes>
+    implements CopyWith$Fragment$ContributionItemId$$StudyTopic<TRes> {
+  _CopyWithImpl$Fragment$ContributionItemId$$StudyTopic(
+    this._instance,
+    this._then,
+  );
+
+  final Fragment$ContributionItemId$$StudyTopic _instance;
+
+  final TRes Function(Fragment$ContributionItemId$$StudyTopic) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({Object? id = _undefined, Object? $__typename = _undefined}) =>
+      _then(
+        Fragment$ContributionItemId$$StudyTopic(
+          id: id == _undefined || id == null ? _instance.id : (id as String),
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String),
+        ),
+      );
+}
+
+class _CopyWithStubImpl$Fragment$ContributionItemId$$StudyTopic<TRes>
+    implements CopyWith$Fragment$ContributionItemId$$StudyTopic<TRes> {
+  _CopyWithStubImpl$Fragment$ContributionItemId$$StudyTopic(this._res);
+
+  TRes _res;
+
+  call({String? id, String? $__typename}) => _res;
 }
 
 class Variables$Query$GetPerson {
   factory Variables$Query$GetPerson({required String id}) =>
-      Variables$Query$GetPerson._({
-        r'id': id,
-      });
+      Variables$Query$GetPerson._({r'id': id});
 
   Variables$Query$GetPerson._(this._$data);
 
@@ -3907,10 +3752,7 @@ class Variables$Query$GetPerson {
   }
 
   CopyWith$Variables$Query$GetPerson<Variables$Query$GetPerson> get copyWith =>
-      CopyWith$Variables$Query$GetPerson(
-        this,
-        (i) => i,
-      );
+      CopyWith$Variables$Query$GetPerson(this, (i) => i);
 
   @override
   bool operator ==(Object other) {
@@ -3950,10 +3792,7 @@ abstract class CopyWith$Variables$Query$GetPerson<TRes> {
 
 class _CopyWithImpl$Variables$Query$GetPerson<TRes>
     implements CopyWith$Variables$Query$GetPerson<TRes> {
-  _CopyWithImpl$Variables$Query$GetPerson(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Variables$Query$GetPerson(this._instance, this._then);
 
   final Variables$Query$GetPerson _instance;
 
@@ -3961,10 +3800,12 @@ class _CopyWithImpl$Variables$Query$GetPerson<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({Object? id = _undefined}) => _then(Variables$Query$GetPerson._({
-        ..._instance._$data,
-        if (id != _undefined && id != null) 'id': (id as String),
-      }));
+  TRes call({Object? id = _undefined}) => _then(
+    Variables$Query$GetPerson._({
+      ..._instance._$data,
+      if (id != _undefined && id != null) 'id': (id as String),
+    }),
+  );
 }
 
 class _CopyWithStubImpl$Variables$Query$GetPerson<TRes>
@@ -3977,17 +3818,15 @@ class _CopyWithStubImpl$Variables$Query$GetPerson<TRes>
 }
 
 class Query$GetPerson {
-  Query$GetPerson({
-    required this.person,
-    this.$__typename = 'QueryRoot',
-  });
+  Query$GetPerson({required this.person, this.$__typename = 'QueryRoot'});
 
   factory Query$GetPerson.fromJson(Map<String, dynamic> json) {
     final l$person = json['person'];
     final l$$__typename = json['__typename'];
     return Query$GetPerson(
-      person:
-          Query$GetPerson$person.fromJson((l$person as Map<String, dynamic>)),
+      person: Query$GetPerson$person.fromJson(
+        (l$person as Map<String, dynamic>),
+      ),
       $__typename: (l$$__typename as String),
     );
   }
@@ -4009,10 +3848,7 @@ class Query$GetPerson {
   int get hashCode {
     final l$person = person;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$person,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$person, l$$__typename]);
   }
 
   @override
@@ -4039,10 +3875,7 @@ class Query$GetPerson {
 
 extension UtilityExtension$Query$GetPerson on Query$GetPerson {
   CopyWith$Query$GetPerson<Query$GetPerson> get copyWith =>
-      CopyWith$Query$GetPerson(
-        this,
-        (i) => i,
-      );
+      CopyWith$Query$GetPerson(this, (i) => i);
 }
 
 abstract class CopyWith$Query$GetPerson<TRes> {
@@ -4054,19 +3887,13 @@ abstract class CopyWith$Query$GetPerson<TRes> {
   factory CopyWith$Query$GetPerson.stub(TRes res) =
       _CopyWithStubImpl$Query$GetPerson;
 
-  TRes call({
-    Query$GetPerson$person? person,
-    String? $__typename,
-  });
+  TRes call({Query$GetPerson$person? person, String? $__typename});
   CopyWith$Query$GetPerson$person<TRes> get person;
 }
 
 class _CopyWithImpl$Query$GetPerson<TRes>
     implements CopyWith$Query$GetPerson<TRes> {
-  _CopyWithImpl$Query$GetPerson(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Query$GetPerson(this._instance, this._then);
 
   final Query$GetPerson _instance;
 
@@ -4074,23 +3901,24 @@ class _CopyWithImpl$Query$GetPerson<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({
-    Object? person = _undefined,
-    Object? $__typename = _undefined,
-  }) =>
-      _then(Query$GetPerson(
-        person: person == _undefined || person == null
-            ? _instance.person
-            : (person as Query$GetPerson$person),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  TRes call({Object? person = _undefined, Object? $__typename = _undefined}) =>
+      _then(
+        Query$GetPerson(
+          person: person == _undefined || person == null
+              ? _instance.person
+              : (person as Query$GetPerson$person),
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String),
+        ),
+      );
 
   CopyWith$Query$GetPerson$person<TRes> get person {
     final local$person = _instance.person;
     return CopyWith$Query$GetPerson$person(
-        local$person, (e) => call(person: e));
+      local$person,
+      (e) => call(person: e),
+    );
   }
 }
 
@@ -4100,115 +3928,125 @@ class _CopyWithStubImpl$Query$GetPerson<TRes>
 
   TRes _res;
 
-  call({
-    Query$GetPerson$person? person,
-    String? $__typename,
-  }) =>
-      _res;
+  call({Query$GetPerson$person? person, String? $__typename}) => _res;
 
   CopyWith$Query$GetPerson$person<TRes> get person =>
       CopyWith$Query$GetPerson$person.stub(_res);
 }
 
-const documentNodeQueryGetPerson = DocumentNode(definitions: [
-  OperationDefinitionNode(
-    type: OperationType.query,
-    name: NameNode(value: 'GetPerson'),
-    variableDefinitions: [
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'id')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'ID'),
-          isNonNull: true,
+const documentNodeQueryGetPerson = DocumentNode(
+  definitions: [
+    OperationDefinitionNode(
+      type: OperationType.query,
+      name: NameNode(value: 'GetPerson'),
+      variableDefinitions: [
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'id')),
+          type: NamedTypeNode(name: NameNode(value: 'ID'), isNonNull: true),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      )
-    ],
-    directives: [],
-    selectionSet: SelectionSetNode(selections: [
-      FieldNode(
-        name: NameNode(value: 'person'),
-        alias: null,
-        arguments: [
-          ArgumentNode(
-            name: NameNode(value: 'id'),
-            value: VariableNode(name: NameNode(value: 'id')),
-          )
-        ],
-        directives: [],
-        selectionSet: SelectionSetNode(selections: [
+      ],
+      directives: [],
+      selectionSet: SelectionSetNode(
+        selections: [
           FieldNode(
-            name: NameNode(value: 'id'),
+            name: NameNode(value: 'person'),
             alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'name'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'image'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'contributionContentTypes'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: SelectionSetNode(selections: [
-              FieldNode(
-                name: NameNode(value: 'type'),
-                alias: null,
-                arguments: [],
-                directives: [],
-                selectionSet: SelectionSetNode(selections: [
-                  FieldNode(
-                    name: NameNode(value: 'code'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null,
-                  ),
-                  FieldNode(
-                    name: NameNode(value: 'title'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null,
-                  ),
-                  FieldNode(
-                    name: NameNode(value: '__typename'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null,
-                  ),
-                ]),
+            arguments: [
+              ArgumentNode(
+                name: NameNode(value: 'id'),
+                value: VariableNode(name: NameNode(value: 'id')),
               ),
-              FieldNode(
-                name: NameNode(value: 'count'),
-                alias: null,
-                arguments: [],
-                directives: [],
-                selectionSet: null,
-              ),
-              FieldNode(
-                name: NameNode(value: '__typename'),
-                alias: null,
-                arguments: [],
-                directives: [],
-                selectionSet: null,
-              ),
-            ]),
+            ],
+            directives: [],
+            selectionSet: SelectionSetNode(
+              selections: [
+                FieldNode(
+                  name: NameNode(value: 'id'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'name'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'image'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'contributionContentTypes'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: SelectionSetNode(
+                    selections: [
+                      FieldNode(
+                        name: NameNode(value: 'type'),
+                        alias: null,
+                        arguments: [],
+                        directives: [],
+                        selectionSet: SelectionSetNode(
+                          selections: [
+                            FieldNode(
+                              name: NameNode(value: 'code'),
+                              alias: null,
+                              arguments: [],
+                              directives: [],
+                              selectionSet: null,
+                            ),
+                            FieldNode(
+                              name: NameNode(value: 'title'),
+                              alias: null,
+                              arguments: [],
+                              directives: [],
+                              selectionSet: null,
+                            ),
+                            FieldNode(
+                              name: NameNode(value: '__typename'),
+                              alias: null,
+                              arguments: [],
+                              directives: [],
+                              selectionSet: null,
+                            ),
+                          ],
+                        ),
+                      ),
+                      FieldNode(
+                        name: NameNode(value: 'count'),
+                        alias: null,
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null,
+                      ),
+                      FieldNode(
+                        name: NameNode(value: '__typename'),
+                        alias: null,
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null,
+                      ),
+                    ],
+                  ),
+                ),
+                FieldNode(
+                  name: NameNode(value: '__typename'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+              ],
+            ),
           ),
           FieldNode(
             name: NameNode(value: '__typename'),
@@ -4217,18 +4055,11 @@ const documentNodeQueryGetPerson = DocumentNode(definitions: [
             directives: [],
             selectionSet: null,
           ),
-        ]),
+        ],
       ),
-      FieldNode(
-        name: NameNode(value: '__typename'),
-        alias: null,
-        arguments: [],
-        directives: [],
-        selectionSet: null,
-      ),
-    ]),
-  ),
-]);
+    ),
+  ],
+);
 Query$GetPerson _parserFn$Query$GetPerson(Map<String, dynamic> data) =>
     Query$GetPerson.fromJson(data);
 typedef OnQueryComplete$Query$GetPerson = FutureOr<void> Function(
@@ -4249,36 +4080,36 @@ class Options$Query$GetPerson extends graphql.QueryOptions<Query$GetPerson> {
     graphql.Context? context,
     OnQueryComplete$Query$GetPerson? onComplete,
     graphql.OnQueryError? onError,
-  })  : onCompleteWithParsed = onComplete,
-        super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          pollInterval: pollInterval,
-          context: context,
-          onComplete: onComplete == null
-              ? null
-              : (data) => onComplete(
-                    data,
-                    data == null ? null : _parserFn$Query$GetPerson(data),
-                  ),
-          onError: onError,
-          document: documentNodeQueryGetPerson,
-          parserFn: _parserFn$Query$GetPerson,
-        );
+  }) : onCompleteWithParsed = onComplete,
+       super(
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         pollInterval: pollInterval,
+         context: context,
+         onComplete: onComplete == null
+             ? null
+             : (data) => onComplete(
+                 data,
+                 data == null ? null : _parserFn$Query$GetPerson(data),
+               ),
+         onError: onError,
+         document: documentNodeQueryGetPerson,
+         parserFn: _parserFn$Query$GetPerson,
+       );
 
   final OnQueryComplete$Query$GetPerson? onCompleteWithParsed;
 
   @override
   List<Object?> get properties => [
-        ...super.onComplete == null
-            ? super.properties
-            : super.properties.where((property) => property != onComplete),
-        onCompleteWithParsed,
-      ];
+    ...super.onComplete == null
+        ? super.properties
+        : super.properties.where((property) => property != onComplete),
+    onCompleteWithParsed,
+  ];
 }
 
 class WatchOptions$Query$GetPerson
@@ -4297,20 +4128,20 @@ class WatchOptions$Query$GetPerson
     bool carryForwardDataOnException = true,
     bool fetchResults = false,
   }) : super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          document: documentNodeQueryGetPerson,
-          pollInterval: pollInterval,
-          eagerlyFetchResults: eagerlyFetchResults,
-          carryForwardDataOnException: carryForwardDataOnException,
-          fetchResults: fetchResults,
-          parserFn: _parserFn$Query$GetPerson,
-        );
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         document: documentNodeQueryGetPerson,
+         pollInterval: pollInterval,
+         eagerlyFetchResults: eagerlyFetchResults,
+         carryForwardDataOnException: carryForwardDataOnException,
+         fetchResults: fetchResults,
+         parserFn: _parserFn$Query$GetPerson,
+       );
 }
 
 class FetchMoreOptions$Query$GetPerson extends graphql.FetchMoreOptions {
@@ -4318,34 +4149,33 @@ class FetchMoreOptions$Query$GetPerson extends graphql.FetchMoreOptions {
     required graphql.UpdateQuery updateQuery,
     required Variables$Query$GetPerson variables,
   }) : super(
-          updateQuery: updateQuery,
-          variables: variables.toJson(),
-          document: documentNodeQueryGetPerson,
-        );
+         updateQuery: updateQuery,
+         variables: variables.toJson(),
+         document: documentNodeQueryGetPerson,
+       );
 }
 
 extension ClientExtension$Query$GetPerson on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$GetPerson>> query$GetPerson(
-          Options$Query$GetPerson options) async =>
-      await this.query(options);
+    Options$Query$GetPerson options,
+  ) async => await this.query(options);
 
   graphql.ObservableQuery<Query$GetPerson> watchQuery$GetPerson(
-          WatchOptions$Query$GetPerson options) =>
-      this.watchQuery(options);
+    WatchOptions$Query$GetPerson options,
+  ) => this.watchQuery(options);
 
   void writeQuery$GetPerson({
     required Query$GetPerson data,
     required Variables$Query$GetPerson variables,
     bool broadcast = true,
-  }) =>
-      this.writeQuery(
-        graphql.Request(
-          operation: graphql.Operation(document: documentNodeQueryGetPerson),
-          variables: variables.toJson(),
-        ),
-        data: data.toJson(),
-        broadcast: broadcast,
-      );
+  }) => this.writeQuery(
+    graphql.Request(
+      operation: graphql.Operation(document: documentNodeQueryGetPerson),
+      variables: variables.toJson(),
+    ),
+    data: data.toJson(),
+    broadcast: broadcast,
+  );
 
   Query$GetPerson? readQuery$GetPerson({
     required Variables$Query$GetPerson variables,
@@ -4363,22 +4193,18 @@ extension ClientExtension$Query$GetPerson on graphql.GraphQLClient {
 }
 
 graphql_flutter.QueryHookResult<Query$GetPerson> useQuery$GetPerson(
-        Options$Query$GetPerson options) =>
-    graphql_flutter.useQuery(options);
+  Options$Query$GetPerson options,
+) => graphql_flutter.useQuery(options);
 graphql.ObservableQuery<Query$GetPerson> useWatchQuery$GetPerson(
-        WatchOptions$Query$GetPerson options) =>
-    graphql_flutter.useWatchQuery(options);
+  WatchOptions$Query$GetPerson options,
+) => graphql_flutter.useWatchQuery(options);
 
 class Query$GetPerson$Widget extends graphql_flutter.Query<Query$GetPerson> {
   Query$GetPerson$Widget({
     widgets.Key? key,
     required Options$Query$GetPerson options,
     required graphql_flutter.QueryBuilder<Query$GetPerson> builder,
-  }) : super(
-          key: key,
-          options: options,
-          builder: builder,
-        );
+  }) : super(key: key, options: options, builder: builder);
 }
 
 class Query$GetPerson$person {
@@ -4401,8 +4227,11 @@ class Query$GetPerson$person {
       name: (l$name as String),
       image: (l$image as String?),
       contributionContentTypes: (l$contributionContentTypes as List<dynamic>)
-          .map((e) => Query$GetPerson$person$contributionContentTypes.fromJson(
-              (e as Map<String, dynamic>)))
+          .map(
+            (e) => Query$GetPerson$person$contributionContentTypes.fromJson(
+              (e as Map<String, dynamic>),
+            ),
+          )
           .toList(),
       $__typename: (l$$__typename as String),
     );
@@ -4415,7 +4244,7 @@ class Query$GetPerson$person {
   final String? image;
 
   final List<Query$GetPerson$person$contributionContentTypes>
-      contributionContentTypes;
+  contributionContentTypes;
 
   final String $__typename;
 
@@ -4428,8 +4257,9 @@ class Query$GetPerson$person {
     final l$image = image;
     _resultData['image'] = l$image;
     final l$contributionContentTypes = contributionContentTypes;
-    _resultData['contributionContentTypes'] =
-        l$contributionContentTypes.map((e) => e.toJson()).toList();
+    _resultData['contributionContentTypes'] = l$contributionContentTypes
+        .map((e) => e.toJson())
+        .toList();
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
     return _resultData;
@@ -4500,10 +4330,7 @@ class Query$GetPerson$person {
 
 extension UtilityExtension$Query$GetPerson$person on Query$GetPerson$person {
   CopyWith$Query$GetPerson$person<Query$GetPerson$person> get copyWith =>
-      CopyWith$Query$GetPerson$person(
-        this,
-        (i) => i,
-      );
+      CopyWith$Query$GetPerson$person(this, (i) => i);
 }
 
 abstract class CopyWith$Query$GetPerson$person<TRes> {
@@ -4520,23 +4347,24 @@ abstract class CopyWith$Query$GetPerson$person<TRes> {
     String? name,
     String? image,
     List<Query$GetPerson$person$contributionContentTypes>?
-        contributionContentTypes,
+    contributionContentTypes,
     String? $__typename,
   });
   TRes contributionContentTypes(
-      Iterable<Query$GetPerson$person$contributionContentTypes> Function(
-              Iterable<
-                  CopyWith$Query$GetPerson$person$contributionContentTypes<
-                      Query$GetPerson$person$contributionContentTypes>>)
-          _fn);
+    Iterable<Query$GetPerson$person$contributionContentTypes> Function(
+      Iterable<
+        CopyWith$Query$GetPerson$person$contributionContentTypes<
+          Query$GetPerson$person$contributionContentTypes
+        >
+      >,
+    )
+    _fn,
+  );
 }
 
 class _CopyWithImpl$Query$GetPerson$person<TRes>
     implements CopyWith$Query$GetPerson$person<TRes> {
-  _CopyWithImpl$Query$GetPerson$person(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Query$GetPerson$person(this._instance, this._then);
 
   final Query$GetPerson$person _instance;
 
@@ -4550,35 +4378,44 @@ class _CopyWithImpl$Query$GetPerson$person<TRes>
     Object? image = _undefined,
     Object? contributionContentTypes = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Query$GetPerson$person(
-        id: id == _undefined || id == null ? _instance.id : (id as String),
-        name: name == _undefined || name == null
-            ? _instance.name
-            : (name as String),
-        image: image == _undefined ? _instance.image : (image as String?),
-        contributionContentTypes: contributionContentTypes == _undefined ||
-                contributionContentTypes == null
-            ? _instance.contributionContentTypes
-            : (contributionContentTypes
+  }) => _then(
+    Query$GetPerson$person(
+      id: id == _undefined || id == null ? _instance.id : (id as String),
+      name: name == _undefined || name == null
+          ? _instance.name
+          : (name as String),
+      image: image == _undefined ? _instance.image : (image as String?),
+      contributionContentTypes:
+          contributionContentTypes == _undefined ||
+              contributionContentTypes == null
+          ? _instance.contributionContentTypes
+          : (contributionContentTypes
                 as List<Query$GetPerson$person$contributionContentTypes>),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 
   TRes contributionContentTypes(
-          Iterable<Query$GetPerson$person$contributionContentTypes> Function(
-                  Iterable<
-                      CopyWith$Query$GetPerson$person$contributionContentTypes<
-                          Query$GetPerson$person$contributionContentTypes>>)
-              _fn) =>
-      call(
-          contributionContentTypes: _fn(_instance.contributionContentTypes.map(
-              (e) => CopyWith$Query$GetPerson$person$contributionContentTypes(
-                    e,
-                    (i) => i,
-                  ))).toList());
+    Iterable<Query$GetPerson$person$contributionContentTypes> Function(
+      Iterable<
+        CopyWith$Query$GetPerson$person$contributionContentTypes<
+          Query$GetPerson$person$contributionContentTypes
+        >
+      >,
+    )
+    _fn,
+  ) => call(
+    contributionContentTypes: _fn(
+      _instance.contributionContentTypes.map(
+        (e) => CopyWith$Query$GetPerson$person$contributionContentTypes(
+          e,
+          (i) => i,
+        ),
+      ),
+    ).toList(),
+  );
 }
 
 class _CopyWithStubImpl$Query$GetPerson$person<TRes>
@@ -4592,10 +4429,9 @@ class _CopyWithStubImpl$Query$GetPerson$person<TRes>
     String? name,
     String? image,
     List<Query$GetPerson$person$contributionContentTypes>?
-        contributionContentTypes,
+    contributionContentTypes,
     String? $__typename,
-  }) =>
-      _res;
+  }) => _res;
 
   contributionContentTypes(_fn) => _res;
 }
@@ -4608,13 +4444,15 @@ class Query$GetPerson$person$contributionContentTypes {
   });
 
   factory Query$GetPerson$person$contributionContentTypes.fromJson(
-      Map<String, dynamic> json) {
+    Map<String, dynamic> json,
+  ) {
     final l$type = json['type'];
     final l$count = json['count'];
     final l$$__typename = json['__typename'];
     return Query$GetPerson$person$contributionContentTypes(
       type: Query$GetPerson$person$contributionContentTypes$type.fromJson(
-          (l$type as Map<String, dynamic>)),
+        (l$type as Map<String, dynamic>),
+      ),
       count: (l$count as int),
       $__typename: (l$$__typename as String),
     );
@@ -4642,11 +4480,7 @@ class Query$GetPerson$person$contributionContentTypes {
     final l$type = type;
     final l$count = count;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$type,
-      l$count,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$type, l$count, l$$__typename]);
   }
 
   @override
@@ -4680,11 +4514,10 @@ class Query$GetPerson$person$contributionContentTypes {
 extension UtilityExtension$Query$GetPerson$person$contributionContentTypes
     on Query$GetPerson$person$contributionContentTypes {
   CopyWith$Query$GetPerson$person$contributionContentTypes<
-          Query$GetPerson$person$contributionContentTypes>
-      get copyWith => CopyWith$Query$GetPerson$person$contributionContentTypes(
-            this,
-            (i) => i,
-          );
+    Query$GetPerson$person$contributionContentTypes
+  >
+  get copyWith =>
+      CopyWith$Query$GetPerson$person$contributionContentTypes(this, (i) => i);
 }
 
 abstract class CopyWith$Query$GetPerson$person$contributionContentTypes<TRes> {
@@ -4694,8 +4527,8 @@ abstract class CopyWith$Query$GetPerson$person$contributionContentTypes<TRes> {
   ) = _CopyWithImpl$Query$GetPerson$person$contributionContentTypes;
 
   factory CopyWith$Query$GetPerson$person$contributionContentTypes.stub(
-          TRes res) =
-      _CopyWithStubImpl$Query$GetPerson$person$contributionContentTypes;
+    TRes res,
+  ) = _CopyWithStubImpl$Query$GetPerson$person$contributionContentTypes;
 
   TRes call({
     Query$GetPerson$person$contributionContentTypes$type? type,
@@ -4722,23 +4555,26 @@ class _CopyWithImpl$Query$GetPerson$person$contributionContentTypes<TRes>
     Object? type = _undefined,
     Object? count = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Query$GetPerson$person$contributionContentTypes(
-        type: type == _undefined || type == null
-            ? _instance.type
-            : (type as Query$GetPerson$person$contributionContentTypes$type),
-        count: count == _undefined || count == null
-            ? _instance.count
-            : (count as int),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  }) => _then(
+    Query$GetPerson$person$contributionContentTypes(
+      type: type == _undefined || type == null
+          ? _instance.type
+          : (type as Query$GetPerson$person$contributionContentTypes$type),
+      count: count == _undefined || count == null
+          ? _instance.count
+          : (count as int),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 
   CopyWith$Query$GetPerson$person$contributionContentTypes$type<TRes> get type {
     final local$type = _instance.type;
     return CopyWith$Query$GetPerson$person$contributionContentTypes$type(
-        local$type, (e) => call(type: e));
+      local$type,
+      (e) => call(type: e),
+    );
   }
 }
 
@@ -4752,13 +4588,11 @@ class _CopyWithStubImpl$Query$GetPerson$person$contributionContentTypes<TRes>
     Query$GetPerson$person$contributionContentTypes$type? type,
     int? count,
     String? $__typename,
-  }) =>
-      _res;
+  }) => _res;
 
   CopyWith$Query$GetPerson$person$contributionContentTypes$type<TRes>
-      get type =>
-          CopyWith$Query$GetPerson$person$contributionContentTypes$type.stub(
-              _res);
+  get type =>
+      CopyWith$Query$GetPerson$person$contributionContentTypes$type.stub(_res);
 }
 
 class Query$GetPerson$person$contributionContentTypes$type {
@@ -4769,7 +4603,8 @@ class Query$GetPerson$person$contributionContentTypes$type {
   });
 
   factory Query$GetPerson$person$contributionContentTypes$type.fromJson(
-      Map<String, dynamic> json) {
+    Map<String, dynamic> json,
+  ) {
     final l$code = json['code'];
     final l$title = json['title'];
     final l$$__typename = json['__typename'];
@@ -4802,11 +4637,7 @@ class Query$GetPerson$person$contributionContentTypes$type {
     final l$code = code;
     final l$title = title;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$code,
-      l$title,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$code, l$title, l$$__typename]);
   }
 
   @override
@@ -4840,30 +4671,27 @@ class Query$GetPerson$person$contributionContentTypes$type {
 extension UtilityExtension$Query$GetPerson$person$contributionContentTypes$type
     on Query$GetPerson$person$contributionContentTypes$type {
   CopyWith$Query$GetPerson$person$contributionContentTypes$type<
-          Query$GetPerson$person$contributionContentTypes$type>
-      get copyWith =>
-          CopyWith$Query$GetPerson$person$contributionContentTypes$type(
-            this,
-            (i) => i,
-          );
+    Query$GetPerson$person$contributionContentTypes$type
+  >
+  get copyWith => CopyWith$Query$GetPerson$person$contributionContentTypes$type(
+    this,
+    (i) => i,
+  );
 }
 
 abstract class CopyWith$Query$GetPerson$person$contributionContentTypes$type<
-    TRes> {
+  TRes
+> {
   factory CopyWith$Query$GetPerson$person$contributionContentTypes$type(
     Query$GetPerson$person$contributionContentTypes$type instance,
     TRes Function(Query$GetPerson$person$contributionContentTypes$type) then,
   ) = _CopyWithImpl$Query$GetPerson$person$contributionContentTypes$type;
 
   factory CopyWith$Query$GetPerson$person$contributionContentTypes$type.stub(
-          TRes res) =
-      _CopyWithStubImpl$Query$GetPerson$person$contributionContentTypes$type;
+    TRes res,
+  ) = _CopyWithStubImpl$Query$GetPerson$person$contributionContentTypes$type;
 
-  TRes call({
-    String? code,
-    String? title,
-    String? $__typename,
-  });
+  TRes call({String? code, String? title, String? $__typename});
 }
 
 class _CopyWithImpl$Query$GetPerson$person$contributionContentTypes$type<TRes>
@@ -4877,7 +4705,7 @@ class _CopyWithImpl$Query$GetPerson$person$contributionContentTypes$type<TRes>
   final Query$GetPerson$person$contributionContentTypes$type _instance;
 
   final TRes Function(Query$GetPerson$person$contributionContentTypes$type)
-      _then;
+  _then;
 
   static const _undefined = <dynamic, dynamic>{};
 
@@ -4885,51 +4713,49 @@ class _CopyWithImpl$Query$GetPerson$person$contributionContentTypes$type<TRes>
     Object? code = _undefined,
     Object? title = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Query$GetPerson$person$contributionContentTypes$type(
-        code: code == _undefined || code == null
-            ? _instance.code
-            : (code as String),
-        title: title == _undefined || title == null
-            ? _instance.title
-            : (title as String),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  }) => _then(
+    Query$GetPerson$person$contributionContentTypes$type(
+      code: code == _undefined || code == null
+          ? _instance.code
+          : (code as String),
+      title: title == _undefined || title == null
+          ? _instance.title
+          : (title as String),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 }
 
 class _CopyWithStubImpl$Query$GetPerson$person$contributionContentTypes$type<
-        TRes>
+  TRes
+>
     implements
         CopyWith$Query$GetPerson$person$contributionContentTypes$type<TRes> {
   _CopyWithStubImpl$Query$GetPerson$person$contributionContentTypes$type(
-      this._res);
+    this._res,
+  );
 
   TRes _res;
 
-  call({
-    String? code,
-    String? title,
-    String? $__typename,
-  }) =>
-      _res;
+  call({String? code, String? title, String? $__typename}) => _res;
 }
 
 class Variables$Query$GetRandomContribution {
   factory Variables$Query$GetRandomContribution({
     required String id,
     List<String>? contentTypes,
-  }) =>
-      Variables$Query$GetRandomContribution._({
-        r'id': id,
-        if (contentTypes != null) r'contentTypes': contentTypes,
-      });
+  }) => Variables$Query$GetRandomContribution._({
+    r'id': id,
+    if (contentTypes != null) r'contentTypes': contentTypes,
+  });
 
   Variables$Query$GetRandomContribution._(this._$data);
 
   factory Variables$Query$GetRandomContribution.fromJson(
-      Map<String, dynamic> data) {
+    Map<String, dynamic> data,
+  ) {
     final result$data = <String, dynamic>{};
     final l$id = data['id'];
     result$data['id'] = (l$id as String);
@@ -4960,11 +4786,10 @@ class Variables$Query$GetRandomContribution {
   }
 
   CopyWith$Variables$Query$GetRandomContribution<
-          Variables$Query$GetRandomContribution>
-      get copyWith => CopyWith$Variables$Query$GetRandomContribution(
-            this,
-            (i) => i,
-          );
+    Variables$Query$GetRandomContribution
+  >
+  get copyWith =>
+      CopyWith$Variables$Query$GetRandomContribution(this, (i) => i);
 
   @override
   bool operator ==(Object other) {
@@ -5011,8 +4836,8 @@ class Variables$Query$GetRandomContribution {
       l$id,
       _$data.containsKey('contentTypes')
           ? l$contentTypes == null
-              ? null
-              : Object.hashAll(l$contentTypes.map((v) => v))
+                ? null
+                : Object.hashAll(l$contentTypes.map((v) => v))
           : const {},
     ]);
   }
@@ -5027,10 +4852,7 @@ abstract class CopyWith$Variables$Query$GetRandomContribution<TRes> {
   factory CopyWith$Variables$Query$GetRandomContribution.stub(TRes res) =
       _CopyWithStubImpl$Variables$Query$GetRandomContribution;
 
-  TRes call({
-    String? id,
-    List<String>? contentTypes,
-  });
+  TRes call({String? id, List<String>? contentTypes});
 }
 
 class _CopyWithImpl$Variables$Query$GetRandomContribution<TRes>
@@ -5046,16 +4868,15 @@ class _CopyWithImpl$Variables$Query$GetRandomContribution<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({
-    Object? id = _undefined,
-    Object? contentTypes = _undefined,
-  }) =>
-      _then(Variables$Query$GetRandomContribution._({
-        ..._instance._$data,
-        if (id != _undefined && id != null) 'id': (id as String),
-        if (contentTypes != _undefined)
-          'contentTypes': (contentTypes as List<String>?),
-      }));
+  TRes call({Object? id = _undefined, Object? contentTypes = _undefined}) =>
+      _then(
+        Variables$Query$GetRandomContribution._({
+          ..._instance._$data,
+          if (id != _undefined && id != null) 'id': (id as String),
+          if (contentTypes != _undefined)
+            'contentTypes': (contentTypes as List<String>?),
+        }),
+      );
 }
 
 class _CopyWithStubImpl$Variables$Query$GetRandomContribution<TRes>
@@ -5064,11 +4885,7 @@ class _CopyWithStubImpl$Variables$Query$GetRandomContribution<TRes>
 
   TRes _res;
 
-  call({
-    String? id,
-    List<String>? contentTypes,
-  }) =>
-      _res;
+  call({String? id, List<String>? contentTypes}) => _res;
 }
 
 class Query$GetRandomContribution {
@@ -5082,7 +4899,8 @@ class Query$GetRandomContribution {
     final l$$__typename = json['__typename'];
     return Query$GetRandomContribution(
       person: Query$GetRandomContribution$person.fromJson(
-          (l$person as Map<String, dynamic>)),
+        (l$person as Map<String, dynamic>),
+      ),
       $__typename: (l$$__typename as String),
     );
   }
@@ -5104,10 +4922,7 @@ class Query$GetRandomContribution {
   int get hashCode {
     final l$person = person;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$person,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$person, l$$__typename]);
   }
 
   @override
@@ -5136,10 +4951,7 @@ class Query$GetRandomContribution {
 extension UtilityExtension$Query$GetRandomContribution
     on Query$GetRandomContribution {
   CopyWith$Query$GetRandomContribution<Query$GetRandomContribution>
-      get copyWith => CopyWith$Query$GetRandomContribution(
-            this,
-            (i) => i,
-          );
+  get copyWith => CopyWith$Query$GetRandomContribution(this, (i) => i);
 }
 
 abstract class CopyWith$Query$GetRandomContribution<TRes> {
@@ -5151,19 +4963,13 @@ abstract class CopyWith$Query$GetRandomContribution<TRes> {
   factory CopyWith$Query$GetRandomContribution.stub(TRes res) =
       _CopyWithStubImpl$Query$GetRandomContribution;
 
-  TRes call({
-    Query$GetRandomContribution$person? person,
-    String? $__typename,
-  });
+  TRes call({Query$GetRandomContribution$person? person, String? $__typename});
   CopyWith$Query$GetRandomContribution$person<TRes> get person;
 }
 
 class _CopyWithImpl$Query$GetRandomContribution<TRes>
     implements CopyWith$Query$GetRandomContribution<TRes> {
-  _CopyWithImpl$Query$GetRandomContribution(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Query$GetRandomContribution(this._instance, this._then);
 
   final Query$GetRandomContribution _instance;
 
@@ -5171,23 +4977,24 @@ class _CopyWithImpl$Query$GetRandomContribution<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({
-    Object? person = _undefined,
-    Object? $__typename = _undefined,
-  }) =>
-      _then(Query$GetRandomContribution(
-        person: person == _undefined || person == null
-            ? _instance.person
-            : (person as Query$GetRandomContribution$person),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  TRes call({Object? person = _undefined, Object? $__typename = _undefined}) =>
+      _then(
+        Query$GetRandomContribution(
+          person: person == _undefined || person == null
+              ? _instance.person
+              : (person as Query$GetRandomContribution$person),
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String),
+        ),
+      );
 
   CopyWith$Query$GetRandomContribution$person<TRes> get person {
     final local$person = _instance.person;
     return CopyWith$Query$GetRandomContribution$person(
-        local$person, (e) => call(person: e));
+      local$person,
+      (e) => call(person: e),
+    );
   }
 }
 
@@ -5197,102 +5004,115 @@ class _CopyWithStubImpl$Query$GetRandomContribution<TRes>
 
   TRes _res;
 
-  call({
-    Query$GetRandomContribution$person? person,
-    String? $__typename,
-  }) =>
+  call({Query$GetRandomContribution$person? person, String? $__typename}) =>
       _res;
 
   CopyWith$Query$GetRandomContribution$person<TRes> get person =>
       CopyWith$Query$GetRandomContribution$person.stub(_res);
 }
 
-const documentNodeQueryGetRandomContribution = DocumentNode(definitions: [
-  OperationDefinitionNode(
-    type: OperationType.query,
-    name: NameNode(value: 'GetRandomContribution'),
-    variableDefinitions: [
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'id')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'ID'),
-          isNonNull: true,
+const documentNodeQueryGetRandomContribution = DocumentNode(
+  definitions: [
+    OperationDefinitionNode(
+      type: OperationType.query,
+      name: NameNode(value: 'GetRandomContribution'),
+      variableDefinitions: [
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'id')),
+          type: NamedTypeNode(name: NameNode(value: 'ID'), isNonNull: true),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'contentTypes')),
-        type: ListTypeNode(
-          type: NamedTypeNode(
-            name: NameNode(value: 'String'),
-            isNonNull: true,
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'contentTypes')),
+          type: ListTypeNode(
+            type: NamedTypeNode(
+              name: NameNode(value: 'String'),
+              isNonNull: true,
+            ),
+            isNonNull: false,
           ),
-          isNonNull: false,
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-    ],
-    directives: [],
-    selectionSet: SelectionSetNode(selections: [
-      FieldNode(
-        name: NameNode(value: 'person'),
-        alias: null,
-        arguments: [
-          ArgumentNode(
-            name: NameNode(value: 'id'),
-            value: VariableNode(name: NameNode(value: 'id')),
-          )
-        ],
-        directives: [],
-        selectionSet: SelectionSetNode(selections: [
+      ],
+      directives: [],
+      selectionSet: SelectionSetNode(
+        selections: [
           FieldNode(
-            name: NameNode(value: 'contributions'),
+            name: NameNode(value: 'person'),
             alias: null,
             arguments: [
               ArgumentNode(
-                name: NameNode(value: 'shuffle'),
-                value: BooleanValueNode(value: true),
-              ),
-              ArgumentNode(
-                name: NameNode(value: 'first'),
-                value: IntValueNode(value: '1'),
-              ),
-              ArgumentNode(
-                name: NameNode(value: 'contentTypes'),
-                value: VariableNode(name: NameNode(value: 'contentTypes')),
+                name: NameNode(value: 'id'),
+                value: VariableNode(name: NameNode(value: 'id')),
               ),
             ],
             directives: [],
-            selectionSet: SelectionSetNode(selections: [
-              FieldNode(
-                name: NameNode(value: 'items'),
-                alias: null,
-                arguments: [],
-                directives: [],
-                selectionSet: SelectionSetNode(selections: [
-                  FragmentSpreadNode(
-                    name: NameNode(value: 'Contribution'),
-                    directives: [],
+            selectionSet: SelectionSetNode(
+              selections: [
+                FieldNode(
+                  name: NameNode(value: 'contributions'),
+                  alias: null,
+                  arguments: [
+                    ArgumentNode(
+                      name: NameNode(value: 'shuffle'),
+                      value: BooleanValueNode(value: true),
+                    ),
+                    ArgumentNode(
+                      name: NameNode(value: 'first'),
+                      value: IntValueNode(value: '1'),
+                    ),
+                    ArgumentNode(
+                      name: NameNode(value: 'contentTypes'),
+                      value: VariableNode(
+                        name: NameNode(value: 'contentTypes'),
+                      ),
+                    ),
+                  ],
+                  directives: [],
+                  selectionSet: SelectionSetNode(
+                    selections: [
+                      FieldNode(
+                        name: NameNode(value: 'items'),
+                        alias: null,
+                        arguments: [],
+                        directives: [],
+                        selectionSet: SelectionSetNode(
+                          selections: [
+                            FragmentSpreadNode(
+                              name: NameNode(value: 'Contribution'),
+                              directives: [],
+                            ),
+                            FieldNode(
+                              name: NameNode(value: '__typename'),
+                              alias: null,
+                              arguments: [],
+                              directives: [],
+                              selectionSet: null,
+                            ),
+                          ],
+                        ),
+                      ),
+                      FieldNode(
+                        name: NameNode(value: '__typename'),
+                        alias: null,
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null,
+                      ),
+                    ],
                   ),
-                  FieldNode(
-                    name: NameNode(value: '__typename'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null,
-                  ),
-                ]),
-              ),
-              FieldNode(
-                name: NameNode(value: '__typename'),
-                alias: null,
-                arguments: [],
-                directives: [],
-                selectionSet: null,
-              ),
-            ]),
+                ),
+                FieldNode(
+                  name: NameNode(value: '__typename'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+              ],
+            ),
           ),
           FieldNode(
             name: NameNode(value: '__typename'),
@@ -5301,28 +5121,21 @@ const documentNodeQueryGetRandomContribution = DocumentNode(definitions: [
             directives: [],
             selectionSet: null,
           ),
-        ]),
+        ],
       ),
-      FieldNode(
-        name: NameNode(value: '__typename'),
-        alias: null,
-        arguments: [],
-        directives: [],
-        selectionSet: null,
-      ),
-    ]),
-  ),
-  fragmentDefinitionContribution,
-  fragmentDefinitionContributionItemId,
-  fragmentDefinitionNavigatableChapter,
-  fragmentDefinitionNavigatableEpisode,
-  fragmentDefinitionEpisodeListEpisode,
-  fragmentDefinitionSeasonListEpisode,
-  fragmentDefinitionEpisodeThumbnail,
-]);
+    ),
+    fragmentDefinitionContribution,
+    fragmentDefinitionContributionItemId,
+    fragmentDefinitionNavigatableChapter,
+    fragmentDefinitionNavigatableEpisode,
+    fragmentDefinitionEpisodeListEpisode,
+    fragmentDefinitionSeasonListEpisode,
+    fragmentDefinitionEpisodeThumbnail,
+  ],
+);
 Query$GetRandomContribution _parserFn$Query$GetRandomContribution(
-        Map<String, dynamic> data) =>
-    Query$GetRandomContribution.fromJson(data);
+  Map<String, dynamic> data,
+) => Query$GetRandomContribution.fromJson(data);
 typedef OnQueryComplete$Query$GetRandomContribution = FutureOr<void> Function(
   Map<String, dynamic>?,
   Query$GetRandomContribution?,
@@ -5342,38 +5155,38 @@ class Options$Query$GetRandomContribution
     graphql.Context? context,
     OnQueryComplete$Query$GetRandomContribution? onComplete,
     graphql.OnQueryError? onError,
-  })  : onCompleteWithParsed = onComplete,
-        super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          pollInterval: pollInterval,
-          context: context,
-          onComplete: onComplete == null
-              ? null
-              : (data) => onComplete(
-                    data,
-                    data == null
-                        ? null
-                        : _parserFn$Query$GetRandomContribution(data),
-                  ),
-          onError: onError,
-          document: documentNodeQueryGetRandomContribution,
-          parserFn: _parserFn$Query$GetRandomContribution,
-        );
+  }) : onCompleteWithParsed = onComplete,
+       super(
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         pollInterval: pollInterval,
+         context: context,
+         onComplete: onComplete == null
+             ? null
+             : (data) => onComplete(
+                 data,
+                 data == null
+                     ? null
+                     : _parserFn$Query$GetRandomContribution(data),
+               ),
+         onError: onError,
+         document: documentNodeQueryGetRandomContribution,
+         parserFn: _parserFn$Query$GetRandomContribution,
+       );
 
   final OnQueryComplete$Query$GetRandomContribution? onCompleteWithParsed;
 
   @override
   List<Object?> get properties => [
-        ...super.onComplete == null
-            ? super.properties
-            : super.properties.where((property) => property != onComplete),
-        onCompleteWithParsed,
-      ];
+    ...super.onComplete == null
+        ? super.properties
+        : super.properties.where((property) => property != onComplete),
+    onCompleteWithParsed,
+  ];
 }
 
 class WatchOptions$Query$GetRandomContribution
@@ -5392,20 +5205,20 @@ class WatchOptions$Query$GetRandomContribution
     bool carryForwardDataOnException = true,
     bool fetchResults = false,
   }) : super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          document: documentNodeQueryGetRandomContribution,
-          pollInterval: pollInterval,
-          eagerlyFetchResults: eagerlyFetchResults,
-          carryForwardDataOnException: carryForwardDataOnException,
-          fetchResults: fetchResults,
-          parserFn: _parserFn$Query$GetRandomContribution,
-        );
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         document: documentNodeQueryGetRandomContribution,
+         pollInterval: pollInterval,
+         eagerlyFetchResults: eagerlyFetchResults,
+         carryForwardDataOnException: carryForwardDataOnException,
+         fetchResults: fetchResults,
+         parserFn: _parserFn$Query$GetRandomContribution,
+       );
 }
 
 class FetchMoreOptions$Query$GetRandomContribution
@@ -5414,37 +5227,37 @@ class FetchMoreOptions$Query$GetRandomContribution
     required graphql.UpdateQuery updateQuery,
     required Variables$Query$GetRandomContribution variables,
   }) : super(
-          updateQuery: updateQuery,
-          variables: variables.toJson(),
-          document: documentNodeQueryGetRandomContribution,
-        );
+         updateQuery: updateQuery,
+         variables: variables.toJson(),
+         document: documentNodeQueryGetRandomContribution,
+       );
 }
 
 extension ClientExtension$Query$GetRandomContribution on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$GetRandomContribution>>
-      query$GetRandomContribution(
-              Options$Query$GetRandomContribution options) async =>
-          await this.query(options);
+  query$GetRandomContribution(
+    Options$Query$GetRandomContribution options,
+  ) async => await this.query(options);
 
   graphql.ObservableQuery<Query$GetRandomContribution>
-      watchQuery$GetRandomContribution(
-              WatchOptions$Query$GetRandomContribution options) =>
-          this.watchQuery(options);
+  watchQuery$GetRandomContribution(
+    WatchOptions$Query$GetRandomContribution options,
+  ) => this.watchQuery(options);
 
   void writeQuery$GetRandomContribution({
     required Query$GetRandomContribution data,
     required Variables$Query$GetRandomContribution variables,
     bool broadcast = true,
-  }) =>
-      this.writeQuery(
-        graphql.Request(
-          operation: graphql.Operation(
-              document: documentNodeQueryGetRandomContribution),
-          variables: variables.toJson(),
-        ),
-        data: data.toJson(),
-        broadcast: broadcast,
-      );
+  }) => this.writeQuery(
+    graphql.Request(
+      operation: graphql.Operation(
+        document: documentNodeQueryGetRandomContribution,
+      ),
+      variables: variables.toJson(),
+    ),
+    data: data.toJson(),
+    broadcast: broadcast,
+  );
 
   Query$GetRandomContribution? readQuery$GetRandomContribution({
     required Variables$Query$GetRandomContribution variables,
@@ -5452,8 +5265,9 @@ extension ClientExtension$Query$GetRandomContribution on graphql.GraphQLClient {
   }) {
     final result = this.readQuery(
       graphql.Request(
-        operation:
-            graphql.Operation(document: documentNodeQueryGetRandomContribution),
+        operation: graphql.Operation(
+          document: documentNodeQueryGetRandomContribution,
+        ),
         variables: variables.toJson(),
       ),
       optimistic: optimistic,
@@ -5463,13 +5277,12 @@ extension ClientExtension$Query$GetRandomContribution on graphql.GraphQLClient {
 }
 
 graphql_flutter.QueryHookResult<Query$GetRandomContribution>
-    useQuery$GetRandomContribution(
-            Options$Query$GetRandomContribution options) =>
-        graphql_flutter.useQuery(options);
+useQuery$GetRandomContribution(Options$Query$GetRandomContribution options) =>
+    graphql_flutter.useQuery(options);
 graphql.ObservableQuery<Query$GetRandomContribution>
-    useWatchQuery$GetRandomContribution(
-            WatchOptions$Query$GetRandomContribution options) =>
-        graphql_flutter.useWatchQuery(options);
+useWatchQuery$GetRandomContribution(
+  WatchOptions$Query$GetRandomContribution options,
+) => graphql_flutter.useWatchQuery(options);
 
 class Query$GetRandomContribution$Widget
     extends graphql_flutter.Query<Query$GetRandomContribution> {
@@ -5477,11 +5290,7 @@ class Query$GetRandomContribution$Widget
     widgets.Key? key,
     required Options$Query$GetRandomContribution options,
     required graphql_flutter.QueryBuilder<Query$GetRandomContribution> builder,
-  }) : super(
-          key: key,
-          options: options,
-          builder: builder,
-        );
+  }) : super(key: key, options: options, builder: builder);
 }
 
 class Query$GetRandomContribution$person {
@@ -5491,12 +5300,14 @@ class Query$GetRandomContribution$person {
   });
 
   factory Query$GetRandomContribution$person.fromJson(
-      Map<String, dynamic> json) {
+    Map<String, dynamic> json,
+  ) {
     final l$contributions = json['contributions'];
     final l$$__typename = json['__typename'];
     return Query$GetRandomContribution$person(
       contributions: Query$GetRandomContribution$person$contributions.fromJson(
-          (l$contributions as Map<String, dynamic>)),
+        (l$contributions as Map<String, dynamic>),
+      ),
       $__typename: (l$$__typename as String),
     );
   }
@@ -5518,10 +5329,7 @@ class Query$GetRandomContribution$person {
   int get hashCode {
     final l$contributions = contributions;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$contributions,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$contributions, l$$__typename]);
   }
 
   @override
@@ -5550,11 +5358,9 @@ class Query$GetRandomContribution$person {
 extension UtilityExtension$Query$GetRandomContribution$person
     on Query$GetRandomContribution$person {
   CopyWith$Query$GetRandomContribution$person<
-          Query$GetRandomContribution$person>
-      get copyWith => CopyWith$Query$GetRandomContribution$person(
-            this,
-            (i) => i,
-          );
+    Query$GetRandomContribution$person
+  >
+  get copyWith => CopyWith$Query$GetRandomContribution$person(this, (i) => i);
 }
 
 abstract class CopyWith$Query$GetRandomContribution$person<TRes> {
@@ -5571,15 +5377,12 @@ abstract class CopyWith$Query$GetRandomContribution$person<TRes> {
     String? $__typename,
   });
   CopyWith$Query$GetRandomContribution$person$contributions<TRes>
-      get contributions;
+  get contributions;
 }
 
 class _CopyWithImpl$Query$GetRandomContribution$person<TRes>
     implements CopyWith$Query$GetRandomContribution$person<TRes> {
-  _CopyWithImpl$Query$GetRandomContribution$person(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Query$GetRandomContribution$person(this._instance, this._then);
 
   final Query$GetRandomContribution$person _instance;
 
@@ -5590,22 +5393,24 @@ class _CopyWithImpl$Query$GetRandomContribution$person<TRes>
   TRes call({
     Object? contributions = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Query$GetRandomContribution$person(
-        contributions: contributions == _undefined || contributions == null
-            ? _instance.contributions
-            : (contributions
-                as Query$GetRandomContribution$person$contributions),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  }) => _then(
+    Query$GetRandomContribution$person(
+      contributions: contributions == _undefined || contributions == null
+          ? _instance.contributions
+          : (contributions as Query$GetRandomContribution$person$contributions),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 
   CopyWith$Query$GetRandomContribution$person$contributions<TRes>
-      get contributions {
+  get contributions {
     final local$contributions = _instance.contributions;
     return CopyWith$Query$GetRandomContribution$person$contributions(
-        local$contributions, (e) => call(contributions: e));
+      local$contributions,
+      (e) => call(contributions: e),
+    );
   }
 }
 
@@ -5618,12 +5423,11 @@ class _CopyWithStubImpl$Query$GetRandomContribution$person<TRes>
   call({
     Query$GetRandomContribution$person$contributions? contributions,
     String? $__typename,
-  }) =>
-      _res;
+  }) => _res;
 
   CopyWith$Query$GetRandomContribution$person$contributions<TRes>
-      get contributions =>
-          CopyWith$Query$GetRandomContribution$person$contributions.stub(_res);
+  get contributions =>
+      CopyWith$Query$GetRandomContribution$person$contributions.stub(_res);
 }
 
 class Query$GetRandomContribution$person$contributions {
@@ -5633,13 +5437,15 @@ class Query$GetRandomContribution$person$contributions {
   });
 
   factory Query$GetRandomContribution$person$contributions.fromJson(
-      Map<String, dynamic> json) {
+    Map<String, dynamic> json,
+  ) {
     final l$items = json['items'];
     final l$$__typename = json['__typename'];
     return Query$GetRandomContribution$person$contributions(
       items: (l$items as List<dynamic>)
-          .map((e) =>
-              Fragment$Contribution.fromJson((e as Map<String, dynamic>)))
+          .map(
+            (e) => Fragment$Contribution.fromJson((e as Map<String, dynamic>)),
+          )
           .toList(),
       $__typename: (l$$__typename as String),
     );
@@ -5701,11 +5507,10 @@ class Query$GetRandomContribution$person$contributions {
 extension UtilityExtension$Query$GetRandomContribution$person$contributions
     on Query$GetRandomContribution$person$contributions {
   CopyWith$Query$GetRandomContribution$person$contributions<
-          Query$GetRandomContribution$person$contributions>
-      get copyWith => CopyWith$Query$GetRandomContribution$person$contributions(
-            this,
-            (i) => i,
-          );
+    Query$GetRandomContribution$person$contributions
+  >
+  get copyWith =>
+      CopyWith$Query$GetRandomContribution$person$contributions(this, (i) => i);
 }
 
 abstract class CopyWith$Query$GetRandomContribution$person$contributions<TRes> {
@@ -5715,17 +5520,16 @@ abstract class CopyWith$Query$GetRandomContribution$person$contributions<TRes> {
   ) = _CopyWithImpl$Query$GetRandomContribution$person$contributions;
 
   factory CopyWith$Query$GetRandomContribution$person$contributions.stub(
-          TRes res) =
-      _CopyWithStubImpl$Query$GetRandomContribution$person$contributions;
+    TRes res,
+  ) = _CopyWithStubImpl$Query$GetRandomContribution$person$contributions;
 
-  TRes call({
-    List<Fragment$Contribution>? items,
-    String? $__typename,
-  });
+  TRes call({List<Fragment$Contribution>? items, String? $__typename});
   TRes items(
-      Iterable<Fragment$Contribution> Function(
-              Iterable<CopyWith$Fragment$Contribution<Fragment$Contribution>>)
-          _fn);
+    Iterable<Fragment$Contribution> Function(
+      Iterable<CopyWith$Fragment$Contribution<Fragment$Contribution>>,
+    )
+    _fn,
+  );
 }
 
 class _CopyWithImpl$Query$GetRandomContribution$person$contributions<TRes>
@@ -5741,29 +5545,28 @@ class _CopyWithImpl$Query$GetRandomContribution$person$contributions<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({
-    Object? items = _undefined,
-    Object? $__typename = _undefined,
-  }) =>
-      _then(Query$GetRandomContribution$person$contributions(
-        items: items == _undefined || items == null
-            ? _instance.items
-            : (items as List<Fragment$Contribution>),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  TRes call({Object? items = _undefined, Object? $__typename = _undefined}) =>
+      _then(
+        Query$GetRandomContribution$person$contributions(
+          items: items == _undefined || items == null
+              ? _instance.items
+              : (items as List<Fragment$Contribution>),
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String),
+        ),
+      );
 
   TRes items(
-          Iterable<Fragment$Contribution> Function(
-                  Iterable<
-                      CopyWith$Fragment$Contribution<Fragment$Contribution>>)
-              _fn) =>
-      call(
-          items: _fn(_instance.items.map((e) => CopyWith$Fragment$Contribution(
-                e,
-                (i) => i,
-              ))).toList());
+    Iterable<Fragment$Contribution> Function(
+      Iterable<CopyWith$Fragment$Contribution<Fragment$Contribution>>,
+    )
+    _fn,
+  ) => call(
+    items: _fn(
+      _instance.items.map((e) => CopyWith$Fragment$Contribution(e, (i) => i)),
+    ).toList(),
+  );
 }
 
 class _CopyWithStubImpl$Query$GetRandomContribution$person$contributions<TRes>
@@ -5772,11 +5575,7 @@ class _CopyWithStubImpl$Query$GetRandomContribution$person$contributions<TRes>
 
   TRes _res;
 
-  call({
-    List<Fragment$Contribution>? items,
-    String? $__typename,
-  }) =>
-      _res;
+  call({List<Fragment$Contribution>? items, String? $__typename}) => _res;
 
   items(_fn) => _res;
 }
@@ -5788,14 +5587,13 @@ class Variables$Query$GetContributions {
     int? offset,
     bool? shuffle,
     List<String>? contentTypes,
-  }) =>
-      Variables$Query$GetContributions._({
-        r'id': id,
-        if (first != null) r'first': first,
-        if (offset != null) r'offset': offset,
-        if (shuffle != null) r'shuffle': shuffle,
-        if (contentTypes != null) r'contentTypes': contentTypes,
-      });
+  }) => Variables$Query$GetContributions._({
+    r'id': id,
+    if (first != null) r'first': first,
+    if (offset != null) r'offset': offset,
+    if (shuffle != null) r'shuffle': shuffle,
+    if (contentTypes != null) r'contentTypes': contentTypes,
+  });
 
   Variables$Query$GetContributions._(this._$data);
 
@@ -5860,10 +5658,7 @@ class Variables$Query$GetContributions {
   }
 
   CopyWith$Variables$Query$GetContributions<Variables$Query$GetContributions>
-      get copyWith => CopyWith$Variables$Query$GetContributions(
-            this,
-            (i) => i,
-          );
+  get copyWith => CopyWith$Variables$Query$GetContributions(this, (i) => i);
 
   @override
   bool operator ==(Object other) {
@@ -5940,8 +5735,8 @@ class Variables$Query$GetContributions {
       _$data.containsKey('shuffle') ? l$shuffle : const {},
       _$data.containsKey('contentTypes')
           ? l$contentTypes == null
-              ? null
-              : Object.hashAll(l$contentTypes.map((v) => v))
+                ? null
+                : Object.hashAll(l$contentTypes.map((v) => v))
           : const {},
     ]);
   }
@@ -5967,10 +5762,7 @@ abstract class CopyWith$Variables$Query$GetContributions<TRes> {
 
 class _CopyWithImpl$Variables$Query$GetContributions<TRes>
     implements CopyWith$Variables$Query$GetContributions<TRes> {
-  _CopyWithImpl$Variables$Query$GetContributions(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Variables$Query$GetContributions(this._instance, this._then);
 
   final Variables$Query$GetContributions _instance;
 
@@ -5984,16 +5776,17 @@ class _CopyWithImpl$Variables$Query$GetContributions<TRes>
     Object? offset = _undefined,
     Object? shuffle = _undefined,
     Object? contentTypes = _undefined,
-  }) =>
-      _then(Variables$Query$GetContributions._({
-        ..._instance._$data,
-        if (id != _undefined && id != null) 'id': (id as String),
-        if (first != _undefined) 'first': (first as int?),
-        if (offset != _undefined) 'offset': (offset as int?),
-        if (shuffle != _undefined) 'shuffle': (shuffle as bool?),
-        if (contentTypes != _undefined)
-          'contentTypes': (contentTypes as List<String>?),
-      }));
+  }) => _then(
+    Variables$Query$GetContributions._({
+      ..._instance._$data,
+      if (id != _undefined && id != null) 'id': (id as String),
+      if (first != _undefined) 'first': (first as int?),
+      if (offset != _undefined) 'offset': (offset as int?),
+      if (shuffle != _undefined) 'shuffle': (shuffle as bool?),
+      if (contentTypes != _undefined)
+        'contentTypes': (contentTypes as List<String>?),
+    }),
+  );
 }
 
 class _CopyWithStubImpl$Variables$Query$GetContributions<TRes>
@@ -6008,8 +5801,7 @@ class _CopyWithStubImpl$Variables$Query$GetContributions<TRes>
     int? offset,
     bool? shuffle,
     List<String>? contentTypes,
-  }) =>
-      _res;
+  }) => _res;
 }
 
 class Query$GetContributions {
@@ -6023,7 +5815,8 @@ class Query$GetContributions {
     final l$$__typename = json['__typename'];
     return Query$GetContributions(
       person: Query$GetContributions$person.fromJson(
-          (l$person as Map<String, dynamic>)),
+        (l$person as Map<String, dynamic>),
+      ),
       $__typename: (l$$__typename as String),
     );
   }
@@ -6045,10 +5838,7 @@ class Query$GetContributions {
   int get hashCode {
     final l$person = person;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$person,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$person, l$$__typename]);
   }
 
   @override
@@ -6075,10 +5865,7 @@ class Query$GetContributions {
 
 extension UtilityExtension$Query$GetContributions on Query$GetContributions {
   CopyWith$Query$GetContributions<Query$GetContributions> get copyWith =>
-      CopyWith$Query$GetContributions(
-        this,
-        (i) => i,
-      );
+      CopyWith$Query$GetContributions(this, (i) => i);
 }
 
 abstract class CopyWith$Query$GetContributions<TRes> {
@@ -6090,19 +5877,13 @@ abstract class CopyWith$Query$GetContributions<TRes> {
   factory CopyWith$Query$GetContributions.stub(TRes res) =
       _CopyWithStubImpl$Query$GetContributions;
 
-  TRes call({
-    Query$GetContributions$person? person,
-    String? $__typename,
-  });
+  TRes call({Query$GetContributions$person? person, String? $__typename});
   CopyWith$Query$GetContributions$person<TRes> get person;
 }
 
 class _CopyWithImpl$Query$GetContributions<TRes>
     implements CopyWith$Query$GetContributions<TRes> {
-  _CopyWithImpl$Query$GetContributions(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Query$GetContributions(this._instance, this._then);
 
   final Query$GetContributions _instance;
 
@@ -6110,23 +5891,24 @@ class _CopyWithImpl$Query$GetContributions<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({
-    Object? person = _undefined,
-    Object? $__typename = _undefined,
-  }) =>
-      _then(Query$GetContributions(
-        person: person == _undefined || person == null
-            ? _instance.person
-            : (person as Query$GetContributions$person),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  TRes call({Object? person = _undefined, Object? $__typename = _undefined}) =>
+      _then(
+        Query$GetContributions(
+          person: person == _undefined || person == null
+              ? _instance.person
+              : (person as Query$GetContributions$person),
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String),
+        ),
+      );
 
   CopyWith$Query$GetContributions$person<TRes> get person {
     final local$person = _instance.person;
     return CopyWith$Query$GetContributions$person(
-        local$person, (e) => call(person: e));
+      local$person,
+      (e) => call(person: e),
+    );
   }
 }
 
@@ -6136,154 +5918,160 @@ class _CopyWithStubImpl$Query$GetContributions<TRes>
 
   TRes _res;
 
-  call({
-    Query$GetContributions$person? person,
-    String? $__typename,
-  }) =>
-      _res;
+  call({Query$GetContributions$person? person, String? $__typename}) => _res;
 
   CopyWith$Query$GetContributions$person<TRes> get person =>
       CopyWith$Query$GetContributions$person.stub(_res);
 }
 
-const documentNodeQueryGetContributions = DocumentNode(definitions: [
-  OperationDefinitionNode(
-    type: OperationType.query,
-    name: NameNode(value: 'GetContributions'),
-    variableDefinitions: [
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'id')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'ID'),
-          isNonNull: true,
+const documentNodeQueryGetContributions = DocumentNode(
+  definitions: [
+    OperationDefinitionNode(
+      type: OperationType.query,
+      name: NameNode(value: 'GetContributions'),
+      variableDefinitions: [
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'id')),
+          type: NamedTypeNode(name: NameNode(value: 'ID'), isNonNull: true),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'first')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'Int'),
-          isNonNull: false,
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'first')),
+          type: NamedTypeNode(name: NameNode(value: 'Int'), isNonNull: false),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'offset')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'Int'),
-          isNonNull: false,
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'offset')),
+          type: NamedTypeNode(name: NameNode(value: 'Int'), isNonNull: false),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'shuffle')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'Boolean'),
-          isNonNull: false,
-        ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'contentTypes')),
-        type: ListTypeNode(
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'shuffle')),
           type: NamedTypeNode(
-            name: NameNode(value: 'String'),
-            isNonNull: true,
+            name: NameNode(value: 'Boolean'),
+            isNonNull: false,
           ),
-          isNonNull: false,
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-    ],
-    directives: [],
-    selectionSet: SelectionSetNode(selections: [
-      FieldNode(
-        name: NameNode(value: 'person'),
-        alias: null,
-        arguments: [
-          ArgumentNode(
-            name: NameNode(value: 'id'),
-            value: VariableNode(name: NameNode(value: 'id')),
-          )
-        ],
-        directives: [],
-        selectionSet: SelectionSetNode(selections: [
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'contentTypes')),
+          type: ListTypeNode(
+            type: NamedTypeNode(
+              name: NameNode(value: 'String'),
+              isNonNull: true,
+            ),
+            isNonNull: false,
+          ),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
+        ),
+      ],
+      directives: [],
+      selectionSet: SelectionSetNode(
+        selections: [
           FieldNode(
-            name: NameNode(value: 'contributions'),
+            name: NameNode(value: 'person'),
             alias: null,
             arguments: [
               ArgumentNode(
-                name: NameNode(value: 'first'),
-                value: VariableNode(name: NameNode(value: 'first')),
-              ),
-              ArgumentNode(
-                name: NameNode(value: 'offset'),
-                value: VariableNode(name: NameNode(value: 'offset')),
-              ),
-              ArgumentNode(
-                name: NameNode(value: 'shuffle'),
-                value: VariableNode(name: NameNode(value: 'shuffle')),
-              ),
-              ArgumentNode(
-                name: NameNode(value: 'contentTypes'),
-                value: VariableNode(name: NameNode(value: 'contentTypes')),
+                name: NameNode(value: 'id'),
+                value: VariableNode(name: NameNode(value: 'id')),
               ),
             ],
             directives: [],
-            selectionSet: SelectionSetNode(selections: [
-              FieldNode(
-                name: NameNode(value: 'total'),
-                alias: null,
-                arguments: [],
-                directives: [],
-                selectionSet: null,
-              ),
-              FieldNode(
-                name: NameNode(value: 'first'),
-                alias: null,
-                arguments: [],
-                directives: [],
-                selectionSet: null,
-              ),
-              FieldNode(
-                name: NameNode(value: 'offset'),
-                alias: null,
-                arguments: [],
-                directives: [],
-                selectionSet: null,
-              ),
-              FieldNode(
-                name: NameNode(value: 'items'),
-                alias: null,
-                arguments: [],
-                directives: [],
-                selectionSet: SelectionSetNode(selections: [
-                  FragmentSpreadNode(
-                    name: NameNode(value: 'Contribution'),
-                    directives: [],
+            selectionSet: SelectionSetNode(
+              selections: [
+                FieldNode(
+                  name: NameNode(value: 'contributions'),
+                  alias: null,
+                  arguments: [
+                    ArgumentNode(
+                      name: NameNode(value: 'first'),
+                      value: VariableNode(name: NameNode(value: 'first')),
+                    ),
+                    ArgumentNode(
+                      name: NameNode(value: 'offset'),
+                      value: VariableNode(name: NameNode(value: 'offset')),
+                    ),
+                    ArgumentNode(
+                      name: NameNode(value: 'shuffle'),
+                      value: VariableNode(name: NameNode(value: 'shuffle')),
+                    ),
+                    ArgumentNode(
+                      name: NameNode(value: 'contentTypes'),
+                      value: VariableNode(
+                        name: NameNode(value: 'contentTypes'),
+                      ),
+                    ),
+                  ],
+                  directives: [],
+                  selectionSet: SelectionSetNode(
+                    selections: [
+                      FieldNode(
+                        name: NameNode(value: 'total'),
+                        alias: null,
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null,
+                      ),
+                      FieldNode(
+                        name: NameNode(value: 'first'),
+                        alias: null,
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null,
+                      ),
+                      FieldNode(
+                        name: NameNode(value: 'offset'),
+                        alias: null,
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null,
+                      ),
+                      FieldNode(
+                        name: NameNode(value: 'items'),
+                        alias: null,
+                        arguments: [],
+                        directives: [],
+                        selectionSet: SelectionSetNode(
+                          selections: [
+                            FragmentSpreadNode(
+                              name: NameNode(value: 'Contribution'),
+                              directives: [],
+                            ),
+                            FieldNode(
+                              name: NameNode(value: '__typename'),
+                              alias: null,
+                              arguments: [],
+                              directives: [],
+                              selectionSet: null,
+                            ),
+                          ],
+                        ),
+                      ),
+                      FieldNode(
+                        name: NameNode(value: '__typename'),
+                        alias: null,
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null,
+                      ),
+                    ],
                   ),
-                  FieldNode(
-                    name: NameNode(value: '__typename'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null,
-                  ),
-                ]),
-              ),
-              FieldNode(
-                name: NameNode(value: '__typename'),
-                alias: null,
-                arguments: [],
-                directives: [],
-                selectionSet: null,
-              ),
-            ]),
+                ),
+                FieldNode(
+                  name: NameNode(value: '__typename'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+              ],
+            ),
           ),
           FieldNode(
             name: NameNode(value: '__typename'),
@@ -6292,28 +6080,21 @@ const documentNodeQueryGetContributions = DocumentNode(definitions: [
             directives: [],
             selectionSet: null,
           ),
-        ]),
+        ],
       ),
-      FieldNode(
-        name: NameNode(value: '__typename'),
-        alias: null,
-        arguments: [],
-        directives: [],
-        selectionSet: null,
-      ),
-    ]),
-  ),
-  fragmentDefinitionContribution,
-  fragmentDefinitionContributionItemId,
-  fragmentDefinitionNavigatableChapter,
-  fragmentDefinitionNavigatableEpisode,
-  fragmentDefinitionEpisodeListEpisode,
-  fragmentDefinitionSeasonListEpisode,
-  fragmentDefinitionEpisodeThumbnail,
-]);
+    ),
+    fragmentDefinitionContribution,
+    fragmentDefinitionContributionItemId,
+    fragmentDefinitionNavigatableChapter,
+    fragmentDefinitionNavigatableEpisode,
+    fragmentDefinitionEpisodeListEpisode,
+    fragmentDefinitionSeasonListEpisode,
+    fragmentDefinitionEpisodeThumbnail,
+  ],
+);
 Query$GetContributions _parserFn$Query$GetContributions(
-        Map<String, dynamic> data) =>
-    Query$GetContributions.fromJson(data);
+  Map<String, dynamic> data,
+) => Query$GetContributions.fromJson(data);
 typedef OnQueryComplete$Query$GetContributions = FutureOr<void> Function(
   Map<String, dynamic>?,
   Query$GetContributions?,
@@ -6333,38 +6114,36 @@ class Options$Query$GetContributions
     graphql.Context? context,
     OnQueryComplete$Query$GetContributions? onComplete,
     graphql.OnQueryError? onError,
-  })  : onCompleteWithParsed = onComplete,
-        super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          pollInterval: pollInterval,
-          context: context,
-          onComplete: onComplete == null
-              ? null
-              : (data) => onComplete(
-                    data,
-                    data == null
-                        ? null
-                        : _parserFn$Query$GetContributions(data),
-                  ),
-          onError: onError,
-          document: documentNodeQueryGetContributions,
-          parserFn: _parserFn$Query$GetContributions,
-        );
+  }) : onCompleteWithParsed = onComplete,
+       super(
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         pollInterval: pollInterval,
+         context: context,
+         onComplete: onComplete == null
+             ? null
+             : (data) => onComplete(
+                 data,
+                 data == null ? null : _parserFn$Query$GetContributions(data),
+               ),
+         onError: onError,
+         document: documentNodeQueryGetContributions,
+         parserFn: _parserFn$Query$GetContributions,
+       );
 
   final OnQueryComplete$Query$GetContributions? onCompleteWithParsed;
 
   @override
   List<Object?> get properties => [
-        ...super.onComplete == null
-            ? super.properties
-            : super.properties.where((property) => property != onComplete),
-        onCompleteWithParsed,
-      ];
+    ...super.onComplete == null
+        ? super.properties
+        : super.properties.where((property) => property != onComplete),
+    onCompleteWithParsed,
+  ];
 }
 
 class WatchOptions$Query$GetContributions
@@ -6383,20 +6162,20 @@ class WatchOptions$Query$GetContributions
     bool carryForwardDataOnException = true,
     bool fetchResults = false,
   }) : super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          document: documentNodeQueryGetContributions,
-          pollInterval: pollInterval,
-          eagerlyFetchResults: eagerlyFetchResults,
-          carryForwardDataOnException: carryForwardDataOnException,
-          fetchResults: fetchResults,
-          parserFn: _parserFn$Query$GetContributions,
-        );
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         document: documentNodeQueryGetContributions,
+         pollInterval: pollInterval,
+         eagerlyFetchResults: eagerlyFetchResults,
+         carryForwardDataOnException: carryForwardDataOnException,
+         fetchResults: fetchResults,
+         parserFn: _parserFn$Query$GetContributions,
+       );
 }
 
 class FetchMoreOptions$Query$GetContributions extends graphql.FetchMoreOptions {
@@ -6404,35 +6183,33 @@ class FetchMoreOptions$Query$GetContributions extends graphql.FetchMoreOptions {
     required graphql.UpdateQuery updateQuery,
     required Variables$Query$GetContributions variables,
   }) : super(
-          updateQuery: updateQuery,
-          variables: variables.toJson(),
-          document: documentNodeQueryGetContributions,
-        );
+         updateQuery: updateQuery,
+         variables: variables.toJson(),
+         document: documentNodeQueryGetContributions,
+       );
 }
 
 extension ClientExtension$Query$GetContributions on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$GetContributions>> query$GetContributions(
-          Options$Query$GetContributions options) async =>
-      await this.query(options);
+    Options$Query$GetContributions options,
+  ) async => await this.query(options);
 
   graphql.ObservableQuery<Query$GetContributions> watchQuery$GetContributions(
-          WatchOptions$Query$GetContributions options) =>
-      this.watchQuery(options);
+    WatchOptions$Query$GetContributions options,
+  ) => this.watchQuery(options);
 
   void writeQuery$GetContributions({
     required Query$GetContributions data,
     required Variables$Query$GetContributions variables,
     bool broadcast = true,
-  }) =>
-      this.writeQuery(
-        graphql.Request(
-          operation:
-              graphql.Operation(document: documentNodeQueryGetContributions),
-          variables: variables.toJson(),
-        ),
-        data: data.toJson(),
-        broadcast: broadcast,
-      );
+  }) => this.writeQuery(
+    graphql.Request(
+      operation: graphql.Operation(document: documentNodeQueryGetContributions),
+      variables: variables.toJson(),
+    ),
+    data: data.toJson(),
+    broadcast: broadcast,
+  );
 
   Query$GetContributions? readQuery$GetContributions({
     required Variables$Query$GetContributions variables,
@@ -6440,8 +6217,9 @@ extension ClientExtension$Query$GetContributions on graphql.GraphQLClient {
   }) {
     final result = this.readQuery(
       graphql.Request(
-        operation:
-            graphql.Operation(document: documentNodeQueryGetContributions),
+        operation: graphql.Operation(
+          document: documentNodeQueryGetContributions,
+        ),
         variables: variables.toJson(),
       ),
       optimistic: optimistic,
@@ -6451,11 +6229,11 @@ extension ClientExtension$Query$GetContributions on graphql.GraphQLClient {
 }
 
 graphql_flutter.QueryHookResult<Query$GetContributions>
-    useQuery$GetContributions(Options$Query$GetContributions options) =>
-        graphql_flutter.useQuery(options);
+useQuery$GetContributions(Options$Query$GetContributions options) =>
+    graphql_flutter.useQuery(options);
 graphql.ObservableQuery<Query$GetContributions> useWatchQuery$GetContributions(
-        WatchOptions$Query$GetContributions options) =>
-    graphql_flutter.useWatchQuery(options);
+  WatchOptions$Query$GetContributions options,
+) => graphql_flutter.useWatchQuery(options);
 
 class Query$GetContributions$Widget
     extends graphql_flutter.Query<Query$GetContributions> {
@@ -6463,11 +6241,7 @@ class Query$GetContributions$Widget
     widgets.Key? key,
     required Options$Query$GetContributions options,
     required graphql_flutter.QueryBuilder<Query$GetContributions> builder,
-  }) : super(
-          key: key,
-          options: options,
-          builder: builder,
-        );
+  }) : super(key: key, options: options, builder: builder);
 }
 
 class Query$GetContributions$person {
@@ -6481,7 +6255,8 @@ class Query$GetContributions$person {
     final l$$__typename = json['__typename'];
     return Query$GetContributions$person(
       contributions: Query$GetContributions$person$contributions.fromJson(
-          (l$contributions as Map<String, dynamic>)),
+        (l$contributions as Map<String, dynamic>),
+      ),
       $__typename: (l$$__typename as String),
     );
   }
@@ -6503,10 +6278,7 @@ class Query$GetContributions$person {
   int get hashCode {
     final l$contributions = contributions;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$contributions,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$contributions, l$$__typename]);
   }
 
   @override
@@ -6535,10 +6307,7 @@ class Query$GetContributions$person {
 extension UtilityExtension$Query$GetContributions$person
     on Query$GetContributions$person {
   CopyWith$Query$GetContributions$person<Query$GetContributions$person>
-      get copyWith => CopyWith$Query$GetContributions$person(
-            this,
-            (i) => i,
-          );
+  get copyWith => CopyWith$Query$GetContributions$person(this, (i) => i);
 }
 
 abstract class CopyWith$Query$GetContributions$person<TRes> {
@@ -6559,10 +6328,7 @@ abstract class CopyWith$Query$GetContributions$person<TRes> {
 
 class _CopyWithImpl$Query$GetContributions$person<TRes>
     implements CopyWith$Query$GetContributions$person<TRes> {
-  _CopyWithImpl$Query$GetContributions$person(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Query$GetContributions$person(this._instance, this._then);
 
   final Query$GetContributions$person _instance;
 
@@ -6573,20 +6339,23 @@ class _CopyWithImpl$Query$GetContributions$person<TRes>
   TRes call({
     Object? contributions = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Query$GetContributions$person(
-        contributions: contributions == _undefined || contributions == null
-            ? _instance.contributions
-            : (contributions as Query$GetContributions$person$contributions),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  }) => _then(
+    Query$GetContributions$person(
+      contributions: contributions == _undefined || contributions == null
+          ? _instance.contributions
+          : (contributions as Query$GetContributions$person$contributions),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 
   CopyWith$Query$GetContributions$person$contributions<TRes> get contributions {
     final local$contributions = _instance.contributions;
     return CopyWith$Query$GetContributions$person$contributions(
-        local$contributions, (e) => call(contributions: e));
+      local$contributions,
+      (e) => call(contributions: e),
+    );
   }
 }
 
@@ -6599,12 +6368,11 @@ class _CopyWithStubImpl$Query$GetContributions$person<TRes>
   call({
     Query$GetContributions$person$contributions? contributions,
     String? $__typename,
-  }) =>
-      _res;
+  }) => _res;
 
   CopyWith$Query$GetContributions$person$contributions<TRes>
-      get contributions =>
-          CopyWith$Query$GetContributions$person$contributions.stub(_res);
+  get contributions =>
+      CopyWith$Query$GetContributions$person$contributions.stub(_res);
 }
 
 class Query$GetContributions$person$contributions {
@@ -6617,7 +6385,8 @@ class Query$GetContributions$person$contributions {
   });
 
   factory Query$GetContributions$person$contributions.fromJson(
-      Map<String, dynamic> json) {
+    Map<String, dynamic> json,
+  ) {
     final l$total = json['total'];
     final l$first = json['first'];
     final l$offset = json['offset'];
@@ -6628,8 +6397,9 @@ class Query$GetContributions$person$contributions {
       first: (l$first as int),
       offset: (l$offset as int),
       items: (l$items as List<dynamic>)
-          .map((e) =>
-              Fragment$Contribution.fromJson((e as Map<String, dynamic>)))
+          .map(
+            (e) => Fragment$Contribution.fromJson((e as Map<String, dynamic>)),
+          )
           .toList(),
       $__typename: (l$$__typename as String),
     );
@@ -6725,11 +6495,10 @@ class Query$GetContributions$person$contributions {
 extension UtilityExtension$Query$GetContributions$person$contributions
     on Query$GetContributions$person$contributions {
   CopyWith$Query$GetContributions$person$contributions<
-          Query$GetContributions$person$contributions>
-      get copyWith => CopyWith$Query$GetContributions$person$contributions(
-            this,
-            (i) => i,
-          );
+    Query$GetContributions$person$contributions
+  >
+  get copyWith =>
+      CopyWith$Query$GetContributions$person$contributions(this, (i) => i);
 }
 
 abstract class CopyWith$Query$GetContributions$person$contributions<TRes> {
@@ -6749,9 +6518,11 @@ abstract class CopyWith$Query$GetContributions$person$contributions<TRes> {
     String? $__typename,
   });
   TRes items(
-      Iterable<Fragment$Contribution> Function(
-              Iterable<CopyWith$Fragment$Contribution<Fragment$Contribution>>)
-          _fn);
+    Iterable<Fragment$Contribution> Function(
+      Iterable<CopyWith$Fragment$Contribution<Fragment$Contribution>>,
+    )
+    _fn,
+  );
 }
 
 class _CopyWithImpl$Query$GetContributions$person$contributions<TRes>
@@ -6773,35 +6544,36 @@ class _CopyWithImpl$Query$GetContributions$person$contributions<TRes>
     Object? offset = _undefined,
     Object? items = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Query$GetContributions$person$contributions(
-        total: total == _undefined || total == null
-            ? _instance.total
-            : (total as int),
-        first: first == _undefined || first == null
-            ? _instance.first
-            : (first as int),
-        offset: offset == _undefined || offset == null
-            ? _instance.offset
-            : (offset as int),
-        items: items == _undefined || items == null
-            ? _instance.items
-            : (items as List<Fragment$Contribution>),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  }) => _then(
+    Query$GetContributions$person$contributions(
+      total: total == _undefined || total == null
+          ? _instance.total
+          : (total as int),
+      first: first == _undefined || first == null
+          ? _instance.first
+          : (first as int),
+      offset: offset == _undefined || offset == null
+          ? _instance.offset
+          : (offset as int),
+      items: items == _undefined || items == null
+          ? _instance.items
+          : (items as List<Fragment$Contribution>),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 
   TRes items(
-          Iterable<Fragment$Contribution> Function(
-                  Iterable<
-                      CopyWith$Fragment$Contribution<Fragment$Contribution>>)
-              _fn) =>
-      call(
-          items: _fn(_instance.items.map((e) => CopyWith$Fragment$Contribution(
-                e,
-                (i) => i,
-              ))).toList());
+    Iterable<Fragment$Contribution> Function(
+      Iterable<CopyWith$Fragment$Contribution<Fragment$Contribution>>,
+    )
+    _fn,
+  ) => call(
+    items: _fn(
+      _instance.items.map((e) => CopyWith$Fragment$Contribution(e, (i) => i)),
+    ).toList(),
+  );
 }
 
 class _CopyWithStubImpl$Query$GetContributions$person$contributions<TRes>
@@ -6816,8 +6588,7 @@ class _CopyWithStubImpl$Query$GetContributions$person$contributions<TRes>
     int? offset,
     List<Fragment$Contribution>? items,
     String? $__typename,
-  }) =>
-      _res;
+  }) => _res;
 
   items(_fn) => _res;
 }

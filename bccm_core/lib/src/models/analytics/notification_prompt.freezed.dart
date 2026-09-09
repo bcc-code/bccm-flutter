@@ -1,6 +1,6 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: type=lint
+// coverage:ignore-file
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'notification_prompt.dart';
@@ -9,684 +9,1141 @@ part of 'notification_prompt.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
-
-NotificationPromptDismissedEvent _$NotificationPromptDismissedEventFromJson(
-  Map<String, dynamic> json,
-) {
-  return _NotificationPromptDismissedEvent.fromJson(json);
-}
 
 /// @nodoc
 mixin _$NotificationPromptDismissedEvent {
-  int get timesDismissed => throw _privateConstructorUsedError;
+
+ int get timesDismissed;
+/// Create a copy of NotificationPromptDismissedEvent
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$NotificationPromptDismissedEventCopyWith<NotificationPromptDismissedEvent> get copyWith => _$NotificationPromptDismissedEventCopyWithImpl<NotificationPromptDismissedEvent>(this as NotificationPromptDismissedEvent, _$identity);
 
   /// Serializes this NotificationPromptDismissedEvent to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of NotificationPromptDismissedEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $NotificationPromptDismissedEventCopyWith<NotificationPromptDismissedEvent>
-  get copyWith => throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  final _this = this as NotificationPromptDismissedEvent;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NotificationPromptDismissedEvent&&(identical(other.timesDismissed, _this.timesDismissed) || other.timesDismissed == _this.timesDismissed));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode {
+  final _this = this as NotificationPromptDismissedEvent;
+  return Object.hash(runtimeType,_this.timesDismissed);
+}
+
+@override
+String toString() {
+  final _this = this as NotificationPromptDismissedEvent;
+  return 'NotificationPromptDismissedEvent(timesDismissed: ${_this.timesDismissed})';
+}
+
+
 }
 
 /// @nodoc
-abstract class $NotificationPromptDismissedEventCopyWith<$Res> {
-  factory $NotificationPromptDismissedEventCopyWith(
-    NotificationPromptDismissedEvent value,
-    $Res Function(NotificationPromptDismissedEvent) then,
-  ) =
-      _$NotificationPromptDismissedEventCopyWithImpl<
-        $Res,
-        NotificationPromptDismissedEvent
-      >;
-  @useResult
-  $Res call({int timesDismissed});
-}
+abstract mixin class $NotificationPromptDismissedEventCopyWith<$Res>  {
+  factory $NotificationPromptDismissedEventCopyWith(NotificationPromptDismissedEvent value, $Res Function(NotificationPromptDismissedEvent) _then) = _$NotificationPromptDismissedEventCopyWithImpl;
+@useResult
+$Res call({
+ int timesDismissed
+});
 
+
+
+
+}
 /// @nodoc
-class _$NotificationPromptDismissedEventCopyWithImpl<
-  $Res,
-  $Val extends NotificationPromptDismissedEvent
->
+class _$NotificationPromptDismissedEventCopyWithImpl<$Res>
     implements $NotificationPromptDismissedEventCopyWith<$Res> {
-  _$NotificationPromptDismissedEventCopyWithImpl(this._value, this._then);
+  _$NotificationPromptDismissedEventCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final NotificationPromptDismissedEvent _self;
+  final $Res Function(NotificationPromptDismissedEvent) _then;
 
-  /// Create a copy of NotificationPromptDismissedEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? timesDismissed = null}) {
-    return _then(
-      _value.copyWith(
-            timesDismissed: null == timesDismissed
-                ? _value.timesDismissed
-                : timesDismissed // ignore: cast_nullable_to_non_nullable
-                      as int,
-          )
-          as $Val,
-    );
-  }
+/// Create a copy of NotificationPromptDismissedEvent
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? timesDismissed = null,}) {
+  return _then(NotificationPromptDismissedEvent(
+timesDismissed: null == timesDismissed ? _self.timesDismissed : timesDismissed // ignore: cast_nullable_to_non_nullable
+as int,
+  ));
 }
 
-/// @nodoc
-abstract class _$$NotificationPromptDismissedEventImplCopyWith<$Res>
-    implements $NotificationPromptDismissedEventCopyWith<$Res> {
-  factory _$$NotificationPromptDismissedEventImplCopyWith(
-    _$NotificationPromptDismissedEventImpl value,
-    $Res Function(_$NotificationPromptDismissedEventImpl) then,
-  ) = __$$NotificationPromptDismissedEventImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({int timesDismissed});
 }
 
-/// @nodoc
-class __$$NotificationPromptDismissedEventImplCopyWithImpl<$Res>
-    extends
-        _$NotificationPromptDismissedEventCopyWithImpl<
-          $Res,
-          _$NotificationPromptDismissedEventImpl
-        >
-    implements _$$NotificationPromptDismissedEventImplCopyWith<$Res> {
-  __$$NotificationPromptDismissedEventImplCopyWithImpl(
-    _$NotificationPromptDismissedEventImpl _value,
-    $Res Function(_$NotificationPromptDismissedEventImpl) _then,
-  ) : super(_value, _then);
 
-  /// Create a copy of NotificationPromptDismissedEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? timesDismissed = null}) {
-    return _then(
-      _$NotificationPromptDismissedEventImpl(
-        timesDismissed: null == timesDismissed
-            ? _value.timesDismissed
-            : timesDismissed // ignore: cast_nullable_to_non_nullable
-                  as int,
-      ),
-    );
-  }
+/// Adds pattern-matching-related methods to [NotificationPromptDismissedEvent].
+extension NotificationPromptDismissedEventPatterns on NotificationPromptDismissedEvent {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _NotificationPromptDismissedEvent value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _NotificationPromptDismissedEvent() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _NotificationPromptDismissedEvent value)  $default,){
+final _that = this;
+switch (_that) {
+case _NotificationPromptDismissedEvent():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _NotificationPromptDismissedEvent value)?  $default,){
+final _that = this;
+switch (_that) {
+case _NotificationPromptDismissedEvent() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int timesDismissed)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _NotificationPromptDismissedEvent() when $default != null:
+return $default(_that.timesDismissed);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int timesDismissed)  $default,) {final _that = this;
+switch (_that) {
+case _NotificationPromptDismissedEvent():
+return $default(_that.timesDismissed);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int timesDismissed)?  $default,) {final _that = this;
+switch (_that) {
+case _NotificationPromptDismissedEvent() when $default != null:
+return $default(_that.timesDismissed);case _:
+  return null;
+
+}
+}
+
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$NotificationPromptDismissedEventImpl
-    implements _NotificationPromptDismissedEvent {
-  const _$NotificationPromptDismissedEventImpl({required this.timesDismissed});
 
-  factory _$NotificationPromptDismissedEventImpl.fromJson(
-    Map<String, dynamic> json,
-  ) => _$$NotificationPromptDismissedEventImplFromJson(json);
+class _NotificationPromptDismissedEvent implements NotificationPromptDismissedEvent {
+  const _NotificationPromptDismissedEvent({required this.timesDismissed});
+  factory _NotificationPromptDismissedEvent.fromJson(Map<String, dynamic> json) => _$NotificationPromptDismissedEventFromJson(json);
 
-  @override
-  final int timesDismissed;
+@override final  int timesDismissed;
 
-  @override
-  String toString() {
+/// Create a copy of NotificationPromptDismissedEvent
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$NotificationPromptDismissedEventCopyWith<_NotificationPromptDismissedEvent> get copyWith => __$NotificationPromptDismissedEventCopyWithImpl<_NotificationPromptDismissedEvent>(this, _$identity);
+
+@override
+Map<String, dynamic> toJson() {
+  return _$NotificationPromptDismissedEventToJson(this, );
+}
+
+@override
+bool operator ==(Object other) {
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotificationPromptDismissedEvent&&(identical(other.timesDismissed, timesDismissed) || other.timesDismissed == timesDismissed));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode {
+    return Object.hash(runtimeType,timesDismissed);
+}
+
+@override
+String toString() {
     return 'NotificationPromptDismissedEvent(timesDismissed: $timesDismissed)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$NotificationPromptDismissedEventImpl &&
-            (identical(other.timesDismissed, timesDismissed) ||
-                other.timesDismissed == timesDismissed));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, timesDismissed);
-
-  /// Create a copy of NotificationPromptDismissedEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$NotificationPromptDismissedEventImplCopyWith<
-    _$NotificationPromptDismissedEventImpl
-  >
-  get copyWith =>
-      __$$NotificationPromptDismissedEventImplCopyWithImpl<
-        _$NotificationPromptDismissedEventImpl
-      >(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$NotificationPromptDismissedEventImplToJson(this);
-  }
 }
 
-abstract class _NotificationPromptDismissedEvent
-    implements NotificationPromptDismissedEvent {
-  const factory _NotificationPromptDismissedEvent({
-    required final int timesDismissed,
-  }) = _$NotificationPromptDismissedEventImpl;
 
-  factory _NotificationPromptDismissedEvent.fromJson(
-    Map<String, dynamic> json,
-  ) = _$NotificationPromptDismissedEventImpl.fromJson;
-
-  @override
-  int get timesDismissed;
-
-  /// Create a copy of NotificationPromptDismissedEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$NotificationPromptDismissedEventImplCopyWith<
-    _$NotificationPromptDismissedEventImpl
-  >
-  get copyWith => throw _privateConstructorUsedError;
 }
 
-NotificationPromptClickedEvent _$NotificationPromptClickedEventFromJson(
-  Map<String, dynamic> json,
-) {
-  return _NotificationPromptClickedEvent.fromJson(json);
+/// @nodoc
+abstract mixin class _$NotificationPromptDismissedEventCopyWith<$Res> implements $NotificationPromptDismissedEventCopyWith<$Res> {
+  factory _$NotificationPromptDismissedEventCopyWith(_NotificationPromptDismissedEvent value, $Res Function(_NotificationPromptDismissedEvent) _then) = __$NotificationPromptDismissedEventCopyWithImpl;
+@override @useResult
+$Res call({
+ int timesDismissed
+});
+
+
+
+
 }
+/// @nodoc
+class __$NotificationPromptDismissedEventCopyWithImpl<$Res>
+    implements _$NotificationPromptDismissedEventCopyWith<$Res> {
+  __$NotificationPromptDismissedEventCopyWithImpl(this._self, this._then);
+
+  final _NotificationPromptDismissedEvent _self;
+  final $Res Function(_NotificationPromptDismissedEvent) _then;
+
+/// Create a copy of NotificationPromptDismissedEvent
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? timesDismissed = null,}) {
+  return _then(_NotificationPromptDismissedEvent(
+timesDismissed: null == timesDismissed ? _self.timesDismissed : timesDismissed // ignore: cast_nullable_to_non_nullable
+as int,
+  ));
+}
+
+
+}
+
 
 /// @nodoc
 mixin _$NotificationPromptClickedEvent {
+
+
+
   /// Serializes this NotificationPromptClickedEvent to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
+
+
+@override
+bool operator ==(Object other) {
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is NotificationPromptClickedEvent);
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => runtimeType.hashCode;
+
+@override
+String toString() {
+    return 'NotificationPromptClickedEvent()';
+}
+
+
 }
 
 /// @nodoc
-abstract class $NotificationPromptClickedEventCopyWith<$Res> {
-  factory $NotificationPromptClickedEventCopyWith(
-    NotificationPromptClickedEvent value,
-    $Res Function(NotificationPromptClickedEvent) then,
-  ) =
-      _$NotificationPromptClickedEventCopyWithImpl<
-        $Res,
-        NotificationPromptClickedEvent
-      >;
+class $NotificationPromptClickedEventCopyWith<$Res>  {
+$NotificationPromptClickedEventCopyWith(NotificationPromptClickedEvent _, $Res Function(NotificationPromptClickedEvent) __);
 }
 
-/// @nodoc
-class _$NotificationPromptClickedEventCopyWithImpl<
-  $Res,
-  $Val extends NotificationPromptClickedEvent
->
-    implements $NotificationPromptClickedEventCopyWith<$Res> {
-  _$NotificationPromptClickedEventCopyWithImpl(this._value, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+/// Adds pattern-matching-related methods to [NotificationPromptClickedEvent].
+extension NotificationPromptClickedEventPatterns on NotificationPromptClickedEvent {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
 
-  /// Create a copy of NotificationPromptClickedEvent
-  /// with the given fields replaced by the non-null parameter values.
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _NotificationPromptClickedEvent value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _NotificationPromptClickedEvent() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _NotificationPromptClickedEvent value)  $default,){
+final _that = this;
+switch (_that) {
+case _NotificationPromptClickedEvent():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _NotificationPromptClickedEvent value)?  $default,){
+final _that = this;
+switch (_that) {
+case _NotificationPromptClickedEvent() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function()?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _NotificationPromptClickedEvent() when $default != null:
+return $default();case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function()  $default,) {final _that = this;
+switch (_that) {
+case _NotificationPromptClickedEvent():
+return $default();case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function()?  $default,) {final _that = this;
+switch (_that) {
+case _NotificationPromptClickedEvent() when $default != null:
+return $default();case _:
+  return null;
+
+}
 }
 
-/// @nodoc
-abstract class _$$NotificationPromptClickedEventImplCopyWith<$Res> {
-  factory _$$NotificationPromptClickedEventImplCopyWith(
-    _$NotificationPromptClickedEventImpl value,
-    $Res Function(_$NotificationPromptClickedEventImpl) then,
-  ) = __$$NotificationPromptClickedEventImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$NotificationPromptClickedEventImplCopyWithImpl<$Res>
-    extends
-        _$NotificationPromptClickedEventCopyWithImpl<
-          $Res,
-          _$NotificationPromptClickedEventImpl
-        >
-    implements _$$NotificationPromptClickedEventImplCopyWith<$Res> {
-  __$$NotificationPromptClickedEventImplCopyWithImpl(
-    _$NotificationPromptClickedEventImpl _value,
-    $Res Function(_$NotificationPromptClickedEventImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of NotificationPromptClickedEvent
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$NotificationPromptClickedEventImpl
-    implements _NotificationPromptClickedEvent {
-  const _$NotificationPromptClickedEventImpl();
 
-  factory _$NotificationPromptClickedEventImpl.fromJson(
-    Map<String, dynamic> json,
-  ) => _$$NotificationPromptClickedEventImplFromJson(json);
+class _NotificationPromptClickedEvent implements NotificationPromptClickedEvent {
+  const _NotificationPromptClickedEvent();
+  factory _NotificationPromptClickedEvent.fromJson(Map<String, dynamic> json) => _$NotificationPromptClickedEventFromJson(json);
 
-  @override
-  String toString() {
+
+
+
+@override
+Map<String, dynamic> toJson() {
+  return _$NotificationPromptClickedEventToJson(this, );
+}
+
+@override
+bool operator ==(Object other) {
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotificationPromptClickedEvent);
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => runtimeType.hashCode;
+
+@override
+String toString() {
     return 'NotificationPromptClickedEvent()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$NotificationPromptClickedEventImpl);
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$NotificationPromptClickedEventImplToJson(this);
-  }
 }
 
-abstract class _NotificationPromptClickedEvent
-    implements NotificationPromptClickedEvent {
-  const factory _NotificationPromptClickedEvent() =
-      _$NotificationPromptClickedEventImpl;
 
-  factory _NotificationPromptClickedEvent.fromJson(Map<String, dynamic> json) =
-      _$NotificationPromptClickedEventImpl.fromJson;
 }
 
-NotificationPromptDeniedEvent _$NotificationPromptDeniedEventFromJson(
-  Map<String, dynamic> json,
-) {
-  return _NotificationPromptDeniedEvent.fromJson(json);
-}
+
+
+
 
 /// @nodoc
 mixin _$NotificationPromptDeniedEvent {
+
+
+
   /// Serializes this NotificationPromptDeniedEvent to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
+
+
+@override
+bool operator ==(Object other) {
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is NotificationPromptDeniedEvent);
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => runtimeType.hashCode;
+
+@override
+String toString() {
+    return 'NotificationPromptDeniedEvent()';
+}
+
+
 }
 
 /// @nodoc
-abstract class $NotificationPromptDeniedEventCopyWith<$Res> {
-  factory $NotificationPromptDeniedEventCopyWith(
-    NotificationPromptDeniedEvent value,
-    $Res Function(NotificationPromptDeniedEvent) then,
-  ) =
-      _$NotificationPromptDeniedEventCopyWithImpl<
-        $Res,
-        NotificationPromptDeniedEvent
-      >;
+class $NotificationPromptDeniedEventCopyWith<$Res>  {
+$NotificationPromptDeniedEventCopyWith(NotificationPromptDeniedEvent _, $Res Function(NotificationPromptDeniedEvent) __);
 }
 
-/// @nodoc
-class _$NotificationPromptDeniedEventCopyWithImpl<
-  $Res,
-  $Val extends NotificationPromptDeniedEvent
->
-    implements $NotificationPromptDeniedEventCopyWith<$Res> {
-  _$NotificationPromptDeniedEventCopyWithImpl(this._value, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+/// Adds pattern-matching-related methods to [NotificationPromptDeniedEvent].
+extension NotificationPromptDeniedEventPatterns on NotificationPromptDeniedEvent {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
 
-  /// Create a copy of NotificationPromptDeniedEvent
-  /// with the given fields replaced by the non-null parameter values.
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _NotificationPromptDeniedEvent value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _NotificationPromptDeniedEvent() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _NotificationPromptDeniedEvent value)  $default,){
+final _that = this;
+switch (_that) {
+case _NotificationPromptDeniedEvent():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _NotificationPromptDeniedEvent value)?  $default,){
+final _that = this;
+switch (_that) {
+case _NotificationPromptDeniedEvent() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function()?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _NotificationPromptDeniedEvent() when $default != null:
+return $default();case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function()  $default,) {final _that = this;
+switch (_that) {
+case _NotificationPromptDeniedEvent():
+return $default();case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function()?  $default,) {final _that = this;
+switch (_that) {
+case _NotificationPromptDeniedEvent() when $default != null:
+return $default();case _:
+  return null;
+
+}
 }
 
-/// @nodoc
-abstract class _$$NotificationPromptDeniedEventImplCopyWith<$Res> {
-  factory _$$NotificationPromptDeniedEventImplCopyWith(
-    _$NotificationPromptDeniedEventImpl value,
-    $Res Function(_$NotificationPromptDeniedEventImpl) then,
-  ) = __$$NotificationPromptDeniedEventImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$NotificationPromptDeniedEventImplCopyWithImpl<$Res>
-    extends
-        _$NotificationPromptDeniedEventCopyWithImpl<
-          $Res,
-          _$NotificationPromptDeniedEventImpl
-        >
-    implements _$$NotificationPromptDeniedEventImplCopyWith<$Res> {
-  __$$NotificationPromptDeniedEventImplCopyWithImpl(
-    _$NotificationPromptDeniedEventImpl _value,
-    $Res Function(_$NotificationPromptDeniedEventImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of NotificationPromptDeniedEvent
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$NotificationPromptDeniedEventImpl
-    implements _NotificationPromptDeniedEvent {
-  const _$NotificationPromptDeniedEventImpl();
 
-  factory _$NotificationPromptDeniedEventImpl.fromJson(
-    Map<String, dynamic> json,
-  ) => _$$NotificationPromptDeniedEventImplFromJson(json);
+class _NotificationPromptDeniedEvent implements NotificationPromptDeniedEvent {
+  const _NotificationPromptDeniedEvent();
+  factory _NotificationPromptDeniedEvent.fromJson(Map<String, dynamic> json) => _$NotificationPromptDeniedEventFromJson(json);
 
-  @override
-  String toString() {
+
+
+
+@override
+Map<String, dynamic> toJson() {
+  return _$NotificationPromptDeniedEventToJson(this, );
+}
+
+@override
+bool operator ==(Object other) {
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotificationPromptDeniedEvent);
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => runtimeType.hashCode;
+
+@override
+String toString() {
     return 'NotificationPromptDeniedEvent()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$NotificationPromptDeniedEventImpl);
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$NotificationPromptDeniedEventImplToJson(this);
-  }
 }
 
-abstract class _NotificationPromptDeniedEvent
-    implements NotificationPromptDeniedEvent {
-  const factory _NotificationPromptDeniedEvent() =
-      _$NotificationPromptDeniedEventImpl;
 
-  factory _NotificationPromptDeniedEvent.fromJson(Map<String, dynamic> json) =
-      _$NotificationPromptDeniedEventImpl.fromJson;
 }
 
-NotificationPromptAcceptedEvent _$NotificationPromptAcceptedEventFromJson(
-  Map<String, dynamic> json,
-) {
-  return _NotificationPromptAcceptedEvent.fromJson(json);
-}
+
+
+
 
 /// @nodoc
 mixin _$NotificationPromptAcceptedEvent {
+
+
+
   /// Serializes this NotificationPromptAcceptedEvent to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
+
+
+@override
+bool operator ==(Object other) {
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is NotificationPromptAcceptedEvent);
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => runtimeType.hashCode;
+
+@override
+String toString() {
+    return 'NotificationPromptAcceptedEvent()';
+}
+
+
 }
 
 /// @nodoc
-abstract class $NotificationPromptAcceptedEventCopyWith<$Res> {
-  factory $NotificationPromptAcceptedEventCopyWith(
-    NotificationPromptAcceptedEvent value,
-    $Res Function(NotificationPromptAcceptedEvent) then,
-  ) =
-      _$NotificationPromptAcceptedEventCopyWithImpl<
-        $Res,
-        NotificationPromptAcceptedEvent
-      >;
+class $NotificationPromptAcceptedEventCopyWith<$Res>  {
+$NotificationPromptAcceptedEventCopyWith(NotificationPromptAcceptedEvent _, $Res Function(NotificationPromptAcceptedEvent) __);
 }
 
-/// @nodoc
-class _$NotificationPromptAcceptedEventCopyWithImpl<
-  $Res,
-  $Val extends NotificationPromptAcceptedEvent
->
-    implements $NotificationPromptAcceptedEventCopyWith<$Res> {
-  _$NotificationPromptAcceptedEventCopyWithImpl(this._value, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+/// Adds pattern-matching-related methods to [NotificationPromptAcceptedEvent].
+extension NotificationPromptAcceptedEventPatterns on NotificationPromptAcceptedEvent {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
 
-  /// Create a copy of NotificationPromptAcceptedEvent
-  /// with the given fields replaced by the non-null parameter values.
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _NotificationPromptAcceptedEvent value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _NotificationPromptAcceptedEvent() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _NotificationPromptAcceptedEvent value)  $default,){
+final _that = this;
+switch (_that) {
+case _NotificationPromptAcceptedEvent():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _NotificationPromptAcceptedEvent value)?  $default,){
+final _that = this;
+switch (_that) {
+case _NotificationPromptAcceptedEvent() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function()?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _NotificationPromptAcceptedEvent() when $default != null:
+return $default();case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function()  $default,) {final _that = this;
+switch (_that) {
+case _NotificationPromptAcceptedEvent():
+return $default();case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function()?  $default,) {final _that = this;
+switch (_that) {
+case _NotificationPromptAcceptedEvent() when $default != null:
+return $default();case _:
+  return null;
+
+}
 }
 
-/// @nodoc
-abstract class _$$NotificationPromptAcceptedEventImplCopyWith<$Res> {
-  factory _$$NotificationPromptAcceptedEventImplCopyWith(
-    _$NotificationPromptAcceptedEventImpl value,
-    $Res Function(_$NotificationPromptAcceptedEventImpl) then,
-  ) = __$$NotificationPromptAcceptedEventImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$NotificationPromptAcceptedEventImplCopyWithImpl<$Res>
-    extends
-        _$NotificationPromptAcceptedEventCopyWithImpl<
-          $Res,
-          _$NotificationPromptAcceptedEventImpl
-        >
-    implements _$$NotificationPromptAcceptedEventImplCopyWith<$Res> {
-  __$$NotificationPromptAcceptedEventImplCopyWithImpl(
-    _$NotificationPromptAcceptedEventImpl _value,
-    $Res Function(_$NotificationPromptAcceptedEventImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of NotificationPromptAcceptedEvent
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$NotificationPromptAcceptedEventImpl
-    implements _NotificationPromptAcceptedEvent {
-  const _$NotificationPromptAcceptedEventImpl();
 
-  factory _$NotificationPromptAcceptedEventImpl.fromJson(
-    Map<String, dynamic> json,
-  ) => _$$NotificationPromptAcceptedEventImplFromJson(json);
+class _NotificationPromptAcceptedEvent implements NotificationPromptAcceptedEvent {
+  const _NotificationPromptAcceptedEvent();
+  factory _NotificationPromptAcceptedEvent.fromJson(Map<String, dynamic> json) => _$NotificationPromptAcceptedEventFromJson(json);
 
-  @override
-  String toString() {
+
+
+
+@override
+Map<String, dynamic> toJson() {
+  return _$NotificationPromptAcceptedEventToJson(this, );
+}
+
+@override
+bool operator ==(Object other) {
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotificationPromptAcceptedEvent);
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => runtimeType.hashCode;
+
+@override
+String toString() {
     return 'NotificationPromptAcceptedEvent()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$NotificationPromptAcceptedEventImpl);
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$NotificationPromptAcceptedEventImplToJson(this);
-  }
 }
 
-abstract class _NotificationPromptAcceptedEvent
-    implements NotificationPromptAcceptedEvent {
-  const factory _NotificationPromptAcceptedEvent() =
-      _$NotificationPromptAcceptedEventImpl;
 
-  factory _NotificationPromptAcceptedEvent.fromJson(Map<String, dynamic> json) =
-      _$NotificationPromptAcceptedEventImpl.fromJson;
 }
 
-NotificationsSettingToggledEvent _$NotificationsSettingToggledEventFromJson(
-  Map<String, dynamic> json,
-) {
-  return _NotificationsSettingToggledEvent.fromJson(json);
-}
+
+
+
 
 /// @nodoc
 mixin _$NotificationsSettingToggledEvent {
-  bool get enabled => throw _privateConstructorUsedError;
+
+ bool get enabled;
+/// Create a copy of NotificationsSettingToggledEvent
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$NotificationsSettingToggledEventCopyWith<NotificationsSettingToggledEvent> get copyWith => _$NotificationsSettingToggledEventCopyWithImpl<NotificationsSettingToggledEvent>(this as NotificationsSettingToggledEvent, _$identity);
 
   /// Serializes this NotificationsSettingToggledEvent to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of NotificationsSettingToggledEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $NotificationsSettingToggledEventCopyWith<NotificationsSettingToggledEvent>
-  get copyWith => throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  final _this = this as NotificationsSettingToggledEvent;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NotificationsSettingToggledEvent&&(identical(other.enabled, _this.enabled) || other.enabled == _this.enabled));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode {
+  final _this = this as NotificationsSettingToggledEvent;
+  return Object.hash(runtimeType,_this.enabled);
+}
+
+@override
+String toString() {
+  final _this = this as NotificationsSettingToggledEvent;
+  return 'NotificationsSettingToggledEvent(enabled: ${_this.enabled})';
+}
+
+
 }
 
 /// @nodoc
-abstract class $NotificationsSettingToggledEventCopyWith<$Res> {
-  factory $NotificationsSettingToggledEventCopyWith(
-    NotificationsSettingToggledEvent value,
-    $Res Function(NotificationsSettingToggledEvent) then,
-  ) =
-      _$NotificationsSettingToggledEventCopyWithImpl<
-        $Res,
-        NotificationsSettingToggledEvent
-      >;
-  @useResult
-  $Res call({bool enabled});
-}
+abstract mixin class $NotificationsSettingToggledEventCopyWith<$Res>  {
+  factory $NotificationsSettingToggledEventCopyWith(NotificationsSettingToggledEvent value, $Res Function(NotificationsSettingToggledEvent) _then) = _$NotificationsSettingToggledEventCopyWithImpl;
+@useResult
+$Res call({
+ bool enabled
+});
 
+
+
+
+}
 /// @nodoc
-class _$NotificationsSettingToggledEventCopyWithImpl<
-  $Res,
-  $Val extends NotificationsSettingToggledEvent
->
+class _$NotificationsSettingToggledEventCopyWithImpl<$Res>
     implements $NotificationsSettingToggledEventCopyWith<$Res> {
-  _$NotificationsSettingToggledEventCopyWithImpl(this._value, this._then);
+  _$NotificationsSettingToggledEventCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final NotificationsSettingToggledEvent _self;
+  final $Res Function(NotificationsSettingToggledEvent) _then;
 
-  /// Create a copy of NotificationsSettingToggledEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? enabled = null}) {
-    return _then(
-      _value.copyWith(
-            enabled: null == enabled
-                ? _value.enabled
-                : enabled // ignore: cast_nullable_to_non_nullable
-                      as bool,
-          )
-          as $Val,
-    );
-  }
+/// Create a copy of NotificationsSettingToggledEvent
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? enabled = null,}) {
+  return _then(NotificationsSettingToggledEvent(
+enabled: null == enabled ? _self.enabled : enabled // ignore: cast_nullable_to_non_nullable
+as bool,
+  ));
 }
 
-/// @nodoc
-abstract class _$$NotificationsSettingToggledEventImplCopyWith<$Res>
-    implements $NotificationsSettingToggledEventCopyWith<$Res> {
-  factory _$$NotificationsSettingToggledEventImplCopyWith(
-    _$NotificationsSettingToggledEventImpl value,
-    $Res Function(_$NotificationsSettingToggledEventImpl) then,
-  ) = __$$NotificationsSettingToggledEventImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({bool enabled});
 }
 
-/// @nodoc
-class __$$NotificationsSettingToggledEventImplCopyWithImpl<$Res>
-    extends
-        _$NotificationsSettingToggledEventCopyWithImpl<
-          $Res,
-          _$NotificationsSettingToggledEventImpl
-        >
-    implements _$$NotificationsSettingToggledEventImplCopyWith<$Res> {
-  __$$NotificationsSettingToggledEventImplCopyWithImpl(
-    _$NotificationsSettingToggledEventImpl _value,
-    $Res Function(_$NotificationsSettingToggledEventImpl) _then,
-  ) : super(_value, _then);
 
-  /// Create a copy of NotificationsSettingToggledEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? enabled = null}) {
-    return _then(
-      _$NotificationsSettingToggledEventImpl(
-        enabled: null == enabled
-            ? _value.enabled
-            : enabled // ignore: cast_nullable_to_non_nullable
-                  as bool,
-      ),
-    );
-  }
+/// Adds pattern-matching-related methods to [NotificationsSettingToggledEvent].
+extension NotificationsSettingToggledEventPatterns on NotificationsSettingToggledEvent {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _NotificationsSettingToggledEvent value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _NotificationsSettingToggledEvent() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _NotificationsSettingToggledEvent value)  $default,){
+final _that = this;
+switch (_that) {
+case _NotificationsSettingToggledEvent():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _NotificationsSettingToggledEvent value)?  $default,){
+final _that = this;
+switch (_that) {
+case _NotificationsSettingToggledEvent() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( bool enabled)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _NotificationsSettingToggledEvent() when $default != null:
+return $default(_that.enabled);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( bool enabled)  $default,) {final _that = this;
+switch (_that) {
+case _NotificationsSettingToggledEvent():
+return $default(_that.enabled);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( bool enabled)?  $default,) {final _that = this;
+switch (_that) {
+case _NotificationsSettingToggledEvent() when $default != null:
+return $default(_that.enabled);case _:
+  return null;
+
+}
+}
+
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$NotificationsSettingToggledEventImpl
-    implements _NotificationsSettingToggledEvent {
-  const _$NotificationsSettingToggledEventImpl({required this.enabled});
 
-  factory _$NotificationsSettingToggledEventImpl.fromJson(
-    Map<String, dynamic> json,
-  ) => _$$NotificationsSettingToggledEventImplFromJson(json);
+class _NotificationsSettingToggledEvent implements NotificationsSettingToggledEvent {
+  const _NotificationsSettingToggledEvent({required this.enabled});
+  factory _NotificationsSettingToggledEvent.fromJson(Map<String, dynamic> json) => _$NotificationsSettingToggledEventFromJson(json);
 
-  @override
-  final bool enabled;
+@override final  bool enabled;
 
-  @override
-  String toString() {
+/// Create a copy of NotificationsSettingToggledEvent
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$NotificationsSettingToggledEventCopyWith<_NotificationsSettingToggledEvent> get copyWith => __$NotificationsSettingToggledEventCopyWithImpl<_NotificationsSettingToggledEvent>(this, _$identity);
+
+@override
+Map<String, dynamic> toJson() {
+  return _$NotificationsSettingToggledEventToJson(this, );
+}
+
+@override
+bool operator ==(Object other) {
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotificationsSettingToggledEvent&&(identical(other.enabled, enabled) || other.enabled == enabled));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode {
+    return Object.hash(runtimeType,enabled);
+}
+
+@override
+String toString() {
     return 'NotificationsSettingToggledEvent(enabled: $enabled)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$NotificationsSettingToggledEventImpl &&
-            (identical(other.enabled, enabled) || other.enabled == enabled));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, enabled);
-
-  /// Create a copy of NotificationsSettingToggledEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$NotificationsSettingToggledEventImplCopyWith<
-    _$NotificationsSettingToggledEventImpl
-  >
-  get copyWith =>
-      __$$NotificationsSettingToggledEventImplCopyWithImpl<
-        _$NotificationsSettingToggledEventImpl
-      >(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$NotificationsSettingToggledEventImplToJson(this);
-  }
 }
 
-abstract class _NotificationsSettingToggledEvent
-    implements NotificationsSettingToggledEvent {
-  const factory _NotificationsSettingToggledEvent({
-    required final bool enabled,
-  }) = _$NotificationsSettingToggledEventImpl;
 
-  factory _NotificationsSettingToggledEvent.fromJson(
-    Map<String, dynamic> json,
-  ) = _$NotificationsSettingToggledEventImpl.fromJson;
-
-  @override
-  bool get enabled;
-
-  /// Create a copy of NotificationsSettingToggledEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$NotificationsSettingToggledEventImplCopyWith<
-    _$NotificationsSettingToggledEventImpl
-  >
-  get copyWith => throw _privateConstructorUsedError;
 }
+
+/// @nodoc
+abstract mixin class _$NotificationsSettingToggledEventCopyWith<$Res> implements $NotificationsSettingToggledEventCopyWith<$Res> {
+  factory _$NotificationsSettingToggledEventCopyWith(_NotificationsSettingToggledEvent value, $Res Function(_NotificationsSettingToggledEvent) _then) = __$NotificationsSettingToggledEventCopyWithImpl;
+@override @useResult
+$Res call({
+ bool enabled
+});
+
+
+
+
+}
+/// @nodoc
+class __$NotificationsSettingToggledEventCopyWithImpl<$Res>
+    implements _$NotificationsSettingToggledEventCopyWith<$Res> {
+  __$NotificationsSettingToggledEventCopyWithImpl(this._self, this._then);
+
+  final _NotificationsSettingToggledEvent _self;
+  final $Res Function(_NotificationsSettingToggledEvent) _then;
+
+/// Create a copy of NotificationsSettingToggledEvent
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? enabled = null,}) {
+  return _then(_NotificationsSettingToggledEvent(
+enabled: null == enabled ? _self.enabled : enabled // ignore: cast_nullable_to_non_nullable
+as bool,
+  ));
+}
+
+
+}
+
+// dart format on

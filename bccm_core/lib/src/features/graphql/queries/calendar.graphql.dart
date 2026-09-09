@@ -1,5 +1,7 @@
 import 'dart:async';
+
 import 'live/calendar_days.graphql.dart';
+
 import 'package:flutter/widgets.dart' as widgets;
 import 'package:gql/ast.dart';
 import 'package:graphql/client.dart' as graphql;
@@ -9,11 +11,7 @@ class Variables$Query$CalendarPeriod {
   factory Variables$Query$CalendarPeriod({
     required String from,
     required String to,
-  }) =>
-      Variables$Query$CalendarPeriod._({
-        r'from': from,
-        r'to': to,
-      });
+  }) => Variables$Query$CalendarPeriod._({r'from': from, r'to': to});
 
   Variables$Query$CalendarPeriod._(this._$data);
 
@@ -42,10 +40,7 @@ class Variables$Query$CalendarPeriod {
   }
 
   CopyWith$Variables$Query$CalendarPeriod<Variables$Query$CalendarPeriod>
-      get copyWith => CopyWith$Variables$Query$CalendarPeriod(
-            this,
-            (i) => i,
-          );
+  get copyWith => CopyWith$Variables$Query$CalendarPeriod(this, (i) => i);
 
   @override
   bool operator ==(Object other) {
@@ -73,10 +68,7 @@ class Variables$Query$CalendarPeriod {
   int get hashCode {
     final l$from = from;
     final l$to = to;
-    return Object.hashAll([
-      l$from,
-      l$to,
-    ]);
+    return Object.hashAll([l$from, l$to]);
   }
 }
 
@@ -89,18 +81,12 @@ abstract class CopyWith$Variables$Query$CalendarPeriod<TRes> {
   factory CopyWith$Variables$Query$CalendarPeriod.stub(TRes res) =
       _CopyWithStubImpl$Variables$Query$CalendarPeriod;
 
-  TRes call({
-    String? from,
-    String? to,
-  });
+  TRes call({String? from, String? to});
 }
 
 class _CopyWithImpl$Variables$Query$CalendarPeriod<TRes>
     implements CopyWith$Variables$Query$CalendarPeriod<TRes> {
-  _CopyWithImpl$Variables$Query$CalendarPeriod(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Variables$Query$CalendarPeriod(this._instance, this._then);
 
   final Variables$Query$CalendarPeriod _instance;
 
@@ -108,15 +94,13 @@ class _CopyWithImpl$Variables$Query$CalendarPeriod<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({
-    Object? from = _undefined,
-    Object? to = _undefined,
-  }) =>
-      _then(Variables$Query$CalendarPeriod._({
-        ..._instance._$data,
-        if (from != _undefined && from != null) 'from': (from as String),
-        if (to != _undefined && to != null) 'to': (to as String),
-      }));
+  TRes call({Object? from = _undefined, Object? to = _undefined}) => _then(
+    Variables$Query$CalendarPeriod._({
+      ..._instance._$data,
+      if (from != _undefined && from != null) 'from': (from as String),
+      if (to != _undefined && to != null) 'to': (to as String),
+    }),
+  );
 }
 
 class _CopyWithStubImpl$Variables$Query$CalendarPeriod<TRes>
@@ -125,18 +109,11 @@ class _CopyWithStubImpl$Variables$Query$CalendarPeriod<TRes>
 
   TRes _res;
 
-  call({
-    String? from,
-    String? to,
-  }) =>
-      _res;
+  call({String? from, String? to}) => _res;
 }
 
 class Query$CalendarPeriod {
-  Query$CalendarPeriod({
-    this.calendar,
-    this.$__typename = 'QueryRoot',
-  });
+  Query$CalendarPeriod({this.calendar, this.$__typename = 'QueryRoot'});
 
   factory Query$CalendarPeriod.fromJson(Map<String, dynamic> json) {
     final l$calendar = json['calendar'];
@@ -145,7 +122,8 @@ class Query$CalendarPeriod {
       calendar: l$calendar == null
           ? null
           : Query$CalendarPeriod$calendar.fromJson(
-              (l$calendar as Map<String, dynamic>)),
+              (l$calendar as Map<String, dynamic>),
+            ),
       $__typename: (l$$__typename as String),
     );
   }
@@ -167,10 +145,7 @@ class Query$CalendarPeriod {
   int get hashCode {
     final l$calendar = calendar;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$calendar,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$calendar, l$$__typename]);
   }
 
   @override
@@ -197,10 +172,7 @@ class Query$CalendarPeriod {
 
 extension UtilityExtension$Query$CalendarPeriod on Query$CalendarPeriod {
   CopyWith$Query$CalendarPeriod<Query$CalendarPeriod> get copyWith =>
-      CopyWith$Query$CalendarPeriod(
-        this,
-        (i) => i,
-      );
+      CopyWith$Query$CalendarPeriod(this, (i) => i);
 }
 
 abstract class CopyWith$Query$CalendarPeriod<TRes> {
@@ -212,19 +184,13 @@ abstract class CopyWith$Query$CalendarPeriod<TRes> {
   factory CopyWith$Query$CalendarPeriod.stub(TRes res) =
       _CopyWithStubImpl$Query$CalendarPeriod;
 
-  TRes call({
-    Query$CalendarPeriod$calendar? calendar,
-    String? $__typename,
-  });
+  TRes call({Query$CalendarPeriod$calendar? calendar, String? $__typename});
   CopyWith$Query$CalendarPeriod$calendar<TRes> get calendar;
 }
 
 class _CopyWithImpl$Query$CalendarPeriod<TRes>
     implements CopyWith$Query$CalendarPeriod<TRes> {
-  _CopyWithImpl$Query$CalendarPeriod(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Query$CalendarPeriod(this._instance, this._then);
 
   final Query$CalendarPeriod _instance;
 
@@ -235,22 +201,25 @@ class _CopyWithImpl$Query$CalendarPeriod<TRes>
   TRes call({
     Object? calendar = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Query$CalendarPeriod(
-        calendar: calendar == _undefined
-            ? _instance.calendar
-            : (calendar as Query$CalendarPeriod$calendar?),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  }) => _then(
+    Query$CalendarPeriod(
+      calendar: calendar == _undefined
+          ? _instance.calendar
+          : (calendar as Query$CalendarPeriod$calendar?),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 
   CopyWith$Query$CalendarPeriod$calendar<TRes> get calendar {
     final local$calendar = _instance.calendar;
     return local$calendar == null
         ? CopyWith$Query$CalendarPeriod$calendar.stub(_then(_instance))
         : CopyWith$Query$CalendarPeriod$calendar(
-            local$calendar, (e) => call(calendar: e));
+            local$calendar,
+            (e) => call(calendar: e),
+          );
   }
 }
 
@@ -260,107 +229,114 @@ class _CopyWithStubImpl$Query$CalendarPeriod<TRes>
 
   TRes _res;
 
-  call({
-    Query$CalendarPeriod$calendar? calendar,
-    String? $__typename,
-  }) =>
-      _res;
+  call({Query$CalendarPeriod$calendar? calendar, String? $__typename}) => _res;
 
   CopyWith$Query$CalendarPeriod$calendar<TRes> get calendar =>
       CopyWith$Query$CalendarPeriod$calendar.stub(_res);
 }
 
-const documentNodeQueryCalendarPeriod = DocumentNode(definitions: [
-  OperationDefinitionNode(
-    type: OperationType.query,
-    name: NameNode(value: 'CalendarPeriod'),
-    variableDefinitions: [
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'from')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'Date'),
-          isNonNull: true,
+const documentNodeQueryCalendarPeriod = DocumentNode(
+  definitions: [
+    OperationDefinitionNode(
+      type: OperationType.query,
+      name: NameNode(value: 'CalendarPeriod'),
+      variableDefinitions: [
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'from')),
+          type: NamedTypeNode(name: NameNode(value: 'Date'), isNonNull: true),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'to')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'Date'),
-          isNonNull: true,
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'to')),
+          type: NamedTypeNode(name: NameNode(value: 'Date'), isNonNull: true),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-    ],
-    directives: [],
-    selectionSet: SelectionSetNode(selections: [
-      FieldNode(
-        name: NameNode(value: 'calendar'),
-        alias: null,
-        arguments: [],
-        directives: [],
-        selectionSet: SelectionSetNode(selections: [
+      ],
+      directives: [],
+      selectionSet: SelectionSetNode(
+        selections: [
           FieldNode(
-            name: NameNode(value: 'period'),
+            name: NameNode(value: 'calendar'),
             alias: null,
-            arguments: [
-              ArgumentNode(
-                name: NameNode(value: 'from'),
-                value: VariableNode(name: NameNode(value: 'from')),
-              ),
-              ArgumentNode(
-                name: NameNode(value: 'to'),
-                value: VariableNode(name: NameNode(value: 'to')),
-              ),
-            ],
+            arguments: [],
             directives: [],
-            selectionSet: SelectionSetNode(selections: [
-              FieldNode(
-                name: NameNode(value: 'activeDays'),
-                alias: null,
-                arguments: [],
-                directives: [],
-                selectionSet: null,
-              ),
-              FieldNode(
-                name: NameNode(value: 'events'),
-                alias: null,
-                arguments: [],
-                directives: [],
-                selectionSet: SelectionSetNode(selections: [
-                  FieldNode(
-                    name: NameNode(value: 'start'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null,
+            selectionSet: SelectionSetNode(
+              selections: [
+                FieldNode(
+                  name: NameNode(value: 'period'),
+                  alias: null,
+                  arguments: [
+                    ArgumentNode(
+                      name: NameNode(value: 'from'),
+                      value: VariableNode(name: NameNode(value: 'from')),
+                    ),
+                    ArgumentNode(
+                      name: NameNode(value: 'to'),
+                      value: VariableNode(name: NameNode(value: 'to')),
+                    ),
+                  ],
+                  directives: [],
+                  selectionSet: SelectionSetNode(
+                    selections: [
+                      FieldNode(
+                        name: NameNode(value: 'activeDays'),
+                        alias: null,
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null,
+                      ),
+                      FieldNode(
+                        name: NameNode(value: 'events'),
+                        alias: null,
+                        arguments: [],
+                        directives: [],
+                        selectionSet: SelectionSetNode(
+                          selections: [
+                            FieldNode(
+                              name: NameNode(value: 'start'),
+                              alias: null,
+                              arguments: [],
+                              directives: [],
+                              selectionSet: null,
+                            ),
+                            FieldNode(
+                              name: NameNode(value: 'end'),
+                              alias: null,
+                              arguments: [],
+                              directives: [],
+                              selectionSet: null,
+                            ),
+                            FieldNode(
+                              name: NameNode(value: '__typename'),
+                              alias: null,
+                              arguments: [],
+                              directives: [],
+                              selectionSet: null,
+                            ),
+                          ],
+                        ),
+                      ),
+                      FieldNode(
+                        name: NameNode(value: '__typename'),
+                        alias: null,
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null,
+                      ),
+                    ],
                   ),
-                  FieldNode(
-                    name: NameNode(value: 'end'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null,
-                  ),
-                  FieldNode(
-                    name: NameNode(value: '__typename'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null,
-                  ),
-                ]),
-              ),
-              FieldNode(
-                name: NameNode(value: '__typename'),
-                alias: null,
-                arguments: [],
-                directives: [],
-                selectionSet: null,
-              ),
-            ]),
+                ),
+                FieldNode(
+                  name: NameNode(value: '__typename'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+              ],
+            ),
           ),
           FieldNode(
             name: NameNode(value: '__typename'),
@@ -369,21 +345,14 @@ const documentNodeQueryCalendarPeriod = DocumentNode(definitions: [
             directives: [],
             selectionSet: null,
           ),
-        ]),
+        ],
       ),
-      FieldNode(
-        name: NameNode(value: '__typename'),
-        alias: null,
-        arguments: [],
-        directives: [],
-        selectionSet: null,
-      ),
-    ]),
-  ),
-]);
+    ),
+  ],
+);
 Query$CalendarPeriod _parserFn$Query$CalendarPeriod(
-        Map<String, dynamic> data) =>
-    Query$CalendarPeriod.fromJson(data);
+  Map<String, dynamic> data,
+) => Query$CalendarPeriod.fromJson(data);
 typedef OnQueryComplete$Query$CalendarPeriod = FutureOr<void> Function(
   Map<String, dynamic>?,
   Query$CalendarPeriod?,
@@ -403,36 +372,36 @@ class Options$Query$CalendarPeriod
     graphql.Context? context,
     OnQueryComplete$Query$CalendarPeriod? onComplete,
     graphql.OnQueryError? onError,
-  })  : onCompleteWithParsed = onComplete,
-        super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          pollInterval: pollInterval,
-          context: context,
-          onComplete: onComplete == null
-              ? null
-              : (data) => onComplete(
-                    data,
-                    data == null ? null : _parserFn$Query$CalendarPeriod(data),
-                  ),
-          onError: onError,
-          document: documentNodeQueryCalendarPeriod,
-          parserFn: _parserFn$Query$CalendarPeriod,
-        );
+  }) : onCompleteWithParsed = onComplete,
+       super(
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         pollInterval: pollInterval,
+         context: context,
+         onComplete: onComplete == null
+             ? null
+             : (data) => onComplete(
+                 data,
+                 data == null ? null : _parserFn$Query$CalendarPeriod(data),
+               ),
+         onError: onError,
+         document: documentNodeQueryCalendarPeriod,
+         parserFn: _parserFn$Query$CalendarPeriod,
+       );
 
   final OnQueryComplete$Query$CalendarPeriod? onCompleteWithParsed;
 
   @override
   List<Object?> get properties => [
-        ...super.onComplete == null
-            ? super.properties
-            : super.properties.where((property) => property != onComplete),
-        onCompleteWithParsed,
-      ];
+    ...super.onComplete == null
+        ? super.properties
+        : super.properties.where((property) => property != onComplete),
+    onCompleteWithParsed,
+  ];
 }
 
 class WatchOptions$Query$CalendarPeriod
@@ -451,20 +420,20 @@ class WatchOptions$Query$CalendarPeriod
     bool carryForwardDataOnException = true,
     bool fetchResults = false,
   }) : super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          document: documentNodeQueryCalendarPeriod,
-          pollInterval: pollInterval,
-          eagerlyFetchResults: eagerlyFetchResults,
-          carryForwardDataOnException: carryForwardDataOnException,
-          fetchResults: fetchResults,
-          parserFn: _parserFn$Query$CalendarPeriod,
-        );
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         document: documentNodeQueryCalendarPeriod,
+         pollInterval: pollInterval,
+         eagerlyFetchResults: eagerlyFetchResults,
+         carryForwardDataOnException: carryForwardDataOnException,
+         fetchResults: fetchResults,
+         parserFn: _parserFn$Query$CalendarPeriod,
+       );
 }
 
 class FetchMoreOptions$Query$CalendarPeriod extends graphql.FetchMoreOptions {
@@ -472,35 +441,33 @@ class FetchMoreOptions$Query$CalendarPeriod extends graphql.FetchMoreOptions {
     required graphql.UpdateQuery updateQuery,
     required Variables$Query$CalendarPeriod variables,
   }) : super(
-          updateQuery: updateQuery,
-          variables: variables.toJson(),
-          document: documentNodeQueryCalendarPeriod,
-        );
+         updateQuery: updateQuery,
+         variables: variables.toJson(),
+         document: documentNodeQueryCalendarPeriod,
+       );
 }
 
 extension ClientExtension$Query$CalendarPeriod on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$CalendarPeriod>> query$CalendarPeriod(
-          Options$Query$CalendarPeriod options) async =>
-      await this.query(options);
+    Options$Query$CalendarPeriod options,
+  ) async => await this.query(options);
 
   graphql.ObservableQuery<Query$CalendarPeriod> watchQuery$CalendarPeriod(
-          WatchOptions$Query$CalendarPeriod options) =>
-      this.watchQuery(options);
+    WatchOptions$Query$CalendarPeriod options,
+  ) => this.watchQuery(options);
 
   void writeQuery$CalendarPeriod({
     required Query$CalendarPeriod data,
     required Variables$Query$CalendarPeriod variables,
     bool broadcast = true,
-  }) =>
-      this.writeQuery(
-        graphql.Request(
-          operation:
-              graphql.Operation(document: documentNodeQueryCalendarPeriod),
-          variables: variables.toJson(),
-        ),
-        data: data.toJson(),
-        broadcast: broadcast,
-      );
+  }) => this.writeQuery(
+    graphql.Request(
+      operation: graphql.Operation(document: documentNodeQueryCalendarPeriod),
+      variables: variables.toJson(),
+    ),
+    data: data.toJson(),
+    broadcast: broadcast,
+  );
 
   Query$CalendarPeriod? readQuery$CalendarPeriod({
     required Variables$Query$CalendarPeriod variables,
@@ -518,11 +485,11 @@ extension ClientExtension$Query$CalendarPeriod on graphql.GraphQLClient {
 }
 
 graphql_flutter.QueryHookResult<Query$CalendarPeriod> useQuery$CalendarPeriod(
-        Options$Query$CalendarPeriod options) =>
-    graphql_flutter.useQuery(options);
+  Options$Query$CalendarPeriod options,
+) => graphql_flutter.useQuery(options);
 graphql.ObservableQuery<Query$CalendarPeriod> useWatchQuery$CalendarPeriod(
-        WatchOptions$Query$CalendarPeriod options) =>
-    graphql_flutter.useWatchQuery(options);
+  WatchOptions$Query$CalendarPeriod options,
+) => graphql_flutter.useWatchQuery(options);
 
 class Query$CalendarPeriod$Widget
     extends graphql_flutter.Query<Query$CalendarPeriod> {
@@ -530,11 +497,7 @@ class Query$CalendarPeriod$Widget
     widgets.Key? key,
     required Options$Query$CalendarPeriod options,
     required graphql_flutter.QueryBuilder<Query$CalendarPeriod> builder,
-  }) : super(
-          key: key,
-          options: options,
-          builder: builder,
-        );
+  }) : super(key: key, options: options, builder: builder);
 }
 
 class Query$CalendarPeriod$calendar {
@@ -548,7 +511,8 @@ class Query$CalendarPeriod$calendar {
     final l$$__typename = json['__typename'];
     return Query$CalendarPeriod$calendar(
       period: Query$CalendarPeriod$calendar$period.fromJson(
-          (l$period as Map<String, dynamic>)),
+        (l$period as Map<String, dynamic>),
+      ),
       $__typename: (l$$__typename as String),
     );
   }
@@ -570,10 +534,7 @@ class Query$CalendarPeriod$calendar {
   int get hashCode {
     final l$period = period;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$period,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$period, l$$__typename]);
   }
 
   @override
@@ -602,10 +563,7 @@ class Query$CalendarPeriod$calendar {
 extension UtilityExtension$Query$CalendarPeriod$calendar
     on Query$CalendarPeriod$calendar {
   CopyWith$Query$CalendarPeriod$calendar<Query$CalendarPeriod$calendar>
-      get copyWith => CopyWith$Query$CalendarPeriod$calendar(
-            this,
-            (i) => i,
-          );
+  get copyWith => CopyWith$Query$CalendarPeriod$calendar(this, (i) => i);
 }
 
 abstract class CopyWith$Query$CalendarPeriod$calendar<TRes> {
@@ -626,10 +584,7 @@ abstract class CopyWith$Query$CalendarPeriod$calendar<TRes> {
 
 class _CopyWithImpl$Query$CalendarPeriod$calendar<TRes>
     implements CopyWith$Query$CalendarPeriod$calendar<TRes> {
-  _CopyWithImpl$Query$CalendarPeriod$calendar(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Query$CalendarPeriod$calendar(this._instance, this._then);
 
   final Query$CalendarPeriod$calendar _instance;
 
@@ -637,23 +592,24 @@ class _CopyWithImpl$Query$CalendarPeriod$calendar<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({
-    Object? period = _undefined,
-    Object? $__typename = _undefined,
-  }) =>
-      _then(Query$CalendarPeriod$calendar(
-        period: period == _undefined || period == null
-            ? _instance.period
-            : (period as Query$CalendarPeriod$calendar$period),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  TRes call({Object? period = _undefined, Object? $__typename = _undefined}) =>
+      _then(
+        Query$CalendarPeriod$calendar(
+          period: period == _undefined || period == null
+              ? _instance.period
+              : (period as Query$CalendarPeriod$calendar$period),
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String),
+        ),
+      );
 
   CopyWith$Query$CalendarPeriod$calendar$period<TRes> get period {
     final local$period = _instance.period;
     return CopyWith$Query$CalendarPeriod$calendar$period(
-        local$period, (e) => call(period: e));
+      local$period,
+      (e) => call(period: e),
+    );
   }
 }
 
@@ -663,10 +619,7 @@ class _CopyWithStubImpl$Query$CalendarPeriod$calendar<TRes>
 
   TRes _res;
 
-  call({
-    Query$CalendarPeriod$calendar$period? period,
-    String? $__typename,
-  }) =>
+  call({Query$CalendarPeriod$calendar$period? period, String? $__typename}) =>
       _res;
 
   CopyWith$Query$CalendarPeriod$calendar$period<TRes> get period =>
@@ -681,16 +634,21 @@ class Query$CalendarPeriod$calendar$period {
   });
 
   factory Query$CalendarPeriod$calendar$period.fromJson(
-      Map<String, dynamic> json) {
+    Map<String, dynamic> json,
+  ) {
     final l$activeDays = json['activeDays'];
     final l$events = json['events'];
     final l$$__typename = json['__typename'];
     return Query$CalendarPeriod$calendar$period(
-      activeDays:
-          (l$activeDays as List<dynamic>).map((e) => (e as String)).toList(),
+      activeDays: (l$activeDays as List<dynamic>)
+          .map((e) => (e as String))
+          .toList(),
       events: (l$events as List<dynamic>)
-          .map((e) => Query$CalendarPeriod$calendar$period$events.fromJson(
-              (e as Map<String, dynamic>)))
+          .map(
+            (e) => Query$CalendarPeriod$calendar$period$events.fromJson(
+              (e as Map<String, dynamic>),
+            ),
+          )
           .toList(),
       $__typename: (l$$__typename as String),
     );
@@ -770,11 +728,9 @@ class Query$CalendarPeriod$calendar$period {
 extension UtilityExtension$Query$CalendarPeriod$calendar$period
     on Query$CalendarPeriod$calendar$period {
   CopyWith$Query$CalendarPeriod$calendar$period<
-          Query$CalendarPeriod$calendar$period>
-      get copyWith => CopyWith$Query$CalendarPeriod$calendar$period(
-            this,
-            (i) => i,
-          );
+    Query$CalendarPeriod$calendar$period
+  >
+  get copyWith => CopyWith$Query$CalendarPeriod$calendar$period(this, (i) => i);
 }
 
 abstract class CopyWith$Query$CalendarPeriod$calendar$period<TRes> {
@@ -792,11 +748,15 @@ abstract class CopyWith$Query$CalendarPeriod$calendar$period<TRes> {
     String? $__typename,
   });
   TRes events(
-      Iterable<Query$CalendarPeriod$calendar$period$events> Function(
-              Iterable<
-                  CopyWith$Query$CalendarPeriod$calendar$period$events<
-                      Query$CalendarPeriod$calendar$period$events>>)
-          _fn);
+    Iterable<Query$CalendarPeriod$calendar$period$events> Function(
+      Iterable<
+        CopyWith$Query$CalendarPeriod$calendar$period$events<
+          Query$CalendarPeriod$calendar$period$events
+        >
+      >,
+    )
+    _fn,
+  );
 }
 
 class _CopyWithImpl$Query$CalendarPeriod$calendar$period<TRes>
@@ -816,31 +776,37 @@ class _CopyWithImpl$Query$CalendarPeriod$calendar$period<TRes>
     Object? activeDays = _undefined,
     Object? events = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Query$CalendarPeriod$calendar$period(
-        activeDays: activeDays == _undefined || activeDays == null
-            ? _instance.activeDays
-            : (activeDays as List<String>),
-        events: events == _undefined || events == null
-            ? _instance.events
-            : (events as List<Query$CalendarPeriod$calendar$period$events>),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  }) => _then(
+    Query$CalendarPeriod$calendar$period(
+      activeDays: activeDays == _undefined || activeDays == null
+          ? _instance.activeDays
+          : (activeDays as List<String>),
+      events: events == _undefined || events == null
+          ? _instance.events
+          : (events as List<Query$CalendarPeriod$calendar$period$events>),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 
   TRes events(
-          Iterable<Query$CalendarPeriod$calendar$period$events> Function(
-                  Iterable<
-                      CopyWith$Query$CalendarPeriod$calendar$period$events<
-                          Query$CalendarPeriod$calendar$period$events>>)
-              _fn) =>
-      call(
-          events: _fn(_instance.events
-              .map((e) => CopyWith$Query$CalendarPeriod$calendar$period$events(
-                    e,
-                    (i) => i,
-                  ))).toList());
+    Iterable<Query$CalendarPeriod$calendar$period$events> Function(
+      Iterable<
+        CopyWith$Query$CalendarPeriod$calendar$period$events<
+          Query$CalendarPeriod$calendar$period$events
+        >
+      >,
+    )
+    _fn,
+  ) => call(
+    events: _fn(
+      _instance.events.map(
+        (e) =>
+            CopyWith$Query$CalendarPeriod$calendar$period$events(e, (i) => i),
+      ),
+    ).toList(),
+  );
 }
 
 class _CopyWithStubImpl$Query$CalendarPeriod$calendar$period<TRes>
@@ -853,8 +819,7 @@ class _CopyWithStubImpl$Query$CalendarPeriod$calendar$period<TRes>
     List<String>? activeDays,
     List<Query$CalendarPeriod$calendar$period$events>? events,
     String? $__typename,
-  }) =>
-      _res;
+  }) => _res;
 
   events(_fn) => _res;
 }
@@ -867,7 +832,8 @@ class Query$CalendarPeriod$calendar$period$events {
   });
 
   factory Query$CalendarPeriod$calendar$period$events.fromJson(
-      Map<String, dynamic> json) {
+    Map<String, dynamic> json,
+  ) {
     final l$start = json['start'];
     final l$end = json['end'];
     final l$$__typename = json['__typename'];
@@ -900,11 +866,7 @@ class Query$CalendarPeriod$calendar$period$events {
     final l$start = start;
     final l$end = end;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$start,
-      l$end,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$start, l$end, l$$__typename]);
   }
 
   @override
@@ -938,11 +900,10 @@ class Query$CalendarPeriod$calendar$period$events {
 extension UtilityExtension$Query$CalendarPeriod$calendar$period$events
     on Query$CalendarPeriod$calendar$period$events {
   CopyWith$Query$CalendarPeriod$calendar$period$events<
-          Query$CalendarPeriod$calendar$period$events>
-      get copyWith => CopyWith$Query$CalendarPeriod$calendar$period$events(
-            this,
-            (i) => i,
-          );
+    Query$CalendarPeriod$calendar$period$events
+  >
+  get copyWith =>
+      CopyWith$Query$CalendarPeriod$calendar$period$events(this, (i) => i);
 }
 
 abstract class CopyWith$Query$CalendarPeriod$calendar$period$events<TRes> {
@@ -954,11 +915,7 @@ abstract class CopyWith$Query$CalendarPeriod$calendar$period$events<TRes> {
   factory CopyWith$Query$CalendarPeriod$calendar$period$events.stub(TRes res) =
       _CopyWithStubImpl$Query$CalendarPeriod$calendar$period$events;
 
-  TRes call({
-    String? start,
-    String? end,
-    String? $__typename,
-  });
+  TRes call({String? start, String? end, String? $__typename});
 }
 
 class _CopyWithImpl$Query$CalendarPeriod$calendar$period$events<TRes>
@@ -978,16 +935,17 @@ class _CopyWithImpl$Query$CalendarPeriod$calendar$period$events<TRes>
     Object? start = _undefined,
     Object? end = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Query$CalendarPeriod$calendar$period$events(
-        start: start == _undefined || start == null
-            ? _instance.start
-            : (start as String),
-        end: end == _undefined || end == null ? _instance.end : (end as String),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  }) => _then(
+    Query$CalendarPeriod$calendar$period$events(
+      start: start == _undefined || start == null
+          ? _instance.start
+          : (start as String),
+      end: end == _undefined || end == null ? _instance.end : (end as String),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 }
 
 class _CopyWithStubImpl$Query$CalendarPeriod$calendar$period$events<TRes>
@@ -996,19 +954,12 @@ class _CopyWithStubImpl$Query$CalendarPeriod$calendar$period$events<TRes>
 
   TRes _res;
 
-  call({
-    String? start,
-    String? end,
-    String? $__typename,
-  }) =>
-      _res;
+  call({String? start, String? end, String? $__typename}) => _res;
 }
 
 class Variables$Query$CalendarDay {
   factory Variables$Query$CalendarDay({required String date}) =>
-      Variables$Query$CalendarDay._({
-        r'date': date,
-      });
+      Variables$Query$CalendarDay._({r'date': date});
 
   Variables$Query$CalendarDay._(this._$data);
 
@@ -1031,10 +982,7 @@ class Variables$Query$CalendarDay {
   }
 
   CopyWith$Variables$Query$CalendarDay<Variables$Query$CalendarDay>
-      get copyWith => CopyWith$Variables$Query$CalendarDay(
-            this,
-            (i) => i,
-          );
+  get copyWith => CopyWith$Variables$Query$CalendarDay(this, (i) => i);
 
   @override
   bool operator ==(Object other) {
@@ -1074,10 +1022,7 @@ abstract class CopyWith$Variables$Query$CalendarDay<TRes> {
 
 class _CopyWithImpl$Variables$Query$CalendarDay<TRes>
     implements CopyWith$Variables$Query$CalendarDay<TRes> {
-  _CopyWithImpl$Variables$Query$CalendarDay(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Variables$Query$CalendarDay(this._instance, this._then);
 
   final Variables$Query$CalendarDay _instance;
 
@@ -1085,11 +1030,12 @@ class _CopyWithImpl$Variables$Query$CalendarDay<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({Object? date = _undefined}) =>
-      _then(Variables$Query$CalendarDay._({
-        ..._instance._$data,
-        if (date != _undefined && date != null) 'date': (date as String),
-      }));
+  TRes call({Object? date = _undefined}) => _then(
+    Variables$Query$CalendarDay._({
+      ..._instance._$data,
+      if (date != _undefined && date != null) 'date': (date as String),
+    }),
+  );
 }
 
 class _CopyWithStubImpl$Variables$Query$CalendarDay<TRes>
@@ -1102,10 +1048,7 @@ class _CopyWithStubImpl$Variables$Query$CalendarDay<TRes>
 }
 
 class Query$CalendarDay {
-  Query$CalendarDay({
-    this.calendar,
-    this.$__typename = 'QueryRoot',
-  });
+  Query$CalendarDay({this.calendar, this.$__typename = 'QueryRoot'});
 
   factory Query$CalendarDay.fromJson(Map<String, dynamic> json) {
     final l$calendar = json['calendar'];
@@ -1114,7 +1057,8 @@ class Query$CalendarDay {
       calendar: l$calendar == null
           ? null
           : Query$CalendarDay$calendar.fromJson(
-              (l$calendar as Map<String, dynamic>)),
+              (l$calendar as Map<String, dynamic>),
+            ),
       $__typename: (l$$__typename as String),
     );
   }
@@ -1136,10 +1080,7 @@ class Query$CalendarDay {
   int get hashCode {
     final l$calendar = calendar;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$calendar,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$calendar, l$$__typename]);
   }
 
   @override
@@ -1166,10 +1107,7 @@ class Query$CalendarDay {
 
 extension UtilityExtension$Query$CalendarDay on Query$CalendarDay {
   CopyWith$Query$CalendarDay<Query$CalendarDay> get copyWith =>
-      CopyWith$Query$CalendarDay(
-        this,
-        (i) => i,
-      );
+      CopyWith$Query$CalendarDay(this, (i) => i);
 }
 
 abstract class CopyWith$Query$CalendarDay<TRes> {
@@ -1181,19 +1119,13 @@ abstract class CopyWith$Query$CalendarDay<TRes> {
   factory CopyWith$Query$CalendarDay.stub(TRes res) =
       _CopyWithStubImpl$Query$CalendarDay;
 
-  TRes call({
-    Query$CalendarDay$calendar? calendar,
-    String? $__typename,
-  });
+  TRes call({Query$CalendarDay$calendar? calendar, String? $__typename});
   CopyWith$Query$CalendarDay$calendar<TRes> get calendar;
 }
 
 class _CopyWithImpl$Query$CalendarDay<TRes>
     implements CopyWith$Query$CalendarDay<TRes> {
-  _CopyWithImpl$Query$CalendarDay(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Query$CalendarDay(this._instance, this._then);
 
   final Query$CalendarDay _instance;
 
@@ -1204,22 +1136,25 @@ class _CopyWithImpl$Query$CalendarDay<TRes>
   TRes call({
     Object? calendar = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Query$CalendarDay(
-        calendar: calendar == _undefined
-            ? _instance.calendar
-            : (calendar as Query$CalendarDay$calendar?),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  }) => _then(
+    Query$CalendarDay(
+      calendar: calendar == _undefined
+          ? _instance.calendar
+          : (calendar as Query$CalendarDay$calendar?),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 
   CopyWith$Query$CalendarDay$calendar<TRes> get calendar {
     final local$calendar = _instance.calendar;
     return local$calendar == null
         ? CopyWith$Query$CalendarDay$calendar.stub(_then(_instance))
         : CopyWith$Query$CalendarDay$calendar(
-            local$calendar, (e) => call(calendar: e));
+            local$calendar,
+            (e) => call(calendar: e),
+          );
   }
 }
 
@@ -1229,62 +1164,70 @@ class _CopyWithStubImpl$Query$CalendarDay<TRes>
 
   TRes _res;
 
-  call({
-    Query$CalendarDay$calendar? calendar,
-    String? $__typename,
-  }) =>
-      _res;
+  call({Query$CalendarDay$calendar? calendar, String? $__typename}) => _res;
 
   CopyWith$Query$CalendarDay$calendar<TRes> get calendar =>
       CopyWith$Query$CalendarDay$calendar.stub(_res);
 }
 
-const documentNodeQueryCalendarDay = DocumentNode(definitions: [
-  OperationDefinitionNode(
-    type: OperationType.query,
-    name: NameNode(value: 'CalendarDay'),
-    variableDefinitions: [
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'date')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'Date'),
-          isNonNull: true,
+const documentNodeQueryCalendarDay = DocumentNode(
+  definitions: [
+    OperationDefinitionNode(
+      type: OperationType.query,
+      name: NameNode(value: 'CalendarDay'),
+      variableDefinitions: [
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'date')),
+          type: NamedTypeNode(name: NameNode(value: 'Date'), isNonNull: true),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      )
-    ],
-    directives: [],
-    selectionSet: SelectionSetNode(selections: [
-      FieldNode(
-        name: NameNode(value: 'calendar'),
-        alias: null,
-        arguments: [],
-        directives: [],
-        selectionSet: SelectionSetNode(selections: [
+      ],
+      directives: [],
+      selectionSet: SelectionSetNode(
+        selections: [
           FieldNode(
-            name: NameNode(value: 'day'),
+            name: NameNode(value: 'calendar'),
             alias: null,
-            arguments: [
-              ArgumentNode(
-                name: NameNode(value: 'day'),
-                value: VariableNode(name: NameNode(value: 'date')),
-              )
-            ],
+            arguments: [],
             directives: [],
-            selectionSet: SelectionSetNode(selections: [
-              FragmentSpreadNode(
-                name: NameNode(value: 'CalendarDay'),
-                directives: [],
-              ),
-              FieldNode(
-                name: NameNode(value: '__typename'),
-                alias: null,
-                arguments: [],
-                directives: [],
-                selectionSet: null,
-              ),
-            ]),
+            selectionSet: SelectionSetNode(
+              selections: [
+                FieldNode(
+                  name: NameNode(value: 'day'),
+                  alias: null,
+                  arguments: [
+                    ArgumentNode(
+                      name: NameNode(value: 'day'),
+                      value: VariableNode(name: NameNode(value: 'date')),
+                    ),
+                  ],
+                  directives: [],
+                  selectionSet: SelectionSetNode(
+                    selections: [
+                      FragmentSpreadNode(
+                        name: NameNode(value: 'CalendarDay'),
+                        directives: [],
+                      ),
+                      FieldNode(
+                        name: NameNode(value: '__typename'),
+                        alias: null,
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null,
+                      ),
+                    ],
+                  ),
+                ),
+                FieldNode(
+                  name: NameNode(value: '__typename'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+              ],
+            ),
           ),
           FieldNode(
             name: NameNode(value: '__typename'),
@@ -1293,20 +1236,13 @@ const documentNodeQueryCalendarDay = DocumentNode(definitions: [
             directives: [],
             selectionSet: null,
           ),
-        ]),
+        ],
       ),
-      FieldNode(
-        name: NameNode(value: '__typename'),
-        alias: null,
-        arguments: [],
-        directives: [],
-        selectionSet: null,
-      ),
-    ]),
-  ),
-  fragmentDefinitionCalendarDay,
-  fragmentDefinitionCalendarEntry,
-]);
+    ),
+    fragmentDefinitionCalendarDay,
+    fragmentDefinitionCalendarEntry,
+  ],
+);
 Query$CalendarDay _parserFn$Query$CalendarDay(Map<String, dynamic> data) =>
     Query$CalendarDay.fromJson(data);
 typedef OnQueryComplete$Query$CalendarDay = FutureOr<void> Function(
@@ -1328,36 +1264,36 @@ class Options$Query$CalendarDay
     graphql.Context? context,
     OnQueryComplete$Query$CalendarDay? onComplete,
     graphql.OnQueryError? onError,
-  })  : onCompleteWithParsed = onComplete,
-        super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          pollInterval: pollInterval,
-          context: context,
-          onComplete: onComplete == null
-              ? null
-              : (data) => onComplete(
-                    data,
-                    data == null ? null : _parserFn$Query$CalendarDay(data),
-                  ),
-          onError: onError,
-          document: documentNodeQueryCalendarDay,
-          parserFn: _parserFn$Query$CalendarDay,
-        );
+  }) : onCompleteWithParsed = onComplete,
+       super(
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         pollInterval: pollInterval,
+         context: context,
+         onComplete: onComplete == null
+             ? null
+             : (data) => onComplete(
+                 data,
+                 data == null ? null : _parserFn$Query$CalendarDay(data),
+               ),
+         onError: onError,
+         document: documentNodeQueryCalendarDay,
+         parserFn: _parserFn$Query$CalendarDay,
+       );
 
   final OnQueryComplete$Query$CalendarDay? onCompleteWithParsed;
 
   @override
   List<Object?> get properties => [
-        ...super.onComplete == null
-            ? super.properties
-            : super.properties.where((property) => property != onComplete),
-        onCompleteWithParsed,
-      ];
+    ...super.onComplete == null
+        ? super.properties
+        : super.properties.where((property) => property != onComplete),
+    onCompleteWithParsed,
+  ];
 }
 
 class WatchOptions$Query$CalendarDay
@@ -1376,20 +1312,20 @@ class WatchOptions$Query$CalendarDay
     bool carryForwardDataOnException = true,
     bool fetchResults = false,
   }) : super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          document: documentNodeQueryCalendarDay,
-          pollInterval: pollInterval,
-          eagerlyFetchResults: eagerlyFetchResults,
-          carryForwardDataOnException: carryForwardDataOnException,
-          fetchResults: fetchResults,
-          parserFn: _parserFn$Query$CalendarDay,
-        );
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         document: documentNodeQueryCalendarDay,
+         pollInterval: pollInterval,
+         eagerlyFetchResults: eagerlyFetchResults,
+         carryForwardDataOnException: carryForwardDataOnException,
+         fetchResults: fetchResults,
+         parserFn: _parserFn$Query$CalendarDay,
+       );
 }
 
 class FetchMoreOptions$Query$CalendarDay extends graphql.FetchMoreOptions {
@@ -1397,34 +1333,33 @@ class FetchMoreOptions$Query$CalendarDay extends graphql.FetchMoreOptions {
     required graphql.UpdateQuery updateQuery,
     required Variables$Query$CalendarDay variables,
   }) : super(
-          updateQuery: updateQuery,
-          variables: variables.toJson(),
-          document: documentNodeQueryCalendarDay,
-        );
+         updateQuery: updateQuery,
+         variables: variables.toJson(),
+         document: documentNodeQueryCalendarDay,
+       );
 }
 
 extension ClientExtension$Query$CalendarDay on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$CalendarDay>> query$CalendarDay(
-          Options$Query$CalendarDay options) async =>
-      await this.query(options);
+    Options$Query$CalendarDay options,
+  ) async => await this.query(options);
 
   graphql.ObservableQuery<Query$CalendarDay> watchQuery$CalendarDay(
-          WatchOptions$Query$CalendarDay options) =>
-      this.watchQuery(options);
+    WatchOptions$Query$CalendarDay options,
+  ) => this.watchQuery(options);
 
   void writeQuery$CalendarDay({
     required Query$CalendarDay data,
     required Variables$Query$CalendarDay variables,
     bool broadcast = true,
-  }) =>
-      this.writeQuery(
-        graphql.Request(
-          operation: graphql.Operation(document: documentNodeQueryCalendarDay),
-          variables: variables.toJson(),
-        ),
-        data: data.toJson(),
-        broadcast: broadcast,
-      );
+  }) => this.writeQuery(
+    graphql.Request(
+      operation: graphql.Operation(document: documentNodeQueryCalendarDay),
+      variables: variables.toJson(),
+    ),
+    data: data.toJson(),
+    broadcast: broadcast,
+  );
 
   Query$CalendarDay? readQuery$CalendarDay({
     required Variables$Query$CalendarDay variables,
@@ -1442,11 +1377,11 @@ extension ClientExtension$Query$CalendarDay on graphql.GraphQLClient {
 }
 
 graphql_flutter.QueryHookResult<Query$CalendarDay> useQuery$CalendarDay(
-        Options$Query$CalendarDay options) =>
-    graphql_flutter.useQuery(options);
+  Options$Query$CalendarDay options,
+) => graphql_flutter.useQuery(options);
 graphql.ObservableQuery<Query$CalendarDay> useWatchQuery$CalendarDay(
-        WatchOptions$Query$CalendarDay options) =>
-    graphql_flutter.useWatchQuery(options);
+  WatchOptions$Query$CalendarDay options,
+) => graphql_flutter.useWatchQuery(options);
 
 class Query$CalendarDay$Widget
     extends graphql_flutter.Query<Query$CalendarDay> {
@@ -1454,11 +1389,7 @@ class Query$CalendarDay$Widget
     widgets.Key? key,
     required Options$Query$CalendarDay options,
     required graphql_flutter.QueryBuilder<Query$CalendarDay> builder,
-  }) : super(
-          key: key,
-          options: options,
-          builder: builder,
-        );
+  }) : super(key: key, options: options, builder: builder);
 }
 
 class Query$CalendarDay$calendar {
@@ -1493,10 +1424,7 @@ class Query$CalendarDay$calendar {
   int get hashCode {
     final l$day = day;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$day,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$day, l$$__typename]);
   }
 
   @override
@@ -1525,10 +1453,7 @@ class Query$CalendarDay$calendar {
 extension UtilityExtension$Query$CalendarDay$calendar
     on Query$CalendarDay$calendar {
   CopyWith$Query$CalendarDay$calendar<Query$CalendarDay$calendar>
-      get copyWith => CopyWith$Query$CalendarDay$calendar(
-            this,
-            (i) => i,
-          );
+  get copyWith => CopyWith$Query$CalendarDay$calendar(this, (i) => i);
 }
 
 abstract class CopyWith$Query$CalendarDay$calendar<TRes> {
@@ -1540,19 +1465,13 @@ abstract class CopyWith$Query$CalendarDay$calendar<TRes> {
   factory CopyWith$Query$CalendarDay$calendar.stub(TRes res) =
       _CopyWithStubImpl$Query$CalendarDay$calendar;
 
-  TRes call({
-    Fragment$CalendarDay? day,
-    String? $__typename,
-  });
+  TRes call({Fragment$CalendarDay? day, String? $__typename});
   CopyWith$Fragment$CalendarDay<TRes> get day;
 }
 
 class _CopyWithImpl$Query$CalendarDay$calendar<TRes>
     implements CopyWith$Query$CalendarDay$calendar<TRes> {
-  _CopyWithImpl$Query$CalendarDay$calendar(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Query$CalendarDay$calendar(this._instance, this._then);
 
   final Query$CalendarDay$calendar _instance;
 
@@ -1560,18 +1479,17 @@ class _CopyWithImpl$Query$CalendarDay$calendar<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({
-    Object? day = _undefined,
-    Object? $__typename = _undefined,
-  }) =>
-      _then(Query$CalendarDay$calendar(
-        day: day == _undefined || day == null
-            ? _instance.day
-            : (day as Fragment$CalendarDay),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  TRes call({Object? day = _undefined, Object? $__typename = _undefined}) =>
+      _then(
+        Query$CalendarDay$calendar(
+          day: day == _undefined || day == null
+              ? _instance.day
+              : (day as Fragment$CalendarDay),
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String),
+        ),
+      );
 
   CopyWith$Fragment$CalendarDay<TRes> get day {
     final local$day = _instance.day;
@@ -1585,11 +1503,7 @@ class _CopyWithStubImpl$Query$CalendarDay$calendar<TRes>
 
   TRes _res;
 
-  call({
-    Fragment$CalendarDay? day,
-    String? $__typename,
-  }) =>
-      _res;
+  call({Fragment$CalendarDay? day, String? $__typename}) => _res;
 
   CopyWith$Fragment$CalendarDay<TRes> get day =>
       CopyWith$Fragment$CalendarDay.stub(_res);

@@ -1,5 +1,7 @@
 import 'dart:async';
+
 import 'episode.graphql.dart';
+
 import 'package:flutter/widgets.dart' as widgets;
 import 'package:gql/ast.dart';
 import 'package:graphql/client.dart' as graphql;
@@ -24,7 +26,8 @@ class Fragment$PlayableMediaItemShort {
       id: (l$id as String),
       streams: (l$streams as List<dynamic>)
           .map(
-              (e) => Fragment$BasicStream.fromJson((e as Map<String, dynamic>)))
+            (e) => Fragment$BasicStream.fromJson((e as Map<String, dynamic>)),
+          )
           .toList(),
       title: (l$title as String),
       image: (l$image as String?),
@@ -121,10 +124,7 @@ class Fragment$PlayableMediaItemShort {
 extension UtilityExtension$Fragment$PlayableMediaItemShort
     on Fragment$PlayableMediaItemShort {
   CopyWith$Fragment$PlayableMediaItemShort<Fragment$PlayableMediaItemShort>
-      get copyWith => CopyWith$Fragment$PlayableMediaItemShort(
-            this,
-            (i) => i,
-          );
+  get copyWith => CopyWith$Fragment$PlayableMediaItemShort(this, (i) => i);
 }
 
 abstract class CopyWith$Fragment$PlayableMediaItemShort<TRes> {
@@ -144,17 +144,16 @@ abstract class CopyWith$Fragment$PlayableMediaItemShort<TRes> {
     String? $__typename,
   });
   TRes streams(
-      Iterable<Fragment$BasicStream> Function(
-              Iterable<CopyWith$Fragment$BasicStream<Fragment$BasicStream>>)
-          _fn);
+    Iterable<Fragment$BasicStream> Function(
+      Iterable<CopyWith$Fragment$BasicStream<Fragment$BasicStream>>,
+    )
+    _fn,
+  );
 }
 
 class _CopyWithImpl$Fragment$PlayableMediaItemShort<TRes>
     implements CopyWith$Fragment$PlayableMediaItemShort<TRes> {
-  _CopyWithImpl$Fragment$PlayableMediaItemShort(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Fragment$PlayableMediaItemShort(this._instance, this._then);
 
   final Fragment$PlayableMediaItemShort _instance;
 
@@ -168,31 +167,32 @@ class _CopyWithImpl$Fragment$PlayableMediaItemShort<TRes>
     Object? title = _undefined,
     Object? image = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Fragment$PlayableMediaItemShort(
-        id: id == _undefined || id == null ? _instance.id : (id as String),
-        streams: streams == _undefined || streams == null
-            ? _instance.streams
-            : (streams as List<Fragment$BasicStream>),
-        title: title == _undefined || title == null
-            ? _instance.title
-            : (title as String),
-        image: image == _undefined ? _instance.image : (image as String?),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  }) => _then(
+    Fragment$PlayableMediaItemShort(
+      id: id == _undefined || id == null ? _instance.id : (id as String),
+      streams: streams == _undefined || streams == null
+          ? _instance.streams
+          : (streams as List<Fragment$BasicStream>),
+      title: title == _undefined || title == null
+          ? _instance.title
+          : (title as String),
+      image: image == _undefined ? _instance.image : (image as String?),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 
   TRes streams(
-          Iterable<Fragment$BasicStream> Function(
-                  Iterable<CopyWith$Fragment$BasicStream<Fragment$BasicStream>>)
-              _fn) =>
-      call(
-          streams:
-              _fn(_instance.streams.map((e) => CopyWith$Fragment$BasicStream(
-                    e,
-                    (i) => i,
-                  ))).toList());
+    Iterable<Fragment$BasicStream> Function(
+      Iterable<CopyWith$Fragment$BasicStream<Fragment$BasicStream>>,
+    )
+    _fn,
+  ) => call(
+    streams: _fn(
+      _instance.streams.map((e) => CopyWith$Fragment$BasicStream(e, (i) => i)),
+    ).toList(),
+  );
 }
 
 class _CopyWithStubImpl$Fragment$PlayableMediaItemShort<TRes>
@@ -207,8 +207,7 @@ class _CopyWithStubImpl$Fragment$PlayableMediaItemShort<TRes>
     String? title,
     String? image,
     String? $__typename,
-  }) =>
-      _res;
+  }) => _res;
 
   streams(_fn) => _res;
 }
@@ -216,70 +215,74 @@ class _CopyWithStubImpl$Fragment$PlayableMediaItemShort<TRes>
 const fragmentDefinitionPlayableMediaItemShort = FragmentDefinitionNode(
   name: NameNode(value: 'PlayableMediaItemShort'),
   typeCondition: TypeConditionNode(
-      on: NamedTypeNode(
-    name: NameNode(value: 'Short'),
-    isNonNull: false,
-  )),
+    on: NamedTypeNode(name: NameNode(value: 'Short'), isNonNull: false),
+  ),
   directives: [],
-  selectionSet: SelectionSetNode(selections: [
-    FieldNode(
-      name: NameNode(value: 'id'),
-      alias: null,
-      arguments: [],
-      directives: [],
-      selectionSet: null,
-    ),
-    FieldNode(
-      name: NameNode(value: 'streams'),
-      alias: null,
-      arguments: [],
-      directives: [],
-      selectionSet: SelectionSetNode(selections: [
-        FragmentSpreadNode(
-          name: NameNode(value: 'BasicStream'),
-          directives: [],
+  selectionSet: SelectionSetNode(
+    selections: [
+      FieldNode(
+        name: NameNode(value: 'id'),
+        alias: null,
+        arguments: [],
+        directives: [],
+        selectionSet: null,
+      ),
+      FieldNode(
+        name: NameNode(value: 'streams'),
+        alias: null,
+        arguments: [],
+        directives: [],
+        selectionSet: SelectionSetNode(
+          selections: [
+            FragmentSpreadNode(
+              name: NameNode(value: 'BasicStream'),
+              directives: [],
+            ),
+            FieldNode(
+              name: NameNode(value: '__typename'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null,
+            ),
+          ],
         ),
-        FieldNode(
-          name: NameNode(value: '__typename'),
-          alias: null,
-          arguments: [],
-          directives: [],
-          selectionSet: null,
-        ),
-      ]),
-    ),
-    FieldNode(
-      name: NameNode(value: 'title'),
-      alias: null,
-      arguments: [],
-      directives: [],
-      selectionSet: null,
-    ),
-    FieldNode(
-      name: NameNode(value: 'image'),
-      alias: null,
-      arguments: [
-        ArgumentNode(
-          name: NameNode(value: 'style'),
-          value: EnumValueNode(name: NameNode(value: 'poster')),
-        )
-      ],
-      directives: [],
-      selectionSet: null,
-    ),
-    FieldNode(
-      name: NameNode(value: '__typename'),
-      alias: null,
-      arguments: [],
-      directives: [],
-      selectionSet: null,
-    ),
-  ]),
+      ),
+      FieldNode(
+        name: NameNode(value: 'title'),
+        alias: null,
+        arguments: [],
+        directives: [],
+        selectionSet: null,
+      ),
+      FieldNode(
+        name: NameNode(value: 'image'),
+        alias: null,
+        arguments: [
+          ArgumentNode(
+            name: NameNode(value: 'style'),
+            value: EnumValueNode(name: NameNode(value: 'poster')),
+          ),
+        ],
+        directives: [],
+        selectionSet: null,
+      ),
+      FieldNode(
+        name: NameNode(value: '__typename'),
+        alias: null,
+        arguments: [],
+        directives: [],
+        selectionSet: null,
+      ),
+    ],
+  ),
 );
-const documentNodeFragmentPlayableMediaItemShort = DocumentNode(definitions: [
-  fragmentDefinitionPlayableMediaItemShort,
-  fragmentDefinitionBasicStream,
-]);
+const documentNodeFragmentPlayableMediaItemShort = DocumentNode(
+  definitions: [
+    fragmentDefinitionPlayableMediaItemShort,
+    fragmentDefinitionBasicStream,
+  ],
+);
 
 extension ClientExtension$Fragment$PlayableMediaItemShort
     on graphql.GraphQLClient {
@@ -287,18 +290,17 @@ extension ClientExtension$Fragment$PlayableMediaItemShort
     required Fragment$PlayableMediaItemShort data,
     required Map<String, dynamic> idFields,
     bool broadcast = true,
-  }) =>
-      this.writeFragment(
-        graphql.FragmentRequest(
-          idFields: idFields,
-          fragment: const graphql.Fragment(
-            fragmentName: 'PlayableMediaItemShort',
-            document: documentNodeFragmentPlayableMediaItemShort,
-          ),
-        ),
-        data: data.toJson(),
-        broadcast: broadcast,
-      );
+  }) => this.writeFragment(
+    graphql.FragmentRequest(
+      idFields: idFields,
+      fragment: const graphql.Fragment(
+        fragmentName: 'PlayableMediaItemShort',
+        document: documentNodeFragmentPlayableMediaItemShort,
+      ),
+    ),
+    data: data.toJson(),
+    broadcast: broadcast,
+  );
 
   Fragment$PlayableMediaItemShort? readFragment$PlayableMediaItemShort({
     required Map<String, dynamic> idFields,
@@ -352,7 +354,8 @@ class Fragment$Short implements Fragment$PlayableMediaItemShort {
           : Fragment$Short$source.fromJson((l$source as Map<String, dynamic>)),
       streams: (l$streams as List<dynamic>)
           .map(
-              (e) => Fragment$BasicStream.fromJson((e as Map<String, dynamic>)))
+            (e) => Fragment$BasicStream.fromJson((e as Map<String, dynamic>)),
+          )
           .toList(),
       $__typename: (l$$__typename as String),
     );
@@ -478,10 +481,7 @@ class Fragment$Short implements Fragment$PlayableMediaItemShort {
 
 extension UtilityExtension$Fragment$Short on Fragment$Short {
   CopyWith$Fragment$Short<Fragment$Short> get copyWith =>
-      CopyWith$Fragment$Short(
-        this,
-        (i) => i,
-      );
+      CopyWith$Fragment$Short(this, (i) => i);
 }
 
 abstract class CopyWith$Fragment$Short<TRes> {
@@ -505,17 +505,16 @@ abstract class CopyWith$Fragment$Short<TRes> {
   });
   CopyWith$Fragment$Short$source<TRes> get source;
   TRes streams(
-      Iterable<Fragment$BasicStream> Function(
-              Iterable<CopyWith$Fragment$BasicStream<Fragment$BasicStream>>)
-          _fn);
+    Iterable<Fragment$BasicStream> Function(
+      Iterable<CopyWith$Fragment$BasicStream<Fragment$BasicStream>>,
+    )
+    _fn,
+  );
 }
 
 class _CopyWithImpl$Fragment$Short<TRes>
     implements CopyWith$Fragment$Short<TRes> {
-  _CopyWithImpl$Fragment$Short(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Fragment$Short(this._instance, this._then);
 
   final Fragment$Short _instance;
 
@@ -532,29 +531,30 @@ class _CopyWithImpl$Fragment$Short<TRes>
     Object? source = _undefined,
     Object? streams = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Fragment$Short(
-        id: id == _undefined || id == null ? _instance.id : (id as String),
-        title: title == _undefined || title == null
-            ? _instance.title
-            : (title as String),
-        description: description == _undefined
-            ? _instance.description
-            : (description as String?),
-        inMyList: inMyList == _undefined || inMyList == null
-            ? _instance.inMyList
-            : (inMyList as bool),
-        image: image == _undefined ? _instance.image : (image as String?),
-        source: source == _undefined
-            ? _instance.source
-            : (source as Fragment$Short$source?),
-        streams: streams == _undefined || streams == null
-            ? _instance.streams
-            : (streams as List<Fragment$BasicStream>),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  }) => _then(
+    Fragment$Short(
+      id: id == _undefined || id == null ? _instance.id : (id as String),
+      title: title == _undefined || title == null
+          ? _instance.title
+          : (title as String),
+      description: description == _undefined
+          ? _instance.description
+          : (description as String?),
+      inMyList: inMyList == _undefined || inMyList == null
+          ? _instance.inMyList
+          : (inMyList as bool),
+      image: image == _undefined ? _instance.image : (image as String?),
+      source: source == _undefined
+          ? _instance.source
+          : (source as Fragment$Short$source?),
+      streams: streams == _undefined || streams == null
+          ? _instance.streams
+          : (streams as List<Fragment$BasicStream>),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 
   CopyWith$Fragment$Short$source<TRes> get source {
     final local$source = _instance.source;
@@ -564,15 +564,15 @@ class _CopyWithImpl$Fragment$Short<TRes>
   }
 
   TRes streams(
-          Iterable<Fragment$BasicStream> Function(
-                  Iterable<CopyWith$Fragment$BasicStream<Fragment$BasicStream>>)
-              _fn) =>
-      call(
-          streams:
-              _fn(_instance.streams.map((e) => CopyWith$Fragment$BasicStream(
-                    e,
-                    (i) => i,
-                  ))).toList());
+    Iterable<Fragment$BasicStream> Function(
+      Iterable<CopyWith$Fragment$BasicStream<Fragment$BasicStream>>,
+    )
+    _fn,
+  ) => call(
+    streams: _fn(
+      _instance.streams.map((e) => CopyWith$Fragment$BasicStream(e, (i) => i)),
+    ).toList(),
+  );
 }
 
 class _CopyWithStubImpl$Fragment$Short<TRes>
@@ -590,8 +590,7 @@ class _CopyWithStubImpl$Fragment$Short<TRes>
     Fragment$Short$source? source,
     List<Fragment$BasicStream>? streams,
     String? $__typename,
-  }) =>
-      _res;
+  }) => _res;
 
   CopyWith$Fragment$Short$source<TRes> get source =>
       CopyWith$Fragment$Short$source.stub(_res);
@@ -602,94 +601,122 @@ class _CopyWithStubImpl$Fragment$Short<TRes>
 const fragmentDefinitionShort = FragmentDefinitionNode(
   name: NameNode(value: 'Short'),
   typeCondition: TypeConditionNode(
-      on: NamedTypeNode(
-    name: NameNode(value: 'Short'),
-    isNonNull: false,
-  )),
+    on: NamedTypeNode(name: NameNode(value: 'Short'), isNonNull: false),
+  ),
   directives: [],
-  selectionSet: SelectionSetNode(selections: [
-    FieldNode(
-      name: NameNode(value: 'id'),
-      alias: null,
-      arguments: [],
-      directives: [],
-      selectionSet: null,
-    ),
-    FieldNode(
-      name: NameNode(value: 'title'),
-      alias: null,
-      arguments: [],
-      directives: [],
-      selectionSet: null,
-    ),
-    FieldNode(
-      name: NameNode(value: 'description'),
-      alias: null,
-      arguments: [],
-      directives: [],
-      selectionSet: null,
-    ),
-    FieldNode(
-      name: NameNode(value: 'inMyList'),
-      alias: null,
-      arguments: [],
-      directives: [],
-      selectionSet: null,
-    ),
-    FieldNode(
-      name: NameNode(value: 'image'),
-      alias: null,
-      arguments: [
-        ArgumentNode(
-          name: NameNode(value: 'style'),
-          value: EnumValueNode(name: NameNode(value: 'poster')),
-        )
-      ],
-      directives: [],
-      selectionSet: null,
-    ),
-    FieldNode(
-      name: NameNode(value: 'source'),
-      alias: null,
-      arguments: [],
-      directives: [],
-      selectionSet: SelectionSetNode(selections: [
-        FieldNode(
-          name: NameNode(value: 'item'),
-          alias: null,
-          arguments: [],
-          directives: [],
-          selectionSet: SelectionSetNode(selections: [
-            InlineFragmentNode(
-              typeCondition: TypeConditionNode(
-                  on: NamedTypeNode(
-                name: NameNode(value: 'Episode'),
-                isNonNull: false,
-              )),
+  selectionSet: SelectionSetNode(
+    selections: [
+      FieldNode(
+        name: NameNode(value: 'id'),
+        alias: null,
+        arguments: [],
+        directives: [],
+        selectionSet: null,
+      ),
+      FieldNode(
+        name: NameNode(value: 'title'),
+        alias: null,
+        arguments: [],
+        directives: [],
+        selectionSet: null,
+      ),
+      FieldNode(
+        name: NameNode(value: 'description'),
+        alias: null,
+        arguments: [],
+        directives: [],
+        selectionSet: null,
+      ),
+      FieldNode(
+        name: NameNode(value: 'inMyList'),
+        alias: null,
+        arguments: [],
+        directives: [],
+        selectionSet: null,
+      ),
+      FieldNode(
+        name: NameNode(value: 'image'),
+        alias: null,
+        arguments: [
+          ArgumentNode(
+            name: NameNode(value: 'style'),
+            value: EnumValueNode(name: NameNode(value: 'poster')),
+          ),
+        ],
+        directives: [],
+        selectionSet: null,
+      ),
+      FieldNode(
+        name: NameNode(value: 'source'),
+        alias: null,
+        arguments: [],
+        directives: [],
+        selectionSet: SelectionSetNode(
+          selections: [
+            FieldNode(
+              name: NameNode(value: 'item'),
+              alias: null,
+              arguments: [],
               directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                  name: NameNode(value: 'id'),
-                  alias: null,
-                  arguments: [],
-                  directives: [],
-                  selectionSet: null,
-                ),
-                FieldNode(
-                  name: NameNode(value: 'title'),
-                  alias: null,
-                  arguments: [],
-                  directives: [],
-                  selectionSet: null,
-                ),
-                FieldNode(
-                  name: NameNode(value: '__typename'),
-                  alias: null,
-                  arguments: [],
-                  directives: [],
-                  selectionSet: null,
-                ),
-              ]),
+              selectionSet: SelectionSetNode(
+                selections: [
+                  InlineFragmentNode(
+                    typeCondition: TypeConditionNode(
+                      on: NamedTypeNode(
+                        name: NameNode(value: 'Episode'),
+                        isNonNull: false,
+                      ),
+                    ),
+                    directives: [],
+                    selectionSet: SelectionSetNode(
+                      selections: [
+                        FieldNode(
+                          name: NameNode(value: 'id'),
+                          alias: null,
+                          arguments: [],
+                          directives: [],
+                          selectionSet: null,
+                        ),
+                        FieldNode(
+                          name: NameNode(value: 'title'),
+                          alias: null,
+                          arguments: [],
+                          directives: [],
+                          selectionSet: null,
+                        ),
+                        FieldNode(
+                          name: NameNode(value: '__typename'),
+                          alias: null,
+                          arguments: [],
+                          directives: [],
+                          selectionSet: null,
+                        ),
+                      ],
+                    ),
+                  ),
+                  FieldNode(
+                    name: NameNode(value: '__typename'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null,
+                  ),
+                ],
+              ),
+            ),
+            FieldNode(
+              name: NameNode(value: 'start'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null,
+            ),
+            FieldNode(
+              name: NameNode(value: 'end'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null,
             ),
             FieldNode(
               name: NameNode(value: '__typename'),
@@ -698,67 +725,47 @@ const fragmentDefinitionShort = FragmentDefinitionNode(
               directives: [],
               selectionSet: null,
             ),
-          ]),
+          ],
         ),
-        FieldNode(
-          name: NameNode(value: 'start'),
-          alias: null,
-          arguments: [],
-          directives: [],
-          selectionSet: null,
-        ),
-        FieldNode(
-          name: NameNode(value: 'end'),
-          alias: null,
-          arguments: [],
-          directives: [],
-          selectionSet: null,
-        ),
-        FieldNode(
-          name: NameNode(value: '__typename'),
-          alias: null,
-          arguments: [],
-          directives: [],
-          selectionSet: null,
-        ),
-      ]),
-    ),
-    FragmentSpreadNode(
-      name: NameNode(value: 'PlayableMediaItemShort'),
-      directives: [],
-    ),
-    FieldNode(
-      name: NameNode(value: '__typename'),
-      alias: null,
-      arguments: [],
-      directives: [],
-      selectionSet: null,
-    ),
-  ]),
+      ),
+      FragmentSpreadNode(
+        name: NameNode(value: 'PlayableMediaItemShort'),
+        directives: [],
+      ),
+      FieldNode(
+        name: NameNode(value: '__typename'),
+        alias: null,
+        arguments: [],
+        directives: [],
+        selectionSet: null,
+      ),
+    ],
+  ),
 );
-const documentNodeFragmentShort = DocumentNode(definitions: [
-  fragmentDefinitionShort,
-  fragmentDefinitionPlayableMediaItemShort,
-  fragmentDefinitionBasicStream,
-]);
+const documentNodeFragmentShort = DocumentNode(
+  definitions: [
+    fragmentDefinitionShort,
+    fragmentDefinitionPlayableMediaItemShort,
+    fragmentDefinitionBasicStream,
+  ],
+);
 
 extension ClientExtension$Fragment$Short on graphql.GraphQLClient {
   void writeFragment$Short({
     required Fragment$Short data,
     required Map<String, dynamic> idFields,
     bool broadcast = true,
-  }) =>
-      this.writeFragment(
-        graphql.FragmentRequest(
-          idFields: idFields,
-          fragment: const graphql.Fragment(
-            fragmentName: 'Short',
-            document: documentNodeFragmentShort,
-          ),
-        ),
-        data: data.toJson(),
-        broadcast: broadcast,
-      );
+  }) => this.writeFragment(
+    graphql.FragmentRequest(
+      idFields: idFields,
+      fragment: const graphql.Fragment(
+        fragmentName: 'Short',
+        document: documentNodeFragmentShort,
+      ),
+    ),
+    data: data.toJson(),
+    broadcast: broadcast,
+  );
 
   Fragment$Short? readFragment$Short({
     required Map<String, dynamic> idFields,
@@ -792,8 +799,9 @@ class Fragment$Short$source {
     final l$end = json['end'];
     final l$$__typename = json['__typename'];
     return Fragment$Short$source(
-      item:
-          Fragment$Short$source$item.fromJson((l$item as Map<String, dynamic>)),
+      item: Fragment$Short$source$item.fromJson(
+        (l$item as Map<String, dynamic>),
+      ),
       start: (l$start as num?)?.toDouble(),
       end: (l$end as num?)?.toDouble(),
       $__typename: (l$$__typename as String),
@@ -827,12 +835,7 @@ class Fragment$Short$source {
     final l$start = start;
     final l$end = end;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$item,
-      l$start,
-      l$end,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$item, l$start, l$end, l$$__typename]);
   }
 
   @override
@@ -869,10 +872,7 @@ class Fragment$Short$source {
 
 extension UtilityExtension$Fragment$Short$source on Fragment$Short$source {
   CopyWith$Fragment$Short$source<Fragment$Short$source> get copyWith =>
-      CopyWith$Fragment$Short$source(
-        this,
-        (i) => i,
-      );
+      CopyWith$Fragment$Short$source(this, (i) => i);
 }
 
 abstract class CopyWith$Fragment$Short$source<TRes> {
@@ -895,10 +895,7 @@ abstract class CopyWith$Fragment$Short$source<TRes> {
 
 class _CopyWithImpl$Fragment$Short$source<TRes>
     implements CopyWith$Fragment$Short$source<TRes> {
-  _CopyWithImpl$Fragment$Short$source(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Fragment$Short$source(this._instance, this._then);
 
   final Fragment$Short$source _instance;
 
@@ -911,22 +908,25 @@ class _CopyWithImpl$Fragment$Short$source<TRes>
     Object? start = _undefined,
     Object? end = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Fragment$Short$source(
-        item: item == _undefined || item == null
-            ? _instance.item
-            : (item as Fragment$Short$source$item),
-        start: start == _undefined ? _instance.start : (start as double?),
-        end: end == _undefined ? _instance.end : (end as double?),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  }) => _then(
+    Fragment$Short$source(
+      item: item == _undefined || item == null
+          ? _instance.item
+          : (item as Fragment$Short$source$item),
+      start: start == _undefined ? _instance.start : (start as double?),
+      end: end == _undefined ? _instance.end : (end as double?),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 
   CopyWith$Fragment$Short$source$item<TRes> get item {
     final local$item = _instance.item;
     return CopyWith$Fragment$Short$source$item(
-        local$item, (e) => call(item: e));
+      local$item,
+      (e) => call(item: e),
+    );
   }
 }
 
@@ -941,8 +941,7 @@ class _CopyWithStubImpl$Fragment$Short$source<TRes>
     double? start,
     double? end,
     String? $__typename,
-  }) =>
-      _res;
+  }) => _res;
 
   CopyWith$Fragment$Short$source$item<TRes> get item =>
       CopyWith$Fragment$Short$source$item.stub(_res);
@@ -959,7 +958,8 @@ class Fragment$Short$source$item {
       default:
         final l$$__typename = json['__typename'];
         return Fragment$Short$source$item(
-            $__typename: (l$$__typename as String));
+          $__typename: (l$$__typename as String),
+        );
     }
   }
 
@@ -999,10 +999,7 @@ class Fragment$Short$source$item {
 extension UtilityExtension$Fragment$Short$source$item
     on Fragment$Short$source$item {
   CopyWith$Fragment$Short$source$item<Fragment$Short$source$item>
-      get copyWith => CopyWith$Fragment$Short$source$item(
-            this,
-            (i) => i,
-          );
+  get copyWith => CopyWith$Fragment$Short$source$item(this, (i) => i);
 
   _T when<_T>({
     required _T Function(Fragment$Short$source$item$$Episode) episode,
@@ -1049,10 +1046,7 @@ abstract class CopyWith$Fragment$Short$source$item<TRes> {
 
 class _CopyWithImpl$Fragment$Short$source$item<TRes>
     implements CopyWith$Fragment$Short$source$item<TRes> {
-  _CopyWithImpl$Fragment$Short$source$item(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Fragment$Short$source$item(this._instance, this._then);
 
   final Fragment$Short$source$item _instance;
 
@@ -1061,10 +1055,12 @@ class _CopyWithImpl$Fragment$Short$source$item<TRes>
   static const _undefined = <dynamic, dynamic>{};
 
   TRes call({Object? $__typename = _undefined}) => _then(
-      Fragment$Short$source$item(
-          $__typename: $__typename == _undefined || $__typename == null
-              ? _instance.$__typename
-              : ($__typename as String)));
+    Fragment$Short$source$item(
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 }
 
 class _CopyWithStubImpl$Fragment$Short$source$item<TRes>
@@ -1085,7 +1081,8 @@ class Fragment$Short$source$item$$Episode
   });
 
   factory Fragment$Short$source$item$$Episode.fromJson(
-      Map<String, dynamic> json) {
+    Map<String, dynamic> json,
+  ) {
     final l$id = json['id'];
     final l$title = json['title'];
     final l$$__typename = json['__typename'];
@@ -1118,11 +1115,7 @@ class Fragment$Short$source$item$$Episode
     final l$id = id;
     final l$title = title;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$id,
-      l$title,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$id, l$title, l$$__typename]);
   }
 
   @override
@@ -1156,11 +1149,9 @@ class Fragment$Short$source$item$$Episode
 extension UtilityExtension$Fragment$Short$source$item$$Episode
     on Fragment$Short$source$item$$Episode {
   CopyWith$Fragment$Short$source$item$$Episode<
-          Fragment$Short$source$item$$Episode>
-      get copyWith => CopyWith$Fragment$Short$source$item$$Episode(
-            this,
-            (i) => i,
-          );
+    Fragment$Short$source$item$$Episode
+  >
+  get copyWith => CopyWith$Fragment$Short$source$item$$Episode(this, (i) => i);
 }
 
 abstract class CopyWith$Fragment$Short$source$item$$Episode<TRes> {
@@ -1172,19 +1163,12 @@ abstract class CopyWith$Fragment$Short$source$item$$Episode<TRes> {
   factory CopyWith$Fragment$Short$source$item$$Episode.stub(TRes res) =
       _CopyWithStubImpl$Fragment$Short$source$item$$Episode;
 
-  TRes call({
-    String? id,
-    String? title,
-    String? $__typename,
-  });
+  TRes call({String? id, String? title, String? $__typename});
 }
 
 class _CopyWithImpl$Fragment$Short$source$item$$Episode<TRes>
     implements CopyWith$Fragment$Short$source$item$$Episode<TRes> {
-  _CopyWithImpl$Fragment$Short$source$item$$Episode(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Fragment$Short$source$item$$Episode(this._instance, this._then);
 
   final Fragment$Short$source$item$$Episode _instance;
 
@@ -1196,16 +1180,17 @@ class _CopyWithImpl$Fragment$Short$source$item$$Episode<TRes>
     Object? id = _undefined,
     Object? title = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Fragment$Short$source$item$$Episode(
-        id: id == _undefined || id == null ? _instance.id : (id as String),
-        title: title == _undefined || title == null
-            ? _instance.title
-            : (title as String),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  }) => _then(
+    Fragment$Short$source$item$$Episode(
+      id: id == _undefined || id == null ? _instance.id : (id as String),
+      title: title == _undefined || title == null
+          ? _instance.title
+          : (title as String),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 }
 
 class _CopyWithStubImpl$Fragment$Short$source$item$$Episode<TRes>
@@ -1214,12 +1199,7 @@ class _CopyWithStubImpl$Fragment$Short$source$item$$Episode<TRes>
 
   TRes _res;
 
-  call({
-    String? id,
-    String? title,
-    String? $__typename,
-  }) =>
-      _res;
+  call({String? id, String? title, String? $__typename}) => _res;
 }
 
 class Variables$Query$getShorts {
@@ -1227,12 +1207,11 @@ class Variables$Query$getShorts {
     String? cursor,
     int? limit,
     String? initialShortId,
-  }) =>
-      Variables$Query$getShorts._({
-        if (cursor != null) r'cursor': cursor,
-        if (limit != null) r'limit': limit,
-        if (initialShortId != null) r'initialShortId': initialShortId,
-      });
+  }) => Variables$Query$getShorts._({
+    if (cursor != null) r'cursor': cursor,
+    if (limit != null) r'limit': limit,
+    if (initialShortId != null) r'initialShortId': initialShortId,
+  });
 
   Variables$Query$getShorts._(this._$data);
 
@@ -1279,10 +1258,7 @@ class Variables$Query$getShorts {
   }
 
   CopyWith$Variables$Query$getShorts<Variables$Query$getShorts> get copyWith =>
-      CopyWith$Variables$Query$getShorts(
-        this,
-        (i) => i,
-      );
+      CopyWith$Variables$Query$getShorts(this, (i) => i);
 
   @override
   bool operator ==(Object other) {
@@ -1343,19 +1319,12 @@ abstract class CopyWith$Variables$Query$getShorts<TRes> {
   factory CopyWith$Variables$Query$getShorts.stub(TRes res) =
       _CopyWithStubImpl$Variables$Query$getShorts;
 
-  TRes call({
-    String? cursor,
-    int? limit,
-    String? initialShortId,
-  });
+  TRes call({String? cursor, int? limit, String? initialShortId});
 }
 
 class _CopyWithImpl$Variables$Query$getShorts<TRes>
     implements CopyWith$Variables$Query$getShorts<TRes> {
-  _CopyWithImpl$Variables$Query$getShorts(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Variables$Query$getShorts(this._instance, this._then);
 
   final Variables$Query$getShorts _instance;
 
@@ -1367,14 +1336,15 @@ class _CopyWithImpl$Variables$Query$getShorts<TRes>
     Object? cursor = _undefined,
     Object? limit = _undefined,
     Object? initialShortId = _undefined,
-  }) =>
-      _then(Variables$Query$getShorts._({
-        ..._instance._$data,
-        if (cursor != _undefined) 'cursor': (cursor as String?),
-        if (limit != _undefined) 'limit': (limit as int?),
-        if (initialShortId != _undefined)
-          'initialShortId': (initialShortId as String?),
-      }));
+  }) => _then(
+    Variables$Query$getShorts._({
+      ..._instance._$data,
+      if (cursor != _undefined) 'cursor': (cursor as String?),
+      if (limit != _undefined) 'limit': (limit as int?),
+      if (initialShortId != _undefined)
+        'initialShortId': (initialShortId as String?),
+    }),
+  );
 }
 
 class _CopyWithStubImpl$Variables$Query$getShorts<TRes>
@@ -1383,26 +1353,19 @@ class _CopyWithStubImpl$Variables$Query$getShorts<TRes>
 
   TRes _res;
 
-  call({
-    String? cursor,
-    int? limit,
-    String? initialShortId,
-  }) =>
-      _res;
+  call({String? cursor, int? limit, String? initialShortId}) => _res;
 }
 
 class Query$getShorts {
-  Query$getShorts({
-    required this.shorts,
-    this.$__typename = 'QueryRoot',
-  });
+  Query$getShorts({required this.shorts, this.$__typename = 'QueryRoot'});
 
   factory Query$getShorts.fromJson(Map<String, dynamic> json) {
     final l$shorts = json['shorts'];
     final l$$__typename = json['__typename'];
     return Query$getShorts(
-      shorts:
-          Query$getShorts$shorts.fromJson((l$shorts as Map<String, dynamic>)),
+      shorts: Query$getShorts$shorts.fromJson(
+        (l$shorts as Map<String, dynamic>),
+      ),
       $__typename: (l$$__typename as String),
     );
   }
@@ -1424,10 +1387,7 @@ class Query$getShorts {
   int get hashCode {
     final l$shorts = shorts;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$shorts,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$shorts, l$$__typename]);
   }
 
   @override
@@ -1454,10 +1414,7 @@ class Query$getShorts {
 
 extension UtilityExtension$Query$getShorts on Query$getShorts {
   CopyWith$Query$getShorts<Query$getShorts> get copyWith =>
-      CopyWith$Query$getShorts(
-        this,
-        (i) => i,
-      );
+      CopyWith$Query$getShorts(this, (i) => i);
 }
 
 abstract class CopyWith$Query$getShorts<TRes> {
@@ -1469,19 +1426,13 @@ abstract class CopyWith$Query$getShorts<TRes> {
   factory CopyWith$Query$getShorts.stub(TRes res) =
       _CopyWithStubImpl$Query$getShorts;
 
-  TRes call({
-    Query$getShorts$shorts? shorts,
-    String? $__typename,
-  });
+  TRes call({Query$getShorts$shorts? shorts, String? $__typename});
   CopyWith$Query$getShorts$shorts<TRes> get shorts;
 }
 
 class _CopyWithImpl$Query$getShorts<TRes>
     implements CopyWith$Query$getShorts<TRes> {
-  _CopyWithImpl$Query$getShorts(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Query$getShorts(this._instance, this._then);
 
   final Query$getShorts _instance;
 
@@ -1489,23 +1440,24 @@ class _CopyWithImpl$Query$getShorts<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({
-    Object? shorts = _undefined,
-    Object? $__typename = _undefined,
-  }) =>
-      _then(Query$getShorts(
-        shorts: shorts == _undefined || shorts == null
-            ? _instance.shorts
-            : (shorts as Query$getShorts$shorts),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  TRes call({Object? shorts = _undefined, Object? $__typename = _undefined}) =>
+      _then(
+        Query$getShorts(
+          shorts: shorts == _undefined || shorts == null
+              ? _instance.shorts
+              : (shorts as Query$getShorts$shorts),
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String),
+        ),
+      );
 
   CopyWith$Query$getShorts$shorts<TRes> get shorts {
     final local$shorts = _instance.shorts;
     return CopyWith$Query$getShorts$shorts(
-        local$shorts, (e) => call(shorts: e));
+      local$shorts,
+      (e) => call(shorts: e),
+    );
   }
 }
 
@@ -1515,102 +1467,107 @@ class _CopyWithStubImpl$Query$getShorts<TRes>
 
   TRes _res;
 
-  call({
-    Query$getShorts$shorts? shorts,
-    String? $__typename,
-  }) =>
-      _res;
+  call({Query$getShorts$shorts? shorts, String? $__typename}) => _res;
 
   CopyWith$Query$getShorts$shorts<TRes> get shorts =>
       CopyWith$Query$getShorts$shorts.stub(_res);
 }
 
-const documentNodeQuerygetShorts = DocumentNode(definitions: [
-  OperationDefinitionNode(
-    type: OperationType.query,
-    name: NameNode(value: 'getShorts'),
-    variableDefinitions: [
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'cursor')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'String'),
-          isNonNull: false,
+const documentNodeQuerygetShorts = DocumentNode(
+  definitions: [
+    OperationDefinitionNode(
+      type: OperationType.query,
+      name: NameNode(value: 'getShorts'),
+      variableDefinitions: [
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'cursor')),
+          type: NamedTypeNode(
+            name: NameNode(value: 'String'),
+            isNonNull: false,
+          ),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'limit')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'Int'),
-          isNonNull: false,
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'limit')),
+          type: NamedTypeNode(name: NameNode(value: 'Int'), isNonNull: false),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'initialShortId')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'UUID'),
-          isNonNull: false,
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'initialShortId')),
+          type: NamedTypeNode(name: NameNode(value: 'UUID'), isNonNull: false),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-    ],
-    directives: [],
-    selectionSet: SelectionSetNode(selections: [
-      FieldNode(
-        name: NameNode(value: 'shorts'),
-        alias: null,
-        arguments: [
-          ArgumentNode(
-            name: NameNode(value: 'cursor'),
-            value: VariableNode(name: NameNode(value: 'cursor')),
-          ),
-          ArgumentNode(
-            name: NameNode(value: 'limit'),
-            value: VariableNode(name: NameNode(value: 'limit')),
-          ),
-          ArgumentNode(
-            name: NameNode(value: 'initialShortId'),
-            value: VariableNode(name: NameNode(value: 'initialShortId')),
-          ),
-        ],
-        directives: [],
-        selectionSet: SelectionSetNode(selections: [
-          FieldNode(
-            name: NameNode(value: 'cursor'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'nextCursor'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
+      ],
+      directives: [],
+      selectionSet: SelectionSetNode(
+        selections: [
           FieldNode(
             name: NameNode(value: 'shorts'),
             alias: null,
-            arguments: [],
+            arguments: [
+              ArgumentNode(
+                name: NameNode(value: 'cursor'),
+                value: VariableNode(name: NameNode(value: 'cursor')),
+              ),
+              ArgumentNode(
+                name: NameNode(value: 'limit'),
+                value: VariableNode(name: NameNode(value: 'limit')),
+              ),
+              ArgumentNode(
+                name: NameNode(value: 'initialShortId'),
+                value: VariableNode(name: NameNode(value: 'initialShortId')),
+              ),
+            ],
             directives: [],
-            selectionSet: SelectionSetNode(selections: [
-              FragmentSpreadNode(
-                name: NameNode(value: 'Short'),
-                directives: [],
-              ),
-              FieldNode(
-                name: NameNode(value: '__typename'),
-                alias: null,
-                arguments: [],
-                directives: [],
-                selectionSet: null,
-              ),
-            ]),
+            selectionSet: SelectionSetNode(
+              selections: [
+                FieldNode(
+                  name: NameNode(value: 'cursor'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'nextCursor'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'shorts'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: SelectionSetNode(
+                    selections: [
+                      FragmentSpreadNode(
+                        name: NameNode(value: 'Short'),
+                        directives: [],
+                      ),
+                      FieldNode(
+                        name: NameNode(value: '__typename'),
+                        alias: null,
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null,
+                      ),
+                    ],
+                  ),
+                ),
+                FieldNode(
+                  name: NameNode(value: '__typename'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+              ],
+            ),
           ),
           FieldNode(
             name: NameNode(value: '__typename'),
@@ -1619,21 +1576,14 @@ const documentNodeQuerygetShorts = DocumentNode(definitions: [
             directives: [],
             selectionSet: null,
           ),
-        ]),
+        ],
       ),
-      FieldNode(
-        name: NameNode(value: '__typename'),
-        alias: null,
-        arguments: [],
-        directives: [],
-        selectionSet: null,
-      ),
-    ]),
-  ),
-  fragmentDefinitionShort,
-  fragmentDefinitionPlayableMediaItemShort,
-  fragmentDefinitionBasicStream,
-]);
+    ),
+    fragmentDefinitionShort,
+    fragmentDefinitionPlayableMediaItemShort,
+    fragmentDefinitionBasicStream,
+  ],
+);
 Query$getShorts _parserFn$Query$getShorts(Map<String, dynamic> data) =>
     Query$getShorts.fromJson(data);
 typedef OnQueryComplete$Query$getShorts = FutureOr<void> Function(
@@ -1654,36 +1604,36 @@ class Options$Query$getShorts extends graphql.QueryOptions<Query$getShorts> {
     graphql.Context? context,
     OnQueryComplete$Query$getShorts? onComplete,
     graphql.OnQueryError? onError,
-  })  : onCompleteWithParsed = onComplete,
-        super(
-          variables: variables?.toJson() ?? {},
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          pollInterval: pollInterval,
-          context: context,
-          onComplete: onComplete == null
-              ? null
-              : (data) => onComplete(
-                    data,
-                    data == null ? null : _parserFn$Query$getShorts(data),
-                  ),
-          onError: onError,
-          document: documentNodeQuerygetShorts,
-          parserFn: _parserFn$Query$getShorts,
-        );
+  }) : onCompleteWithParsed = onComplete,
+       super(
+         variables: variables?.toJson() ?? {},
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         pollInterval: pollInterval,
+         context: context,
+         onComplete: onComplete == null
+             ? null
+             : (data) => onComplete(
+                 data,
+                 data == null ? null : _parserFn$Query$getShorts(data),
+               ),
+         onError: onError,
+         document: documentNodeQuerygetShorts,
+         parserFn: _parserFn$Query$getShorts,
+       );
 
   final OnQueryComplete$Query$getShorts? onCompleteWithParsed;
 
   @override
   List<Object?> get properties => [
-        ...super.onComplete == null
-            ? super.properties
-            : super.properties.where((property) => property != onComplete),
-        onCompleteWithParsed,
-      ];
+    ...super.onComplete == null
+        ? super.properties
+        : super.properties.where((property) => property != onComplete),
+    onCompleteWithParsed,
+  ];
 }
 
 class WatchOptions$Query$getShorts
@@ -1702,20 +1652,20 @@ class WatchOptions$Query$getShorts
     bool carryForwardDataOnException = true,
     bool fetchResults = false,
   }) : super(
-          variables: variables?.toJson() ?? {},
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          document: documentNodeQuerygetShorts,
-          pollInterval: pollInterval,
-          eagerlyFetchResults: eagerlyFetchResults,
-          carryForwardDataOnException: carryForwardDataOnException,
-          fetchResults: fetchResults,
-          parserFn: _parserFn$Query$getShorts,
-        );
+         variables: variables?.toJson() ?? {},
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         document: documentNodeQuerygetShorts,
+         pollInterval: pollInterval,
+         eagerlyFetchResults: eagerlyFetchResults,
+         carryForwardDataOnException: carryForwardDataOnException,
+         fetchResults: fetchResults,
+         parserFn: _parserFn$Query$getShorts,
+       );
 }
 
 class FetchMoreOptions$Query$getShorts extends graphql.FetchMoreOptions {
@@ -1723,34 +1673,33 @@ class FetchMoreOptions$Query$getShorts extends graphql.FetchMoreOptions {
     required graphql.UpdateQuery updateQuery,
     Variables$Query$getShorts? variables,
   }) : super(
-          updateQuery: updateQuery,
-          variables: variables?.toJson() ?? {},
-          document: documentNodeQuerygetShorts,
-        );
+         updateQuery: updateQuery,
+         variables: variables?.toJson() ?? {},
+         document: documentNodeQuerygetShorts,
+       );
 }
 
 extension ClientExtension$Query$getShorts on graphql.GraphQLClient {
-  Future<graphql.QueryResult<Query$getShorts>> query$getShorts(
-          [Options$Query$getShorts? options]) async =>
-      await this.query(options ?? Options$Query$getShorts());
+  Future<graphql.QueryResult<Query$getShorts>> query$getShorts([
+    Options$Query$getShorts? options,
+  ]) async => await this.query(options ?? Options$Query$getShorts());
 
-  graphql.ObservableQuery<Query$getShorts> watchQuery$getShorts(
-          [WatchOptions$Query$getShorts? options]) =>
-      this.watchQuery(options ?? WatchOptions$Query$getShorts());
+  graphql.ObservableQuery<Query$getShorts> watchQuery$getShorts([
+    WatchOptions$Query$getShorts? options,
+  ]) => this.watchQuery(options ?? WatchOptions$Query$getShorts());
 
   void writeQuery$getShorts({
     required Query$getShorts data,
     Variables$Query$getShorts? variables,
     bool broadcast = true,
-  }) =>
-      this.writeQuery(
-        graphql.Request(
-          operation: graphql.Operation(document: documentNodeQuerygetShorts),
-          variables: variables?.toJson() ?? const {},
-        ),
-        data: data.toJson(),
-        broadcast: broadcast,
-      );
+  }) => this.writeQuery(
+    graphql.Request(
+      operation: graphql.Operation(document: documentNodeQuerygetShorts),
+      variables: variables?.toJson() ?? const {},
+    ),
+    data: data.toJson(),
+    broadcast: broadcast,
+  );
 
   Query$getShorts? readQuery$getShorts({
     Variables$Query$getShorts? variables,
@@ -1767,12 +1716,12 @@ extension ClientExtension$Query$getShorts on graphql.GraphQLClient {
   }
 }
 
-graphql_flutter.QueryHookResult<Query$getShorts> useQuery$getShorts(
-        [Options$Query$getShorts? options]) =>
-    graphql_flutter.useQuery(options ?? Options$Query$getShorts());
-graphql.ObservableQuery<Query$getShorts> useWatchQuery$getShorts(
-        [WatchOptions$Query$getShorts? options]) =>
-    graphql_flutter.useWatchQuery(options ?? WatchOptions$Query$getShorts());
+graphql_flutter.QueryHookResult<Query$getShorts> useQuery$getShorts([
+  Options$Query$getShorts? options,
+]) => graphql_flutter.useQuery(options ?? Options$Query$getShorts());
+graphql.ObservableQuery<Query$getShorts> useWatchQuery$getShorts([
+  WatchOptions$Query$getShorts? options,
+]) => graphql_flutter.useWatchQuery(options ?? WatchOptions$Query$getShorts());
 
 class Query$getShorts$Widget extends graphql_flutter.Query<Query$getShorts> {
   Query$getShorts$Widget({
@@ -1780,10 +1729,10 @@ class Query$getShorts$Widget extends graphql_flutter.Query<Query$getShorts> {
     Options$Query$getShorts? options,
     required graphql_flutter.QueryBuilder<Query$getShorts> builder,
   }) : super(
-          key: key,
-          options: options ?? Options$Query$getShorts(),
-          builder: builder,
-        );
+         key: key,
+         options: options ?? Options$Query$getShorts(),
+         builder: builder,
+       );
 }
 
 class Query$getShorts$shorts {
@@ -1885,10 +1834,7 @@ class Query$getShorts$shorts {
 
 extension UtilityExtension$Query$getShorts$shorts on Query$getShorts$shorts {
   CopyWith$Query$getShorts$shorts<Query$getShorts$shorts> get copyWith =>
-      CopyWith$Query$getShorts$shorts(
-        this,
-        (i) => i,
-      );
+      CopyWith$Query$getShorts$shorts(this, (i) => i);
 }
 
 abstract class CopyWith$Query$getShorts$shorts<TRes> {
@@ -1907,17 +1853,16 @@ abstract class CopyWith$Query$getShorts$shorts<TRes> {
     String? $__typename,
   });
   TRes shorts(
-      Iterable<Fragment$Short> Function(
-              Iterable<CopyWith$Fragment$Short<Fragment$Short>>)
-          _fn);
+    Iterable<Fragment$Short> Function(
+      Iterable<CopyWith$Fragment$Short<Fragment$Short>>,
+    )
+    _fn,
+  );
 }
 
 class _CopyWithImpl$Query$getShorts$shorts<TRes>
     implements CopyWith$Query$getShorts$shorts<TRes> {
-  _CopyWithImpl$Query$getShorts$shorts(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Query$getShorts$shorts(this._instance, this._then);
 
   final Query$getShorts$shorts _instance;
 
@@ -1930,31 +1875,33 @@ class _CopyWithImpl$Query$getShorts$shorts<TRes>
     Object? nextCursor = _undefined,
     Object? shorts = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Query$getShorts$shorts(
-        cursor: cursor == _undefined || cursor == null
-            ? _instance.cursor
-            : (cursor as String),
-        nextCursor: nextCursor == _undefined || nextCursor == null
-            ? _instance.nextCursor
-            : (nextCursor as String),
-        shorts: shorts == _undefined || shorts == null
-            ? _instance.shorts
-            : (shorts as List<Fragment$Short>),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  }) => _then(
+    Query$getShorts$shorts(
+      cursor: cursor == _undefined || cursor == null
+          ? _instance.cursor
+          : (cursor as String),
+      nextCursor: nextCursor == _undefined || nextCursor == null
+          ? _instance.nextCursor
+          : (nextCursor as String),
+      shorts: shorts == _undefined || shorts == null
+          ? _instance.shorts
+          : (shorts as List<Fragment$Short>),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 
   TRes shorts(
-          Iterable<Fragment$Short> Function(
-                  Iterable<CopyWith$Fragment$Short<Fragment$Short>>)
-              _fn) =>
-      call(
-          shorts: _fn(_instance.shorts.map((e) => CopyWith$Fragment$Short(
-                e,
-                (i) => i,
-              ))).toList());
+    Iterable<Fragment$Short> Function(
+      Iterable<CopyWith$Fragment$Short<Fragment$Short>>,
+    )
+    _fn,
+  ) => call(
+    shorts: _fn(
+      _instance.shorts.map((e) => CopyWith$Fragment$Short(e, (i) => i)),
+    ).toList(),
+  );
 }
 
 class _CopyWithStubImpl$Query$getShorts$shorts<TRes>
@@ -1968,17 +1915,14 @@ class _CopyWithStubImpl$Query$getShorts$shorts<TRes>
     String? nextCursor,
     List<Fragment$Short>? shorts,
     String? $__typename,
-  }) =>
-      _res;
+  }) => _res;
 
   shorts(_fn) => _res;
 }
 
 class Variables$Query$getShort {
   factory Variables$Query$getShort({required String id}) =>
-      Variables$Query$getShort._({
-        r'id': id,
-      });
+      Variables$Query$getShort._({r'id': id});
 
   Variables$Query$getShort._(this._$data);
 
@@ -2001,10 +1945,7 @@ class Variables$Query$getShort {
   }
 
   CopyWith$Variables$Query$getShort<Variables$Query$getShort> get copyWith =>
-      CopyWith$Variables$Query$getShort(
-        this,
-        (i) => i,
-      );
+      CopyWith$Variables$Query$getShort(this, (i) => i);
 
   @override
   bool operator ==(Object other) {
@@ -2044,10 +1985,7 @@ abstract class CopyWith$Variables$Query$getShort<TRes> {
 
 class _CopyWithImpl$Variables$Query$getShort<TRes>
     implements CopyWith$Variables$Query$getShort<TRes> {
-  _CopyWithImpl$Variables$Query$getShort(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Variables$Query$getShort(this._instance, this._then);
 
   final Variables$Query$getShort _instance;
 
@@ -2055,10 +1993,12 @@ class _CopyWithImpl$Variables$Query$getShort<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({Object? id = _undefined}) => _then(Variables$Query$getShort._({
-        ..._instance._$data,
-        if (id != _undefined && id != null) 'id': (id as String),
-      }));
+  TRes call({Object? id = _undefined}) => _then(
+    Variables$Query$getShort._({
+      ..._instance._$data,
+      if (id != _undefined && id != null) 'id': (id as String),
+    }),
+  );
 }
 
 class _CopyWithStubImpl$Variables$Query$getShort<TRes>
@@ -2071,10 +2011,7 @@ class _CopyWithStubImpl$Variables$Query$getShort<TRes>
 }
 
 class Query$getShort {
-  Query$getShort({
-    required this.short,
-    this.$__typename = 'QueryRoot',
-  });
+  Query$getShort({required this.short, this.$__typename = 'QueryRoot'});
 
   factory Query$getShort.fromJson(Map<String, dynamic> json) {
     final l$short = json['short'];
@@ -2102,10 +2039,7 @@ class Query$getShort {
   int get hashCode {
     final l$short = short;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$short,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$short, l$$__typename]);
   }
 
   @override
@@ -2132,10 +2066,7 @@ class Query$getShort {
 
 extension UtilityExtension$Query$getShort on Query$getShort {
   CopyWith$Query$getShort<Query$getShort> get copyWith =>
-      CopyWith$Query$getShort(
-        this,
-        (i) => i,
-      );
+      CopyWith$Query$getShort(this, (i) => i);
 }
 
 abstract class CopyWith$Query$getShort<TRes> {
@@ -2147,19 +2078,13 @@ abstract class CopyWith$Query$getShort<TRes> {
   factory CopyWith$Query$getShort.stub(TRes res) =
       _CopyWithStubImpl$Query$getShort;
 
-  TRes call({
-    Fragment$Short? short,
-    String? $__typename,
-  });
+  TRes call({Fragment$Short? short, String? $__typename});
   CopyWith$Fragment$Short<TRes> get short;
 }
 
 class _CopyWithImpl$Query$getShort<TRes>
     implements CopyWith$Query$getShort<TRes> {
-  _CopyWithImpl$Query$getShort(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Query$getShort(this._instance, this._then);
 
   final Query$getShort _instance;
 
@@ -2167,18 +2092,17 @@ class _CopyWithImpl$Query$getShort<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({
-    Object? short = _undefined,
-    Object? $__typename = _undefined,
-  }) =>
-      _then(Query$getShort(
-        short: short == _undefined || short == null
-            ? _instance.short
-            : (short as Fragment$Short),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  TRes call({Object? short = _undefined, Object? $__typename = _undefined}) =>
+      _then(
+        Query$getShort(
+          short: short == _undefined || short == null
+              ? _instance.short
+              : (short as Fragment$Short),
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String),
+        ),
+      );
 
   CopyWith$Fragment$Short<TRes> get short {
     final local$short = _instance.short;
@@ -2192,46 +2116,52 @@ class _CopyWithStubImpl$Query$getShort<TRes>
 
   TRes _res;
 
-  call({
-    Fragment$Short? short,
-    String? $__typename,
-  }) =>
-      _res;
+  call({Fragment$Short? short, String? $__typename}) => _res;
 
   CopyWith$Fragment$Short<TRes> get short => CopyWith$Fragment$Short.stub(_res);
 }
 
-const documentNodeQuerygetShort = DocumentNode(definitions: [
-  OperationDefinitionNode(
-    type: OperationType.query,
-    name: NameNode(value: 'getShort'),
-    variableDefinitions: [
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'id')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'UUID'),
-          isNonNull: true,
+const documentNodeQuerygetShort = DocumentNode(
+  definitions: [
+    OperationDefinitionNode(
+      type: OperationType.query,
+      name: NameNode(value: 'getShort'),
+      variableDefinitions: [
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'id')),
+          type: NamedTypeNode(name: NameNode(value: 'UUID'), isNonNull: true),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      )
-    ],
-    directives: [],
-    selectionSet: SelectionSetNode(selections: [
-      FieldNode(
-        name: NameNode(value: 'short'),
-        alias: null,
-        arguments: [
-          ArgumentNode(
-            name: NameNode(value: 'id'),
-            value: VariableNode(name: NameNode(value: 'id')),
-          )
-        ],
-        directives: [],
-        selectionSet: SelectionSetNode(selections: [
-          FragmentSpreadNode(
-            name: NameNode(value: 'Short'),
+      ],
+      directives: [],
+      selectionSet: SelectionSetNode(
+        selections: [
+          FieldNode(
+            name: NameNode(value: 'short'),
+            alias: null,
+            arguments: [
+              ArgumentNode(
+                name: NameNode(value: 'id'),
+                value: VariableNode(name: NameNode(value: 'id')),
+              ),
+            ],
             directives: [],
+            selectionSet: SelectionSetNode(
+              selections: [
+                FragmentSpreadNode(
+                  name: NameNode(value: 'Short'),
+                  directives: [],
+                ),
+                FieldNode(
+                  name: NameNode(value: '__typename'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+              ],
+            ),
           ),
           FieldNode(
             name: NameNode(value: '__typename'),
@@ -2240,21 +2170,14 @@ const documentNodeQuerygetShort = DocumentNode(definitions: [
             directives: [],
             selectionSet: null,
           ),
-        ]),
+        ],
       ),
-      FieldNode(
-        name: NameNode(value: '__typename'),
-        alias: null,
-        arguments: [],
-        directives: [],
-        selectionSet: null,
-      ),
-    ]),
-  ),
-  fragmentDefinitionShort,
-  fragmentDefinitionPlayableMediaItemShort,
-  fragmentDefinitionBasicStream,
-]);
+    ),
+    fragmentDefinitionShort,
+    fragmentDefinitionPlayableMediaItemShort,
+    fragmentDefinitionBasicStream,
+  ],
+);
 Query$getShort _parserFn$Query$getShort(Map<String, dynamic> data) =>
     Query$getShort.fromJson(data);
 typedef OnQueryComplete$Query$getShort = FutureOr<void> Function(
@@ -2275,36 +2198,36 @@ class Options$Query$getShort extends graphql.QueryOptions<Query$getShort> {
     graphql.Context? context,
     OnQueryComplete$Query$getShort? onComplete,
     graphql.OnQueryError? onError,
-  })  : onCompleteWithParsed = onComplete,
-        super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          pollInterval: pollInterval,
-          context: context,
-          onComplete: onComplete == null
-              ? null
-              : (data) => onComplete(
-                    data,
-                    data == null ? null : _parserFn$Query$getShort(data),
-                  ),
-          onError: onError,
-          document: documentNodeQuerygetShort,
-          parserFn: _parserFn$Query$getShort,
-        );
+  }) : onCompleteWithParsed = onComplete,
+       super(
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         pollInterval: pollInterval,
+         context: context,
+         onComplete: onComplete == null
+             ? null
+             : (data) => onComplete(
+                 data,
+                 data == null ? null : _parserFn$Query$getShort(data),
+               ),
+         onError: onError,
+         document: documentNodeQuerygetShort,
+         parserFn: _parserFn$Query$getShort,
+       );
 
   final OnQueryComplete$Query$getShort? onCompleteWithParsed;
 
   @override
   List<Object?> get properties => [
-        ...super.onComplete == null
-            ? super.properties
-            : super.properties.where((property) => property != onComplete),
-        onCompleteWithParsed,
-      ];
+    ...super.onComplete == null
+        ? super.properties
+        : super.properties.where((property) => property != onComplete),
+    onCompleteWithParsed,
+  ];
 }
 
 class WatchOptions$Query$getShort
@@ -2323,20 +2246,20 @@ class WatchOptions$Query$getShort
     bool carryForwardDataOnException = true,
     bool fetchResults = false,
   }) : super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          document: documentNodeQuerygetShort,
-          pollInterval: pollInterval,
-          eagerlyFetchResults: eagerlyFetchResults,
-          carryForwardDataOnException: carryForwardDataOnException,
-          fetchResults: fetchResults,
-          parserFn: _parserFn$Query$getShort,
-        );
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         document: documentNodeQuerygetShort,
+         pollInterval: pollInterval,
+         eagerlyFetchResults: eagerlyFetchResults,
+         carryForwardDataOnException: carryForwardDataOnException,
+         fetchResults: fetchResults,
+         parserFn: _parserFn$Query$getShort,
+       );
 }
 
 class FetchMoreOptions$Query$getShort extends graphql.FetchMoreOptions {
@@ -2344,34 +2267,33 @@ class FetchMoreOptions$Query$getShort extends graphql.FetchMoreOptions {
     required graphql.UpdateQuery updateQuery,
     required Variables$Query$getShort variables,
   }) : super(
-          updateQuery: updateQuery,
-          variables: variables.toJson(),
-          document: documentNodeQuerygetShort,
-        );
+         updateQuery: updateQuery,
+         variables: variables.toJson(),
+         document: documentNodeQuerygetShort,
+       );
 }
 
 extension ClientExtension$Query$getShort on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$getShort>> query$getShort(
-          Options$Query$getShort options) async =>
-      await this.query(options);
+    Options$Query$getShort options,
+  ) async => await this.query(options);
 
   graphql.ObservableQuery<Query$getShort> watchQuery$getShort(
-          WatchOptions$Query$getShort options) =>
-      this.watchQuery(options);
+    WatchOptions$Query$getShort options,
+  ) => this.watchQuery(options);
 
   void writeQuery$getShort({
     required Query$getShort data,
     required Variables$Query$getShort variables,
     bool broadcast = true,
-  }) =>
-      this.writeQuery(
-        graphql.Request(
-          operation: graphql.Operation(document: documentNodeQuerygetShort),
-          variables: variables.toJson(),
-        ),
-        data: data.toJson(),
-        broadcast: broadcast,
-      );
+  }) => this.writeQuery(
+    graphql.Request(
+      operation: graphql.Operation(document: documentNodeQuerygetShort),
+      variables: variables.toJson(),
+    ),
+    data: data.toJson(),
+    broadcast: broadcast,
+  );
 
   Query$getShort? readQuery$getShort({
     required Variables$Query$getShort variables,
@@ -2389,22 +2311,18 @@ extension ClientExtension$Query$getShort on graphql.GraphQLClient {
 }
 
 graphql_flutter.QueryHookResult<Query$getShort> useQuery$getShort(
-        Options$Query$getShort options) =>
-    graphql_flutter.useQuery(options);
+  Options$Query$getShort options,
+) => graphql_flutter.useQuery(options);
 graphql.ObservableQuery<Query$getShort> useWatchQuery$getShort(
-        WatchOptions$Query$getShort options) =>
-    graphql_flutter.useWatchQuery(options);
+  WatchOptions$Query$getShort options,
+) => graphql_flutter.useWatchQuery(options);
 
 class Query$getShort$Widget extends graphql_flutter.Query<Query$getShort> {
   Query$getShort$Widget({
     widgets.Key? key,
     required Options$Query$getShort options,
     required graphql_flutter.QueryBuilder<Query$getShort> builder,
-  }) : super(
-          key: key,
-          options: options,
-          builder: builder,
-        );
+  }) : super(key: key, options: options, builder: builder);
 }
 
 class Variables$Mutation$setShortProgress {
@@ -2412,15 +2330,13 @@ class Variables$Mutation$setShortProgress {
     required String id,
     required double progress,
   }) =>
-      Variables$Mutation$setShortProgress._({
-        r'id': id,
-        r'progress': progress,
-      });
+      Variables$Mutation$setShortProgress._({r'id': id, r'progress': progress});
 
   Variables$Mutation$setShortProgress._(this._$data);
 
   factory Variables$Mutation$setShortProgress.fromJson(
-      Map<String, dynamic> data) {
+    Map<String, dynamic> data,
+  ) {
     final result$data = <String, dynamic>{};
     final l$id = data['id'];
     result$data['id'] = (l$id as String);
@@ -2445,11 +2361,9 @@ class Variables$Mutation$setShortProgress {
   }
 
   CopyWith$Variables$Mutation$setShortProgress<
-          Variables$Mutation$setShortProgress>
-      get copyWith => CopyWith$Variables$Mutation$setShortProgress(
-            this,
-            (i) => i,
-          );
+    Variables$Mutation$setShortProgress
+  >
+  get copyWith => CopyWith$Variables$Mutation$setShortProgress(this, (i) => i);
 
   @override
   bool operator ==(Object other) {
@@ -2477,10 +2391,7 @@ class Variables$Mutation$setShortProgress {
   int get hashCode {
     final l$id = id;
     final l$progress = progress;
-    return Object.hashAll([
-      l$id,
-      l$progress,
-    ]);
+    return Object.hashAll([l$id, l$progress]);
   }
 }
 
@@ -2493,18 +2404,12 @@ abstract class CopyWith$Variables$Mutation$setShortProgress<TRes> {
   factory CopyWith$Variables$Mutation$setShortProgress.stub(TRes res) =
       _CopyWithStubImpl$Variables$Mutation$setShortProgress;
 
-  TRes call({
-    String? id,
-    double? progress,
-  });
+  TRes call({String? id, double? progress});
 }
 
 class _CopyWithImpl$Variables$Mutation$setShortProgress<TRes>
     implements CopyWith$Variables$Mutation$setShortProgress<TRes> {
-  _CopyWithImpl$Variables$Mutation$setShortProgress(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Variables$Mutation$setShortProgress(this._instance, this._then);
 
   final Variables$Mutation$setShortProgress _instance;
 
@@ -2512,16 +2417,14 @@ class _CopyWithImpl$Variables$Mutation$setShortProgress<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({
-    Object? id = _undefined,
-    Object? progress = _undefined,
-  }) =>
-      _then(Variables$Mutation$setShortProgress._({
-        ..._instance._$data,
-        if (id != _undefined && id != null) 'id': (id as String),
-        if (progress != _undefined && progress != null)
-          'progress': (progress as double),
-      }));
+  TRes call({Object? id = _undefined, Object? progress = _undefined}) => _then(
+    Variables$Mutation$setShortProgress._({
+      ..._instance._$data,
+      if (id != _undefined && id != null) 'id': (id as String),
+      if (progress != _undefined && progress != null)
+        'progress': (progress as double),
+    }),
+  );
 }
 
 class _CopyWithStubImpl$Variables$Mutation$setShortProgress<TRes>
@@ -2530,11 +2433,7 @@ class _CopyWithStubImpl$Variables$Mutation$setShortProgress<TRes>
 
   TRes _res;
 
-  call({
-    String? id,
-    double? progress,
-  }) =>
-      _res;
+  call({String? id, double? progress}) => _res;
 }
 
 class Mutation$setShortProgress {
@@ -2547,8 +2446,9 @@ class Mutation$setShortProgress {
     final l$setShortProgress = json['setShortProgress'];
     final l$$__typename = json['__typename'];
     return Mutation$setShortProgress(
-      setShortProgress:
-          Fragment$Short.fromJson((l$setShortProgress as Map<String, dynamic>)),
+      setShortProgress: Fragment$Short.fromJson(
+        (l$setShortProgress as Map<String, dynamic>),
+      ),
       $__typename: (l$$__typename as String),
     );
   }
@@ -2570,10 +2470,7 @@ class Mutation$setShortProgress {
   int get hashCode {
     final l$setShortProgress = setShortProgress;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$setShortProgress,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$setShortProgress, l$$__typename]);
   }
 
   @override
@@ -2602,10 +2499,7 @@ class Mutation$setShortProgress {
 extension UtilityExtension$Mutation$setShortProgress
     on Mutation$setShortProgress {
   CopyWith$Mutation$setShortProgress<Mutation$setShortProgress> get copyWith =>
-      CopyWith$Mutation$setShortProgress(
-        this,
-        (i) => i,
-      );
+      CopyWith$Mutation$setShortProgress(this, (i) => i);
 }
 
 abstract class CopyWith$Mutation$setShortProgress<TRes> {
@@ -2617,19 +2511,13 @@ abstract class CopyWith$Mutation$setShortProgress<TRes> {
   factory CopyWith$Mutation$setShortProgress.stub(TRes res) =
       _CopyWithStubImpl$Mutation$setShortProgress;
 
-  TRes call({
-    Fragment$Short? setShortProgress,
-    String? $__typename,
-  });
+  TRes call({Fragment$Short? setShortProgress, String? $__typename});
   CopyWith$Fragment$Short<TRes> get setShortProgress;
 }
 
 class _CopyWithImpl$Mutation$setShortProgress<TRes>
     implements CopyWith$Mutation$setShortProgress<TRes> {
-  _CopyWithImpl$Mutation$setShortProgress(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Mutation$setShortProgress(this._instance, this._then);
 
   final Mutation$setShortProgress _instance;
 
@@ -2640,21 +2528,24 @@ class _CopyWithImpl$Mutation$setShortProgress<TRes>
   TRes call({
     Object? setShortProgress = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Mutation$setShortProgress(
-        setShortProgress:
-            setShortProgress == _undefined || setShortProgress == null
-                ? _instance.setShortProgress
-                : (setShortProgress as Fragment$Short),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  }) => _then(
+    Mutation$setShortProgress(
+      setShortProgress:
+          setShortProgress == _undefined || setShortProgress == null
+          ? _instance.setShortProgress
+          : (setShortProgress as Fragment$Short),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 
   CopyWith$Fragment$Short<TRes> get setShortProgress {
     final local$setShortProgress = _instance.setShortProgress;
     return CopyWith$Fragment$Short(
-        local$setShortProgress, (e) => call(setShortProgress: e));
+      local$setShortProgress,
+      (e) => call(setShortProgress: e),
+    );
   }
 }
 
@@ -2664,60 +2555,63 @@ class _CopyWithStubImpl$Mutation$setShortProgress<TRes>
 
   TRes _res;
 
-  call({
-    Fragment$Short? setShortProgress,
-    String? $__typename,
-  }) =>
-      _res;
+  call({Fragment$Short? setShortProgress, String? $__typename}) => _res;
 
   CopyWith$Fragment$Short<TRes> get setShortProgress =>
       CopyWith$Fragment$Short.stub(_res);
 }
 
-const documentNodeMutationsetShortProgress = DocumentNode(definitions: [
-  OperationDefinitionNode(
-    type: OperationType.mutation,
-    name: NameNode(value: 'setShortProgress'),
-    variableDefinitions: [
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'id')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'UUID'),
-          isNonNull: true,
+const documentNodeMutationsetShortProgress = DocumentNode(
+  definitions: [
+    OperationDefinitionNode(
+      type: OperationType.mutation,
+      name: NameNode(value: 'setShortProgress'),
+      variableDefinitions: [
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'id')),
+          type: NamedTypeNode(name: NameNode(value: 'UUID'), isNonNull: true),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'progress')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'Float'),
-          isNonNull: true,
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'progress')),
+          type: NamedTypeNode(name: NameNode(value: 'Float'), isNonNull: true),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-    ],
-    directives: [],
-    selectionSet: SelectionSetNode(selections: [
-      FieldNode(
-        name: NameNode(value: 'setShortProgress'),
-        alias: null,
-        arguments: [
-          ArgumentNode(
-            name: NameNode(value: 'id'),
-            value: VariableNode(name: NameNode(value: 'id')),
-          ),
-          ArgumentNode(
-            name: NameNode(value: 'progress'),
-            value: VariableNode(name: NameNode(value: 'progress')),
-          ),
-        ],
-        directives: [],
-        selectionSet: SelectionSetNode(selections: [
-          FragmentSpreadNode(
-            name: NameNode(value: 'Short'),
+      ],
+      directives: [],
+      selectionSet: SelectionSetNode(
+        selections: [
+          FieldNode(
+            name: NameNode(value: 'setShortProgress'),
+            alias: null,
+            arguments: [
+              ArgumentNode(
+                name: NameNode(value: 'id'),
+                value: VariableNode(name: NameNode(value: 'id')),
+              ),
+              ArgumentNode(
+                name: NameNode(value: 'progress'),
+                value: VariableNode(name: NameNode(value: 'progress')),
+              ),
+            ],
             directives: [],
+            selectionSet: SelectionSetNode(
+              selections: [
+                FragmentSpreadNode(
+                  name: NameNode(value: 'Short'),
+                  directives: [],
+                ),
+                FieldNode(
+                  name: NameNode(value: '__typename'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+              ],
+            ),
           ),
           FieldNode(
             name: NameNode(value: '__typename'),
@@ -2726,24 +2620,17 @@ const documentNodeMutationsetShortProgress = DocumentNode(definitions: [
             directives: [],
             selectionSet: null,
           ),
-        ]),
+        ],
       ),
-      FieldNode(
-        name: NameNode(value: '__typename'),
-        alias: null,
-        arguments: [],
-        directives: [],
-        selectionSet: null,
-      ),
-    ]),
-  ),
-  fragmentDefinitionShort,
-  fragmentDefinitionPlayableMediaItemShort,
-  fragmentDefinitionBasicStream,
-]);
+    ),
+    fragmentDefinitionShort,
+    fragmentDefinitionPlayableMediaItemShort,
+    fragmentDefinitionBasicStream,
+  ],
+);
 Mutation$setShortProgress _parserFn$Mutation$setShortProgress(
-        Map<String, dynamic> data) =>
-    Mutation$setShortProgress.fromJson(data);
+  Map<String, dynamic> data,
+) => Mutation$setShortProgress.fromJson(data);
 typedef OnMutationCompleted$Mutation$setShortProgress = FutureOr<void> Function(
   Map<String, dynamic>?,
   Mutation$setShortProgress?,
@@ -2763,38 +2650,38 @@ class Options$Mutation$setShortProgress
     OnMutationCompleted$Mutation$setShortProgress? onCompleted,
     graphql.OnMutationUpdate<Mutation$setShortProgress>? update,
     graphql.OnError? onError,
-  })  : onCompletedWithParsed = onCompleted,
-        super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          onCompleted: onCompleted == null
-              ? null
-              : (data) => onCompleted(
-                    data,
-                    data == null
-                        ? null
-                        : _parserFn$Mutation$setShortProgress(data),
-                  ),
-          update: update,
-          onError: onError,
-          document: documentNodeMutationsetShortProgress,
-          parserFn: _parserFn$Mutation$setShortProgress,
-        );
+  }) : onCompletedWithParsed = onCompleted,
+       super(
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         onCompleted: onCompleted == null
+             ? null
+             : (data) => onCompleted(
+                 data,
+                 data == null
+                     ? null
+                     : _parserFn$Mutation$setShortProgress(data),
+               ),
+         update: update,
+         onError: onError,
+         document: documentNodeMutationsetShortProgress,
+         parserFn: _parserFn$Mutation$setShortProgress,
+       );
 
   final OnMutationCompleted$Mutation$setShortProgress? onCompletedWithParsed;
 
   @override
   List<Object?> get properties => [
-        ...super.onCompleted == null
-            ? super.properties
-            : super.properties.where((property) => property != onCompleted),
-        onCompletedWithParsed,
-      ];
+    ...super.onCompleted == null
+        ? super.properties
+        : super.properties.where((property) => property != onCompleted),
+    onCompletedWithParsed,
+  ];
 }
 
 class WatchOptions$Mutation$setShortProgress
@@ -2813,63 +2700,61 @@ class WatchOptions$Mutation$setShortProgress
     bool carryForwardDataOnException = true,
     bool fetchResults = false,
   }) : super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          document: documentNodeMutationsetShortProgress,
-          pollInterval: pollInterval,
-          eagerlyFetchResults: eagerlyFetchResults,
-          carryForwardDataOnException: carryForwardDataOnException,
-          fetchResults: fetchResults,
-          parserFn: _parserFn$Mutation$setShortProgress,
-        );
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         document: documentNodeMutationsetShortProgress,
+         pollInterval: pollInterval,
+         eagerlyFetchResults: eagerlyFetchResults,
+         carryForwardDataOnException: carryForwardDataOnException,
+         fetchResults: fetchResults,
+         parserFn: _parserFn$Mutation$setShortProgress,
+       );
 }
 
 extension ClientExtension$Mutation$setShortProgress on graphql.GraphQLClient {
   Future<graphql.QueryResult<Mutation$setShortProgress>>
-      mutate$setShortProgress(
-              Options$Mutation$setShortProgress options) async =>
-          await this.mutate(options);
+  mutate$setShortProgress(Options$Mutation$setShortProgress options) async =>
+      await this.mutate(options);
 
   graphql.ObservableQuery<Mutation$setShortProgress>
-      watchMutation$setShortProgress(
-              WatchOptions$Mutation$setShortProgress options) =>
-          this.watchMutation(options);
+  watchMutation$setShortProgress(
+    WatchOptions$Mutation$setShortProgress options,
+  ) => this.watchMutation(options);
 }
 
 class Mutation$setShortProgress$HookResult {
-  Mutation$setShortProgress$HookResult(
-    this.runMutation,
-    this.result,
-  );
+  Mutation$setShortProgress$HookResult(this.runMutation, this.result);
 
   final RunMutation$Mutation$setShortProgress runMutation;
 
   final graphql.QueryResult<Mutation$setShortProgress> result;
 }
 
-Mutation$setShortProgress$HookResult useMutation$setShortProgress(
-    [WidgetOptions$Mutation$setShortProgress? options]) {
-  final result = graphql_flutter
-      .useMutation(options ?? WidgetOptions$Mutation$setShortProgress());
+Mutation$setShortProgress$HookResult useMutation$setShortProgress([
+  WidgetOptions$Mutation$setShortProgress? options,
+]) {
+  final result = graphql_flutter.useMutation(
+    options ?? WidgetOptions$Mutation$setShortProgress(),
+  );
   return Mutation$setShortProgress$HookResult(
     (variables, {optimisticResult, typedOptimisticResult}) =>
         result.runMutation(
-      variables.toJson(),
-      optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-    ),
+          variables.toJson(),
+          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+        ),
     result.result,
   );
 }
 
 graphql.ObservableQuery<Mutation$setShortProgress>
-    useWatchMutation$setShortProgress(
-            WatchOptions$Mutation$setShortProgress options) =>
-        graphql_flutter.useWatchMutation(options);
+useWatchMutation$setShortProgress(
+  WatchOptions$Mutation$setShortProgress options,
+) => graphql_flutter.useWatchMutation(options);
 
 class WidgetOptions$Mutation$setShortProgress
     extends graphql.MutationOptions<Mutation$setShortProgress> {
@@ -2884,45 +2769,45 @@ class WidgetOptions$Mutation$setShortProgress
     OnMutationCompleted$Mutation$setShortProgress? onCompleted,
     graphql.OnMutationUpdate<Mutation$setShortProgress>? update,
     graphql.OnError? onError,
-  })  : onCompletedWithParsed = onCompleted,
-        super(
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          onCompleted: onCompleted == null
-              ? null
-              : (data) => onCompleted(
-                    data,
-                    data == null
-                        ? null
-                        : _parserFn$Mutation$setShortProgress(data),
-                  ),
-          update: update,
-          onError: onError,
-          document: documentNodeMutationsetShortProgress,
-          parserFn: _parserFn$Mutation$setShortProgress,
-        );
+  }) : onCompletedWithParsed = onCompleted,
+       super(
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         onCompleted: onCompleted == null
+             ? null
+             : (data) => onCompleted(
+                 data,
+                 data == null
+                     ? null
+                     : _parserFn$Mutation$setShortProgress(data),
+               ),
+         update: update,
+         onError: onError,
+         document: documentNodeMutationsetShortProgress,
+         parserFn: _parserFn$Mutation$setShortProgress,
+       );
 
   final OnMutationCompleted$Mutation$setShortProgress? onCompletedWithParsed;
 
   @override
   List<Object?> get properties => [
-        ...super.onCompleted == null
-            ? super.properties
-            : super.properties.where((property) => property != onCompleted),
-        onCompletedWithParsed,
-      ];
+    ...super.onCompleted == null
+        ? super.properties
+        : super.properties.where((property) => property != onCompleted),
+    onCompletedWithParsed,
+  ];
 }
 
-typedef RunMutation$Mutation$setShortProgress
-    = graphql.MultiSourceResult<Mutation$setShortProgress> Function(
-  Variables$Mutation$setShortProgress, {
-  Object? optimisticResult,
-  Mutation$setShortProgress? typedOptimisticResult,
-});
+typedef RunMutation$Mutation$setShortProgress =
+    graphql.MultiSourceResult<Mutation$setShortProgress> Function(
+      Variables$Mutation$setShortProgress, {
+      Object? optimisticResult,
+      Mutation$setShortProgress? typedOptimisticResult,
+    });
 typedef Builder$Mutation$setShortProgress = widgets.Widget Function(
   RunMutation$Mutation$setShortProgress,
   graphql.QueryResult<Mutation$setShortProgress>?,
@@ -2935,33 +2820,22 @@ class Mutation$setShortProgress$Widget
     WidgetOptions$Mutation$setShortProgress? options,
     required Builder$Mutation$setShortProgress builder,
   }) : super(
-          key: key,
-          options: options ?? WidgetOptions$Mutation$setShortProgress(),
-          builder: (
-            run,
-            result,
-          ) =>
-              builder(
-            (
-              variables, {
-              optimisticResult,
-              typedOptimisticResult,
-            }) =>
-                run(
-              variables.toJson(),
-              optimisticResult:
-                  optimisticResult ?? typedOptimisticResult?.toJson(),
-            ),
-            result,
-          ),
-        );
+         key: key,
+         options: options ?? WidgetOptions$Mutation$setShortProgress(),
+         builder: (run, result) => builder(
+           (variables, {optimisticResult, typedOptimisticResult}) => run(
+             variables.toJson(),
+             optimisticResult:
+                 optimisticResult ?? typedOptimisticResult?.toJson(),
+           ),
+           result,
+         ),
+       );
 }
 
 class Variables$Query$getShortStreams {
   factory Variables$Query$getShortStreams({required String id}) =>
-      Variables$Query$getShortStreams._({
-        r'id': id,
-      });
+      Variables$Query$getShortStreams._({r'id': id});
 
   Variables$Query$getShortStreams._(this._$data);
 
@@ -2984,10 +2858,7 @@ class Variables$Query$getShortStreams {
   }
 
   CopyWith$Variables$Query$getShortStreams<Variables$Query$getShortStreams>
-      get copyWith => CopyWith$Variables$Query$getShortStreams(
-            this,
-            (i) => i,
-          );
+  get copyWith => CopyWith$Variables$Query$getShortStreams(this, (i) => i);
 
   @override
   bool operator ==(Object other) {
@@ -3027,10 +2898,7 @@ abstract class CopyWith$Variables$Query$getShortStreams<TRes> {
 
 class _CopyWithImpl$Variables$Query$getShortStreams<TRes>
     implements CopyWith$Variables$Query$getShortStreams<TRes> {
-  _CopyWithImpl$Variables$Query$getShortStreams(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Variables$Query$getShortStreams(this._instance, this._then);
 
   final Variables$Query$getShortStreams _instance;
 
@@ -3038,11 +2906,12 @@ class _CopyWithImpl$Variables$Query$getShortStreams<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({Object? id = _undefined}) =>
-      _then(Variables$Query$getShortStreams._({
-        ..._instance._$data,
-        if (id != _undefined && id != null) 'id': (id as String),
-      }));
+  TRes call({Object? id = _undefined}) => _then(
+    Variables$Query$getShortStreams._({
+      ..._instance._$data,
+      if (id != _undefined && id != null) 'id': (id as String),
+    }),
+  );
 }
 
 class _CopyWithStubImpl$Variables$Query$getShortStreams<TRes>
@@ -3055,17 +2924,15 @@ class _CopyWithStubImpl$Variables$Query$getShortStreams<TRes>
 }
 
 class Query$getShortStreams {
-  Query$getShortStreams({
-    required this.short,
-    this.$__typename = 'QueryRoot',
-  });
+  Query$getShortStreams({required this.short, this.$__typename = 'QueryRoot'});
 
   factory Query$getShortStreams.fromJson(Map<String, dynamic> json) {
     final l$short = json['short'];
     final l$$__typename = json['__typename'];
     return Query$getShortStreams(
       short: Query$getShortStreams$short.fromJson(
-          (l$short as Map<String, dynamic>)),
+        (l$short as Map<String, dynamic>),
+      ),
       $__typename: (l$$__typename as String),
     );
   }
@@ -3087,10 +2954,7 @@ class Query$getShortStreams {
   int get hashCode {
     final l$short = short;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$short,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$short, l$$__typename]);
   }
 
   @override
@@ -3117,10 +2981,7 @@ class Query$getShortStreams {
 
 extension UtilityExtension$Query$getShortStreams on Query$getShortStreams {
   CopyWith$Query$getShortStreams<Query$getShortStreams> get copyWith =>
-      CopyWith$Query$getShortStreams(
-        this,
-        (i) => i,
-      );
+      CopyWith$Query$getShortStreams(this, (i) => i);
 }
 
 abstract class CopyWith$Query$getShortStreams<TRes> {
@@ -3132,19 +2993,13 @@ abstract class CopyWith$Query$getShortStreams<TRes> {
   factory CopyWith$Query$getShortStreams.stub(TRes res) =
       _CopyWithStubImpl$Query$getShortStreams;
 
-  TRes call({
-    Query$getShortStreams$short? short,
-    String? $__typename,
-  });
+  TRes call({Query$getShortStreams$short? short, String? $__typename});
   CopyWith$Query$getShortStreams$short<TRes> get short;
 }
 
 class _CopyWithImpl$Query$getShortStreams<TRes>
     implements CopyWith$Query$getShortStreams<TRes> {
-  _CopyWithImpl$Query$getShortStreams(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Query$getShortStreams(this._instance, this._then);
 
   final Query$getShortStreams _instance;
 
@@ -3152,23 +3007,24 @@ class _CopyWithImpl$Query$getShortStreams<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({
-    Object? short = _undefined,
-    Object? $__typename = _undefined,
-  }) =>
-      _then(Query$getShortStreams(
-        short: short == _undefined || short == null
-            ? _instance.short
-            : (short as Query$getShortStreams$short),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  TRes call({Object? short = _undefined, Object? $__typename = _undefined}) =>
+      _then(
+        Query$getShortStreams(
+          short: short == _undefined || short == null
+              ? _instance.short
+              : (short as Query$getShortStreams$short),
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String),
+        ),
+      );
 
   CopyWith$Query$getShortStreams$short<TRes> get short {
     final local$short = _instance.short;
     return CopyWith$Query$getShortStreams$short(
-        local$short, (e) => call(short: e));
+      local$short,
+      (e) => call(short: e),
+    );
   }
 }
 
@@ -3178,62 +3034,70 @@ class _CopyWithStubImpl$Query$getShortStreams<TRes>
 
   TRes _res;
 
-  call({
-    Query$getShortStreams$short? short,
-    String? $__typename,
-  }) =>
-      _res;
+  call({Query$getShortStreams$short? short, String? $__typename}) => _res;
 
   CopyWith$Query$getShortStreams$short<TRes> get short =>
       CopyWith$Query$getShortStreams$short.stub(_res);
 }
 
-const documentNodeQuerygetShortStreams = DocumentNode(definitions: [
-  OperationDefinitionNode(
-    type: OperationType.query,
-    name: NameNode(value: 'getShortStreams'),
-    variableDefinitions: [
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'id')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'UUID'),
-          isNonNull: true,
+const documentNodeQuerygetShortStreams = DocumentNode(
+  definitions: [
+    OperationDefinitionNode(
+      type: OperationType.query,
+      name: NameNode(value: 'getShortStreams'),
+      variableDefinitions: [
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'id')),
+          type: NamedTypeNode(name: NameNode(value: 'UUID'), isNonNull: true),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      )
-    ],
-    directives: [],
-    selectionSet: SelectionSetNode(selections: [
-      FieldNode(
-        name: NameNode(value: 'short'),
-        alias: null,
-        arguments: [
-          ArgumentNode(
-            name: NameNode(value: 'id'),
-            value: VariableNode(name: NameNode(value: 'id')),
-          )
-        ],
-        directives: [],
-        selectionSet: SelectionSetNode(selections: [
+      ],
+      directives: [],
+      selectionSet: SelectionSetNode(
+        selections: [
           FieldNode(
-            name: NameNode(value: 'streams'),
+            name: NameNode(value: 'short'),
             alias: null,
-            arguments: [],
+            arguments: [
+              ArgumentNode(
+                name: NameNode(value: 'id'),
+                value: VariableNode(name: NameNode(value: 'id')),
+              ),
+            ],
             directives: [],
-            selectionSet: SelectionSetNode(selections: [
-              FragmentSpreadNode(
-                name: NameNode(value: 'BasicStream'),
-                directives: [],
-              ),
-              FieldNode(
-                name: NameNode(value: '__typename'),
-                alias: null,
-                arguments: [],
-                directives: [],
-                selectionSet: null,
-              ),
-            ]),
+            selectionSet: SelectionSetNode(
+              selections: [
+                FieldNode(
+                  name: NameNode(value: 'streams'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: SelectionSetNode(
+                    selections: [
+                      FragmentSpreadNode(
+                        name: NameNode(value: 'BasicStream'),
+                        directives: [],
+                      ),
+                      FieldNode(
+                        name: NameNode(value: '__typename'),
+                        alias: null,
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null,
+                      ),
+                    ],
+                  ),
+                ),
+                FieldNode(
+                  name: NameNode(value: '__typename'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+              ],
+            ),
           ),
           FieldNode(
             name: NameNode(value: '__typename'),
@@ -3242,22 +3106,15 @@ const documentNodeQuerygetShortStreams = DocumentNode(definitions: [
             directives: [],
             selectionSet: null,
           ),
-        ]),
+        ],
       ),
-      FieldNode(
-        name: NameNode(value: '__typename'),
-        alias: null,
-        arguments: [],
-        directives: [],
-        selectionSet: null,
-      ),
-    ]),
-  ),
-  fragmentDefinitionBasicStream,
-]);
+    ),
+    fragmentDefinitionBasicStream,
+  ],
+);
 Query$getShortStreams _parserFn$Query$getShortStreams(
-        Map<String, dynamic> data) =>
-    Query$getShortStreams.fromJson(data);
+  Map<String, dynamic> data,
+) => Query$getShortStreams.fromJson(data);
 typedef OnQueryComplete$Query$getShortStreams = FutureOr<void> Function(
   Map<String, dynamic>?,
   Query$getShortStreams?,
@@ -3277,36 +3134,36 @@ class Options$Query$getShortStreams
     graphql.Context? context,
     OnQueryComplete$Query$getShortStreams? onComplete,
     graphql.OnQueryError? onError,
-  })  : onCompleteWithParsed = onComplete,
-        super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          pollInterval: pollInterval,
-          context: context,
-          onComplete: onComplete == null
-              ? null
-              : (data) => onComplete(
-                    data,
-                    data == null ? null : _parserFn$Query$getShortStreams(data),
-                  ),
-          onError: onError,
-          document: documentNodeQuerygetShortStreams,
-          parserFn: _parserFn$Query$getShortStreams,
-        );
+  }) : onCompleteWithParsed = onComplete,
+       super(
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         pollInterval: pollInterval,
+         context: context,
+         onComplete: onComplete == null
+             ? null
+             : (data) => onComplete(
+                 data,
+                 data == null ? null : _parserFn$Query$getShortStreams(data),
+               ),
+         onError: onError,
+         document: documentNodeQuerygetShortStreams,
+         parserFn: _parserFn$Query$getShortStreams,
+       );
 
   final OnQueryComplete$Query$getShortStreams? onCompleteWithParsed;
 
   @override
   List<Object?> get properties => [
-        ...super.onComplete == null
-            ? super.properties
-            : super.properties.where((property) => property != onComplete),
-        onCompleteWithParsed,
-      ];
+    ...super.onComplete == null
+        ? super.properties
+        : super.properties.where((property) => property != onComplete),
+    onCompleteWithParsed,
+  ];
 }
 
 class WatchOptions$Query$getShortStreams
@@ -3325,20 +3182,20 @@ class WatchOptions$Query$getShortStreams
     bool carryForwardDataOnException = true,
     bool fetchResults = false,
   }) : super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          document: documentNodeQuerygetShortStreams,
-          pollInterval: pollInterval,
-          eagerlyFetchResults: eagerlyFetchResults,
-          carryForwardDataOnException: carryForwardDataOnException,
-          fetchResults: fetchResults,
-          parserFn: _parserFn$Query$getShortStreams,
-        );
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         document: documentNodeQuerygetShortStreams,
+         pollInterval: pollInterval,
+         eagerlyFetchResults: eagerlyFetchResults,
+         carryForwardDataOnException: carryForwardDataOnException,
+         fetchResults: fetchResults,
+         parserFn: _parserFn$Query$getShortStreams,
+       );
 }
 
 class FetchMoreOptions$Query$getShortStreams extends graphql.FetchMoreOptions {
@@ -3346,35 +3203,33 @@ class FetchMoreOptions$Query$getShortStreams extends graphql.FetchMoreOptions {
     required graphql.UpdateQuery updateQuery,
     required Variables$Query$getShortStreams variables,
   }) : super(
-          updateQuery: updateQuery,
-          variables: variables.toJson(),
-          document: documentNodeQuerygetShortStreams,
-        );
+         updateQuery: updateQuery,
+         variables: variables.toJson(),
+         document: documentNodeQuerygetShortStreams,
+       );
 }
 
 extension ClientExtension$Query$getShortStreams on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$getShortStreams>> query$getShortStreams(
-          Options$Query$getShortStreams options) async =>
-      await this.query(options);
+    Options$Query$getShortStreams options,
+  ) async => await this.query(options);
 
   graphql.ObservableQuery<Query$getShortStreams> watchQuery$getShortStreams(
-          WatchOptions$Query$getShortStreams options) =>
-      this.watchQuery(options);
+    WatchOptions$Query$getShortStreams options,
+  ) => this.watchQuery(options);
 
   void writeQuery$getShortStreams({
     required Query$getShortStreams data,
     required Variables$Query$getShortStreams variables,
     bool broadcast = true,
-  }) =>
-      this.writeQuery(
-        graphql.Request(
-          operation:
-              graphql.Operation(document: documentNodeQuerygetShortStreams),
-          variables: variables.toJson(),
-        ),
-        data: data.toJson(),
-        broadcast: broadcast,
-      );
+  }) => this.writeQuery(
+    graphql.Request(
+      operation: graphql.Operation(document: documentNodeQuerygetShortStreams),
+      variables: variables.toJson(),
+    ),
+    data: data.toJson(),
+    broadcast: broadcast,
+  );
 
   Query$getShortStreams? readQuery$getShortStreams({
     required Variables$Query$getShortStreams variables,
@@ -3382,8 +3237,9 @@ extension ClientExtension$Query$getShortStreams on graphql.GraphQLClient {
   }) {
     final result = this.readQuery(
       graphql.Request(
-        operation:
-            graphql.Operation(document: documentNodeQuerygetShortStreams),
+        operation: graphql.Operation(
+          document: documentNodeQuerygetShortStreams,
+        ),
         variables: variables.toJson(),
       ),
       optimistic: optimistic,
@@ -3393,11 +3249,11 @@ extension ClientExtension$Query$getShortStreams on graphql.GraphQLClient {
 }
 
 graphql_flutter.QueryHookResult<Query$getShortStreams> useQuery$getShortStreams(
-        Options$Query$getShortStreams options) =>
-    graphql_flutter.useQuery(options);
+  Options$Query$getShortStreams options,
+) => graphql_flutter.useQuery(options);
 graphql.ObservableQuery<Query$getShortStreams> useWatchQuery$getShortStreams(
-        WatchOptions$Query$getShortStreams options) =>
-    graphql_flutter.useWatchQuery(options);
+  WatchOptions$Query$getShortStreams options,
+) => graphql_flutter.useWatchQuery(options);
 
 class Query$getShortStreams$Widget
     extends graphql_flutter.Query<Query$getShortStreams> {
@@ -3405,11 +3261,7 @@ class Query$getShortStreams$Widget
     widgets.Key? key,
     required Options$Query$getShortStreams options,
     required graphql_flutter.QueryBuilder<Query$getShortStreams> builder,
-  }) : super(
-          key: key,
-          options: options,
-          builder: builder,
-        );
+  }) : super(key: key, options: options, builder: builder);
 }
 
 class Query$getShortStreams$short {
@@ -3424,7 +3276,8 @@ class Query$getShortStreams$short {
     return Query$getShortStreams$short(
       streams: (l$streams as List<dynamic>)
           .map(
-              (e) => Fragment$BasicStream.fromJson((e as Map<String, dynamic>)))
+            (e) => Fragment$BasicStream.fromJson((e as Map<String, dynamic>)),
+          )
           .toList(),
       $__typename: (l$$__typename as String),
     );
@@ -3486,10 +3339,7 @@ class Query$getShortStreams$short {
 extension UtilityExtension$Query$getShortStreams$short
     on Query$getShortStreams$short {
   CopyWith$Query$getShortStreams$short<Query$getShortStreams$short>
-      get copyWith => CopyWith$Query$getShortStreams$short(
-            this,
-            (i) => i,
-          );
+  get copyWith => CopyWith$Query$getShortStreams$short(this, (i) => i);
 }
 
 abstract class CopyWith$Query$getShortStreams$short<TRes> {
@@ -3501,22 +3351,18 @@ abstract class CopyWith$Query$getShortStreams$short<TRes> {
   factory CopyWith$Query$getShortStreams$short.stub(TRes res) =
       _CopyWithStubImpl$Query$getShortStreams$short;
 
-  TRes call({
-    List<Fragment$BasicStream>? streams,
-    String? $__typename,
-  });
+  TRes call({List<Fragment$BasicStream>? streams, String? $__typename});
   TRes streams(
-      Iterable<Fragment$BasicStream> Function(
-              Iterable<CopyWith$Fragment$BasicStream<Fragment$BasicStream>>)
-          _fn);
+    Iterable<Fragment$BasicStream> Function(
+      Iterable<CopyWith$Fragment$BasicStream<Fragment$BasicStream>>,
+    )
+    _fn,
+  );
 }
 
 class _CopyWithImpl$Query$getShortStreams$short<TRes>
     implements CopyWith$Query$getShortStreams$short<TRes> {
-  _CopyWithImpl$Query$getShortStreams$short(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Query$getShortStreams$short(this._instance, this._then);
 
   final Query$getShortStreams$short _instance;
 
@@ -3524,29 +3370,28 @@ class _CopyWithImpl$Query$getShortStreams$short<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({
-    Object? streams = _undefined,
-    Object? $__typename = _undefined,
-  }) =>
-      _then(Query$getShortStreams$short(
-        streams: streams == _undefined || streams == null
-            ? _instance.streams
-            : (streams as List<Fragment$BasicStream>),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  TRes call({Object? streams = _undefined, Object? $__typename = _undefined}) =>
+      _then(
+        Query$getShortStreams$short(
+          streams: streams == _undefined || streams == null
+              ? _instance.streams
+              : (streams as List<Fragment$BasicStream>),
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String),
+        ),
+      );
 
   TRes streams(
-          Iterable<Fragment$BasicStream> Function(
-                  Iterable<CopyWith$Fragment$BasicStream<Fragment$BasicStream>>)
-              _fn) =>
-      call(
-          streams:
-              _fn(_instance.streams.map((e) => CopyWith$Fragment$BasicStream(
-                    e,
-                    (i) => i,
-                  ))).toList());
+    Iterable<Fragment$BasicStream> Function(
+      Iterable<CopyWith$Fragment$BasicStream<Fragment$BasicStream>>,
+    )
+    _fn,
+  ) => call(
+    streams: _fn(
+      _instance.streams.map((e) => CopyWith$Fragment$BasicStream(e, (i) => i)),
+    ).toList(),
+  );
 }
 
 class _CopyWithStubImpl$Query$getShortStreams$short<TRes>
@@ -3555,11 +3400,7 @@ class _CopyWithStubImpl$Query$getShortStreams$short<TRes>
 
   TRes _res;
 
-  call({
-    List<Fragment$BasicStream>? streams,
-    String? $__typename,
-  }) =>
-      _res;
+  call({List<Fragment$BasicStream>? streams, String? $__typename}) => _res;
 
   streams(_fn) => _res;
 }

@@ -6,44 +6,44 @@ part of 'notification_prompt.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$NotificationPromptDismissedEventImpl
-_$$NotificationPromptDismissedEventImplFromJson(Map<String, dynamic> json) =>
-    _$NotificationPromptDismissedEventImpl(
-      timesDismissed: (json['timesDismissed'] as num).toInt(),
-    );
+_NotificationPromptDismissedEvent _$NotificationPromptDismissedEventFromJson(
+  Map<String, dynamic> json,
+) => _NotificationPromptDismissedEvent(
+  timesDismissed: (json['timesDismissed'] as num).toInt(),
+);
 
-Map<String, dynamic> _$$NotificationPromptDismissedEventImplToJson(
-  _$NotificationPromptDismissedEventImpl instance,
+Map<String, dynamic> _$NotificationPromptDismissedEventToJson(
+  _NotificationPromptDismissedEvent instance,
 ) => <String, dynamic>{'timesDismissed': instance.timesDismissed};
 
-_$NotificationPromptClickedEventImpl
-_$$NotificationPromptClickedEventImplFromJson(Map<String, dynamic> json) =>
-    _$NotificationPromptClickedEventImpl();
+_NotificationPromptClickedEvent _$NotificationPromptClickedEventFromJson(
+  Map<String, dynamic> json,
+) => _NotificationPromptClickedEvent();
 
-Map<String, dynamic> _$$NotificationPromptClickedEventImplToJson(
-  _$NotificationPromptClickedEventImpl instance,
+Map<String, dynamic> _$NotificationPromptClickedEventToJson(
+  _NotificationPromptClickedEvent instance,
 ) => <String, dynamic>{};
 
-_$NotificationPromptDeniedEventImpl
-_$$NotificationPromptDeniedEventImplFromJson(Map<String, dynamic> json) =>
-    _$NotificationPromptDeniedEventImpl();
+_NotificationPromptDeniedEvent _$NotificationPromptDeniedEventFromJson(
+  Map<String, dynamic> json,
+) => _NotificationPromptDeniedEvent();
 
-Map<String, dynamic> _$$NotificationPromptDeniedEventImplToJson(
-  _$NotificationPromptDeniedEventImpl instance,
+Map<String, dynamic> _$NotificationPromptDeniedEventToJson(
+  _NotificationPromptDeniedEvent instance,
 ) => <String, dynamic>{};
 
-_$NotificationPromptAcceptedEventImpl
-_$$NotificationPromptAcceptedEventImplFromJson(Map<String, dynamic> json) =>
-    _$NotificationPromptAcceptedEventImpl();
+_NotificationPromptAcceptedEvent _$NotificationPromptAcceptedEventFromJson(
+  Map<String, dynamic> json,
+) => _NotificationPromptAcceptedEvent();
 
-Map<String, dynamic> _$$NotificationPromptAcceptedEventImplToJson(
-  _$NotificationPromptAcceptedEventImpl instance,
+Map<String, dynamic> _$NotificationPromptAcceptedEventToJson(
+  _NotificationPromptAcceptedEvent instance,
 ) => <String, dynamic>{};
 
-_$NotificationsSettingToggledEventImpl
-_$$NotificationsSettingToggledEventImplFromJson(Map<String, dynamic> json) =>
-    _$NotificationsSettingToggledEventImpl(enabled: json['enabled'] as bool);
+_NotificationsSettingToggledEvent _$NotificationsSettingToggledEventFromJson(
+  Map<String, dynamic> json,
+) => _NotificationsSettingToggledEvent(enabled: json['enabled'] as bool);
 
-Map<String, dynamic> _$$NotificationsSettingToggledEventImplToJson(
-  _$NotificationsSettingToggledEventImpl instance,
+Map<String, dynamic> _$NotificationsSettingToggledEventToJson(
+  _NotificationsSettingToggledEvent instance,
 ) => <String, dynamic>{'enabled': instance.enabled};
