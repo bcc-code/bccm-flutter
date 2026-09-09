@@ -36,7 +36,6 @@ dependencies:
   package_info_plus: ^9.0.0
   responsive_framework: ^1.5.1
   riverpod: ^2.5.3
-  riverpod_annotation: ^2.5.3
   rudder_sdk_flutter: ^3.0.0
   rudder_sdk_flutter_platform_interface: ^3.0.0
   shared_preferences: ^2.3.2
