@@ -1,4 +1,5 @@
 import 'dart:async';
+
 import 'package:flutter/widgets.dart' as widgets;
 import 'package:gql/ast.dart';
 import 'package:graphql/client.dart' as graphql;
@@ -9,17 +10,17 @@ class Variables$Mutation$setEpisodeProgress {
     required String id,
     int? duration,
     int? progress,
-  }) =>
-      Variables$Mutation$setEpisodeProgress._({
-        r'id': id,
-        if (duration != null) r'duration': duration,
-        if (progress != null) r'progress': progress,
-      });
+  }) => Variables$Mutation$setEpisodeProgress._({
+    r'id': id,
+    if (duration != null) r'duration': duration,
+    if (progress != null) r'progress': progress,
+  });
 
   Variables$Mutation$setEpisodeProgress._(this._$data);
 
   factory Variables$Mutation$setEpisodeProgress.fromJson(
-      Map<String, dynamic> data) {
+    Map<String, dynamic> data,
+  ) {
     final result$data = <String, dynamic>{};
     final l$id = data['id'];
     result$data['id'] = (l$id as String);
@@ -58,11 +59,10 @@ class Variables$Mutation$setEpisodeProgress {
   }
 
   CopyWith$Variables$Mutation$setEpisodeProgress<
-          Variables$Mutation$setEpisodeProgress>
-      get copyWith => CopyWith$Variables$Mutation$setEpisodeProgress(
-            this,
-            (i) => i,
-          );
+    Variables$Mutation$setEpisodeProgress
+  >
+  get copyWith =>
+      CopyWith$Variables$Mutation$setEpisodeProgress(this, (i) => i);
 
   @override
   bool operator ==(Object other) {
@@ -121,11 +121,7 @@ abstract class CopyWith$Variables$Mutation$setEpisodeProgress<TRes> {
   factory CopyWith$Variables$Mutation$setEpisodeProgress.stub(TRes res) =
       _CopyWithStubImpl$Variables$Mutation$setEpisodeProgress;
 
-  TRes call({
-    String? id,
-    int? duration,
-    int? progress,
-  });
+  TRes call({String? id, int? duration, int? progress});
 }
 
 class _CopyWithImpl$Variables$Mutation$setEpisodeProgress<TRes>
@@ -145,13 +141,14 @@ class _CopyWithImpl$Variables$Mutation$setEpisodeProgress<TRes>
     Object? id = _undefined,
     Object? duration = _undefined,
     Object? progress = _undefined,
-  }) =>
-      _then(Variables$Mutation$setEpisodeProgress._({
-        ..._instance._$data,
-        if (id != _undefined && id != null) 'id': (id as String),
-        if (duration != _undefined) 'duration': (duration as int?),
-        if (progress != _undefined) 'progress': (progress as int?),
-      }));
+  }) => _then(
+    Variables$Mutation$setEpisodeProgress._({
+      ..._instance._$data,
+      if (id != _undefined && id != null) 'id': (id as String),
+      if (duration != _undefined) 'duration': (duration as int?),
+      if (progress != _undefined) 'progress': (progress as int?),
+    }),
+  );
 }
 
 class _CopyWithStubImpl$Variables$Mutation$setEpisodeProgress<TRes>
@@ -160,12 +157,7 @@ class _CopyWithStubImpl$Variables$Mutation$setEpisodeProgress<TRes>
 
   TRes _res;
 
-  call({
-    String? id,
-    int? duration,
-    int? progress,
-  }) =>
-      _res;
+  call({String? id, int? duration, int? progress}) => _res;
 }
 
 class Mutation$setEpisodeProgress {
@@ -180,7 +172,8 @@ class Mutation$setEpisodeProgress {
     return Mutation$setEpisodeProgress(
       setEpisodeProgress:
           Mutation$setEpisodeProgress$setEpisodeProgress.fromJson(
-              (l$setEpisodeProgress as Map<String, dynamic>)),
+            (l$setEpisodeProgress as Map<String, dynamic>),
+          ),
       $__typename: (l$$__typename as String),
     );
   }
@@ -202,10 +195,7 @@ class Mutation$setEpisodeProgress {
   int get hashCode {
     final l$setEpisodeProgress = setEpisodeProgress;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$setEpisodeProgress,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$setEpisodeProgress, l$$__typename]);
   }
 
   @override
@@ -234,10 +224,7 @@ class Mutation$setEpisodeProgress {
 extension UtilityExtension$Mutation$setEpisodeProgress
     on Mutation$setEpisodeProgress {
   CopyWith$Mutation$setEpisodeProgress<Mutation$setEpisodeProgress>
-      get copyWith => CopyWith$Mutation$setEpisodeProgress(
-            this,
-            (i) => i,
-          );
+  get copyWith => CopyWith$Mutation$setEpisodeProgress(this, (i) => i);
 }
 
 abstract class CopyWith$Mutation$setEpisodeProgress<TRes> {
@@ -254,15 +241,12 @@ abstract class CopyWith$Mutation$setEpisodeProgress<TRes> {
     String? $__typename,
   });
   CopyWith$Mutation$setEpisodeProgress$setEpisodeProgress<TRes>
-      get setEpisodeProgress;
+  get setEpisodeProgress;
 }
 
 class _CopyWithImpl$Mutation$setEpisodeProgress<TRes>
     implements CopyWith$Mutation$setEpisodeProgress<TRes> {
-  _CopyWithImpl$Mutation$setEpisodeProgress(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Mutation$setEpisodeProgress(this._instance, this._then);
 
   final Mutation$setEpisodeProgress _instance;
 
@@ -273,23 +257,26 @@ class _CopyWithImpl$Mutation$setEpisodeProgress<TRes>
   TRes call({
     Object? setEpisodeProgress = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Mutation$setEpisodeProgress(
-        setEpisodeProgress:
-            setEpisodeProgress == _undefined || setEpisodeProgress == null
-                ? _instance.setEpisodeProgress
-                : (setEpisodeProgress
-                    as Mutation$setEpisodeProgress$setEpisodeProgress),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  }) => _then(
+    Mutation$setEpisodeProgress(
+      setEpisodeProgress:
+          setEpisodeProgress == _undefined || setEpisodeProgress == null
+          ? _instance.setEpisodeProgress
+          : (setEpisodeProgress
+                as Mutation$setEpisodeProgress$setEpisodeProgress),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 
   CopyWith$Mutation$setEpisodeProgress$setEpisodeProgress<TRes>
-      get setEpisodeProgress {
+  get setEpisodeProgress {
     final local$setEpisodeProgress = _instance.setEpisodeProgress;
     return CopyWith$Mutation$setEpisodeProgress$setEpisodeProgress(
-        local$setEpisodeProgress, (e) => call(setEpisodeProgress: e));
+      local$setEpisodeProgress,
+      (e) => call(setEpisodeProgress: e),
+    );
   }
 }
 
@@ -302,68 +289,85 @@ class _CopyWithStubImpl$Mutation$setEpisodeProgress<TRes>
   call({
     Mutation$setEpisodeProgress$setEpisodeProgress? setEpisodeProgress,
     String? $__typename,
-  }) =>
-      _res;
+  }) => _res;
 
   CopyWith$Mutation$setEpisodeProgress$setEpisodeProgress<TRes>
-      get setEpisodeProgress =>
-          CopyWith$Mutation$setEpisodeProgress$setEpisodeProgress.stub(_res);
+  get setEpisodeProgress =>
+      CopyWith$Mutation$setEpisodeProgress$setEpisodeProgress.stub(_res);
 }
 
-const documentNodeMutationsetEpisodeProgress = DocumentNode(definitions: [
-  OperationDefinitionNode(
-    type: OperationType.mutation,
-    name: NameNode(value: 'setEpisodeProgress'),
-    variableDefinitions: [
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'id')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'ID'),
-          isNonNull: true,
+const documentNodeMutationsetEpisodeProgress = DocumentNode(
+  definitions: [
+    OperationDefinitionNode(
+      type: OperationType.mutation,
+      name: NameNode(value: 'setEpisodeProgress'),
+      variableDefinitions: [
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'id')),
+          type: NamedTypeNode(name: NameNode(value: 'ID'), isNonNull: true),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'duration')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'Int'),
-          isNonNull: false,
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'duration')),
+          type: NamedTypeNode(name: NameNode(value: 'Int'), isNonNull: false),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'progress')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'Int'),
-          isNonNull: false,
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'progress')),
+          type: NamedTypeNode(name: NameNode(value: 'Int'), isNonNull: false),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-    ],
-    directives: [],
-    selectionSet: SelectionSetNode(selections: [
-      FieldNode(
-        name: NameNode(value: 'setEpisodeProgress'),
-        alias: null,
-        arguments: [
-          ArgumentNode(
-            name: NameNode(value: 'id'),
-            value: VariableNode(name: NameNode(value: 'id')),
+      ],
+      directives: [],
+      selectionSet: SelectionSetNode(
+        selections: [
+          FieldNode(
+            name: NameNode(value: 'setEpisodeProgress'),
+            alias: null,
+            arguments: [
+              ArgumentNode(
+                name: NameNode(value: 'id'),
+                value: VariableNode(name: NameNode(value: 'id')),
+              ),
+              ArgumentNode(
+                name: NameNode(value: 'duration'),
+                value: VariableNode(name: NameNode(value: 'duration')),
+              ),
+              ArgumentNode(
+                name: NameNode(value: 'progress'),
+                value: VariableNode(name: NameNode(value: 'progress')),
+              ),
+            ],
+            directives: [],
+            selectionSet: SelectionSetNode(
+              selections: [
+                FieldNode(
+                  name: NameNode(value: '__typename'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'duration'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'progress'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+              ],
+            ),
           ),
-          ArgumentNode(
-            name: NameNode(value: 'duration'),
-            value: VariableNode(name: NameNode(value: 'duration')),
-          ),
-          ArgumentNode(
-            name: NameNode(value: 'progress'),
-            value: VariableNode(name: NameNode(value: 'progress')),
-          ),
-        ],
-        directives: [],
-        selectionSet: SelectionSetNode(selections: [
           FieldNode(
             name: NameNode(value: '__typename'),
             alias: null,
@@ -371,40 +375,19 @@ const documentNodeMutationsetEpisodeProgress = DocumentNode(definitions: [
             directives: [],
             selectionSet: null,
           ),
-          FieldNode(
-            name: NameNode(value: 'duration'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'progress'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
-        ]),
+        ],
       ),
-      FieldNode(
-        name: NameNode(value: '__typename'),
-        alias: null,
-        arguments: [],
-        directives: [],
-        selectionSet: null,
-      ),
-    ]),
-  ),
-]);
-Mutation$setEpisodeProgress _parserFn$Mutation$setEpisodeProgress(
-        Map<String, dynamic> data) =>
-    Mutation$setEpisodeProgress.fromJson(data);
-typedef OnMutationCompleted$Mutation$setEpisodeProgress = FutureOr<void>
-    Function(
-  Map<String, dynamic>?,
-  Mutation$setEpisodeProgress?,
+    ),
+  ],
 );
+Mutation$setEpisodeProgress _parserFn$Mutation$setEpisodeProgress(
+  Map<String, dynamic> data,
+) => Mutation$setEpisodeProgress.fromJson(data);
+typedef OnMutationCompleted$Mutation$setEpisodeProgress =
+    FutureOr<void> Function(
+      Map<String, dynamic>?,
+      Mutation$setEpisodeProgress?,
+    );
 
 class Options$Mutation$setEpisodeProgress
     extends graphql.MutationOptions<Mutation$setEpisodeProgress> {
@@ -420,38 +403,38 @@ class Options$Mutation$setEpisodeProgress
     OnMutationCompleted$Mutation$setEpisodeProgress? onCompleted,
     graphql.OnMutationUpdate<Mutation$setEpisodeProgress>? update,
     graphql.OnError? onError,
-  })  : onCompletedWithParsed = onCompleted,
-        super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          onCompleted: onCompleted == null
-              ? null
-              : (data) => onCompleted(
-                    data,
-                    data == null
-                        ? null
-                        : _parserFn$Mutation$setEpisodeProgress(data),
-                  ),
-          update: update,
-          onError: onError,
-          document: documentNodeMutationsetEpisodeProgress,
-          parserFn: _parserFn$Mutation$setEpisodeProgress,
-        );
+  }) : onCompletedWithParsed = onCompleted,
+       super(
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         onCompleted: onCompleted == null
+             ? null
+             : (data) => onCompleted(
+                 data,
+                 data == null
+                     ? null
+                     : _parserFn$Mutation$setEpisodeProgress(data),
+               ),
+         update: update,
+         onError: onError,
+         document: documentNodeMutationsetEpisodeProgress,
+         parserFn: _parserFn$Mutation$setEpisodeProgress,
+       );
 
   final OnMutationCompleted$Mutation$setEpisodeProgress? onCompletedWithParsed;
 
   @override
   List<Object?> get properties => [
-        ...super.onCompleted == null
-            ? super.properties
-            : super.properties.where((property) => property != onCompleted),
-        onCompletedWithParsed,
-      ];
+    ...super.onCompleted == null
+        ? super.properties
+        : super.properties.where((property) => property != onCompleted),
+    onCompletedWithParsed,
+  ];
 }
 
 class WatchOptions$Mutation$setEpisodeProgress
@@ -470,63 +453,62 @@ class WatchOptions$Mutation$setEpisodeProgress
     bool carryForwardDataOnException = true,
     bool fetchResults = false,
   }) : super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          document: documentNodeMutationsetEpisodeProgress,
-          pollInterval: pollInterval,
-          eagerlyFetchResults: eagerlyFetchResults,
-          carryForwardDataOnException: carryForwardDataOnException,
-          fetchResults: fetchResults,
-          parserFn: _parserFn$Mutation$setEpisodeProgress,
-        );
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         document: documentNodeMutationsetEpisodeProgress,
+         pollInterval: pollInterval,
+         eagerlyFetchResults: eagerlyFetchResults,
+         carryForwardDataOnException: carryForwardDataOnException,
+         fetchResults: fetchResults,
+         parserFn: _parserFn$Mutation$setEpisodeProgress,
+       );
 }
 
 extension ClientExtension$Mutation$setEpisodeProgress on graphql.GraphQLClient {
   Future<graphql.QueryResult<Mutation$setEpisodeProgress>>
-      mutate$setEpisodeProgress(
-              Options$Mutation$setEpisodeProgress options) async =>
-          await this.mutate(options);
+  mutate$setEpisodeProgress(
+    Options$Mutation$setEpisodeProgress options,
+  ) async => await this.mutate(options);
 
   graphql.ObservableQuery<Mutation$setEpisodeProgress>
-      watchMutation$setEpisodeProgress(
-              WatchOptions$Mutation$setEpisodeProgress options) =>
-          this.watchMutation(options);
+  watchMutation$setEpisodeProgress(
+    WatchOptions$Mutation$setEpisodeProgress options,
+  ) => this.watchMutation(options);
 }
 
 class Mutation$setEpisodeProgress$HookResult {
-  Mutation$setEpisodeProgress$HookResult(
-    this.runMutation,
-    this.result,
-  );
+  Mutation$setEpisodeProgress$HookResult(this.runMutation, this.result);
 
   final RunMutation$Mutation$setEpisodeProgress runMutation;
 
   final graphql.QueryResult<Mutation$setEpisodeProgress> result;
 }
 
-Mutation$setEpisodeProgress$HookResult useMutation$setEpisodeProgress(
-    [WidgetOptions$Mutation$setEpisodeProgress? options]) {
-  final result = graphql_flutter
-      .useMutation(options ?? WidgetOptions$Mutation$setEpisodeProgress());
+Mutation$setEpisodeProgress$HookResult useMutation$setEpisodeProgress([
+  WidgetOptions$Mutation$setEpisodeProgress? options,
+]) {
+  final result = graphql_flutter.useMutation(
+    options ?? WidgetOptions$Mutation$setEpisodeProgress(),
+  );
   return Mutation$setEpisodeProgress$HookResult(
     (variables, {optimisticResult, typedOptimisticResult}) =>
         result.runMutation(
-      variables.toJson(),
-      optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-    ),
+          variables.toJson(),
+          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+        ),
     result.result,
   );
 }
 
 graphql.ObservableQuery<Mutation$setEpisodeProgress>
-    useWatchMutation$setEpisodeProgress(
-            WatchOptions$Mutation$setEpisodeProgress options) =>
-        graphql_flutter.useWatchMutation(options);
+useWatchMutation$setEpisodeProgress(
+  WatchOptions$Mutation$setEpisodeProgress options,
+) => graphql_flutter.useWatchMutation(options);
 
 class WidgetOptions$Mutation$setEpisodeProgress
     extends graphql.MutationOptions<Mutation$setEpisodeProgress> {
@@ -541,45 +523,45 @@ class WidgetOptions$Mutation$setEpisodeProgress
     OnMutationCompleted$Mutation$setEpisodeProgress? onCompleted,
     graphql.OnMutationUpdate<Mutation$setEpisodeProgress>? update,
     graphql.OnError? onError,
-  })  : onCompletedWithParsed = onCompleted,
-        super(
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          onCompleted: onCompleted == null
-              ? null
-              : (data) => onCompleted(
-                    data,
-                    data == null
-                        ? null
-                        : _parserFn$Mutation$setEpisodeProgress(data),
-                  ),
-          update: update,
-          onError: onError,
-          document: documentNodeMutationsetEpisodeProgress,
-          parserFn: _parserFn$Mutation$setEpisodeProgress,
-        );
+  }) : onCompletedWithParsed = onCompleted,
+       super(
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         onCompleted: onCompleted == null
+             ? null
+             : (data) => onCompleted(
+                 data,
+                 data == null
+                     ? null
+                     : _parserFn$Mutation$setEpisodeProgress(data),
+               ),
+         update: update,
+         onError: onError,
+         document: documentNodeMutationsetEpisodeProgress,
+         parserFn: _parserFn$Mutation$setEpisodeProgress,
+       );
 
   final OnMutationCompleted$Mutation$setEpisodeProgress? onCompletedWithParsed;
 
   @override
   List<Object?> get properties => [
-        ...super.onCompleted == null
-            ? super.properties
-            : super.properties.where((property) => property != onCompleted),
-        onCompletedWithParsed,
-      ];
+    ...super.onCompleted == null
+        ? super.properties
+        : super.properties.where((property) => property != onCompleted),
+    onCompletedWithParsed,
+  ];
 }
 
-typedef RunMutation$Mutation$setEpisodeProgress
-    = graphql.MultiSourceResult<Mutation$setEpisodeProgress> Function(
-  Variables$Mutation$setEpisodeProgress, {
-  Object? optimisticResult,
-  Mutation$setEpisodeProgress? typedOptimisticResult,
-});
+typedef RunMutation$Mutation$setEpisodeProgress =
+    graphql.MultiSourceResult<Mutation$setEpisodeProgress> Function(
+      Variables$Mutation$setEpisodeProgress, {
+      Object? optimisticResult,
+      Mutation$setEpisodeProgress? typedOptimisticResult,
+    });
 typedef Builder$Mutation$setEpisodeProgress = widgets.Widget Function(
   RunMutation$Mutation$setEpisodeProgress,
   graphql.QueryResult<Mutation$setEpisodeProgress>?,
@@ -592,26 +574,17 @@ class Mutation$setEpisodeProgress$Widget
     WidgetOptions$Mutation$setEpisodeProgress? options,
     required Builder$Mutation$setEpisodeProgress builder,
   }) : super(
-          key: key,
-          options: options ?? WidgetOptions$Mutation$setEpisodeProgress(),
-          builder: (
-            run,
-            result,
-          ) =>
-              builder(
-            (
-              variables, {
-              optimisticResult,
-              typedOptimisticResult,
-            }) =>
-                run(
-              variables.toJson(),
-              optimisticResult:
-                  optimisticResult ?? typedOptimisticResult?.toJson(),
-            ),
-            result,
-          ),
-        );
+         key: key,
+         options: options ?? WidgetOptions$Mutation$setEpisodeProgress(),
+         builder: (run, result) => builder(
+           (variables, {optimisticResult, typedOptimisticResult}) => run(
+             variables.toJson(),
+             optimisticResult:
+                 optimisticResult ?? typedOptimisticResult?.toJson(),
+           ),
+           result,
+         ),
+       );
 }
 
 class Mutation$setEpisodeProgress$setEpisodeProgress {
@@ -622,7 +595,8 @@ class Mutation$setEpisodeProgress$setEpisodeProgress {
   });
 
   factory Mutation$setEpisodeProgress$setEpisodeProgress.fromJson(
-      Map<String, dynamic> json) {
+    Map<String, dynamic> json,
+  ) {
     final l$$__typename = json['__typename'];
     final l$duration = json['duration'];
     final l$progress = json['progress'];
@@ -655,11 +629,7 @@ class Mutation$setEpisodeProgress$setEpisodeProgress {
     final l$$__typename = $__typename;
     final l$duration = duration;
     final l$progress = progress;
-    return Object.hashAll([
-      l$$__typename,
-      l$duration,
-      l$progress,
-    ]);
+    return Object.hashAll([l$$__typename, l$duration, l$progress]);
   }
 
   @override
@@ -693,11 +663,10 @@ class Mutation$setEpisodeProgress$setEpisodeProgress {
 extension UtilityExtension$Mutation$setEpisodeProgress$setEpisodeProgress
     on Mutation$setEpisodeProgress$setEpisodeProgress {
   CopyWith$Mutation$setEpisodeProgress$setEpisodeProgress<
-          Mutation$setEpisodeProgress$setEpisodeProgress>
-      get copyWith => CopyWith$Mutation$setEpisodeProgress$setEpisodeProgress(
-            this,
-            (i) => i,
-          );
+    Mutation$setEpisodeProgress$setEpisodeProgress
+  >
+  get copyWith =>
+      CopyWith$Mutation$setEpisodeProgress$setEpisodeProgress(this, (i) => i);
 }
 
 abstract class CopyWith$Mutation$setEpisodeProgress$setEpisodeProgress<TRes> {
@@ -707,14 +676,10 @@ abstract class CopyWith$Mutation$setEpisodeProgress$setEpisodeProgress<TRes> {
   ) = _CopyWithImpl$Mutation$setEpisodeProgress$setEpisodeProgress;
 
   factory CopyWith$Mutation$setEpisodeProgress$setEpisodeProgress.stub(
-          TRes res) =
-      _CopyWithStubImpl$Mutation$setEpisodeProgress$setEpisodeProgress;
+    TRes res,
+  ) = _CopyWithStubImpl$Mutation$setEpisodeProgress$setEpisodeProgress;
 
-  TRes call({
-    String? $__typename,
-    int? duration,
-    int? progress,
-  });
+  TRes call({String? $__typename, int? duration, int? progress});
 }
 
 class _CopyWithImpl$Mutation$setEpisodeProgress$setEpisodeProgress<TRes>
@@ -734,17 +699,19 @@ class _CopyWithImpl$Mutation$setEpisodeProgress$setEpisodeProgress<TRes>
     Object? $__typename = _undefined,
     Object? duration = _undefined,
     Object? progress = _undefined,
-  }) =>
-      _then(Mutation$setEpisodeProgress$setEpisodeProgress(
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-        duration: duration == _undefined || duration == null
-            ? _instance.duration
-            : (duration as int),
-        progress:
-            progress == _undefined ? _instance.progress : (progress as int?),
-      ));
+  }) => _then(
+    Mutation$setEpisodeProgress$setEpisodeProgress(
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+      duration: duration == _undefined || duration == null
+          ? _instance.duration
+          : (duration as int),
+      progress: progress == _undefined
+          ? _instance.progress
+          : (progress as int?),
+    ),
+  );
 }
 
 class _CopyWithStubImpl$Mutation$setEpisodeProgress$setEpisodeProgress<TRes>
@@ -753,10 +720,5 @@ class _CopyWithStubImpl$Mutation$setEpisodeProgress$setEpisodeProgress<TRes>
 
   TRes _res;
 
-  call({
-    String? $__typename,
-    int? duration,
-    int? progress,
-  }) =>
-      _res;
+  call({String? $__typename, int? duration, int? progress}) => _res;
 }

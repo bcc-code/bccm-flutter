@@ -1,5 +1,7 @@
 import '../schema/mutations.graphql.dart';
+
 import 'dart:async';
+
 import 'package:flutter/widgets.dart' as widgets;
 import 'package:gql/ast.dart';
 import 'package:graphql/client.dart' as graphql;
@@ -11,18 +13,18 @@ class Variables$Mutation$sendSupportEmail {
     required String content,
     required String html,
     Input$EmailOptions? options,
-  }) =>
-      Variables$Mutation$sendSupportEmail._({
-        r'title': title,
-        r'content': content,
-        r'html': html,
-        if (options != null) r'options': options,
-      });
+  }) => Variables$Mutation$sendSupportEmail._({
+    r'title': title,
+    r'content': content,
+    r'html': html,
+    if (options != null) r'options': options,
+  });
 
   Variables$Mutation$sendSupportEmail._(this._$data);
 
   factory Variables$Mutation$sendSupportEmail.fromJson(
-      Map<String, dynamic> data) {
+    Map<String, dynamic> data,
+  ) {
     final result$data = <String, dynamic>{};
     final l$title = data['title'];
     result$data['title'] = (l$title as String);
@@ -65,11 +67,9 @@ class Variables$Mutation$sendSupportEmail {
   }
 
   CopyWith$Variables$Mutation$sendSupportEmail<
-          Variables$Mutation$sendSupportEmail>
-      get copyWith => CopyWith$Variables$Mutation$sendSupportEmail(
-            this,
-            (i) => i,
-          );
+    Variables$Mutation$sendSupportEmail
+  >
+  get copyWith => CopyWith$Variables$Mutation$sendSupportEmail(this, (i) => i);
 
   @override
   bool operator ==(Object other) {
@@ -140,10 +140,7 @@ abstract class CopyWith$Variables$Mutation$sendSupportEmail<TRes> {
 
 class _CopyWithImpl$Variables$Mutation$sendSupportEmail<TRes>
     implements CopyWith$Variables$Mutation$sendSupportEmail<TRes> {
-  _CopyWithImpl$Variables$Mutation$sendSupportEmail(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Variables$Mutation$sendSupportEmail(this._instance, this._then);
 
   final Variables$Mutation$sendSupportEmail _instance;
 
@@ -156,15 +153,16 @@ class _CopyWithImpl$Variables$Mutation$sendSupportEmail<TRes>
     Object? content = _undefined,
     Object? html = _undefined,
     Object? options = _undefined,
-  }) =>
-      _then(Variables$Mutation$sendSupportEmail._({
-        ..._instance._$data,
-        if (title != _undefined && title != null) 'title': (title as String),
-        if (content != _undefined && content != null)
-          'content': (content as String),
-        if (html != _undefined && html != null) 'html': (html as String),
-        if (options != _undefined) 'options': (options as Input$EmailOptions?),
-      }));
+  }) => _then(
+    Variables$Mutation$sendSupportEmail._({
+      ..._instance._$data,
+      if (title != _undefined && title != null) 'title': (title as String),
+      if (content != _undefined && content != null)
+        'content': (content as String),
+      if (html != _undefined && html != null) 'html': (html as String),
+      if (options != _undefined) 'options': (options as Input$EmailOptions?),
+    }),
+  );
 }
 
 class _CopyWithStubImpl$Variables$Mutation$sendSupportEmail<TRes>
@@ -178,8 +176,7 @@ class _CopyWithStubImpl$Variables$Mutation$sendSupportEmail<TRes>
     String? content,
     String? html,
     Input$EmailOptions? options,
-  }) =>
-      _res;
+  }) => _res;
 }
 
 class Mutation$sendSupportEmail {
@@ -214,10 +211,7 @@ class Mutation$sendSupportEmail {
   int get hashCode {
     final l$sendSupportEmail = sendSupportEmail;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$sendSupportEmail,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$sendSupportEmail, l$$__typename]);
   }
 
   @override
@@ -246,10 +240,7 @@ class Mutation$sendSupportEmail {
 extension UtilityExtension$Mutation$sendSupportEmail
     on Mutation$sendSupportEmail {
   CopyWith$Mutation$sendSupportEmail<Mutation$sendSupportEmail> get copyWith =>
-      CopyWith$Mutation$sendSupportEmail(
-        this,
-        (i) => i,
-      );
+      CopyWith$Mutation$sendSupportEmail(this, (i) => i);
 }
 
 abstract class CopyWith$Mutation$sendSupportEmail<TRes> {
@@ -261,18 +252,12 @@ abstract class CopyWith$Mutation$sendSupportEmail<TRes> {
   factory CopyWith$Mutation$sendSupportEmail.stub(TRes res) =
       _CopyWithStubImpl$Mutation$sendSupportEmail;
 
-  TRes call({
-    bool? sendSupportEmail,
-    String? $__typename,
-  });
+  TRes call({bool? sendSupportEmail, String? $__typename});
 }
 
 class _CopyWithImpl$Mutation$sendSupportEmail<TRes>
     implements CopyWith$Mutation$sendSupportEmail<TRes> {
-  _CopyWithImpl$Mutation$sendSupportEmail(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Mutation$sendSupportEmail(this._instance, this._then);
 
   final Mutation$sendSupportEmail _instance;
 
@@ -283,16 +268,17 @@ class _CopyWithImpl$Mutation$sendSupportEmail<TRes>
   TRes call({
     Object? sendSupportEmail = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Mutation$sendSupportEmail(
-        sendSupportEmail:
-            sendSupportEmail == _undefined || sendSupportEmail == null
-                ? _instance.sendSupportEmail
-                : (sendSupportEmail as bool),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  }) => _then(
+    Mutation$sendSupportEmail(
+      sendSupportEmail:
+          sendSupportEmail == _undefined || sendSupportEmail == null
+          ? _instance.sendSupportEmail
+          : (sendSupportEmail as bool),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 }
 
 class _CopyWithStubImpl$Mutation$sendSupportEmail<TRes>
@@ -301,94 +287,85 @@ class _CopyWithStubImpl$Mutation$sendSupportEmail<TRes>
 
   TRes _res;
 
-  call({
-    bool? sendSupportEmail,
-    String? $__typename,
-  }) =>
-      _res;
+  call({bool? sendSupportEmail, String? $__typename}) => _res;
 }
 
-const documentNodeMutationsendSupportEmail = DocumentNode(definitions: [
-  OperationDefinitionNode(
-    type: OperationType.mutation,
-    name: NameNode(value: 'sendSupportEmail'),
-    variableDefinitions: [
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'title')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'String'),
-          isNonNull: true,
+const documentNodeMutationsendSupportEmail = DocumentNode(
+  definitions: [
+    OperationDefinitionNode(
+      type: OperationType.mutation,
+      name: NameNode(value: 'sendSupportEmail'),
+      variableDefinitions: [
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'title')),
+          type: NamedTypeNode(name: NameNode(value: 'String'), isNonNull: true),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'content')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'String'),
-          isNonNull: true,
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'content')),
+          type: NamedTypeNode(name: NameNode(value: 'String'), isNonNull: true),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'html')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'String'),
-          isNonNull: true,
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'html')),
+          type: NamedTypeNode(name: NameNode(value: 'String'), isNonNull: true),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'options')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'EmailOptions'),
-          isNonNull: false,
-        ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-    ],
-    directives: [],
-    selectionSet: SelectionSetNode(selections: [
-      FieldNode(
-        name: NameNode(value: 'sendSupportEmail'),
-        alias: null,
-        arguments: [
-          ArgumentNode(
-            name: NameNode(value: 'title'),
-            value: VariableNode(name: NameNode(value: 'title')),
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'options')),
+          type: NamedTypeNode(
+            name: NameNode(value: 'EmailOptions'),
+            isNonNull: false,
           ),
-          ArgumentNode(
-            name: NameNode(value: 'content'),
-            value: VariableNode(name: NameNode(value: 'content')),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
+        ),
+      ],
+      directives: [],
+      selectionSet: SelectionSetNode(
+        selections: [
+          FieldNode(
+            name: NameNode(value: 'sendSupportEmail'),
+            alias: null,
+            arguments: [
+              ArgumentNode(
+                name: NameNode(value: 'title'),
+                value: VariableNode(name: NameNode(value: 'title')),
+              ),
+              ArgumentNode(
+                name: NameNode(value: 'content'),
+                value: VariableNode(name: NameNode(value: 'content')),
+              ),
+              ArgumentNode(
+                name: NameNode(value: 'html'),
+                value: VariableNode(name: NameNode(value: 'html')),
+              ),
+              ArgumentNode(
+                name: NameNode(value: 'options'),
+                value: VariableNode(name: NameNode(value: 'options')),
+              ),
+            ],
+            directives: [],
+            selectionSet: null,
           ),
-          ArgumentNode(
-            name: NameNode(value: 'html'),
-            value: VariableNode(name: NameNode(value: 'html')),
-          ),
-          ArgumentNode(
-            name: NameNode(value: 'options'),
-            value: VariableNode(name: NameNode(value: 'options')),
+          FieldNode(
+            name: NameNode(value: '__typename'),
+            alias: null,
+            arguments: [],
+            directives: [],
+            selectionSet: null,
           ),
         ],
-        directives: [],
-        selectionSet: null,
       ),
-      FieldNode(
-        name: NameNode(value: '__typename'),
-        alias: null,
-        arguments: [],
-        directives: [],
-        selectionSet: null,
-      ),
-    ]),
-  ),
-]);
+    ),
+  ],
+);
 Mutation$sendSupportEmail _parserFn$Mutation$sendSupportEmail(
-        Map<String, dynamic> data) =>
-    Mutation$sendSupportEmail.fromJson(data);
+  Map<String, dynamic> data,
+) => Mutation$sendSupportEmail.fromJson(data);
 typedef OnMutationCompleted$Mutation$sendSupportEmail = FutureOr<void> Function(
   Map<String, dynamic>?,
   Mutation$sendSupportEmail?,
@@ -408,38 +385,38 @@ class Options$Mutation$sendSupportEmail
     OnMutationCompleted$Mutation$sendSupportEmail? onCompleted,
     graphql.OnMutationUpdate<Mutation$sendSupportEmail>? update,
     graphql.OnError? onError,
-  })  : onCompletedWithParsed = onCompleted,
-        super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          onCompleted: onCompleted == null
-              ? null
-              : (data) => onCompleted(
-                    data,
-                    data == null
-                        ? null
-                        : _parserFn$Mutation$sendSupportEmail(data),
-                  ),
-          update: update,
-          onError: onError,
-          document: documentNodeMutationsendSupportEmail,
-          parserFn: _parserFn$Mutation$sendSupportEmail,
-        );
+  }) : onCompletedWithParsed = onCompleted,
+       super(
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         onCompleted: onCompleted == null
+             ? null
+             : (data) => onCompleted(
+                 data,
+                 data == null
+                     ? null
+                     : _parserFn$Mutation$sendSupportEmail(data),
+               ),
+         update: update,
+         onError: onError,
+         document: documentNodeMutationsendSupportEmail,
+         parserFn: _parserFn$Mutation$sendSupportEmail,
+       );
 
   final OnMutationCompleted$Mutation$sendSupportEmail? onCompletedWithParsed;
 
   @override
   List<Object?> get properties => [
-        ...super.onCompleted == null
-            ? super.properties
-            : super.properties.where((property) => property != onCompleted),
-        onCompletedWithParsed,
-      ];
+    ...super.onCompleted == null
+        ? super.properties
+        : super.properties.where((property) => property != onCompleted),
+    onCompletedWithParsed,
+  ];
 }
 
 class WatchOptions$Mutation$sendSupportEmail
@@ -458,63 +435,61 @@ class WatchOptions$Mutation$sendSupportEmail
     bool carryForwardDataOnException = true,
     bool fetchResults = false,
   }) : super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          document: documentNodeMutationsendSupportEmail,
-          pollInterval: pollInterval,
-          eagerlyFetchResults: eagerlyFetchResults,
-          carryForwardDataOnException: carryForwardDataOnException,
-          fetchResults: fetchResults,
-          parserFn: _parserFn$Mutation$sendSupportEmail,
-        );
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         document: documentNodeMutationsendSupportEmail,
+         pollInterval: pollInterval,
+         eagerlyFetchResults: eagerlyFetchResults,
+         carryForwardDataOnException: carryForwardDataOnException,
+         fetchResults: fetchResults,
+         parserFn: _parserFn$Mutation$sendSupportEmail,
+       );
 }
 
 extension ClientExtension$Mutation$sendSupportEmail on graphql.GraphQLClient {
   Future<graphql.QueryResult<Mutation$sendSupportEmail>>
-      mutate$sendSupportEmail(
-              Options$Mutation$sendSupportEmail options) async =>
-          await this.mutate(options);
+  mutate$sendSupportEmail(Options$Mutation$sendSupportEmail options) async =>
+      await this.mutate(options);
 
   graphql.ObservableQuery<Mutation$sendSupportEmail>
-      watchMutation$sendSupportEmail(
-              WatchOptions$Mutation$sendSupportEmail options) =>
-          this.watchMutation(options);
+  watchMutation$sendSupportEmail(
+    WatchOptions$Mutation$sendSupportEmail options,
+  ) => this.watchMutation(options);
 }
 
 class Mutation$sendSupportEmail$HookResult {
-  Mutation$sendSupportEmail$HookResult(
-    this.runMutation,
-    this.result,
-  );
+  Mutation$sendSupportEmail$HookResult(this.runMutation, this.result);
 
   final RunMutation$Mutation$sendSupportEmail runMutation;
 
   final graphql.QueryResult<Mutation$sendSupportEmail> result;
 }
 
-Mutation$sendSupportEmail$HookResult useMutation$sendSupportEmail(
-    [WidgetOptions$Mutation$sendSupportEmail? options]) {
-  final result = graphql_flutter
-      .useMutation(options ?? WidgetOptions$Mutation$sendSupportEmail());
+Mutation$sendSupportEmail$HookResult useMutation$sendSupportEmail([
+  WidgetOptions$Mutation$sendSupportEmail? options,
+]) {
+  final result = graphql_flutter.useMutation(
+    options ?? WidgetOptions$Mutation$sendSupportEmail(),
+  );
   return Mutation$sendSupportEmail$HookResult(
     (variables, {optimisticResult, typedOptimisticResult}) =>
         result.runMutation(
-      variables.toJson(),
-      optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-    ),
+          variables.toJson(),
+          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+        ),
     result.result,
   );
 }
 
 graphql.ObservableQuery<Mutation$sendSupportEmail>
-    useWatchMutation$sendSupportEmail(
-            WatchOptions$Mutation$sendSupportEmail options) =>
-        graphql_flutter.useWatchMutation(options);
+useWatchMutation$sendSupportEmail(
+  WatchOptions$Mutation$sendSupportEmail options,
+) => graphql_flutter.useWatchMutation(options);
 
 class WidgetOptions$Mutation$sendSupportEmail
     extends graphql.MutationOptions<Mutation$sendSupportEmail> {
@@ -529,45 +504,45 @@ class WidgetOptions$Mutation$sendSupportEmail
     OnMutationCompleted$Mutation$sendSupportEmail? onCompleted,
     graphql.OnMutationUpdate<Mutation$sendSupportEmail>? update,
     graphql.OnError? onError,
-  })  : onCompletedWithParsed = onCompleted,
-        super(
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          onCompleted: onCompleted == null
-              ? null
-              : (data) => onCompleted(
-                    data,
-                    data == null
-                        ? null
-                        : _parserFn$Mutation$sendSupportEmail(data),
-                  ),
-          update: update,
-          onError: onError,
-          document: documentNodeMutationsendSupportEmail,
-          parserFn: _parserFn$Mutation$sendSupportEmail,
-        );
+  }) : onCompletedWithParsed = onCompleted,
+       super(
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         onCompleted: onCompleted == null
+             ? null
+             : (data) => onCompleted(
+                 data,
+                 data == null
+                     ? null
+                     : _parserFn$Mutation$sendSupportEmail(data),
+               ),
+         update: update,
+         onError: onError,
+         document: documentNodeMutationsendSupportEmail,
+         parserFn: _parserFn$Mutation$sendSupportEmail,
+       );
 
   final OnMutationCompleted$Mutation$sendSupportEmail? onCompletedWithParsed;
 
   @override
   List<Object?> get properties => [
-        ...super.onCompleted == null
-            ? super.properties
-            : super.properties.where((property) => property != onCompleted),
-        onCompletedWithParsed,
-      ];
+    ...super.onCompleted == null
+        ? super.properties
+        : super.properties.where((property) => property != onCompleted),
+    onCompletedWithParsed,
+  ];
 }
 
-typedef RunMutation$Mutation$sendSupportEmail
-    = graphql.MultiSourceResult<Mutation$sendSupportEmail> Function(
-  Variables$Mutation$sendSupportEmail, {
-  Object? optimisticResult,
-  Mutation$sendSupportEmail? typedOptimisticResult,
-});
+typedef RunMutation$Mutation$sendSupportEmail =
+    graphql.MultiSourceResult<Mutation$sendSupportEmail> Function(
+      Variables$Mutation$sendSupportEmail, {
+      Object? optimisticResult,
+      Mutation$sendSupportEmail? typedOptimisticResult,
+    });
 typedef Builder$Mutation$sendSupportEmail = widgets.Widget Function(
   RunMutation$Mutation$sendSupportEmail,
   graphql.QueryResult<Mutation$sendSupportEmail>?,
@@ -580,24 +555,15 @@ class Mutation$sendSupportEmail$Widget
     WidgetOptions$Mutation$sendSupportEmail? options,
     required Builder$Mutation$sendSupportEmail builder,
   }) : super(
-          key: key,
-          options: options ?? WidgetOptions$Mutation$sendSupportEmail(),
-          builder: (
-            run,
-            result,
-          ) =>
-              builder(
-            (
-              variables, {
-              optimisticResult,
-              typedOptimisticResult,
-            }) =>
-                run(
-              variables.toJson(),
-              optimisticResult:
-                  optimisticResult ?? typedOptimisticResult?.toJson(),
-            ),
-            result,
-          ),
-        );
+         key: key,
+         options: options ?? WidgetOptions$Mutation$sendSupportEmail(),
+         builder: (run, result) => builder(
+           (variables, {optimisticResult, typedOptimisticResult}) => run(
+             variables.toJson(),
+             optimisticResult:
+                 optimisticResult ?? typedOptimisticResult?.toJson(),
+           ),
+           result,
+         ),
+       );
 }

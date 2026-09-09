@@ -1,15 +1,14 @@
 import '../schema/mutations.graphql.dart';
+
 import 'dart:async';
+
 import 'package:flutter/widgets.dart' as widgets;
 import 'package:gql/ast.dart';
 import 'package:graphql/client.dart' as graphql;
 import 'package:graphql_flutter/graphql_flutter.dart' as graphql_flutter;
 
 class Query$me {
-  Query$me({
-    required this.me,
-    this.$__typename = 'QueryRoot',
-  });
+  Query$me({required this.me, this.$__typename = 'QueryRoot'});
 
   factory Query$me.fromJson(Map<String, dynamic> json) {
     final l$me = json['me'];
@@ -37,10 +36,7 @@ class Query$me {
   int get hashCode {
     final l$me = me;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$me,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$me, l$$__typename]);
   }
 
   @override
@@ -66,32 +62,21 @@ class Query$me {
 }
 
 extension UtilityExtension$Query$me on Query$me {
-  CopyWith$Query$me<Query$me> get copyWith => CopyWith$Query$me(
-        this,
-        (i) => i,
-      );
+  CopyWith$Query$me<Query$me> get copyWith => CopyWith$Query$me(this, (i) => i);
 }
 
 abstract class CopyWith$Query$me<TRes> {
-  factory CopyWith$Query$me(
-    Query$me instance,
-    TRes Function(Query$me) then,
-  ) = _CopyWithImpl$Query$me;
+  factory CopyWith$Query$me(Query$me instance, TRes Function(Query$me) then) =
+      _CopyWithImpl$Query$me;
 
   factory CopyWith$Query$me.stub(TRes res) = _CopyWithStubImpl$Query$me;
 
-  TRes call({
-    Query$me$me? me,
-    String? $__typename,
-  });
+  TRes call({Query$me$me? me, String? $__typename});
   CopyWith$Query$me$me<TRes> get me;
 }
 
 class _CopyWithImpl$Query$me<TRes> implements CopyWith$Query$me<TRes> {
-  _CopyWithImpl$Query$me(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Query$me(this._instance, this._then);
 
   final Query$me _instance;
 
@@ -99,16 +84,17 @@ class _CopyWithImpl$Query$me<TRes> implements CopyWith$Query$me<TRes> {
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({
-    Object? me = _undefined,
-    Object? $__typename = _undefined,
-  }) =>
-      _then(Query$me(
-        me: me == _undefined || me == null ? _instance.me : (me as Query$me$me),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  TRes call({Object? me = _undefined, Object? $__typename = _undefined}) =>
+      _then(
+        Query$me(
+          me: me == _undefined || me == null
+              ? _instance.me
+              : (me as Query$me$me),
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String),
+        ),
+      );
 
   CopyWith$Query$me$me<TRes> get me {
     final local$me = _instance.me;
@@ -121,84 +107,95 @@ class _CopyWithStubImpl$Query$me<TRes> implements CopyWith$Query$me<TRes> {
 
   TRes _res;
 
-  call({
-    Query$me$me? me,
-    String? $__typename,
-  }) =>
-      _res;
+  call({Query$me$me? me, String? $__typename}) => _res;
 
   CopyWith$Query$me$me<TRes> get me => CopyWith$Query$me$me.stub(_res);
 }
 
-const documentNodeQueryme = DocumentNode(definitions: [
-  OperationDefinitionNode(
-    type: OperationType.query,
-    name: NameNode(value: 'me'),
-    variableDefinitions: [],
-    directives: [],
-    selectionSet: SelectionSetNode(selections: [
-      FieldNode(
-        name: NameNode(value: 'me'),
-        alias: null,
-        arguments: [],
-        directives: [],
-        selectionSet: SelectionSetNode(selections: [
+const documentNodeQueryme = DocumentNode(
+  definitions: [
+    OperationDefinitionNode(
+      type: OperationType.query,
+      name: NameNode(value: 'me'),
+      variableDefinitions: [],
+      directives: [],
+      selectionSet: SelectionSetNode(
+        selections: [
           FieldNode(
-            name: NameNode(value: 'id'),
+            name: NameNode(value: 'me'),
             alias: null,
             arguments: [],
             directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'analytics'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: SelectionSetNode(selections: [
-              FieldNode(
-                name: NameNode(value: 'anonymousId'),
-                alias: null,
-                arguments: [],
-                directives: [],
-                selectionSet: null,
-              ),
-              FieldNode(
-                name: NameNode(value: '__typename'),
-                alias: null,
-                arguments: [],
-                directives: [],
-                selectionSet: null,
-              ),
-            ]),
-          ),
-          FieldNode(
-            name: NameNode(value: 'roles'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'email'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'emailVerified'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'completedRegistration'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
+            selectionSet: SelectionSetNode(
+              selections: [
+                FieldNode(
+                  name: NameNode(value: 'id'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'analytics'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: SelectionSetNode(
+                    selections: [
+                      FieldNode(
+                        name: NameNode(value: 'anonymousId'),
+                        alias: null,
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null,
+                      ),
+                      FieldNode(
+                        name: NameNode(value: '__typename'),
+                        alias: null,
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null,
+                      ),
+                    ],
+                  ),
+                ),
+                FieldNode(
+                  name: NameNode(value: 'roles'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'email'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'emailVerified'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'completedRegistration'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: '__typename'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+              ],
+            ),
           ),
           FieldNode(
             name: NameNode(value: '__typename'),
@@ -207,18 +204,11 @@ const documentNodeQueryme = DocumentNode(definitions: [
             directives: [],
             selectionSet: null,
           ),
-        ]),
+        ],
       ),
-      FieldNode(
-        name: NameNode(value: '__typename'),
-        alias: null,
-        arguments: [],
-        directives: [],
-        selectionSet: null,
-      ),
-    ]),
-  ),
-]);
+    ),
+  ],
+);
 Query$me _parserFn$Query$me(Map<String, dynamic> data) =>
     Query$me.fromJson(data);
 typedef OnQueryComplete$Query$me = FutureOr<void> Function(
@@ -238,35 +228,35 @@ class Options$Query$me extends graphql.QueryOptions<Query$me> {
     graphql.Context? context,
     OnQueryComplete$Query$me? onComplete,
     graphql.OnQueryError? onError,
-  })  : onCompleteWithParsed = onComplete,
-        super(
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          pollInterval: pollInterval,
-          context: context,
-          onComplete: onComplete == null
-              ? null
-              : (data) => onComplete(
-                    data,
-                    data == null ? null : _parserFn$Query$me(data),
-                  ),
-          onError: onError,
-          document: documentNodeQueryme,
-          parserFn: _parserFn$Query$me,
-        );
+  }) : onCompleteWithParsed = onComplete,
+       super(
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         pollInterval: pollInterval,
+         context: context,
+         onComplete: onComplete == null
+             ? null
+             : (data) => onComplete(
+                 data,
+                 data == null ? null : _parserFn$Query$me(data),
+               ),
+         onError: onError,
+         document: documentNodeQueryme,
+         parserFn: _parserFn$Query$me,
+       );
 
   final OnQueryComplete$Query$me? onCompleteWithParsed;
 
   @override
   List<Object?> get properties => [
-        ...super.onComplete == null
-            ? super.properties
-            : super.properties.where((property) => property != onComplete),
-        onCompleteWithParsed,
-      ];
+    ...super.onComplete == null
+        ? super.properties
+        : super.properties.where((property) => property != onComplete),
+    onCompleteWithParsed,
+  ];
 }
 
 class WatchOptions$Query$me extends graphql.WatchQueryOptions<Query$me> {
@@ -283,45 +273,40 @@ class WatchOptions$Query$me extends graphql.WatchQueryOptions<Query$me> {
     bool carryForwardDataOnException = true,
     bool fetchResults = false,
   }) : super(
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          document: documentNodeQueryme,
-          pollInterval: pollInterval,
-          eagerlyFetchResults: eagerlyFetchResults,
-          carryForwardDataOnException: carryForwardDataOnException,
-          fetchResults: fetchResults,
-          parserFn: _parserFn$Query$me,
-        );
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         document: documentNodeQueryme,
+         pollInterval: pollInterval,
+         eagerlyFetchResults: eagerlyFetchResults,
+         carryForwardDataOnException: carryForwardDataOnException,
+         fetchResults: fetchResults,
+         parserFn: _parserFn$Query$me,
+       );
 }
 
 class FetchMoreOptions$Query$me extends graphql.FetchMoreOptions {
   FetchMoreOptions$Query$me({required graphql.UpdateQuery updateQuery})
-      : super(
-          updateQuery: updateQuery,
-          document: documentNodeQueryme,
-        );
+    : super(updateQuery: updateQuery, document: documentNodeQueryme);
 }
 
 extension ClientExtension$Query$me on graphql.GraphQLClient {
-  Future<graphql.QueryResult<Query$me>> query$me(
-          [Options$Query$me? options]) async =>
-      await this.query(options ?? Options$Query$me());
+  Future<graphql.QueryResult<Query$me>> query$me([
+    Options$Query$me? options,
+  ]) async => await this.query(options ?? Options$Query$me());
 
-  graphql.ObservableQuery<Query$me> watchQuery$me(
-          [WatchOptions$Query$me? options]) =>
-      this.watchQuery(options ?? WatchOptions$Query$me());
+  graphql.ObservableQuery<Query$me> watchQuery$me([
+    WatchOptions$Query$me? options,
+  ]) => this.watchQuery(options ?? WatchOptions$Query$me());
 
-  void writeQuery$me({
-    required Query$me data,
-    bool broadcast = true,
-  }) =>
+  void writeQuery$me({required Query$me data, bool broadcast = true}) =>
       this.writeQuery(
         graphql.Request(
-            operation: graphql.Operation(document: documentNodeQueryme)),
+          operation: graphql.Operation(document: documentNodeQueryme),
+        ),
         data: data.toJson(),
         broadcast: broadcast,
       );
@@ -329,19 +314,20 @@ extension ClientExtension$Query$me on graphql.GraphQLClient {
   Query$me? readQuery$me({bool optimistic = true}) {
     final result = this.readQuery(
       graphql.Request(
-          operation: graphql.Operation(document: documentNodeQueryme)),
+        operation: graphql.Operation(document: documentNodeQueryme),
+      ),
       optimistic: optimistic,
     );
     return result == null ? null : Query$me.fromJson(result);
   }
 }
 
-graphql_flutter.QueryHookResult<Query$me> useQuery$me(
-        [Options$Query$me? options]) =>
-    graphql_flutter.useQuery(options ?? Options$Query$me());
-graphql.ObservableQuery<Query$me> useWatchQuery$me(
-        [WatchOptions$Query$me? options]) =>
-    graphql_flutter.useWatchQuery(options ?? WatchOptions$Query$me());
+graphql_flutter.QueryHookResult<Query$me> useQuery$me([
+  Options$Query$me? options,
+]) => graphql_flutter.useQuery(options ?? Options$Query$me());
+graphql.ObservableQuery<Query$me> useWatchQuery$me([
+  WatchOptions$Query$me? options,
+]) => graphql_flutter.useWatchQuery(options ?? WatchOptions$Query$me());
 
 class Query$me$Widget extends graphql_flutter.Query<Query$me> {
   Query$me$Widget({
@@ -349,10 +335,10 @@ class Query$me$Widget extends graphql_flutter.Query<Query$me> {
     Options$Query$me? options,
     required graphql_flutter.QueryBuilder<Query$me> builder,
   }) : super(
-          key: key,
-          options: options ?? Options$Query$me(),
-          builder: builder,
-        );
+         key: key,
+         options: options ?? Options$Query$me(),
+         builder: builder,
+       );
 }
 
 class Query$me$me {
@@ -376,8 +362,9 @@ class Query$me$me {
     final l$$__typename = json['__typename'];
     return Query$me$me(
       id: (l$id as String?),
-      analytics:
-          Query$me$me$analytics.fromJson((l$analytics as Map<String, dynamic>)),
+      analytics: Query$me$me$analytics.fromJson(
+        (l$analytics as Map<String, dynamic>),
+      ),
       roles: (l$roles as List<dynamic>).map((e) => (e as String)).toList(),
       email: (l$email as String?),
       emailVerified: (l$emailVerified as bool),
@@ -494,10 +481,8 @@ class Query$me$me {
 }
 
 extension UtilityExtension$Query$me$me on Query$me$me {
-  CopyWith$Query$me$me<Query$me$me> get copyWith => CopyWith$Query$me$me(
-        this,
-        (i) => i,
-      );
+  CopyWith$Query$me$me<Query$me$me> get copyWith =>
+      CopyWith$Query$me$me(this, (i) => i);
 }
 
 abstract class CopyWith$Query$me$me<TRes> {
@@ -521,10 +506,7 @@ abstract class CopyWith$Query$me$me<TRes> {
 }
 
 class _CopyWithImpl$Query$me$me<TRes> implements CopyWith$Query$me$me<TRes> {
-  _CopyWithImpl$Query$me$me(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Query$me$me(this._instance, this._then);
 
   final Query$me$me _instance;
 
@@ -540,32 +522,35 @@ class _CopyWithImpl$Query$me$me<TRes> implements CopyWith$Query$me$me<TRes> {
     Object? emailVerified = _undefined,
     Object? completedRegistration = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Query$me$me(
-        id: id == _undefined ? _instance.id : (id as String?),
-        analytics: analytics == _undefined || analytics == null
-            ? _instance.analytics
-            : (analytics as Query$me$me$analytics),
-        roles: roles == _undefined || roles == null
-            ? _instance.roles
-            : (roles as List<String>),
-        email: email == _undefined ? _instance.email : (email as String?),
-        emailVerified: emailVerified == _undefined || emailVerified == null
-            ? _instance.emailVerified
-            : (emailVerified as bool),
-        completedRegistration:
-            completedRegistration == _undefined || completedRegistration == null
-                ? _instance.completedRegistration
-                : (completedRegistration as bool),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  }) => _then(
+    Query$me$me(
+      id: id == _undefined ? _instance.id : (id as String?),
+      analytics: analytics == _undefined || analytics == null
+          ? _instance.analytics
+          : (analytics as Query$me$me$analytics),
+      roles: roles == _undefined || roles == null
+          ? _instance.roles
+          : (roles as List<String>),
+      email: email == _undefined ? _instance.email : (email as String?),
+      emailVerified: emailVerified == _undefined || emailVerified == null
+          ? _instance.emailVerified
+          : (emailVerified as bool),
+      completedRegistration:
+          completedRegistration == _undefined || completedRegistration == null
+          ? _instance.completedRegistration
+          : (completedRegistration as bool),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 
   CopyWith$Query$me$me$analytics<TRes> get analytics {
     final local$analytics = _instance.analytics;
     return CopyWith$Query$me$me$analytics(
-        local$analytics, (e) => call(analytics: e));
+      local$analytics,
+      (e) => call(analytics: e),
+    );
   }
 }
 
@@ -583,8 +568,7 @@ class _CopyWithStubImpl$Query$me$me<TRes>
     bool? emailVerified,
     bool? completedRegistration,
     String? $__typename,
-  }) =>
-      _res;
+  }) => _res;
 
   CopyWith$Query$me$me$analytics<TRes> get analytics =>
       CopyWith$Query$me$me$analytics.stub(_res);
@@ -622,10 +606,7 @@ class Query$me$me$analytics {
   int get hashCode {
     final l$anonymousId = anonymousId;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$anonymousId,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$anonymousId, l$$__typename]);
   }
 
   @override
@@ -652,10 +633,7 @@ class Query$me$me$analytics {
 
 extension UtilityExtension$Query$me$me$analytics on Query$me$me$analytics {
   CopyWith$Query$me$me$analytics<Query$me$me$analytics> get copyWith =>
-      CopyWith$Query$me$me$analytics(
-        this,
-        (i) => i,
-      );
+      CopyWith$Query$me$me$analytics(this, (i) => i);
 }
 
 abstract class CopyWith$Query$me$me$analytics<TRes> {
@@ -667,18 +645,12 @@ abstract class CopyWith$Query$me$me$analytics<TRes> {
   factory CopyWith$Query$me$me$analytics.stub(TRes res) =
       _CopyWithStubImpl$Query$me$me$analytics;
 
-  TRes call({
-    String? anonymousId,
-    String? $__typename,
-  });
+  TRes call({String? anonymousId, String? $__typename});
 }
 
 class _CopyWithImpl$Query$me$me$analytics<TRes>
     implements CopyWith$Query$me$me$analytics<TRes> {
-  _CopyWithImpl$Query$me$me$analytics(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Query$me$me$analytics(this._instance, this._then);
 
   final Query$me$me$analytics _instance;
 
@@ -689,15 +661,16 @@ class _CopyWithImpl$Query$me$me$analytics<TRes>
   TRes call({
     Object? anonymousId = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Query$me$me$analytics(
-        anonymousId: anonymousId == _undefined || anonymousId == null
-            ? _instance.anonymousId
-            : (anonymousId as String),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  }) => _then(
+    Query$me$me$analytics(
+      anonymousId: anonymousId == _undefined || anonymousId == null
+          ? _instance.anonymousId
+          : (anonymousId as String),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 }
 
 class _CopyWithStubImpl$Query$me$me$analytics<TRes>
@@ -706,11 +679,7 @@ class _CopyWithStubImpl$Query$me$me$analytics<TRes>
 
   TRes _res;
 
-  call({
-    String? anonymousId,
-    String? $__typename,
-  }) =>
-      _res;
+  call({String? anonymousId, String? $__typename}) => _res;
 }
 
 class Mutation$sendVerificationEmail {
@@ -745,10 +714,7 @@ class Mutation$sendVerificationEmail {
   int get hashCode {
     final l$sendVerificationEmail = sendVerificationEmail;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$sendVerificationEmail,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$sendVerificationEmail, l$$__typename]);
   }
 
   @override
@@ -777,10 +743,7 @@ class Mutation$sendVerificationEmail {
 extension UtilityExtension$Mutation$sendVerificationEmail
     on Mutation$sendVerificationEmail {
   CopyWith$Mutation$sendVerificationEmail<Mutation$sendVerificationEmail>
-      get copyWith => CopyWith$Mutation$sendVerificationEmail(
-            this,
-            (i) => i,
-          );
+  get copyWith => CopyWith$Mutation$sendVerificationEmail(this, (i) => i);
 }
 
 abstract class CopyWith$Mutation$sendVerificationEmail<TRes> {
@@ -792,18 +755,12 @@ abstract class CopyWith$Mutation$sendVerificationEmail<TRes> {
   factory CopyWith$Mutation$sendVerificationEmail.stub(TRes res) =
       _CopyWithStubImpl$Mutation$sendVerificationEmail;
 
-  TRes call({
-    bool? sendVerificationEmail,
-    String? $__typename,
-  });
+  TRes call({bool? sendVerificationEmail, String? $__typename});
 }
 
 class _CopyWithImpl$Mutation$sendVerificationEmail<TRes>
     implements CopyWith$Mutation$sendVerificationEmail<TRes> {
-  _CopyWithImpl$Mutation$sendVerificationEmail(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Mutation$sendVerificationEmail(this._instance, this._then);
 
   final Mutation$sendVerificationEmail _instance;
 
@@ -814,16 +771,17 @@ class _CopyWithImpl$Mutation$sendVerificationEmail<TRes>
   TRes call({
     Object? sendVerificationEmail = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Mutation$sendVerificationEmail(
-        sendVerificationEmail:
-            sendVerificationEmail == _undefined || sendVerificationEmail == null
-                ? _instance.sendVerificationEmail
-                : (sendVerificationEmail as bool),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  }) => _then(
+    Mutation$sendVerificationEmail(
+      sendVerificationEmail:
+          sendVerificationEmail == _undefined || sendVerificationEmail == null
+          ? _instance.sendVerificationEmail
+          : (sendVerificationEmail as bool),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 }
 
 class _CopyWithStubImpl$Mutation$sendVerificationEmail<TRes>
@@ -832,45 +790,45 @@ class _CopyWithStubImpl$Mutation$sendVerificationEmail<TRes>
 
   TRes _res;
 
-  call({
-    bool? sendVerificationEmail,
-    String? $__typename,
-  }) =>
-      _res;
+  call({bool? sendVerificationEmail, String? $__typename}) => _res;
 }
 
-const documentNodeMutationsendVerificationEmail = DocumentNode(definitions: [
-  OperationDefinitionNode(
-    type: OperationType.mutation,
-    name: NameNode(value: 'sendVerificationEmail'),
-    variableDefinitions: [],
-    directives: [],
-    selectionSet: SelectionSetNode(selections: [
-      FieldNode(
-        name: NameNode(value: 'sendVerificationEmail'),
-        alias: null,
-        arguments: [],
-        directives: [],
-        selectionSet: null,
+const documentNodeMutationsendVerificationEmail = DocumentNode(
+  definitions: [
+    OperationDefinitionNode(
+      type: OperationType.mutation,
+      name: NameNode(value: 'sendVerificationEmail'),
+      variableDefinitions: [],
+      directives: [],
+      selectionSet: SelectionSetNode(
+        selections: [
+          FieldNode(
+            name: NameNode(value: 'sendVerificationEmail'),
+            alias: null,
+            arguments: [],
+            directives: [],
+            selectionSet: null,
+          ),
+          FieldNode(
+            name: NameNode(value: '__typename'),
+            alias: null,
+            arguments: [],
+            directives: [],
+            selectionSet: null,
+          ),
+        ],
       ),
-      FieldNode(
-        name: NameNode(value: '__typename'),
-        alias: null,
-        arguments: [],
-        directives: [],
-        selectionSet: null,
-      ),
-    ]),
-  ),
-]);
-Mutation$sendVerificationEmail _parserFn$Mutation$sendVerificationEmail(
-        Map<String, dynamic> data) =>
-    Mutation$sendVerificationEmail.fromJson(data);
-typedef OnMutationCompleted$Mutation$sendVerificationEmail = FutureOr<void>
-    Function(
-  Map<String, dynamic>?,
-  Mutation$sendVerificationEmail?,
+    ),
+  ],
 );
+Mutation$sendVerificationEmail _parserFn$Mutation$sendVerificationEmail(
+  Map<String, dynamic> data,
+) => Mutation$sendVerificationEmail.fromJson(data);
+typedef OnMutationCompleted$Mutation$sendVerificationEmail =
+    FutureOr<void> Function(
+      Map<String, dynamic>?,
+      Mutation$sendVerificationEmail?,
+    );
 
 class Options$Mutation$sendVerificationEmail
     extends graphql.MutationOptions<Mutation$sendVerificationEmail> {
@@ -885,38 +843,38 @@ class Options$Mutation$sendVerificationEmail
     OnMutationCompleted$Mutation$sendVerificationEmail? onCompleted,
     graphql.OnMutationUpdate<Mutation$sendVerificationEmail>? update,
     graphql.OnError? onError,
-  })  : onCompletedWithParsed = onCompleted,
-        super(
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          onCompleted: onCompleted == null
-              ? null
-              : (data) => onCompleted(
-                    data,
-                    data == null
-                        ? null
-                        : _parserFn$Mutation$sendVerificationEmail(data),
-                  ),
-          update: update,
-          onError: onError,
-          document: documentNodeMutationsendVerificationEmail,
-          parserFn: _parserFn$Mutation$sendVerificationEmail,
-        );
+  }) : onCompletedWithParsed = onCompleted,
+       super(
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         onCompleted: onCompleted == null
+             ? null
+             : (data) => onCompleted(
+                 data,
+                 data == null
+                     ? null
+                     : _parserFn$Mutation$sendVerificationEmail(data),
+               ),
+         update: update,
+         onError: onError,
+         document: documentNodeMutationsendVerificationEmail,
+         parserFn: _parserFn$Mutation$sendVerificationEmail,
+       );
 
   final OnMutationCompleted$Mutation$sendVerificationEmail?
-      onCompletedWithParsed;
+  onCompletedWithParsed;
 
   @override
   List<Object?> get properties => [
-        ...super.onCompleted == null
-            ? super.properties
-            : super.properties.where((property) => property != onCompleted),
-        onCompletedWithParsed,
-      ];
+    ...super.onCompleted == null
+        ? super.properties
+        : super.properties.where((property) => property != onCompleted),
+    onCompletedWithParsed,
+  ];
 }
 
 class WatchOptions$Mutation$sendVerificationEmail
@@ -934,51 +892,51 @@ class WatchOptions$Mutation$sendVerificationEmail
     bool carryForwardDataOnException = true,
     bool fetchResults = false,
   }) : super(
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          document: documentNodeMutationsendVerificationEmail,
-          pollInterval: pollInterval,
-          eagerlyFetchResults: eagerlyFetchResults,
-          carryForwardDataOnException: carryForwardDataOnException,
-          fetchResults: fetchResults,
-          parserFn: _parserFn$Mutation$sendVerificationEmail,
-        );
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         document: documentNodeMutationsendVerificationEmail,
+         pollInterval: pollInterval,
+         eagerlyFetchResults: eagerlyFetchResults,
+         carryForwardDataOnException: carryForwardDataOnException,
+         fetchResults: fetchResults,
+         parserFn: _parserFn$Mutation$sendVerificationEmail,
+       );
 }
 
 extension ClientExtension$Mutation$sendVerificationEmail
     on graphql.GraphQLClient {
   Future<graphql.QueryResult<Mutation$sendVerificationEmail>>
-      mutate$sendVerificationEmail(
-              [Options$Mutation$sendVerificationEmail? options]) async =>
-          await this
-              .mutate(options ?? Options$Mutation$sendVerificationEmail());
+  mutate$sendVerificationEmail([
+    Options$Mutation$sendVerificationEmail? options,
+  ]) async =>
+      await this.mutate(options ?? Options$Mutation$sendVerificationEmail());
 
   graphql.ObservableQuery<Mutation$sendVerificationEmail>
-      watchMutation$sendVerificationEmail(
-              [WatchOptions$Mutation$sendVerificationEmail? options]) =>
-          this.watchMutation(
-              options ?? WatchOptions$Mutation$sendVerificationEmail());
+  watchMutation$sendVerificationEmail([
+    WatchOptions$Mutation$sendVerificationEmail? options,
+  ]) => this.watchMutation(
+    options ?? WatchOptions$Mutation$sendVerificationEmail(),
+  );
 }
 
 class Mutation$sendVerificationEmail$HookResult {
-  Mutation$sendVerificationEmail$HookResult(
-    this.runMutation,
-    this.result,
-  );
+  Mutation$sendVerificationEmail$HookResult(this.runMutation, this.result);
 
   final RunMutation$Mutation$sendVerificationEmail runMutation;
 
   final graphql.QueryResult<Mutation$sendVerificationEmail> result;
 }
 
-Mutation$sendVerificationEmail$HookResult useMutation$sendVerificationEmail(
-    [WidgetOptions$Mutation$sendVerificationEmail? options]) {
-  final result = graphql_flutter
-      .useMutation(options ?? WidgetOptions$Mutation$sendVerificationEmail());
+Mutation$sendVerificationEmail$HookResult useMutation$sendVerificationEmail([
+  WidgetOptions$Mutation$sendVerificationEmail? options,
+]) {
+  final result = graphql_flutter.useMutation(
+    options ?? WidgetOptions$Mutation$sendVerificationEmail(),
+  );
   return Mutation$sendVerificationEmail$HookResult(
     ({optimisticResult, typedOptimisticResult}) => result.runMutation(
       const {},
@@ -989,10 +947,11 @@ Mutation$sendVerificationEmail$HookResult useMutation$sendVerificationEmail(
 }
 
 graphql.ObservableQuery<Mutation$sendVerificationEmail>
-    useWatchMutation$sendVerificationEmail(
-            [WatchOptions$Mutation$sendVerificationEmail? options]) =>
-        graphql_flutter.useWatchMutation(
-            options ?? WatchOptions$Mutation$sendVerificationEmail());
+useWatchMutation$sendVerificationEmail([
+  WatchOptions$Mutation$sendVerificationEmail? options,
+]) => graphql_flutter.useWatchMutation(
+  options ?? WatchOptions$Mutation$sendVerificationEmail(),
+);
 
 class WidgetOptions$Mutation$sendVerificationEmail
     extends graphql.MutationOptions<Mutation$sendVerificationEmail> {
@@ -1007,45 +966,45 @@ class WidgetOptions$Mutation$sendVerificationEmail
     OnMutationCompleted$Mutation$sendVerificationEmail? onCompleted,
     graphql.OnMutationUpdate<Mutation$sendVerificationEmail>? update,
     graphql.OnError? onError,
-  })  : onCompletedWithParsed = onCompleted,
-        super(
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          onCompleted: onCompleted == null
-              ? null
-              : (data) => onCompleted(
-                    data,
-                    data == null
-                        ? null
-                        : _parserFn$Mutation$sendVerificationEmail(data),
-                  ),
-          update: update,
-          onError: onError,
-          document: documentNodeMutationsendVerificationEmail,
-          parserFn: _parserFn$Mutation$sendVerificationEmail,
-        );
+  }) : onCompletedWithParsed = onCompleted,
+       super(
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         onCompleted: onCompleted == null
+             ? null
+             : (data) => onCompleted(
+                 data,
+                 data == null
+                     ? null
+                     : _parserFn$Mutation$sendVerificationEmail(data),
+               ),
+         update: update,
+         onError: onError,
+         document: documentNodeMutationsendVerificationEmail,
+         parserFn: _parserFn$Mutation$sendVerificationEmail,
+       );
 
   final OnMutationCompleted$Mutation$sendVerificationEmail?
-      onCompletedWithParsed;
+  onCompletedWithParsed;
 
   @override
   List<Object?> get properties => [
-        ...super.onCompleted == null
-            ? super.properties
-            : super.properties.where((property) => property != onCompleted),
-        onCompletedWithParsed,
-      ];
+    ...super.onCompleted == null
+        ? super.properties
+        : super.properties.where((property) => property != onCompleted),
+    onCompletedWithParsed,
+  ];
 }
 
-typedef RunMutation$Mutation$sendVerificationEmail
-    = graphql.MultiSourceResult<Mutation$sendVerificationEmail> Function({
-  Object? optimisticResult,
-  Mutation$sendVerificationEmail? typedOptimisticResult,
-});
+typedef RunMutation$Mutation$sendVerificationEmail =
+    graphql.MultiSourceResult<Mutation$sendVerificationEmail> Function({
+      Object? optimisticResult,
+      Mutation$sendVerificationEmail? typedOptimisticResult,
+    });
 typedef Builder$Mutation$sendVerificationEmail = widgets.Widget Function(
   RunMutation$Mutation$sendVerificationEmail,
   graphql.QueryResult<Mutation$sendVerificationEmail>?,
@@ -1058,48 +1017,42 @@ class Mutation$sendVerificationEmail$Widget
     WidgetOptions$Mutation$sendVerificationEmail? options,
     required Builder$Mutation$sendVerificationEmail builder,
   }) : super(
-          key: key,
-          options: options ?? WidgetOptions$Mutation$sendVerificationEmail(),
-          builder: (
-            run,
-            result,
-          ) =>
-              builder(
-            ({
-              optimisticResult,
-              typedOptimisticResult,
-            }) =>
-                run(
-              const {},
-              optimisticResult:
-                  optimisticResult ?? typedOptimisticResult?.toJson(),
-            ),
-            result,
-          ),
-        );
+         key: key,
+         options: options ?? WidgetOptions$Mutation$sendVerificationEmail(),
+         builder: (run, result) => builder(
+           ({optimisticResult, typedOptimisticResult}) => run(
+             const {},
+             optimisticResult:
+                 optimisticResult ?? typedOptimisticResult?.toJson(),
+           ),
+           result,
+         ),
+       );
 }
 
 class Variables$Mutation$updateUserMetadata {
   factory Variables$Mutation$updateUserMetadata({
     required Input$NameOptions nameData,
     required Input$BirthOptions birthData,
-  }) =>
-      Variables$Mutation$updateUserMetadata._({
-        r'nameData': nameData,
-        r'birthData': birthData,
-      });
+  }) => Variables$Mutation$updateUserMetadata._({
+    r'nameData': nameData,
+    r'birthData': birthData,
+  });
 
   Variables$Mutation$updateUserMetadata._(this._$data);
 
   factory Variables$Mutation$updateUserMetadata.fromJson(
-      Map<String, dynamic> data) {
+    Map<String, dynamic> data,
+  ) {
     final result$data = <String, dynamic>{};
     final l$nameData = data['nameData'];
-    result$data['nameData'] =
-        Input$NameOptions.fromJson((l$nameData as Map<String, dynamic>));
+    result$data['nameData'] = Input$NameOptions.fromJson(
+      (l$nameData as Map<String, dynamic>),
+    );
     final l$birthData = data['birthData'];
-    result$data['birthData'] =
-        Input$BirthOptions.fromJson((l$birthData as Map<String, dynamic>));
+    result$data['birthData'] = Input$BirthOptions.fromJson(
+      (l$birthData as Map<String, dynamic>),
+    );
     return Variables$Mutation$updateUserMetadata._(result$data);
   }
 
@@ -1120,11 +1073,10 @@ class Variables$Mutation$updateUserMetadata {
   }
 
   CopyWith$Variables$Mutation$updateUserMetadata<
-          Variables$Mutation$updateUserMetadata>
-      get copyWith => CopyWith$Variables$Mutation$updateUserMetadata(
-            this,
-            (i) => i,
-          );
+    Variables$Mutation$updateUserMetadata
+  >
+  get copyWith =>
+      CopyWith$Variables$Mutation$updateUserMetadata(this, (i) => i);
 
   @override
   bool operator ==(Object other) {
@@ -1152,10 +1104,7 @@ class Variables$Mutation$updateUserMetadata {
   int get hashCode {
     final l$nameData = nameData;
     final l$birthData = birthData;
-    return Object.hashAll([
-      l$nameData,
-      l$birthData,
-    ]);
+    return Object.hashAll([l$nameData, l$birthData]);
   }
 }
 
@@ -1168,10 +1117,7 @@ abstract class CopyWith$Variables$Mutation$updateUserMetadata<TRes> {
   factory CopyWith$Variables$Mutation$updateUserMetadata.stub(TRes res) =
       _CopyWithStubImpl$Variables$Mutation$updateUserMetadata;
 
-  TRes call({
-    Input$NameOptions? nameData,
-    Input$BirthOptions? birthData,
-  });
+  TRes call({Input$NameOptions? nameData, Input$BirthOptions? birthData});
 }
 
 class _CopyWithImpl$Variables$Mutation$updateUserMetadata<TRes>
@@ -1187,17 +1133,16 @@ class _CopyWithImpl$Variables$Mutation$updateUserMetadata<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({
-    Object? nameData = _undefined,
-    Object? birthData = _undefined,
-  }) =>
-      _then(Variables$Mutation$updateUserMetadata._({
-        ..._instance._$data,
-        if (nameData != _undefined && nameData != null)
-          'nameData': (nameData as Input$NameOptions),
-        if (birthData != _undefined && birthData != null)
-          'birthData': (birthData as Input$BirthOptions),
-      }));
+  TRes call({Object? nameData = _undefined, Object? birthData = _undefined}) =>
+      _then(
+        Variables$Mutation$updateUserMetadata._({
+          ..._instance._$data,
+          if (nameData != _undefined && nameData != null)
+            'nameData': (nameData as Input$NameOptions),
+          if (birthData != _undefined && birthData != null)
+            'birthData': (birthData as Input$BirthOptions),
+        }),
+      );
 }
 
 class _CopyWithStubImpl$Variables$Mutation$updateUserMetadata<TRes>
@@ -1206,11 +1151,7 @@ class _CopyWithStubImpl$Variables$Mutation$updateUserMetadata<TRes>
 
   TRes _res;
 
-  call({
-    Input$NameOptions? nameData,
-    Input$BirthOptions? birthData,
-  }) =>
-      _res;
+  call({Input$NameOptions? nameData, Input$BirthOptions? birthData}) => _res;
 }
 
 class Mutation$updateUserMetadata {
@@ -1245,10 +1186,7 @@ class Mutation$updateUserMetadata {
   int get hashCode {
     final l$updateUserMetadata = updateUserMetadata;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$updateUserMetadata,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$updateUserMetadata, l$$__typename]);
   }
 
   @override
@@ -1277,10 +1215,7 @@ class Mutation$updateUserMetadata {
 extension UtilityExtension$Mutation$updateUserMetadata
     on Mutation$updateUserMetadata {
   CopyWith$Mutation$updateUserMetadata<Mutation$updateUserMetadata>
-      get copyWith => CopyWith$Mutation$updateUserMetadata(
-            this,
-            (i) => i,
-          );
+  get copyWith => CopyWith$Mutation$updateUserMetadata(this, (i) => i);
 }
 
 abstract class CopyWith$Mutation$updateUserMetadata<TRes> {
@@ -1292,18 +1227,12 @@ abstract class CopyWith$Mutation$updateUserMetadata<TRes> {
   factory CopyWith$Mutation$updateUserMetadata.stub(TRes res) =
       _CopyWithStubImpl$Mutation$updateUserMetadata;
 
-  TRes call({
-    bool? updateUserMetadata,
-    String? $__typename,
-  });
+  TRes call({bool? updateUserMetadata, String? $__typename});
 }
 
 class _CopyWithImpl$Mutation$updateUserMetadata<TRes>
     implements CopyWith$Mutation$updateUserMetadata<TRes> {
-  _CopyWithImpl$Mutation$updateUserMetadata(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Mutation$updateUserMetadata(this._instance, this._then);
 
   final Mutation$updateUserMetadata _instance;
 
@@ -1314,16 +1243,17 @@ class _CopyWithImpl$Mutation$updateUserMetadata<TRes>
   TRes call({
     Object? updateUserMetadata = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Mutation$updateUserMetadata(
-        updateUserMetadata:
-            updateUserMetadata == _undefined || updateUserMetadata == null
-                ? _instance.updateUserMetadata
-                : (updateUserMetadata as bool),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  }) => _then(
+    Mutation$updateUserMetadata(
+      updateUserMetadata:
+          updateUserMetadata == _undefined || updateUserMetadata == null
+          ? _instance.updateUserMetadata
+          : (updateUserMetadata as bool),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 }
 
 class _CopyWithStubImpl$Mutation$updateUserMetadata<TRes>
@@ -1332,73 +1262,73 @@ class _CopyWithStubImpl$Mutation$updateUserMetadata<TRes>
 
   TRes _res;
 
-  call({
-    bool? updateUserMetadata,
-    String? $__typename,
-  }) =>
-      _res;
+  call({bool? updateUserMetadata, String? $__typename}) => _res;
 }
 
-const documentNodeMutationupdateUserMetadata = DocumentNode(definitions: [
-  OperationDefinitionNode(
-    type: OperationType.mutation,
-    name: NameNode(value: 'updateUserMetadata'),
-    variableDefinitions: [
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'nameData')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'NameOptions'),
-          isNonNull: true,
-        ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'birthData')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'BirthOptions'),
-          isNonNull: true,
-        ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-    ],
-    directives: [],
-    selectionSet: SelectionSetNode(selections: [
-      FieldNode(
-        name: NameNode(value: 'updateUserMetadata'),
-        alias: null,
-        arguments: [
-          ArgumentNode(
-            name: NameNode(value: 'nameData'),
-            value: VariableNode(name: NameNode(value: 'nameData')),
+const documentNodeMutationupdateUserMetadata = DocumentNode(
+  definitions: [
+    OperationDefinitionNode(
+      type: OperationType.mutation,
+      name: NameNode(value: 'updateUserMetadata'),
+      variableDefinitions: [
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'nameData')),
+          type: NamedTypeNode(
+            name: NameNode(value: 'NameOptions'),
+            isNonNull: true,
           ),
-          ArgumentNode(
-            name: NameNode(value: 'birthData'),
-            value: VariableNode(name: NameNode(value: 'birthData')),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
+        ),
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'birthData')),
+          type: NamedTypeNode(
+            name: NameNode(value: 'BirthOptions'),
+            isNonNull: true,
+          ),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
+        ),
+      ],
+      directives: [],
+      selectionSet: SelectionSetNode(
+        selections: [
+          FieldNode(
+            name: NameNode(value: 'updateUserMetadata'),
+            alias: null,
+            arguments: [
+              ArgumentNode(
+                name: NameNode(value: 'nameData'),
+                value: VariableNode(name: NameNode(value: 'nameData')),
+              ),
+              ArgumentNode(
+                name: NameNode(value: 'birthData'),
+                value: VariableNode(name: NameNode(value: 'birthData')),
+              ),
+            ],
+            directives: [],
+            selectionSet: null,
+          ),
+          FieldNode(
+            name: NameNode(value: '__typename'),
+            alias: null,
+            arguments: [],
+            directives: [],
+            selectionSet: null,
           ),
         ],
-        directives: [],
-        selectionSet: null,
       ),
-      FieldNode(
-        name: NameNode(value: '__typename'),
-        alias: null,
-        arguments: [],
-        directives: [],
-        selectionSet: null,
-      ),
-    ]),
-  ),
-]);
-Mutation$updateUserMetadata _parserFn$Mutation$updateUserMetadata(
-        Map<String, dynamic> data) =>
-    Mutation$updateUserMetadata.fromJson(data);
-typedef OnMutationCompleted$Mutation$updateUserMetadata = FutureOr<void>
-    Function(
-  Map<String, dynamic>?,
-  Mutation$updateUserMetadata?,
+    ),
+  ],
 );
+Mutation$updateUserMetadata _parserFn$Mutation$updateUserMetadata(
+  Map<String, dynamic> data,
+) => Mutation$updateUserMetadata.fromJson(data);
+typedef OnMutationCompleted$Mutation$updateUserMetadata =
+    FutureOr<void> Function(
+      Map<String, dynamic>?,
+      Mutation$updateUserMetadata?,
+    );
 
 class Options$Mutation$updateUserMetadata
     extends graphql.MutationOptions<Mutation$updateUserMetadata> {
@@ -1414,38 +1344,38 @@ class Options$Mutation$updateUserMetadata
     OnMutationCompleted$Mutation$updateUserMetadata? onCompleted,
     graphql.OnMutationUpdate<Mutation$updateUserMetadata>? update,
     graphql.OnError? onError,
-  })  : onCompletedWithParsed = onCompleted,
-        super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          onCompleted: onCompleted == null
-              ? null
-              : (data) => onCompleted(
-                    data,
-                    data == null
-                        ? null
-                        : _parserFn$Mutation$updateUserMetadata(data),
-                  ),
-          update: update,
-          onError: onError,
-          document: documentNodeMutationupdateUserMetadata,
-          parserFn: _parserFn$Mutation$updateUserMetadata,
-        );
+  }) : onCompletedWithParsed = onCompleted,
+       super(
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         onCompleted: onCompleted == null
+             ? null
+             : (data) => onCompleted(
+                 data,
+                 data == null
+                     ? null
+                     : _parserFn$Mutation$updateUserMetadata(data),
+               ),
+         update: update,
+         onError: onError,
+         document: documentNodeMutationupdateUserMetadata,
+         parserFn: _parserFn$Mutation$updateUserMetadata,
+       );
 
   final OnMutationCompleted$Mutation$updateUserMetadata? onCompletedWithParsed;
 
   @override
   List<Object?> get properties => [
-        ...super.onCompleted == null
-            ? super.properties
-            : super.properties.where((property) => property != onCompleted),
-        onCompletedWithParsed,
-      ];
+    ...super.onCompleted == null
+        ? super.properties
+        : super.properties.where((property) => property != onCompleted),
+    onCompletedWithParsed,
+  ];
 }
 
 class WatchOptions$Mutation$updateUserMetadata
@@ -1464,63 +1394,62 @@ class WatchOptions$Mutation$updateUserMetadata
     bool carryForwardDataOnException = true,
     bool fetchResults = false,
   }) : super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          document: documentNodeMutationupdateUserMetadata,
-          pollInterval: pollInterval,
-          eagerlyFetchResults: eagerlyFetchResults,
-          carryForwardDataOnException: carryForwardDataOnException,
-          fetchResults: fetchResults,
-          parserFn: _parserFn$Mutation$updateUserMetadata,
-        );
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         document: documentNodeMutationupdateUserMetadata,
+         pollInterval: pollInterval,
+         eagerlyFetchResults: eagerlyFetchResults,
+         carryForwardDataOnException: carryForwardDataOnException,
+         fetchResults: fetchResults,
+         parserFn: _parserFn$Mutation$updateUserMetadata,
+       );
 }
 
 extension ClientExtension$Mutation$updateUserMetadata on graphql.GraphQLClient {
   Future<graphql.QueryResult<Mutation$updateUserMetadata>>
-      mutate$updateUserMetadata(
-              Options$Mutation$updateUserMetadata options) async =>
-          await this.mutate(options);
+  mutate$updateUserMetadata(
+    Options$Mutation$updateUserMetadata options,
+  ) async => await this.mutate(options);
 
   graphql.ObservableQuery<Mutation$updateUserMetadata>
-      watchMutation$updateUserMetadata(
-              WatchOptions$Mutation$updateUserMetadata options) =>
-          this.watchMutation(options);
+  watchMutation$updateUserMetadata(
+    WatchOptions$Mutation$updateUserMetadata options,
+  ) => this.watchMutation(options);
 }
 
 class Mutation$updateUserMetadata$HookResult {
-  Mutation$updateUserMetadata$HookResult(
-    this.runMutation,
-    this.result,
-  );
+  Mutation$updateUserMetadata$HookResult(this.runMutation, this.result);
 
   final RunMutation$Mutation$updateUserMetadata runMutation;
 
   final graphql.QueryResult<Mutation$updateUserMetadata> result;
 }
 
-Mutation$updateUserMetadata$HookResult useMutation$updateUserMetadata(
-    [WidgetOptions$Mutation$updateUserMetadata? options]) {
-  final result = graphql_flutter
-      .useMutation(options ?? WidgetOptions$Mutation$updateUserMetadata());
+Mutation$updateUserMetadata$HookResult useMutation$updateUserMetadata([
+  WidgetOptions$Mutation$updateUserMetadata? options,
+]) {
+  final result = graphql_flutter.useMutation(
+    options ?? WidgetOptions$Mutation$updateUserMetadata(),
+  );
   return Mutation$updateUserMetadata$HookResult(
     (variables, {optimisticResult, typedOptimisticResult}) =>
         result.runMutation(
-      variables.toJson(),
-      optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-    ),
+          variables.toJson(),
+          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+        ),
     result.result,
   );
 }
 
 graphql.ObservableQuery<Mutation$updateUserMetadata>
-    useWatchMutation$updateUserMetadata(
-            WatchOptions$Mutation$updateUserMetadata options) =>
-        graphql_flutter.useWatchMutation(options);
+useWatchMutation$updateUserMetadata(
+  WatchOptions$Mutation$updateUserMetadata options,
+) => graphql_flutter.useWatchMutation(options);
 
 class WidgetOptions$Mutation$updateUserMetadata
     extends graphql.MutationOptions<Mutation$updateUserMetadata> {
@@ -1535,45 +1464,45 @@ class WidgetOptions$Mutation$updateUserMetadata
     OnMutationCompleted$Mutation$updateUserMetadata? onCompleted,
     graphql.OnMutationUpdate<Mutation$updateUserMetadata>? update,
     graphql.OnError? onError,
-  })  : onCompletedWithParsed = onCompleted,
-        super(
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          onCompleted: onCompleted == null
-              ? null
-              : (data) => onCompleted(
-                    data,
-                    data == null
-                        ? null
-                        : _parserFn$Mutation$updateUserMetadata(data),
-                  ),
-          update: update,
-          onError: onError,
-          document: documentNodeMutationupdateUserMetadata,
-          parserFn: _parserFn$Mutation$updateUserMetadata,
-        );
+  }) : onCompletedWithParsed = onCompleted,
+       super(
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         onCompleted: onCompleted == null
+             ? null
+             : (data) => onCompleted(
+                 data,
+                 data == null
+                     ? null
+                     : _parserFn$Mutation$updateUserMetadata(data),
+               ),
+         update: update,
+         onError: onError,
+         document: documentNodeMutationupdateUserMetadata,
+         parserFn: _parserFn$Mutation$updateUserMetadata,
+       );
 
   final OnMutationCompleted$Mutation$updateUserMetadata? onCompletedWithParsed;
 
   @override
   List<Object?> get properties => [
-        ...super.onCompleted == null
-            ? super.properties
-            : super.properties.where((property) => property != onCompleted),
-        onCompletedWithParsed,
-      ];
+    ...super.onCompleted == null
+        ? super.properties
+        : super.properties.where((property) => property != onCompleted),
+    onCompletedWithParsed,
+  ];
 }
 
-typedef RunMutation$Mutation$updateUserMetadata
-    = graphql.MultiSourceResult<Mutation$updateUserMetadata> Function(
-  Variables$Mutation$updateUserMetadata, {
-  Object? optimisticResult,
-  Mutation$updateUserMetadata? typedOptimisticResult,
-});
+typedef RunMutation$Mutation$updateUserMetadata =
+    graphql.MultiSourceResult<Mutation$updateUserMetadata> Function(
+      Variables$Mutation$updateUserMetadata, {
+      Object? optimisticResult,
+      Mutation$updateUserMetadata? typedOptimisticResult,
+    });
 typedef Builder$Mutation$updateUserMetadata = widgets.Widget Function(
   RunMutation$Mutation$updateUserMetadata,
   graphql.QueryResult<Mutation$updateUserMetadata>?,
@@ -1586,24 +1515,15 @@ class Mutation$updateUserMetadata$Widget
     WidgetOptions$Mutation$updateUserMetadata? options,
     required Builder$Mutation$updateUserMetadata builder,
   }) : super(
-          key: key,
-          options: options ?? WidgetOptions$Mutation$updateUserMetadata(),
-          builder: (
-            run,
-            result,
-          ) =>
-              builder(
-            (
-              variables, {
-              optimisticResult,
-              typedOptimisticResult,
-            }) =>
-                run(
-              variables.toJson(),
-              optimisticResult:
-                  optimisticResult ?? typedOptimisticResult?.toJson(),
-            ),
-            result,
-          ),
-        );
+         key: key,
+         options: options ?? WidgetOptions$Mutation$updateUserMetadata(),
+         builder: (run, result) => builder(
+           (variables, {optimisticResult, typedOptimisticResult}) => run(
+             variables.toJson(),
+             optimisticResult:
+                 optimisticResult ?? typedOptimisticResult?.toJson(),
+           ),
+           result,
+         ),
+       );
 }

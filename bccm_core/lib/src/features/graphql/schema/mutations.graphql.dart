@@ -1,7 +1,6 @@
 class Input$BirthOptions {
-  factory Input$BirthOptions({required int year}) => Input$BirthOptions._({
-        r'year': year,
-      });
+  factory Input$BirthOptions({required int year}) =>
+      Input$BirthOptions._({r'year': year});
 
   Input$BirthOptions._(this._$data);
 
@@ -24,10 +23,7 @@ class Input$BirthOptions {
   }
 
   CopyWith$Input$BirthOptions<Input$BirthOptions> get copyWith =>
-      CopyWith$Input$BirthOptions(
-        this,
-        (i) => i,
-      );
+      CopyWith$Input$BirthOptions(this, (i) => i);
 
   @override
   bool operator ==(Object other) {
@@ -66,10 +62,7 @@ abstract class CopyWith$Input$BirthOptions<TRes> {
 
 class _CopyWithImpl$Input$BirthOptions<TRes>
     implements CopyWith$Input$BirthOptions<TRes> {
-  _CopyWithImpl$Input$BirthOptions(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Input$BirthOptions(this._instance, this._then);
 
   final Input$BirthOptions _instance;
 
@@ -77,10 +70,12 @@ class _CopyWithImpl$Input$BirthOptions<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({Object? year = _undefined}) => _then(Input$BirthOptions._({
-        ..._instance._$data,
-        if (year != _undefined && year != null) 'year': (year as int),
-      }));
+  TRes call({Object? year = _undefined}) => _then(
+    Input$BirthOptions._({
+      ..._instance._$data,
+      if (year != _undefined && year != null) 'year': (year as int),
+    }),
+  );
 }
 
 class _CopyWithStubImpl$Input$BirthOptions<TRes>
@@ -93,14 +88,8 @@ class _CopyWithStubImpl$Input$BirthOptions<TRes>
 }
 
 class Input$NameOptions {
-  factory Input$NameOptions({
-    required String first,
-    required String last,
-  }) =>
-      Input$NameOptions._({
-        r'first': first,
-        r'last': last,
-      });
+  factory Input$NameOptions({required String first, required String last}) =>
+      Input$NameOptions._({r'first': first, r'last': last});
 
   Input$NameOptions._(this._$data);
 
@@ -129,10 +118,7 @@ class Input$NameOptions {
   }
 
   CopyWith$Input$NameOptions<Input$NameOptions> get copyWith =>
-      CopyWith$Input$NameOptions(
-        this,
-        (i) => i,
-      );
+      CopyWith$Input$NameOptions(this, (i) => i);
 
   @override
   bool operator ==(Object other) {
@@ -159,10 +145,7 @@ class Input$NameOptions {
   int get hashCode {
     final l$first = first;
     final l$last = last;
-    return Object.hashAll([
-      l$first,
-      l$last,
-    ]);
+    return Object.hashAll([l$first, l$last]);
   }
 }
 
@@ -175,18 +158,12 @@ abstract class CopyWith$Input$NameOptions<TRes> {
   factory CopyWith$Input$NameOptions.stub(TRes res) =
       _CopyWithStubImpl$Input$NameOptions;
 
-  TRes call({
-    String? first,
-    String? last,
-  });
+  TRes call({String? first, String? last});
 }
 
 class _CopyWithImpl$Input$NameOptions<TRes>
     implements CopyWith$Input$NameOptions<TRes> {
-  _CopyWithImpl$Input$NameOptions(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Input$NameOptions(this._instance, this._then);
 
   final Input$NameOptions _instance;
 
@@ -194,15 +171,13 @@ class _CopyWithImpl$Input$NameOptions<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({
-    Object? first = _undefined,
-    Object? last = _undefined,
-  }) =>
-      _then(Input$NameOptions._({
-        ..._instance._$data,
-        if (first != _undefined && first != null) 'first': (first as String),
-        if (last != _undefined && last != null) 'last': (last as String),
-      }));
+  TRes call({Object? first = _undefined, Object? last = _undefined}) => _then(
+    Input$NameOptions._({
+      ..._instance._$data,
+      if (first != _undefined && first != null) 'first': (first as String),
+      if (last != _undefined && last != null) 'last': (last as String),
+    }),
+  );
 }
 
 class _CopyWithStubImpl$Input$NameOptions<TRes>
@@ -211,22 +186,12 @@ class _CopyWithStubImpl$Input$NameOptions<TRes>
 
   TRes _res;
 
-  call({
-    String? first,
-    String? last,
-  }) =>
-      _res;
+  call({String? first, String? last}) => _res;
 }
 
 class Input$EmailOptions {
-  factory Input$EmailOptions({
-    required String name,
-    required String email,
-  }) =>
-      Input$EmailOptions._({
-        r'name': name,
-        r'email': email,
-      });
+  factory Input$EmailOptions({required String name, required String email}) =>
+      Input$EmailOptions._({r'name': name, r'email': email});
 
   Input$EmailOptions._(this._$data);
 
@@ -255,10 +220,7 @@ class Input$EmailOptions {
   }
 
   CopyWith$Input$EmailOptions<Input$EmailOptions> get copyWith =>
-      CopyWith$Input$EmailOptions(
-        this,
-        (i) => i,
-      );
+      CopyWith$Input$EmailOptions(this, (i) => i);
 
   @override
   bool operator ==(Object other) {
@@ -285,10 +247,7 @@ class Input$EmailOptions {
   int get hashCode {
     final l$name = name;
     final l$email = email;
-    return Object.hashAll([
-      l$name,
-      l$email,
-    ]);
+    return Object.hashAll([l$name, l$email]);
   }
 }
 
@@ -301,18 +260,12 @@ abstract class CopyWith$Input$EmailOptions<TRes> {
   factory CopyWith$Input$EmailOptions.stub(TRes res) =
       _CopyWithStubImpl$Input$EmailOptions;
 
-  TRes call({
-    String? name,
-    String? email,
-  });
+  TRes call({String? name, String? email});
 }
 
 class _CopyWithImpl$Input$EmailOptions<TRes>
     implements CopyWith$Input$EmailOptions<TRes> {
-  _CopyWithImpl$Input$EmailOptions(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Input$EmailOptions(this._instance, this._then);
 
   final Input$EmailOptions _instance;
 
@@ -320,15 +273,13 @@ class _CopyWithImpl$Input$EmailOptions<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({
-    Object? name = _undefined,
-    Object? email = _undefined,
-  }) =>
-      _then(Input$EmailOptions._({
-        ..._instance._$data,
-        if (name != _undefined && name != null) 'name': (name as String),
-        if (email != _undefined && email != null) 'email': (email as String),
-      }));
+  TRes call({Object? name = _undefined, Object? email = _undefined}) => _then(
+    Input$EmailOptions._({
+      ..._instance._$data,
+      if (name != _undefined && name != null) 'name': (name as String),
+      if (email != _undefined && email != null) 'email': (email as String),
+    }),
+  );
 }
 
 class _CopyWithStubImpl$Input$EmailOptions<TRes>
@@ -337,11 +288,7 @@ class _CopyWithStubImpl$Input$EmailOptions<TRes>
 
   TRes _res;
 
-  call({
-    String? name,
-    String? email,
-  }) =>
-      _res;
+  call({String? name, String? email}) => _res;
 }
 
 enum Enum$OS {

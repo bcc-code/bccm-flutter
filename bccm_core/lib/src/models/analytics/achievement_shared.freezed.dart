@@ -1,6 +1,6 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: type=lint
+// coverage:ignore-file
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'achievement_shared.dart';
@@ -9,171 +9,277 @@ part of 'achievement_shared.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
-
-AchievementSharedEvent _$AchievementSharedEventFromJson(
-  Map<String, dynamic> json,
-) {
-  return _AchievementSharedEvent.fromJson(json);
-}
 
 /// @nodoc
 mixin _$AchievementSharedEvent {
-  String get elementTitle => throw _privateConstructorUsedError;
+
+ String get elementTitle;
+/// Create a copy of AchievementSharedEvent
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$AchievementSharedEventCopyWith<AchievementSharedEvent> get copyWith => _$AchievementSharedEventCopyWithImpl<AchievementSharedEvent>(this as AchievementSharedEvent, _$identity);
 
   /// Serializes this AchievementSharedEvent to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of AchievementSharedEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $AchievementSharedEventCopyWith<AchievementSharedEvent> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  final _this = this as AchievementSharedEvent;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is AchievementSharedEvent&&(identical(other.elementTitle, _this.elementTitle) || other.elementTitle == _this.elementTitle));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode {
+  final _this = this as AchievementSharedEvent;
+  return Object.hash(runtimeType,_this.elementTitle);
+}
+
+@override
+String toString() {
+  final _this = this as AchievementSharedEvent;
+  return 'AchievementSharedEvent(elementTitle: ${_this.elementTitle})';
+}
+
+
 }
 
 /// @nodoc
-abstract class $AchievementSharedEventCopyWith<$Res> {
-  factory $AchievementSharedEventCopyWith(
-    AchievementSharedEvent value,
-    $Res Function(AchievementSharedEvent) then,
-  ) = _$AchievementSharedEventCopyWithImpl<$Res, AchievementSharedEvent>;
-  @useResult
-  $Res call({String elementTitle});
-}
+abstract mixin class $AchievementSharedEventCopyWith<$Res>  {
+  factory $AchievementSharedEventCopyWith(AchievementSharedEvent value, $Res Function(AchievementSharedEvent) _then) = _$AchievementSharedEventCopyWithImpl;
+@useResult
+$Res call({
+ String elementTitle
+});
 
+
+
+
+}
 /// @nodoc
-class _$AchievementSharedEventCopyWithImpl<
-  $Res,
-  $Val extends AchievementSharedEvent
->
+class _$AchievementSharedEventCopyWithImpl<$Res>
     implements $AchievementSharedEventCopyWith<$Res> {
-  _$AchievementSharedEventCopyWithImpl(this._value, this._then);
+  _$AchievementSharedEventCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final AchievementSharedEvent _self;
+  final $Res Function(AchievementSharedEvent) _then;
 
-  /// Create a copy of AchievementSharedEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? elementTitle = null}) {
-    return _then(
-      _value.copyWith(
-            elementTitle: null == elementTitle
-                ? _value.elementTitle
-                : elementTitle // ignore: cast_nullable_to_non_nullable
-                      as String,
-          )
-          as $Val,
-    );
-  }
+/// Create a copy of AchievementSharedEvent
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? elementTitle = null,}) {
+  return _then(AchievementSharedEvent(
+elementTitle: null == elementTitle ? _self.elementTitle : elementTitle // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
 }
 
-/// @nodoc
-abstract class _$$AchievementSharedEventImplCopyWith<$Res>
-    implements $AchievementSharedEventCopyWith<$Res> {
-  factory _$$AchievementSharedEventImplCopyWith(
-    _$AchievementSharedEventImpl value,
-    $Res Function(_$AchievementSharedEventImpl) then,
-  ) = __$$AchievementSharedEventImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String elementTitle});
 }
 
-/// @nodoc
-class __$$AchievementSharedEventImplCopyWithImpl<$Res>
-    extends
-        _$AchievementSharedEventCopyWithImpl<$Res, _$AchievementSharedEventImpl>
-    implements _$$AchievementSharedEventImplCopyWith<$Res> {
-  __$$AchievementSharedEventImplCopyWithImpl(
-    _$AchievementSharedEventImpl _value,
-    $Res Function(_$AchievementSharedEventImpl) _then,
-  ) : super(_value, _then);
 
-  /// Create a copy of AchievementSharedEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? elementTitle = null}) {
-    return _then(
-      _$AchievementSharedEventImpl(
-        elementTitle: null == elementTitle
-            ? _value.elementTitle
-            : elementTitle // ignore: cast_nullable_to_non_nullable
-                  as String,
-      ),
-    );
-  }
+/// Adds pattern-matching-related methods to [AchievementSharedEvent].
+extension AchievementSharedEventPatterns on AchievementSharedEvent {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _AchievementSharedEvent value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _AchievementSharedEvent() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _AchievementSharedEvent value)  $default,){
+final _that = this;
+switch (_that) {
+case _AchievementSharedEvent():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _AchievementSharedEvent value)?  $default,){
+final _that = this;
+switch (_that) {
+case _AchievementSharedEvent() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String elementTitle)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _AchievementSharedEvent() when $default != null:
+return $default(_that.elementTitle);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String elementTitle)  $default,) {final _that = this;
+switch (_that) {
+case _AchievementSharedEvent():
+return $default(_that.elementTitle);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String elementTitle)?  $default,) {final _that = this;
+switch (_that) {
+case _AchievementSharedEvent() when $default != null:
+return $default(_that.elementTitle);case _:
+  return null;
+
+}
+}
+
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$AchievementSharedEventImpl implements _AchievementSharedEvent {
-  const _$AchievementSharedEventImpl({required this.elementTitle});
 
-  factory _$AchievementSharedEventImpl.fromJson(Map<String, dynamic> json) =>
-      _$$AchievementSharedEventImplFromJson(json);
+class _AchievementSharedEvent implements AchievementSharedEvent {
+  const _AchievementSharedEvent({required this.elementTitle});
+  factory _AchievementSharedEvent.fromJson(Map<String, dynamic> json) => _$AchievementSharedEventFromJson(json);
 
-  @override
-  final String elementTitle;
+@override final  String elementTitle;
 
-  @override
-  String toString() {
+/// Create a copy of AchievementSharedEvent
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$AchievementSharedEventCopyWith<_AchievementSharedEvent> get copyWith => __$AchievementSharedEventCopyWithImpl<_AchievementSharedEvent>(this, _$identity);
+
+@override
+Map<String, dynamic> toJson() {
+  return _$AchievementSharedEventToJson(this, );
+}
+
+@override
+bool operator ==(Object other) {
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _AchievementSharedEvent&&(identical(other.elementTitle, elementTitle) || other.elementTitle == elementTitle));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode {
+    return Object.hash(runtimeType,elementTitle);
+}
+
+@override
+String toString() {
     return 'AchievementSharedEvent(elementTitle: $elementTitle)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$AchievementSharedEventImpl &&
-            (identical(other.elementTitle, elementTitle) ||
-                other.elementTitle == elementTitle));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, elementTitle);
-
-  /// Create a copy of AchievementSharedEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$AchievementSharedEventImplCopyWith<_$AchievementSharedEventImpl>
-  get copyWith =>
-      __$$AchievementSharedEventImplCopyWithImpl<_$AchievementSharedEventImpl>(
-        this,
-        _$identity,
-      );
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$AchievementSharedEventImplToJson(this);
-  }
 }
 
-abstract class _AchievementSharedEvent implements AchievementSharedEvent {
-  const factory _AchievementSharedEvent({required final String elementTitle}) =
-      _$AchievementSharedEventImpl;
 
-  factory _AchievementSharedEvent.fromJson(Map<String, dynamic> json) =
-      _$AchievementSharedEventImpl.fromJson;
-
-  @override
-  String get elementTitle;
-
-  /// Create a copy of AchievementSharedEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$AchievementSharedEventImplCopyWith<_$AchievementSharedEventImpl>
-  get copyWith => throw _privateConstructorUsedError;
 }
+
+/// @nodoc
+abstract mixin class _$AchievementSharedEventCopyWith<$Res> implements $AchievementSharedEventCopyWith<$Res> {
+  factory _$AchievementSharedEventCopyWith(_AchievementSharedEvent value, $Res Function(_AchievementSharedEvent) _then) = __$AchievementSharedEventCopyWithImpl;
+@override @useResult
+$Res call({
+ String elementTitle
+});
+
+
+
+
+}
+/// @nodoc
+class __$AchievementSharedEventCopyWithImpl<$Res>
+    implements _$AchievementSharedEventCopyWith<$Res> {
+  __$AchievementSharedEventCopyWithImpl(this._self, this._then);
+
+  final _AchievementSharedEvent _self;
+  final $Res Function(_AchievementSharedEvent) _then;
+
+/// Create a copy of AchievementSharedEvent
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? elementTitle = null,}) {
+  return _then(_AchievementSharedEvent(
+elementTitle: null == elementTitle ? _self.elementTitle : elementTitle // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
+}
+
+
+}
+
+// dart format on

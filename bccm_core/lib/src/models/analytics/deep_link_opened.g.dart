@@ -6,16 +6,15 @@ part of 'deep_link_opened.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$DeepLinkOpenedEventImpl _$$DeepLinkOpenedEventImplFromJson(
-  Map<String, dynamic> json,
-) => _$DeepLinkOpenedEventImpl(
-  url: json['url'] as String,
-  source: json['source'] as String,
-  campaignId: json['campaignId'] as String,
-);
+_DeepLinkOpenedEvent _$DeepLinkOpenedEventFromJson(Map<String, dynamic> json) =>
+    _DeepLinkOpenedEvent(
+      url: json['url'] as String,
+      source: json['source'] as String,
+      campaignId: json['campaignId'] as String,
+    );
 
-Map<String, dynamic> _$$DeepLinkOpenedEventImplToJson(
-  _$DeepLinkOpenedEventImpl instance,
+Map<String, dynamic> _$DeepLinkOpenedEventToJson(
+  _DeepLinkOpenedEvent instance,
 ) => <String, dynamic>{
   'url': instance.url,
   'source': instance.source,

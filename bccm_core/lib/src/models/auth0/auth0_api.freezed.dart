@@ -1,6 +1,6 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: type=lint
+// coverage:ignore-file
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'auth0_api.dart';
@@ -9,890 +9,909 @@ part of 'auth0_api.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// dart format off
 T _$identity<T>(T value) => value;
 
-final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
-
-Auth0SignupRequestBody _$Auth0SignupRequestBodyFromJson(
-  Map<String, dynamic> json,
-) {
-  return _Auth0SignupRequestBody.fromJson(json);
-}
-
 /// @nodoc
-mixin _$Auth0SignupRequestBody {
-  String get clientId => throw _privateConstructorUsedError;
-  String get email => throw _privateConstructorUsedError;
-  String get password => throw _privateConstructorUsedError;
-  String get connection => throw _privateConstructorUsedError;
-  String? get username => throw _privateConstructorUsedError;
-  String? get givenName => throw _privateConstructorUsedError;
-  String? get familyName => throw _privateConstructorUsedError;
-  String? get name => throw _privateConstructorUsedError;
-  String? get nickname => throw _privateConstructorUsedError;
-  String? get pictureUrl => throw _privateConstructorUsedError;
-  Map<String, String>? get userMetadata => throw _privateConstructorUsedError;
+mixin _$Auth0SignupRequestBody implements DiagnosticableTreeMixin {
+
+ String get clientId; String get email; String get password; String get connection; String? get username; String? get givenName; String? get familyName; String? get name; String? get nickname; String? get pictureUrl; Map<String, String>? get userMetadata;
+/// Create a copy of Auth0SignupRequestBody
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$Auth0SignupRequestBodyCopyWith<Auth0SignupRequestBody> get copyWith => _$Auth0SignupRequestBodyCopyWithImpl<Auth0SignupRequestBody>(this as Auth0SignupRequestBody, _$identity);
 
   /// Serializes this Auth0SignupRequestBody to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of Auth0SignupRequestBody
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $Auth0SignupRequestBodyCopyWith<Auth0SignupRequestBody> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+  final _this = this as Auth0SignupRequestBody;
+  properties
+    ..add(DiagnosticsProperty('type', 'Auth0SignupRequestBody'))
+    ..add(DiagnosticsProperty('clientId', _this.clientId))..add(DiagnosticsProperty('email', _this.email))..add(DiagnosticsProperty('password', _this.password))..add(DiagnosticsProperty('connection', _this.connection))..add(DiagnosticsProperty('username', _this.username))..add(DiagnosticsProperty('givenName', _this.givenName))..add(DiagnosticsProperty('familyName', _this.familyName))..add(DiagnosticsProperty('name', _this.name))..add(DiagnosticsProperty('nickname', _this.nickname))..add(DiagnosticsProperty('pictureUrl', _this.pictureUrl))..add(DiagnosticsProperty('userMetadata', _this.userMetadata));
+}
+
+@override
+bool operator ==(Object other) {
+  final _this = this as Auth0SignupRequestBody;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is Auth0SignupRequestBody&&(identical(other.clientId, _this.clientId) || other.clientId == _this.clientId)&&(identical(other.email, _this.email) || other.email == _this.email)&&(identical(other.password, _this.password) || other.password == _this.password)&&(identical(other.connection, _this.connection) || other.connection == _this.connection)&&(identical(other.username, _this.username) || other.username == _this.username)&&(identical(other.givenName, _this.givenName) || other.givenName == _this.givenName)&&(identical(other.familyName, _this.familyName) || other.familyName == _this.familyName)&&(identical(other.name, _this.name) || other.name == _this.name)&&(identical(other.nickname, _this.nickname) || other.nickname == _this.nickname)&&(identical(other.pictureUrl, _this.pictureUrl) || other.pictureUrl == _this.pictureUrl)&&const DeepCollectionEquality().equals(other.userMetadata, _this.userMetadata));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode {
+  final _this = this as Auth0SignupRequestBody;
+  return Object.hash(runtimeType,_this.clientId,_this.email,_this.password,_this.connection,_this.username,_this.givenName,_this.familyName,_this.name,_this.nickname,_this.pictureUrl,const DeepCollectionEquality().hash(_this.userMetadata));
+}
+
+@override
+String toString({ DiagnosticLevel minLevel = DiagnosticLevel.info }) {
+  final _this = this as Auth0SignupRequestBody;
+  return 'Auth0SignupRequestBody(clientId: ${_this.clientId}, email: ${_this.email}, password: ${_this.password}, connection: ${_this.connection}, username: ${_this.username}, givenName: ${_this.givenName}, familyName: ${_this.familyName}, name: ${_this.name}, nickname: ${_this.nickname}, pictureUrl: ${_this.pictureUrl}, userMetadata: ${_this.userMetadata})';
+}
+
+
 }
 
 /// @nodoc
-abstract class $Auth0SignupRequestBodyCopyWith<$Res> {
-  factory $Auth0SignupRequestBodyCopyWith(
-    Auth0SignupRequestBody value,
-    $Res Function(Auth0SignupRequestBody) then,
-  ) = _$Auth0SignupRequestBodyCopyWithImpl<$Res, Auth0SignupRequestBody>;
-  @useResult
-  $Res call({
-    String clientId,
-    String email,
-    String password,
-    String connection,
-    String? username,
-    String? givenName,
-    String? familyName,
-    String? name,
-    String? nickname,
-    String? pictureUrl,
-    Map<String, String>? userMetadata,
-  });
-}
+abstract mixin class $Auth0SignupRequestBodyCopyWith<$Res>  {
+  factory $Auth0SignupRequestBodyCopyWith(Auth0SignupRequestBody value, $Res Function(Auth0SignupRequestBody) _then) = _$Auth0SignupRequestBodyCopyWithImpl;
+@useResult
+$Res call({
+ String clientId, String email, String password, String connection, String? username, String? givenName, String? familyName, String? name, String? nickname, String? pictureUrl, Map<String, String>? userMetadata
+});
 
+
+
+
+}
 /// @nodoc
-class _$Auth0SignupRequestBodyCopyWithImpl<
-  $Res,
-  $Val extends Auth0SignupRequestBody
->
+class _$Auth0SignupRequestBodyCopyWithImpl<$Res>
     implements $Auth0SignupRequestBodyCopyWith<$Res> {
-  _$Auth0SignupRequestBodyCopyWithImpl(this._value, this._then);
+  _$Auth0SignupRequestBodyCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final Auth0SignupRequestBody _self;
+  final $Res Function(Auth0SignupRequestBody) _then;
 
-  /// Create a copy of Auth0SignupRequestBody
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? clientId = null,
-    Object? email = null,
-    Object? password = null,
-    Object? connection = null,
-    Object? username = freezed,
-    Object? givenName = freezed,
-    Object? familyName = freezed,
-    Object? name = freezed,
-    Object? nickname = freezed,
-    Object? pictureUrl = freezed,
-    Object? userMetadata = freezed,
-  }) {
-    return _then(
-      _value.copyWith(
-            clientId: null == clientId
-                ? _value.clientId
-                : clientId // ignore: cast_nullable_to_non_nullable
-                      as String,
-            email: null == email
-                ? _value.email
-                : email // ignore: cast_nullable_to_non_nullable
-                      as String,
-            password: null == password
-                ? _value.password
-                : password // ignore: cast_nullable_to_non_nullable
-                      as String,
-            connection: null == connection
-                ? _value.connection
-                : connection // ignore: cast_nullable_to_non_nullable
-                      as String,
-            username: freezed == username
-                ? _value.username
-                : username // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            givenName: freezed == givenName
-                ? _value.givenName
-                : givenName // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            familyName: freezed == familyName
-                ? _value.familyName
-                : familyName // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            name: freezed == name
-                ? _value.name
-                : name // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            nickname: freezed == nickname
-                ? _value.nickname
-                : nickname // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            pictureUrl: freezed == pictureUrl
-                ? _value.pictureUrl
-                : pictureUrl // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            userMetadata: freezed == userMetadata
-                ? _value.userMetadata
-                : userMetadata // ignore: cast_nullable_to_non_nullable
-                      as Map<String, String>?,
-          )
-          as $Val,
-    );
-  }
+/// Create a copy of Auth0SignupRequestBody
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? clientId = null,Object? email = null,Object? password = null,Object? connection = null,Object? username = freezed,Object? givenName = freezed,Object? familyName = freezed,Object? name = freezed,Object? nickname = freezed,Object? pictureUrl = freezed,Object? userMetadata = freezed,}) {
+  return _then(Auth0SignupRequestBody(
+clientId: null == clientId ? _self.clientId : clientId // ignore: cast_nullable_to_non_nullable
+as String,email: null == email ? _self.email : email // ignore: cast_nullable_to_non_nullable
+as String,password: null == password ? _self.password : password // ignore: cast_nullable_to_non_nullable
+as String,connection: null == connection ? _self.connection : connection // ignore: cast_nullable_to_non_nullable
+as String,username: freezed == username ? _self.username : username // ignore: cast_nullable_to_non_nullable
+as String?,givenName: freezed == givenName ? _self.givenName : givenName // ignore: cast_nullable_to_non_nullable
+as String?,familyName: freezed == familyName ? _self.familyName : familyName // ignore: cast_nullable_to_non_nullable
+as String?,name: freezed == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
+as String?,nickname: freezed == nickname ? _self.nickname : nickname // ignore: cast_nullable_to_non_nullable
+as String?,pictureUrl: freezed == pictureUrl ? _self.pictureUrl : pictureUrl // ignore: cast_nullable_to_non_nullable
+as String?,userMetadata: freezed == userMetadata ? _self.userMetadata : userMetadata // ignore: cast_nullable_to_non_nullable
+as Map<String, String>?,
+  ));
 }
 
-/// @nodoc
-abstract class _$$Auth0SignupRequestBodyImplCopyWith<$Res>
-    implements $Auth0SignupRequestBodyCopyWith<$Res> {
-  factory _$$Auth0SignupRequestBodyImplCopyWith(
-    _$Auth0SignupRequestBodyImpl value,
-    $Res Function(_$Auth0SignupRequestBodyImpl) then,
-  ) = __$$Auth0SignupRequestBodyImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({
-    String clientId,
-    String email,
-    String password,
-    String connection,
-    String? username,
-    String? givenName,
-    String? familyName,
-    String? name,
-    String? nickname,
-    String? pictureUrl,
-    Map<String, String>? userMetadata,
-  });
 }
 
-/// @nodoc
-class __$$Auth0SignupRequestBodyImplCopyWithImpl<$Res>
-    extends
-        _$Auth0SignupRequestBodyCopyWithImpl<$Res, _$Auth0SignupRequestBodyImpl>
-    implements _$$Auth0SignupRequestBodyImplCopyWith<$Res> {
-  __$$Auth0SignupRequestBodyImplCopyWithImpl(
-    _$Auth0SignupRequestBodyImpl _value,
-    $Res Function(_$Auth0SignupRequestBodyImpl) _then,
-  ) : super(_value, _then);
 
-  /// Create a copy of Auth0SignupRequestBody
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? clientId = null,
-    Object? email = null,
-    Object? password = null,
-    Object? connection = null,
-    Object? username = freezed,
-    Object? givenName = freezed,
-    Object? familyName = freezed,
-    Object? name = freezed,
-    Object? nickname = freezed,
-    Object? pictureUrl = freezed,
-    Object? userMetadata = freezed,
-  }) {
-    return _then(
-      _$Auth0SignupRequestBodyImpl(
-        clientId: null == clientId
-            ? _value.clientId
-            : clientId // ignore: cast_nullable_to_non_nullable
-                  as String,
-        email: null == email
-            ? _value.email
-            : email // ignore: cast_nullable_to_non_nullable
-                  as String,
-        password: null == password
-            ? _value.password
-            : password // ignore: cast_nullable_to_non_nullable
-                  as String,
-        connection: null == connection
-            ? _value.connection
-            : connection // ignore: cast_nullable_to_non_nullable
-                  as String,
-        username: freezed == username
-            ? _value.username
-            : username // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        givenName: freezed == givenName
-            ? _value.givenName
-            : givenName // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        familyName: freezed == familyName
-            ? _value.familyName
-            : familyName // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        name: freezed == name
-            ? _value.name
-            : name // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        nickname: freezed == nickname
-            ? _value.nickname
-            : nickname // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        pictureUrl: freezed == pictureUrl
-            ? _value.pictureUrl
-            : pictureUrl // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        userMetadata: freezed == userMetadata
-            ? _value._userMetadata
-            : userMetadata // ignore: cast_nullable_to_non_nullable
-                  as Map<String, String>?,
-      ),
-    );
-  }
+/// Adds pattern-matching-related methods to [Auth0SignupRequestBody].
+extension Auth0SignupRequestBodyPatterns on Auth0SignupRequestBody {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _Auth0SignupRequestBody value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _Auth0SignupRequestBody() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _Auth0SignupRequestBody value)  $default,){
+final _that = this;
+switch (_that) {
+case _Auth0SignupRequestBody():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _Auth0SignupRequestBody value)?  $default,){
+final _that = this;
+switch (_that) {
+case _Auth0SignupRequestBody() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String clientId,  String email,  String password,  String connection,  String? username,  String? givenName,  String? familyName,  String? name,  String? nickname,  String? pictureUrl,  Map<String, String>? userMetadata)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _Auth0SignupRequestBody() when $default != null:
+return $default(_that.clientId,_that.email,_that.password,_that.connection,_that.username,_that.givenName,_that.familyName,_that.name,_that.nickname,_that.pictureUrl,_that.userMetadata);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String clientId,  String email,  String password,  String connection,  String? username,  String? givenName,  String? familyName,  String? name,  String? nickname,  String? pictureUrl,  Map<String, String>? userMetadata)  $default,) {final _that = this;
+switch (_that) {
+case _Auth0SignupRequestBody():
+return $default(_that.clientId,_that.email,_that.password,_that.connection,_that.username,_that.givenName,_that.familyName,_that.name,_that.nickname,_that.pictureUrl,_that.userMetadata);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String clientId,  String email,  String password,  String connection,  String? username,  String? givenName,  String? familyName,  String? name,  String? nickname,  String? pictureUrl,  Map<String, String>? userMetadata)?  $default,) {final _that = this;
+switch (_that) {
+case _Auth0SignupRequestBody() when $default != null:
+return $default(_that.clientId,_that.email,_that.password,_that.connection,_that.username,_that.givenName,_that.familyName,_that.name,_that.nickname,_that.pictureUrl,_that.userMetadata);case _:
+  return null;
+
+}
+}
+
 }
 
 /// @nodoc
 
 @JsonSerializable(includeIfNull: false, fieldRename: FieldRename.snake)
-class _$Auth0SignupRequestBodyImpl
-    with DiagnosticableTreeMixin
-    implements _Auth0SignupRequestBody {
-  _$Auth0SignupRequestBodyImpl({
-    required this.clientId,
-    required this.email,
-    required this.password,
-    required this.connection,
-    this.username,
-    this.givenName,
-    this.familyName,
-    this.name,
-    this.nickname,
-    this.pictureUrl,
-    final Map<String, String>? userMetadata,
-  }) : _userMetadata = userMetadata;
+class _Auth0SignupRequestBody with DiagnosticableTreeMixin implements Auth0SignupRequestBody {
+   _Auth0SignupRequestBody({required this.clientId, required this.email, required this.password, required this.connection, this.username, this.givenName, this.familyName, this.name, this.nickname, this.pictureUrl,  Map<String, String>? userMetadata}): _userMetadata = userMetadata;
+  factory _Auth0SignupRequestBody.fromJson(Map<String, dynamic> json) => _$Auth0SignupRequestBodyFromJson(json);
 
-  factory _$Auth0SignupRequestBodyImpl.fromJson(Map<String, dynamic> json) =>
-      _$$Auth0SignupRequestBodyImplFromJson(json);
+@override final  String clientId;
+@override final  String email;
+@override final  String password;
+@override final  String connection;
+@override final  String? username;
+@override final  String? givenName;
+@override final  String? familyName;
+@override final  String? name;
+@override final  String? nickname;
+@override final  String? pictureUrl;
+ final  Map<String, String>? _userMetadata;
+@override Map<String, String>? get userMetadata {
+  final value = _userMetadata;
+  if (value == null) return null;
+  if (_userMetadata is EqualUnmodifiableMapView) return _userMetadata;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableMapView(value);
+}
 
-  @override
-  final String clientId;
-  @override
-  final String email;
-  @override
-  final String password;
-  @override
-  final String connection;
-  @override
-  final String? username;
-  @override
-  final String? givenName;
-  @override
-  final String? familyName;
-  @override
-  final String? name;
-  @override
-  final String? nickname;
-  @override
-  final String? pictureUrl;
-  final Map<String, String>? _userMetadata;
-  @override
-  Map<String, String>? get userMetadata {
-    final value = _userMetadata;
-    if (value == null) return null;
-    if (_userMetadata is EqualUnmodifiableMapView) return _userMetadata;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableMapView(value);
-  }
 
-  @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Auth0SignupRequestBody(clientId: $clientId, email: $email, password: $password, connection: $connection, username: $username, givenName: $givenName, familyName: $familyName, name: $name, nickname: $nickname, pictureUrl: $pictureUrl, userMetadata: $userMetadata)';
-  }
+/// Create a copy of Auth0SignupRequestBody
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$Auth0SignupRequestBodyCopyWith<_Auth0SignupRequestBody> get copyWith => __$Auth0SignupRequestBodyCopyWithImpl<_Auth0SignupRequestBody>(this, _$identity);
 
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
+@override
+Map<String, dynamic> toJson() {
+  return _$Auth0SignupRequestBodyToJson(this, );
+}
+@override
+void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     properties
-      ..add(DiagnosticsProperty('type', 'Auth0SignupRequestBody'))
-      ..add(DiagnosticsProperty('clientId', clientId))
-      ..add(DiagnosticsProperty('email', email))
-      ..add(DiagnosticsProperty('password', password))
-      ..add(DiagnosticsProperty('connection', connection))
-      ..add(DiagnosticsProperty('username', username))
-      ..add(DiagnosticsProperty('givenName', givenName))
-      ..add(DiagnosticsProperty('familyName', familyName))
-      ..add(DiagnosticsProperty('name', name))
-      ..add(DiagnosticsProperty('nickname', nickname))
-      ..add(DiagnosticsProperty('pictureUrl', pictureUrl))
-      ..add(DiagnosticsProperty('userMetadata', userMetadata));
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$Auth0SignupRequestBodyImpl &&
-            (identical(other.clientId, clientId) ||
-                other.clientId == clientId) &&
-            (identical(other.email, email) || other.email == email) &&
-            (identical(other.password, password) ||
-                other.password == password) &&
-            (identical(other.connection, connection) ||
-                other.connection == connection) &&
-            (identical(other.username, username) ||
-                other.username == username) &&
-            (identical(other.givenName, givenName) ||
-                other.givenName == givenName) &&
-            (identical(other.familyName, familyName) ||
-                other.familyName == familyName) &&
-            (identical(other.name, name) || other.name == name) &&
-            (identical(other.nickname, nickname) ||
-                other.nickname == nickname) &&
-            (identical(other.pictureUrl, pictureUrl) ||
-                other.pictureUrl == pictureUrl) &&
-            const DeepCollectionEquality().equals(
-              other._userMetadata,
-              _userMetadata,
-            ));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(
-    runtimeType,
-    clientId,
-    email,
-    password,
-    connection,
-    username,
-    givenName,
-    familyName,
-    name,
-    nickname,
-    pictureUrl,
-    const DeepCollectionEquality().hash(_userMetadata),
-  );
-
-  /// Create a copy of Auth0SignupRequestBody
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$Auth0SignupRequestBodyImplCopyWith<_$Auth0SignupRequestBodyImpl>
-  get copyWith =>
-      __$$Auth0SignupRequestBodyImplCopyWithImpl<_$Auth0SignupRequestBodyImpl>(
-        this,
-        _$identity,
-      );
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$Auth0SignupRequestBodyImplToJson(this);
-  }
+    ..add(DiagnosticsProperty('type', 'Auth0SignupRequestBody'))
+    ..add(DiagnosticsProperty('clientId', clientId))..add(DiagnosticsProperty('email', email))..add(DiagnosticsProperty('password', password))..add(DiagnosticsProperty('connection', connection))..add(DiagnosticsProperty('username', username))..add(DiagnosticsProperty('givenName', givenName))..add(DiagnosticsProperty('familyName', familyName))..add(DiagnosticsProperty('name', name))..add(DiagnosticsProperty('nickname', nickname))..add(DiagnosticsProperty('pictureUrl', pictureUrl))..add(DiagnosticsProperty('userMetadata', userMetadata));
 }
 
-abstract class _Auth0SignupRequestBody implements Auth0SignupRequestBody {
-  factory _Auth0SignupRequestBody({
-    required final String clientId,
-    required final String email,
-    required final String password,
-    required final String connection,
-    final String? username,
-    final String? givenName,
-    final String? familyName,
-    final String? name,
-    final String? nickname,
-    final String? pictureUrl,
-    final Map<String, String>? userMetadata,
-  }) = _$Auth0SignupRequestBodyImpl;
-
-  factory _Auth0SignupRequestBody.fromJson(Map<String, dynamic> json) =
-      _$Auth0SignupRequestBodyImpl.fromJson;
-
-  @override
-  String get clientId;
-  @override
-  String get email;
-  @override
-  String get password;
-  @override
-  String get connection;
-  @override
-  String? get username;
-  @override
-  String? get givenName;
-  @override
-  String? get familyName;
-  @override
-  String? get name;
-  @override
-  String? get nickname;
-  @override
-  String? get pictureUrl;
-  @override
-  Map<String, String>? get userMetadata;
-
-  /// Create a copy of Auth0SignupRequestBody
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$Auth0SignupRequestBodyImplCopyWith<_$Auth0SignupRequestBodyImpl>
-  get copyWith => throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _Auth0SignupRequestBody&&(identical(other.clientId, clientId) || other.clientId == clientId)&&(identical(other.email, email) || other.email == email)&&(identical(other.password, password) || other.password == password)&&(identical(other.connection, connection) || other.connection == connection)&&(identical(other.username, username) || other.username == username)&&(identical(other.givenName, givenName) || other.givenName == givenName)&&(identical(other.familyName, familyName) || other.familyName == familyName)&&(identical(other.name, name) || other.name == name)&&(identical(other.nickname, nickname) || other.nickname == nickname)&&(identical(other.pictureUrl, pictureUrl) || other.pictureUrl == pictureUrl)&&const DeepCollectionEquality().equals(other.userMetadata, _userMetadata));
 }
 
-Auth0SignupResponse _$Auth0SignupResponseFromJson(Map<String, dynamic> json) {
-  return _Auth0SignupResponse.fromJson(json);
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode {
+    return Object.hash(runtimeType,clientId,email,password,connection,username,givenName,familyName,name,nickname,pictureUrl,const DeepCollectionEquality().hash(_userMetadata));
+}
+
+@override
+String toString({ DiagnosticLevel minLevel = DiagnosticLevel.info }) {
+    return 'Auth0SignupRequestBody(clientId: $clientId, email: $email, password: $password, connection: $connection, username: $username, givenName: $givenName, familyName: $familyName, name: $name, nickname: $nickname, pictureUrl: $pictureUrl, userMetadata: $userMetadata)';
+}
+
+
 }
 
 /// @nodoc
-mixin _$Auth0SignupResponse {
-  @JsonKey(name: 'user_id')
-  String get user_id => throw _privateConstructorUsedError;
-  @JsonKey(name: 'email_verified')
-  bool get emailVerified => throw _privateConstructorUsedError;
-  String get email => throw _privateConstructorUsedError;
+abstract mixin class _$Auth0SignupRequestBodyCopyWith<$Res> implements $Auth0SignupRequestBodyCopyWith<$Res> {
+  factory _$Auth0SignupRequestBodyCopyWith(_Auth0SignupRequestBody value, $Res Function(_Auth0SignupRequestBody) _then) = __$Auth0SignupRequestBodyCopyWithImpl;
+@override @useResult
+$Res call({
+ String clientId, String email, String password, String connection, String? username, String? givenName, String? familyName, String? name, String? nickname, String? pictureUrl, Map<String, String>? userMetadata
+});
+
+
+
+
+}
+/// @nodoc
+class __$Auth0SignupRequestBodyCopyWithImpl<$Res>
+    implements _$Auth0SignupRequestBodyCopyWith<$Res> {
+  __$Auth0SignupRequestBodyCopyWithImpl(this._self, this._then);
+
+  final _Auth0SignupRequestBody _self;
+  final $Res Function(_Auth0SignupRequestBody) _then;
+
+/// Create a copy of Auth0SignupRequestBody
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? clientId = null,Object? email = null,Object? password = null,Object? connection = null,Object? username = freezed,Object? givenName = freezed,Object? familyName = freezed,Object? name = freezed,Object? nickname = freezed,Object? pictureUrl = freezed,Object? userMetadata = freezed,}) {
+  return _then(_Auth0SignupRequestBody(
+clientId: null == clientId ? _self.clientId : clientId // ignore: cast_nullable_to_non_nullable
+as String,email: null == email ? _self.email : email // ignore: cast_nullable_to_non_nullable
+as String,password: null == password ? _self.password : password // ignore: cast_nullable_to_non_nullable
+as String,connection: null == connection ? _self.connection : connection // ignore: cast_nullable_to_non_nullable
+as String,username: freezed == username ? _self.username : username // ignore: cast_nullable_to_non_nullable
+as String?,givenName: freezed == givenName ? _self.givenName : givenName // ignore: cast_nullable_to_non_nullable
+as String?,familyName: freezed == familyName ? _self.familyName : familyName // ignore: cast_nullable_to_non_nullable
+as String?,name: freezed == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
+as String?,nickname: freezed == nickname ? _self.nickname : nickname // ignore: cast_nullable_to_non_nullable
+as String?,pictureUrl: freezed == pictureUrl ? _self.pictureUrl : pictureUrl // ignore: cast_nullable_to_non_nullable
+as String?,userMetadata: freezed == userMetadata ? _self._userMetadata : userMetadata // ignore: cast_nullable_to_non_nullable
+as Map<String, String>?,
+  ));
+}
+
+
+}
+
+
+/// @nodoc
+mixin _$Auth0SignupResponse implements DiagnosticableTreeMixin {
+
+@JsonKey(name: 'user_id') String get user_id;@JsonKey(name: 'email_verified') bool get emailVerified; String get email;
+/// Create a copy of Auth0SignupResponse
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$Auth0SignupResponseCopyWith<Auth0SignupResponse> get copyWith => _$Auth0SignupResponseCopyWithImpl<Auth0SignupResponse>(this as Auth0SignupResponse, _$identity);
 
   /// Serializes this Auth0SignupResponse to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of Auth0SignupResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $Auth0SignupResponseCopyWith<Auth0SignupResponse> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+  final _this = this as Auth0SignupResponse;
+  properties
+    ..add(DiagnosticsProperty('type', 'Auth0SignupResponse'))
+    ..add(DiagnosticsProperty('user_id', _this.user_id))..add(DiagnosticsProperty('emailVerified', _this.emailVerified))..add(DiagnosticsProperty('email', _this.email));
+}
+
+@override
+bool operator ==(Object other) {
+  final _this = this as Auth0SignupResponse;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is Auth0SignupResponse&&(identical(other.user_id, _this.user_id) || other.user_id == _this.user_id)&&(identical(other.emailVerified, _this.emailVerified) || other.emailVerified == _this.emailVerified)&&(identical(other.email, _this.email) || other.email == _this.email));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode {
+  final _this = this as Auth0SignupResponse;
+  return Object.hash(runtimeType,_this.user_id,_this.emailVerified,_this.email);
+}
+
+@override
+String toString({ DiagnosticLevel minLevel = DiagnosticLevel.info }) {
+  final _this = this as Auth0SignupResponse;
+  return 'Auth0SignupResponse(user_id: ${_this.user_id}, emailVerified: ${_this.emailVerified}, email: ${_this.email})';
+}
+
+
 }
 
 /// @nodoc
-abstract class $Auth0SignupResponseCopyWith<$Res> {
-  factory $Auth0SignupResponseCopyWith(
-    Auth0SignupResponse value,
-    $Res Function(Auth0SignupResponse) then,
-  ) = _$Auth0SignupResponseCopyWithImpl<$Res, Auth0SignupResponse>;
-  @useResult
-  $Res call({
-    @JsonKey(name: 'user_id') String user_id,
-    @JsonKey(name: 'email_verified') bool emailVerified,
-    String email,
-  });
-}
+abstract mixin class $Auth0SignupResponseCopyWith<$Res>  {
+  factory $Auth0SignupResponseCopyWith(Auth0SignupResponse value, $Res Function(Auth0SignupResponse) _then) = _$Auth0SignupResponseCopyWithImpl;
+@useResult
+$Res call({
+@JsonKey(name: 'user_id') String user_id,@JsonKey(name: 'email_verified') bool emailVerified, String email
+});
 
+
+
+
+}
 /// @nodoc
-class _$Auth0SignupResponseCopyWithImpl<$Res, $Val extends Auth0SignupResponse>
+class _$Auth0SignupResponseCopyWithImpl<$Res>
     implements $Auth0SignupResponseCopyWith<$Res> {
-  _$Auth0SignupResponseCopyWithImpl(this._value, this._then);
+  _$Auth0SignupResponseCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final Auth0SignupResponse _self;
+  final $Res Function(Auth0SignupResponse) _then;
 
-  /// Create a copy of Auth0SignupResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? user_id = null,
-    Object? emailVerified = null,
-    Object? email = null,
-  }) {
-    return _then(
-      _value.copyWith(
-            user_id: null == user_id
-                ? _value.user_id
-                : user_id // ignore: cast_nullable_to_non_nullable
-                      as String,
-            emailVerified: null == emailVerified
-                ? _value.emailVerified
-                : emailVerified // ignore: cast_nullable_to_non_nullable
-                      as bool,
-            email: null == email
-                ? _value.email
-                : email // ignore: cast_nullable_to_non_nullable
-                      as String,
-          )
-          as $Val,
-    );
-  }
+/// Create a copy of Auth0SignupResponse
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? user_id = null,Object? emailVerified = null,Object? email = null,}) {
+  return _then(Auth0SignupResponse(
+user_id: null == user_id ? _self.user_id : user_id // ignore: cast_nullable_to_non_nullable
+as String,emailVerified: null == emailVerified ? _self.emailVerified : emailVerified // ignore: cast_nullable_to_non_nullable
+as bool,email: null == email ? _self.email : email // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
 }
 
-/// @nodoc
-abstract class _$$Auth0SignupResponseImplCopyWith<$Res>
-    implements $Auth0SignupResponseCopyWith<$Res> {
-  factory _$$Auth0SignupResponseImplCopyWith(
-    _$Auth0SignupResponseImpl value,
-    $Res Function(_$Auth0SignupResponseImpl) then,
-  ) = __$$Auth0SignupResponseImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({
-    @JsonKey(name: 'user_id') String user_id,
-    @JsonKey(name: 'email_verified') bool emailVerified,
-    String email,
-  });
 }
 
-/// @nodoc
-class __$$Auth0SignupResponseImplCopyWithImpl<$Res>
-    extends _$Auth0SignupResponseCopyWithImpl<$Res, _$Auth0SignupResponseImpl>
-    implements _$$Auth0SignupResponseImplCopyWith<$Res> {
-  __$$Auth0SignupResponseImplCopyWithImpl(
-    _$Auth0SignupResponseImpl _value,
-    $Res Function(_$Auth0SignupResponseImpl) _then,
-  ) : super(_value, _then);
 
-  /// Create a copy of Auth0SignupResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? user_id = null,
-    Object? emailVerified = null,
-    Object? email = null,
-  }) {
-    return _then(
-      _$Auth0SignupResponseImpl(
-        user_id: null == user_id
-            ? _value.user_id
-            : user_id // ignore: cast_nullable_to_non_nullable
-                  as String,
-        emailVerified: null == emailVerified
-            ? _value.emailVerified
-            : emailVerified // ignore: cast_nullable_to_non_nullable
-                  as bool,
-        email: null == email
-            ? _value.email
-            : email // ignore: cast_nullable_to_non_nullable
-                  as String,
-      ),
-    );
-  }
+/// Adds pattern-matching-related methods to [Auth0SignupResponse].
+extension Auth0SignupResponsePatterns on Auth0SignupResponse {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _Auth0SignupResponse value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _Auth0SignupResponse() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _Auth0SignupResponse value)  $default,){
+final _that = this;
+switch (_that) {
+case _Auth0SignupResponse():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _Auth0SignupResponse value)?  $default,){
+final _that = this;
+switch (_that) {
+case _Auth0SignupResponse() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function(@JsonKey(name: 'user_id')  String user_id, @JsonKey(name: 'email_verified')  bool emailVerified,  String email)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _Auth0SignupResponse() when $default != null:
+return $default(_that.user_id,_that.emailVerified,_that.email);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function(@JsonKey(name: 'user_id')  String user_id, @JsonKey(name: 'email_verified')  bool emailVerified,  String email)  $default,) {final _that = this;
+switch (_that) {
+case _Auth0SignupResponse():
+return $default(_that.user_id,_that.emailVerified,_that.email);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function(@JsonKey(name: 'user_id')  String user_id, @JsonKey(name: 'email_verified')  bool emailVerified,  String email)?  $default,) {final _that = this;
+switch (_that) {
+case _Auth0SignupResponse() when $default != null:
+return $default(_that.user_id,_that.emailVerified,_that.email);case _:
+  return null;
+
+}
+}
+
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$Auth0SignupResponseImpl
-    with DiagnosticableTreeMixin
-    implements _Auth0SignupResponse {
-  const _$Auth0SignupResponseImpl({
-    @JsonKey(name: 'user_id') required this.user_id,
-    @JsonKey(name: 'email_verified') required this.emailVerified,
-    required this.email,
-  });
 
-  factory _$Auth0SignupResponseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$Auth0SignupResponseImplFromJson(json);
+class _Auth0SignupResponse with DiagnosticableTreeMixin implements Auth0SignupResponse {
+  const _Auth0SignupResponse({@JsonKey(name: 'user_id') required this.user_id, @JsonKey(name: 'email_verified') required this.emailVerified, required this.email});
+  factory _Auth0SignupResponse.fromJson(Map<String, dynamic> json) => _$Auth0SignupResponseFromJson(json);
 
-  @override
-  @JsonKey(name: 'user_id')
-  final String user_id;
-  @override
-  @JsonKey(name: 'email_verified')
-  final bool emailVerified;
-  @override
-  final String email;
+@override@JsonKey(name: 'user_id') final  String user_id;
+@override@JsonKey(name: 'email_verified') final  bool emailVerified;
+@override final  String email;
 
-  @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Auth0SignupResponse(user_id: $user_id, emailVerified: $emailVerified, email: $email)';
-  }
+/// Create a copy of Auth0SignupResponse
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$Auth0SignupResponseCopyWith<_Auth0SignupResponse> get copyWith => __$Auth0SignupResponseCopyWithImpl<_Auth0SignupResponse>(this, _$identity);
 
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
+@override
+Map<String, dynamic> toJson() {
+  return _$Auth0SignupResponseToJson(this, );
+}
+@override
+void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     properties
-      ..add(DiagnosticsProperty('type', 'Auth0SignupResponse'))
-      ..add(DiagnosticsProperty('user_id', user_id))
-      ..add(DiagnosticsProperty('emailVerified', emailVerified))
-      ..add(DiagnosticsProperty('email', email));
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$Auth0SignupResponseImpl &&
-            (identical(other.user_id, user_id) || other.user_id == user_id) &&
-            (identical(other.emailVerified, emailVerified) ||
-                other.emailVerified == emailVerified) &&
-            (identical(other.email, email) || other.email == email));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, user_id, emailVerified, email);
-
-  /// Create a copy of Auth0SignupResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$Auth0SignupResponseImplCopyWith<_$Auth0SignupResponseImpl> get copyWith =>
-      __$$Auth0SignupResponseImplCopyWithImpl<_$Auth0SignupResponseImpl>(
-        this,
-        _$identity,
-      );
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$Auth0SignupResponseImplToJson(this);
-  }
+    ..add(DiagnosticsProperty('type', 'Auth0SignupResponse'))
+    ..add(DiagnosticsProperty('user_id', user_id))..add(DiagnosticsProperty('emailVerified', emailVerified))..add(DiagnosticsProperty('email', email));
 }
 
-abstract class _Auth0SignupResponse implements Auth0SignupResponse {
-  const factory _Auth0SignupResponse({
-    @JsonKey(name: 'user_id') required final String user_id,
-    @JsonKey(name: 'email_verified') required final bool emailVerified,
-    required final String email,
-  }) = _$Auth0SignupResponseImpl;
-
-  factory _Auth0SignupResponse.fromJson(Map<String, dynamic> json) =
-      _$Auth0SignupResponseImpl.fromJson;
-
-  @override
-  @JsonKey(name: 'user_id')
-  String get user_id;
-  @override
-  @JsonKey(name: 'email_verified')
-  bool get emailVerified;
-  @override
-  String get email;
-
-  /// Create a copy of Auth0SignupResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$Auth0SignupResponseImplCopyWith<_$Auth0SignupResponseImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _Auth0SignupResponse&&(identical(other.user_id, user_id) || other.user_id == user_id)&&(identical(other.emailVerified, emailVerified) || other.emailVerified == emailVerified)&&(identical(other.email, email) || other.email == email));
 }
 
-Auth0ApiException _$Auth0ApiExceptionFromJson(Map<String, dynamic> json) {
-  return _Auth0ApiException.fromJson(json);
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode {
+    return Object.hash(runtimeType,user_id,emailVerified,email);
+}
+
+@override
+String toString({ DiagnosticLevel minLevel = DiagnosticLevel.info }) {
+    return 'Auth0SignupResponse(user_id: $user_id, emailVerified: $emailVerified, email: $email)';
+}
+
+
 }
 
 /// @nodoc
-mixin _$Auth0ApiException {
-  String? get name => throw _privateConstructorUsedError;
-  String? get code => throw _privateConstructorUsedError;
-  String? get description => throw _privateConstructorUsedError;
-  int? get statusCode => throw _privateConstructorUsedError;
+abstract mixin class _$Auth0SignupResponseCopyWith<$Res> implements $Auth0SignupResponseCopyWith<$Res> {
+  factory _$Auth0SignupResponseCopyWith(_Auth0SignupResponse value, $Res Function(_Auth0SignupResponse) _then) = __$Auth0SignupResponseCopyWithImpl;
+@override @useResult
+$Res call({
+@JsonKey(name: 'user_id') String user_id,@JsonKey(name: 'email_verified') bool emailVerified, String email
+});
+
+
+
+
+}
+/// @nodoc
+class __$Auth0SignupResponseCopyWithImpl<$Res>
+    implements _$Auth0SignupResponseCopyWith<$Res> {
+  __$Auth0SignupResponseCopyWithImpl(this._self, this._then);
+
+  final _Auth0SignupResponse _self;
+  final $Res Function(_Auth0SignupResponse) _then;
+
+/// Create a copy of Auth0SignupResponse
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? user_id = null,Object? emailVerified = null,Object? email = null,}) {
+  return _then(_Auth0SignupResponse(
+user_id: null == user_id ? _self.user_id : user_id // ignore: cast_nullable_to_non_nullable
+as String,emailVerified: null == emailVerified ? _self.emailVerified : emailVerified // ignore: cast_nullable_to_non_nullable
+as bool,email: null == email ? _self.email : email // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
+}
+
+
+}
+
+
+/// @nodoc
+mixin _$Auth0ApiException implements DiagnosticableTreeMixin {
+
+ String? get name; String? get code; String? get description; int? get statusCode;
+/// Create a copy of Auth0ApiException
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$Auth0ApiExceptionCopyWith<Auth0ApiException> get copyWith => _$Auth0ApiExceptionCopyWithImpl<Auth0ApiException>(this as Auth0ApiException, _$identity);
 
   /// Serializes this Auth0ApiException to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of Auth0ApiException
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $Auth0ApiExceptionCopyWith<Auth0ApiException> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+  final _this = this as Auth0ApiException;
+  properties
+    ..add(DiagnosticsProperty('type', 'Auth0ApiException'))
+    ..add(DiagnosticsProperty('name', _this.name))..add(DiagnosticsProperty('code', _this.code))..add(DiagnosticsProperty('description', _this.description))..add(DiagnosticsProperty('statusCode', _this.statusCode));
+}
+
+@override
+bool operator ==(Object other) {
+  final _this = this as Auth0ApiException;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is Auth0ApiException&&(identical(other.name, _this.name) || other.name == _this.name)&&(identical(other.code, _this.code) || other.code == _this.code)&&(identical(other.description, _this.description) || other.description == _this.description)&&(identical(other.statusCode, _this.statusCode) || other.statusCode == _this.statusCode));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode {
+  final _this = this as Auth0ApiException;
+  return Object.hash(runtimeType,_this.name,_this.code,_this.description,_this.statusCode);
+}
+
+@override
+String toString({ DiagnosticLevel minLevel = DiagnosticLevel.info }) {
+  final _this = this as Auth0ApiException;
+  return 'Auth0ApiException(name: ${_this.name}, code: ${_this.code}, description: ${_this.description}, statusCode: ${_this.statusCode})';
+}
+
+
 }
 
 /// @nodoc
-abstract class $Auth0ApiExceptionCopyWith<$Res> {
-  factory $Auth0ApiExceptionCopyWith(
-    Auth0ApiException value,
-    $Res Function(Auth0ApiException) then,
-  ) = _$Auth0ApiExceptionCopyWithImpl<$Res, Auth0ApiException>;
-  @useResult
-  $Res call({String? name, String? code, String? description, int? statusCode});
-}
+abstract mixin class $Auth0ApiExceptionCopyWith<$Res>  {
+  factory $Auth0ApiExceptionCopyWith(Auth0ApiException value, $Res Function(Auth0ApiException) _then) = _$Auth0ApiExceptionCopyWithImpl;
+@useResult
+$Res call({
+ String? name, String? code, String? description, int? statusCode
+});
 
+
+
+
+}
 /// @nodoc
-class _$Auth0ApiExceptionCopyWithImpl<$Res, $Val extends Auth0ApiException>
+class _$Auth0ApiExceptionCopyWithImpl<$Res>
     implements $Auth0ApiExceptionCopyWith<$Res> {
-  _$Auth0ApiExceptionCopyWithImpl(this._value, this._then);
+  _$Auth0ApiExceptionCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final Auth0ApiException _self;
+  final $Res Function(Auth0ApiException) _then;
 
-  /// Create a copy of Auth0ApiException
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? name = freezed,
-    Object? code = freezed,
-    Object? description = freezed,
-    Object? statusCode = freezed,
-  }) {
-    return _then(
-      _value.copyWith(
-            name: freezed == name
-                ? _value.name
-                : name // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            code: freezed == code
-                ? _value.code
-                : code // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            description: freezed == description
-                ? _value.description
-                : description // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            statusCode: freezed == statusCode
-                ? _value.statusCode
-                : statusCode // ignore: cast_nullable_to_non_nullable
-                      as int?,
-          )
-          as $Val,
-    );
-  }
+/// Create a copy of Auth0ApiException
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? name = freezed,Object? code = freezed,Object? description = freezed,Object? statusCode = freezed,}) {
+  return _then(Auth0ApiException(
+name: freezed == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
+as String?,code: freezed == code ? _self.code : code // ignore: cast_nullable_to_non_nullable
+as String?,description: freezed == description ? _self.description : description // ignore: cast_nullable_to_non_nullable
+as String?,statusCode: freezed == statusCode ? _self.statusCode : statusCode // ignore: cast_nullable_to_non_nullable
+as int?,
+  ));
 }
 
-/// @nodoc
-abstract class _$$Auth0ApiExceptionImplCopyWith<$Res>
-    implements $Auth0ApiExceptionCopyWith<$Res> {
-  factory _$$Auth0ApiExceptionImplCopyWith(
-    _$Auth0ApiExceptionImpl value,
-    $Res Function(_$Auth0ApiExceptionImpl) then,
-  ) = __$$Auth0ApiExceptionImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String? name, String? code, String? description, int? statusCode});
 }
 
-/// @nodoc
-class __$$Auth0ApiExceptionImplCopyWithImpl<$Res>
-    extends _$Auth0ApiExceptionCopyWithImpl<$Res, _$Auth0ApiExceptionImpl>
-    implements _$$Auth0ApiExceptionImplCopyWith<$Res> {
-  __$$Auth0ApiExceptionImplCopyWithImpl(
-    _$Auth0ApiExceptionImpl _value,
-    $Res Function(_$Auth0ApiExceptionImpl) _then,
-  ) : super(_value, _then);
 
-  /// Create a copy of Auth0ApiException
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? name = freezed,
-    Object? code = freezed,
-    Object? description = freezed,
-    Object? statusCode = freezed,
-  }) {
-    return _then(
-      _$Auth0ApiExceptionImpl(
-        name: freezed == name
-            ? _value.name
-            : name // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        code: freezed == code
-            ? _value.code
-            : code // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        description: freezed == description
-            ? _value.description
-            : description // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        statusCode: freezed == statusCode
-            ? _value.statusCode
-            : statusCode // ignore: cast_nullable_to_non_nullable
-                  as int?,
-      ),
-    );
-  }
+/// Adds pattern-matching-related methods to [Auth0ApiException].
+extension Auth0ApiExceptionPatterns on Auth0ApiException {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _Auth0ApiException value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _Auth0ApiException() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _Auth0ApiException value)  $default,){
+final _that = this;
+switch (_that) {
+case _Auth0ApiException():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _Auth0ApiException value)?  $default,){
+final _that = this;
+switch (_that) {
+case _Auth0ApiException() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? name,  String? code,  String? description,  int? statusCode)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _Auth0ApiException() when $default != null:
+return $default(_that.name,_that.code,_that.description,_that.statusCode);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? name,  String? code,  String? description,  int? statusCode)  $default,) {final _that = this;
+switch (_that) {
+case _Auth0ApiException():
+return $default(_that.name,_that.code,_that.description,_that.statusCode);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? name,  String? code,  String? description,  int? statusCode)?  $default,) {final _that = this;
+switch (_that) {
+case _Auth0ApiException() when $default != null:
+return $default(_that.name,_that.code,_that.description,_that.statusCode);case _:
+  return null;
+
+}
+}
+
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$Auth0ApiExceptionImpl
-    with DiagnosticableTreeMixin
-    implements _Auth0ApiException {
-  const _$Auth0ApiExceptionImpl({
-    this.name,
-    this.code,
-    this.description,
-    this.statusCode,
-  });
 
-  factory _$Auth0ApiExceptionImpl.fromJson(Map<String, dynamic> json) =>
-      _$$Auth0ApiExceptionImplFromJson(json);
+class _Auth0ApiException with DiagnosticableTreeMixin implements Auth0ApiException {
+  const _Auth0ApiException({this.name, this.code, this.description, this.statusCode});
+  factory _Auth0ApiException.fromJson(Map<String, dynamic> json) => _$Auth0ApiExceptionFromJson(json);
 
-  @override
-  final String? name;
-  @override
-  final String? code;
-  @override
-  final String? description;
-  @override
-  final int? statusCode;
+@override final  String? name;
+@override final  String? code;
+@override final  String? description;
+@override final  int? statusCode;
 
-  @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Auth0ApiException(name: $name, code: $code, description: $description, statusCode: $statusCode)';
-  }
+/// Create a copy of Auth0ApiException
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$Auth0ApiExceptionCopyWith<_Auth0ApiException> get copyWith => __$Auth0ApiExceptionCopyWithImpl<_Auth0ApiException>(this, _$identity);
 
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
+@override
+Map<String, dynamic> toJson() {
+  return _$Auth0ApiExceptionToJson(this, );
+}
+@override
+void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     properties
-      ..add(DiagnosticsProperty('type', 'Auth0ApiException'))
-      ..add(DiagnosticsProperty('name', name))
-      ..add(DiagnosticsProperty('code', code))
-      ..add(DiagnosticsProperty('description', description))
-      ..add(DiagnosticsProperty('statusCode', statusCode));
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$Auth0ApiExceptionImpl &&
-            (identical(other.name, name) || other.name == name) &&
-            (identical(other.code, code) || other.code == code) &&
-            (identical(other.description, description) ||
-                other.description == description) &&
-            (identical(other.statusCode, statusCode) ||
-                other.statusCode == statusCode));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode =>
-      Object.hash(runtimeType, name, code, description, statusCode);
-
-  /// Create a copy of Auth0ApiException
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$Auth0ApiExceptionImplCopyWith<_$Auth0ApiExceptionImpl> get copyWith =>
-      __$$Auth0ApiExceptionImplCopyWithImpl<_$Auth0ApiExceptionImpl>(
-        this,
-        _$identity,
-      );
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$Auth0ApiExceptionImplToJson(this);
-  }
+    ..add(DiagnosticsProperty('type', 'Auth0ApiException'))
+    ..add(DiagnosticsProperty('name', name))..add(DiagnosticsProperty('code', code))..add(DiagnosticsProperty('description', description))..add(DiagnosticsProperty('statusCode', statusCode));
 }
 
-abstract class _Auth0ApiException implements Auth0ApiException {
-  const factory _Auth0ApiException({
-    final String? name,
-    final String? code,
-    final String? description,
-    final int? statusCode,
-  }) = _$Auth0ApiExceptionImpl;
-
-  factory _Auth0ApiException.fromJson(Map<String, dynamic> json) =
-      _$Auth0ApiExceptionImpl.fromJson;
-
-  @override
-  String? get name;
-  @override
-  String? get code;
-  @override
-  String? get description;
-  @override
-  int? get statusCode;
-
-  /// Create a copy of Auth0ApiException
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$Auth0ApiExceptionImplCopyWith<_$Auth0ApiExceptionImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _Auth0ApiException&&(identical(other.name, name) || other.name == name)&&(identical(other.code, code) || other.code == code)&&(identical(other.description, description) || other.description == description)&&(identical(other.statusCode, statusCode) || other.statusCode == statusCode));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode {
+    return Object.hash(runtimeType,name,code,description,statusCode);
+}
+
+@override
+String toString({ DiagnosticLevel minLevel = DiagnosticLevel.info }) {
+    return 'Auth0ApiException(name: $name, code: $code, description: $description, statusCode: $statusCode)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$Auth0ApiExceptionCopyWith<$Res> implements $Auth0ApiExceptionCopyWith<$Res> {
+  factory _$Auth0ApiExceptionCopyWith(_Auth0ApiException value, $Res Function(_Auth0ApiException) _then) = __$Auth0ApiExceptionCopyWithImpl;
+@override @useResult
+$Res call({
+ String? name, String? code, String? description, int? statusCode
+});
+
+
+
+
+}
+/// @nodoc
+class __$Auth0ApiExceptionCopyWithImpl<$Res>
+    implements _$Auth0ApiExceptionCopyWith<$Res> {
+  __$Auth0ApiExceptionCopyWithImpl(this._self, this._then);
+
+  final _Auth0ApiException _self;
+  final $Res Function(_Auth0ApiException) _then;
+
+/// Create a copy of Auth0ApiException
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? name = freezed,Object? code = freezed,Object? description = freezed,Object? statusCode = freezed,}) {
+  return _then(_Auth0ApiException(
+name: freezed == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
+as String?,code: freezed == code ? _self.code : code // ignore: cast_nullable_to_non_nullable
+as String?,description: freezed == description ? _self.description : description // ignore: cast_nullable_to_non_nullable
+as String?,statusCode: freezed == statusCode ? _self.statusCode : statusCode // ignore: cast_nullable_to_non_nullable
+as int?,
+  ));
+}
+
+
+}
+
+// dart format on

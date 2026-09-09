@@ -1,4 +1,5 @@
 import 'dart:async';
+
 import 'package:flutter/widgets.dart' as widgets;
 import 'package:gql/ast.dart';
 import 'package:graphql/client.dart' as graphql;
@@ -44,11 +45,7 @@ class Fragment$UrlGame {
     final l$id = id;
     final l$url = url;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$id,
-      l$url,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$id, l$url, l$$__typename]);
   }
 
   @override
@@ -80,10 +77,7 @@ class Fragment$UrlGame {
 
 extension UtilityExtension$Fragment$UrlGame on Fragment$UrlGame {
   CopyWith$Fragment$UrlGame<Fragment$UrlGame> get copyWith =>
-      CopyWith$Fragment$UrlGame(
-        this,
-        (i) => i,
-      );
+      CopyWith$Fragment$UrlGame(this, (i) => i);
 }
 
 abstract class CopyWith$Fragment$UrlGame<TRes> {
@@ -95,19 +89,12 @@ abstract class CopyWith$Fragment$UrlGame<TRes> {
   factory CopyWith$Fragment$UrlGame.stub(TRes res) =
       _CopyWithStubImpl$Fragment$UrlGame;
 
-  TRes call({
-    String? id,
-    String? url,
-    String? $__typename,
-  });
+  TRes call({String? id, String? url, String? $__typename});
 }
 
 class _CopyWithImpl$Fragment$UrlGame<TRes>
     implements CopyWith$Fragment$UrlGame<TRes> {
-  _CopyWithImpl$Fragment$UrlGame(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Fragment$UrlGame(this._instance, this._then);
 
   final Fragment$UrlGame _instance;
 
@@ -119,14 +106,15 @@ class _CopyWithImpl$Fragment$UrlGame<TRes>
     Object? id = _undefined,
     Object? url = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Fragment$UrlGame(
-        id: id == _undefined || id == null ? _instance.id : (id as String),
-        url: url == _undefined || url == null ? _instance.url : (url as String),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  }) => _then(
+    Fragment$UrlGame(
+      id: id == _undefined || id == null ? _instance.id : (id as String),
+      url: url == _undefined || url == null ? _instance.url : (url as String),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 }
 
 class _CopyWithStubImpl$Fragment$UrlGame<TRes>
@@ -135,67 +123,61 @@ class _CopyWithStubImpl$Fragment$UrlGame<TRes>
 
   TRes _res;
 
-  call({
-    String? id,
-    String? url,
-    String? $__typename,
-  }) =>
-      _res;
+  call({String? id, String? url, String? $__typename}) => _res;
 }
 
 const fragmentDefinitionUrlGame = FragmentDefinitionNode(
   name: NameNode(value: 'UrlGame'),
   typeCondition: TypeConditionNode(
-      on: NamedTypeNode(
-    name: NameNode(value: 'Game'),
-    isNonNull: false,
-  )),
+    on: NamedTypeNode(name: NameNode(value: 'Game'), isNonNull: false),
+  ),
   directives: [],
-  selectionSet: SelectionSetNode(selections: [
-    FieldNode(
-      name: NameNode(value: 'id'),
-      alias: null,
-      arguments: [],
-      directives: [],
-      selectionSet: null,
-    ),
-    FieldNode(
-      name: NameNode(value: 'url'),
-      alias: null,
-      arguments: [],
-      directives: [],
-      selectionSet: null,
-    ),
-    FieldNode(
-      name: NameNode(value: '__typename'),
-      alias: null,
-      arguments: [],
-      directives: [],
-      selectionSet: null,
-    ),
-  ]),
+  selectionSet: SelectionSetNode(
+    selections: [
+      FieldNode(
+        name: NameNode(value: 'id'),
+        alias: null,
+        arguments: [],
+        directives: [],
+        selectionSet: null,
+      ),
+      FieldNode(
+        name: NameNode(value: 'url'),
+        alias: null,
+        arguments: [],
+        directives: [],
+        selectionSet: null,
+      ),
+      FieldNode(
+        name: NameNode(value: '__typename'),
+        alias: null,
+        arguments: [],
+        directives: [],
+        selectionSet: null,
+      ),
+    ],
+  ),
 );
-const documentNodeFragmentUrlGame = DocumentNode(definitions: [
-  fragmentDefinitionUrlGame,
-]);
+const documentNodeFragmentUrlGame = DocumentNode(
+  definitions: [fragmentDefinitionUrlGame],
+);
 
 extension ClientExtension$Fragment$UrlGame on graphql.GraphQLClient {
   void writeFragment$UrlGame({
     required Fragment$UrlGame data,
     required Map<String, dynamic> idFields,
     bool broadcast = true,
-  }) =>
-      this.writeFragment(
-        graphql.FragmentRequest(
-          idFields: idFields,
-          fragment: const graphql.Fragment(
-            fragmentName: 'UrlGame',
-            document: documentNodeFragmentUrlGame,
-          ),
-        ),
-        data: data.toJson(),
-        broadcast: broadcast,
-      );
+  }) => this.writeFragment(
+    graphql.FragmentRequest(
+      idFields: idFields,
+      fragment: const graphql.Fragment(
+        fragmentName: 'UrlGame',
+        document: documentNodeFragmentUrlGame,
+      ),
+    ),
+    data: data.toJson(),
+    broadcast: broadcast,
+  );
 
   Fragment$UrlGame? readFragment$UrlGame({
     required Map<String, dynamic> idFields,
@@ -217,9 +199,7 @@ extension ClientExtension$Fragment$UrlGame on graphql.GraphQLClient {
 
 class Variables$Query$GetGame {
   factory Variables$Query$GetGame({required String id}) =>
-      Variables$Query$GetGame._({
-        r'id': id,
-      });
+      Variables$Query$GetGame._({r'id': id});
 
   Variables$Query$GetGame._(this._$data);
 
@@ -242,10 +222,7 @@ class Variables$Query$GetGame {
   }
 
   CopyWith$Variables$Query$GetGame<Variables$Query$GetGame> get copyWith =>
-      CopyWith$Variables$Query$GetGame(
-        this,
-        (i) => i,
-      );
+      CopyWith$Variables$Query$GetGame(this, (i) => i);
 
   @override
   bool operator ==(Object other) {
@@ -284,10 +261,7 @@ abstract class CopyWith$Variables$Query$GetGame<TRes> {
 
 class _CopyWithImpl$Variables$Query$GetGame<TRes>
     implements CopyWith$Variables$Query$GetGame<TRes> {
-  _CopyWithImpl$Variables$Query$GetGame(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Variables$Query$GetGame(this._instance, this._then);
 
   final Variables$Query$GetGame _instance;
 
@@ -295,10 +269,12 @@ class _CopyWithImpl$Variables$Query$GetGame<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({Object? id = _undefined}) => _then(Variables$Query$GetGame._({
-        ..._instance._$data,
-        if (id != _undefined && id != null) 'id': (id as String),
-      }));
+  TRes call({Object? id = _undefined}) => _then(
+    Variables$Query$GetGame._({
+      ..._instance._$data,
+      if (id != _undefined && id != null) 'id': (id as String),
+    }),
+  );
 }
 
 class _CopyWithStubImpl$Variables$Query$GetGame<TRes>
@@ -311,10 +287,7 @@ class _CopyWithStubImpl$Variables$Query$GetGame<TRes>
 }
 
 class Query$GetGame {
-  Query$GetGame({
-    required this.game,
-    this.$__typename = 'QueryRoot',
-  });
+  Query$GetGame({required this.game, this.$__typename = 'QueryRoot'});
 
   factory Query$GetGame.fromJson(Map<String, dynamic> json) {
     final l$game = json['game'];
@@ -342,10 +315,7 @@ class Query$GetGame {
   int get hashCode {
     final l$game = game;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$game,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$game, l$$__typename]);
   }
 
   @override
@@ -371,10 +341,8 @@ class Query$GetGame {
 }
 
 extension UtilityExtension$Query$GetGame on Query$GetGame {
-  CopyWith$Query$GetGame<Query$GetGame> get copyWith => CopyWith$Query$GetGame(
-        this,
-        (i) => i,
-      );
+  CopyWith$Query$GetGame<Query$GetGame> get copyWith =>
+      CopyWith$Query$GetGame(this, (i) => i);
 }
 
 abstract class CopyWith$Query$GetGame<TRes> {
@@ -386,19 +354,13 @@ abstract class CopyWith$Query$GetGame<TRes> {
   factory CopyWith$Query$GetGame.stub(TRes res) =
       _CopyWithStubImpl$Query$GetGame;
 
-  TRes call({
-    Query$GetGame$game? game,
-    String? $__typename,
-  });
+  TRes call({Query$GetGame$game? game, String? $__typename});
   CopyWith$Query$GetGame$game<TRes> get game;
 }
 
 class _CopyWithImpl$Query$GetGame<TRes>
     implements CopyWith$Query$GetGame<TRes> {
-  _CopyWithImpl$Query$GetGame(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Query$GetGame(this._instance, this._then);
 
   final Query$GetGame _instance;
 
@@ -406,18 +368,17 @@ class _CopyWithImpl$Query$GetGame<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({
-    Object? game = _undefined,
-    Object? $__typename = _undefined,
-  }) =>
-      _then(Query$GetGame(
-        game: game == _undefined || game == null
-            ? _instance.game
-            : (game as Query$GetGame$game),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  TRes call({Object? game = _undefined, Object? $__typename = _undefined}) =>
+      _then(
+        Query$GetGame(
+          game: game == _undefined || game == null
+              ? _instance.game
+              : (game as Query$GetGame$game),
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String),
+        ),
+      );
 
   CopyWith$Query$GetGame$game<TRes> get game {
     final local$game = _instance.game;
@@ -431,61 +392,67 @@ class _CopyWithStubImpl$Query$GetGame<TRes>
 
   TRes _res;
 
-  call({
-    Query$GetGame$game? game,
-    String? $__typename,
-  }) =>
-      _res;
+  call({Query$GetGame$game? game, String? $__typename}) => _res;
 
   CopyWith$Query$GetGame$game<TRes> get game =>
       CopyWith$Query$GetGame$game.stub(_res);
 }
 
-const documentNodeQueryGetGame = DocumentNode(definitions: [
-  OperationDefinitionNode(
-    type: OperationType.query,
-    name: NameNode(value: 'GetGame'),
-    variableDefinitions: [
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'id')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'UUID'),
-          isNonNull: true,
+const documentNodeQueryGetGame = DocumentNode(
+  definitions: [
+    OperationDefinitionNode(
+      type: OperationType.query,
+      name: NameNode(value: 'GetGame'),
+      variableDefinitions: [
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'id')),
+          type: NamedTypeNode(name: NameNode(value: 'UUID'), isNonNull: true),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      )
-    ],
-    directives: [],
-    selectionSet: SelectionSetNode(selections: [
-      FieldNode(
-        name: NameNode(value: 'game'),
-        alias: null,
-        arguments: [
-          ArgumentNode(
-            name: NameNode(value: 'id'),
-            value: VariableNode(name: NameNode(value: 'id')),
-          )
-        ],
-        directives: [],
-        selectionSet: SelectionSetNode(selections: [
+      ],
+      directives: [],
+      selectionSet: SelectionSetNode(
+        selections: [
           FieldNode(
-            name: NameNode(value: 'id'),
+            name: NameNode(value: 'game'),
             alias: null,
-            arguments: [],
+            arguments: [
+              ArgumentNode(
+                name: NameNode(value: 'id'),
+                value: VariableNode(name: NameNode(value: 'id')),
+              ),
+            ],
             directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'title'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
-          FragmentSpreadNode(
-            name: NameNode(value: 'UrlGame'),
-            directives: [],
+            selectionSet: SelectionSetNode(
+              selections: [
+                FieldNode(
+                  name: NameNode(value: 'id'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'title'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FragmentSpreadNode(
+                  name: NameNode(value: 'UrlGame'),
+                  directives: [],
+                ),
+                FieldNode(
+                  name: NameNode(value: '__typename'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+              ],
+            ),
           ),
           FieldNode(
             name: NameNode(value: '__typename'),
@@ -494,19 +461,12 @@ const documentNodeQueryGetGame = DocumentNode(definitions: [
             directives: [],
             selectionSet: null,
           ),
-        ]),
+        ],
       ),
-      FieldNode(
-        name: NameNode(value: '__typename'),
-        alias: null,
-        arguments: [],
-        directives: [],
-        selectionSet: null,
-      ),
-    ]),
-  ),
-  fragmentDefinitionUrlGame,
-]);
+    ),
+    fragmentDefinitionUrlGame,
+  ],
+);
 Query$GetGame _parserFn$Query$GetGame(Map<String, dynamic> data) =>
     Query$GetGame.fromJson(data);
 typedef OnQueryComplete$Query$GetGame = FutureOr<void> Function(
@@ -527,36 +487,36 @@ class Options$Query$GetGame extends graphql.QueryOptions<Query$GetGame> {
     graphql.Context? context,
     OnQueryComplete$Query$GetGame? onComplete,
     graphql.OnQueryError? onError,
-  })  : onCompleteWithParsed = onComplete,
-        super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          pollInterval: pollInterval,
-          context: context,
-          onComplete: onComplete == null
-              ? null
-              : (data) => onComplete(
-                    data,
-                    data == null ? null : _parserFn$Query$GetGame(data),
-                  ),
-          onError: onError,
-          document: documentNodeQueryGetGame,
-          parserFn: _parserFn$Query$GetGame,
-        );
+  }) : onCompleteWithParsed = onComplete,
+       super(
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         pollInterval: pollInterval,
+         context: context,
+         onComplete: onComplete == null
+             ? null
+             : (data) => onComplete(
+                 data,
+                 data == null ? null : _parserFn$Query$GetGame(data),
+               ),
+         onError: onError,
+         document: documentNodeQueryGetGame,
+         parserFn: _parserFn$Query$GetGame,
+       );
 
   final OnQueryComplete$Query$GetGame? onCompleteWithParsed;
 
   @override
   List<Object?> get properties => [
-        ...super.onComplete == null
-            ? super.properties
-            : super.properties.where((property) => property != onComplete),
-        onCompleteWithParsed,
-      ];
+    ...super.onComplete == null
+        ? super.properties
+        : super.properties.where((property) => property != onComplete),
+    onCompleteWithParsed,
+  ];
 }
 
 class WatchOptions$Query$GetGame
@@ -575,20 +535,20 @@ class WatchOptions$Query$GetGame
     bool carryForwardDataOnException = true,
     bool fetchResults = false,
   }) : super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          document: documentNodeQueryGetGame,
-          pollInterval: pollInterval,
-          eagerlyFetchResults: eagerlyFetchResults,
-          carryForwardDataOnException: carryForwardDataOnException,
-          fetchResults: fetchResults,
-          parserFn: _parserFn$Query$GetGame,
-        );
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         document: documentNodeQueryGetGame,
+         pollInterval: pollInterval,
+         eagerlyFetchResults: eagerlyFetchResults,
+         carryForwardDataOnException: carryForwardDataOnException,
+         fetchResults: fetchResults,
+         parserFn: _parserFn$Query$GetGame,
+       );
 }
 
 class FetchMoreOptions$Query$GetGame extends graphql.FetchMoreOptions {
@@ -596,34 +556,33 @@ class FetchMoreOptions$Query$GetGame extends graphql.FetchMoreOptions {
     required graphql.UpdateQuery updateQuery,
     required Variables$Query$GetGame variables,
   }) : super(
-          updateQuery: updateQuery,
-          variables: variables.toJson(),
-          document: documentNodeQueryGetGame,
-        );
+         updateQuery: updateQuery,
+         variables: variables.toJson(),
+         document: documentNodeQueryGetGame,
+       );
 }
 
 extension ClientExtension$Query$GetGame on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$GetGame>> query$GetGame(
-          Options$Query$GetGame options) async =>
-      await this.query(options);
+    Options$Query$GetGame options,
+  ) async => await this.query(options);
 
   graphql.ObservableQuery<Query$GetGame> watchQuery$GetGame(
-          WatchOptions$Query$GetGame options) =>
-      this.watchQuery(options);
+    WatchOptions$Query$GetGame options,
+  ) => this.watchQuery(options);
 
   void writeQuery$GetGame({
     required Query$GetGame data,
     required Variables$Query$GetGame variables,
     bool broadcast = true,
-  }) =>
-      this.writeQuery(
-        graphql.Request(
-          operation: graphql.Operation(document: documentNodeQueryGetGame),
-          variables: variables.toJson(),
-        ),
-        data: data.toJson(),
-        broadcast: broadcast,
-      );
+  }) => this.writeQuery(
+    graphql.Request(
+      operation: graphql.Operation(document: documentNodeQueryGetGame),
+      variables: variables.toJson(),
+    ),
+    data: data.toJson(),
+    broadcast: broadcast,
+  );
 
   Query$GetGame? readQuery$GetGame({
     required Variables$Query$GetGame variables,
@@ -641,22 +600,18 @@ extension ClientExtension$Query$GetGame on graphql.GraphQLClient {
 }
 
 graphql_flutter.QueryHookResult<Query$GetGame> useQuery$GetGame(
-        Options$Query$GetGame options) =>
-    graphql_flutter.useQuery(options);
+  Options$Query$GetGame options,
+) => graphql_flutter.useQuery(options);
 graphql.ObservableQuery<Query$GetGame> useWatchQuery$GetGame(
-        WatchOptions$Query$GetGame options) =>
-    graphql_flutter.useWatchQuery(options);
+  WatchOptions$Query$GetGame options,
+) => graphql_flutter.useWatchQuery(options);
 
 class Query$GetGame$Widget extends graphql_flutter.Query<Query$GetGame> {
   Query$GetGame$Widget({
     widgets.Key? key,
     required Options$Query$GetGame options,
     required graphql_flutter.QueryBuilder<Query$GetGame> builder,
-  }) : super(
-          key: key,
-          options: options,
-          builder: builder,
-        );
+  }) : super(key: key, options: options, builder: builder);
 }
 
 class Query$GetGame$game implements Fragment$UrlGame {
@@ -707,12 +662,7 @@ class Query$GetGame$game implements Fragment$UrlGame {
     final l$title = title;
     final l$url = url;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$id,
-      l$title,
-      l$url,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$id, l$title, l$url, l$$__typename]);
   }
 
   @override
@@ -749,10 +699,7 @@ class Query$GetGame$game implements Fragment$UrlGame {
 
 extension UtilityExtension$Query$GetGame$game on Query$GetGame$game {
   CopyWith$Query$GetGame$game<Query$GetGame$game> get copyWith =>
-      CopyWith$Query$GetGame$game(
-        this,
-        (i) => i,
-      );
+      CopyWith$Query$GetGame$game(this, (i) => i);
 }
 
 abstract class CopyWith$Query$GetGame$game<TRes> {
@@ -764,20 +711,12 @@ abstract class CopyWith$Query$GetGame$game<TRes> {
   factory CopyWith$Query$GetGame$game.stub(TRes res) =
       _CopyWithStubImpl$Query$GetGame$game;
 
-  TRes call({
-    String? id,
-    String? title,
-    String? url,
-    String? $__typename,
-  });
+  TRes call({String? id, String? title, String? url, String? $__typename});
 }
 
 class _CopyWithImpl$Query$GetGame$game<TRes>
     implements CopyWith$Query$GetGame$game<TRes> {
-  _CopyWithImpl$Query$GetGame$game(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Query$GetGame$game(this._instance, this._then);
 
   final Query$GetGame$game _instance;
 
@@ -790,17 +729,18 @@ class _CopyWithImpl$Query$GetGame$game<TRes>
     Object? title = _undefined,
     Object? url = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Query$GetGame$game(
-        id: id == _undefined || id == null ? _instance.id : (id as String),
-        title: title == _undefined || title == null
-            ? _instance.title
-            : (title as String),
-        url: url == _undefined || url == null ? _instance.url : (url as String),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  }) => _then(
+    Query$GetGame$game(
+      id: id == _undefined || id == null ? _instance.id : (id as String),
+      title: title == _undefined || title == null
+          ? _instance.title
+          : (title as String),
+      url: url == _undefined || url == null ? _instance.url : (url as String),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 }
 
 class _CopyWithStubImpl$Query$GetGame$game<TRes>
@@ -809,11 +749,5 @@ class _CopyWithStubImpl$Query$GetGame$game<TRes>
 
   TRes _res;
 
-  call({
-    String? id,
-    String? title,
-    String? url,
-    String? $__typename,
-  }) =>
-      _res;
+  call({String? id, String? title, String? url, String? $__typename}) => _res;
 }

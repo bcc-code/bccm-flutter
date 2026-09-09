@@ -1,6 +1,6 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: type=lint
+// coverage:ignore-file
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'content_shared.dart';
@@ -9,239 +9,286 @@ part of 'content_shared.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
-
-ContentSharedEvent _$ContentSharedEventFromJson(Map<String, dynamic> json) {
-  return _ContentSharedEvent.fromJson(json);
-}
 
 /// @nodoc
 mixin _$ContentSharedEvent {
-  String get pageCode => throw _privateConstructorUsedError;
-  String get elementType => throw _privateConstructorUsedError;
-  String get elementId => throw _privateConstructorUsedError;
-  int? get position => throw _privateConstructorUsedError;
+
+ String get pageCode; String get elementType; String get elementId; int? get position;
+/// Create a copy of ContentSharedEvent
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$ContentSharedEventCopyWith<ContentSharedEvent> get copyWith => _$ContentSharedEventCopyWithImpl<ContentSharedEvent>(this as ContentSharedEvent, _$identity);
 
   /// Serializes this ContentSharedEvent to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of ContentSharedEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $ContentSharedEventCopyWith<ContentSharedEvent> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  final _this = this as ContentSharedEvent;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ContentSharedEvent&&(identical(other.pageCode, _this.pageCode) || other.pageCode == _this.pageCode)&&(identical(other.elementType, _this.elementType) || other.elementType == _this.elementType)&&(identical(other.elementId, _this.elementId) || other.elementId == _this.elementId)&&(identical(other.position, _this.position) || other.position == _this.position));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode {
+  final _this = this as ContentSharedEvent;
+  return Object.hash(runtimeType,_this.pageCode,_this.elementType,_this.elementId,_this.position);
+}
+
+@override
+String toString() {
+  final _this = this as ContentSharedEvent;
+  return 'ContentSharedEvent(pageCode: ${_this.pageCode}, elementType: ${_this.elementType}, elementId: ${_this.elementId}, position: ${_this.position})';
+}
+
+
 }
 
 /// @nodoc
-abstract class $ContentSharedEventCopyWith<$Res> {
-  factory $ContentSharedEventCopyWith(
-    ContentSharedEvent value,
-    $Res Function(ContentSharedEvent) then,
-  ) = _$ContentSharedEventCopyWithImpl<$Res, ContentSharedEvent>;
-  @useResult
-  $Res call({
-    String pageCode,
-    String elementType,
-    String elementId,
-    int? position,
-  });
-}
+abstract mixin class $ContentSharedEventCopyWith<$Res>  {
+  factory $ContentSharedEventCopyWith(ContentSharedEvent value, $Res Function(ContentSharedEvent) _then) = _$ContentSharedEventCopyWithImpl;
+@useResult
+$Res call({
+ String pageCode, String elementType, String elementId, int? position
+});
 
+
+
+
+}
 /// @nodoc
-class _$ContentSharedEventCopyWithImpl<$Res, $Val extends ContentSharedEvent>
+class _$ContentSharedEventCopyWithImpl<$Res>
     implements $ContentSharedEventCopyWith<$Res> {
-  _$ContentSharedEventCopyWithImpl(this._value, this._then);
+  _$ContentSharedEventCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final ContentSharedEvent _self;
+  final $Res Function(ContentSharedEvent) _then;
 
-  /// Create a copy of ContentSharedEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? pageCode = null,
-    Object? elementType = null,
-    Object? elementId = null,
-    Object? position = freezed,
-  }) {
-    return _then(
-      _value.copyWith(
-            pageCode: null == pageCode
-                ? _value.pageCode
-                : pageCode // ignore: cast_nullable_to_non_nullable
-                      as String,
-            elementType: null == elementType
-                ? _value.elementType
-                : elementType // ignore: cast_nullable_to_non_nullable
-                      as String,
-            elementId: null == elementId
-                ? _value.elementId
-                : elementId // ignore: cast_nullable_to_non_nullable
-                      as String,
-            position: freezed == position
-                ? _value.position
-                : position // ignore: cast_nullable_to_non_nullable
-                      as int?,
-          )
-          as $Val,
-    );
-  }
+/// Create a copy of ContentSharedEvent
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? pageCode = null,Object? elementType = null,Object? elementId = null,Object? position = freezed,}) {
+  return _then(ContentSharedEvent(
+pageCode: null == pageCode ? _self.pageCode : pageCode // ignore: cast_nullable_to_non_nullable
+as String,elementType: null == elementType ? _self.elementType : elementType // ignore: cast_nullable_to_non_nullable
+as String,elementId: null == elementId ? _self.elementId : elementId // ignore: cast_nullable_to_non_nullable
+as String,position: freezed == position ? _self.position : position // ignore: cast_nullable_to_non_nullable
+as int?,
+  ));
 }
 
-/// @nodoc
-abstract class _$$ContentSharedEventImplCopyWith<$Res>
-    implements $ContentSharedEventCopyWith<$Res> {
-  factory _$$ContentSharedEventImplCopyWith(
-    _$ContentSharedEventImpl value,
-    $Res Function(_$ContentSharedEventImpl) then,
-  ) = __$$ContentSharedEventImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({
-    String pageCode,
-    String elementType,
-    String elementId,
-    int? position,
-  });
 }
 
-/// @nodoc
-class __$$ContentSharedEventImplCopyWithImpl<$Res>
-    extends _$ContentSharedEventCopyWithImpl<$Res, _$ContentSharedEventImpl>
-    implements _$$ContentSharedEventImplCopyWith<$Res> {
-  __$$ContentSharedEventImplCopyWithImpl(
-    _$ContentSharedEventImpl _value,
-    $Res Function(_$ContentSharedEventImpl) _then,
-  ) : super(_value, _then);
 
-  /// Create a copy of ContentSharedEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? pageCode = null,
-    Object? elementType = null,
-    Object? elementId = null,
-    Object? position = freezed,
-  }) {
-    return _then(
-      _$ContentSharedEventImpl(
-        pageCode: null == pageCode
-            ? _value.pageCode
-            : pageCode // ignore: cast_nullable_to_non_nullable
-                  as String,
-        elementType: null == elementType
-            ? _value.elementType
-            : elementType // ignore: cast_nullable_to_non_nullable
-                  as String,
-        elementId: null == elementId
-            ? _value.elementId
-            : elementId // ignore: cast_nullable_to_non_nullable
-                  as String,
-        position: freezed == position
-            ? _value.position
-            : position // ignore: cast_nullable_to_non_nullable
-                  as int?,
-      ),
-    );
-  }
+/// Adds pattern-matching-related methods to [ContentSharedEvent].
+extension ContentSharedEventPatterns on ContentSharedEvent {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _ContentSharedEvent value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _ContentSharedEvent() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _ContentSharedEvent value)  $default,){
+final _that = this;
+switch (_that) {
+case _ContentSharedEvent():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _ContentSharedEvent value)?  $default,){
+final _that = this;
+switch (_that) {
+case _ContentSharedEvent() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String pageCode,  String elementType,  String elementId,  int? position)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _ContentSharedEvent() when $default != null:
+return $default(_that.pageCode,_that.elementType,_that.elementId,_that.position);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String pageCode,  String elementType,  String elementId,  int? position)  $default,) {final _that = this;
+switch (_that) {
+case _ContentSharedEvent():
+return $default(_that.pageCode,_that.elementType,_that.elementId,_that.position);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String pageCode,  String elementType,  String elementId,  int? position)?  $default,) {final _that = this;
+switch (_that) {
+case _ContentSharedEvent() when $default != null:
+return $default(_that.pageCode,_that.elementType,_that.elementId,_that.position);case _:
+  return null;
+
+}
+}
+
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$ContentSharedEventImpl implements _ContentSharedEvent {
-  const _$ContentSharedEventImpl({
-    required this.pageCode,
-    required this.elementType,
-    required this.elementId,
-    this.position,
-  });
 
-  factory _$ContentSharedEventImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ContentSharedEventImplFromJson(json);
+class _ContentSharedEvent implements ContentSharedEvent {
+  const _ContentSharedEvent({required this.pageCode, required this.elementType, required this.elementId, this.position});
+  factory _ContentSharedEvent.fromJson(Map<String, dynamic> json) => _$ContentSharedEventFromJson(json);
 
-  @override
-  final String pageCode;
-  @override
-  final String elementType;
-  @override
-  final String elementId;
-  @override
-  final int? position;
+@override final  String pageCode;
+@override final  String elementType;
+@override final  String elementId;
+@override final  int? position;
 
-  @override
-  String toString() {
+/// Create a copy of ContentSharedEvent
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$ContentSharedEventCopyWith<_ContentSharedEvent> get copyWith => __$ContentSharedEventCopyWithImpl<_ContentSharedEvent>(this, _$identity);
+
+@override
+Map<String, dynamic> toJson() {
+  return _$ContentSharedEventToJson(this, );
+}
+
+@override
+bool operator ==(Object other) {
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ContentSharedEvent&&(identical(other.pageCode, pageCode) || other.pageCode == pageCode)&&(identical(other.elementType, elementType) || other.elementType == elementType)&&(identical(other.elementId, elementId) || other.elementId == elementId)&&(identical(other.position, position) || other.position == position));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode {
+    return Object.hash(runtimeType,pageCode,elementType,elementId,position);
+}
+
+@override
+String toString() {
     return 'ContentSharedEvent(pageCode: $pageCode, elementType: $elementType, elementId: $elementId, position: $position)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$ContentSharedEventImpl &&
-            (identical(other.pageCode, pageCode) ||
-                other.pageCode == pageCode) &&
-            (identical(other.elementType, elementType) ||
-                other.elementType == elementType) &&
-            (identical(other.elementId, elementId) ||
-                other.elementId == elementId) &&
-            (identical(other.position, position) ||
-                other.position == position));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode =>
-      Object.hash(runtimeType, pageCode, elementType, elementId, position);
-
-  /// Create a copy of ContentSharedEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$ContentSharedEventImplCopyWith<_$ContentSharedEventImpl> get copyWith =>
-      __$$ContentSharedEventImplCopyWithImpl<_$ContentSharedEventImpl>(
-        this,
-        _$identity,
-      );
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$ContentSharedEventImplToJson(this);
-  }
 }
 
-abstract class _ContentSharedEvent implements ContentSharedEvent {
-  const factory _ContentSharedEvent({
-    required final String pageCode,
-    required final String elementType,
-    required final String elementId,
-    final int? position,
-  }) = _$ContentSharedEventImpl;
 
-  factory _ContentSharedEvent.fromJson(Map<String, dynamic> json) =
-      _$ContentSharedEventImpl.fromJson;
-
-  @override
-  String get pageCode;
-  @override
-  String get elementType;
-  @override
-  String get elementId;
-  @override
-  int? get position;
-
-  /// Create a copy of ContentSharedEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ContentSharedEventImplCopyWith<_$ContentSharedEventImpl> get copyWith =>
-      throw _privateConstructorUsedError;
 }
+
+/// @nodoc
+abstract mixin class _$ContentSharedEventCopyWith<$Res> implements $ContentSharedEventCopyWith<$Res> {
+  factory _$ContentSharedEventCopyWith(_ContentSharedEvent value, $Res Function(_ContentSharedEvent) _then) = __$ContentSharedEventCopyWithImpl;
+@override @useResult
+$Res call({
+ String pageCode, String elementType, String elementId, int? position
+});
+
+
+
+
+}
+/// @nodoc
+class __$ContentSharedEventCopyWithImpl<$Res>
+    implements _$ContentSharedEventCopyWith<$Res> {
+  __$ContentSharedEventCopyWithImpl(this._self, this._then);
+
+  final _ContentSharedEvent _self;
+  final $Res Function(_ContentSharedEvent) _then;
+
+/// Create a copy of ContentSharedEvent
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? pageCode = null,Object? elementType = null,Object? elementId = null,Object? position = freezed,}) {
+  return _then(_ContentSharedEvent(
+pageCode: null == pageCode ? _self.pageCode : pageCode // ignore: cast_nullable_to_non_nullable
+as String,elementType: null == elementType ? _self.elementType : elementType // ignore: cast_nullable_to_non_nullable
+as String,elementId: null == elementId ? _self.elementId : elementId // ignore: cast_nullable_to_non_nullable
+as String,position: freezed == position ? _self.position : position // ignore: cast_nullable_to_non_nullable
+as int?,
+  ));
+}
+
+
+}
+
+// dart format on

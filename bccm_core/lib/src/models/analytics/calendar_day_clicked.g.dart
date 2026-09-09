@@ -6,16 +6,16 @@ part of 'calendar_day_clicked.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$CalendarDayClickedEventImpl _$$CalendarDayClickedEventImplFromJson(
+_CalendarDayClickedEvent _$CalendarDayClickedEventFromJson(
   Map<String, dynamic> json,
-) => _$CalendarDayClickedEventImpl(
+) => _CalendarDayClickedEvent(
   pageCode: json['pageCode'] as String,
   calendarView: json['calendarView'] as String,
   calendarDate: json['calendarDate'] as String,
 );
 
-Map<String, dynamic> _$$CalendarDayClickedEventImplToJson(
-  _$CalendarDayClickedEventImpl instance,
+Map<String, dynamic> _$CalendarDayClickedEventToJson(
+  _CalendarDayClickedEvent instance,
 ) => <String, dynamic>{
   'pageCode': instance.pageCode,
   'calendarView': instance.calendarView,

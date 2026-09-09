@@ -6,15 +6,15 @@ part of 'achievement_clicked.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$AchievementClickedEventImpl _$$AchievementClickedEventImplFromJson(
+_AchievementClickedEvent _$AchievementClickedEventFromJson(
   Map<String, dynamic> json,
-) => _$AchievementClickedEventImpl(
+) => _AchievementClickedEvent(
   elementPosition: (json['elementPosition'] as num).toInt(),
   elementTitle: json['elementTitle'] as String,
 );
 
-Map<String, dynamic> _$$AchievementClickedEventImplToJson(
-  _$AchievementClickedEventImpl instance,
+Map<String, dynamic> _$AchievementClickedEventToJson(
+  _AchievementClickedEvent instance,
 ) => <String, dynamic>{
   'elementPosition': instance.elementPosition,
   'elementTitle': instance.elementTitle,
