@@ -47091,6 +47091,7 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$MessageSecti
 class Query$FetchMoreItemsForItemSection$section$$MessageSection$messages
     implements Fragment$Section$$MessageSection$messages {
   Query$FetchMoreItemsForItemSection$section$$MessageSection$messages({
+    required this.title,
     required this.content,
     required this.variant,
     required this.style,
@@ -47100,11 +47101,13 @@ class Query$FetchMoreItemsForItemSection$section$$MessageSection$messages
   factory Query$FetchMoreItemsForItemSection$section$$MessageSection$messages.fromJson(
     Map<String, dynamic> json,
   ) {
+    final l$title = json['title'];
     final l$content = json['content'];
     final l$variant = json['variant'];
     final l$style = json['style'];
     final l$$__typename = json['__typename'];
     return Query$FetchMoreItemsForItemSection$section$$MessageSection$messages(
+      title: (l$title as String),
       content: (l$content as String),
       variant: fromJson$Enum$MessageStyleVariant((l$variant as String)),
       style:
@@ -47114,6 +47117,8 @@ class Query$FetchMoreItemsForItemSection$section$$MessageSection$messages
       $__typename: (l$$__typename as String),
     );
   }
+
+  final String title;
 
   final String content;
 
@@ -47129,6 +47134,8 @@ class Query$FetchMoreItemsForItemSection$section$$MessageSection$messages
 
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
+    final l$title = title;
+    _resultData['title'] = l$title;
     final l$content = content;
     _resultData['content'] = l$content;
     final l$variant = variant;
@@ -47142,11 +47149,18 @@ class Query$FetchMoreItemsForItemSection$section$$MessageSection$messages
 
   @override
   int get hashCode {
+    final l$title = title;
     final l$content = content;
     final l$variant = variant;
     final l$style = style;
     final l$$__typename = $__typename;
-    return Object.hashAll([l$content, l$variant, l$style, l$$__typename]);
+    return Object.hashAll([
+      l$title,
+      l$content,
+      l$variant,
+      l$style,
+      l$$__typename,
+    ]);
   }
 
   @override
@@ -47157,6 +47171,11 @@ class Query$FetchMoreItemsForItemSection$section$$MessageSection$messages
     if (other
             is! Query$FetchMoreItemsForItemSection$section$$MessageSection$messages ||
         runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$title = title;
+    final lOther$title = other.title;
+    if (l$title != lOther$title) {
       return false;
     }
     final l$content = content;
@@ -47212,6 +47231,7 @@ abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$MessageSecti
   ) = _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$MessageSection$messages;
 
   TRes call({
+    String? title,
     String? content,
     Enum$MessageStyleVariant? variant,
     Query$FetchMoreItemsForItemSection$section$$MessageSection$messages$style?
@@ -47247,12 +47267,16 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$MessageSection$m
   static const _undefined = <dynamic, dynamic>{};
 
   TRes call({
+    Object? title = _undefined,
     Object? content = _undefined,
     Object? variant = _undefined,
     Object? style = _undefined,
     Object? $__typename = _undefined,
   }) => _then(
     Query$FetchMoreItemsForItemSection$section$$MessageSection$messages(
+      title: title == _undefined || title == null
+          ? _instance.title
+          : (title as String),
       content: content == _undefined || content == null
           ? _instance.content
           : (content as String),
@@ -47295,6 +47319,7 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$MessageSecti
   TRes _res;
 
   call({
+    String? title,
     String? content,
     Enum$MessageStyleVariant? variant,
     Query$FetchMoreItemsForItemSection$section$$MessageSection$messages$style?
@@ -93254,6 +93279,7 @@ class _CopyWithStubImpl$Query$GetSection$section$$MessageSection<TRes>
 class Query$GetSection$section$$MessageSection$messages
     implements Fragment$Section$$MessageSection$messages {
   Query$GetSection$section$$MessageSection$messages({
+    required this.title,
     required this.content,
     required this.variant,
     required this.style,
@@ -93263,11 +93289,13 @@ class Query$GetSection$section$$MessageSection$messages
   factory Query$GetSection$section$$MessageSection$messages.fromJson(
     Map<String, dynamic> json,
   ) {
+    final l$title = json['title'];
     final l$content = json['content'];
     final l$variant = json['variant'];
     final l$style = json['style'];
     final l$$__typename = json['__typename'];
     return Query$GetSection$section$$MessageSection$messages(
+      title: (l$title as String),
       content: (l$content as String),
       variant: fromJson$Enum$MessageStyleVariant((l$variant as String)),
       style: Query$GetSection$section$$MessageSection$messages$style.fromJson(
@@ -93276,6 +93304,8 @@ class Query$GetSection$section$$MessageSection$messages
       $__typename: (l$$__typename as String),
     );
   }
+
+  final String title;
 
   final String content;
 
@@ -93290,6 +93320,8 @@ class Query$GetSection$section$$MessageSection$messages
 
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
+    final l$title = title;
+    _resultData['title'] = l$title;
     final l$content = content;
     _resultData['content'] = l$content;
     final l$variant = variant;
@@ -93303,11 +93335,18 @@ class Query$GetSection$section$$MessageSection$messages
 
   @override
   int get hashCode {
+    final l$title = title;
     final l$content = content;
     final l$variant = variant;
     final l$style = style;
     final l$$__typename = $__typename;
-    return Object.hashAll([l$content, l$variant, l$style, l$$__typename]);
+    return Object.hashAll([
+      l$title,
+      l$content,
+      l$variant,
+      l$style,
+      l$$__typename,
+    ]);
   }
 
   @override
@@ -93317,6 +93356,11 @@ class Query$GetSection$section$$MessageSection$messages
     }
     if (other is! Query$GetSection$section$$MessageSection$messages ||
         runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$title = title;
+    final lOther$title = other.title;
+    if (l$title != lOther$title) {
       return false;
     }
     final l$content = content;
@@ -93367,6 +93411,7 @@ abstract class CopyWith$Query$GetSection$section$$MessageSection$messages<
   ) = _CopyWithStubImpl$Query$GetSection$section$$MessageSection$messages;
 
   TRes call({
+    String? title,
     String? content,
     Enum$MessageStyleVariant? variant,
     Query$GetSection$section$$MessageSection$messages$style? style,
@@ -93391,12 +93436,16 @@ class _CopyWithImpl$Query$GetSection$section$$MessageSection$messages<TRes>
   static const _undefined = <dynamic, dynamic>{};
 
   TRes call({
+    Object? title = _undefined,
     Object? content = _undefined,
     Object? variant = _undefined,
     Object? style = _undefined,
     Object? $__typename = _undefined,
   }) => _then(
     Query$GetSection$section$$MessageSection$messages(
+      title: title == _undefined || title == null
+          ? _instance.title
+          : (title as String),
       content: content == _undefined || content == null
           ? _instance.content
           : (content as String),
@@ -93432,6 +93481,7 @@ class _CopyWithStubImpl$Query$GetSection$section$$MessageSection$messages<TRes>
   TRes _res;
 
   call({
+    String? title,
     String? content,
     Enum$MessageStyleVariant? variant,
     Query$GetSection$section$$MessageSection$messages$style? style,
