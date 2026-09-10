@@ -143,9 +143,20 @@ MockFlutterSecureStorage storageWithSession({String? accessToken, String? userPr
 /// the app actually read — see the note on `_getIOSSecureStorageOptions`.
 final kExpectedIOSOptions = const IOSOptions(accessibility: KeychainAccessibility.first_unlock_this_device).params;
 
-/// The app's own encrypted store, not the plugin's default one. Changing either
-/// value orphans every credential already on disk.
-final kExpectedAndroidOptions = const AndroidOptions(encryptedSharedPreferences: true, sharedPreferencesName: 'auth').params;
+/// The app's own encrypted store, not the plugin's default one. Changing this
+/// orphans every credential already on disk.
+///
+/// Two specific ways to break it:
+/// - Dropping `sharedPreferencesName` moves the data prefs from `auth` to the plugin
+///   default `FlutterSecureStorage`.
+/// - Swapping it for `storageNamespace` keeps the data prefs but moves the wrapped-key
+///   prefs and the KeyStore alias, so the ciphertext is found and cannot be decrypted.
+///
+/// Neither is migrated by the plugin. `resetOnError` (on by default) then erases.
+final kExpectedAndroidOptions = const AndroidOptions(
+  // ignore: deprecated_member_use
+  sharedPreferencesName: 'auth',
+).params;
 
 /// `params` hands back plain [Map]s, and Map doesn't implement value equality —
 /// a `Set` of them dedupes by identity, so every element always looks distinct.
