@@ -1,3 +1,4 @@
+import '../schema/messages.graphql.dart';
 import '../schema/persons.graphql.dart';
 import '../schema/sections.graphql.dart';
 
@@ -47091,6 +47092,7 @@ class Query$FetchMoreItemsForItemSection$section$$MessageSection$messages
     implements Fragment$Section$$MessageSection$messages {
   Query$FetchMoreItemsForItemSection$section$$MessageSection$messages({
     required this.content,
+    required this.variant,
     required this.style,
     this.$__typename = 'Message',
   });
@@ -47099,10 +47101,12 @@ class Query$FetchMoreItemsForItemSection$section$$MessageSection$messages
     Map<String, dynamic> json,
   ) {
     final l$content = json['content'];
+    final l$variant = json['variant'];
     final l$style = json['style'];
     final l$$__typename = json['__typename'];
     return Query$FetchMoreItemsForItemSection$section$$MessageSection$messages(
       content: (l$content as String),
+      variant: fromJson$Enum$MessageStyleVariant((l$variant as String)),
       style:
           Query$FetchMoreItemsForItemSection$section$$MessageSection$messages$style.fromJson(
             (l$style as Map<String, dynamic>),
@@ -47112,6 +47116,8 @@ class Query$FetchMoreItemsForItemSection$section$$MessageSection$messages
   }
 
   final String content;
+
+  final Enum$MessageStyleVariant variant;
 
   @Deprecated(
     'Replaced by the variant field. Colors belong in each app\'s design system, so they can follow dark/light mode.',
@@ -47125,6 +47131,8 @@ class Query$FetchMoreItemsForItemSection$section$$MessageSection$messages
     final _resultData = <String, dynamic>{};
     final l$content = content;
     _resultData['content'] = l$content;
+    final l$variant = variant;
+    _resultData['variant'] = toJson$Enum$MessageStyleVariant(l$variant);
     final l$style = style;
     _resultData['style'] = l$style.toJson();
     final l$$__typename = $__typename;
@@ -47135,9 +47143,10 @@ class Query$FetchMoreItemsForItemSection$section$$MessageSection$messages
   @override
   int get hashCode {
     final l$content = content;
+    final l$variant = variant;
     final l$style = style;
     final l$$__typename = $__typename;
-    return Object.hashAll([l$content, l$style, l$$__typename]);
+    return Object.hashAll([l$content, l$variant, l$style, l$$__typename]);
   }
 
   @override
@@ -47153,6 +47162,11 @@ class Query$FetchMoreItemsForItemSection$section$$MessageSection$messages
     final l$content = content;
     final lOther$content = other.content;
     if (l$content != lOther$content) {
+      return false;
+    }
+    final l$variant = variant;
+    final lOther$variant = other.variant;
+    if (l$variant != lOther$variant) {
       return false;
     }
     final l$style = style;
@@ -47199,6 +47213,7 @@ abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$MessageSecti
 
   TRes call({
     String? content,
+    Enum$MessageStyleVariant? variant,
     Query$FetchMoreItemsForItemSection$section$$MessageSection$messages$style?
     style,
     String? $__typename,
@@ -47233,6 +47248,7 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$MessageSection$m
 
   TRes call({
     Object? content = _undefined,
+    Object? variant = _undefined,
     Object? style = _undefined,
     Object? $__typename = _undefined,
   }) => _then(
@@ -47240,6 +47256,9 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$MessageSection$m
       content: content == _undefined || content == null
           ? _instance.content
           : (content as String),
+      variant: variant == _undefined || variant == null
+          ? _instance.variant
+          : (variant as Enum$MessageStyleVariant),
       style: style == _undefined || style == null
           ? _instance.style
           : (style
@@ -47277,6 +47296,7 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$MessageSecti
 
   call({
     String? content,
+    Enum$MessageStyleVariant? variant,
     Query$FetchMoreItemsForItemSection$section$$MessageSection$messages$style?
     style,
     String? $__typename,
@@ -93235,6 +93255,7 @@ class Query$GetSection$section$$MessageSection$messages
     implements Fragment$Section$$MessageSection$messages {
   Query$GetSection$section$$MessageSection$messages({
     required this.content,
+    required this.variant,
     required this.style,
     this.$__typename = 'Message',
   });
@@ -93243,10 +93264,12 @@ class Query$GetSection$section$$MessageSection$messages
     Map<String, dynamic> json,
   ) {
     final l$content = json['content'];
+    final l$variant = json['variant'];
     final l$style = json['style'];
     final l$$__typename = json['__typename'];
     return Query$GetSection$section$$MessageSection$messages(
       content: (l$content as String),
+      variant: fromJson$Enum$MessageStyleVariant((l$variant as String)),
       style: Query$GetSection$section$$MessageSection$messages$style.fromJson(
         (l$style as Map<String, dynamic>),
       ),
@@ -93255,6 +93278,8 @@ class Query$GetSection$section$$MessageSection$messages
   }
 
   final String content;
+
+  final Enum$MessageStyleVariant variant;
 
   @Deprecated(
     'Replaced by the variant field. Colors belong in each app\'s design system, so they can follow dark/light mode.',
@@ -93267,6 +93292,8 @@ class Query$GetSection$section$$MessageSection$messages
     final _resultData = <String, dynamic>{};
     final l$content = content;
     _resultData['content'] = l$content;
+    final l$variant = variant;
+    _resultData['variant'] = toJson$Enum$MessageStyleVariant(l$variant);
     final l$style = style;
     _resultData['style'] = l$style.toJson();
     final l$$__typename = $__typename;
@@ -93277,9 +93304,10 @@ class Query$GetSection$section$$MessageSection$messages
   @override
   int get hashCode {
     final l$content = content;
+    final l$variant = variant;
     final l$style = style;
     final l$$__typename = $__typename;
-    return Object.hashAll([l$content, l$style, l$$__typename]);
+    return Object.hashAll([l$content, l$variant, l$style, l$$__typename]);
   }
 
   @override
@@ -93294,6 +93322,11 @@ class Query$GetSection$section$$MessageSection$messages
     final l$content = content;
     final lOther$content = other.content;
     if (l$content != lOther$content) {
+      return false;
+    }
+    final l$variant = variant;
+    final lOther$variant = other.variant;
+    if (l$variant != lOther$variant) {
       return false;
     }
     final l$style = style;
@@ -93335,6 +93368,7 @@ abstract class CopyWith$Query$GetSection$section$$MessageSection$messages<
 
   TRes call({
     String? content,
+    Enum$MessageStyleVariant? variant,
     Query$GetSection$section$$MessageSection$messages$style? style,
     String? $__typename,
   });
@@ -93358,6 +93392,7 @@ class _CopyWithImpl$Query$GetSection$section$$MessageSection$messages<TRes>
 
   TRes call({
     Object? content = _undefined,
+    Object? variant = _undefined,
     Object? style = _undefined,
     Object? $__typename = _undefined,
   }) => _then(
@@ -93365,6 +93400,9 @@ class _CopyWithImpl$Query$GetSection$section$$MessageSection$messages<TRes>
       content: content == _undefined || content == null
           ? _instance.content
           : (content as String),
+      variant: variant == _undefined || variant == null
+          ? _instance.variant
+          : (variant as Enum$MessageStyleVariant),
       style: style == _undefined || style == null
           ? _instance.style
           : (style as Query$GetSection$section$$MessageSection$messages$style),
@@ -93395,6 +93433,7 @@ class _CopyWithStubImpl$Query$GetSection$section$$MessageSection$messages<TRes>
 
   call({
     String? content,
+    Enum$MessageStyleVariant? variant,
     Query$GetSection$section$$MessageSection$messages$style? style,
     String? $__typename,
   }) => _res;

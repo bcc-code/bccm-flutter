@@ -1,3 +1,4 @@
+import '../schema/messages.graphql.dart';
 import '../schema/persons.graphql.dart';
 import '../schema/sections.graphql.dart';
 
@@ -22181,6 +22182,13 @@ const fragmentDefinitionSection = FragmentDefinitionNode(
                 selections: [
                   FieldNode(
                     name: NameNode(value: 'content'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null,
+                  ),
+                  FieldNode(
+                    name: NameNode(value: 'variant'),
                     alias: null,
                     arguments: [],
                     directives: [],
@@ -64150,6 +64158,7 @@ class _CopyWithStubImpl$Fragment$Section$$MessageSection<TRes>
 class Fragment$Section$$MessageSection$messages {
   Fragment$Section$$MessageSection$messages({
     required this.content,
+    required this.variant,
     required this.style,
     this.$__typename = 'Message',
   });
@@ -64158,10 +64167,12 @@ class Fragment$Section$$MessageSection$messages {
     Map<String, dynamic> json,
   ) {
     final l$content = json['content'];
+    final l$variant = json['variant'];
     final l$style = json['style'];
     final l$$__typename = json['__typename'];
     return Fragment$Section$$MessageSection$messages(
       content: (l$content as String),
+      variant: fromJson$Enum$MessageStyleVariant((l$variant as String)),
       style: Fragment$Section$$MessageSection$messages$style.fromJson(
         (l$style as Map<String, dynamic>),
       ),
@@ -64170,6 +64181,8 @@ class Fragment$Section$$MessageSection$messages {
   }
 
   final String content;
+
+  final Enum$MessageStyleVariant variant;
 
   @Deprecated(
     'Replaced by the variant field. Colors belong in each app\'s design system, so they can follow dark/light mode.',
@@ -64182,6 +64195,8 @@ class Fragment$Section$$MessageSection$messages {
     final _resultData = <String, dynamic>{};
     final l$content = content;
     _resultData['content'] = l$content;
+    final l$variant = variant;
+    _resultData['variant'] = toJson$Enum$MessageStyleVariant(l$variant);
     final l$style = style;
     _resultData['style'] = l$style.toJson();
     final l$$__typename = $__typename;
@@ -64192,9 +64207,10 @@ class Fragment$Section$$MessageSection$messages {
   @override
   int get hashCode {
     final l$content = content;
+    final l$variant = variant;
     final l$style = style;
     final l$$__typename = $__typename;
-    return Object.hashAll([l$content, l$style, l$$__typename]);
+    return Object.hashAll([l$content, l$variant, l$style, l$$__typename]);
   }
 
   @override
@@ -64209,6 +64225,11 @@ class Fragment$Section$$MessageSection$messages {
     final l$content = content;
     final lOther$content = other.content;
     if (l$content != lOther$content) {
+      return false;
+    }
+    final l$variant = variant;
+    final lOther$variant = other.variant;
+    if (l$variant != lOther$variant) {
       return false;
     }
     final l$style = style;
@@ -64245,6 +64266,7 @@ abstract class CopyWith$Fragment$Section$$MessageSection$messages<TRes> {
 
   TRes call({
     String? content,
+    Enum$MessageStyleVariant? variant,
     Fragment$Section$$MessageSection$messages$style? style,
     String? $__typename,
   });
@@ -64266,6 +64288,7 @@ class _CopyWithImpl$Fragment$Section$$MessageSection$messages<TRes>
 
   TRes call({
     Object? content = _undefined,
+    Object? variant = _undefined,
     Object? style = _undefined,
     Object? $__typename = _undefined,
   }) => _then(
@@ -64273,6 +64296,9 @@ class _CopyWithImpl$Fragment$Section$$MessageSection$messages<TRes>
       content: content == _undefined || content == null
           ? _instance.content
           : (content as String),
+      variant: variant == _undefined || variant == null
+          ? _instance.variant
+          : (variant as Enum$MessageStyleVariant),
       style: style == _undefined || style == null
           ? _instance.style
           : (style as Fragment$Section$$MessageSection$messages$style),
@@ -64299,6 +64325,7 @@ class _CopyWithStubImpl$Fragment$Section$$MessageSection$messages<TRes>
 
   call({
     String? content,
+    Enum$MessageStyleVariant? variant,
     Fragment$Section$$MessageSection$messages$style? style,
     String? $__typename,
   }) => _res;

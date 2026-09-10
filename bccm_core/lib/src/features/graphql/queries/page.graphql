@@ -221,6 +221,7 @@ fragment Section on Section {
     id
     messages {
       content
+      variant
       style {
         text
         background
