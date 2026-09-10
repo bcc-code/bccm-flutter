@@ -64171,6 +64171,9 @@ class Fragment$Section$$MessageSection$messages {
 
   final String content;
 
+  @Deprecated(
+    'Replaced by the variant field. Colors belong in each app\'s design system, so they can follow dark/light mode.',
+  )
   final Fragment$Section$$MessageSection$messages$style style;
 
   final String $__typename;

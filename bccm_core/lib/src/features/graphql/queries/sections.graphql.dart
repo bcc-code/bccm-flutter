@@ -47113,6 +47113,9 @@ class Query$FetchMoreItemsForItemSection$section$$MessageSection$messages
 
   final String content;
 
+  @Deprecated(
+    'Replaced by the variant field. Colors belong in each app\'s design system, so they can follow dark/light mode.',
+  )
   final Query$FetchMoreItemsForItemSection$section$$MessageSection$messages$style
   style;
 
@@ -93253,6 +93256,9 @@ class Query$GetSection$section$$MessageSection$messages
 
   final String content;
 
+  @Deprecated(
+    'Replaced by the variant field. Colors belong in each app\'s design system, so they can follow dark/light mode.',
+  )
   final Query$GetSection$section$$MessageSection$messages$style style;
 
   final String $__typename;
