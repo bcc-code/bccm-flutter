@@ -1,6 +1,7 @@
 library;
 
 import '../../utils/primitive_extensions.dart';
+
 import 'package:flutter/material.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
@@ -8,11 +9,7 @@ import 'package:responsive_framework/responsive_framework.dart';
 /// See https://api.flutter.dev/flutter/widgets/InheritedWidget-class.html
 class DesignSystem extends InheritedWidget {
   final DesignSystemData designSystem;
-  DesignSystem({
-    super.key,
-    required Widget Function(BuildContext) builder,
-    required this.designSystem,
-  }) : super(child: Builder(builder: builder));
+  DesignSystem({super.key, required Widget Function(BuildContext) builder, required this.designSystem}) : super(child: Builder(builder: builder));
   @override
   bool updateShouldNotify(DesignSystem oldWidget) => designSystem != oldWidget.designSystem;
 
@@ -89,6 +86,7 @@ class DesignSystemColors {
   final Color background2;
   final Color separatorOnLight;
   final Color separator2;
+  final DesignSystemMessageColors messages;
 
   DesignSystemColors({
     required this.tint1,
@@ -104,21 +102,34 @@ class DesignSystemColors {
     required this.background2,
     required this.separatorOnLight,
     required this.separator2,
+    required this.messages,
   });
 }
 
-enum ButtonVariant {
-  primary,
-  secondary,
-  dark,
-  green,
-  red,
+/// Colors for the message section variants, see `MessageStyleVariant` in the GraphQL schema.
+class DesignSystemMessageColors {
+  final MessageColors info;
+  final MessageColors warning;
+  final MessageColors error;
+
+  const DesignSystemMessageColors({required this.info, required this.warning, required this.error});
 }
 
-enum ButtonImagePosition {
-  left,
-  right,
+/// Colors for a single message variant.
+class MessageColors {
+  final Color background;
+  final Color border;
+  final Color text;
+
+  /// Used for the variant icon and for links in the message body.
+  final Color accent;
+
+  const MessageColors({required this.background, required this.border, required this.text, required this.accent});
 }
+
+enum ButtonVariant { primary, secondary, dark, green, red }
+
+enum ButtonImagePosition { left, right }
 
 abstract class DesignSystemButtons {
   Widget small({
@@ -167,37 +178,37 @@ extension ResponsiveButton on DesignSystemButtons {
     bool disabled = false,
     bool? autofocus,
   }) {
-    return Builder(builder: (context) {
-      final bp = ResponsiveBreakpoints.of(context);
-      if (bp.smallerThan(TABLET)) {
-        return small(
-          key: key,
-          variant: variant,
-          labelText: labelText,
-          onPressed: onPressed,
-          image: image,
-          disabled: disabled,
-          autofocus: autofocus,
-        );
-      } else {
-        return large(
-          key: key,
-          variant: variant,
-          labelText: labelText,
-          onPressed: onPressed,
-          image: image,
-          disabled: disabled,
-          autofocus: autofocus,
-        );
-      }
-    });
+    return Builder(
+      builder: (context) {
+        final bp = ResponsiveBreakpoints.of(context);
+        if (bp.smallerThan(TABLET)) {
+          return small(
+            key: key,
+            variant: variant,
+            labelText: labelText,
+            onPressed: onPressed,
+            image: image,
+            disabled: disabled,
+            autofocus: autofocus,
+          );
+        } else {
+          return large(
+            key: key,
+            variant: variant,
+            labelText: labelText,
+            onPressed: onPressed,
+            image: image,
+            disabled: disabled,
+            autofocus: autofocus,
+          );
+        }
+      },
+    );
   }
 }
 
 class DesignSystemInputDecorations {
-  DesignSystemInputDecorations({
-    required this.textFormField,
-  });
+  DesignSystemInputDecorations({required this.textFormField});
   final InputDecoration textFormField;
 }
 
@@ -207,21 +218,24 @@ class TypographyListForDebugging extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textStyles = DesignSystem.of(context).textStyles;
-    return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-      Text('Headline 1', style: textStyles.headline1),
-      Text('Headline 2', style: textStyles.headline2),
-      Text('Title 1', style: textStyles.title1),
-      Text('Title 2', style: textStyles.title2),
-      Text('Title 3', style: textStyles.title3),
-      Text('Body 1', style: textStyles.body1),
-      Text('Body 2', style: textStyles.body2),
-      Text('Caption 1', style: textStyles.caption1),
-      Text('Caption 2', style: textStyles.caption2),
-      Text('Caption 3', style: textStyles.caption3),
-      Text('Button 1', style: textStyles.button1),
-      Text('Button 2', style: textStyles.button2),
-      Text('button 2 upper'.toUpperCase(), style: textStyles.button2),
-      Text('overline'.toUpperCase(), style: textStyles.overline),
-    ]);
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text('Headline 1', style: textStyles.headline1),
+        Text('Headline 2', style: textStyles.headline2),
+        Text('Title 1', style: textStyles.title1),
+        Text('Title 2', style: textStyles.title2),
+        Text('Title 3', style: textStyles.title3),
+        Text('Body 1', style: textStyles.body1),
+        Text('Body 2', style: textStyles.body2),
+        Text('Caption 1', style: textStyles.caption1),
+        Text('Caption 2', style: textStyles.caption2),
+        Text('Caption 3', style: textStyles.caption3),
+        Text('Button 1', style: textStyles.button1),
+        Text('Button 2', style: textStyles.button2),
+        Text('button 2 upper'.toUpperCase(), style: textStyles.button2),
+        Text('overline'.toUpperCase(), style: textStyles.overline),
+      ],
+    );
   }
 }

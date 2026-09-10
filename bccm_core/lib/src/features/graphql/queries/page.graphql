@@ -220,6 +220,7 @@ fragment Section on Section {
   ... on MessageSection {
     id
     messages {
+      title
       content
       variant
       style {
