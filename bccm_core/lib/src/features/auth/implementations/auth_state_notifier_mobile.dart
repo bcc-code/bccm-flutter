@@ -15,8 +15,25 @@ import 'package:unleash_proxy_client_flutter/id_generator.dart';
 
 import '../../../utils/constants.dart';
 
+/// `encryptedSharedPreferences` is deliberately absent: v10 ignores the parameter
+/// outright and migrates any Jetpack EncryptedSharedPreferences data to its own ciphers
+/// on first access. If that migration throws it falls back to the old store rather than
+/// discarding anything, which is why the defaults below are left alone —
+/// `resetOnError: true` (erases on unrecoverable errors, matching the reasoning behind
+/// [kMinimumCredentialsTTL]) and `migrateWithBackup: false`. Do **not** set
+/// `migrateWithBackup: true` here: it skips the direct ESP migration in favour of a
+/// backup-protected path that only runs when a cipher key-mismatch is detected, which a
+/// user whose data is still in EncryptedSharedPreferences may never trigger.
+///
+/// `sharedPreferencesName` is deprecated in favour of `storageNamespace` and removed in
+/// v11. They are **not** interchangeable: switching moves the wrapped-key prefs
+/// (`FlutterSecureKeyStorage` -> `FlutterSecureKeyStorage:auth`) and the KeyStore alias
+/// (suffix `.auth`) while leaving the ciphertext where it is, and nothing migrates
+/// across that change. Swapping it blind would leave every Android user with data they
+/// cannot decrypt, which `resetOnError` then erases. That migration needs its own
+/// release, on v10, before v11 removes this parameter.
 AndroidOptions _getAndroidSecureStorageOptions() => const AndroidOptions(
-      encryptedSharedPreferences: true, // https://github.com/juliansteenbakker/flutter_secure_storage/issues/354
+      // ignore: deprecated_member_use
       sharedPreferencesName: 'auth',
     );
 
