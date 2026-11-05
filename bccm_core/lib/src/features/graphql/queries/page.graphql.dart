@@ -372,7 +372,6 @@ extension ClientExtension$Fragment$GridSectionItem on graphql.GraphQLClient {
     data: data.toJson(),
     broadcast: broadcast,
   );
-
   Fragment$GridSectionItem? readFragment$GridSectionItem({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -471,7 +470,6 @@ extension UtilityExtension$Fragment$GridSectionItem$item
     on Fragment$GridSectionItem$item {
   CopyWith$Fragment$GridSectionItem$item<Fragment$GridSectionItem$item>
   get copyWith => CopyWith$Fragment$GridSectionItem$item(this, (i) => i);
-
   _T when<_T>({
     required _T Function(Fragment$GridSectionItem$item$$Episode) episode,
     required _T Function(Fragment$GridSectionItem$item$$Show) show,
@@ -670,6 +668,7 @@ class Fragment$GridSectionItem$item$$Episode
     this.number,
     this.season,
     this.$__typename = 'Episode',
+    this.overrideUrl,
   });
 
   factory Fragment$GridSectionItem$item$$Episode.fromJson(
@@ -687,6 +686,7 @@ class Fragment$GridSectionItem$item$$Episode
     final l$number = json['number'];
     final l$season = json['season'];
     final l$$__typename = json['__typename'];
+    final l$overrideUrl = json['overrideUrl'];
     return Fragment$GridSectionItem$item$$Episode(
       contributors: (l$contributors as List<dynamic>)
           .map(
@@ -710,6 +710,7 @@ class Fragment$GridSectionItem$item$$Episode
               (l$season as Map<String, dynamic>),
             ),
       $__typename: (l$$__typename as String),
+      overrideUrl: (l$overrideUrl as String?),
     );
   }
 
@@ -736,6 +737,8 @@ class Fragment$GridSectionItem$item$$Episode
   final Fragment$GridSectionItem$item$$Episode$season? season;
 
   final String $__typename;
+
+  final String? overrideUrl;
 
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
@@ -765,6 +768,8 @@ class Fragment$GridSectionItem$item$$Episode
     _resultData['season'] = l$season?.toJson();
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
+    final l$overrideUrl = overrideUrl;
+    _resultData['overrideUrl'] = l$overrideUrl;
     return _resultData;
   }
 
@@ -782,6 +787,7 @@ class Fragment$GridSectionItem$item$$Episode
     final l$number = number;
     final l$season = season;
     final l$$__typename = $__typename;
+    final l$overrideUrl = overrideUrl;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
       l$description,
@@ -795,6 +801,7 @@ class Fragment$GridSectionItem$item$$Episode
       l$number,
       l$season,
       l$$__typename,
+      l$overrideUrl,
     ]);
   }
 
@@ -874,6 +881,11 @@ class Fragment$GridSectionItem$item$$Episode
     if (l$$__typename != lOther$$__typename) {
       return false;
     }
+    final l$overrideUrl = overrideUrl;
+    final lOther$overrideUrl = other.overrideUrl;
+    if (l$overrideUrl != lOther$overrideUrl) {
+      return false;
+    }
     return true;
   }
 }
@@ -909,6 +921,7 @@ abstract class CopyWith$Fragment$GridSectionItem$item$$Episode<TRes> {
     int? number,
     Fragment$GridSectionItem$item$$Episode$season? season,
     String? $__typename,
+    String? overrideUrl,
   });
   TRes contributors(
     Iterable<Fragment$GridSectionItem$item$$Episode$contributors> Function(
@@ -949,6 +962,7 @@ class _CopyWithImpl$Fragment$GridSectionItem$item$$Episode<TRes>
     Object? number = _undefined,
     Object? season = _undefined,
     Object? $__typename = _undefined,
+    Object? overrideUrl = _undefined,
   }) => _then(
     Fragment$GridSectionItem$item$$Episode(
       contributors: contributors == _undefined || contributors == null
@@ -982,6 +996,9 @@ class _CopyWithImpl$Fragment$GridSectionItem$item$$Episode<TRes>
       $__typename: $__typename == _undefined || $__typename == null
           ? _instance.$__typename
           : ($__typename as String),
+      overrideUrl: overrideUrl == _undefined
+          ? _instance.overrideUrl
+          : (overrideUrl as String?),
     ),
   );
 
@@ -1037,6 +1054,7 @@ class _CopyWithStubImpl$Fragment$GridSectionItem$item$$Episode<TRes>
     int? number,
     Fragment$GridSectionItem$item$$Episode$season? season,
     String? $__typename,
+    String? overrideUrl,
   }) => _res;
 
   contributors(_fn) => _res;
@@ -3319,7 +3337,6 @@ extension ClientExtension$Fragment$ItemSectionItem on graphql.GraphQLClient {
     data: data.toJson(),
     broadcast: broadcast,
   );
-
   Fragment$ItemSectionItem? readFragment$ItemSectionItem({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -3418,7 +3435,6 @@ extension UtilityExtension$Fragment$ItemSectionItem$item
     on Fragment$ItemSectionItem$item {
   CopyWith$Fragment$ItemSectionItem$item<Fragment$ItemSectionItem$item>
   get copyWith => CopyWith$Fragment$ItemSectionItem$item(this, (i) => i);
-
   _T when<_T>({
     required _T Function(Fragment$ItemSectionItem$item$$Episode) episode,
     required _T Function(Fragment$ItemSectionItem$item$$Show) show,
@@ -3616,6 +3632,7 @@ class Fragment$ItemSectionItem$item$$Episode
     this.number,
     this.season,
     this.$__typename = 'Episode',
+    this.overrideUrl,
   });
 
   factory Fragment$ItemSectionItem$item$$Episode.fromJson(
@@ -3633,6 +3650,7 @@ class Fragment$ItemSectionItem$item$$Episode
     final l$number = json['number'];
     final l$season = json['season'];
     final l$$__typename = json['__typename'];
+    final l$overrideUrl = json['overrideUrl'];
     return Fragment$ItemSectionItem$item$$Episode(
       contributors: (l$contributors as List<dynamic>)
           .map(
@@ -3656,6 +3674,7 @@ class Fragment$ItemSectionItem$item$$Episode
               (l$season as Map<String, dynamic>),
             ),
       $__typename: (l$$__typename as String),
+      overrideUrl: (l$overrideUrl as String?),
     );
   }
 
@@ -3682,6 +3701,8 @@ class Fragment$ItemSectionItem$item$$Episode
   final Fragment$ItemSectionItem$item$$Episode$season? season;
 
   final String $__typename;
+
+  final String? overrideUrl;
 
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
@@ -3711,6 +3732,8 @@ class Fragment$ItemSectionItem$item$$Episode
     _resultData['season'] = l$season?.toJson();
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
+    final l$overrideUrl = overrideUrl;
+    _resultData['overrideUrl'] = l$overrideUrl;
     return _resultData;
   }
 
@@ -3728,6 +3751,7 @@ class Fragment$ItemSectionItem$item$$Episode
     final l$number = number;
     final l$season = season;
     final l$$__typename = $__typename;
+    final l$overrideUrl = overrideUrl;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
       l$description,
@@ -3741,6 +3765,7 @@ class Fragment$ItemSectionItem$item$$Episode
       l$number,
       l$season,
       l$$__typename,
+      l$overrideUrl,
     ]);
   }
 
@@ -3820,6 +3845,11 @@ class Fragment$ItemSectionItem$item$$Episode
     if (l$$__typename != lOther$$__typename) {
       return false;
     }
+    final l$overrideUrl = overrideUrl;
+    final lOther$overrideUrl = other.overrideUrl;
+    if (l$overrideUrl != lOther$overrideUrl) {
+      return false;
+    }
     return true;
   }
 }
@@ -3855,6 +3885,7 @@ abstract class CopyWith$Fragment$ItemSectionItem$item$$Episode<TRes> {
     int? number,
     Fragment$ItemSectionItem$item$$Episode$season? season,
     String? $__typename,
+    String? overrideUrl,
   });
   TRes contributors(
     Iterable<Fragment$ItemSectionItem$item$$Episode$contributors> Function(
@@ -3895,6 +3926,7 @@ class _CopyWithImpl$Fragment$ItemSectionItem$item$$Episode<TRes>
     Object? number = _undefined,
     Object? season = _undefined,
     Object? $__typename = _undefined,
+    Object? overrideUrl = _undefined,
   }) => _then(
     Fragment$ItemSectionItem$item$$Episode(
       contributors: contributors == _undefined || contributors == null
@@ -3928,6 +3960,9 @@ class _CopyWithImpl$Fragment$ItemSectionItem$item$$Episode<TRes>
       $__typename: $__typename == _undefined || $__typename == null
           ? _instance.$__typename
           : ($__typename as String),
+      overrideUrl: overrideUrl == _undefined
+          ? _instance.overrideUrl
+          : (overrideUrl as String?),
     ),
   );
 
@@ -3983,6 +4018,7 @@ class _CopyWithStubImpl$Fragment$ItemSectionItem$item$$Episode<TRes>
     int? number,
     Fragment$ItemSectionItem$item$$Episode$season? season,
     String? $__typename,
+    String? overrideUrl,
   }) => _res;
 
   contributors(_fn) => _res;
@@ -6243,7 +6279,6 @@ extension ClientExtension$Fragment$EpisodeThumbnail on graphql.GraphQLClient {
     data: data.toJson(),
     broadcast: broadcast,
   );
-
   Fragment$EpisodeThumbnail? readFragment$EpisodeThumbnail({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -6675,7 +6710,6 @@ extension ClientExtension$Fragment$NavigatablePerson on graphql.GraphQLClient {
     data: data.toJson(),
     broadcast: broadcast,
   );
-
   Fragment$NavigatablePerson? readFragment$NavigatablePerson({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -6844,7 +6878,6 @@ extension ClientExtension$Fragment$NavigatableGame on graphql.GraphQLClient {
     data: data.toJson(),
     broadcast: broadcast,
   );
-
   Fragment$NavigatableGame? readFragment$NavigatableGame({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -7013,7 +7046,6 @@ extension ClientExtension$Fragment$NavigatableLink on graphql.GraphQLClient {
     data: data.toJson(),
     broadcast: broadcast,
   );
-
   Fragment$NavigatableLink? readFragment$NavigatableLink({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -7184,7 +7216,6 @@ extension ClientExtension$Fragment$NavigatablePlaylist
     data: data.toJson(),
     broadcast: broadcast,
   );
-
   Fragment$NavigatablePlaylist? readFragment$NavigatablePlaylist({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -7355,7 +7386,6 @@ extension ClientExtension$Fragment$NavigatablePage on graphql.GraphQLClient {
     data: data.toJson(),
     broadcast: broadcast,
   );
-
   Fragment$NavigatablePage? readFragment$NavigatablePage({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -7522,7 +7552,6 @@ extension ClientExtension$Fragment$NavigatableShort on graphql.GraphQLClient {
     data: data.toJson(),
     broadcast: broadcast,
   );
-
   Fragment$NavigatableShort? readFragment$NavigatableShort({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -7545,16 +7574,19 @@ class Fragment$NavigatableEpisode {
   Fragment$NavigatableEpisode({
     required this.id,
     required this.locked,
+    this.overrideUrl,
     this.$__typename = 'Episode',
   });
 
   factory Fragment$NavigatableEpisode.fromJson(Map<String, dynamic> json) {
     final l$id = json['id'];
     final l$locked = json['locked'];
+    final l$overrideUrl = json['overrideUrl'];
     final l$$__typename = json['__typename'];
     return Fragment$NavigatableEpisode(
       id: (l$id as String),
       locked: (l$locked as bool),
+      overrideUrl: (l$overrideUrl as String?),
       $__typename: (l$$__typename as String),
     );
   }
@@ -7562,6 +7594,8 @@ class Fragment$NavigatableEpisode {
   final String id;
 
   final bool locked;
+
+  final String? overrideUrl;
 
   final String $__typename;
 
@@ -7571,6 +7605,8 @@ class Fragment$NavigatableEpisode {
     _resultData['id'] = l$id;
     final l$locked = locked;
     _resultData['locked'] = l$locked;
+    final l$overrideUrl = overrideUrl;
+    _resultData['overrideUrl'] = l$overrideUrl;
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
     return _resultData;
@@ -7580,8 +7616,9 @@ class Fragment$NavigatableEpisode {
   int get hashCode {
     final l$id = id;
     final l$locked = locked;
+    final l$overrideUrl = overrideUrl;
     final l$$__typename = $__typename;
-    return Object.hashAll([l$id, l$locked, l$$__typename]);
+    return Object.hashAll([l$id, l$locked, l$overrideUrl, l$$__typename]);
   }
 
   @override
@@ -7601,6 +7638,11 @@ class Fragment$NavigatableEpisode {
     final l$locked = locked;
     final lOther$locked = other.locked;
     if (l$locked != lOther$locked) {
+      return false;
+    }
+    final l$overrideUrl = overrideUrl;
+    final lOther$overrideUrl = other.overrideUrl;
+    if (l$overrideUrl != lOther$overrideUrl) {
       return false;
     }
     final l$$__typename = $__typename;
@@ -7627,7 +7669,12 @@ abstract class CopyWith$Fragment$NavigatableEpisode<TRes> {
   factory CopyWith$Fragment$NavigatableEpisode.stub(TRes res) =
       _CopyWithStubImpl$Fragment$NavigatableEpisode;
 
-  TRes call({String? id, bool? locked, String? $__typename});
+  TRes call({
+    String? id,
+    bool? locked,
+    String? overrideUrl,
+    String? $__typename,
+  });
 }
 
 class _CopyWithImpl$Fragment$NavigatableEpisode<TRes>
@@ -7643,6 +7690,7 @@ class _CopyWithImpl$Fragment$NavigatableEpisode<TRes>
   TRes call({
     Object? id = _undefined,
     Object? locked = _undefined,
+    Object? overrideUrl = _undefined,
     Object? $__typename = _undefined,
   }) => _then(
     Fragment$NavigatableEpisode(
@@ -7650,6 +7698,9 @@ class _CopyWithImpl$Fragment$NavigatableEpisode<TRes>
       locked: locked == _undefined || locked == null
           ? _instance.locked
           : (locked as bool),
+      overrideUrl: overrideUrl == _undefined
+          ? _instance.overrideUrl
+          : (overrideUrl as String?),
       $__typename: $__typename == _undefined || $__typename == null
           ? _instance.$__typename
           : ($__typename as String),
@@ -7663,7 +7714,8 @@ class _CopyWithStubImpl$Fragment$NavigatableEpisode<TRes>
 
   TRes _res;
 
-  call({String? id, bool? locked, String? $__typename}) => _res;
+  call({String? id, bool? locked, String? overrideUrl, String? $__typename}) =>
+      _res;
 }
 
 const fragmentDefinitionNavigatableEpisode = FragmentDefinitionNode(
@@ -7683,6 +7735,13 @@ const fragmentDefinitionNavigatableEpisode = FragmentDefinitionNode(
       ),
       FieldNode(
         name: NameNode(value: 'locked'),
+        alias: null,
+        arguments: [],
+        directives: [],
+        selectionSet: null,
+      ),
+      FieldNode(
+        name: NameNode(value: 'overrideUrl'),
         alias: null,
         arguments: [],
         directives: [],
@@ -7718,7 +7777,6 @@ extension ClientExtension$Fragment$NavigatableEpisode on graphql.GraphQLClient {
     data: data.toJson(),
     broadcast: broadcast,
   );
-
   Fragment$NavigatableEpisode? readFragment$NavigatableEpisode({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -7953,7 +8011,6 @@ extension ClientExtension$Fragment$NavigatableShow on graphql.GraphQLClient {
     data: data.toJson(),
     broadcast: broadcast,
   );
-
   Fragment$NavigatableShow? readFragment$NavigatableShow({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -8332,7 +8389,6 @@ extension ClientExtension$Fragment$NavigatableChapter on graphql.GraphQLClient {
     data: data.toJson(),
     broadcast: broadcast,
   );
-
   Fragment$NavigatableChapter? readFragment$NavigatableChapter({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -8702,7 +8758,6 @@ class Fragment$ItemSection {
 extension UtilityExtension$Fragment$ItemSection on Fragment$ItemSection {
   CopyWith$Fragment$ItemSection<Fragment$ItemSection> get copyWith =>
       CopyWith$Fragment$ItemSection(this, (i) => i);
-
   _T when<_T>({
     required _T Function(Fragment$ItemSection$$PosterSection) posterSection,
     required _T Function(Fragment$ItemSection$$FeaturedSection) featuredSection,
@@ -9163,7 +9218,6 @@ extension ClientExtension$Fragment$ItemSection on graphql.GraphQLClient {
     data: data.toJson(),
     broadcast: broadcast,
   );
-
   Fragment$ItemSection? readFragment$ItemSection({
     required Map<String, dynamic> idFields,
     Variables$Fragment$ItemSection? variables,
@@ -19472,7 +19526,6 @@ class Fragment$GridSection {
 extension UtilityExtension$Fragment$GridSection on Fragment$GridSection {
   CopyWith$Fragment$GridSection<Fragment$GridSection> get copyWith =>
       CopyWith$Fragment$GridSection(this, (i) => i);
-
   _T when<_T>({
     required _T Function(Fragment$GridSection$$DefaultGridSection)
     defaultGridSection,
@@ -19715,7 +19768,6 @@ extension ClientExtension$Fragment$GridSection on graphql.GraphQLClient {
     data: data.toJson(),
     broadcast: broadcast,
   );
-
   Fragment$GridSection? readFragment$GridSection({
     required Map<String, dynamic> idFields,
     Variables$Fragment$GridSection? variables,
@@ -21072,7 +21124,6 @@ class Fragment$Section {
 extension UtilityExtension$Fragment$Section on Fragment$Section {
   CopyWith$Fragment$Section<Fragment$Section> get copyWith =>
       CopyWith$Fragment$Section(this, (i) => i);
-
   _T when<_T>({
     required _T Function(Fragment$Section$$PosterSection) posterSection,
     required _T Function(Fragment$Section$$FeaturedSection) featuredSection,
@@ -22516,7 +22567,6 @@ extension ClientExtension$Fragment$Section on graphql.GraphQLClient {
     data: data.toJson(),
     broadcast: broadcast,
   );
-
   Fragment$Section? readFragment$Section({
     required Map<String, dynamic> idFields,
     Variables$Fragment$Section? variables,
@@ -23703,7 +23753,6 @@ extension UtilityExtension$Fragment$Section$$PosterSection$items$items$item
   >
   get copyWith =>
       CopyWith$Fragment$Section$$PosterSection$items$items$item(this, (i) => i);
-
   _T when<_T>({
     required _T Function(
       Fragment$Section$$PosterSection$items$items$item$$Episode,
@@ -23974,6 +24023,7 @@ class Fragment$Section$$PosterSection$items$items$item$$Episode
     this.number,
     this.season,
     this.$__typename = 'Episode',
+    this.overrideUrl,
     required this.productionDate,
   });
 
@@ -23992,6 +24042,7 @@ class Fragment$Section$$PosterSection$items$items$item$$Episode
     final l$number = json['number'];
     final l$season = json['season'];
     final l$$__typename = json['__typename'];
+    final l$overrideUrl = json['overrideUrl'];
     final l$productionDate = json['productionDate'];
     return Fragment$Section$$PosterSection$items$items$item$$Episode(
       contributors: (l$contributors as List<dynamic>)
@@ -24017,6 +24068,7 @@ class Fragment$Section$$PosterSection$items$items$item$$Episode
               (l$season as Map<String, dynamic>),
             ),
       $__typename: (l$$__typename as String),
+      overrideUrl: (l$overrideUrl as String?),
       productionDate: (l$productionDate as String),
     );
   }
@@ -24049,6 +24101,8 @@ class Fragment$Section$$PosterSection$items$items$item$$Episode
 
   final String $__typename;
 
+  final String? overrideUrl;
+
   final String productionDate;
 
   Map<String, dynamic> toJson() {
@@ -24079,6 +24133,8 @@ class Fragment$Section$$PosterSection$items$items$item$$Episode
     _resultData['season'] = l$season?.toJson();
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
+    final l$overrideUrl = overrideUrl;
+    _resultData['overrideUrl'] = l$overrideUrl;
     final l$productionDate = productionDate;
     _resultData['productionDate'] = l$productionDate;
     return _resultData;
@@ -24098,6 +24154,7 @@ class Fragment$Section$$PosterSection$items$items$item$$Episode
     final l$number = number;
     final l$season = season;
     final l$$__typename = $__typename;
+    final l$overrideUrl = overrideUrl;
     final l$productionDate = productionDate;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
@@ -24112,6 +24169,7 @@ class Fragment$Section$$PosterSection$items$items$item$$Episode
       l$number,
       l$season,
       l$$__typename,
+      l$overrideUrl,
       l$productionDate,
     ]);
   }
@@ -24192,6 +24250,11 @@ class Fragment$Section$$PosterSection$items$items$item$$Episode
     if (l$$__typename != lOther$$__typename) {
       return false;
     }
+    final l$overrideUrl = overrideUrl;
+    final lOther$overrideUrl = other.overrideUrl;
+    if (l$overrideUrl != lOther$overrideUrl) {
+      return false;
+    }
     final l$productionDate = productionDate;
     final lOther$productionDate = other.productionDate;
     if (l$productionDate != lOther$productionDate) {
@@ -24242,6 +24305,7 @@ abstract class CopyWith$Fragment$Section$$PosterSection$items$items$item$$Episod
     int? number,
     Fragment$Section$$PosterSection$items$items$item$$Episode$season? season,
     String? $__typename,
+    String? overrideUrl,
     String? productionDate,
   });
   TRes contributors(
@@ -24295,6 +24359,7 @@ class _CopyWithImpl$Fragment$Section$$PosterSection$items$items$item$$Episode<
     Object? number = _undefined,
     Object? season = _undefined,
     Object? $__typename = _undefined,
+    Object? overrideUrl = _undefined,
     Object? productionDate = _undefined,
   }) => _then(
     Fragment$Section$$PosterSection$items$items$item$$Episode(
@@ -24332,6 +24397,9 @@ class _CopyWithImpl$Fragment$Section$$PosterSection$items$items$item$$Episode<
       $__typename: $__typename == _undefined || $__typename == null
           ? _instance.$__typename
           : ($__typename as String),
+      overrideUrl: overrideUrl == _undefined
+          ? _instance.overrideUrl
+          : (overrideUrl as String?),
       productionDate: productionDate == _undefined || productionDate == null
           ? _instance.productionDate
           : (productionDate as String),
@@ -24407,6 +24475,7 @@ class _CopyWithStubImpl$Fragment$Section$$PosterSection$items$items$item$$Episod
     int? number,
     Fragment$Section$$PosterSection$items$items$item$$Episode$season? season,
     String? $__typename,
+    String? overrideUrl,
     String? productionDate,
   }) => _res;
 
@@ -26998,7 +27067,6 @@ extension UtilityExtension$Fragment$Section$$PosterSection$items$items$item$$Pla
         this,
         (i) => i,
       );
-
   _T when<_T>({
     required _T Function(
       Fragment$Section$$PosterSection$items$items$item$$Playlist$items$items$$Episode,
@@ -29384,7 +29452,6 @@ extension UtilityExtension$Fragment$Section$$FeaturedSection$items$items$item
     this,
     (i) => i,
   );
-
   _T when<_T>({
     required _T Function(
       Fragment$Section$$FeaturedSection$items$items$item$$Episode,
@@ -29672,6 +29739,7 @@ class Fragment$Section$$FeaturedSection$items$items$item$$Episode
     this.number,
     this.season,
     this.$__typename = 'Episode',
+    this.overrideUrl,
   });
 
   factory Fragment$Section$$FeaturedSection$items$items$item$$Episode.fromJson(
@@ -29689,6 +29757,7 @@ class Fragment$Section$$FeaturedSection$items$items$item$$Episode
     final l$number = json['number'];
     final l$season = json['season'];
     final l$$__typename = json['__typename'];
+    final l$overrideUrl = json['overrideUrl'];
     return Fragment$Section$$FeaturedSection$items$items$item$$Episode(
       contributors: (l$contributors as List<dynamic>)
           .map(
@@ -29713,6 +29782,7 @@ class Fragment$Section$$FeaturedSection$items$items$item$$Episode
               (l$season as Map<String, dynamic>),
             ),
       $__typename: (l$$__typename as String),
+      overrideUrl: (l$overrideUrl as String?),
     );
   }
 
@@ -29744,6 +29814,8 @@ class Fragment$Section$$FeaturedSection$items$items$item$$Episode
 
   final String $__typename;
 
+  final String? overrideUrl;
+
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
     final l$contributors = contributors;
@@ -29772,6 +29844,8 @@ class Fragment$Section$$FeaturedSection$items$items$item$$Episode
     _resultData['season'] = l$season?.toJson();
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
+    final l$overrideUrl = overrideUrl;
+    _resultData['overrideUrl'] = l$overrideUrl;
     return _resultData;
   }
 
@@ -29789,6 +29863,7 @@ class Fragment$Section$$FeaturedSection$items$items$item$$Episode
     final l$number = number;
     final l$season = season;
     final l$$__typename = $__typename;
+    final l$overrideUrl = overrideUrl;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
       l$description,
@@ -29802,6 +29877,7 @@ class Fragment$Section$$FeaturedSection$items$items$item$$Episode
       l$number,
       l$season,
       l$$__typename,
+      l$overrideUrl,
     ]);
   }
 
@@ -29881,6 +29957,11 @@ class Fragment$Section$$FeaturedSection$items$items$item$$Episode
     if (l$$__typename != lOther$$__typename) {
       return false;
     }
+    final l$overrideUrl = overrideUrl;
+    final lOther$overrideUrl = other.overrideUrl;
+    if (l$overrideUrl != lOther$overrideUrl) {
+      return false;
+    }
     return true;
   }
 }
@@ -29926,6 +30007,7 @@ abstract class CopyWith$Fragment$Section$$FeaturedSection$items$items$item$$Epis
     int? number,
     Fragment$Section$$FeaturedSection$items$items$item$$Episode$season? season,
     String? $__typename,
+    String? overrideUrl,
   });
   TRes contributors(
     Iterable<
@@ -29980,6 +30062,7 @@ class _CopyWithImpl$Fragment$Section$$FeaturedSection$items$items$item$$Episode<
     Object? number = _undefined,
     Object? season = _undefined,
     Object? $__typename = _undefined,
+    Object? overrideUrl = _undefined,
   }) => _then(
     Fragment$Section$$FeaturedSection$items$items$item$$Episode(
       contributors: contributors == _undefined || contributors == null
@@ -30016,6 +30099,9 @@ class _CopyWithImpl$Fragment$Section$$FeaturedSection$items$items$item$$Episode<
       $__typename: $__typename == _undefined || $__typename == null
           ? _instance.$__typename
           : ($__typename as String),
+      overrideUrl: overrideUrl == _undefined
+          ? _instance.overrideUrl
+          : (overrideUrl as String?),
     ),
   );
 
@@ -30088,6 +30174,7 @@ class _CopyWithStubImpl$Fragment$Section$$FeaturedSection$items$items$item$$Epis
     int? number,
     Fragment$Section$$FeaturedSection$items$items$item$$Episode$season? season,
     String? $__typename,
+    String? overrideUrl,
   }) => _res;
 
   contributors(_fn) => _res;
@@ -33457,7 +33544,6 @@ extension UtilityExtension$Fragment$Section$$DefaultSection$items$items$item
     this,
     (i) => i,
   );
-
   _T when<_T>({
     required _T Function(
       Fragment$Section$$DefaultSection$items$items$item$$Episode,
@@ -33743,6 +33829,7 @@ class Fragment$Section$$DefaultSection$items$items$item$$Episode
     this.number,
     this.season,
     this.$__typename = 'Episode',
+    this.overrideUrl,
     required this.productionDate,
   });
 
@@ -33761,6 +33848,7 @@ class Fragment$Section$$DefaultSection$items$items$item$$Episode
     final l$number = json['number'];
     final l$season = json['season'];
     final l$$__typename = json['__typename'];
+    final l$overrideUrl = json['overrideUrl'];
     final l$productionDate = json['productionDate'];
     return Fragment$Section$$DefaultSection$items$items$item$$Episode(
       contributors: (l$contributors as List<dynamic>)
@@ -33786,6 +33874,7 @@ class Fragment$Section$$DefaultSection$items$items$item$$Episode
               (l$season as Map<String, dynamic>),
             ),
       $__typename: (l$$__typename as String),
+      overrideUrl: (l$overrideUrl as String?),
       productionDate: (l$productionDate as String),
     );
   }
@@ -33818,6 +33907,8 @@ class Fragment$Section$$DefaultSection$items$items$item$$Episode
 
   final String $__typename;
 
+  final String? overrideUrl;
+
   final String productionDate;
 
   Map<String, dynamic> toJson() {
@@ -33848,6 +33939,8 @@ class Fragment$Section$$DefaultSection$items$items$item$$Episode
     _resultData['season'] = l$season?.toJson();
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
+    final l$overrideUrl = overrideUrl;
+    _resultData['overrideUrl'] = l$overrideUrl;
     final l$productionDate = productionDate;
     _resultData['productionDate'] = l$productionDate;
     return _resultData;
@@ -33867,6 +33960,7 @@ class Fragment$Section$$DefaultSection$items$items$item$$Episode
     final l$number = number;
     final l$season = season;
     final l$$__typename = $__typename;
+    final l$overrideUrl = overrideUrl;
     final l$productionDate = productionDate;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
@@ -33881,6 +33975,7 @@ class Fragment$Section$$DefaultSection$items$items$item$$Episode
       l$number,
       l$season,
       l$$__typename,
+      l$overrideUrl,
       l$productionDate,
     ]);
   }
@@ -33961,6 +34056,11 @@ class Fragment$Section$$DefaultSection$items$items$item$$Episode
     if (l$$__typename != lOther$$__typename) {
       return false;
     }
+    final l$overrideUrl = overrideUrl;
+    final lOther$overrideUrl = other.overrideUrl;
+    if (l$overrideUrl != lOther$overrideUrl) {
+      return false;
+    }
     final l$productionDate = productionDate;
     final lOther$productionDate = other.productionDate;
     if (l$productionDate != lOther$productionDate) {
@@ -34011,6 +34111,7 @@ abstract class CopyWith$Fragment$Section$$DefaultSection$items$items$item$$Episo
     int? number,
     Fragment$Section$$DefaultSection$items$items$item$$Episode$season? season,
     String? $__typename,
+    String? overrideUrl,
     String? productionDate,
   });
   TRes contributors(
@@ -34066,6 +34167,7 @@ class _CopyWithImpl$Fragment$Section$$DefaultSection$items$items$item$$Episode<
     Object? number = _undefined,
     Object? season = _undefined,
     Object? $__typename = _undefined,
+    Object? overrideUrl = _undefined,
     Object? productionDate = _undefined,
   }) => _then(
     Fragment$Section$$DefaultSection$items$items$item$$Episode(
@@ -34103,6 +34205,9 @@ class _CopyWithImpl$Fragment$Section$$DefaultSection$items$items$item$$Episode<
       $__typename: $__typename == _undefined || $__typename == null
           ? _instance.$__typename
           : ($__typename as String),
+      overrideUrl: overrideUrl == _undefined
+          ? _instance.overrideUrl
+          : (overrideUrl as String?),
       productionDate: productionDate == _undefined || productionDate == null
           ? _instance.productionDate
           : (productionDate as String),
@@ -34178,6 +34283,7 @@ class _CopyWithStubImpl$Fragment$Section$$DefaultSection$items$items$item$$Episo
     int? number,
     Fragment$Section$$DefaultSection$items$items$item$$Episode$season? season,
     String? $__typename,
+    String? overrideUrl,
     String? productionDate,
   }) => _res;
 
@@ -37533,7 +37639,6 @@ extension UtilityExtension$Fragment$Section$$CardSection$items$items$item
   >
   get copyWith =>
       CopyWith$Fragment$Section$$CardSection$items$items$item(this, (i) => i);
-
   _T when<_T>({
     required _T Function(
       Fragment$Section$$CardSection$items$items$item$$Episode,
@@ -37796,6 +37901,7 @@ class Fragment$Section$$CardSection$items$items$item$$Episode
     this.number,
     this.season,
     this.$__typename = 'Episode',
+    this.overrideUrl,
   });
 
   factory Fragment$Section$$CardSection$items$items$item$$Episode.fromJson(
@@ -37813,6 +37919,7 @@ class Fragment$Section$$CardSection$items$items$item$$Episode
     final l$number = json['number'];
     final l$season = json['season'];
     final l$$__typename = json['__typename'];
+    final l$overrideUrl = json['overrideUrl'];
     return Fragment$Section$$CardSection$items$items$item$$Episode(
       contributors: (l$contributors as List<dynamic>)
           .map(
@@ -37837,6 +37944,7 @@ class Fragment$Section$$CardSection$items$items$item$$Episode
               (l$season as Map<String, dynamic>),
             ),
       $__typename: (l$$__typename as String),
+      overrideUrl: (l$overrideUrl as String?),
     );
   }
 
@@ -37867,6 +37975,8 @@ class Fragment$Section$$CardSection$items$items$item$$Episode
 
   final String $__typename;
 
+  final String? overrideUrl;
+
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
     final l$contributors = contributors;
@@ -37895,6 +38005,8 @@ class Fragment$Section$$CardSection$items$items$item$$Episode
     _resultData['season'] = l$season?.toJson();
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
+    final l$overrideUrl = overrideUrl;
+    _resultData['overrideUrl'] = l$overrideUrl;
     return _resultData;
   }
 
@@ -37912,6 +38024,7 @@ class Fragment$Section$$CardSection$items$items$item$$Episode
     final l$number = number;
     final l$season = season;
     final l$$__typename = $__typename;
+    final l$overrideUrl = overrideUrl;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
       l$description,
@@ -37925,6 +38038,7 @@ class Fragment$Section$$CardSection$items$items$item$$Episode
       l$number,
       l$season,
       l$$__typename,
+      l$overrideUrl,
     ]);
   }
 
@@ -38004,6 +38118,11 @@ class Fragment$Section$$CardSection$items$items$item$$Episode
     if (l$$__typename != lOther$$__typename) {
       return false;
     }
+    final l$overrideUrl = overrideUrl;
+    final lOther$overrideUrl = other.overrideUrl;
+    if (l$overrideUrl != lOther$overrideUrl) {
+      return false;
+    }
     return true;
   }
 }
@@ -38046,6 +38165,7 @@ abstract class CopyWith$Fragment$Section$$CardSection$items$items$item$$Episode<
     int? number,
     Fragment$Section$$CardSection$items$items$item$$Episode$season? season,
     String? $__typename,
+    String? overrideUrl,
   });
   TRes contributors(
     Iterable<
@@ -38094,6 +38214,7 @@ class _CopyWithImpl$Fragment$Section$$CardSection$items$items$item$$Episode<
     Object? number = _undefined,
     Object? season = _undefined,
     Object? $__typename = _undefined,
+    Object? overrideUrl = _undefined,
   }) => _then(
     Fragment$Section$$CardSection$items$items$item$$Episode(
       contributors: contributors == _undefined || contributors == null
@@ -38130,6 +38251,9 @@ class _CopyWithImpl$Fragment$Section$$CardSection$items$items$item$$Episode<
       $__typename: $__typename == _undefined || $__typename == null
           ? _instance.$__typename
           : ($__typename as String),
+      overrideUrl: overrideUrl == _undefined
+          ? _instance.overrideUrl
+          : (overrideUrl as String?),
     ),
   );
 
@@ -38196,6 +38320,7 @@ class _CopyWithStubImpl$Fragment$Section$$CardSection$items$items$item$$Episode<
     int? number,
     Fragment$Section$$CardSection$items$items$item$$Episode$season? season,
     String? $__typename,
+    String? overrideUrl,
   }) => _res;
 
   contributors(_fn) => _res;
@@ -41671,7 +41796,6 @@ extension UtilityExtension$Fragment$Section$$ListSection$items$items$item
   >
   get copyWith =>
       CopyWith$Fragment$Section$$ListSection$items$items$item(this, (i) => i);
-
   _T when<_T>({
     required _T Function(
       Fragment$Section$$ListSection$items$items$item$$Episode,
@@ -41933,6 +42057,7 @@ class Fragment$Section$$ListSection$items$items$item$$Episode
     this.number,
     this.season,
     this.$__typename = 'Episode',
+    this.overrideUrl,
     required this.ageRating,
   });
 
@@ -41951,6 +42076,7 @@ class Fragment$Section$$ListSection$items$items$item$$Episode
     final l$number = json['number'];
     final l$season = json['season'];
     final l$$__typename = json['__typename'];
+    final l$overrideUrl = json['overrideUrl'];
     final l$ageRating = json['ageRating'];
     return Fragment$Section$$ListSection$items$items$item$$Episode(
       contributors: (l$contributors as List<dynamic>)
@@ -41976,6 +42102,7 @@ class Fragment$Section$$ListSection$items$items$item$$Episode
               (l$season as Map<String, dynamic>),
             ),
       $__typename: (l$$__typename as String),
+      overrideUrl: (l$overrideUrl as String?),
       ageRating: (l$ageRating as String),
     );
   }
@@ -42007,6 +42134,8 @@ class Fragment$Section$$ListSection$items$items$item$$Episode
 
   final String $__typename;
 
+  final String? overrideUrl;
+
   final String ageRating;
 
   Map<String, dynamic> toJson() {
@@ -42037,6 +42166,8 @@ class Fragment$Section$$ListSection$items$items$item$$Episode
     _resultData['season'] = l$season?.toJson();
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
+    final l$overrideUrl = overrideUrl;
+    _resultData['overrideUrl'] = l$overrideUrl;
     final l$ageRating = ageRating;
     _resultData['ageRating'] = l$ageRating;
     return _resultData;
@@ -42056,6 +42187,7 @@ class Fragment$Section$$ListSection$items$items$item$$Episode
     final l$number = number;
     final l$season = season;
     final l$$__typename = $__typename;
+    final l$overrideUrl = overrideUrl;
     final l$ageRating = ageRating;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
@@ -42070,6 +42202,7 @@ class Fragment$Section$$ListSection$items$items$item$$Episode
       l$number,
       l$season,
       l$$__typename,
+      l$overrideUrl,
       l$ageRating,
     ]);
   }
@@ -42150,6 +42283,11 @@ class Fragment$Section$$ListSection$items$items$item$$Episode
     if (l$$__typename != lOther$$__typename) {
       return false;
     }
+    final l$overrideUrl = overrideUrl;
+    final lOther$overrideUrl = other.overrideUrl;
+    if (l$overrideUrl != lOther$overrideUrl) {
+      return false;
+    }
     final l$ageRating = ageRating;
     final lOther$ageRating = other.ageRating;
     if (l$ageRating != lOther$ageRating) {
@@ -42197,6 +42335,7 @@ abstract class CopyWith$Fragment$Section$$ListSection$items$items$item$$Episode<
     int? number,
     Fragment$Section$$ListSection$items$items$item$$Episode$season? season,
     String? $__typename,
+    String? overrideUrl,
     String? ageRating,
   });
   TRes contributors(
@@ -42246,6 +42385,7 @@ class _CopyWithImpl$Fragment$Section$$ListSection$items$items$item$$Episode<
     Object? number = _undefined,
     Object? season = _undefined,
     Object? $__typename = _undefined,
+    Object? overrideUrl = _undefined,
     Object? ageRating = _undefined,
   }) => _then(
     Fragment$Section$$ListSection$items$items$item$$Episode(
@@ -42283,6 +42423,9 @@ class _CopyWithImpl$Fragment$Section$$ListSection$items$items$item$$Episode<
       $__typename: $__typename == _undefined || $__typename == null
           ? _instance.$__typename
           : ($__typename as String),
+      overrideUrl: overrideUrl == _undefined
+          ? _instance.overrideUrl
+          : (overrideUrl as String?),
       ageRating: ageRating == _undefined || ageRating == null
           ? _instance.ageRating
           : (ageRating as String),
@@ -42352,6 +42495,7 @@ class _CopyWithStubImpl$Fragment$Section$$ListSection$items$items$item$$Episode<
     int? number,
     Fragment$Section$$ListSection$items$items$item$$Episode$season? season,
     String? $__typename,
+    String? overrideUrl,
     String? ageRating,
   }) => _res;
 
@@ -45682,7 +45826,6 @@ extension UtilityExtension$Fragment$Section$$CardListSection$items$items$item
     this,
     (i) => i,
   );
-
   _T when<_T>({
     required _T Function(
       Fragment$Section$$CardListSection$items$items$item$$Episode,
@@ -45971,6 +46114,7 @@ class Fragment$Section$$CardListSection$items$items$item$$Episode
     this.number,
     this.season,
     this.$__typename = 'Episode',
+    this.overrideUrl,
   });
 
   factory Fragment$Section$$CardListSection$items$items$item$$Episode.fromJson(
@@ -45988,6 +46132,7 @@ class Fragment$Section$$CardListSection$items$items$item$$Episode
     final l$number = json['number'];
     final l$season = json['season'];
     final l$$__typename = json['__typename'];
+    final l$overrideUrl = json['overrideUrl'];
     return Fragment$Section$$CardListSection$items$items$item$$Episode(
       contributors: (l$contributors as List<dynamic>)
           .map(
@@ -46012,6 +46157,7 @@ class Fragment$Section$$CardListSection$items$items$item$$Episode
               (l$season as Map<String, dynamic>),
             ),
       $__typename: (l$$__typename as String),
+      overrideUrl: (l$overrideUrl as String?),
     );
   }
 
@@ -46043,6 +46189,8 @@ class Fragment$Section$$CardListSection$items$items$item$$Episode
 
   final String $__typename;
 
+  final String? overrideUrl;
+
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
     final l$contributors = contributors;
@@ -46071,6 +46219,8 @@ class Fragment$Section$$CardListSection$items$items$item$$Episode
     _resultData['season'] = l$season?.toJson();
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
+    final l$overrideUrl = overrideUrl;
+    _resultData['overrideUrl'] = l$overrideUrl;
     return _resultData;
   }
 
@@ -46088,6 +46238,7 @@ class Fragment$Section$$CardListSection$items$items$item$$Episode
     final l$number = number;
     final l$season = season;
     final l$$__typename = $__typename;
+    final l$overrideUrl = overrideUrl;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
       l$description,
@@ -46101,6 +46252,7 @@ class Fragment$Section$$CardListSection$items$items$item$$Episode
       l$number,
       l$season,
       l$$__typename,
+      l$overrideUrl,
     ]);
   }
 
@@ -46180,6 +46332,11 @@ class Fragment$Section$$CardListSection$items$items$item$$Episode
     if (l$$__typename != lOther$$__typename) {
       return false;
     }
+    final l$overrideUrl = overrideUrl;
+    final lOther$overrideUrl = other.overrideUrl;
+    if (l$overrideUrl != lOther$overrideUrl) {
+      return false;
+    }
     return true;
   }
 }
@@ -46225,6 +46382,7 @@ abstract class CopyWith$Fragment$Section$$CardListSection$items$items$item$$Epis
     int? number,
     Fragment$Section$$CardListSection$items$items$item$$Episode$season? season,
     String? $__typename,
+    String? overrideUrl,
   });
   TRes contributors(
     Iterable<
@@ -46279,6 +46437,7 @@ class _CopyWithImpl$Fragment$Section$$CardListSection$items$items$item$$Episode<
     Object? number = _undefined,
     Object? season = _undefined,
     Object? $__typename = _undefined,
+    Object? overrideUrl = _undefined,
   }) => _then(
     Fragment$Section$$CardListSection$items$items$item$$Episode(
       contributors: contributors == _undefined || contributors == null
@@ -46315,6 +46474,9 @@ class _CopyWithImpl$Fragment$Section$$CardListSection$items$items$item$$Episode<
       $__typename: $__typename == _undefined || $__typename == null
           ? _instance.$__typename
           : ($__typename as String),
+      overrideUrl: overrideUrl == _undefined
+          ? _instance.overrideUrl
+          : (overrideUrl as String?),
     ),
   );
 
@@ -46387,6 +46549,7 @@ class _CopyWithStubImpl$Fragment$Section$$CardListSection$items$items$item$$Epis
     int? number,
     Fragment$Section$$CardListSection$items$items$item$$Episode$season? season,
     String? $__typename,
+    String? overrideUrl,
   }) => _res;
 
   contributors(_fn) => _res;
@@ -49996,7 +50159,6 @@ extension UtilityExtension$Fragment$Section$$DefaultGridSection$items$items$item
         this,
         (i) => i,
       );
-
   _T when<_T>({
     required _T Function(
       Fragment$Section$$DefaultGridSection$items$items$item$$Episode,
@@ -50302,6 +50464,7 @@ class Fragment$Section$$DefaultGridSection$items$items$item$$Episode
     this.number,
     this.season,
     this.$__typename = 'Episode',
+    this.overrideUrl,
   });
 
   factory Fragment$Section$$DefaultGridSection$items$items$item$$Episode.fromJson(
@@ -50319,6 +50482,7 @@ class Fragment$Section$$DefaultGridSection$items$items$item$$Episode
     final l$number = json['number'];
     final l$season = json['season'];
     final l$$__typename = json['__typename'];
+    final l$overrideUrl = json['overrideUrl'];
     return Fragment$Section$$DefaultGridSection$items$items$item$$Episode(
       contributors: (l$contributors as List<dynamic>)
           .map(
@@ -50343,6 +50507,7 @@ class Fragment$Section$$DefaultGridSection$items$items$item$$Episode
               (l$season as Map<String, dynamic>),
             ),
       $__typename: (l$$__typename as String),
+      overrideUrl: (l$overrideUrl as String?),
     );
   }
 
@@ -50374,6 +50539,8 @@ class Fragment$Section$$DefaultGridSection$items$items$item$$Episode
 
   final String $__typename;
 
+  final String? overrideUrl;
+
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
     final l$contributors = contributors;
@@ -50402,6 +50569,8 @@ class Fragment$Section$$DefaultGridSection$items$items$item$$Episode
     _resultData['season'] = l$season?.toJson();
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
+    final l$overrideUrl = overrideUrl;
+    _resultData['overrideUrl'] = l$overrideUrl;
     return _resultData;
   }
 
@@ -50419,6 +50588,7 @@ class Fragment$Section$$DefaultGridSection$items$items$item$$Episode
     final l$number = number;
     final l$season = season;
     final l$$__typename = $__typename;
+    final l$overrideUrl = overrideUrl;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
       l$description,
@@ -50432,6 +50602,7 @@ class Fragment$Section$$DefaultGridSection$items$items$item$$Episode
       l$number,
       l$season,
       l$$__typename,
+      l$overrideUrl,
     ]);
   }
 
@@ -50512,6 +50683,11 @@ class Fragment$Section$$DefaultGridSection$items$items$item$$Episode
     if (l$$__typename != lOther$$__typename) {
       return false;
     }
+    final l$overrideUrl = overrideUrl;
+    final lOther$overrideUrl = other.overrideUrl;
+    if (l$overrideUrl != lOther$overrideUrl) {
+      return false;
+    }
     return true;
   }
 }
@@ -50560,6 +50736,7 @@ abstract class CopyWith$Fragment$Section$$DefaultGridSection$items$items$item$$E
     Fragment$Section$$DefaultGridSection$items$items$item$$Episode$season?
     season,
     String? $__typename,
+    String? overrideUrl,
   });
   TRes contributors(
     Iterable<
@@ -50615,6 +50792,7 @@ class _CopyWithImpl$Fragment$Section$$DefaultGridSection$items$items$item$$Episo
     Object? number = _undefined,
     Object? season = _undefined,
     Object? $__typename = _undefined,
+    Object? overrideUrl = _undefined,
   }) => _then(
     Fragment$Section$$DefaultGridSection$items$items$item$$Episode(
       contributors: contributors == _undefined || contributors == null
@@ -50651,6 +50829,9 @@ class _CopyWithImpl$Fragment$Section$$DefaultGridSection$items$items$item$$Episo
       $__typename: $__typename == _undefined || $__typename == null
           ? _instance.$__typename
           : ($__typename as String),
+      overrideUrl: overrideUrl == _undefined
+          ? _instance.overrideUrl
+          : (overrideUrl as String?),
     ),
   );
 
@@ -50724,6 +50905,7 @@ class _CopyWithStubImpl$Fragment$Section$$DefaultGridSection$items$items$item$$E
     Fragment$Section$$DefaultGridSection$items$items$item$$Episode$season?
     season,
     String? $__typename,
+    String? overrideUrl,
   }) => _res;
 
   contributors(_fn) => _res;
@@ -54151,7 +54333,6 @@ extension UtilityExtension$Fragment$Section$$PosterGridSection$items$items$item
     this,
     (i) => i,
   );
-
   _T when<_T>({
     required _T Function(
       Fragment$Section$$PosterGridSection$items$items$item$$Episode,
@@ -54453,6 +54634,7 @@ class Fragment$Section$$PosterGridSection$items$items$item$$Episode
     this.number,
     this.season,
     this.$__typename = 'Episode',
+    this.overrideUrl,
   });
 
   factory Fragment$Section$$PosterGridSection$items$items$item$$Episode.fromJson(
@@ -54470,6 +54652,7 @@ class Fragment$Section$$PosterGridSection$items$items$item$$Episode
     final l$number = json['number'];
     final l$season = json['season'];
     final l$$__typename = json['__typename'];
+    final l$overrideUrl = json['overrideUrl'];
     return Fragment$Section$$PosterGridSection$items$items$item$$Episode(
       contributors: (l$contributors as List<dynamic>)
           .map(
@@ -54494,6 +54677,7 @@ class Fragment$Section$$PosterGridSection$items$items$item$$Episode
               (l$season as Map<String, dynamic>),
             ),
       $__typename: (l$$__typename as String),
+      overrideUrl: (l$overrideUrl as String?),
     );
   }
 
@@ -54525,6 +54709,8 @@ class Fragment$Section$$PosterGridSection$items$items$item$$Episode
 
   final String $__typename;
 
+  final String? overrideUrl;
+
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
     final l$contributors = contributors;
@@ -54553,6 +54739,8 @@ class Fragment$Section$$PosterGridSection$items$items$item$$Episode
     _resultData['season'] = l$season?.toJson();
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
+    final l$overrideUrl = overrideUrl;
+    _resultData['overrideUrl'] = l$overrideUrl;
     return _resultData;
   }
 
@@ -54570,6 +54758,7 @@ class Fragment$Section$$PosterGridSection$items$items$item$$Episode
     final l$number = number;
     final l$season = season;
     final l$$__typename = $__typename;
+    final l$overrideUrl = overrideUrl;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
       l$description,
@@ -54583,6 +54772,7 @@ class Fragment$Section$$PosterGridSection$items$items$item$$Episode
       l$number,
       l$season,
       l$$__typename,
+      l$overrideUrl,
     ]);
   }
 
@@ -54663,6 +54853,11 @@ class Fragment$Section$$PosterGridSection$items$items$item$$Episode
     if (l$$__typename != lOther$$__typename) {
       return false;
     }
+    final l$overrideUrl = overrideUrl;
+    final lOther$overrideUrl = other.overrideUrl;
+    if (l$overrideUrl != lOther$overrideUrl) {
+      return false;
+    }
     return true;
   }
 }
@@ -54709,6 +54904,7 @@ abstract class CopyWith$Fragment$Section$$PosterGridSection$items$items$item$$Ep
     Fragment$Section$$PosterGridSection$items$items$item$$Episode$season?
     season,
     String? $__typename,
+    String? overrideUrl,
   });
   TRes contributors(
     Iterable<
@@ -54763,6 +54959,7 @@ class _CopyWithImpl$Fragment$Section$$PosterGridSection$items$items$item$$Episod
     Object? number = _undefined,
     Object? season = _undefined,
     Object? $__typename = _undefined,
+    Object? overrideUrl = _undefined,
   }) => _then(
     Fragment$Section$$PosterGridSection$items$items$item$$Episode(
       contributors: contributors == _undefined || contributors == null
@@ -54799,6 +54996,9 @@ class _CopyWithImpl$Fragment$Section$$PosterGridSection$items$items$item$$Episod
       $__typename: $__typename == _undefined || $__typename == null
           ? _instance.$__typename
           : ($__typename as String),
+      overrideUrl: overrideUrl == _undefined
+          ? _instance.overrideUrl
+          : (overrideUrl as String?),
     ),
   );
 
@@ -54872,6 +55072,7 @@ class _CopyWithStubImpl$Fragment$Section$$PosterGridSection$items$items$item$$Ep
     Fragment$Section$$PosterGridSection$items$items$item$$Episode$season?
     season,
     String? $__typename,
+    String? overrideUrl,
   }) => _res;
 
   contributors(_fn) => _res;
@@ -58285,7 +58486,6 @@ extension UtilityExtension$Fragment$Section$$IconGridSection$items$items$item
     this,
     (i) => i,
   );
-
   _T when<_T>({
     required _T Function(
       Fragment$Section$$IconGridSection$items$items$item$$Episode,
@@ -58574,6 +58774,7 @@ class Fragment$Section$$IconGridSection$items$items$item$$Episode
     this.number,
     this.season,
     this.$__typename = 'Episode',
+    this.overrideUrl,
   });
 
   factory Fragment$Section$$IconGridSection$items$items$item$$Episode.fromJson(
@@ -58591,6 +58792,7 @@ class Fragment$Section$$IconGridSection$items$items$item$$Episode
     final l$number = json['number'];
     final l$season = json['season'];
     final l$$__typename = json['__typename'];
+    final l$overrideUrl = json['overrideUrl'];
     return Fragment$Section$$IconGridSection$items$items$item$$Episode(
       contributors: (l$contributors as List<dynamic>)
           .map(
@@ -58615,6 +58817,7 @@ class Fragment$Section$$IconGridSection$items$items$item$$Episode
               (l$season as Map<String, dynamic>),
             ),
       $__typename: (l$$__typename as String),
+      overrideUrl: (l$overrideUrl as String?),
     );
   }
 
@@ -58646,6 +58849,8 @@ class Fragment$Section$$IconGridSection$items$items$item$$Episode
 
   final String $__typename;
 
+  final String? overrideUrl;
+
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
     final l$contributors = contributors;
@@ -58674,6 +58879,8 @@ class Fragment$Section$$IconGridSection$items$items$item$$Episode
     _resultData['season'] = l$season?.toJson();
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
+    final l$overrideUrl = overrideUrl;
+    _resultData['overrideUrl'] = l$overrideUrl;
     return _resultData;
   }
 
@@ -58691,6 +58898,7 @@ class Fragment$Section$$IconGridSection$items$items$item$$Episode
     final l$number = number;
     final l$season = season;
     final l$$__typename = $__typename;
+    final l$overrideUrl = overrideUrl;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
       l$description,
@@ -58704,6 +58912,7 @@ class Fragment$Section$$IconGridSection$items$items$item$$Episode
       l$number,
       l$season,
       l$$__typename,
+      l$overrideUrl,
     ]);
   }
 
@@ -58783,6 +58992,11 @@ class Fragment$Section$$IconGridSection$items$items$item$$Episode
     if (l$$__typename != lOther$$__typename) {
       return false;
     }
+    final l$overrideUrl = overrideUrl;
+    final lOther$overrideUrl = other.overrideUrl;
+    if (l$overrideUrl != lOther$overrideUrl) {
+      return false;
+    }
     return true;
   }
 }
@@ -58828,6 +59042,7 @@ abstract class CopyWith$Fragment$Section$$IconGridSection$items$items$item$$Epis
     int? number,
     Fragment$Section$$IconGridSection$items$items$item$$Episode$season? season,
     String? $__typename,
+    String? overrideUrl,
   });
   TRes contributors(
     Iterable<
@@ -58882,6 +59097,7 @@ class _CopyWithImpl$Fragment$Section$$IconGridSection$items$items$item$$Episode<
     Object? number = _undefined,
     Object? season = _undefined,
     Object? $__typename = _undefined,
+    Object? overrideUrl = _undefined,
   }) => _then(
     Fragment$Section$$IconGridSection$items$items$item$$Episode(
       contributors: contributors == _undefined || contributors == null
@@ -58918,6 +59134,9 @@ class _CopyWithImpl$Fragment$Section$$IconGridSection$items$items$item$$Episode<
       $__typename: $__typename == _undefined || $__typename == null
           ? _instance.$__typename
           : ($__typename as String),
+      overrideUrl: overrideUrl == _undefined
+          ? _instance.overrideUrl
+          : (overrideUrl as String?),
     ),
   );
 
@@ -58990,6 +59209,7 @@ class _CopyWithStubImpl$Fragment$Section$$IconGridSection$items$items$item$$Epis
     int? number,
     Fragment$Section$$IconGridSection$items$items$item$$Episode$season? season,
     String? $__typename,
+    String? overrideUrl,
   }) => _res;
 
   contributors(_fn) => _res;
@@ -65908,7 +66128,6 @@ extension ClientExtension$Fragment$CardItem on graphql.GraphQLClient {
     data: data.toJson(),
     broadcast: broadcast,
   );
-
   Fragment$CardItem? readFragment$CardItem({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -66003,7 +66222,6 @@ class Fragment$CardItem$item implements Fragment$ItemSectionItem$item {
 extension UtilityExtension$Fragment$CardItem$item on Fragment$CardItem$item {
   CopyWith$Fragment$CardItem$item<Fragment$CardItem$item> get copyWith =>
       CopyWith$Fragment$CardItem$item(this, (i) => i);
-
   _T when<_T>({
     required _T Function(Fragment$CardItem$item$$Episode) episode,
     required _T Function(Fragment$CardItem$item$$Show) show,
@@ -66202,6 +66420,7 @@ class Fragment$CardItem$item$$Episode
     this.number,
     this.season,
     this.$__typename = 'Episode',
+    this.overrideUrl,
   });
 
   factory Fragment$CardItem$item$$Episode.fromJson(Map<String, dynamic> json) {
@@ -66217,6 +66436,7 @@ class Fragment$CardItem$item$$Episode
     final l$number = json['number'];
     final l$season = json['season'];
     final l$$__typename = json['__typename'];
+    final l$overrideUrl = json['overrideUrl'];
     return Fragment$CardItem$item$$Episode(
       contributors: (l$contributors as List<dynamic>)
           .map(
@@ -66240,6 +66460,7 @@ class Fragment$CardItem$item$$Episode
               (l$season as Map<String, dynamic>),
             ),
       $__typename: (l$$__typename as String),
+      overrideUrl: (l$overrideUrl as String?),
     );
   }
 
@@ -66266,6 +66487,8 @@ class Fragment$CardItem$item$$Episode
   final Fragment$CardItem$item$$Episode$season? season;
 
   final String $__typename;
+
+  final String? overrideUrl;
 
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
@@ -66295,6 +66518,8 @@ class Fragment$CardItem$item$$Episode
     _resultData['season'] = l$season?.toJson();
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
+    final l$overrideUrl = overrideUrl;
+    _resultData['overrideUrl'] = l$overrideUrl;
     return _resultData;
   }
 
@@ -66312,6 +66537,7 @@ class Fragment$CardItem$item$$Episode
     final l$number = number;
     final l$season = season;
     final l$$__typename = $__typename;
+    final l$overrideUrl = overrideUrl;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
       l$description,
@@ -66325,6 +66551,7 @@ class Fragment$CardItem$item$$Episode
       l$number,
       l$season,
       l$$__typename,
+      l$overrideUrl,
     ]);
   }
 
@@ -66404,6 +66631,11 @@ class Fragment$CardItem$item$$Episode
     if (l$$__typename != lOther$$__typename) {
       return false;
     }
+    final l$overrideUrl = overrideUrl;
+    final lOther$overrideUrl = other.overrideUrl;
+    if (l$overrideUrl != lOther$overrideUrl) {
+      return false;
+    }
     return true;
   }
 }
@@ -66436,6 +66668,7 @@ abstract class CopyWith$Fragment$CardItem$item$$Episode<TRes> {
     int? number,
     Fragment$CardItem$item$$Episode$season? season,
     String? $__typename,
+    String? overrideUrl,
   });
   TRes contributors(
     Iterable<Fragment$CardItem$item$$Episode$contributors> Function(
@@ -66473,6 +66706,7 @@ class _CopyWithImpl$Fragment$CardItem$item$$Episode<TRes>
     Object? number = _undefined,
     Object? season = _undefined,
     Object? $__typename = _undefined,
+    Object? overrideUrl = _undefined,
   }) => _then(
     Fragment$CardItem$item$$Episode(
       contributors: contributors == _undefined || contributors == null
@@ -66506,6 +66740,9 @@ class _CopyWithImpl$Fragment$CardItem$item$$Episode<TRes>
       $__typename: $__typename == _undefined || $__typename == null
           ? _instance.$__typename
           : ($__typename as String),
+      overrideUrl: overrideUrl == _undefined
+          ? _instance.overrideUrl
+          : (overrideUrl as String?),
     ),
   );
 
@@ -66557,6 +66794,7 @@ class _CopyWithStubImpl$Fragment$CardItem$item$$Episode<TRes>
     int? number,
     Fragment$CardItem$item$$Episode$season? season,
     String? $__typename,
+    String? overrideUrl,
   }) => _res;
 
   contributors(_fn) => _res;
@@ -69234,11 +69472,9 @@ extension ClientExtension$Query$Page on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$Page>> query$Page(
     Options$Query$Page options,
   ) async => await this.query(options);
-
   graphql.ObservableQuery<Query$Page> watchQuery$Page(
     WatchOptions$Query$Page options,
   ) => this.watchQuery(options);
-
   void writeQuery$Page({
     required Query$Page data,
     required Variables$Query$Page variables,
@@ -69251,7 +69487,6 @@ extension ClientExtension$Query$Page on graphql.GraphQLClient {
     data: data.toJson(),
     broadcast: broadcast,
   );
-
   Query$Page? readQuery$Page({
     required Variables$Query$Page variables,
     bool optimistic = true,

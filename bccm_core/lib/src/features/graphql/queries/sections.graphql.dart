@@ -561,12 +561,10 @@ extension ClientExtension$Query$FetchMoreItemsForItemSection
   query$FetchMoreItemsForItemSection(
     Options$Query$FetchMoreItemsForItemSection options,
   ) async => await this.query(options);
-
   graphql.ObservableQuery<Query$FetchMoreItemsForItemSection>
   watchQuery$FetchMoreItemsForItemSection(
     WatchOptions$Query$FetchMoreItemsForItemSection options,
   ) => this.watchQuery(options);
-
   void writeQuery$FetchMoreItemsForItemSection({
     required Query$FetchMoreItemsForItemSection data,
     required Variables$Query$FetchMoreItemsForItemSection variables,
@@ -581,7 +579,6 @@ extension ClientExtension$Query$FetchMoreItemsForItemSection
     data: data.toJson(),
     broadcast: broadcast,
   );
-
   Query$FetchMoreItemsForItemSection? readQuery$FetchMoreItemsForItemSection({
     required Variables$Query$FetchMoreItemsForItemSection variables,
     bool optimistic = true,
@@ -796,7 +793,6 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section
   >
   get copyWith =>
       CopyWith$Query$FetchMoreItemsForItemSection$section(this, (i) => i);
-
   _T when<_T>({
     required _T Function(
       Query$FetchMoreItemsForItemSection$section$$PosterSection,
@@ -2589,7 +2585,6 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$PosterSec
         this,
         (i) => i,
       );
-
   _T when<_T>({
     required _T Function(
       Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Episode,
@@ -2935,6 +2930,7 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item
     this.number,
     this.season,
     this.$__typename = 'Episode',
+    this.overrideUrl,
     required this.productionDate,
   });
 
@@ -2953,6 +2949,7 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item
     final l$number = json['number'];
     final l$season = json['season'];
     final l$$__typename = json['__typename'];
+    final l$overrideUrl = json['overrideUrl'];
     final l$productionDate = json['productionDate'];
     return Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Episode(
       contributors: (l$contributors as List<dynamic>)
@@ -2978,6 +2975,7 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item
               (l$season as Map<String, dynamic>),
             ),
       $__typename: (l$$__typename as String),
+      overrideUrl: (l$overrideUrl as String?),
       productionDate: (l$productionDate as String),
     );
   }
@@ -3010,6 +3008,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item
 
   final String $__typename;
 
+  final String? overrideUrl;
+
   final String productionDate;
 
   Map<String, dynamic> toJson() {
@@ -3040,6 +3040,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item
     _resultData['season'] = l$season?.toJson();
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
+    final l$overrideUrl = overrideUrl;
+    _resultData['overrideUrl'] = l$overrideUrl;
     final l$productionDate = productionDate;
     _resultData['productionDate'] = l$productionDate;
     return _resultData;
@@ -3059,6 +3061,7 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item
     final l$number = number;
     final l$season = season;
     final l$$__typename = $__typename;
+    final l$overrideUrl = overrideUrl;
     final l$productionDate = productionDate;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
@@ -3073,6 +3076,7 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item
       l$number,
       l$season,
       l$$__typename,
+      l$overrideUrl,
       l$productionDate,
     ]);
   }
@@ -3154,6 +3158,11 @@ class Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item
     if (l$$__typename != lOther$$__typename) {
       return false;
     }
+    final l$overrideUrl = overrideUrl;
+    final lOther$overrideUrl = other.overrideUrl;
+    if (l$overrideUrl != lOther$overrideUrl) {
+      return false;
+    }
     final l$productionDate = productionDate;
     final lOther$productionDate = other.productionDate;
     if (l$productionDate != lOther$productionDate) {
@@ -3209,6 +3218,7 @@ abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterSectio
     Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Episode$season?
     season,
     String? $__typename,
+    String? overrideUrl,
     String? productionDate,
   });
   TRes contributors(
@@ -3265,6 +3275,7 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$PosterSection$it
     Object? number = _undefined,
     Object? season = _undefined,
     Object? $__typename = _undefined,
+    Object? overrideUrl = _undefined,
     Object? productionDate = _undefined,
   }) => _then(
     Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Episode(
@@ -3302,6 +3313,9 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$PosterSection$it
       $__typename: $__typename == _undefined || $__typename == null
           ? _instance.$__typename
           : ($__typename as String),
+      overrideUrl: overrideUrl == _undefined
+          ? _instance.overrideUrl
+          : (overrideUrl as String?),
       productionDate: productionDate == _undefined || productionDate == null
           ? _instance.productionDate
           : (productionDate as String),
@@ -3378,6 +3392,7 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$PosterSectio
     Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Episode$season?
     season,
     String? $__typename,
+    String? overrideUrl,
     String? productionDate,
   }) => _res;
 
@@ -6122,7 +6137,6 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$PosterSec
         this,
         (i) => i,
       );
-
   _T when<_T>({
     required _T Function(
       Query$FetchMoreItemsForItemSection$section$$PosterSection$items$items$item$$Playlist$items$items$$Episode,
@@ -8759,7 +8773,6 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$FeaturedS
         this,
         (i) => i,
       );
-
   _T when<_T>({
     required _T Function(
       Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Episode,
@@ -9105,6 +9118,7 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$it
     this.number,
     this.season,
     this.$__typename = 'Episode',
+    this.overrideUrl,
   });
 
   factory Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Episode.fromJson(
@@ -9122,6 +9136,7 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$it
     final l$number = json['number'];
     final l$season = json['season'];
     final l$$__typename = json['__typename'];
+    final l$overrideUrl = json['overrideUrl'];
     return Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Episode(
       contributors: (l$contributors as List<dynamic>)
           .map(
@@ -9146,6 +9161,7 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$it
               (l$season as Map<String, dynamic>),
             ),
       $__typename: (l$$__typename as String),
+      overrideUrl: (l$overrideUrl as String?),
     );
   }
 
@@ -9177,6 +9193,8 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$it
 
   final String $__typename;
 
+  final String? overrideUrl;
+
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
     final l$contributors = contributors;
@@ -9205,6 +9223,8 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$it
     _resultData['season'] = l$season?.toJson();
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
+    final l$overrideUrl = overrideUrl;
+    _resultData['overrideUrl'] = l$overrideUrl;
     return _resultData;
   }
 
@@ -9222,6 +9242,7 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$it
     final l$number = number;
     final l$season = season;
     final l$$__typename = $__typename;
+    final l$overrideUrl = overrideUrl;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
       l$description,
@@ -9235,6 +9256,7 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$it
       l$number,
       l$season,
       l$$__typename,
+      l$overrideUrl,
     ]);
   }
 
@@ -9315,6 +9337,11 @@ class Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$it
     if (l$$__typename != lOther$$__typename) {
       return false;
     }
+    final l$overrideUrl = overrideUrl;
+    final lOther$overrideUrl = other.overrideUrl;
+    if (l$overrideUrl != lOther$overrideUrl) {
+      return false;
+    }
     return true;
   }
 }
@@ -9365,6 +9392,7 @@ abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$FeaturedSect
     Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Episode$season?
     season,
     String? $__typename,
+    String? overrideUrl,
   });
   TRes contributors(
     Iterable<
@@ -9420,6 +9448,7 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$
     Object? number = _undefined,
     Object? season = _undefined,
     Object? $__typename = _undefined,
+    Object? overrideUrl = _undefined,
   }) => _then(
     Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Episode(
       contributors: contributors == _undefined || contributors == null
@@ -9456,6 +9485,9 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$FeaturedSection$
       $__typename: $__typename == _undefined || $__typename == null
           ? _instance.$__typename
           : ($__typename as String),
+      overrideUrl: overrideUrl == _undefined
+          ? _instance.overrideUrl
+          : (overrideUrl as String?),
     ),
   );
 
@@ -9529,6 +9561,7 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$FeaturedSect
     Query$FetchMoreItemsForItemSection$section$$FeaturedSection$items$items$item$$Episode$season?
     season,
     String? $__typename,
+    String? overrideUrl,
   }) => _res;
 
   contributors(_fn) => _res;
@@ -13226,7 +13259,6 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$DefaultSe
         this,
         (i) => i,
       );
-
   _T when<_T>({
     required _T Function(
       Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Episode,
@@ -13572,6 +13604,7 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$ite
     this.number,
     this.season,
     this.$__typename = 'Episode',
+    this.overrideUrl,
     required this.productionDate,
   });
 
@@ -13590,6 +13623,7 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$ite
     final l$number = json['number'];
     final l$season = json['season'];
     final l$$__typename = json['__typename'];
+    final l$overrideUrl = json['overrideUrl'];
     final l$productionDate = json['productionDate'];
     return Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Episode(
       contributors: (l$contributors as List<dynamic>)
@@ -13615,6 +13649,7 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$ite
               (l$season as Map<String, dynamic>),
             ),
       $__typename: (l$$__typename as String),
+      overrideUrl: (l$overrideUrl as String?),
       productionDate: (l$productionDate as String),
     );
   }
@@ -13647,6 +13682,8 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$ite
 
   final String $__typename;
 
+  final String? overrideUrl;
+
   final String productionDate;
 
   Map<String, dynamic> toJson() {
@@ -13677,6 +13714,8 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$ite
     _resultData['season'] = l$season?.toJson();
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
+    final l$overrideUrl = overrideUrl;
+    _resultData['overrideUrl'] = l$overrideUrl;
     final l$productionDate = productionDate;
     _resultData['productionDate'] = l$productionDate;
     return _resultData;
@@ -13696,6 +13735,7 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$ite
     final l$number = number;
     final l$season = season;
     final l$$__typename = $__typename;
+    final l$overrideUrl = overrideUrl;
     final l$productionDate = productionDate;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
@@ -13710,6 +13750,7 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$ite
       l$number,
       l$season,
       l$$__typename,
+      l$overrideUrl,
       l$productionDate,
     ]);
   }
@@ -13791,6 +13832,11 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$ite
     if (l$$__typename != lOther$$__typename) {
       return false;
     }
+    final l$overrideUrl = overrideUrl;
+    final lOther$overrideUrl = other.overrideUrl;
+    if (l$overrideUrl != lOther$overrideUrl) {
+      return false;
+    }
     final l$productionDate = productionDate;
     final lOther$productionDate = other.productionDate;
     if (l$productionDate != lOther$productionDate) {
@@ -13846,6 +13892,7 @@ abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultSecti
     Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Episode$season?
     season,
     String? $__typename,
+    String? overrideUrl,
     String? productionDate,
   });
   TRes contributors(
@@ -13902,6 +13949,7 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$DefaultSection$i
     Object? number = _undefined,
     Object? season = _undefined,
     Object? $__typename = _undefined,
+    Object? overrideUrl = _undefined,
     Object? productionDate = _undefined,
   }) => _then(
     Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Episode(
@@ -13939,6 +13987,9 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$DefaultSection$i
       $__typename: $__typename == _undefined || $__typename == null
           ? _instance.$__typename
           : ($__typename as String),
+      overrideUrl: overrideUrl == _undefined
+          ? _instance.overrideUrl
+          : (overrideUrl as String?),
       productionDate: productionDate == _undefined || productionDate == null
           ? _instance.productionDate
           : (productionDate as String),
@@ -14015,6 +14066,7 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$DefaultSecti
     Query$FetchMoreItemsForItemSection$section$$DefaultSection$items$items$item$$Episode$season?
     season,
     String? $__typename,
+    String? overrideUrl,
     String? productionDate,
   }) => _res;
 
@@ -17714,7 +17766,6 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$CardSecti
         this,
         (i) => i,
       );
-
   _T when<_T>({
     required _T Function(
       Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Episode,
@@ -18061,6 +18112,7 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$
     this.number,
     this.season,
     this.$__typename = 'Episode',
+    this.overrideUrl,
   });
 
   factory Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Episode.fromJson(
@@ -18078,6 +18130,7 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$
     final l$number = json['number'];
     final l$season = json['season'];
     final l$$__typename = json['__typename'];
+    final l$overrideUrl = json['overrideUrl'];
     return Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Episode(
       contributors: (l$contributors as List<dynamic>)
           .map(
@@ -18102,6 +18155,7 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$
               (l$season as Map<String, dynamic>),
             ),
       $__typename: (l$$__typename as String),
+      overrideUrl: (l$overrideUrl as String?),
     );
   }
 
@@ -18133,6 +18187,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$
 
   final String $__typename;
 
+  final String? overrideUrl;
+
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
     final l$contributors = contributors;
@@ -18161,6 +18217,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$
     _resultData['season'] = l$season?.toJson();
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
+    final l$overrideUrl = overrideUrl;
+    _resultData['overrideUrl'] = l$overrideUrl;
     return _resultData;
   }
 
@@ -18178,6 +18236,7 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$
     final l$number = number;
     final l$season = season;
     final l$$__typename = $__typename;
+    final l$overrideUrl = overrideUrl;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
       l$description,
@@ -18191,6 +18250,7 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$
       l$number,
       l$season,
       l$$__typename,
+      l$overrideUrl,
     ]);
   }
 
@@ -18271,6 +18331,11 @@ class Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$
     if (l$$__typename != lOther$$__typename) {
       return false;
     }
+    final l$overrideUrl = overrideUrl;
+    final lOther$overrideUrl = other.overrideUrl;
+    if (l$overrideUrl != lOther$overrideUrl) {
+      return false;
+    }
     return true;
   }
 }
@@ -18321,6 +18386,7 @@ abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$CardSection$
     Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Episode$season?
     season,
     String? $__typename,
+    String? overrideUrl,
   });
   TRes contributors(
     Iterable<
@@ -18376,6 +18442,7 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$CardSection$item
     Object? number = _undefined,
     Object? season = _undefined,
     Object? $__typename = _undefined,
+    Object? overrideUrl = _undefined,
   }) => _then(
     Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Episode(
       contributors: contributors == _undefined || contributors == null
@@ -18412,6 +18479,9 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$CardSection$item
       $__typename: $__typename == _undefined || $__typename == null
           ? _instance.$__typename
           : ($__typename as String),
+      overrideUrl: overrideUrl == _undefined
+          ? _instance.overrideUrl
+          : (overrideUrl as String?),
     ),
   );
 
@@ -18485,6 +18555,7 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$CardSection$
     Query$FetchMoreItemsForItemSection$section$$CardSection$items$items$item$$Episode$season?
     season,
     String? $__typename,
+    String? overrideUrl,
   }) => _res;
 
   contributors(_fn) => _res;
@@ -22346,7 +22417,6 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$ListSecti
         this,
         (i) => i,
       );
-
   _T when<_T>({
     required _T Function(
       Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Episode,
@@ -22692,6 +22762,7 @@ class Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$
     this.number,
     this.season,
     this.$__typename = 'Episode',
+    this.overrideUrl,
     required this.ageRating,
   });
 
@@ -22710,6 +22781,7 @@ class Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$
     final l$number = json['number'];
     final l$season = json['season'];
     final l$$__typename = json['__typename'];
+    final l$overrideUrl = json['overrideUrl'];
     final l$ageRating = json['ageRating'];
     return Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Episode(
       contributors: (l$contributors as List<dynamic>)
@@ -22735,6 +22807,7 @@ class Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$
               (l$season as Map<String, dynamic>),
             ),
       $__typename: (l$$__typename as String),
+      overrideUrl: (l$overrideUrl as String?),
       ageRating: (l$ageRating as String),
     );
   }
@@ -22767,6 +22840,8 @@ class Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$
 
   final String $__typename;
 
+  final String? overrideUrl;
+
   final String ageRating;
 
   Map<String, dynamic> toJson() {
@@ -22797,6 +22872,8 @@ class Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$
     _resultData['season'] = l$season?.toJson();
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
+    final l$overrideUrl = overrideUrl;
+    _resultData['overrideUrl'] = l$overrideUrl;
     final l$ageRating = ageRating;
     _resultData['ageRating'] = l$ageRating;
     return _resultData;
@@ -22816,6 +22893,7 @@ class Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$
     final l$number = number;
     final l$season = season;
     final l$$__typename = $__typename;
+    final l$overrideUrl = overrideUrl;
     final l$ageRating = ageRating;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
@@ -22830,6 +22908,7 @@ class Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$
       l$number,
       l$season,
       l$$__typename,
+      l$overrideUrl,
       l$ageRating,
     ]);
   }
@@ -22911,6 +22990,11 @@ class Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$
     if (l$$__typename != lOther$$__typename) {
       return false;
     }
+    final l$overrideUrl = overrideUrl;
+    final lOther$overrideUrl = other.overrideUrl;
+    if (l$overrideUrl != lOther$overrideUrl) {
+      return false;
+    }
     final l$ageRating = ageRating;
     final lOther$ageRating = other.ageRating;
     if (l$ageRating != lOther$ageRating) {
@@ -22966,6 +23050,7 @@ abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$ListSection$
     Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Episode$season?
     season,
     String? $__typename,
+    String? overrideUrl,
     String? ageRating,
   });
   TRes contributors(
@@ -23022,6 +23107,7 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$ListSection$item
     Object? number = _undefined,
     Object? season = _undefined,
     Object? $__typename = _undefined,
+    Object? overrideUrl = _undefined,
     Object? ageRating = _undefined,
   }) => _then(
     Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Episode(
@@ -23059,6 +23145,9 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$ListSection$item
       $__typename: $__typename == _undefined || $__typename == null
           ? _instance.$__typename
           : ($__typename as String),
+      overrideUrl: overrideUrl == _undefined
+          ? _instance.overrideUrl
+          : (overrideUrl as String?),
       ageRating: ageRating == _undefined || ageRating == null
           ? _instance.ageRating
           : (ageRating as String),
@@ -23135,6 +23224,7 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$ListSection$
     Query$FetchMoreItemsForItemSection$section$$ListSection$items$items$item$$Episode$season?
     season,
     String? $__typename,
+    String? overrideUrl,
     String? ageRating,
   }) => _res;
 
@@ -26857,7 +26947,6 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$CardListS
         this,
         (i) => i,
       );
-
   _T when<_T>({
     required _T Function(
       Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Episode,
@@ -27204,6 +27293,7 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$it
     this.number,
     this.season,
     this.$__typename = 'Episode',
+    this.overrideUrl,
   });
 
   factory Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Episode.fromJson(
@@ -27221,6 +27311,7 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$it
     final l$number = json['number'];
     final l$season = json['season'];
     final l$$__typename = json['__typename'];
+    final l$overrideUrl = json['overrideUrl'];
     return Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Episode(
       contributors: (l$contributors as List<dynamic>)
           .map(
@@ -27245,6 +27336,7 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$it
               (l$season as Map<String, dynamic>),
             ),
       $__typename: (l$$__typename as String),
+      overrideUrl: (l$overrideUrl as String?),
     );
   }
 
@@ -27276,6 +27368,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$it
 
   final String $__typename;
 
+  final String? overrideUrl;
+
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
     final l$contributors = contributors;
@@ -27304,6 +27398,8 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$it
     _resultData['season'] = l$season?.toJson();
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
+    final l$overrideUrl = overrideUrl;
+    _resultData['overrideUrl'] = l$overrideUrl;
     return _resultData;
   }
 
@@ -27321,6 +27417,7 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$it
     final l$number = number;
     final l$season = season;
     final l$$__typename = $__typename;
+    final l$overrideUrl = overrideUrl;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
       l$description,
@@ -27334,6 +27431,7 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$it
       l$number,
       l$season,
       l$$__typename,
+      l$overrideUrl,
     ]);
   }
 
@@ -27414,6 +27512,11 @@ class Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$it
     if (l$$__typename != lOther$$__typename) {
       return false;
     }
+    final l$overrideUrl = overrideUrl;
+    final lOther$overrideUrl = other.overrideUrl;
+    if (l$overrideUrl != lOther$overrideUrl) {
+      return false;
+    }
     return true;
   }
 }
@@ -27464,6 +27567,7 @@ abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$CardListSect
     Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Episode$season?
     season,
     String? $__typename,
+    String? overrideUrl,
   });
   TRes contributors(
     Iterable<
@@ -27519,6 +27623,7 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$CardListSection$
     Object? number = _undefined,
     Object? season = _undefined,
     Object? $__typename = _undefined,
+    Object? overrideUrl = _undefined,
   }) => _then(
     Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Episode(
       contributors: contributors == _undefined || contributors == null
@@ -27555,6 +27660,9 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$CardListSection$
       $__typename: $__typename == _undefined || $__typename == null
           ? _instance.$__typename
           : ($__typename as String),
+      overrideUrl: overrideUrl == _undefined
+          ? _instance.overrideUrl
+          : (overrideUrl as String?),
     ),
   );
 
@@ -27628,6 +27736,7 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$CardListSect
     Query$FetchMoreItemsForItemSection$section$$CardListSection$items$items$item$$Episode$season?
     season,
     String? $__typename,
+    String? overrideUrl,
   }) => _res;
 
   contributors(_fn) => _res;
@@ -31551,7 +31660,6 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$DefaultGr
         this,
         (i) => i,
       );
-
   _T when<_T>({
     required _T Function(
       Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Episode,
@@ -31898,6 +32006,7 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items
     this.number,
     this.season,
     this.$__typename = 'Episode',
+    this.overrideUrl,
   });
 
   factory Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Episode.fromJson(
@@ -31915,6 +32024,7 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items
     final l$number = json['number'];
     final l$season = json['season'];
     final l$$__typename = json['__typename'];
+    final l$overrideUrl = json['overrideUrl'];
     return Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Episode(
       contributors: (l$contributors as List<dynamic>)
           .map(
@@ -31939,6 +32049,7 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items
               (l$season as Map<String, dynamic>),
             ),
       $__typename: (l$$__typename as String),
+      overrideUrl: (l$overrideUrl as String?),
     );
   }
 
@@ -31970,6 +32081,8 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items
 
   final String $__typename;
 
+  final String? overrideUrl;
+
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
     final l$contributors = contributors;
@@ -31998,6 +32111,8 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items
     _resultData['season'] = l$season?.toJson();
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
+    final l$overrideUrl = overrideUrl;
+    _resultData['overrideUrl'] = l$overrideUrl;
     return _resultData;
   }
 
@@ -32015,6 +32130,7 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items
     final l$number = number;
     final l$season = season;
     final l$$__typename = $__typename;
+    final l$overrideUrl = overrideUrl;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
       l$description,
@@ -32028,6 +32144,7 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items
       l$number,
       l$season,
       l$$__typename,
+      l$overrideUrl,
     ]);
   }
 
@@ -32108,6 +32225,11 @@ class Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items
     if (l$$__typename != lOther$$__typename) {
       return false;
     }
+    final l$overrideUrl = overrideUrl;
+    final lOther$overrideUrl = other.overrideUrl;
+    if (l$overrideUrl != lOther$overrideUrl) {
+      return false;
+    }
     return true;
   }
 }
@@ -32158,6 +32280,7 @@ abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$DefaultGridS
     Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Episode$season?
     season,
     String? $__typename,
+    String? overrideUrl,
   });
   TRes contributors(
     Iterable<
@@ -32213,6 +32336,7 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$DefaultGridSecti
     Object? number = _undefined,
     Object? season = _undefined,
     Object? $__typename = _undefined,
+    Object? overrideUrl = _undefined,
   }) => _then(
     Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Episode(
       contributors: contributors == _undefined || contributors == null
@@ -32249,6 +32373,9 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$DefaultGridSecti
       $__typename: $__typename == _undefined || $__typename == null
           ? _instance.$__typename
           : ($__typename as String),
+      overrideUrl: overrideUrl == _undefined
+          ? _instance.overrideUrl
+          : (overrideUrl as String?),
     ),
   );
 
@@ -32322,6 +32449,7 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$DefaultGridS
     Query$FetchMoreItemsForItemSection$section$$DefaultGridSection$items$items$item$$Episode$season?
     season,
     String? $__typename,
+    String? overrideUrl,
   }) => _res;
 
   contributors(_fn) => _res;
@@ -36040,7 +36168,6 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$PosterGri
         this,
         (i) => i,
       );
-
   _T when<_T>({
     required _T Function(
       Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Episode,
@@ -36387,6 +36514,7 @@ class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$
     this.number,
     this.season,
     this.$__typename = 'Episode',
+    this.overrideUrl,
   });
 
   factory Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Episode.fromJson(
@@ -36404,6 +36532,7 @@ class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$
     final l$number = json['number'];
     final l$season = json['season'];
     final l$$__typename = json['__typename'];
+    final l$overrideUrl = json['overrideUrl'];
     return Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Episode(
       contributors: (l$contributors as List<dynamic>)
           .map(
@@ -36428,6 +36557,7 @@ class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$
               (l$season as Map<String, dynamic>),
             ),
       $__typename: (l$$__typename as String),
+      overrideUrl: (l$overrideUrl as String?),
     );
   }
 
@@ -36459,6 +36589,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$
 
   final String $__typename;
 
+  final String? overrideUrl;
+
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
     final l$contributors = contributors;
@@ -36487,6 +36619,8 @@ class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$
     _resultData['season'] = l$season?.toJson();
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
+    final l$overrideUrl = overrideUrl;
+    _resultData['overrideUrl'] = l$overrideUrl;
     return _resultData;
   }
 
@@ -36504,6 +36638,7 @@ class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$
     final l$number = number;
     final l$season = season;
     final l$$__typename = $__typename;
+    final l$overrideUrl = overrideUrl;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
       l$description,
@@ -36517,6 +36652,7 @@ class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$
       l$number,
       l$season,
       l$$__typename,
+      l$overrideUrl,
     ]);
   }
 
@@ -36597,6 +36733,11 @@ class Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$
     if (l$$__typename != lOther$$__typename) {
       return false;
     }
+    final l$overrideUrl = overrideUrl;
+    final lOther$overrideUrl = other.overrideUrl;
+    if (l$overrideUrl != lOther$overrideUrl) {
+      return false;
+    }
     return true;
   }
 }
@@ -36647,6 +36788,7 @@ abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$PosterGridSe
     Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Episode$season?
     season,
     String? $__typename,
+    String? overrideUrl,
   });
   TRes contributors(
     Iterable<
@@ -36702,6 +36844,7 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$PosterGridSectio
     Object? number = _undefined,
     Object? season = _undefined,
     Object? $__typename = _undefined,
+    Object? overrideUrl = _undefined,
   }) => _then(
     Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Episode(
       contributors: contributors == _undefined || contributors == null
@@ -36738,6 +36881,9 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$PosterGridSectio
       $__typename: $__typename == _undefined || $__typename == null
           ? _instance.$__typename
           : ($__typename as String),
+      overrideUrl: overrideUrl == _undefined
+          ? _instance.overrideUrl
+          : (overrideUrl as String?),
     ),
   );
 
@@ -36811,6 +36957,7 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$PosterGridSe
     Query$FetchMoreItemsForItemSection$section$$PosterGridSection$items$items$item$$Episode$season?
     season,
     String? $__typename,
+    String? overrideUrl,
   }) => _res;
 
   contributors(_fn) => _res;
@@ -40526,7 +40673,6 @@ extension UtilityExtension$Query$FetchMoreItemsForItemSection$section$$IconGridS
         this,
         (i) => i,
       );
-
   _T when<_T>({
     required _T Function(
       Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Episode,
@@ -40873,6 +41019,7 @@ class Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$it
     this.number,
     this.season,
     this.$__typename = 'Episode',
+    this.overrideUrl,
   });
 
   factory Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Episode.fromJson(
@@ -40890,6 +41037,7 @@ class Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$it
     final l$number = json['number'];
     final l$season = json['season'];
     final l$$__typename = json['__typename'];
+    final l$overrideUrl = json['overrideUrl'];
     return Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Episode(
       contributors: (l$contributors as List<dynamic>)
           .map(
@@ -40914,6 +41062,7 @@ class Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$it
               (l$season as Map<String, dynamic>),
             ),
       $__typename: (l$$__typename as String),
+      overrideUrl: (l$overrideUrl as String?),
     );
   }
 
@@ -40945,6 +41094,8 @@ class Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$it
 
   final String $__typename;
 
+  final String? overrideUrl;
+
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
     final l$contributors = contributors;
@@ -40973,6 +41124,8 @@ class Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$it
     _resultData['season'] = l$season?.toJson();
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
+    final l$overrideUrl = overrideUrl;
+    _resultData['overrideUrl'] = l$overrideUrl;
     return _resultData;
   }
 
@@ -40990,6 +41143,7 @@ class Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$it
     final l$number = number;
     final l$season = season;
     final l$$__typename = $__typename;
+    final l$overrideUrl = overrideUrl;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
       l$description,
@@ -41003,6 +41157,7 @@ class Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$it
       l$number,
       l$season,
       l$$__typename,
+      l$overrideUrl,
     ]);
   }
 
@@ -41083,6 +41238,11 @@ class Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$it
     if (l$$__typename != lOther$$__typename) {
       return false;
     }
+    final l$overrideUrl = overrideUrl;
+    final lOther$overrideUrl = other.overrideUrl;
+    if (l$overrideUrl != lOther$overrideUrl) {
+      return false;
+    }
     return true;
   }
 }
@@ -41133,6 +41293,7 @@ abstract class CopyWith$Query$FetchMoreItemsForItemSection$section$$IconGridSect
     Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Episode$season?
     season,
     String? $__typename,
+    String? overrideUrl,
   });
   TRes contributors(
     Iterable<
@@ -41188,6 +41349,7 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$IconGridSection$
     Object? number = _undefined,
     Object? season = _undefined,
     Object? $__typename = _undefined,
+    Object? overrideUrl = _undefined,
   }) => _then(
     Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Episode(
       contributors: contributors == _undefined || contributors == null
@@ -41224,6 +41386,9 @@ class _CopyWithImpl$Query$FetchMoreItemsForItemSection$section$$IconGridSection$
       $__typename: $__typename == _undefined || $__typename == null
           ? _instance.$__typename
           : ($__typename as String),
+      overrideUrl: overrideUrl == _undefined
+          ? _instance.overrideUrl
+          : (overrideUrl as String?),
     ),
   );
 
@@ -41297,6 +41462,7 @@ class _CopyWithStubImpl$Query$FetchMoreItemsForItemSection$section$$IconGridSect
     Query$FetchMoreItemsForItemSection$section$$IconGridSection$items$items$item$$Episode$season?
     season,
     String? $__typename,
+    String? overrideUrl,
   }) => _res;
 
   contributors(_fn) => _res;
@@ -49058,11 +49224,9 @@ extension ClientExtension$Query$GetSection on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$GetSection>> query$GetSection(
     Options$Query$GetSection options,
   ) async => await this.query(options);
-
   graphql.ObservableQuery<Query$GetSection> watchQuery$GetSection(
     WatchOptions$Query$GetSection options,
   ) => this.watchQuery(options);
-
   void writeQuery$GetSection({
     required Query$GetSection data,
     required Variables$Query$GetSection variables,
@@ -49075,7 +49239,6 @@ extension ClientExtension$Query$GetSection on graphql.GraphQLClient {
     data: data.toJson(),
     broadcast: broadcast,
   );
-
   Query$GetSection? readQuery$GetSection({
     required Variables$Query$GetSection variables,
     bool optimistic = true,
@@ -49245,7 +49408,6 @@ extension UtilityExtension$Query$GetSection$section
     on Query$GetSection$section {
   CopyWith$Query$GetSection$section<Query$GetSection$section> get copyWith =>
       CopyWith$Query$GetSection$section(this, (i) => i);
-
   _T when<_T>({
     required _T Function(Query$GetSection$section$$PosterSection) posterSection,
     required _T Function(Query$GetSection$section$$FeaturedSection)
@@ -50786,7 +50948,6 @@ extension UtilityExtension$Query$GetSection$section$$PosterSection$items$items$i
         this,
         (i) => i,
       );
-
   _T when<_T>({
     required _T Function(
       Query$GetSection$section$$PosterSection$items$items$item$$Episode,
@@ -51118,6 +51279,7 @@ class Query$GetSection$section$$PosterSection$items$items$item$$Episode
     this.number,
     this.season,
     this.$__typename = 'Episode',
+    this.overrideUrl,
     required this.productionDate,
   });
 
@@ -51136,6 +51298,7 @@ class Query$GetSection$section$$PosterSection$items$items$item$$Episode
     final l$number = json['number'];
     final l$season = json['season'];
     final l$$__typename = json['__typename'];
+    final l$overrideUrl = json['overrideUrl'];
     final l$productionDate = json['productionDate'];
     return Query$GetSection$section$$PosterSection$items$items$item$$Episode(
       contributors: (l$contributors as List<dynamic>)
@@ -51161,6 +51324,7 @@ class Query$GetSection$section$$PosterSection$items$items$item$$Episode
               (l$season as Map<String, dynamic>),
             ),
       $__typename: (l$$__typename as String),
+      overrideUrl: (l$overrideUrl as String?),
       productionDate: (l$productionDate as String),
     );
   }
@@ -51193,6 +51357,8 @@ class Query$GetSection$section$$PosterSection$items$items$item$$Episode
 
   final String $__typename;
 
+  final String? overrideUrl;
+
   final String productionDate;
 
   Map<String, dynamic> toJson() {
@@ -51223,6 +51389,8 @@ class Query$GetSection$section$$PosterSection$items$items$item$$Episode
     _resultData['season'] = l$season?.toJson();
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
+    final l$overrideUrl = overrideUrl;
+    _resultData['overrideUrl'] = l$overrideUrl;
     final l$productionDate = productionDate;
     _resultData['productionDate'] = l$productionDate;
     return _resultData;
@@ -51242,6 +51410,7 @@ class Query$GetSection$section$$PosterSection$items$items$item$$Episode
     final l$number = number;
     final l$season = season;
     final l$$__typename = $__typename;
+    final l$overrideUrl = overrideUrl;
     final l$productionDate = productionDate;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
@@ -51256,6 +51425,7 @@ class Query$GetSection$section$$PosterSection$items$items$item$$Episode
       l$number,
       l$season,
       l$$__typename,
+      l$overrideUrl,
       l$productionDate,
     ]);
   }
@@ -51337,6 +51507,11 @@ class Query$GetSection$section$$PosterSection$items$items$item$$Episode
     if (l$$__typename != lOther$$__typename) {
       return false;
     }
+    final l$overrideUrl = overrideUrl;
+    final lOther$overrideUrl = other.overrideUrl;
+    if (l$overrideUrl != lOther$overrideUrl) {
+      return false;
+    }
     final l$productionDate = productionDate;
     final lOther$productionDate = other.productionDate;
     if (l$productionDate != lOther$productionDate) {
@@ -51390,6 +51565,7 @@ abstract class CopyWith$Query$GetSection$section$$PosterSection$items$items$item
     Query$GetSection$section$$PosterSection$items$items$item$$Episode$season?
     season,
     String? $__typename,
+    String? overrideUrl,
     String? productionDate,
   });
   TRes contributors(
@@ -51446,6 +51622,7 @@ class _CopyWithImpl$Query$GetSection$section$$PosterSection$items$items$item$$Ep
     Object? number = _undefined,
     Object? season = _undefined,
     Object? $__typename = _undefined,
+    Object? overrideUrl = _undefined,
     Object? productionDate = _undefined,
   }) => _then(
     Query$GetSection$section$$PosterSection$items$items$item$$Episode(
@@ -51483,6 +51660,9 @@ class _CopyWithImpl$Query$GetSection$section$$PosterSection$items$items$item$$Ep
       $__typename: $__typename == _undefined || $__typename == null
           ? _instance.$__typename
           : ($__typename as String),
+      overrideUrl: overrideUrl == _undefined
+          ? _instance.overrideUrl
+          : (overrideUrl as String?),
       productionDate: productionDate == _undefined || productionDate == null
           ? _instance.productionDate
           : (productionDate as String),
@@ -51559,6 +51739,7 @@ class _CopyWithStubImpl$Query$GetSection$section$$PosterSection$items$items$item
     Query$GetSection$section$$PosterSection$items$items$item$$Episode$season?
     season,
     String? $__typename,
+    String? overrideUrl,
     String? productionDate,
   }) => _res;
 
@@ -54272,7 +54453,6 @@ extension UtilityExtension$Query$GetSection$section$$PosterSection$items$items$i
         this,
         (i) => i,
       );
-
   _T when<_T>({
     required _T Function(
       Query$GetSection$section$$PosterSection$items$items$item$$Playlist$items$items$$Episode,
@@ -56750,7 +56930,6 @@ extension UtilityExtension$Query$GetSection$section$$FeaturedSection$items$items
         this,
         (i) => i,
       );
-
   _T when<_T>({
     required _T Function(
       Query$GetSection$section$$FeaturedSection$items$items$item$$Episode,
@@ -57092,6 +57271,7 @@ class Query$GetSection$section$$FeaturedSection$items$items$item$$Episode
     this.number,
     this.season,
     this.$__typename = 'Episode',
+    this.overrideUrl,
   });
 
   factory Query$GetSection$section$$FeaturedSection$items$items$item$$Episode.fromJson(
@@ -57109,6 +57289,7 @@ class Query$GetSection$section$$FeaturedSection$items$items$item$$Episode
     final l$number = json['number'];
     final l$season = json['season'];
     final l$$__typename = json['__typename'];
+    final l$overrideUrl = json['overrideUrl'];
     return Query$GetSection$section$$FeaturedSection$items$items$item$$Episode(
       contributors: (l$contributors as List<dynamic>)
           .map(
@@ -57133,6 +57314,7 @@ class Query$GetSection$section$$FeaturedSection$items$items$item$$Episode
               (l$season as Map<String, dynamic>),
             ),
       $__typename: (l$$__typename as String),
+      overrideUrl: (l$overrideUrl as String?),
     );
   }
 
@@ -57164,6 +57346,8 @@ class Query$GetSection$section$$FeaturedSection$items$items$item$$Episode
 
   final String $__typename;
 
+  final String? overrideUrl;
+
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
     final l$contributors = contributors;
@@ -57192,6 +57376,8 @@ class Query$GetSection$section$$FeaturedSection$items$items$item$$Episode
     _resultData['season'] = l$season?.toJson();
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
+    final l$overrideUrl = overrideUrl;
+    _resultData['overrideUrl'] = l$overrideUrl;
     return _resultData;
   }
 
@@ -57209,6 +57395,7 @@ class Query$GetSection$section$$FeaturedSection$items$items$item$$Episode
     final l$number = number;
     final l$season = season;
     final l$$__typename = $__typename;
+    final l$overrideUrl = overrideUrl;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
       l$description,
@@ -57222,6 +57409,7 @@ class Query$GetSection$section$$FeaturedSection$items$items$item$$Episode
       l$number,
       l$season,
       l$$__typename,
+      l$overrideUrl,
     ]);
   }
 
@@ -57302,6 +57490,11 @@ class Query$GetSection$section$$FeaturedSection$items$items$item$$Episode
     if (l$$__typename != lOther$$__typename) {
       return false;
     }
+    final l$overrideUrl = overrideUrl;
+    final lOther$overrideUrl = other.overrideUrl;
+    if (l$overrideUrl != lOther$overrideUrl) {
+      return false;
+    }
     return true;
   }
 }
@@ -57351,6 +57544,7 @@ abstract class CopyWith$Query$GetSection$section$$FeaturedSection$items$items$it
     Query$GetSection$section$$FeaturedSection$items$items$item$$Episode$season?
     season,
     String? $__typename,
+    String? overrideUrl,
   });
   TRes contributors(
     Iterable<
@@ -57406,6 +57600,7 @@ class _CopyWithImpl$Query$GetSection$section$$FeaturedSection$items$items$item$$
     Object? number = _undefined,
     Object? season = _undefined,
     Object? $__typename = _undefined,
+    Object? overrideUrl = _undefined,
   }) => _then(
     Query$GetSection$section$$FeaturedSection$items$items$item$$Episode(
       contributors: contributors == _undefined || contributors == null
@@ -57442,6 +57637,9 @@ class _CopyWithImpl$Query$GetSection$section$$FeaturedSection$items$items$item$$
       $__typename: $__typename == _undefined || $__typename == null
           ? _instance.$__typename
           : ($__typename as String),
+      overrideUrl: overrideUrl == _undefined
+          ? _instance.overrideUrl
+          : (overrideUrl as String?),
     ),
   );
 
@@ -57515,6 +57713,7 @@ class _CopyWithStubImpl$Query$GetSection$section$$FeaturedSection$items$items$it
     Query$GetSection$section$$FeaturedSection$items$items$item$$Episode$season?
     season,
     String? $__typename,
+    String? overrideUrl,
   }) => _res;
 
   contributors(_fn) => _res;
@@ -61023,7 +61222,6 @@ extension UtilityExtension$Query$GetSection$section$$DefaultSection$items$items$
         this,
         (i) => i,
       );
-
   _T when<_T>({
     required _T Function(
       Query$GetSection$section$$DefaultSection$items$items$item$$Episode,
@@ -61363,6 +61561,7 @@ class Query$GetSection$section$$DefaultSection$items$items$item$$Episode
     this.number,
     this.season,
     this.$__typename = 'Episode',
+    this.overrideUrl,
     required this.productionDate,
   });
 
@@ -61381,6 +61580,7 @@ class Query$GetSection$section$$DefaultSection$items$items$item$$Episode
     final l$number = json['number'];
     final l$season = json['season'];
     final l$$__typename = json['__typename'];
+    final l$overrideUrl = json['overrideUrl'];
     final l$productionDate = json['productionDate'];
     return Query$GetSection$section$$DefaultSection$items$items$item$$Episode(
       contributors: (l$contributors as List<dynamic>)
@@ -61406,6 +61606,7 @@ class Query$GetSection$section$$DefaultSection$items$items$item$$Episode
               (l$season as Map<String, dynamic>),
             ),
       $__typename: (l$$__typename as String),
+      overrideUrl: (l$overrideUrl as String?),
       productionDate: (l$productionDate as String),
     );
   }
@@ -61438,6 +61639,8 @@ class Query$GetSection$section$$DefaultSection$items$items$item$$Episode
 
   final String $__typename;
 
+  final String? overrideUrl;
+
   final String productionDate;
 
   Map<String, dynamic> toJson() {
@@ -61468,6 +61671,8 @@ class Query$GetSection$section$$DefaultSection$items$items$item$$Episode
     _resultData['season'] = l$season?.toJson();
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
+    final l$overrideUrl = overrideUrl;
+    _resultData['overrideUrl'] = l$overrideUrl;
     final l$productionDate = productionDate;
     _resultData['productionDate'] = l$productionDate;
     return _resultData;
@@ -61487,6 +61692,7 @@ class Query$GetSection$section$$DefaultSection$items$items$item$$Episode
     final l$number = number;
     final l$season = season;
     final l$$__typename = $__typename;
+    final l$overrideUrl = overrideUrl;
     final l$productionDate = productionDate;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
@@ -61501,6 +61707,7 @@ class Query$GetSection$section$$DefaultSection$items$items$item$$Episode
       l$number,
       l$season,
       l$$__typename,
+      l$overrideUrl,
       l$productionDate,
     ]);
   }
@@ -61582,6 +61789,11 @@ class Query$GetSection$section$$DefaultSection$items$items$item$$Episode
     if (l$$__typename != lOther$$__typename) {
       return false;
     }
+    final l$overrideUrl = overrideUrl;
+    final lOther$overrideUrl = other.overrideUrl;
+    if (l$overrideUrl != lOther$overrideUrl) {
+      return false;
+    }
     final l$productionDate = productionDate;
     final lOther$productionDate = other.productionDate;
     if (l$productionDate != lOther$productionDate) {
@@ -61635,6 +61847,7 @@ abstract class CopyWith$Query$GetSection$section$$DefaultSection$items$items$ite
     Query$GetSection$section$$DefaultSection$items$items$item$$Episode$season?
     season,
     String? $__typename,
+    String? overrideUrl,
     String? productionDate,
   });
   TRes contributors(
@@ -61691,6 +61904,7 @@ class _CopyWithImpl$Query$GetSection$section$$DefaultSection$items$items$item$$E
     Object? number = _undefined,
     Object? season = _undefined,
     Object? $__typename = _undefined,
+    Object? overrideUrl = _undefined,
     Object? productionDate = _undefined,
   }) => _then(
     Query$GetSection$section$$DefaultSection$items$items$item$$Episode(
@@ -61728,6 +61942,9 @@ class _CopyWithImpl$Query$GetSection$section$$DefaultSection$items$items$item$$E
       $__typename: $__typename == _undefined || $__typename == null
           ? _instance.$__typename
           : ($__typename as String),
+      overrideUrl: overrideUrl == _undefined
+          ? _instance.overrideUrl
+          : (overrideUrl as String?),
       productionDate: productionDate == _undefined || productionDate == null
           ? _instance.productionDate
           : (productionDate as String),
@@ -61804,6 +62021,7 @@ class _CopyWithStubImpl$Query$GetSection$section$$DefaultSection$items$items$ite
     Query$GetSection$section$$DefaultSection$items$items$item$$Episode$season?
     season,
     String? $__typename,
+    String? overrideUrl,
     String? productionDate,
   }) => _res;
 
@@ -65317,7 +65535,6 @@ extension UtilityExtension$Query$GetSection$section$$CardSection$items$items$ite
         this,
         (i) => i,
       );
-
   _T when<_T>({
     required _T Function(
       Query$GetSection$section$$CardSection$items$items$item$$Episode,
@@ -65632,6 +65849,7 @@ class Query$GetSection$section$$CardSection$items$items$item$$Episode
     this.number,
     this.season,
     this.$__typename = 'Episode',
+    this.overrideUrl,
   });
 
   factory Query$GetSection$section$$CardSection$items$items$item$$Episode.fromJson(
@@ -65649,6 +65867,7 @@ class Query$GetSection$section$$CardSection$items$items$item$$Episode
     final l$number = json['number'];
     final l$season = json['season'];
     final l$$__typename = json['__typename'];
+    final l$overrideUrl = json['overrideUrl'];
     return Query$GetSection$section$$CardSection$items$items$item$$Episode(
       contributors: (l$contributors as List<dynamic>)
           .map(
@@ -65673,6 +65892,7 @@ class Query$GetSection$section$$CardSection$items$items$item$$Episode
               (l$season as Map<String, dynamic>),
             ),
       $__typename: (l$$__typename as String),
+      overrideUrl: (l$overrideUrl as String?),
     );
   }
 
@@ -65704,6 +65924,8 @@ class Query$GetSection$section$$CardSection$items$items$item$$Episode
 
   final String $__typename;
 
+  final String? overrideUrl;
+
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
     final l$contributors = contributors;
@@ -65732,6 +65954,8 @@ class Query$GetSection$section$$CardSection$items$items$item$$Episode
     _resultData['season'] = l$season?.toJson();
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
+    final l$overrideUrl = overrideUrl;
+    _resultData['overrideUrl'] = l$overrideUrl;
     return _resultData;
   }
 
@@ -65749,6 +65973,7 @@ class Query$GetSection$section$$CardSection$items$items$item$$Episode
     final l$number = number;
     final l$season = season;
     final l$$__typename = $__typename;
+    final l$overrideUrl = overrideUrl;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
       l$description,
@@ -65762,6 +65987,7 @@ class Query$GetSection$section$$CardSection$items$items$item$$Episode
       l$number,
       l$season,
       l$$__typename,
+      l$overrideUrl,
     ]);
   }
 
@@ -65842,6 +66068,11 @@ class Query$GetSection$section$$CardSection$items$items$item$$Episode
     if (l$$__typename != lOther$$__typename) {
       return false;
     }
+    final l$overrideUrl = overrideUrl;
+    final lOther$overrideUrl = other.overrideUrl;
+    if (l$overrideUrl != lOther$overrideUrl) {
+      return false;
+    }
     return true;
   }
 }
@@ -65890,6 +66121,7 @@ abstract class CopyWith$Query$GetSection$section$$CardSection$items$items$item$$
     Query$GetSection$section$$CardSection$items$items$item$$Episode$season?
     season,
     String? $__typename,
+    String? overrideUrl,
   });
   TRes contributors(
     Iterable<
@@ -65945,6 +66177,7 @@ class _CopyWithImpl$Query$GetSection$section$$CardSection$items$items$item$$Epis
     Object? number = _undefined,
     Object? season = _undefined,
     Object? $__typename = _undefined,
+    Object? overrideUrl = _undefined,
   }) => _then(
     Query$GetSection$section$$CardSection$items$items$item$$Episode(
       contributors: contributors == _undefined || contributors == null
@@ -65981,6 +66214,9 @@ class _CopyWithImpl$Query$GetSection$section$$CardSection$items$items$item$$Epis
       $__typename: $__typename == _undefined || $__typename == null
           ? _instance.$__typename
           : ($__typename as String),
+      overrideUrl: overrideUrl == _undefined
+          ? _instance.overrideUrl
+          : (overrideUrl as String?),
     ),
   );
 
@@ -66054,6 +66290,7 @@ class _CopyWithStubImpl$Query$GetSection$section$$CardSection$items$items$item$$
     Query$GetSection$section$$CardSection$items$items$item$$Episode$season?
     season,
     String? $__typename,
+    String? overrideUrl,
   }) => _res;
 
   contributors(_fn) => _res;
@@ -69715,7 +69952,6 @@ extension UtilityExtension$Query$GetSection$section$$ListSection$items$items$ite
         this,
         (i) => i,
       );
-
   _T when<_T>({
     required _T Function(
       Query$GetSection$section$$ListSection$items$items$item$$Episode,
@@ -70029,6 +70265,7 @@ class Query$GetSection$section$$ListSection$items$items$item$$Episode
     this.number,
     this.season,
     this.$__typename = 'Episode',
+    this.overrideUrl,
     required this.ageRating,
   });
 
@@ -70047,6 +70284,7 @@ class Query$GetSection$section$$ListSection$items$items$item$$Episode
     final l$number = json['number'];
     final l$season = json['season'];
     final l$$__typename = json['__typename'];
+    final l$overrideUrl = json['overrideUrl'];
     final l$ageRating = json['ageRating'];
     return Query$GetSection$section$$ListSection$items$items$item$$Episode(
       contributors: (l$contributors as List<dynamic>)
@@ -70072,6 +70310,7 @@ class Query$GetSection$section$$ListSection$items$items$item$$Episode
               (l$season as Map<String, dynamic>),
             ),
       $__typename: (l$$__typename as String),
+      overrideUrl: (l$overrideUrl as String?),
       ageRating: (l$ageRating as String),
     );
   }
@@ -70104,6 +70343,8 @@ class Query$GetSection$section$$ListSection$items$items$item$$Episode
 
   final String $__typename;
 
+  final String? overrideUrl;
+
   final String ageRating;
 
   Map<String, dynamic> toJson() {
@@ -70134,6 +70375,8 @@ class Query$GetSection$section$$ListSection$items$items$item$$Episode
     _resultData['season'] = l$season?.toJson();
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
+    final l$overrideUrl = overrideUrl;
+    _resultData['overrideUrl'] = l$overrideUrl;
     final l$ageRating = ageRating;
     _resultData['ageRating'] = l$ageRating;
     return _resultData;
@@ -70153,6 +70396,7 @@ class Query$GetSection$section$$ListSection$items$items$item$$Episode
     final l$number = number;
     final l$season = season;
     final l$$__typename = $__typename;
+    final l$overrideUrl = overrideUrl;
     final l$ageRating = ageRating;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
@@ -70167,6 +70411,7 @@ class Query$GetSection$section$$ListSection$items$items$item$$Episode
       l$number,
       l$season,
       l$$__typename,
+      l$overrideUrl,
       l$ageRating,
     ]);
   }
@@ -70248,6 +70493,11 @@ class Query$GetSection$section$$ListSection$items$items$item$$Episode
     if (l$$__typename != lOther$$__typename) {
       return false;
     }
+    final l$overrideUrl = overrideUrl;
+    final lOther$overrideUrl = other.overrideUrl;
+    if (l$overrideUrl != lOther$overrideUrl) {
+      return false;
+    }
     final l$ageRating = ageRating;
     final lOther$ageRating = other.ageRating;
     if (l$ageRating != lOther$ageRating) {
@@ -70301,6 +70551,7 @@ abstract class CopyWith$Query$GetSection$section$$ListSection$items$items$item$$
     Query$GetSection$section$$ListSection$items$items$item$$Episode$season?
     season,
     String? $__typename,
+    String? overrideUrl,
     String? ageRating,
   });
   TRes contributors(
@@ -70357,6 +70608,7 @@ class _CopyWithImpl$Query$GetSection$section$$ListSection$items$items$item$$Epis
     Object? number = _undefined,
     Object? season = _undefined,
     Object? $__typename = _undefined,
+    Object? overrideUrl = _undefined,
     Object? ageRating = _undefined,
   }) => _then(
     Query$GetSection$section$$ListSection$items$items$item$$Episode(
@@ -70394,6 +70646,9 @@ class _CopyWithImpl$Query$GetSection$section$$ListSection$items$items$item$$Epis
       $__typename: $__typename == _undefined || $__typename == null
           ? _instance.$__typename
           : ($__typename as String),
+      overrideUrl: overrideUrl == _undefined
+          ? _instance.overrideUrl
+          : (overrideUrl as String?),
       ageRating: ageRating == _undefined || ageRating == null
           ? _instance.ageRating
           : (ageRating as String),
@@ -70470,6 +70725,7 @@ class _CopyWithStubImpl$Query$GetSection$section$$ListSection$items$items$item$$
     Query$GetSection$section$$ListSection$items$items$item$$Episode$season?
     season,
     String? $__typename,
+    String? overrideUrl,
     String? ageRating,
   }) => _res;
 
@@ -73992,7 +74248,6 @@ extension UtilityExtension$Query$GetSection$section$$CardListSection$items$items
         this,
         (i) => i,
       );
-
   _T when<_T>({
     required _T Function(
       Query$GetSection$section$$CardListSection$items$items$item$$Episode,
@@ -74335,6 +74590,7 @@ class Query$GetSection$section$$CardListSection$items$items$item$$Episode
     this.number,
     this.season,
     this.$__typename = 'Episode',
+    this.overrideUrl,
   });
 
   factory Query$GetSection$section$$CardListSection$items$items$item$$Episode.fromJson(
@@ -74352,6 +74608,7 @@ class Query$GetSection$section$$CardListSection$items$items$item$$Episode
     final l$number = json['number'];
     final l$season = json['season'];
     final l$$__typename = json['__typename'];
+    final l$overrideUrl = json['overrideUrl'];
     return Query$GetSection$section$$CardListSection$items$items$item$$Episode(
       contributors: (l$contributors as List<dynamic>)
           .map(
@@ -74376,6 +74633,7 @@ class Query$GetSection$section$$CardListSection$items$items$item$$Episode
               (l$season as Map<String, dynamic>),
             ),
       $__typename: (l$$__typename as String),
+      overrideUrl: (l$overrideUrl as String?),
     );
   }
 
@@ -74407,6 +74665,8 @@ class Query$GetSection$section$$CardListSection$items$items$item$$Episode
 
   final String $__typename;
 
+  final String? overrideUrl;
+
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
     final l$contributors = contributors;
@@ -74435,6 +74695,8 @@ class Query$GetSection$section$$CardListSection$items$items$item$$Episode
     _resultData['season'] = l$season?.toJson();
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
+    final l$overrideUrl = overrideUrl;
+    _resultData['overrideUrl'] = l$overrideUrl;
     return _resultData;
   }
 
@@ -74452,6 +74714,7 @@ class Query$GetSection$section$$CardListSection$items$items$item$$Episode
     final l$number = number;
     final l$season = season;
     final l$$__typename = $__typename;
+    final l$overrideUrl = overrideUrl;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
       l$description,
@@ -74465,6 +74728,7 @@ class Query$GetSection$section$$CardListSection$items$items$item$$Episode
       l$number,
       l$season,
       l$$__typename,
+      l$overrideUrl,
     ]);
   }
 
@@ -74545,6 +74809,11 @@ class Query$GetSection$section$$CardListSection$items$items$item$$Episode
     if (l$$__typename != lOther$$__typename) {
       return false;
     }
+    final l$overrideUrl = overrideUrl;
+    final lOther$overrideUrl = other.overrideUrl;
+    if (l$overrideUrl != lOther$overrideUrl) {
+      return false;
+    }
     return true;
   }
 }
@@ -74594,6 +74863,7 @@ abstract class CopyWith$Query$GetSection$section$$CardListSection$items$items$it
     Query$GetSection$section$$CardListSection$items$items$item$$Episode$season?
     season,
     String? $__typename,
+    String? overrideUrl,
   });
   TRes contributors(
     Iterable<
@@ -74649,6 +74919,7 @@ class _CopyWithImpl$Query$GetSection$section$$CardListSection$items$items$item$$
     Object? number = _undefined,
     Object? season = _undefined,
     Object? $__typename = _undefined,
+    Object? overrideUrl = _undefined,
   }) => _then(
     Query$GetSection$section$$CardListSection$items$items$item$$Episode(
       contributors: contributors == _undefined || contributors == null
@@ -74685,6 +74956,9 @@ class _CopyWithImpl$Query$GetSection$section$$CardListSection$items$items$item$$
       $__typename: $__typename == _undefined || $__typename == null
           ? _instance.$__typename
           : ($__typename as String),
+      overrideUrl: overrideUrl == _undefined
+          ? _instance.overrideUrl
+          : (overrideUrl as String?),
     ),
   );
 
@@ -74758,6 +75032,7 @@ class _CopyWithStubImpl$Query$GetSection$section$$CardListSection$items$items$it
     Query$GetSection$section$$CardListSection$items$items$item$$Episode$season?
     season,
     String? $__typename,
+    String? overrideUrl,
   }) => _res;
 
   contributors(_fn) => _res;
@@ -78523,7 +78798,6 @@ extension UtilityExtension$Query$GetSection$section$$DefaultGridSection$items$it
         this,
         (i) => i,
       );
-
   _T when<_T>({
     required _T Function(
       Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode,
@@ -78866,6 +79140,7 @@ class Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode
     this.number,
     this.season,
     this.$__typename = 'Episode',
+    this.overrideUrl,
   });
 
   factory Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode.fromJson(
@@ -78883,6 +79158,7 @@ class Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode
     final l$number = json['number'];
     final l$season = json['season'];
     final l$$__typename = json['__typename'];
+    final l$overrideUrl = json['overrideUrl'];
     return Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode(
       contributors: (l$contributors as List<dynamic>)
           .map(
@@ -78907,6 +79183,7 @@ class Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode
               (l$season as Map<String, dynamic>),
             ),
       $__typename: (l$$__typename as String),
+      overrideUrl: (l$overrideUrl as String?),
     );
   }
 
@@ -78938,6 +79215,8 @@ class Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode
 
   final String $__typename;
 
+  final String? overrideUrl;
+
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
     final l$contributors = contributors;
@@ -78966,6 +79245,8 @@ class Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode
     _resultData['season'] = l$season?.toJson();
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
+    final l$overrideUrl = overrideUrl;
+    _resultData['overrideUrl'] = l$overrideUrl;
     return _resultData;
   }
 
@@ -78983,6 +79264,7 @@ class Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode
     final l$number = number;
     final l$season = season;
     final l$$__typename = $__typename;
+    final l$overrideUrl = overrideUrl;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
       l$description,
@@ -78996,6 +79278,7 @@ class Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode
       l$number,
       l$season,
       l$$__typename,
+      l$overrideUrl,
     ]);
   }
 
@@ -79076,6 +79359,11 @@ class Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode
     if (l$$__typename != lOther$$__typename) {
       return false;
     }
+    final l$overrideUrl = overrideUrl;
+    final lOther$overrideUrl = other.overrideUrl;
+    if (l$overrideUrl != lOther$overrideUrl) {
+      return false;
+    }
     return true;
   }
 }
@@ -79125,6 +79413,7 @@ abstract class CopyWith$Query$GetSection$section$$DefaultGridSection$items$items
     Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode$season?
     season,
     String? $__typename,
+    String? overrideUrl,
   });
   TRes contributors(
     Iterable<
@@ -79180,6 +79469,7 @@ class _CopyWithImpl$Query$GetSection$section$$DefaultGridSection$items$items$ite
     Object? number = _undefined,
     Object? season = _undefined,
     Object? $__typename = _undefined,
+    Object? overrideUrl = _undefined,
   }) => _then(
     Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode(
       contributors: contributors == _undefined || contributors == null
@@ -79216,6 +79506,9 @@ class _CopyWithImpl$Query$GetSection$section$$DefaultGridSection$items$items$ite
       $__typename: $__typename == _undefined || $__typename == null
           ? _instance.$__typename
           : ($__typename as String),
+      overrideUrl: overrideUrl == _undefined
+          ? _instance.overrideUrl
+          : (overrideUrl as String?),
     ),
   );
 
@@ -79289,6 +79582,7 @@ class _CopyWithStubImpl$Query$GetSection$section$$DefaultGridSection$items$items
     Query$GetSection$section$$DefaultGridSection$items$items$item$$Episode$season?
     season,
     String? $__typename,
+    String? overrideUrl,
   }) => _res;
 
   contributors(_fn) => _res;
@@ -82850,7 +83144,6 @@ extension UtilityExtension$Query$GetSection$section$$PosterGridSection$items$ite
         this,
         (i) => i,
       );
-
   _T when<_T>({
     required _T Function(
       Query$GetSection$section$$PosterGridSection$items$items$item$$Episode,
@@ -83193,6 +83486,7 @@ class Query$GetSection$section$$PosterGridSection$items$items$item$$Episode
     this.number,
     this.season,
     this.$__typename = 'Episode',
+    this.overrideUrl,
   });
 
   factory Query$GetSection$section$$PosterGridSection$items$items$item$$Episode.fromJson(
@@ -83210,6 +83504,7 @@ class Query$GetSection$section$$PosterGridSection$items$items$item$$Episode
     final l$number = json['number'];
     final l$season = json['season'];
     final l$$__typename = json['__typename'];
+    final l$overrideUrl = json['overrideUrl'];
     return Query$GetSection$section$$PosterGridSection$items$items$item$$Episode(
       contributors: (l$contributors as List<dynamic>)
           .map(
@@ -83234,6 +83529,7 @@ class Query$GetSection$section$$PosterGridSection$items$items$item$$Episode
               (l$season as Map<String, dynamic>),
             ),
       $__typename: (l$$__typename as String),
+      overrideUrl: (l$overrideUrl as String?),
     );
   }
 
@@ -83265,6 +83561,8 @@ class Query$GetSection$section$$PosterGridSection$items$items$item$$Episode
 
   final String $__typename;
 
+  final String? overrideUrl;
+
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
     final l$contributors = contributors;
@@ -83293,6 +83591,8 @@ class Query$GetSection$section$$PosterGridSection$items$items$item$$Episode
     _resultData['season'] = l$season?.toJson();
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
+    final l$overrideUrl = overrideUrl;
+    _resultData['overrideUrl'] = l$overrideUrl;
     return _resultData;
   }
 
@@ -83310,6 +83610,7 @@ class Query$GetSection$section$$PosterGridSection$items$items$item$$Episode
     final l$number = number;
     final l$season = season;
     final l$$__typename = $__typename;
+    final l$overrideUrl = overrideUrl;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
       l$description,
@@ -83323,6 +83624,7 @@ class Query$GetSection$section$$PosterGridSection$items$items$item$$Episode
       l$number,
       l$season,
       l$$__typename,
+      l$overrideUrl,
     ]);
   }
 
@@ -83403,6 +83705,11 @@ class Query$GetSection$section$$PosterGridSection$items$items$item$$Episode
     if (l$$__typename != lOther$$__typename) {
       return false;
     }
+    final l$overrideUrl = overrideUrl;
+    final lOther$overrideUrl = other.overrideUrl;
+    if (l$overrideUrl != lOther$overrideUrl) {
+      return false;
+    }
     return true;
   }
 }
@@ -83452,6 +83759,7 @@ abstract class CopyWith$Query$GetSection$section$$PosterGridSection$items$items$
     Query$GetSection$section$$PosterGridSection$items$items$item$$Episode$season?
     season,
     String? $__typename,
+    String? overrideUrl,
   });
   TRes contributors(
     Iterable<
@@ -83507,6 +83815,7 @@ class _CopyWithImpl$Query$GetSection$section$$PosterGridSection$items$items$item
     Object? number = _undefined,
     Object? season = _undefined,
     Object? $__typename = _undefined,
+    Object? overrideUrl = _undefined,
   }) => _then(
     Query$GetSection$section$$PosterGridSection$items$items$item$$Episode(
       contributors: contributors == _undefined || contributors == null
@@ -83543,6 +83852,9 @@ class _CopyWithImpl$Query$GetSection$section$$PosterGridSection$items$items$item
       $__typename: $__typename == _undefined || $__typename == null
           ? _instance.$__typename
           : ($__typename as String),
+      overrideUrl: overrideUrl == _undefined
+          ? _instance.overrideUrl
+          : (overrideUrl as String?),
     ),
   );
 
@@ -83616,6 +83928,7 @@ class _CopyWithStubImpl$Query$GetSection$section$$PosterGridSection$items$items$
     Query$GetSection$section$$PosterGridSection$items$items$item$$Episode$season?
     season,
     String? $__typename,
+    String? overrideUrl,
   }) => _res;
 
   contributors(_fn) => _res;
@@ -87150,7 +87463,6 @@ extension UtilityExtension$Query$GetSection$section$$IconGridSection$items$items
         this,
         (i) => i,
       );
-
   _T when<_T>({
     required _T Function(
       Query$GetSection$section$$IconGridSection$items$items$item$$Episode,
@@ -87493,6 +87805,7 @@ class Query$GetSection$section$$IconGridSection$items$items$item$$Episode
     this.number,
     this.season,
     this.$__typename = 'Episode',
+    this.overrideUrl,
   });
 
   factory Query$GetSection$section$$IconGridSection$items$items$item$$Episode.fromJson(
@@ -87510,6 +87823,7 @@ class Query$GetSection$section$$IconGridSection$items$items$item$$Episode
     final l$number = json['number'];
     final l$season = json['season'];
     final l$$__typename = json['__typename'];
+    final l$overrideUrl = json['overrideUrl'];
     return Query$GetSection$section$$IconGridSection$items$items$item$$Episode(
       contributors: (l$contributors as List<dynamic>)
           .map(
@@ -87534,6 +87848,7 @@ class Query$GetSection$section$$IconGridSection$items$items$item$$Episode
               (l$season as Map<String, dynamic>),
             ),
       $__typename: (l$$__typename as String),
+      overrideUrl: (l$overrideUrl as String?),
     );
   }
 
@@ -87565,6 +87880,8 @@ class Query$GetSection$section$$IconGridSection$items$items$item$$Episode
 
   final String $__typename;
 
+  final String? overrideUrl;
+
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
     final l$contributors = contributors;
@@ -87593,6 +87910,8 @@ class Query$GetSection$section$$IconGridSection$items$items$item$$Episode
     _resultData['season'] = l$season?.toJson();
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
+    final l$overrideUrl = overrideUrl;
+    _resultData['overrideUrl'] = l$overrideUrl;
     return _resultData;
   }
 
@@ -87610,6 +87929,7 @@ class Query$GetSection$section$$IconGridSection$items$items$item$$Episode
     final l$number = number;
     final l$season = season;
     final l$$__typename = $__typename;
+    final l$overrideUrl = overrideUrl;
     return Object.hashAll([
       Object.hashAll(l$contributors.map((v) => v)),
       l$description,
@@ -87623,6 +87943,7 @@ class Query$GetSection$section$$IconGridSection$items$items$item$$Episode
       l$number,
       l$season,
       l$$__typename,
+      l$overrideUrl,
     ]);
   }
 
@@ -87703,6 +88024,11 @@ class Query$GetSection$section$$IconGridSection$items$items$item$$Episode
     if (l$$__typename != lOther$$__typename) {
       return false;
     }
+    final l$overrideUrl = overrideUrl;
+    final lOther$overrideUrl = other.overrideUrl;
+    if (l$overrideUrl != lOther$overrideUrl) {
+      return false;
+    }
     return true;
   }
 }
@@ -87752,6 +88078,7 @@ abstract class CopyWith$Query$GetSection$section$$IconGridSection$items$items$it
     Query$GetSection$section$$IconGridSection$items$items$item$$Episode$season?
     season,
     String? $__typename,
+    String? overrideUrl,
   });
   TRes contributors(
     Iterable<
@@ -87807,6 +88134,7 @@ class _CopyWithImpl$Query$GetSection$section$$IconGridSection$items$items$item$$
     Object? number = _undefined,
     Object? season = _undefined,
     Object? $__typename = _undefined,
+    Object? overrideUrl = _undefined,
   }) => _then(
     Query$GetSection$section$$IconGridSection$items$items$item$$Episode(
       contributors: contributors == _undefined || contributors == null
@@ -87843,6 +88171,9 @@ class _CopyWithImpl$Query$GetSection$section$$IconGridSection$items$items$item$$
       $__typename: $__typename == _undefined || $__typename == null
           ? _instance.$__typename
           : ($__typename as String),
+      overrideUrl: overrideUrl == _undefined
+          ? _instance.overrideUrl
+          : (overrideUrl as String?),
     ),
   );
 
@@ -87916,6 +88247,7 @@ class _CopyWithStubImpl$Query$GetSection$section$$IconGridSection$items$items$it
     Query$GetSection$section$$IconGridSection$items$items$item$$Episode$season?
     season,
     String? $__typename,
+    String? overrideUrl,
   }) => _res;
 
   contributors(_fn) => _res;

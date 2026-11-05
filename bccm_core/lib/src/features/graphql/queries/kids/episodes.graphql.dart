@@ -464,12 +464,10 @@ extension ClientExtension$Query$KidsGetNextEpisodes on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$KidsGetNextEpisodes>>
   query$KidsGetNextEpisodes(Options$Query$KidsGetNextEpisodes options) async =>
       await this.query(options);
-
   graphql.ObservableQuery<Query$KidsGetNextEpisodes>
   watchQuery$KidsGetNextEpisodes(
     WatchOptions$Query$KidsGetNextEpisodes options,
   ) => this.watchQuery(options);
-
   void writeQuery$KidsGetNextEpisodes({
     required Query$KidsGetNextEpisodes data,
     required Variables$Query$KidsGetNextEpisodes variables,
@@ -484,7 +482,6 @@ extension ClientExtension$Query$KidsGetNextEpisodes on graphql.GraphQLClient {
     data: data.toJson(),
     broadcast: broadcast,
   );
-
   Query$KidsGetNextEpisodes? readQuery$KidsGetNextEpisodes({
     required Variables$Query$KidsGetNextEpisodes variables,
     bool optimistic = true,
@@ -1195,7 +1192,6 @@ extension UtilityExtension$Query$KidsGetNextEpisodes$episode$next$context
   >
   get copyWith =>
       CopyWith$Query$KidsGetNextEpisodes$episode$next$context(this, (i) => i);
-
   _T when<_T>({
     required _T Function(
       Query$KidsGetNextEpisodes$episode$next$context$$ContextCollection,
@@ -2814,12 +2810,10 @@ extension ClientExtension$Query$GetManyEpisodeIdsForPlaylist
   query$GetManyEpisodeIdsForPlaylist(
     Options$Query$GetManyEpisodeIdsForPlaylist options,
   ) async => await this.query(options);
-
   graphql.ObservableQuery<Query$GetManyEpisodeIdsForPlaylist>
   watchQuery$GetManyEpisodeIdsForPlaylist(
     WatchOptions$Query$GetManyEpisodeIdsForPlaylist options,
   ) => this.watchQuery(options);
-
   void writeQuery$GetManyEpisodeIdsForPlaylist({
     required Query$GetManyEpisodeIdsForPlaylist data,
     required Variables$Query$GetManyEpisodeIdsForPlaylist variables,
@@ -2834,7 +2828,6 @@ extension ClientExtension$Query$GetManyEpisodeIdsForPlaylist
     data: data.toJson(),
     broadcast: broadcast,
   );
-
   Query$GetManyEpisodeIdsForPlaylist? readQuery$GetManyEpisodeIdsForPlaylist({
     required Variables$Query$GetManyEpisodeIdsForPlaylist variables,
     bool optimistic = true,
@@ -3262,7 +3255,6 @@ extension UtilityExtension$Query$GetManyEpisodeIdsForPlaylist$playlist$items$ite
         this,
         (i) => i,
       );
-
   _T when<_T>({
     required _T Function(
       Query$GetManyEpisodeIdsForPlaylist$playlist$items$items$$Episode,
@@ -4194,11 +4186,9 @@ extension ClientExtension$Query$KidsFetchEpisode on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$KidsFetchEpisode>> query$KidsFetchEpisode(
     Options$Query$KidsFetchEpisode options,
   ) async => await this.query(options);
-
   graphql.ObservableQuery<Query$KidsFetchEpisode> watchQuery$KidsFetchEpisode(
     WatchOptions$Query$KidsFetchEpisode options,
   ) => this.watchQuery(options);
-
   void writeQuery$KidsFetchEpisode({
     required Query$KidsFetchEpisode data,
     required Variables$Query$KidsFetchEpisode variables,
@@ -4211,7 +4201,6 @@ extension ClientExtension$Query$KidsFetchEpisode on graphql.GraphQLClient {
     data: data.toJson(),
     broadcast: broadcast,
   );
-
   Query$KidsFetchEpisode? readQuery$KidsFetchEpisode({
     required Variables$Query$KidsFetchEpisode variables,
     bool optimistic = true,
@@ -4803,7 +4792,6 @@ extension UtilityExtension$Query$KidsFetchEpisode$episode$context
   >
   get copyWith =>
       CopyWith$Query$KidsFetchEpisode$episode$context(this, (i) => i);
-
   _T when<_T>({
     required _T Function(
       Query$KidsFetchEpisode$episode$context$$ContextCollection,
@@ -6575,7 +6563,6 @@ extension UtilityExtension$Query$KidsFetchEpisode$episode$context$$ContextCollec
         this,
         (i) => i,
       );
-
   _T when<_T>({
     required _T Function(
       Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item$$Show,
@@ -7169,6 +7156,7 @@ class Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item
   Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item$$Episode({
     required this.id,
     this.image,
+    this.overrideUrl,
     this.number,
     required this.title,
     required this.publishDate,
@@ -7186,6 +7174,7 @@ class Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item
   ) {
     final l$id = json['id'];
     final l$image = json['image'];
+    final l$overrideUrl = json['overrideUrl'];
     final l$number = json['number'];
     final l$title = json['title'];
     final l$publishDate = json['publishDate'];
@@ -7199,6 +7188,7 @@ class Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item
     return Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item$$Episode(
       id: (l$id as String),
       image: (l$image as String?),
+      overrideUrl: (l$overrideUrl as String?),
       number: (l$number as int?),
       title: (l$title as String),
       publishDate: (l$publishDate as String),
@@ -7221,6 +7211,8 @@ class Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item
   final String id;
 
   final String? image;
+
+  final String? overrideUrl;
 
   final int? number;
 
@@ -7248,6 +7240,8 @@ class Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item
     _resultData['id'] = l$id;
     final l$image = image;
     _resultData['image'] = l$image;
+    final l$overrideUrl = overrideUrl;
+    _resultData['overrideUrl'] = l$overrideUrl;
     final l$number = number;
     _resultData['number'] = l$number;
     final l$title = title;
@@ -7275,6 +7269,7 @@ class Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item
   int get hashCode {
     final l$id = id;
     final l$image = image;
+    final l$overrideUrl = overrideUrl;
     final l$number = number;
     final l$title = title;
     final l$publishDate = publishDate;
@@ -7288,6 +7283,7 @@ class Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item
     return Object.hashAll([
       l$id,
       l$image,
+      l$overrideUrl,
       l$number,
       l$title,
       l$publishDate,
@@ -7319,6 +7315,11 @@ class Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item
     final l$image = image;
     final lOther$image = other.image;
     if (l$image != lOther$image) {
+      return false;
+    }
+    final l$overrideUrl = overrideUrl;
+    final lOther$overrideUrl = other.overrideUrl;
+    if (l$overrideUrl != lOther$overrideUrl) {
       return false;
     }
     final l$number = number;
@@ -7407,6 +7408,7 @@ abstract class CopyWith$Query$KidsFetchEpisode$episode$context$$ContextCollectio
   TRes call({
     String? id,
     String? image,
+    String? overrideUrl,
     int? number,
     String? title,
     String? publishDate,
@@ -7447,6 +7449,7 @@ class _CopyWithImpl$Query$KidsFetchEpisode$episode$context$$ContextCollection$it
   TRes call({
     Object? id = _undefined,
     Object? image = _undefined,
+    Object? overrideUrl = _undefined,
     Object? number = _undefined,
     Object? title = _undefined,
     Object? publishDate = _undefined,
@@ -7461,6 +7464,9 @@ class _CopyWithImpl$Query$KidsFetchEpisode$episode$context$$ContextCollection$it
     Query$KidsFetchEpisode$episode$context$$ContextCollection$items$items$item$$Episode(
       id: id == _undefined || id == null ? _instance.id : (id as String),
       image: image == _undefined ? _instance.image : (image as String?),
+      overrideUrl: overrideUrl == _undefined
+          ? _instance.overrideUrl
+          : (overrideUrl as String?),
       number: number == _undefined ? _instance.number : (number as int?),
       title: title == _undefined || title == null
           ? _instance.title
@@ -7527,6 +7533,7 @@ class _CopyWithStubImpl$Query$KidsFetchEpisode$episode$context$$ContextCollectio
   call({
     String? id,
     String? image,
+    String? overrideUrl,
     int? number,
     String? title,
     String? publishDate,

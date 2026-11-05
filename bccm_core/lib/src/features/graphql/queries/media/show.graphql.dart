@@ -510,11 +510,9 @@ extension ClientExtension$Query$GetShow on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$GetShow>> query$GetShow(
     Options$Query$GetShow options,
   ) async => await this.query(options);
-
   graphql.ObservableQuery<Query$GetShow> watchQuery$GetShow(
     WatchOptions$Query$GetShow options,
   ) => this.watchQuery(options);
-
   void writeQuery$GetShow({
     required Query$GetShow data,
     required Variables$Query$GetShow variables,
@@ -527,7 +525,6 @@ extension ClientExtension$Query$GetShow on graphql.GraphQLClient {
     data: data.toJson(),
     broadcast: broadcast,
   );
-
   Query$GetShow? readQuery$GetShow({
     required Variables$Query$GetShow variables,
     bool optimistic = true,
@@ -1283,6 +1280,7 @@ class Query$GetShow$show$seasons$items$episodes$items
   Query$GetShow$show$seasons$items$episodes$items({
     required this.id,
     this.image,
+    this.overrideUrl,
     this.number,
     required this.title,
     required this.publishDate,
@@ -1300,6 +1298,7 @@ class Query$GetShow$show$seasons$items$episodes$items
   ) {
     final l$id = json['id'];
     final l$image = json['image'];
+    final l$overrideUrl = json['overrideUrl'];
     final l$number = json['number'];
     final l$title = json['title'];
     final l$publishDate = json['publishDate'];
@@ -1313,6 +1312,7 @@ class Query$GetShow$show$seasons$items$episodes$items
     return Query$GetShow$show$seasons$items$episodes$items(
       id: (l$id as String),
       image: (l$image as String?),
+      overrideUrl: (l$overrideUrl as String?),
       number: (l$number as int?),
       title: (l$title as String),
       publishDate: (l$publishDate as String),
@@ -1335,6 +1335,8 @@ class Query$GetShow$show$seasons$items$episodes$items
   final String id;
 
   final String? image;
+
+  final String? overrideUrl;
 
   final int? number;
 
@@ -1362,6 +1364,8 @@ class Query$GetShow$show$seasons$items$episodes$items
     _resultData['id'] = l$id;
     final l$image = image;
     _resultData['image'] = l$image;
+    final l$overrideUrl = overrideUrl;
+    _resultData['overrideUrl'] = l$overrideUrl;
     final l$number = number;
     _resultData['number'] = l$number;
     final l$title = title;
@@ -1389,6 +1393,7 @@ class Query$GetShow$show$seasons$items$episodes$items
   int get hashCode {
     final l$id = id;
     final l$image = image;
+    final l$overrideUrl = overrideUrl;
     final l$number = number;
     final l$title = title;
     final l$publishDate = publishDate;
@@ -1402,6 +1407,7 @@ class Query$GetShow$show$seasons$items$episodes$items
     return Object.hashAll([
       l$id,
       l$image,
+      l$overrideUrl,
       l$number,
       l$title,
       l$publishDate,
@@ -1432,6 +1438,11 @@ class Query$GetShow$show$seasons$items$episodes$items
     final l$image = image;
     final lOther$image = other.image;
     if (l$image != lOther$image) {
+      return false;
+    }
+    final l$overrideUrl = overrideUrl;
+    final lOther$overrideUrl = other.overrideUrl;
+    if (l$overrideUrl != lOther$overrideUrl) {
       return false;
     }
     final l$number = number;
@@ -1510,6 +1521,7 @@ abstract class CopyWith$Query$GetShow$show$seasons$items$episodes$items<TRes> {
   TRes call({
     String? id,
     String? image,
+    String? overrideUrl,
     int? number,
     String? title,
     String? publishDate,
@@ -1543,6 +1555,7 @@ class _CopyWithImpl$Query$GetShow$show$seasons$items$episodes$items<TRes>
   TRes call({
     Object? id = _undefined,
     Object? image = _undefined,
+    Object? overrideUrl = _undefined,
     Object? number = _undefined,
     Object? title = _undefined,
     Object? publishDate = _undefined,
@@ -1557,6 +1570,9 @@ class _CopyWithImpl$Query$GetShow$show$seasons$items$episodes$items<TRes>
     Query$GetShow$show$seasons$items$episodes$items(
       id: id == _undefined || id == null ? _instance.id : (id as String),
       image: image == _undefined ? _instance.image : (image as String?),
+      overrideUrl: overrideUrl == _undefined
+          ? _instance.overrideUrl
+          : (overrideUrl as String?),
       number: number == _undefined ? _instance.number : (number as int?),
       title: title == _undefined || title == null
           ? _instance.title
@@ -1621,6 +1637,7 @@ class _CopyWithStubImpl$Query$GetShow$show$seasons$items$episodes$items<TRes>
   call({
     String? id,
     String? image,
+    String? overrideUrl,
     int? number,
     String? title,
     String? publishDate,
