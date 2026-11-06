@@ -111,6 +111,7 @@ fragment BasicStream on Stream {
 fragment SeasonListEpisode on Episode {
   id
   image
+  overrideUrl
   number
   title
   publishDate

@@ -253,7 +253,6 @@ extension ClientExtension$Fragment$EpisodeChapter on graphql.GraphQLClient {
     data: data.toJson(),
     broadcast: broadcast,
   );
-
   Fragment$EpisodeChapter? readFragment$EpisodeChapter({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -327,7 +326,6 @@ class Fragment$EpisodeContext {
 extension UtilityExtension$Fragment$EpisodeContext on Fragment$EpisodeContext {
   CopyWith$Fragment$EpisodeContext<Fragment$EpisodeContext> get copyWith =>
       CopyWith$Fragment$EpisodeContext(this, (i) => i);
-
   _T when<_T>({
     required _T Function(Fragment$EpisodeContext$$ContextCollection)
     contextCollection,
@@ -722,7 +720,6 @@ extension ClientExtension$Fragment$EpisodeContext on graphql.GraphQLClient {
     data: data.toJson(),
     broadcast: broadcast,
   );
-
   Fragment$EpisodeContext? readFragment$EpisodeContext({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -1346,7 +1343,6 @@ extension UtilityExtension$Fragment$EpisodeContext$$ContextCollection$items$item
         this,
         (i) => i,
       );
-
   _T when<_T>({
     required _T Function(
       Fragment$EpisodeContext$$ContextCollection$items$items$item$$Show,
@@ -1929,6 +1925,7 @@ class Fragment$EpisodeContext$$ContextCollection$items$items$item$$Episode
   Fragment$EpisodeContext$$ContextCollection$items$items$item$$Episode({
     required this.id,
     this.image,
+    this.overrideUrl,
     this.number,
     required this.title,
     required this.publishDate,
@@ -1946,6 +1943,7 @@ class Fragment$EpisodeContext$$ContextCollection$items$items$item$$Episode
   ) {
     final l$id = json['id'];
     final l$image = json['image'];
+    final l$overrideUrl = json['overrideUrl'];
     final l$number = json['number'];
     final l$title = json['title'];
     final l$publishDate = json['publishDate'];
@@ -1959,6 +1957,7 @@ class Fragment$EpisodeContext$$ContextCollection$items$items$item$$Episode
     return Fragment$EpisodeContext$$ContextCollection$items$items$item$$Episode(
       id: (l$id as String),
       image: (l$image as String?),
+      overrideUrl: (l$overrideUrl as String?),
       number: (l$number as int?),
       title: (l$title as String),
       publishDate: (l$publishDate as String),
@@ -1981,6 +1980,8 @@ class Fragment$EpisodeContext$$ContextCollection$items$items$item$$Episode
   final String id;
 
   final String? image;
+
+  final String? overrideUrl;
 
   final int? number;
 
@@ -2008,6 +2009,8 @@ class Fragment$EpisodeContext$$ContextCollection$items$items$item$$Episode
     _resultData['id'] = l$id;
     final l$image = image;
     _resultData['image'] = l$image;
+    final l$overrideUrl = overrideUrl;
+    _resultData['overrideUrl'] = l$overrideUrl;
     final l$number = number;
     _resultData['number'] = l$number;
     final l$title = title;
@@ -2035,6 +2038,7 @@ class Fragment$EpisodeContext$$ContextCollection$items$items$item$$Episode
   int get hashCode {
     final l$id = id;
     final l$image = image;
+    final l$overrideUrl = overrideUrl;
     final l$number = number;
     final l$title = title;
     final l$publishDate = publishDate;
@@ -2048,6 +2052,7 @@ class Fragment$EpisodeContext$$ContextCollection$items$items$item$$Episode
     return Object.hashAll([
       l$id,
       l$image,
+      l$overrideUrl,
       l$number,
       l$title,
       l$publishDate,
@@ -2079,6 +2084,11 @@ class Fragment$EpisodeContext$$ContextCollection$items$items$item$$Episode
     final l$image = image;
     final lOther$image = other.image;
     if (l$image != lOther$image) {
+      return false;
+    }
+    final l$overrideUrl = overrideUrl;
+    final lOther$overrideUrl = other.overrideUrl;
+    if (l$overrideUrl != lOther$overrideUrl) {
       return false;
     }
     final l$number = number;
@@ -2166,6 +2176,7 @@ abstract class CopyWith$Fragment$EpisodeContext$$ContextCollection$items$items$i
   TRes call({
     String? id,
     String? image,
+    String? overrideUrl,
     int? number,
     String? title,
     String? publishDate,
@@ -2206,6 +2217,7 @@ class _CopyWithImpl$Fragment$EpisodeContext$$ContextCollection$items$items$item$
   TRes call({
     Object? id = _undefined,
     Object? image = _undefined,
+    Object? overrideUrl = _undefined,
     Object? number = _undefined,
     Object? title = _undefined,
     Object? publishDate = _undefined,
@@ -2220,6 +2232,9 @@ class _CopyWithImpl$Fragment$EpisodeContext$$ContextCollection$items$items$item$
     Fragment$EpisodeContext$$ContextCollection$items$items$item$$Episode(
       id: id == _undefined || id == null ? _instance.id : (id as String),
       image: image == _undefined ? _instance.image : (image as String?),
+      overrideUrl: overrideUrl == _undefined
+          ? _instance.overrideUrl
+          : (overrideUrl as String?),
       number: number == _undefined ? _instance.number : (number as int?),
       title: title == _undefined || title == null
           ? _instance.title
@@ -2286,6 +2301,7 @@ class _CopyWithStubImpl$Fragment$EpisodeContext$$ContextCollection$items$items$i
   call({
     String? id,
     String? image,
+    String? overrideUrl,
     int? number,
     String? title,
     String? publishDate,
@@ -4565,7 +4581,6 @@ extension ClientExtension$Fragment$BasicStream on graphql.GraphQLClient {
     data: data.toJson(),
     broadcast: broadcast,
   );
-
   Fragment$BasicStream? readFragment$BasicStream({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -4588,6 +4603,7 @@ class Fragment$SeasonListEpisode implements Fragment$EpisodeThumbnail {
   Fragment$SeasonListEpisode({
     required this.id,
     this.image,
+    this.overrideUrl,
     this.number,
     required this.title,
     required this.publishDate,
@@ -4603,6 +4619,7 @@ class Fragment$SeasonListEpisode implements Fragment$EpisodeThumbnail {
   factory Fragment$SeasonListEpisode.fromJson(Map<String, dynamic> json) {
     final l$id = json['id'];
     final l$image = json['image'];
+    final l$overrideUrl = json['overrideUrl'];
     final l$number = json['number'];
     final l$title = json['title'];
     final l$publishDate = json['publishDate'];
@@ -4616,6 +4633,7 @@ class Fragment$SeasonListEpisode implements Fragment$EpisodeThumbnail {
     return Fragment$SeasonListEpisode(
       id: (l$id as String),
       image: (l$image as String?),
+      overrideUrl: (l$overrideUrl as String?),
       number: (l$number as int?),
       title: (l$title as String),
       publishDate: (l$publishDate as String),
@@ -4638,6 +4656,8 @@ class Fragment$SeasonListEpisode implements Fragment$EpisodeThumbnail {
   final String id;
 
   final String? image;
+
+  final String? overrideUrl;
 
   final int? number;
 
@@ -4665,6 +4685,8 @@ class Fragment$SeasonListEpisode implements Fragment$EpisodeThumbnail {
     _resultData['id'] = l$id;
     final l$image = image;
     _resultData['image'] = l$image;
+    final l$overrideUrl = overrideUrl;
+    _resultData['overrideUrl'] = l$overrideUrl;
     final l$number = number;
     _resultData['number'] = l$number;
     final l$title = title;
@@ -4692,6 +4714,7 @@ class Fragment$SeasonListEpisode implements Fragment$EpisodeThumbnail {
   int get hashCode {
     final l$id = id;
     final l$image = image;
+    final l$overrideUrl = overrideUrl;
     final l$number = number;
     final l$title = title;
     final l$publishDate = publishDate;
@@ -4705,6 +4728,7 @@ class Fragment$SeasonListEpisode implements Fragment$EpisodeThumbnail {
     return Object.hashAll([
       l$id,
       l$image,
+      l$overrideUrl,
       l$number,
       l$title,
       l$publishDate,
@@ -4735,6 +4759,11 @@ class Fragment$SeasonListEpisode implements Fragment$EpisodeThumbnail {
     final l$image = image;
     final lOther$image = other.image;
     if (l$image != lOther$image) {
+      return false;
+    }
+    final l$overrideUrl = overrideUrl;
+    final lOther$overrideUrl = other.overrideUrl;
+    if (l$overrideUrl != lOther$overrideUrl) {
       return false;
     }
     final l$number = number;
@@ -4809,6 +4838,7 @@ abstract class CopyWith$Fragment$SeasonListEpisode<TRes> {
   TRes call({
     String? id,
     String? image,
+    String? overrideUrl,
     int? number,
     String? title,
     String? publishDate,
@@ -4837,6 +4867,7 @@ class _CopyWithImpl$Fragment$SeasonListEpisode<TRes>
   TRes call({
     Object? id = _undefined,
     Object? image = _undefined,
+    Object? overrideUrl = _undefined,
     Object? number = _undefined,
     Object? title = _undefined,
     Object? publishDate = _undefined,
@@ -4851,6 +4882,9 @@ class _CopyWithImpl$Fragment$SeasonListEpisode<TRes>
     Fragment$SeasonListEpisode(
       id: id == _undefined || id == null ? _instance.id : (id as String),
       image: image == _undefined ? _instance.image : (image as String?),
+      overrideUrl: overrideUrl == _undefined
+          ? _instance.overrideUrl
+          : (overrideUrl as String?),
       number: number == _undefined ? _instance.number : (number as int?),
       title: title == _undefined || title == null
           ? _instance.title
@@ -4910,6 +4944,7 @@ class _CopyWithStubImpl$Fragment$SeasonListEpisode<TRes>
   call({
     String? id,
     String? image,
+    String? overrideUrl,
     int? number,
     String? title,
     String? publishDate,
@@ -4946,6 +4981,13 @@ const fragmentDefinitionSeasonListEpisode = FragmentDefinitionNode(
       ),
       FieldNode(
         name: NameNode(value: 'image'),
+        alias: null,
+        arguments: [],
+        directives: [],
+        selectionSet: null,
+      ),
+      FieldNode(
+        name: NameNode(value: 'overrideUrl'),
         alias: null,
         arguments: [],
         directives: [],
@@ -5061,7 +5103,6 @@ extension ClientExtension$Fragment$SeasonListEpisode on graphql.GraphQLClient {
     data: data.toJson(),
     broadcast: broadcast,
   );
-
   Fragment$SeasonListEpisode? readFragment$SeasonListEpisode({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -5603,7 +5644,6 @@ extension UtilityExtension$Fragment$PlayableMediaItem
     on Fragment$PlayableMediaItem {
   CopyWith$Fragment$PlayableMediaItem<Fragment$PlayableMediaItem>
   get copyWith => CopyWith$Fragment$PlayableMediaItem(this, (i) => i);
-
   _T when<_T>({
     required _T Function(Fragment$PlayableMediaItem$$Episode) episode,
     required _T Function(Fragment$PlayableMediaItem$$Short) short,
@@ -6013,7 +6053,6 @@ extension ClientExtension$Fragment$PlayableMediaItem on graphql.GraphQLClient {
     data: data.toJson(),
     broadcast: broadcast,
   );
-
   Fragment$PlayableMediaItem? readFragment$PlayableMediaItem({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -6520,7 +6559,6 @@ extension UtilityExtension$Fragment$PlayableMediaItem$$Episode$context
   >
   get copyWith =>
       CopyWith$Fragment$PlayableMediaItem$$Episode$context(this, (i) => i);
-
   _T when<_T>({
     required _T Function(
       Fragment$PlayableMediaItem$$Episode$context$$ContextCollection,
@@ -8598,7 +8636,6 @@ extension ClientExtension$Fragment$EpisodeDetails on graphql.GraphQLClient {
     data: data.toJson(),
     broadcast: broadcast,
   );
-
   Fragment$EpisodeDetails? readFragment$EpisodeDetails({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -10088,7 +10125,6 @@ extension ClientExtension$Fragment$EpisodeAvailability
     data: data.toJson(),
     broadcast: broadcast,
   );
-
   Fragment$EpisodeAvailability? readFragment$EpisodeAvailability({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -10114,6 +10150,7 @@ class Fragment$EpisodeListEpisode
   Fragment$EpisodeListEpisode({
     required this.id,
     this.image,
+    this.overrideUrl,
     this.number,
     required this.title,
     required this.publishDate,
@@ -10129,6 +10166,7 @@ class Fragment$EpisodeListEpisode
   factory Fragment$EpisodeListEpisode.fromJson(Map<String, dynamic> json) {
     final l$id = json['id'];
     final l$image = json['image'];
+    final l$overrideUrl = json['overrideUrl'];
     final l$number = json['number'];
     final l$title = json['title'];
     final l$publishDate = json['publishDate'];
@@ -10142,6 +10180,7 @@ class Fragment$EpisodeListEpisode
     return Fragment$EpisodeListEpisode(
       id: (l$id as String),
       image: (l$image as String?),
+      overrideUrl: (l$overrideUrl as String?),
       number: (l$number as int?),
       title: (l$title as String),
       publishDate: (l$publishDate as String),
@@ -10164,6 +10203,8 @@ class Fragment$EpisodeListEpisode
   final String id;
 
   final String? image;
+
+  final String? overrideUrl;
 
   final int? number;
 
@@ -10191,6 +10232,8 @@ class Fragment$EpisodeListEpisode
     _resultData['id'] = l$id;
     final l$image = image;
     _resultData['image'] = l$image;
+    final l$overrideUrl = overrideUrl;
+    _resultData['overrideUrl'] = l$overrideUrl;
     final l$number = number;
     _resultData['number'] = l$number;
     final l$title = title;
@@ -10218,6 +10261,7 @@ class Fragment$EpisodeListEpisode
   int get hashCode {
     final l$id = id;
     final l$image = image;
+    final l$overrideUrl = overrideUrl;
     final l$number = number;
     final l$title = title;
     final l$publishDate = publishDate;
@@ -10231,6 +10275,7 @@ class Fragment$EpisodeListEpisode
     return Object.hashAll([
       l$id,
       l$image,
+      l$overrideUrl,
       l$number,
       l$title,
       l$publishDate,
@@ -10261,6 +10306,11 @@ class Fragment$EpisodeListEpisode
     final l$image = image;
     final lOther$image = other.image;
     if (l$image != lOther$image) {
+      return false;
+    }
+    final l$overrideUrl = overrideUrl;
+    final lOther$overrideUrl = other.overrideUrl;
+    if (l$overrideUrl != lOther$overrideUrl) {
       return false;
     }
     final l$number = number;
@@ -10335,6 +10385,7 @@ abstract class CopyWith$Fragment$EpisodeListEpisode<TRes> {
   TRes call({
     String? id,
     String? image,
+    String? overrideUrl,
     int? number,
     String? title,
     String? publishDate,
@@ -10363,6 +10414,7 @@ class _CopyWithImpl$Fragment$EpisodeListEpisode<TRes>
   TRes call({
     Object? id = _undefined,
     Object? image = _undefined,
+    Object? overrideUrl = _undefined,
     Object? number = _undefined,
     Object? title = _undefined,
     Object? publishDate = _undefined,
@@ -10377,6 +10429,9 @@ class _CopyWithImpl$Fragment$EpisodeListEpisode<TRes>
     Fragment$EpisodeListEpisode(
       id: id == _undefined || id == null ? _instance.id : (id as String),
       image: image == _undefined ? _instance.image : (image as String?),
+      overrideUrl: overrideUrl == _undefined
+          ? _instance.overrideUrl
+          : (overrideUrl as String?),
       number: number == _undefined ? _instance.number : (number as int?),
       title: title == _undefined || title == null
           ? _instance.title
@@ -10436,6 +10491,7 @@ class _CopyWithStubImpl$Fragment$EpisodeListEpisode<TRes>
   call({
     String? id,
     String? image,
+    String? overrideUrl,
     int? number,
     String? title,
     String? publishDate,
@@ -10549,7 +10605,6 @@ extension ClientExtension$Fragment$EpisodeListEpisode on graphql.GraphQLClient {
     data: data.toJson(),
     broadcast: broadcast,
   );
-
   Fragment$EpisodeListEpisode? readFragment$EpisodeListEpisode({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -11764,11 +11819,9 @@ extension ClientExtension$Query$FetchEpisode on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$FetchEpisode>> query$FetchEpisode(
     Options$Query$FetchEpisode options,
   ) async => await this.query(options);
-
   graphql.ObservableQuery<Query$FetchEpisode> watchQuery$FetchEpisode(
     WatchOptions$Query$FetchEpisode options,
   ) => this.watchQuery(options);
-
   void writeQuery$FetchEpisode({
     required Query$FetchEpisode data,
     required Variables$Query$FetchEpisode variables,
@@ -11781,7 +11834,6 @@ extension ClientExtension$Query$FetchEpisode on graphql.GraphQLClient {
     data: data.toJson(),
     broadcast: broadcast,
   );
-
   Query$FetchEpisode? readQuery$FetchEpisode({
     required Variables$Query$FetchEpisode variables,
     bool optimistic = true,
@@ -12695,7 +12747,6 @@ extension UtilityExtension$Query$FetchEpisode$episode$context
     Query$FetchEpisode$episode$context
   >
   get copyWith => CopyWith$Query$FetchEpisode$episode$context(this, (i) => i);
-
   _T when<_T>({
     required _T Function(Query$FetchEpisode$episode$context$$ContextCollection)
     contextCollection,
@@ -14434,7 +14485,6 @@ extension UtilityExtension$Query$FetchEpisode$episode$context$$ContextCollection
         this,
         (i) => i,
       );
-
   _T when<_T>({
     required _T Function(
       Query$FetchEpisode$episode$context$$ContextCollection$items$items$item$$Show,
@@ -15026,6 +15076,7 @@ class Query$FetchEpisode$episode$context$$ContextCollection$items$items$item$$Ep
   Query$FetchEpisode$episode$context$$ContextCollection$items$items$item$$Episode({
     required this.id,
     this.image,
+    this.overrideUrl,
     this.number,
     required this.title,
     required this.publishDate,
@@ -15043,6 +15094,7 @@ class Query$FetchEpisode$episode$context$$ContextCollection$items$items$item$$Ep
   ) {
     final l$id = json['id'];
     final l$image = json['image'];
+    final l$overrideUrl = json['overrideUrl'];
     final l$number = json['number'];
     final l$title = json['title'];
     final l$publishDate = json['publishDate'];
@@ -15056,6 +15108,7 @@ class Query$FetchEpisode$episode$context$$ContextCollection$items$items$item$$Ep
     return Query$FetchEpisode$episode$context$$ContextCollection$items$items$item$$Episode(
       id: (l$id as String),
       image: (l$image as String?),
+      overrideUrl: (l$overrideUrl as String?),
       number: (l$number as int?),
       title: (l$title as String),
       publishDate: (l$publishDate as String),
@@ -15078,6 +15131,8 @@ class Query$FetchEpisode$episode$context$$ContextCollection$items$items$item$$Ep
   final String id;
 
   final String? image;
+
+  final String? overrideUrl;
 
   final int? number;
 
@@ -15105,6 +15160,8 @@ class Query$FetchEpisode$episode$context$$ContextCollection$items$items$item$$Ep
     _resultData['id'] = l$id;
     final l$image = image;
     _resultData['image'] = l$image;
+    final l$overrideUrl = overrideUrl;
+    _resultData['overrideUrl'] = l$overrideUrl;
     final l$number = number;
     _resultData['number'] = l$number;
     final l$title = title;
@@ -15132,6 +15189,7 @@ class Query$FetchEpisode$episode$context$$ContextCollection$items$items$item$$Ep
   int get hashCode {
     final l$id = id;
     final l$image = image;
+    final l$overrideUrl = overrideUrl;
     final l$number = number;
     final l$title = title;
     final l$publishDate = publishDate;
@@ -15145,6 +15203,7 @@ class Query$FetchEpisode$episode$context$$ContextCollection$items$items$item$$Ep
     return Object.hashAll([
       l$id,
       l$image,
+      l$overrideUrl,
       l$number,
       l$title,
       l$publishDate,
@@ -15176,6 +15235,11 @@ class Query$FetchEpisode$episode$context$$ContextCollection$items$items$item$$Ep
     final l$image = image;
     final lOther$image = other.image;
     if (l$image != lOther$image) {
+      return false;
+    }
+    final l$overrideUrl = overrideUrl;
+    final lOther$overrideUrl = other.overrideUrl;
+    if (l$overrideUrl != lOther$overrideUrl) {
       return false;
     }
     final l$number = number;
@@ -15264,6 +15328,7 @@ abstract class CopyWith$Query$FetchEpisode$episode$context$$ContextCollection$it
   TRes call({
     String? id,
     String? image,
+    String? overrideUrl,
     int? number,
     String? title,
     String? publishDate,
@@ -15304,6 +15369,7 @@ class _CopyWithImpl$Query$FetchEpisode$episode$context$$ContextCollection$items$
   TRes call({
     Object? id = _undefined,
     Object? image = _undefined,
+    Object? overrideUrl = _undefined,
     Object? number = _undefined,
     Object? title = _undefined,
     Object? publishDate = _undefined,
@@ -15318,6 +15384,9 @@ class _CopyWithImpl$Query$FetchEpisode$episode$context$$ContextCollection$items$
     Query$FetchEpisode$episode$context$$ContextCollection$items$items$item$$Episode(
       id: id == _undefined || id == null ? _instance.id : (id as String),
       image: image == _undefined ? _instance.image : (image as String?),
+      overrideUrl: overrideUrl == _undefined
+          ? _instance.overrideUrl
+          : (overrideUrl as String?),
       number: number == _undefined ? _instance.number : (number as int?),
       title: title == _undefined || title == null
           ? _instance.title
@@ -15384,6 +15453,7 @@ class _CopyWithStubImpl$Query$FetchEpisode$episode$context$$ContextCollection$it
   call({
     String? id,
     String? image,
+    String? overrideUrl,
     int? number,
     String? title,
     String? publishDate,
@@ -17886,11 +17956,9 @@ extension ClientExtension$Query$legacyIDLookup on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$legacyIDLookup>> query$legacyIDLookup([
     Options$Query$legacyIDLookup? options,
   ]) async => await this.query(options ?? Options$Query$legacyIDLookup());
-
   graphql.ObservableQuery<Query$legacyIDLookup> watchQuery$legacyIDLookup([
     WatchOptions$Query$legacyIDLookup? options,
   ]) => this.watchQuery(options ?? WatchOptions$Query$legacyIDLookup());
-
   void writeQuery$legacyIDLookup({
     required Query$legacyIDLookup data,
     Variables$Query$legacyIDLookup? variables,
@@ -17903,7 +17971,6 @@ extension ClientExtension$Query$legacyIDLookup on graphql.GraphQLClient {
     data: data.toJson(),
     broadcast: broadcast,
   );
-
   Query$legacyIDLookup? readQuery$legacyIDLookup({
     Variables$Query$legacyIDLookup? variables,
     bool optimistic = true,
@@ -18414,11 +18481,9 @@ extension ClientExtension$Query$EpisodeDetails on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$EpisodeDetails>> query$EpisodeDetails(
     Options$Query$EpisodeDetails options,
   ) async => await this.query(options);
-
   graphql.ObservableQuery<Query$EpisodeDetails> watchQuery$EpisodeDetails(
     WatchOptions$Query$EpisodeDetails options,
   ) => this.watchQuery(options);
-
   void writeQuery$EpisodeDetails({
     required Query$EpisodeDetails data,
     required Variables$Query$EpisodeDetails variables,
@@ -18431,7 +18496,6 @@ extension ClientExtension$Query$EpisodeDetails on graphql.GraphQLClient {
     data: data.toJson(),
     broadcast: broadcast,
   );
-
   Query$EpisodeDetails? readQuery$EpisodeDetails({
     required Variables$Query$EpisodeDetails variables,
     bool optimistic = true,
@@ -18865,12 +18929,10 @@ extension ClientExtension$Query$getDefaultEpisodeForShow
   query$getDefaultEpisodeForShow(
     Options$Query$getDefaultEpisodeForShow options,
   ) async => await this.query(options);
-
   graphql.ObservableQuery<Query$getDefaultEpisodeForShow>
   watchQuery$getDefaultEpisodeForShow(
     WatchOptions$Query$getDefaultEpisodeForShow options,
   ) => this.watchQuery(options);
-
   void writeQuery$getDefaultEpisodeForShow({
     required Query$getDefaultEpisodeForShow data,
     required Variables$Query$getDefaultEpisodeForShow variables,
@@ -18885,7 +18947,6 @@ extension ClientExtension$Query$getDefaultEpisodeForShow
     data: data.toJson(),
     broadcast: broadcast,
   );
-
   Query$getDefaultEpisodeForShow? readQuery$getDefaultEpisodeForShow({
     required Variables$Query$getDefaultEpisodeForShow variables,
     bool optimistic = true,
@@ -19617,11 +19678,9 @@ extension ClientExtension$Query$getNextEpisodes on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$getNextEpisodes>> query$getNextEpisodes(
     Options$Query$getNextEpisodes options,
   ) async => await this.query(options);
-
   graphql.ObservableQuery<Query$getNextEpisodes> watchQuery$getNextEpisodes(
     WatchOptions$Query$getNextEpisodes options,
   ) => this.watchQuery(options);
-
   void writeQuery$getNextEpisodes({
     required Query$getNextEpisodes data,
     required Variables$Query$getNextEpisodes variables,
@@ -19634,7 +19693,6 @@ extension ClientExtension$Query$getNextEpisodes on graphql.GraphQLClient {
     data: data.toJson(),
     broadcast: broadcast,
   );
-
   Query$getNextEpisodes? readQuery$getNextEpisodes({
     required Variables$Query$getNextEpisodes variables,
     bool optimistic = true,
@@ -20314,7 +20372,6 @@ extension UtilityExtension$Query$getNextEpisodes$episode$next$context
   >
   get copyWith =>
       CopyWith$Query$getNextEpisodes$episode$next$context(this, (i) => i);
-
   _T when<_T>({
     required _T Function(
       Query$getNextEpisodes$episode$next$context$$ContextCollection,
@@ -21799,12 +21856,10 @@ extension ClientExtension$Query$getEpisodeAvailability
   query$getEpisodeAvailability(
     Options$Query$getEpisodeAvailability options,
   ) async => await this.query(options);
-
   graphql.ObservableQuery<Query$getEpisodeAvailability>
   watchQuery$getEpisodeAvailability(
     WatchOptions$Query$getEpisodeAvailability options,
   ) => this.watchQuery(options);
-
   void writeQuery$getEpisodeAvailability({
     required Query$getEpisodeAvailability data,
     required Variables$Query$getEpisodeAvailability variables,
@@ -21819,7 +21874,6 @@ extension ClientExtension$Query$getEpisodeAvailability
     data: data.toJson(),
     broadcast: broadcast,
   );
-
   Query$getEpisodeAvailability? readQuery$getEpisodeAvailability({
     required Variables$Query$getEpisodeAvailability variables,
     bool optimistic = true,

@@ -427,7 +427,6 @@ extension ClientExtension$Fragment$Contribution on graphql.GraphQLClient {
     data: data.toJson(),
     broadcast: broadcast,
   );
-
   Fragment$Contribution? readFragment$Contribution({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -610,7 +609,6 @@ extension UtilityExtension$Fragment$Contribution$item
     on Fragment$Contribution$item {
   CopyWith$Fragment$Contribution$item<Fragment$Contribution$item>
   get copyWith => CopyWith$Fragment$Contribution$item(this, (i) => i);
-
   _T when<_T>({
     required _T Function(Fragment$Contribution$item$$Episode) episode,
     required _T Function(Fragment$Contribution$item$$Chapter) chapter,
@@ -707,6 +705,7 @@ class Fragment$Contribution$item$$Episode
     required this.title,
     this.$__typename = 'Episode',
     this.image,
+    this.overrideUrl,
     this.number,
     required this.publishDate,
     required this.ageRating,
@@ -724,6 +723,7 @@ class Fragment$Contribution$item$$Episode
     final l$title = json['title'];
     final l$$__typename = json['__typename'];
     final l$image = json['image'];
+    final l$overrideUrl = json['overrideUrl'];
     final l$number = json['number'];
     final l$publishDate = json['publishDate'];
     final l$ageRating = json['ageRating'];
@@ -737,6 +737,7 @@ class Fragment$Contribution$item$$Episode
       title: (l$title as String),
       $__typename: (l$$__typename as String),
       image: (l$image as String?),
+      overrideUrl: (l$overrideUrl as String?),
       number: (l$number as int?),
       publishDate: (l$publishDate as String),
       ageRating: (l$ageRating as String),
@@ -761,6 +762,8 @@ class Fragment$Contribution$item$$Episode
   final String $__typename;
 
   final String? image;
+
+  final String? overrideUrl;
 
   final int? number;
 
@@ -788,6 +791,8 @@ class Fragment$Contribution$item$$Episode
     _resultData['__typename'] = l$$__typename;
     final l$image = image;
     _resultData['image'] = l$image;
+    final l$overrideUrl = overrideUrl;
+    _resultData['overrideUrl'] = l$overrideUrl;
     final l$number = number;
     _resultData['number'] = l$number;
     final l$publishDate = publishDate;
@@ -813,6 +818,7 @@ class Fragment$Contribution$item$$Episode
     final l$title = title;
     final l$$__typename = $__typename;
     final l$image = image;
+    final l$overrideUrl = overrideUrl;
     final l$number = number;
     final l$publishDate = publishDate;
     final l$ageRating = ageRating;
@@ -826,6 +832,7 @@ class Fragment$Contribution$item$$Episode
       l$title,
       l$$__typename,
       l$image,
+      l$overrideUrl,
       l$number,
       l$publishDate,
       l$ageRating,
@@ -864,6 +871,11 @@ class Fragment$Contribution$item$$Episode
     final l$image = image;
     final lOther$image = other.image;
     if (l$image != lOther$image) {
+      return false;
+    }
+    final l$overrideUrl = overrideUrl;
+    final lOther$overrideUrl = other.overrideUrl;
+    if (l$overrideUrl != lOther$overrideUrl) {
       return false;
     }
     final l$number = number;
@@ -932,6 +944,7 @@ abstract class CopyWith$Fragment$Contribution$item$$Episode<TRes> {
     String? title,
     String? $__typename,
     String? image,
+    String? overrideUrl,
     int? number,
     String? publishDate,
     String? ageRating,
@@ -960,6 +973,7 @@ class _CopyWithImpl$Fragment$Contribution$item$$Episode<TRes>
     Object? title = _undefined,
     Object? $__typename = _undefined,
     Object? image = _undefined,
+    Object? overrideUrl = _undefined,
     Object? number = _undefined,
     Object? publishDate = _undefined,
     Object? ageRating = _undefined,
@@ -978,6 +992,9 @@ class _CopyWithImpl$Fragment$Contribution$item$$Episode<TRes>
           ? _instance.$__typename
           : ($__typename as String),
       image: image == _undefined ? _instance.image : (image as String?),
+      overrideUrl: overrideUrl == _undefined
+          ? _instance.overrideUrl
+          : (overrideUrl as String?),
       number: number == _undefined ? _instance.number : (number as int?),
       publishDate: publishDate == _undefined || publishDate == null
           ? _instance.publishDate
@@ -1035,6 +1052,7 @@ class _CopyWithStubImpl$Fragment$Contribution$item$$Episode<TRes>
     String? title,
     String? $__typename,
     String? image,
+    String? overrideUrl,
     int? number,
     String? publishDate,
     String? ageRating,
@@ -1304,6 +1322,7 @@ class Fragment$Contribution$item$$Chapter$episode
   Fragment$Contribution$item$$Chapter$episode({
     required this.id,
     this.image,
+    this.overrideUrl,
     this.number,
     required this.title,
     required this.publishDate,
@@ -1321,6 +1340,7 @@ class Fragment$Contribution$item$$Chapter$episode
   ) {
     final l$id = json['id'];
     final l$image = json['image'];
+    final l$overrideUrl = json['overrideUrl'];
     final l$number = json['number'];
     final l$title = json['title'];
     final l$publishDate = json['publishDate'];
@@ -1334,6 +1354,7 @@ class Fragment$Contribution$item$$Chapter$episode
     return Fragment$Contribution$item$$Chapter$episode(
       id: (l$id as String),
       image: (l$image as String?),
+      overrideUrl: (l$overrideUrl as String?),
       number: (l$number as int?),
       title: (l$title as String),
       publishDate: (l$publishDate as String),
@@ -1356,6 +1377,8 @@ class Fragment$Contribution$item$$Chapter$episode
   final String id;
 
   final String? image;
+
+  final String? overrideUrl;
 
   final int? number;
 
@@ -1383,6 +1406,8 @@ class Fragment$Contribution$item$$Chapter$episode
     _resultData['id'] = l$id;
     final l$image = image;
     _resultData['image'] = l$image;
+    final l$overrideUrl = overrideUrl;
+    _resultData['overrideUrl'] = l$overrideUrl;
     final l$number = number;
     _resultData['number'] = l$number;
     final l$title = title;
@@ -1410,6 +1435,7 @@ class Fragment$Contribution$item$$Chapter$episode
   int get hashCode {
     final l$id = id;
     final l$image = image;
+    final l$overrideUrl = overrideUrl;
     final l$number = number;
     final l$title = title;
     final l$publishDate = publishDate;
@@ -1423,6 +1449,7 @@ class Fragment$Contribution$item$$Chapter$episode
     return Object.hashAll([
       l$id,
       l$image,
+      l$overrideUrl,
       l$number,
       l$title,
       l$publishDate,
@@ -1453,6 +1480,11 @@ class Fragment$Contribution$item$$Chapter$episode
     final l$image = image;
     final lOther$image = other.image;
     if (l$image != lOther$image) {
+      return false;
+    }
+    final l$overrideUrl = overrideUrl;
+    final lOther$overrideUrl = other.overrideUrl;
+    if (l$overrideUrl != lOther$overrideUrl) {
       return false;
     }
     final l$number = number;
@@ -1530,6 +1562,7 @@ abstract class CopyWith$Fragment$Contribution$item$$Chapter$episode<TRes> {
   TRes call({
     String? id,
     String? image,
+    String? overrideUrl,
     int? number,
     String? title,
     String? publishDate,
@@ -1562,6 +1595,7 @@ class _CopyWithImpl$Fragment$Contribution$item$$Chapter$episode<TRes>
   TRes call({
     Object? id = _undefined,
     Object? image = _undefined,
+    Object? overrideUrl = _undefined,
     Object? number = _undefined,
     Object? title = _undefined,
     Object? publishDate = _undefined,
@@ -1576,6 +1610,9 @@ class _CopyWithImpl$Fragment$Contribution$item$$Chapter$episode<TRes>
     Fragment$Contribution$item$$Chapter$episode(
       id: id == _undefined || id == null ? _instance.id : (id as String),
       image: image == _undefined ? _instance.image : (image as String?),
+      overrideUrl: overrideUrl == _undefined
+          ? _instance.overrideUrl
+          : (overrideUrl as String?),
       number: number == _undefined ? _instance.number : (number as int?),
       title: title == _undefined || title == null
           ? _instance.title
@@ -1638,6 +1675,7 @@ class _CopyWithStubImpl$Fragment$Contribution$item$$Chapter$episode<TRes>
   call({
     String? id,
     String? image,
+    String? overrideUrl,
     int? number,
     String? title,
     String? publishDate,
@@ -2606,7 +2644,6 @@ extension UtilityExtension$Fragment$ContributionItemId
     on Fragment$ContributionItemId {
   CopyWith$Fragment$ContributionItemId<Fragment$ContributionItemId>
   get copyWith => CopyWith$Fragment$ContributionItemId(this, (i) => i);
-
   _T when<_T>({
     required _T Function(Fragment$ContributionItemId$$Episode) episode,
     required _T Function(Fragment$ContributionItemId$$Chapter) chapter,
@@ -2812,7 +2849,6 @@ extension ClientExtension$Fragment$ContributionItemId on graphql.GraphQLClient {
     data: data.toJson(),
     broadcast: broadcast,
   );
-
   Fragment$ContributionItemId? readFragment$ContributionItemId({
     required Map<String, dynamic> idFields,
     bool optimistic = true,
@@ -4159,11 +4195,9 @@ extension ClientExtension$Query$GetPerson on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$GetPerson>> query$GetPerson(
     Options$Query$GetPerson options,
   ) async => await this.query(options);
-
   graphql.ObservableQuery<Query$GetPerson> watchQuery$GetPerson(
     WatchOptions$Query$GetPerson options,
   ) => this.watchQuery(options);
-
   void writeQuery$GetPerson({
     required Query$GetPerson data,
     required Variables$Query$GetPerson variables,
@@ -4176,7 +4210,6 @@ extension ClientExtension$Query$GetPerson on graphql.GraphQLClient {
     data: data.toJson(),
     broadcast: broadcast,
   );
-
   Query$GetPerson? readQuery$GetPerson({
     required Variables$Query$GetPerson variables,
     bool optimistic = true,
@@ -5238,12 +5271,10 @@ extension ClientExtension$Query$GetRandomContribution on graphql.GraphQLClient {
   query$GetRandomContribution(
     Options$Query$GetRandomContribution options,
   ) async => await this.query(options);
-
   graphql.ObservableQuery<Query$GetRandomContribution>
   watchQuery$GetRandomContribution(
     WatchOptions$Query$GetRandomContribution options,
   ) => this.watchQuery(options);
-
   void writeQuery$GetRandomContribution({
     required Query$GetRandomContribution data,
     required Variables$Query$GetRandomContribution variables,
@@ -5258,7 +5289,6 @@ extension ClientExtension$Query$GetRandomContribution on graphql.GraphQLClient {
     data: data.toJson(),
     broadcast: broadcast,
   );
-
   Query$GetRandomContribution? readQuery$GetRandomContribution({
     required Variables$Query$GetRandomContribution variables,
     bool optimistic = true,
@@ -6193,11 +6223,9 @@ extension ClientExtension$Query$GetContributions on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$GetContributions>> query$GetContributions(
     Options$Query$GetContributions options,
   ) async => await this.query(options);
-
   graphql.ObservableQuery<Query$GetContributions> watchQuery$GetContributions(
     WatchOptions$Query$GetContributions options,
   ) => this.watchQuery(options);
-
   void writeQuery$GetContributions({
     required Query$GetContributions data,
     required Variables$Query$GetContributions variables,
@@ -6210,7 +6238,6 @@ extension ClientExtension$Query$GetContributions on graphql.GraphQLClient {
     data: data.toJson(),
     broadcast: broadcast,
   );
-
   Query$GetContributions? readQuery$GetContributions({
     required Variables$Query$GetContributions variables,
     bool optimistic = true,
