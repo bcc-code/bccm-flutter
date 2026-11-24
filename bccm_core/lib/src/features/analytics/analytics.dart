@@ -94,6 +94,8 @@ class Analytics {
   @mustBeOverridden
   void notificationsStatus(NotificationsStatusEvent event) {}
   @mustBeOverridden
+  void setCollectionEnabled(bool enabled) {}
+  @mustBeOverridden
   void reset() {}
   @mustBeOverridden
   Future<String> getAnonymousId() => Future(() => "");
@@ -130,8 +132,7 @@ class RudderAnalytics extends Analytics {
     final shouldRefreshSession = now.difference(_lastAlive) > kMinimumSessionTimeout;
 
     if (shouldRefreshSession) {
-      debugPrint(
-          'Analytics: Session dead, refreshing sessionId. Now: ${now.toIso8601String()}, lastAlive: ${_lastAlive.toIso8601String()}.');
+      debugPrint('Analytics: Session dead, refreshing sessionId. Now: ${now.toIso8601String()}, lastAlive: ${_lastAlive.toIso8601String()}.');
       onShouldRefreshSessionId();
     }
     _lastAlive = now;
@@ -412,6 +413,13 @@ class RudderAnalytics extends Analytics {
       event = event.copyWith(meta: null);
     }
     RudderController.instance.track('time_measurement', properties: getCommonData().putValue(map: event.toJson()));
+  }
+
+  @override
+  void setCollectionEnabled(bool enabled) {
+    // Refuses new events at the SDK, so nothing is queued while off. Events
+    // already queued from before are still delivered.
+    RudderController.instance.optOut(!enabled);
   }
 
   @override
