@@ -44,9 +44,15 @@ class Analytics {
   @mustBeOverridden
   void identify(UserProfile profile, String analyticsId) {}
   @mustBeOverridden
+  void login() {}
+  @mustBeOverridden
+  void logout() {}
+  @mustBeOverridden
   void screen(String screenName, {Map<String, Object?>? properties}) {}
   @mustBeOverridden
   void audioOnlyClicked(AudioOnlyClickedEvent event) {}
+  @mustBeOverridden
+  void chromecastStarted() {}
   @mustBeOverridden
   void calendarDayClicked(CalendarDayClickedEvent event) {}
   @mustBeOverridden
@@ -102,6 +108,7 @@ class RudderAnalytics extends Analytics {
   final Ref ref;
   DateTime _lastAlive = DateTime.now();
   void Function() onShouldRefreshSessionId;
+  bool? _wasOnline;
 
   RudderAnalytics({required this.ref, required String rudderstackWriteKey, required this.onShouldRefreshSessionId, bool? strictAnonymousAnalytics}) {
     final RudderController controller = RudderController.instance;
@@ -111,6 +118,10 @@ class RudderAnalytics extends Analytics {
     builder.withMobileConfig(MobileConfig(recordScreenViews: false, collectDeviceId: strictAnonymousAnalytics != true));
     controller.initialize(rudderstackWriteKey, config: builder.build());
     PackageInfo.fromPlatform().then((value) => packageInfo = value);
+    // Listening keeps the autoDispose connectivity stream alive, so wasOnline is
+    // current at tracking time rather than resolved per event. It stays null,
+    // and is omitted from events, until the first reading arrives.
+    ref.listen<bool>(isOfflineProvider, (_, isOffline) => _wasOnline = !isOffline, fireImmediately: true);
   }
 
   @override
@@ -142,6 +153,7 @@ class RudderAnalytics extends Analytics {
       'appLanguage': settings.appLanguage.languageCode,
       'releaseVersion': packageInfo == null ? null : formatAppVersion(packageInfo!),
       'appSessionId': settings.sessionId,
+      'wasOnline': ?_wasOnline,
       'featureFlags': ref.read(featureFlagVariantListProvider).join(','),
     });
 
@@ -310,6 +322,16 @@ class RudderAnalytics extends Analytics {
   }
 
   @override
+  void login() {
+    RudderController.instance.track('login', properties: getCommonData());
+  }
+
+  @override
+  void logout() {
+    RudderController.instance.track('logout', properties: getCommonData());
+  }
+
+  @override
   void screen(String screenName, {Map<String, Object?>? properties}) {
     RudderController.instance.screen(screenName, properties: getCommonData().putValue(map: properties));
   }
@@ -317,6 +339,11 @@ class RudderAnalytics extends Analytics {
   @override
   void audioOnlyClicked(AudioOnlyClickedEvent event) {
     RudderController.instance.track('audioonly_clicked', properties: getCommonData().putValue(map: event.toJson()));
+  }
+
+  @override
+  void chromecastStarted() {
+    RudderController.instance.track('chromecast_started', properties: getCommonData());
   }
 
   @override

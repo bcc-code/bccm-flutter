@@ -373,6 +373,9 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
   Future logout({bool manual = true}) async {
     await _clearCredentials();
     state = AuthState(signedOutManually: manual);
+    if (manual) {
+      ref.read(analyticsProvider).logout();
+    }
     config.onSignout?.call();
 
     return;
@@ -391,6 +394,7 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
         credentials.scope.split(','),
         null,
       ));
+      ref.read(analyticsProvider).login();
     } catch (e) {
       // Awaited: an unawaited logout can land after a later successful login and
       // wipe the credentials it just stored.
@@ -440,6 +444,7 @@ class AuthStateNotifierMobile extends StateNotifier<AuthState> implements AuthSt
         rethrow;
       }
       config.onSignIn?.call();
+      ref.read(analyticsProvider).login();
     } on FlutterAppAuthUserCancelledException catch (e) {
       await logout(manual: false);
       final details = e.platformErrorDetails;
